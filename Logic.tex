@@ -1,0 +1,2013 @@
+\documentclass[10pt]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{circuits.logic.US, positioning, arrows}
+\usepackage{bussproofs}
+\usepackage{makeidx}
+\makeindex
+\usepackage[thinlines]{easytable}
+\usepackage{array}
+\usepackage{amssymb} % for \therefore
+\usepackage{nicematrix,tikz}
+\usetikzlibrary{arrows.meta,ext.paths.ortho} % for "r-lr"
+\usepackage{mfirstuc}
+\usepackage{twemojis}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\usepackage{parskip}
+\usepackage{amssymb}
+\usepackage{emptypage}
+
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
+
+
+\linespread{1.05} % Slightly increases line height
+
+
+\theoremstyle{definition}
+\newtheorem{undefined}{Undefined}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{axiom}{Axiom}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{exercise}{Exercise}[section]
+\newtheorem{Rule}{Rule}[section]
+\newtheorem{Attention}{Attention}[section]
+\makeatletter
+\renewcommand{\arraystretch}{1.8} % 2x standard row height
+
+
+\newcommand*{\blankpage}{
+  \vspace*{\fill}
+  \begin{center}
+    \textit{This page intentionally left blank.}
+  \end{center}
+  \vspace*{\fill}
+}
+\renewcommand*{\cleardoublepage}{%
+  \clearpage
+  \if@twoside
+    \ifodd\c@page
+    \else
+      \blankpage
+      \thispagestyle{empty}
+      \newpage
+      \if@twocolumn\hbox{}\newpage\fi
+    \fi
+  \fi
+}
+\makeatother
+
+\begin{document}
+
+\frontmatter
+
+\title{\textbf{\Huge Logic}}
+\author{\Large Aria Ruler(Forouzandeh)}
+\date{\today}
+\maketitle
+
+\tableofcontents
+
+\mainmatter
+
+\chapter{Atomes}
+\section{Basic tools}
+
+we start the book by building logic step by step.block by block in first it
+might seem a little annoying but I advice you to be patient.book will show its
+power soon. like euclidian geometry this book has undefined concepts. I tried
+to explain them for you to understand.but they don't have any definition.
+\begin{undefined}
+    \textbf{Urelements} are the most fundamental entities in a logical.
+    They cannot be constructed, defined, or described in terms of other things.
+    Their existence is primitive—accepted without internal structure or relational properties.
+    Urelements simply are.
+\end{undefined}
+
+In this book, we will denote individual urelements using lowercase letters such
+as $a$, $b$, $c$,$...$
+
+\begin{undefined}
+    \textbf{Type} parallel lines used to show that an object exists
+    (you will undrestnd what is object soon.)
+    (we will show you how to use them).
+
+    \begin{tikzpicture}
+        % Vertical lines
+        \draw (0,0) -- (0,4);
+        \draw (1,0) -- (1,4);
+        \draw (2,0) -- (2,4);
+        \draw (3,0) -- (3,4);
+        % Labels between lines
+        \node at (-0.5,3) {1.};
+        \node at (-0.5,2) {2.};
+        \node at (-0.5,1) {3.};
+        \node at (0.2,3) {$a$};
+        \node at (1.2,2) {$b$};
+        \node at (2.2,1) {$c$};
+    \end{tikzpicture}
+\end{undefined}
+
+\begin{Rule}
+    \textbf{fusion} it's the Rule that explain how sets made.
+    (this rule is schema.it means it works everywhere for every object.)
+
+    \begin{tikzpicture}
+        % Vertical lines
+        \draw (0,0) -- (0,5);
+        \draw (1,0) -- (1,5);
+        % \draw (1.5,3.6) -- (-0.1,3.6) -- (-0.1,0.5) -- (1.5,0.5);
+        % Labels between lines
+        \node at (-0.5,4) {$m.$};
+        \node at (-0.6,2) {$m+n.$};
+        \node at (-0.5,1) {$o.$};
+        \node at (0.2,4) {$a_{0}$};
+        \node at (0.2,3) {$\vdots$};
+        \node at (0.2,2) {$a_{n}$};
+        \node at (2,1) {$\{a_{0} , a_{1}... a_{n}\}$};
+    \end{tikzpicture}
+\end{Rule}
+
+\begin{undefined}
+    \textbf{Set} we can't say what exactly sets are but we know sets can be made by fusion
+    (from now we denote sets with uppercase letters).
+\end{undefined}
+
+\begin{definition}
+    \textbf{Object} urelements and sets.(we write obj instead of object).
+\end{definition}
+
+\begin{Rule}
+    \textbf{fission} it show us how to break an obj.
+    (this rule is scheme it means it works everywhere for every obj.)
+
+    \begin{tikzpicture}
+        % Vertical lines
+        \draw (0,-1) -- (0,4);
+        \draw (1,-1) -- (1,4);
+        % \draw (1.5,3.6) -- (-0.1,3.6) -- (-0.1,0.5) -- (1.5,0.5);
+        % Labels between lines
+        \node at (-0.5,3) {$o.$};
+        \node at (-0.5,2) {$m.$};
+        \node at (-0.6,0) {$m+n.$};
+        \node at (2,3) {$\{a_{0} , a_{1}... a_{n}\}$};
+        \node at (0.2,2) {$a_{0}$};
+        \node at (0.2,1) {$\vdots$};
+        \node at (0.2,0) {$a_{n}$};
+    \end{tikzpicture}
+
+\end{Rule}
+
+\begin{example}
+    \textbf{} $\{a,b,c\} /\therefore \{a,b\}$
+    (prove if $\{a,b,c\}$ exists then $\{a,c\}$ exists)
+
+    \begin{tikzpicture}
+        % Vertical lines
+        \draw (0,-2) -- (0,4);
+        \draw (1,-2) -- (1,4);
+        % \draw (1.5,3.6) -- (-0.1,3.6) -- (-0.1,-1.5) -- (1.5,-1.5);
+        % Labels between lines
+        \node at (-0.5,3) {1.};
+        \node at (-0.5,2) {2.};
+        \node at (-0.5,1) {3.};
+        \node at (-0.5,0) {4.};
+        \node at (-0.5,-1) {5.};
+        \node at (1.7,3) {$\{a,b,c\}$};
+        \node at (0.2,2) {$a$};
+        \node at (3,2) {fi1};
+        \node at (0.2,1) {$b$};
+        \node at (3,1) {fi1};
+        \node at (0.2,0) {$c$};
+        \node at (3,0) {fi1};
+        \node at (1.7,-1) {$\{a,c\}$};
+        \node at (3,-1) {fu2,3,4};
+    \end{tikzpicture}
+
+\end{example}
+
+\begin{example}
+    \textbf{} $\{a,b\} /\therefore \{b,a\}$
+
+    \begin{tikzpicture}
+        % Vertical lines
+        \draw (0,-1) -- (0,4);
+        \draw (1,-1) -- (1,4);
+        % \draw (1.5,3.6) -- (-0.1,3.6) -- (-0.1,-0.5) -- (1.5,-0.5);
+        % Labels between lines
+        \node at (-0.5,3) {1.};
+        \node at (-0.5,2) {2.};
+        \node at (-0.5,1) {3.};
+        \node at (-0.5,0) {4.};
+        \node at (1.7,3) {$\{a,b\}$};
+        \node at (0.2,2) {$a$};
+        \node at (3,2) {fi1};
+        \node at (0.2,1) {$b$};
+        \node at (3,1) {fi1};
+        \node at (1.7,0) {$\{b,a\}$};
+        \node at (3,0) {fu2,3};
+    \end{tikzpicture}
+\end{example}
+
+\begin{Rule}
+    \textbf{repetition} you can repeat an obj
+    (this rule is scheme it means it works everywhere for every obj.)
+
+    \begin{tikzpicture}
+        % Vertical lines
+        \draw (0,1.5) -- (0,3.5);
+        % \draw (1.5,2.6) -- (-0.1,2.6) -- (-0.1,0.5) -- (1.5,0.5);
+        % Labels between lines
+        \node at (-0.5,3) {$n.$};
+        \node at (-0.5,2) {$m.$};
+        \node at (0.2,3) {$a$};
+        \node at (0.2,2) {$a$};
+        \node at (2.2,2) {rp};
+    \end{tikzpicture}
+\end{Rule}
+
+\begin{undefined}
+    \textbf{Gutter} is a tool to make an object isolated.
+    (nothing can get in or out and the focused obj is the first obj in gutter)
+    with Gutter we can undrestnd object
+    More precisely we denote Gutter like this.
+
+    \begin{tikzpicture}
+        \draw (1,0) -- (0,0) -- (0,2) -- (1,2);
+    \end{tikzpicture}
+
+\end{undefined}
+
+\begin{Rule}
+    \textbf{repetition in Gutter} you can only repeat an obj
+    in Gutter once(Gutter isolated obj).
+
+    \begin{tikzpicture}
+        % Vertical lines
+        \draw (0,1) -- (0,3.5);
+        \draw (1.5,2.6) -- (-0.1,2.6) -- (-0.1,1.5) -- (1.5,1.5);
+        % Labels between lines
+        \node at (-0.5,3) {$n.$};
+        \node at (-0.5,2) {$m.$};
+        \node at (0.2,3) {$a$};
+        \node at (0.2,2) {$a$};
+        \node at (2.2,2) {rpg.$n$};
+    \end{tikzpicture}
+\end{Rule}
+
+\section{ Identity }
+
+\begin{undefined}
+    \textbf{identity} $(=)$ one of the basice concepts that talk about two things are the same.
+\end{undefined}
+
+\begin{Rule}
+    \textbf{$I=$} (this rule is scheme it means it works everywhere for every obj.)
+
+    \begin{tikzpicture}
+        % Vertical lines
+        \draw (0,-1.5) -- (0,6);
+        \draw (1.5,5.6) -- (-0.1,5.6) -- (-0.1,2.5) -- (1.5,2.5);
+        \draw (1.5,2.4) -- (-0.1,2.4) -- (-0.1,-0.5) -- (1.5,-0.5);
+        % Labels between lines
+        \node at (-0.5,5) {$n.$};
+        \node at (-0.5,3) {$m.$};
+        \node at (-0.7,2) {$m+1.$};
+        \node at (-0.5,0) {$o.$};
+        \node at (-0.7,-1) {$o+1.$};
+        \node at (0.2,5) {$a$};
+        \node at (0.2,4) {$\vdots$};
+        \node at (0.2,3) {$b$};
+        \node at (0.2,2) {$b$};
+        \node at (0.2,1) {$\vdots$};
+        \node at (0.2,0) {$a$};
+        \node at (0.5,-1) {$a=b$};
+    \end{tikzpicture}
+
+\end{Rule}
+
+\begin{Rule}
+    \textbf{$E=$} (this rule is scheme it means it works everywhere for every obj.)
+
+    \begin{tikzpicture}
+        % Vertical lines
+        \draw (0,0) -- (0,4);
+        % Labels between lines
+        \node at (-0.5,3) {$n.$};
+        \node at (-0.5,2) {$m.$};
+        \node at (-0.5,1) {$o.$};
+        \node at (0.2,3) {$a$};
+        \node at (0.5,2) {$a=b$};
+        \node at (0.2,1) {$b$};
+        \node at (3,1) {$E= n,m$};
+
+    \end{tikzpicture}
+
+\end{Rule}
+
+\begin{example}
+    \textbf{} $a/\therefore a = a$
+
+    \begin{tikzpicture}
+        % Vertical lines
+        \draw (0,-1.5) -- (0,4);
+        \draw (1.5,3.6) -- (-0.1,3.6) -- (-0.1,1.5) -- (1.5,1.5);
+        \draw (1.5,1.4) -- (-0.1,1.4) -- (-0.1,-0.5) -- (1.5,-0.5);
+        % Labels between lines
+        \node at (-0.5,3) {1.};
+        \node at (-0.5,2) {2.};
+        \node at (-0.5,1) {3.};
+        \node at (-0.5,0) {4.};
+        \node at (-0.5,-1) {5.};
+        \node at (0.2,3) {$a$};
+        \node at (0.2,2) {$a$};
+        \node at (2.2,2) {rp.1};
+        \node at (0.2,1) {$a$};
+        \node at (0.2,0) {$a$};
+        \node at (2.2,0) {rp.3};
+        \node at (0.5,-1) {$a=a$};
+    \end{tikzpicture}
+
+\end{example}
+
+\begin{example}
+    \textbf{} $a,b/\therefore \{a,b\} = \{b,a\}$
+
+    \begin{tikzpicture}
+        % Vertical lines
+        \draw (0,-5.5) -- (0,7);
+        \draw (1,-5.5) -- (1,7);
+        \draw (1.5,3.6) -- (-0.1,3.6) -- (-0.1,-0.5) -- (1.5,-0.5);
+        \draw (1.5,-4.4) -- (-0.1,-4.4) -- (-0.1,-0.6) -- (1.5,-0.6);
+        \node at (-0.5,7) {1.};
+        \node at (-0.5,6) {2.};
+        \node at (-0.5,5) {3.};
+        \node at (-0.5,4) {4.};
+        \node at (-0.5,3) {5.};
+        \node at(-0.5,2) {6.};
+        \node at (-0.5,1) {7.};
+        \node at (-0.5,0) {8.};
+        \node at(-0.5,-1) {9.};
+        \node at (-0.5,-2) {10.};
+        \node at (-0.5,-3) {11.};
+        \node at (-0.5,-4) {12.};
+        \node at (-0.5,-5) {13.};
+        \node at (0.2,7) {$a$};
+        \node at(0.2,6) {$b$};
+        \node at (1.5,5) {$\{a,b\}$};
+        \node at (5,5) {fu1,2};
+        \node at(1.5,4) {$\{b,a\}$};
+        \node at (5,4) {fu1,2};
+        \node at (1.5,3) {$\{a,b\}$};
+        \node at (5,3) {rpg3};
+        \node at (0.2,2) {$a$};
+        \node at (5,2) {fi1};
+        \node at(0.2,1) {$b$};
+        \node at (5,1) {fi1};
+        \node at (1.5,0) {$\{b,a\}$};
+        \node at(5,0) {fu2,3};
+        \node at (1.5,-1) {$\{b,a\}$};
+        \node at (5,-1) {rpg4}; \node at(0.2,-2) {$b$};
+        \node at (5,-2) {fi5};
+        \node at (0.2,-3) {$a$};
+        \node at (5,-3){fi5};
+        \node at (1.5,-4) {$\{a,b\}$};
+        \node at (5,-4) {fu6,7};
+        \node at(2.3,-5) {$\{a,b\} = \{b,a\}$};
+        \node at (5,-5) {$I=4,8$};
+    \end{tikzpicture}
+\end{example}
+
+\begin{example}
+    \textbf{} $a,b,c,b=c /\therefore \{a,b\} = \{a,c\}$
+
+    \begin{tikzpicture}
+        % Vertical lines
+        \draw (0,-9.5) -- (0,8);
+        \draw (1,-9.5) -- (1,8);
+        \draw (1.5,3.6) -- (-0.1,3.6) -- (-0.1,-2.5) -- (1.5,-2.5);
+        \draw (1.5,-8.4) -- (-0.1,-8.4) -- (-0.1,-2.6) -- (1.5,-2.6);
+        % Labels between lines
+        \node at (-0.5,8) {1.};
+        \node at (-0.5,7) {2.};
+        \node at (-0.5,6) {3.};
+        \node at (-0.5,5) {4.};
+        \node at (-0.5,4) {5.};
+        \node at (-0.5,3) {6.};
+        \node at (-0.5,2) {7.};
+        \node at (-0.5,1) {8.};
+        \node at (-0.5,0) {9.};
+        \node at (-0.5,-1) {10.};
+        \node at (-0.5,-2) {11.};
+        \node at (-0.5,-3) {12.};
+        \node at (-0.5,-4) {13.};
+        \node at (-0.5,-5) {14.};
+        \node at (-0.5,-6) {15.};
+        \node at (-0.5,-7) {16.};
+        \node at (-0.5,-8) {17.};
+        \node at (-0.5,-9) {18.};
+        \node at (0.2,8) {$a$};
+        \node at (5,8) {ass};
+        \node at (0.2,7) {$b$};
+        \node at (5,7) {ass};
+        \node at (0.2,6) {$c$};
+        \node at (5,6) {ass};
+        \node at (1.5,5) {$\{a,b\}$};
+        \node at (5,5) {fu1,2};
+        \node at (1.5,4) {$\{a,c\}$};
+        \node at (5,4) {fu2,3};
+        \node at (1.5,3) {$\{a,b\}$};
+        \node at (5,3) {rp4};
+        \node at (0.2,2) {$a$};
+        \node at (5,2) {fi6};
+        \node at (0.2,1) {$b$};
+        \node at (5,1) {fi6};
+        \node at (1.5,0) {$b=c$};
+        \node at (5,0) {ass};
+        \node at (0.2,-1) {$c$};
+        \node at (5,-1) {$E=8,9$};
+        \node at (1.5,-2) {$\{a,c\}$};
+        \node at (5,-2) {fi7,10};
+        \node at (1.5,-3) {$\{a,c\}$};
+        \node at (5,-3) {rp5};
+        \node at (0.2,-4) {$a$};
+        \node at (5,-4) {fi12};
+        \node at (0.2,-5) {$c$};
+        \node at (5,-5) {fi12};
+        \node at (1.5,-6) {$b=c$};
+        \node at (5,-6) {ass};
+        \node at (0.2,-7) {$b$};
+        \node at (5,-7) {$E=15,16$};
+        \node at (1.5,-8) {$\{a,b\}$};
+        \node at (5,-8) {fu13,15};
+        \node at (2.3,-9) {$\{a,b\} = \{a,c\}$};
+        \node at (5,-9) {$I=11,17$};
+    \end{tikzpicture}
+
+\end{example}
+
+\section{ Membership }
+
+\begin{undefined}
+    \textbf{membership} $(\in)$ a binary relation show that an obj is a member of another obj.
+\end{undefined}
+
+\begin{Rule}
+    \textbf{$I\in$} (this rule is scheme it means it works everywhere for every obj.)
+
+    \begin{tikzpicture}
+        % Vertical lines
+        \draw (0,0.5) -- (0,4);
+        \draw (1,0.5) -- (1,4);
+        % \draw (1.5,3.6) -- (-0.1,3.6) -- (-0.1,1.5) -- (1.5,1.5);
+        % Labels between lines
+        \node at (-0.5,3) {$n.$};
+        \node at (-0.5,2) {$m.$};
+        \node at (-0.5,1) {$o.$};
+        \node at (1.2,3) {$A$};
+        \node at (0.2,2) {$a$};
+        \node at (3,2) {$fi,n$};
+        \node at (1.5,1) {$a \in A$};
+        \node at (3,1) {$I\in,n,m$};
+    \end{tikzpicture}
+
+    \begin{tikzpicture}
+        % Vertical lines
+        \draw (0,0.5) -- (0,4);
+        \draw (1,0.5) -- (1,4);
+        % \draw (1.5,3.6) -- (-0.1,3.6) -- (-0.1,1.5) -- (1.5,1.5);
+        % Labels between lines
+        \node at (-0.5,3) {$n.$};
+        \node at (-0.5,2) {$m.$};
+        \node at (-0.5,1) {$o.$};
+        \node at (0.2,3) {$a$};
+        \node at (1.2,2) {$A$};
+        \node at (3,2) {$fu,n$};
+        \node at (1.5,1) {$a \in A$};
+        \node at (3,1) {$I\in,n,m$};
+    \end{tikzpicture}
+\end{Rule}
+
+\begin{Rule}
+    \textbf{$E\in$}
+    (this rule is scheme it means it works everywhere for every obj.)
+
+    \begin{tikzpicture}
+        % Vertical lines
+        \draw (0,0) -- (0,4);
+        \draw (1,0) -- (1,4);
+        % \draw (1.5,2.6) -- (-0.1,2.6) -- (-0.1,0.5) -- (1.5,0.5);
+        % Labels between lines
+        \node at (-0.5,3) {$n.$};
+        \node at (-0.5,2) {$m.$};
+        \node at (-0.5,1)  {$o.$};
+        \node at (1.5,3) {$a \in A$};
+        \node at (1.2,2) {$A$};
+        \node at (0.2,1) {$a$};
+        \node at (3,1) {fiss,$n,m$};
+    \end{tikzpicture}
+
+    \begin{tikzpicture}
+        % Vertical lines
+        \draw (0,0) -- (0,4);
+        \draw (1,0) -- (1,4);
+        % \draw (1.5,2.6) -- (-0.1,2.6) -- (-0.1,0.5) -- (1.5,0.5);
+        % Labels between lines
+        \node at (-0.5,3) {$n.$};
+        \node at (-0.5,2) {$m.$};
+        \node at (-0.5,1) {$o.$};
+        \node at (1.5,3) {$a \in A$};
+        \node at (0.2,2) {$a$};
+        \node at (1.2,1) {$A$};
+        \node at (3,1) {fus,$n,m$};
+    \end{tikzpicture}
+\end{Rule}
+
+\begin{Rule}
+    \textbf{$E=$}
+    (this rule is scheme it means it works everywhere for every obj.)
+
+    \begin{tikzpicture}
+        % Vertical lines
+        \draw (0,0) -- (0,4);
+        % Labels between lines
+        \node at (-0.5,3) {$n.$};
+        \node at (-0.5,2) {$m.$};
+        \node at (-0.5,1) {$o.$};
+        \node at (0.5,3) {$a\in A$};
+        \node at (0.5,2) {$a=b$};
+        \node at (0.5,1) {$b\in A$};
+        \node at (3,1) {$E=$};
+    \end{tikzpicture}
+
+    \begin{tikzpicture}
+        % Vertical lines
+        \draw (0,0) -- (0,4);
+        % Labels between lines
+        \node at (-0.5,3) {$n.$};
+        \node at (-0.5,2) {$m.$};
+        \node at (-0.5,1) {$o.$};
+        \node at (0.5,3) {$a\in A$};
+        \node at (0.55,2) {$A=B$};
+        \node at (0.5,1) {$a\in B$};
+        \node at (3,1) {$E=$};
+    \end{tikzpicture}
+\end{Rule}
+
+% \begin{example}
+%     \textbf{} $a \in A,a=b /\therefore b \in A$
+% \end{example}
+
+% \begin{tikzpicture}
+%     % Vertical lines
+%     \draw (0,-2.5) -- (0,3);
+%     \draw (1,-2.5) -- (1,3);
+
+%     \draw (1.5,2.6) -- (-0.1,2.6) -- (-0.1,-1.5) -- (1.5,-1.5);
+
+%     % Labels between lines
+%     \node at (-0.5,3) {1.};
+%     \node at (-0.5,2) {2.};
+%     \node at (-0.5,1) {3.};
+%     \node at (-0.5,0) {4.};
+%     \node at (-0.5,-1) {5.};
+%     \node at (-0.5,-2) {6.};
+
+%     \node at (1.5,3) {$a \in A$};
+%     \node at (1.2,2) {$A$};
+%     \node at (3,2) {rpg};
+%     \node at (0.2,1) {$a$};
+%     \node at (3,1) {$E\in$};
+%     \node at (1.5,0) {$a=b$};
+%     \node at (0.2,-1) {$b$};
+%     \node at (3,-1) {$E=$};
+%     \node at (1.5,-2) {$b \in A$};
+%     \node at (3,-2) {$I\in$};
+
+% \end{tikzpicture}
+
+\section{Bot}
+
+\begin{undefined}
+    \textbf{bot} $(\bot)$ also called "bottom".means impossible, or a logical symbol denoting a
+    impossible situation.
+\end{undefined}
+
+also called "bottom".means impossible, or a logical symbol denoting a
+impossible situation.
+
+\begin{Rule}
+    \textbf{$I\bot$} (this rule is scheme it means it works everywhere for every obj.)
+    assume that $a_{0} , a_{1} , a_{2} ... a_{n}$ are  distinct obj.if someone says $ a_{0} \in \{a_{1} , a_{2}\}$
+    or if someone says $a_{0} = a_{1}$.
+    we know it's not right but how do we must show that?
+    (see attention 1.1).
+
+    for (rp): \\
+
+    \begin{tikzpicture}
+        % Vertical lines
+        \draw (0,0) -- (0,4);
+        % Labels between lines
+        \node at (-0.5,3) {$n.$};
+        \node at (-0.5,2) {$m.$};
+        \node at (-0.5,1) {$o.$};
+        \node at (0.3,3) {$a_{0}$};
+        \node at (0.3,2) {$a_{1}$};
+        \node at (2,2) {rp1};
+        \node at (0.2,1) {$\bot$};
+        \node at (2,1) {$I\bot$,$n,m$};
+    \end{tikzpicture}
+    \\
+    for (fu):
+    \\
+
+    \begin{tikzpicture}
+        % Vertical lines
+        \draw (0,0.5) -- (0,4);
+        \draw (1,0.5) -- (1,4);
+        % \draw (1.5,3.6) -- (-0.1,3.6) -- (-0.1,1.5) -- (1.5,1.5);
+        % Labels between lines
+        \node at (-0.5,3) {$n.$};
+        \node at (-0.5,2) {$m.$};
+        \node at (-0.5,1) {$o.$};
+        \node at (0.3,3) {$a_{0}$};
+        \node at (2,2) {$\{a_{1} , a_{2}... a_{n}\}$};
+        \node at (4,2) {fu1};
+        \node at (1.2,1) {$\bot$};
+        \node at (4,1) {$I\bot$,$n,m$};
+    \end{tikzpicture}
+    \\
+    for (fi):
+    \\
+
+    \begin{tikzpicture}
+        % Vertical lines
+        \draw (0,0.5) -- (0,4);
+        \draw (1,0.5) -- (1,4);
+        % \draw (1.5,3.6) -- (-0.1,3.6) -- (-0.1,1.5) -- (1.5,1.5);
+        % Labels between lines
+        \node at (-0.5,3) {$n.$};
+        \node at (-0.5,2) {$m.$};
+        \node at (-0.5,1) {$o.$};
+        \node at (2,3) {$\{a_{1} , a_{2}... a_{n}\}$};
+        \node at (0.3,2) {$a_{0}$};
+        \node at (4,2) {fi1};
+        \node at (1.2,1) {$\bot$};
+        \node at (4,1) {$I\bot$,$n,m$};
+    \end{tikzpicture}
+\end{Rule}
+
+\begin{Rule}
+    \textbf{$E\bot$} (this rule is scheme it means it works everywhere for every obj.)
+    (see attention 1.1).
+    for (rp): \\
+    \begin{tikzpicture}
+        % Vertical lines
+        \draw (0,0) -- (0,4);
+        % Labels between lines
+        \node at (-0.5,3) {$n.$};
+        \node at (-0.5,2) {$m.$};
+        \node at (-0.5,1) {$o.$};
+        \node at (0.2,3) {$\bot$};
+        \node at (0.3,2) {$a_{0}$};
+        \node at (0.3,1) {$a_{1}$};
+        \node at (4,1) {rp,$n,m$};
+    \end{tikzpicture}
+    \\
+    for (fu):
+    \\
+
+    \begin{tikzpicture}
+        % Vertical lines
+        \draw (0,0) -- (0,3.5);
+        \draw (1,0) -- (1,3.5);
+        % \draw (1.5,2.6) -- (-0.1,2.6) -- (-0.1,0.5) -- (1.5,0.5);
+        % Labels between lines
+        \node at (-0.5,3) {$n.$};
+        \node at (-0.5,2) {$m.$};
+        \node at (-0.5,1) {$o.$};
+        \node at (1.2,3) {$\bot$};
+        \node at (0.3,2) {$a_{0}$};
+        \node at (2,1) {$\{a_{1} , a_{2}... a_{n}\}$};
+        \node at (4,1) {fu,$n,m$};
+        \\
+    \end{tikzpicture}
+    \\
+    for (fi):
+    \\
+
+    \begin{tikzpicture}
+        % Vertical lines
+        \draw (0,0) -- (0,3.5);
+        \draw (1,0) -- (1,3.5);
+        % \draw (1.5,2.6) -- (-0.1,2.6) -- (-0.1,0.5) -- (1.5,0.5);
+        % Labels between lines
+        \node at (-0.5,3) {$n.$};
+        \node at (-0.5,2) {$m.$};
+        \node at (-0.5,1) {$o.$};
+        \node at (1.2,3) {$\bot$};
+        \node at (2,2) {$\{a_{1} , a_{2}... a_{n}\}$};
+        \node at (0.3,1) {$a_{0}$};
+        \node at (4,1) {fiss,$n,m$};
+    \end{tikzpicture}
+
+\end{Rule}
+
+% \begin{Rule}
+%     \textbf{$I\not=$}
+%     (this rule is scheme it means it works everywhere for every obj.)
+
+%     \begin{NiceTabular}{lll}
+%         1.     & $a = b$     & acp      \\
+%                & $\vdots$    &          \\
+%         $n.$   & $\bot$      &          \\
+%         $n+1.$ & $a \not= b$ & $I\not=$ \\
+%         \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (4-|3);
+%     \end{NiceTabular}
+% \end{Rule}
+
+% \begin{Rule}
+%     \textbf{$I\notin$}
+%     (this rule is scheme it means it works everywhere for every obj.)
+
+%     \begin{NiceTabular}{lll}
+%         1.     & $a \in A$    & acp       \\
+%                & $\vdots$     &           \\
+%         $n.$   & $\bot$       &           \\
+%         $n+1.$ & $a \notin A$ & $I\notin$ \\
+%         \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (4-|3);
+%     \end{NiceTabular}
+
+% \end{Rule}
+
+% \begin{Rule}
+%     \textbf{$E\not=$}
+%     (this rule is scheme it means it works everywhere for every obj.)
+
+%     \begin{NiceTabular}{lll}
+%         $n.$ & $a = b$     &          \\
+%         $m.$ & $a \not= b$ &          \\
+%         $o.$ & $\bot$      & $E\not=$ \\
+%     \end{NiceTabular}
+% \end{Rule}
+
+% \begin{Rule}
+%     \textbf{$E\notin$}
+%     (this rule is scheme it means it works everywhere for every obj.)
+
+%     \begin{NiceTabular}{lll}
+%         $n.$ & $a \in A$    &           \\
+%         $m.$ & $a \notin A$ &           \\
+%         $o.$ & $\bot$       & $E\notin$ \\
+%     \end{NiceTabular}
+
+% \end{Rule}
+
+% \begin{Attention}
+%     in rules $(I,E)\bot $ obj must be in correct type.for example $\bot$ can't prove
+%     $a \in a$.
+% \end{Attention}
+
+\section{constants and variables}
+obj are two types.we know them and we know what exactly are we talking about
+and unknowns are mystery.all the obj we have used until now were known ones we
+call them \textbf{"constants"}.
+
+\begin{undefined}
+    \textbf{variables} A variable is a symbol
+    (usually a letter like $x, y, or z$)
+    that represents an unknown obj.
+\end{undefined}
+
+\begin{definition}
+    \textbf{variables sets} A variable that is a set
+    (usually a letter like $X, Y, or Z$)
+    that represents an unknown set.
+\end{definition}
+
+\begin{definition}
+    \textbf{predicate} identity and membership symbols are predicates.
+    we will introduce them all to you.
+\end{definition}
+
+\chapter{propositional logic(zeroth-order logic)}
+
+\section{What is proposition?}
+
+before answering to this question let me show you what is well formed
+formula(WWF).
+
+%
+\begin{definition}
+    \textbf{Atomic formula} every two obj(conatants and variable) and a binary
+    predicate $(=,\in)$ between them like $x=b , y\in C, ...$
+    \\
+    we denote atomic formulas with $A_{i}$.
+\end{definition}
+
+%
+\begin{undefined}
+    \textbf{logical operators} ($\neg ,\to ,\land ,\lor$) tool that used between
+    atoms to make more complex formulas
+    (all of the opratores are binary except "$\neg$" that is unary ).
+\end{undefined}
+
+%
+\begin{definition}
+    \textbf{well formed formula(WWF)} these are formulas.
+
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item atomic formulas $(A_{i})$
+        \item if $A$ is a formula then $\neg A$ is a formula too.
+        \item if $A ,B$ are two formulas then $A ** B $ is a formula too.($**$ can be $\to
+                  ,\land ,\lor$)
+    \end{enumerate}
+
+    for example $(A_0 \to A_1 ,\neg A_3)$ \\ we call WWF easily formula and also we
+    denote WWF with $A ,B ,C ,...$.
+\end{definition}
+
+you can easily see that formula are made up by atomic formulas.in general we
+say formula is an atomic formula or combination of them.
+%
+\begin{definition}
+    \textbf{open formula} formulas that variables used in one of its atomic formulas.
+\end{definition}
+
+the formulas that are not open call \textbf{"closed formulas"} or
+\textbf{"sentece"}. Now question is "are very closed formulas proposition?"
+(propositions in classic logic are sentences that are true or false?) the
+answer is unfortunately \textbf{No}
+
+%
+\begin{definition}
+    \textbf{Atomic proposition} every atomic formula that can be
+    proven by tools introduced in chapter 1($I= , E= , I\in , E\in , I \bot , E\bot $).
+    \\
+    we denote atomic formulas with $p_{i}$.
+\end{definition}
+
+%
+\begin{definition}
+    \textbf{proposition} every WWF formula that its atomes are all atomic
+    propositions.
+    \\
+    we denote propositions with $p ,q ,r ,...$ .
+\end{definition}
+
+%
+\begin{definition}
+    \textbf{Substitution} we define Substitution for a formula like this.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item for atomic formulas like $(A_{i})$ if obj was not used before just replace it.
+              (example $(a \in A)[b/a]$ is $b \in A$ and if the alternative was in formula.
+              it will not change.)
+        \item if formula $A$ is complex do it for all atomes.
+    \end{enumerate}
+\end{definition}
+
+simply means in a formula put an obj like $b$ instead of another like $a$.we
+denote it by $A[b/a]$ or $A[\frac{b}{a}]$
+
+\begin{definition}
+    \textbf{open proposition} assume formula of a proposition but Substitute some
+    obj and replace them with variables.we call it open proposition and denote it with
+    capital letter $(P,Q,R)$ showes other types of \textbf{predicates} and variables like$(Px ,Qxy ,..)$
+\end{definition}
+
+\section{Rules of propositions.}
+
+\begin{definition}
+    \textbf{proposition schema(variable proposition)} a proposition that is unknown
+    for us and it works as variable.(we show them with $\varphi ,\psi ,\theta ,... $)
+\end{definition}
+
+\begin{undefined}
+    \textbf{Assumption for conditional proof(acp)} is a tool for assuming a proposition.
+    (any proposition can't get out but it can get in.two lines of assumption must not intersect and every hypothesis that opens must be closed.)
+    % (you will undrestnd what is proposition soon.)
+
+    \begin{tikzpicture}
+        \draw[->] (2,0) -- (0,0) -- (0,2) -- (1,2);
+    \end{tikzpicture}
+
+\end{undefined}
+
+\begin{Rule}
+    \textbf{rules of logical operations} $(I\to , E\to ,I\land ,E\land ,I\lor ,E\lor ,I\neg ,E\neg,I\bot ,E\bot )$
+    this rule is scheme it means it works everywhere for every propositions.
+    (thats why we use $\varphi, \psi $ instead of $p,q$)
+    % (for more convenience we use $I\bot ,E\bot $ instead)
+
+    % \begin{NiceTabular}{rll}
+    %     1. & $A\supset B$ \rlap{\quad$/\therefore A\supset (A\cdot B)$}                   \\
+    %     2. & $A$                                                        & supuesto        \\
+    %     3. & $B$                                                        & $1$, $2$, M.P.  \\
+    %     4. & $A\cdot B$                                                 & $2$, $3$, Conj. \\
+    %     5. & $A\supset(A\cdot B)$                                       & $2$--$4$, C.P.
+    %     \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr ([yshift=1pt]4-|3);
+    % \end{NiceTabular}
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+        \hline
+        \begin{NiceTabular}{ll}
+            $\varphi$                     &        \\
+            $\vdots$                      &        \\
+            $\psi$                        &        \\
+            $\therefore \varphi \to \psi$ & $I\to$ \\
+
+            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (4-|3);
+        \end{NiceTabular}
+         &
+        \begin{NiceTabular}{ll}
+            $\varphi \to \psi$ &        \\
+            $\varphi$          &        \\
+            \hline
+            $\therefore \psi$  & $E\to$ \\
+        \end{NiceTabular}
+        \\
+        \hline
+        \begin{NiceTabular}{ll}
+            $\varphi$                       &          \\
+            $\psi$                          &          \\
+            \hline
+            $\therefore \varphi \land \psi$ & $I\land$ \\
+        \end{NiceTabular}
+         &
+        \begin{NiceTabular}{ll}
+            $\varphi \land \psi$                              &          \\
+            \hline
+            $\therefore \varphi \hspace{.5cm} \therefore\psi$ & $E\land$ \\
+        \end{NiceTabular}
+        \\
+        \hline
+        \begin{NiceTabular}{ll}
+            $\varphi $                                                                &         \\
+            \hline
+            $\therefore \varphi \lor \psi \hspace{.5cm}  \therefore\psi \lor \varphi$ & $I\lor$ \\
+        \end{NiceTabular}
+         &
+        \begin{NiceTabular}{ll}
+            $\varphi \lor \psi $ &         \\
+            $\varphi$            &         \\
+            $\vdots$             &         \\
+            $\theta$             &         \\
+            $\psi$               &         \\
+            $\vdots$             &         \\
+            $\theta$             &         \\
+            $\therefore \theta$  & $E\lor$ \\
+            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (2-1) r-lr (5-|3);
+            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (5-1) r-lr (8-|3);
+        \end{NiceTabular}
+        \\
+        \hline
+        \begin{NiceTabular}{ll}
+            $\varphi$                 &         \\
+            $\vdots$                  &         \\
+            $\bot$                    &         \\
+            $\therefore \neg\varphi $ & $I\neg$ \\
+
+            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (4-|3);
+        \end{NiceTabular}
+         &
+        \begin{NiceTabular}{ll}
+            $\neg\varphi$         &         \\
+            $\vdots$              &         \\
+            $\bot$                &         \\
+            $\therefore \varphi $ & $E\neg$ \\
+
+            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (4-|3);
+        \end{NiceTabular}
+        \\
+        \hline
+        \begin{NiceTabular}{ll}
+            $\varphi$         &         \\
+            $\neg\varphi$     &         \\
+            \hline
+            $\therefore \bot$ & $I\bot$ \\
+        \end{NiceTabular}
+         &
+        \begin{NiceTabular}{ll}
+            $\bot$               &         \\
+            \hline
+            $\therefore \varphi$ & $E\bot$ \\
+        \end{NiceTabular}
+        \\
+        \hline
+    \end{tabular}
+
+\end{Rule}
+
+\begin{definition}
+    \textbf{$\varphi \leftrightarrow \psi$} : $(\varphi \to \psi) \land (\psi \to \varphi)$
+\end{definition}
+
+\begin{definition}
+    \textbf{schema of prove} you've got knowed by now what is schema of a rule.
+    if you want to prove a theorem that it's schema form.you can't prove it directly.
+    here we use a technique calls \textbf{"schema of prove"}.
+    it let us prove for all situations at the same time.
+\end{definition}
+
+\begin{theorem}
+    \textbf{$(schema)$} $(I\leftrightarrow , E\leftrightarrow)$
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+        \hline
+
+        \begin{NiceTabular}{ll}
+            $\varphi$                                  &                    \\
+            $\vdots$                                   &                    \\
+            $\psi$                                     &                    \\
+            $\psi$                                     &                    \\
+            $\vdots$                                   &                    \\
+            $\varphi$                                  &                    \\
+            $\therefore \varphi \leftrightarrow \psi $ & $I\leftrightarrow$ \\
+            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (4-|3);
+            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (4-1) r-lr (7-|3);
+        \end{NiceTabular}
+         &
+        \begin{NiceTabular}{ll}
+            $\varphi \leftrightarrow \psi$                    &                    \\
+            $\varphi \hspace{1.1cm} \psi$                     &                    \\
+            \hline
+            $\therefore \psi \hspace{.5cm} \therefore\varphi$ & $E\leftrightarrow$ \\
+        \end{NiceTabular}
+        \\
+        \hline
+    \end{tabular}
+
+    \begin{tabular}{>{\centering\arraybackslash}m{7cm}>{\centering\arraybackslash}m{7cm}}
+        % \begin{NiceTabular}{rll}
+        %     /   & $I\bot$                       &              \\
+        %     1.  & $\varphi$                     &              \\
+        %     2.  & $\varphi$                &              \\
+        %     3.  & $\vdots$                      & $ass$        \\
+        %     4.  & $\bot $ & $I\land,1,2$ \\
+        %     % 5.  & $\neg \varphi$                           & $E\neg,3,4$  \\
+        %     % 6.  & $\varphi \rightarrow \bot$                           & $ass$        \\
+        %     % 7.  & $\bot$ & $I\land,1,2$ \\
+        %     \CodeAfter \tikz \draw [<-,shorten < = 2pt] (3-1) r-lr ([yshift=1pt]6-|3);
+        % \end{NiceTabular}
+        %  &
+        % \begin{NiceTabular}{rll}
+        %     /  & $E\bot$           &             \\
+        %     1. & $\neg\varphi$     & $ass$       \\
+        %     2. & $\bot$            &             \\
+        %     3. & $p \land \neg p $ & $Def.2$     \\
+        %     5. & $\varphi$         & $E\neg,3,4$
+        %     \CodeAfter \tikz \draw [<-,shorten < = 2pt] (2-1) r-lr ([yshift=1pt]5-|3);
+        % \end{NiceTabular}
+        % \\
+        % \\
+        % \\
+        \begin{NiceTabular}{rll}
+            /    & $I\leftrightarrow$                             &                  \\
+            1.   & $\varphi$                                      &                  \\
+                 & $\vdots$                                       &                  \\
+            n.   & $\psi$                                         &                  \\
+            n+1. & $\psi$                                         &                  \\
+                 & $\vdots$                                       &                  \\
+            m.   & $\varphi$                                      &                  \\
+            m+1. & $\varphi \to \psi $                            & $I\to,1,n$       \\
+            m+2. & $\psi \to \varphi $                            & $I\to,n+1,m$     \\
+            m+3. & $ (\varphi \to \psi)\land (\psi \to \varphi) $ & $I\land,m+1,m+2$ \\
+            m+4. & $\varphi \leftrightarrow \psi $                & $Def.,m+3$       \\
+            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (2-1) r-lr (5-|3);
+            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (5-1) r-lr (8-|3);
+        \end{NiceTabular}
+         &
+        \begin{NiceTabular}{rll}
+            /  & $E\leftrightarrow$                            &            \\
+            1. & $\varphi \leftrightarrow \psi $               &            \\
+            2. & $\varphi  $                                   &            \\
+            3. & $(\varphi \to \psi)\land (\psi \to \varphi) $ & $Def. 1$   \\
+            4. & $\varphi \to \psi  $                          & $E\land 3$ \\
+            5. & $\psi$                                        & $E\to 1,4$
+        \end{NiceTabular}
+
+    \end{tabular}
+
+\end{theorem}
+
+\begin{example}
+    \textbf{} $a_{0} \notin \{a_{1} , a_{2}... a_{n}\}$
+
+    \begin{tikzpicture}
+        % Vertical lines
+        \draw (0,-1.5) -- (0,3.5);
+        \draw (1,-1.5) -- (1,3.5);
+        \draw[<-] (0.7,3) -- (-0.1,3) -- (-0.1,-0.5) -- (1.5,-0.5);
+        % Labels between lines
+        \node at (-0.5,3) {1.};
+        \node at (-0.5,2) {2.};
+        \node at (-0.5,1) {3.};
+        \node at (-0.5,0) {4.};
+        \node at (-0.5,-1) {5.};
+        \node at (-0.5,-2) {6.};
+        \node at (2.4,3) {$a_{0} \in \{a_{1} , a_{2}... a_{n}\}$};
+        \node at (4.8,3) {acp};
+        \node at (2,2) {$\{a_{1} , a_{2}... a_{n}\}$};
+        \node at (4.8,2) {ass};
+        \node at (0.2,1) {$a$};
+        \node at (4.8,1) {fiss $1,2$};
+        \node at (1.5,0) {$\bot$};
+        \node at (4.8,0) {$I\bot 2,3$};
+        \node at (2.4,-1) {$a_{0} \notin \{a_{1} , a_{2}... a_{n}\}$};
+        \node at (4.8,-1) {$I\in$};
+    \end{tikzpicture}
+\end{example}
+
+\begin{example}
+    \textbf{} for conatants p,q,r we can prove these.Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item  $p \rightarrow q, q \rightarrow r /\therefore p \rightarrow r$
+        \item  $q /\therefore p \rightarrow q$
+        \item $(p \wedge q) \wedge r /\therefore p \wedge(q \wedge r)$
+        \item $p \wedge q /\therefore q \wedge p$
+        \item $p \rightarrow q /\therefore(p \wedge r) \rightarrow q$
+        \item $(p \wedge q) \rightarrow r /\therefore p \rightarrow(q \rightarrow r)$
+        \item  $p \rightarrow(q \rightarrow r) /\therefore(p \wedge r) \rightarrow q$
+        \item $p \vee q /\therefore q \vee p$
+        \item $(p \vee q) \vee r /\therefore p \vee(q \vee r)$
+        \item $ p \wedge(q \vee r) /\therefore(p \wedge q) \vee(p \wedge r)$
+        \item  $(p \rightarrow q) \wedge(r \rightarrow s) /\therefore(p \vee r) \rightarrow(q \vee s)$
+        \item  $p \rightarrow q, \neg q /\therefore \neg p$
+        \item  $p \rightarrow q /\therefore \neg p \vee q$
+
+    \end{enumerate}
+\end{example}
+
+\begin{exercise}
+    \textbf{} for conatants p,q,r prove.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item  $p /\therefore p$
+        \item  $/\therefore p \vee \neg p$
+        \item  $\neg p, p \vee q /\therefore q$
+        \item  $\neg p /\therefore p \rightarrow q$
+        \item  $p \rightarrow q \therefore /\therefore \neg q \rightarrow \neg p$
+        \item  $(p \vee q) \wedge(p \vee r) \therefore /\therefore(p \vee(q \wedge r)) $
+        \item  $\neg p \wedge \neg q \therefore /\therefore \neg(p \vee q)$
+        \item $\neg p \vee \neg q \therefore /\therefore \neg(p \wedge q)$
+        \item  $(\neg p \rightarrow q) /\therefore((p \rightarrow q) \rightarrow q)$
+        \item  $/\therefore(p \wedge q \rightarrow r) \wedge(p \wedge s \rightarrow r) \rightarrow(p \wedge(q \vee s) \rightarrow r)$
+        \item $/\therefore(p \wedge q \rightarrow r) \vee(p \wedge s \rightarrow r) \rightarrow(p \wedge(q \wedge s) \rightarrow r)$
+        \item $/\therefore(p \rightarrow(q \rightarrow r)) \rightarrow((p \rightarrow q) \rightarrow(p \rightarrow r))$
+        \item $/\therefore(p \rightarrow q) \rightarrow((q \rightarrow r) \rightarrow(p \rightarrow r))$
+    \end{enumerate}
+\end{exercise}
+
+\begin{Attention}
+    we can rewrite \textbf{Example} and \textbf{Exercise} propositions and
+    proofs with proposition schemas and schema of proves.so they are all rules.
+\end{Attention}
+
+\chapter{first-order logic}
+
+\section{what is predicate?}
+
+%
+\begin{definition}
+    \textbf{Big AND and OR} assume a set like $ \{a_{0},a_{1},a_{2},...,a_{n}\}$
+    we define \textbf{big AND} like this.
+    \\
+    \[ \bigwedge\limits_{i=0}^n Pa_{i} : Pa_{0} \land Pa_{1} \land Pa_{2} \land... \land Pa_{n}\]
+    \\
+    and \textbf{big OR}
+    \\
+    \[ \bigvee\limits_{i=0}^n Pa_{i} : Pa_{0} \lor Pa_{1} \lor Pa_{2} \lor... \lor Pa_{n}\]
+
+\end{definition}
+
+\begin{definition}
+    \textbf{Universe of discourse} we specify a set like $ \{a_{0},a_{1},a_{2},...,a_{n}\}$
+    as universe of a Logic world.
+
+\end{definition}
+
+\begin{Rule}
+    \textbf{use of open propositions} assume universe of discourse is $ \{a_{0},a_{1},a_{2},...,a_{n}\}$
+    \\
+    \begin{NiceTabular}{ll}
+        $c.$ & $Px$ \\
+    \end{NiceTabular}
+    \\
+    means :
+    \\
+    \begin{NiceTabular}{ll}
+        $c.$   & $Pa_{0}$ \\
+        $c+1.$ & $Pa_{1}$ \\
+        $c+2.$ & $Pa_{2}$ \\
+        $ $    & $\vdots$ \\
+        $c+n.$ & $Pa_{n}$ \\
+    \end{NiceTabular}
+    \\
+    if $Px$ was been assemed then like this
+    \\
+    \begin{NiceTabular}{rll}
+        $c.$ & $Px$     & \\
+             & $\vdots$ & \\
+        \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (3-|3);
+    \end{NiceTabular}
+    \\
+    \\
+    means :
+    \\
+    \begin{NiceTabular}{rll}
+        $c_{0}.$ & $Pa_{0}$ & \\
+                 & $\vdots$ & \\
+        $c_{1}.$ & $Pa_{1}$ & \\
+                 & $\vdots$ & \\
+        $c_{2}.$ & $Pa_{2}$ & \\
+                 & $\vdots$ & \\
+                 & $\vdots$ & \\
+        $c_{n}.$ & $Pa_{n}$ & \\
+                 & $\vdots$ & \\
+        \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (3-|3);
+        \CodeAfter \tikz \draw [<-,shorten < = 2pt] (3-1) r-lr (5-|3);
+        \CodeAfter \tikz \draw [<-,shorten < = 2pt] (5-1) r-lr (7-|3);
+        \CodeAfter \tikz \draw [<-,shorten < = 2pt] (8-1) r-lr (10-|3);
+    \end{NiceTabular}
+\end{Rule}
+%
+
+\begin{definition}
+    \textbf{Universal quantification} assume universe of discourse is $ \{a_{0},a_{1},a_{2},...,a_{n}\}$
+    we define $\forall x Px$
+    \\
+    \[ \forall x Px : \bigwedge\limits_{i=0}^n Pa_{i} \]
+\end{definition}
+
+\begin{definition}
+    \textbf{Existential quantification} assume universe of discourse is $ \{a_{0},a_{1},a_{2},...,a_{n}\}$
+    we define $\exists x Px$
+    \\
+    \[ \exists  x Px : \bigvee\limits_{i=0}^n Pa_{i} \]
+\end{definition}
+
+\begin{definition}
+    \textbf{predicate schema(variable predicate)} a predicate that is unknown
+    for us and it works as variable.(we show them with $\Phi ,\Psi ,\Theta ,... $)
+\end{definition}
+
+as you can see $\forall x \Phi x $ and $\exists x \Phi x $ are sentences.
+
+\begin{definition}
+    \textbf{Free variables} variables that are not bound by a quantifier.
+    (you can easily see that every formula with no free variables are sentences)
+    (previously we sayed that every sentece is not necessary a proposition)
+\end{definition}
+
+\section{Rules of predicates.}
+
+\begin{theorem}
+    \textbf{$(schema)$} $(I\forall ,E\forall ,I\exists , E\exists)$
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+        \hline
+        Rules
+         &
+        Terms and Conditions
+        \\
+        \hline
+
+        \begin{NiceTabular}{ll}
+            $\Phi y$                      &            \\
+            \hline
+            $\therefore \forall x \Phi x$ & $I\forall$ \\
+        \end{NiceTabular}
+
+         &
+
+        \begin{enumerate}
+            \setlength{\itemsep}{0pt} % No extra space between items
+            \item  $y$ is a variable.
+            \item  $\Phi y$ must not be assumed.
+        \end{enumerate}
+
+        \\
+        \hline
+
+        \begin{NiceTabular}{ll}
+            $\forall x \Phi x$   &            \\
+            \hline
+            $\therefore \Phi a $ & $E\forall$ \\
+        \end{NiceTabular}
+
+         &
+
+        \begin{enumerate}
+            \setlength{\itemsep}{0pt} % No extra space between items
+            \item  $a$ is an obj in universe of discourse.(it can be constant or variable.)
+        \end{enumerate}
+
+        \\
+        \hline
+
+        \begin{NiceTabular}{ll}
+            $\Phi a$                      &            \\
+            \hline
+            $\therefore \exists x \Phi x$ & $I\exists$ \\
+        \end{NiceTabular}
+
+         &
+
+        \begin{enumerate}
+            \setlength{\itemsep}{0pt} % No extra space between items
+            \item  $a$ is an obj in universe of discourse.(it can be conatant or variable.)
+        \end{enumerate}
+
+        \\
+        \hline
+
+        \begin{NiceTabular}{ll}
+            $\exists x \Phi x$  &            \\
+            $\Phi y$            &            \\
+            $\vdots$            &            \\
+            $\theta$            &            \\
+            $\therefore\theta $ & $E\exists$ \\
+            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (2-1) r-lr (5-|3);
+        \end{NiceTabular}
+
+         &
+
+        \begin{enumerate}
+            \setlength{\itemsep}{0pt} % No extra space between items
+            \item  $y$ is a variable.
+            \item  $\Phi y$ must not be assemed in previous lines.(except ones that are closed)
+            \item $y$ is not free in $\theta$
+        \end{enumerate}
+
+        \\
+        \hline
+    \end{tabular}
+    % \printindex
+
+    \begin{tabular}{>{\centering\arraybackslash}m{7cm}>{\centering\arraybackslash}m{7cm}}
+        \begin{NiceTabular}{rll}
+            /      & $I\forall$                             &                      \\
+            1.     & $\Phi y$                               & $ass$                \\
+            2.     & $\Phi a_{0}$                           & $Def.1$              \\
+            $ $    & $\vdots$                               &                      \\
+            $n+2.$ & $\Phi a_{n}$                           & $Def.1$              \\
+            $n+3.$ & $\bigwedge\limits_{i=0}^n \Phi a_{i} $ & $I\land,2,3,...,n+2$ \\
+            $n+4.$ & $\forall x \Phi x$                     & $Def. n+3$           \\
+        \end{NiceTabular}
+         &
+        \begin{NiceTabular}{rll}
+            /  & $E\forall$                             &            \\
+            1. & $\forall x \Phi x$                     & $ass$      \\
+            2. & $\bigwedge\limits_{i=0}^n \Phi a_{i} $ & $Def.1$    \\
+            3. & $\Phi a_{i}$                           & $E\land 2$ \\
+        \end{NiceTabular}
+        \\
+        \begin{NiceTabular}{rll}
+            /  & $I\exists$                           &           \\
+            1. & $\Phi a_{i}$                         &           \\
+            2. & $\bigvee\limits_{i=0}^n \Phi a_{i} $ & $I\lor 1$ \\
+            3. & $\exists x \Phi x$                   & $Def 2$   \\
+        \end{NiceTabular}
+         &
+        \begin{NiceTabular}{rll}
+            /                   & $I\exists$                           &           \\
+            1.                  & $\exists x \Phi x$                   & $ass$     \\
+            2.                  & $\bigvee\limits_{i=0}^n \Phi a_{i} $ & $Def 2$   \\
+            $\hspace{.5cm}  3.$ & $\Phi a_{0}$                         &           \\
+                                & $\vdots$                             &           \\
+            $m.$                & $\theta$                             &           \\
+            $m+1.$              & $\Phi a_{1}$                         &           \\
+                                & $\vdots$                             &           \\
+            $l.$                & $\theta$                             &           \\
+                                & $\vdots$                             &           \\
+            $l+1.$              & $\Phi a_{n}$                         &           \\
+                                & $\vdots$                             &           \\
+            $r.$                & $\theta$                             &           \\
+            $r+1.$              & $\theta$                             & $E\lor 1$ \\
+            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (4-1) r-lr (7-|3);
+            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (7-1) r-lr (10-|3);
+            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (11-1) r-lr (14-|3);
+        \end{NiceTabular}
+
+    \end{tabular}
+
+\end{theorem}
+
+\begin{example}
+    \textbf{}for conatants P,Q,R we can prove these.Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+
+        \item   $ \forall x(Px \wedge Qx) \therefore / \therefore \forall x Px \wedge \forall x Qx $
+        \item   $ \exists x(Px \vee Qx) \therefore /\therefore \exists x Px \vee \exists x Qx $
+        \item   $ \forall x Px \vee \forall x Qx /\therefore \forall x(Px \vee Qx) $
+        \item   $ \exists x(Px \wedge Qx) /\therefore \exists x Px \wedge \exists x Qx $
+        \item   $(\exists x Px \rightarrow \exists x Qx) /\therefore \exists x(Px \rightarrow Qx) $
+        \item   $ \forall x Px \wedge Q \therefore /\therefore \forall x(Px \wedge Q) $
+        \item   $ \forall x Px \vee Q \therefore /\therefore \forall x(Px \vee Q) $
+        \item   $ \exists x Px \wedge Q \therefore /\therefore \exists x(Px \wedge Q) $
+        \item   $ \exists x Px \vee Q \therefore /\therefore \exists x(Px \vee Q) $
+        \item   $(Q \rightarrow \forall x Px) \therefore /\therefore \forall x(Q \rightarrow Px) $
+        \item   $(Q \rightarrow \exists x Px) \therefore /\therefore \exists x(Q \rightarrow Px) $
+        \item   $(\forall x Px \rightarrow Q) \therefore /\therefore \exists x(Px \rightarrow Q) $
+        \item   $(\exists x Px \rightarrow Q) \therefore /\therefore \forall x(Px \rightarrow Q) $
+        \item   $ \exists x \neg Px \therefore /\therefore \neg \forall x Px  $
+        \item   $ \forall x \neg Px \therefore /\therefore \neg \exists x Px $
+
+    \end{enumerate}
+\end{example}
+
+\begin{exercise}
+    \textbf{}for conatants P,Q,R prove.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item   $ \exists x(Px \wedge \exists y Qy \rightarrow \forall z Rz) /\therefore \forall y \forall z(\forall x Px \wedge Qy \rightarrow Rz) $
+        \item   $ \forall x \exists y(Px \wedge Qy \rightarrow \forall z Rz) /\therefore \forall z(\exists x Px \wedge \forall y Qy \rightarrow Rz) $
+        \item   $(\forall x Px \rightarrow \exists y Qy) /\therefore \exists x \exists y(Px \rightarrow Qy) $
+        \item   $ \forall x \forall z \exists y \exists w(Pyz \vee Qz \rightarrow Rxw) /\therefore(\exists z \forall y Pyz \vee \exists z Qz) \rightarrow \forall x \exists w Rxw $
+        \item   $ \exists x Px \vee \exists x(Qx \wedge Rx) /\therefore \exists x(Px \vee Qx) \wedge \exists x(Px \vee Rx) $
+        \item   $\exists x \exists z \forall y(Pxy \rightarrow Qz \vee Rxz) /\therefore \forall x \exists y Pxy \rightarrow(\exists z Qz \vee \exists x \exists z Rxz) $
+        \item   $ \forall x \exists y(\exists z Pxyz \wedge Qxy) \vee \forall x \exists y \exists z(Pxyz \wedge Rxy) /\therefore \forall x \exists y \exists z(Pxyz \wedge(Qxy \vee Rxy)) $
+    \end{enumerate}
+\end{exercise}
+
+\begin{Attention}
+    we can rewrite \textbf{Example} and \textbf{Exercise} propositions and
+    proofs with proposition schemas and schema of proves.so they are all rules.
+\end{Attention}
+
+\chapter{The beginning of set theory}
+
+\section{Axioms of set theory}
+we emphasis before that set has no definition.but we can describe what set is
+with rules and axioms.
+
+\begin{axiom}
+    \textbf{Extensionality}Two sets are equal (are the same set) if they have the same elements.
+    \\
+    \[  \forall X,Y (\forall x ( x \in X \leftrightarrow x \in Y ) \leftrightarrow X = Y )  \]
+\end{axiom}
+
+\begin{definition}
+    \textbf{Subset} a subset is a set where every element is also an element of another, larger set called the superset
+    \[ A \subseteq B: \forall x(x \in A \rightarrow x \in B) \]
+\end{definition}
+
+so we can rewrite axiom of Extensionality like this.
+
+\[ \forall X,Y ((X \subseteq Y \wedge Y \subseteq X) \leftrightarrow X=Y)\]
+
+\begin{theorem}
+    \textbf{$(schema)$} $(I\subseteq , E\subseteq)$
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+        \hline
+        \begin{NiceTabular}{ll}
+            $x \in A $                   &              \\
+            $\vdots$                     &              \\
+            $x \in B $                   &              \\
+            $\therefore A \subseteq B  $ & $I\subseteq$ \\
+            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (4-|3);
+        \end{NiceTabular}
+         &
+        \begin{NiceTabular}{ll}
+            $A \subseteq B $      &              \\
+            $a \in A$             &              \\
+            \hline
+            $\therefore  a \in B$ & $E\subseteq$ \\
+        \end{NiceTabular}
+        \\
+        \hline
+    \end{tabular}
+
+    \begin{tabular}{>{\centering\arraybackslash}m{7cm}>{\centering\arraybackslash}m{7cm}}
+        \begin{NiceTabular}{lll}
+            /      & $I\subseteq $                             &                    \\
+            $1.$   & $x \in A$                                 & acp                \\
+                   & $\vdots$                                  &                    \\
+            $n.$   & $x \in B$                                 &                    \\
+            $n+1.$ & $x \in A \rightarrow x \in B $            & $I\rightarrow,1,n$ \\
+            $n+2.$ & $\forall x(x \in A \rightarrow x \in B )$ & $I\forall,n+1$     \\
+            $n+3.$ & $ A \subseteq B  $                        & Def.$n+2$          \\
+            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (2-1) r-lr (5-|3);
+        \end{NiceTabular}
+         &
+        \begin{NiceTabular}{lll}
+            /    & $E\subseteq $                             &                    \\
+            $2.$ & $A \subseteq B$                           & ass                \\
+            $3.$ & $a \in A$                                 & ass                \\
+            $4.$ & $\forall x(x \in A \rightarrow x \in A )$ & def.$1$            \\
+            $5.$ & $a \in A \rightarrow a \in B $            & $E\forall,4$       \\
+            $6.$ & $ a \in B$                                & $E\rightarrow 3,5$ \\
+        \end{NiceTabular}
+        \\
+    \end{tabular}
+
+\end{theorem}
+
+\begin{theorem}
+    \textbf{$(schema)$} $(I= , E=)$
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+        \hline
+        \begin{NiceTabular}{ll}
+            $x \in A $           &      \\
+            $\vdots$             &      \\
+            $x \in B $           &      \\
+            $x \in B $           &      \\
+            $\vdots$             &      \\
+            $x \in A $           &      \\
+            $\therefore A = B  $ & $I=$ \\
+            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (4-|3);
+            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (4-1) r-lr (7-|3);
+        \end{NiceTabular}
+         &
+        \begin{NiceTabular}{ll}
+            $A = B $              &      \\
+            $a \in A$             &      \\
+            \hline
+            $\therefore  a \in B$ & $E=$ \\
+        \end{NiceTabular}
+        \\
+        \hline
+    \end{tabular}
+
+    \begin{NiceTabular}{lll}
+        /      & $I\subseteq $                                                            &                            \\
+        $1.$   & $x \in A $                                                               & acp                        \\
+               & $\vdots$                                                                 &                            \\
+        $n.$   & $x \in B $                                                               &                            \\
+        $n+1.$ & $ A \subseteq B  $                                                       & $I\subseteq,1,n$           \\
+        $n+2.$ & $x \in B $                                                               & acp                        \\
+               & $\vdots$                                                                 &                            \\
+        $m.$   & $x \in A $                                                               &                            \\
+        $m+1.$ & $ B \subseteq A  $                                                       & $I\subseteq,n+2,m$         \\
+        $m+2.$ & $\forall X, Y((X \subseteq Y \wedge Y \subseteq X) \leftrightarrow X=Y)$ & Extensionality             \\
+        $m+3.$ & $(A \subseteq B \wedge B \subseteq A) \leftrightarrow A=B$               & $E\forall,m+2$             \\
+        $m+4.$ & $A \subseteq B \wedge B \subseteq A$                                     & $I\wedge,n+1,m+1$          \\
+        $m+5.$ & $A=B$                                                                    & $E\leftrightarrow,m+3,m+4$ \\
+        \CodeAfter \tikz \draw [<-,shorten < = 2pt] (2-1) r-lr (5-|3);
+        \CodeAfter \tikz \draw [<-,shorten < = 2pt] (6-1) r-lr (9-|3);
+    \end{NiceTabular}
+    \\
+    \\
+    \\
+    \\
+    \begin{NiceTabular}{lll}
+        /    & $E\subseteq $                                                            &                        \\
+        $1.$ & $A = B $                                                                 &                        \\
+        $2.$ & $a \in A$                                                                &                        \\
+        $3.$ & $\forall X, Y((X \subseteq Y \wedge Y \subseteq X) \leftrightarrow X=Y)$ & Extensionality         \\
+        $4.$ & $(A \subseteq B \wedge B \subseteq A) \leftrightarrow A=B$               & $E\forall,3$           \\
+        $5.$ & $A \subseteq B \wedge B \subseteq A$                                     & $E\leftrightarrow,1,4$ \\
+        $6.$ & $A \subseteq B$                                                          & $E\wedge 5$            \\
+        $7.$ & $ a \in B$                                                               & $E\subseteq,2,6$       \\
+    \end{NiceTabular}
+\end{theorem}
+
+\begin{axiom}
+    \textbf{Weak comprehension} this axioms says for every open proposition with just one variable
+    like $\phi x$ there is a set such that every $x$ is a member of that set if and only if it holds
+    $\phi x$.
+    \\
+    \[ \exists X \forall x  (\Phi x \leftrightarrow x \in X) \]
+    \\
+    by axiom of extentionality we can show that y is uniq.
+    so we denote it as $\{ x | \Phi x\}$.
+\end{axiom}
+
+this axiom show that why Russell's paradox doesn't happened here because if ou
+assume $R=\{x|x \notin x\}$ is a set.you can't prove or disprove $R \in R$. (we
+don't need to prove that now.we will prove it in \textbf{'MetaLogic'}.)
+
+
+\section{Definitions of set theory}
+Let's talk about some definitions in set theoty.These definitions will come in handy later.
+
+
+\begin{definition}
+    \textbf{Empty set} also known as the null set,
+    is the unique mathematical set containing no elements at all.
+    (uniqueness can be proven.)
+    \[ \emptyset:=\{x \mid \perp\} \]
+    therefore.
+    \[ \forall x(x \in \emptyset \leftrightarrow  \perp) \]
+    therefore.
+    \[ \forall x(x \notin \emptyset ) \]
+\end{definition}
+
+\begin{lemma}
+    \textbf{} $A = \emptyset \therefore / \therefore \forall y( y \notin A)$
+
+    \begin{NiceTabular}{lll}
+              & $\forall y( y \notin A)  / \therefore A = \emptyset  $                              &                          \\
+        $1.$  & $\forall y (y \notin A )$                                                           & ass                      \\
+        $2.$  & $y \in A $                                                                          & acp                      \\
+        $3.$  & $y \notin A $                                                                       & $E\forall,1$             \\
+        $4.$  & $\perp $                                                                            & $I\bot,2,3$              \\
+        $5.$  & $y \in \emptyset $                                                                  & $E\bot,4$                \\
+        $6.$  & $y \in \emptyset $                                                                  & acp                      \\
+        $7.$  & $ \forall y (y \notin \emptyset  )$                               & Def.                 \\
+        $8.$  & $ y \notin \emptyset   $                                           & $E\forall,7$             \\
+        $9.$  & $\perp $                                                                            & $E\leftrightarrow,6,8$   \\
+        $10.$ & $ y \in A $                                                                         & $I\bot,9$                \\
+        $11.$ & $ y \in A \leftrightarrow y \in \emptyset$                                          & $I\leftrightarrow,5,10$  \\
+        $12.$ & $ \forall y(y \in A \leftrightarrow y \in \emptyset) $                              & $I\forall,11$            \\
+        $13.$ & $ \forall X,Y(\forall y(y \in X \leftrightarrow y \in Y) \leftrightarrow X=Y) $     & extentionality           \\
+        $14.$ & $ (\forall y(y \in A \leftrightarrow y \in \emptyset) \leftrightarrow A=\emptyset)$ & $E\forall,13$            \\
+        $15.$ & $ A=\emptyset$                                                                      & $E\leftrightarrow,12,14$ \\
+        \CodeAfter \tikz \draw [<-,shorten < = 2pt] (3-1) r-lr (7-|3);
+        \CodeAfter \tikz \draw [<-,shorten < = 2pt] (7-1) r-lr (12-|3);
+    \end{NiceTabular}
+    \\
+    \\
+    \\
+    \\
+    \begin{NiceTabular}{lll}
+              & $A = \emptyset  / \therefore \forall y( y \notin A) $                               &                        \\
+        $1.$  & $ A=\emptyset$                                                                      & ass                    \\
+        $2.$  & $ \forall X,Y(\forall y(y \in X \leftrightarrow y \in Y) \leftrightarrow X=Y) $     & extentionality         \\
+        $3.$  & $ (\forall y(y \in A \leftrightarrow y \in \emptyset) \leftrightarrow A=\emptyset)$ & $E\forall,2$           \\
+        $4.$  & $ \forall y(y \in A \leftrightarrow y \in \emptyset) $                              & $E\leftrightarrow,1,3$ \\
+        $5.$  & $y \in A $                                                                          & acp                    \\
+        $6.$  & $y \in A \leftrightarrow y \in \emptyset$                                           & $E\forall,4$           \\
+        $7.$  & $y \in \emptyset $                                                                  & $E\leftrightarrow,5,6$ \\
+        $8.$  & $ \forall y (y \notin \emptyset )$                               & Def.               \\
+        $9.$  & $ y \notin \emptyset  $                                           & $E\forall,8$           \\
+        $10.$ & $\perp $                                                                            & $E\leftrightarrow,7,9$ \\
+        $11.$ & $y \notin A $                                                                       & $I\neg,5,10$           \\
+        $12.$ & $\forall y (y \notin A )$                                                           & $I\forall,11$          \\
+        \CodeAfter \tikz \draw [<-,shorten < = 2pt] (6-1) r-lr (12-|3);
+
+    \end{NiceTabular}
+
+\end{lemma}
+
+\begin{theorem}
+    \textbf{$(schema)$} $(I\emptyset\not= , E \emptyset \not= ,I\emptyset= , E\emptyset=)$
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+        \hline
+        \begin{NiceTabular}{ll}
+            $a \in A$            &                   \\
+            \hline
+            $A \not= \emptyset $ & $I\emptyset\not=$ \\
+        \end{NiceTabular}
+         &
+        \begin{NiceTabular}{ll}
+            $A \not= \emptyset $ &                     \\
+            $x \in A $           &                     \\
+            $\vdots$             &                     \\
+            $\theta $            &                     \\
+            $\theta  $           & $E \emptyset \not=$ \\
+            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (2-1) r-lr (5-|3);
+        \end{NiceTabular}
+        \\
+        \hline
+        \begin{NiceTabular}{ll}
+            $x \in A $       &               \\
+            $\vdots$         &               \\
+            $\bot $          &               \\
+            $A = \emptyset $ & $I\emptyset=$ \\
+            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (4-|3);
+        \end{NiceTabular}
+         &
+        \begin{NiceTabular}{ll}
+            $A = \emptyset $ &               \\
+            \hline
+            $a \notin A$     & $E\emptyset=$ \\
+        \end{NiceTabular}
+        \\
+        \hline
+    \end{tabular}
+
+    \begin{tabular}{>{\centering\arraybackslash}m{7cm}>{\centering\arraybackslash}m{7cm}}
+
+        \begin{NiceTabular}{lll}
+            $1.$ & $a \in A$                      &                   \\
+            $2.$ & $\exists x(x \in A)$           & $I\exists,1$      \\
+            $3.$ & $\neg (\forall x(x \notin A))$ & De Morgan $2$     \\
+            $4.$ & $A \not= \emptyset $           & lemma $4.4.1 , 3$ \\
+        \end{NiceTabular}
+         &
+        \begin{NiceTabular}{lll}
+            $1.$   & $A \not= \emptyset $           &                   \\
+            $2.$   & $\neg (\forall x(x \notin A))$ & lemma $4.4.1 , 2$ \\
+            $3.$   & $\exists x(x \in A)$           & De Morgan $2$     \\
+            $4.$   & $x \in A $                     & acp               \\
+                   & $\vdots$                       &                   \\
+            $n.$   & $\theta $                      &                   \\
+            $n+1.$ & $\theta  $                     & $E\exists,4,n$    \\
+            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (4-1) r-lr (7-|3);
+        \end{NiceTabular}
+        \\
+
+        \begin{NiceTabular}{lll}
+            $1.$   & $x \in A $               & acp                  \\
+                   & $\vdots$                 &                      \\
+            $n.$   & $\bot $                  &                      \\
+            $n+1.$ & $x \notin A $            & $I\neg ,n$           \\
+            $n+2.$ & $\forall x(x \notin A) $ & $I\forall ,n+1$      \\
+            $n+3.$ & $A = \emptyset $         & lemma $4.4.1 , 1$  \
+            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (4-|3);
+        \end{NiceTabular}
+         &
+        \begin{NiceTabular}{lll}
+            $1.$ & $A = \emptyset $        &                   \\
+            $2.$ & $\forall x(x \notin A)$ & lemma $4.4.1 , 1$ \\
+            $1.$ & $a \notin A$            & $E\forall 2$      \\
+        \end{NiceTabular}
+        \\
+
+    \end{tabular}
+\end{theorem}
+
+\begin{example}
+    \textbf{} $/\therefore \forall X(\emptyset \subseteq X)$
+
+    \begin{NiceTabular}{lll}
+        $1.$ & $x \in \emptyset $                 & acp                  \\
+        $2.$ & $\forall x(x \notin \emptyset) $   & lemma $4.4.1 $       \\
+        $3.$ & $x \notin \emptyset $              & $E\forall ,2$        \\
+        $4.$ & $\bot $                            & $I\bot ,1,3$         \\
+        $5.$ & $x \in X $                         & $E\bot ,4$           \\
+        $6.$ & $\emptyset \subseteq X $           & $I\subseteq ,1,5$    \\
+        $7.$ & $\forall X(\emptyset \subseteq X)$ & lemma $4.4.1 , 1$  \
+        \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (6-|3);
+    \end{NiceTabular}
+
+\end{example}
+
+\begin{example}
+    \textbf{} $A \subseteq B , B \subseteq C/\therefore A \subseteq C$
+
+    \begin{NiceTabular}{lll}
+        $1.$ & $A \subseteq B $ & ass               \\
+        $2.$ & $B \subseteq C$  & ass               \\
+        $3.$ & $x \in A $       & acp               \\
+        $4.$ & $x \in B $       & $E\subseteq ,1,3$ \\
+        $5.$ & $x \in C  $      & $E\subseteq ,2,4$ \\
+        $6.$ & $A \subseteq C $ & $I\subseteq ,3,5$ \\
+        \CodeAfter \tikz \draw [<-,shorten < = 2pt] (3-1) r-lr (6-|3);
+    \end{NiceTabular}
+
+\end{example}
+
+\begin{definition}
+    \textbf{pairing set}
+    \[ \{a_{0}, a_{1}, a_{2}, ... ,a_{n} \}:=\{x \mid x=a_{0} \lor x=a_{1} \lor x=a_{2} \lor ... \lor x=a_{n} \} \]
+    therefore.
+    \[\forall x( x \in \{a_{0}, a_{1}, a_{2}, ... ,a_{n} \} \leftrightarrow  (x=a_{0} \lor x=a_{1} \lor x=a_{2} \lor ... \lor x=a_{n} )) \]
+\end{definition}
+
+\begin{theorem}
+    \textbf{$(schema)$} $(I\{\} , E\{\})$
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+        \hline
+        \begin{NiceTabular}{ll}
+            $a = a_{i} $                                               &         \\
+            \hline
+            $\therefore  a \in  \{a_{0}, a_{1}, a_{2}, ... ,a_{n} \} $ & $I\{\}$ \\
+        \end{NiceTabular}
+         &
+        \begin{NiceTabular}{ll}
+            $ a \in  \{a_{0}, a_{1}, a_{2}, ... ,a_{n} \} $ &         \\
+            $a = a_{0} $                                    &         \\
+            $\vdots$                                        &         \\
+            $\theta $                                       &         \\
+            $\vdots$                                        &         \\
+            $a = a_{n} $                                    &         \\
+            $\vdots$                                        &         \\
+            $\theta $                                       &         \\
+            $\therefore \theta $                            & $E\{\}$ \\
+            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (2-1) r-lr (5-|3);
+            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (6-1) r-lr (9-|3);
+        \end{NiceTabular}
+        \\
+        \hline
+    \end{tabular}
+    \\
+    \\
+    \\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\begin{definition}
+    \textbf{Union and Intersection} \\
+    Intersection:
+    \[ A \cap B:=\{x \mid x \in A \wedge x \in B \} \]
+    therefore.
+    \[\forall x( x \in A \cap B  \leftrightarrow  (x \in A \wedge x \in B )) \]
+    Union:
+    \[ A \cup B:=\{x \mid x \in A \lor x \in B \} \]
+    therefore.
+    \[\forall x( x \in A \cup B  \leftrightarrow  (x \in A \lor x \in B )) \]
+\end{definition}
+
+\begin{theorem}
+    \textbf{$(schema)$} $(I\cap , E\cap , I\cup , E\cup)$
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+        \hline
+        \begin{NiceTabular}{ll}
+            $a \in A $                     &         \\
+            $a \in B $                     &         \\
+            \hline
+            $\therefore  a \in  A \cap B $ & $I\cap$ \\
+        \end{NiceTabular}
+         &
+        \begin{NiceTabular}{ll}
+            $ a \in  A \cap B $                                         &         \\
+            \hline
+            $\therefore  a \in  A \hspace{.5cm}  \therefore  a \in  B $ & $E\cap$ \\
+        \end{NiceTabular}
+        \\
+        \hline
+        \begin{NiceTabular}{ll}
+            $a \in A  $                                                               &         \\
+            \hline
+            $\therefore  a \in  A \cup B \hspace{.5cm}  \therefore  a \in  B \cup A $ & $I\cup$ \\
+        \end{NiceTabular}
+         &
+        \begin{NiceTabular}{ll}
+            $ a \in  A \cup B  $ &         \\
+            $a \in A $           &         \\
+            $\vdots$             &         \\
+            $\theta $            &         \\
+            $ a \in B  $         &         \\
+            $\vdots$             &         \\
+            $\theta $            &         \\
+            $\therefore \theta $ & $E\cup$ \\
+            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (2-1) r-lr (5-|3);
+            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (5-1) r-lr (8-|3);
+        \end{NiceTabular}
+        \\
+        \hline
+    \end{tabular}
+    \\
+    \\
+    \\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\begin{definition}
+    \textbf{Big Union and Intersection} \\
+    Intersection:
+    \[  \bigcap A:=\{x \mid \forall X (X \in A \rightarrow x \in X) \} \]
+    therefore.
+    \[\forall x( x \in \bigcap A  \leftrightarrow  (\forall X (X \in A \rightarrow x \in X))) \]
+    Union:
+    \[  \bigcup A:=\{x \mid \exists X (X \in A \wedge x \in X) \} \]
+    therefore.
+    \[\forall x( x \in \bigcup A \leftrightarrow  (\exists X (X \in A \wedge x \in X))) \]
+\end{definition}
+
+\begin{theorem}
+    \textbf{$(schema)$} $(I\bigcap , E\bigcap , I\bigcup , E\bigcup)$
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+        \hline
+        \begin{NiceTabular}{ll}
+            $X \in A $                     &            \\
+            $\vdots$                       &            \\
+            $a \in X $                     &            \\
+            $\therefore  a \in \bigcap A $ & $I\bigcap$ \\
+            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (4-|3);
+        \end{NiceTabular}
+         &
+        \begin{NiceTabular}{ll}
+            $ a \in \bigcap A  $    &            \\
+            $ B \in  A  $           &            \\
+            \hline
+            $\therefore  a \in  B $ & $E\bigcap$ \\
+        \end{NiceTabular}
+        \\
+        \hline
+        \begin{NiceTabular}{ll}
+            $a \in B  $                    &            \\
+            $B \in A  $                    &            \\
+            \hline
+            $\therefore  a \in \bigcup A $ & $I\bigcup$ \\
+        \end{NiceTabular}
+         &
+        \begin{NiceTabular}{ll}
+            $ a \in \bigcup A  $      &            \\
+            $a \in X \wedge X \in A $ &            \\
+            $\vdots$                  &            \\
+            $\theta $                 &            \\
+            $\therefore \theta $      & $E\bigcup$ \\
+            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (2-1) r-lr (5-|3);
+        \end{NiceTabular}
+        \\
+        \hline
+    \end{tabular}
+    \\
+    \\
+    \\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\begin{definition}
+    \textbf{Complement}
+    \[   A^c:=\{x \mid x \notin A  \} \]
+    therefore.
+    \[\forall x( x \in A^c \leftrightarrow  x \notin A ) \]
+\end{definition}
+
+\begin{definition}
+    \textbf{Universal set}(we denote it as V.it simply means the set of all sets)
+    \[   V:=\{x \mid \top \} \]
+    therefore.
+    \[\forall x( x \in V \leftrightarrow  \top ) \]
+    therefore.
+    \[\forall x( x \in V ) \]
+\end{definition}
+
+\begin{definition}
+    \textbf{Subtraction}
+    \[ A - B:=\{x \mid x \in A \wedge x \notin B \} \]
+    therefore.
+    \[\forall x( x \in A - B  \leftrightarrow  (x \in A \wedge x \notin B )) \]
+\end{definition}
+
+\begin{theorem}
+    \textbf{$(schema)$} $(I- , E- )$
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+        \hline
+        \begin{NiceTabular}{ll}
+            $a \in A $                  &      \\
+            $a \notin B $               &      \\
+            \hline
+            $\therefore  a \in  A - B $ & $I-$ \\
+        \end{NiceTabular}
+         &
+        \begin{NiceTabular}{ll}
+            $ a \in  A - B $                                               &      \\
+            \hline
+            $\therefore  a \in  A \hspace{.5cm}  \therefore  a \notin  B $ & $E-$ \\
+        \end{NiceTabular}
+        \\
+        \hline
+    \end{tabular}
+    \\
+    \\
+    \\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\begin{lemma}
+    \textbf{} $/ \therefore  A - B = A \cap B^c$
+    \\
+    \\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+
+\begin{definition}
+    \textbf{Powerset}
+    \[ P(A):=\{X \mid X \subseteq A \} \]
+    therefore.
+    \[\forall X( X \in P(A) \leftrightarrow  (X \subseteq A )) \]
+\end{definition}
+
+\begin{theorem}
+    \textbf{$(schema)$} $(IP, EP )$
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+        \hline
+        \begin{NiceTabular}{ll}
+            $A \subseteq B $                  &      \\
+            \hline
+            $\therefore  A \in  P(B) $ & $IP$ \\
+        \end{NiceTabular}
+         &
+        \begin{NiceTabular}{ll}
+            $A \in  P(B)  $                                               &      \\
+            \hline
+            $\therefore  A \subseteq B $ & $EP$ \\
+        \end{NiceTabular}
+        \\
+        \hline
+    \end{tabular}
+    \\
+    \\
+    \\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\end{document}
+
