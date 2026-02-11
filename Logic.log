@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.9.18)  16 SEP 2025 14:17
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.9.18)  11 FEB 2026 20:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -105,22 +105,11 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (D:\pdf\RStudio\latex\tex/latex/amscls\amsthm.sty
-Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks24
-\thm@bodyfont=\toks25
-\thm@headfont=\toks26
-\thm@notefont=\toks27
-\thm@headpunct=\toks28
-\thm@preskip=\skip53
-\thm@postskip=\skip54
-\thm@headsep=\skip55
-\dth@everypar=\toks29
-) (D:\pdf\RStudio\latex\tex/latex/geometry\geometry.sty
+)) (D:\pdf\RStudio\latex\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
  (D:\pdf\RStudio\latex\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks30
+\KV@toks@=\toks24
 ) (D:\pdf\RStudio\latex\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
  (D:\pdf\RStudio\latex\tex/generic/iftex\iftex.sty
@@ -137,7 +126,7 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layoutheight=\dimen155
 \Gm@layouthoffset=\dimen156
 \Gm@layoutvoffset=\dimen157
-\Gm@dimlist=\toks31
+\Gm@dimlist=\toks25
  (D:\pdf\RStudio\latex\tex/latex/geometry\geometry.cfg)) (D:\pdf\RStudio\latex\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
  (D:\pdf\RStudio\latex\tex/latex/graphics\graphics.sty
@@ -260,9 +249,9 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
-\Hy@SectionHShift=\skip56
+\Hy@SectionHShift=\skip53
 ) (D:\pdf\RStudio\latex\tex/latex/pgf/frontendlayer\tikz.sty (D:\pdf\RStudio\latex\tex/latex/pgf/basiclayer\pgf.sty (D:\pdf\RStudio\latex\tex/latex/pgf/utilities\pgfrcs.sty (D:\pdf\RStudio\latex\tex/generic/pgf/utilities\pgfutil-common.tex
-\pgfutil@everybye=\toks32
+\pgfutil@everybye=\toks26
 \pgfutil@tempdima=\dimen164
 \pgfutil@tempdimb=\dimen165
 ) (D:\pdf\RStudio\latex\tex/generic/pgf/utilities\pgfutil-latex.def
@@ -274,10 +263,10 @@ Package: pgf 2023-01-15 v3.1.10 (3.1.10)
  (D:\pdf\RStudio\latex\tex/latex/pgf/basiclayer\pgfcore.sty (D:\pdf\RStudio\latex\tex/latex/pgf/systemlayer\pgfsys.sty (D:\pdf\RStudio\latex\tex/generic/pgf/systemlayer\pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
  (D:\pdf\RStudio\latex\tex/generic/pgf/utilities\pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks33
-\pgfkeys@temptoks=\toks34
+\pgfkeys@pathtoks=\toks27
+\pgfkeys@temptoks=\toks28
  (D:\pdf\RStudio\latex\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks35
+\pgfkeys@tmptoks=\toks29
 ))
 \pgf@x=\dimen166
 \pgf@y=\dimen167
@@ -295,9 +284,9 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 \c@pgf@countb=\count288
 \c@pgf@countc=\count289
 \c@pgf@countd=\count290
-\t@pgf@toka=\toks36
-\t@pgf@tokb=\toks37
-\t@pgf@tokc=\toks38
+\t@pgf@toka=\toks30
+\t@pgf@tokb=\toks31
+\t@pgf@tokc=\toks32
 \pgf@sys@id@count=\count291
  (D:\pdf\RStudio\latex\tex/generic/pgf/systemlayer\pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
@@ -338,9 +327,9 @@ Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 \pgfmath@dimen=\dimen176
 \pgfmath@count=\count295
 \pgfmath@box=\box55
-\pgfmath@toks=\toks39
-\pgfmath@stack@operand=\toks40
-\pgfmath@stack@operation=\toks41
+\pgfmath@toks=\toks33
+\pgfmath@stack@operand=\toks34
+\pgfmath@stack@operation=\toks35
 ) (D:\pdf\RStudio\latex\tex/generic/pgf/math\pgfmathfunctions.code.tex) (D:\pdf\RStudio\latex\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (D:\pdf\RStudio\latex\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (D:\pdf\RStudio\latex\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (D:\pdf\RStudio\latex\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (D:\pdf\RStudio\latex\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (D:\pdf\RStudio\latex\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (D:\pdf\RStudio\latex\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (D:\pdf\RStudio\latex\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex) (D:\pdf\RStudio\latex\tex/generic/pgf/math\pgfmathcalc.code.tex) (D:\pdf\RStudio\latex\tex/generic/pgf/math\pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count296
 )) (D:\pdf\RStudio\latex\tex/generic/pgf/math\pgfint.code.tex) (D:\pdf\RStudio\latex\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
@@ -423,8 +412,8 @@ Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 \pgffor@iter=\dimen259
 \pgffor@skip=\dimen260
-\pgffor@stack=\toks42
-\pgffor@toks=\toks43
+\pgffor@stack=\toks36
+\pgffor@toks=\toks37
 )) (D:\pdf\RStudio\latex\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
  (D:\pdf\RStudio\latex\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
@@ -634,9 +623,9 @@ Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
 \col@sep=\dimen391
 \ar@mcellbox=\box80
 \extrarowheight=\dimen392
-\NC@list=\toks44
-\extratabsurround=\skip57
-\backup@length=\skip58
+\NC@list=\toks38
+\extratabsurround=\skip54
+\backup@length=\skip55
 \ar@cellbox=\box81
 ) (D:\pdf\RStudio\latex\tex/latex/nicematrix\nicematrix.sty
 Package: nicematrix 2025/06/21 v7.1d Enhanced arrays with the help of PGF/TikZ
@@ -731,14 +720,14 @@ File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfarrowlinewidth=\dimen444
 ) (D:\pdf\RStudio\latex\tex/generic/tikz-ext\tikzlibraryext.paths.ortho.code.tex (D:\pdf\RStudio\latex\tex/generic/tikz-ext\tikzext-util.tex)) (D:\pdf\RStudio\latex\tex/latex/mfirstuc\mfirstuc.sty
 Package: mfirstuc 2025/04/03 v2.09 (NLCT)
-\@glsmfirst=\toks45
-\@glsmrest=\toks46
+\@glsmfirst=\toks39
+\@glsmrest=\toks40
 ) (D:\pdf\RStudio\latex\tex/latex/twemojis\twemojis.sty
 Package: twemojis 2022/03/30 v1.3.1 LaTeX twemojis (twemoji v14.0.1)
  (D:\pdf\RStudio\latex\tex/latex/base\ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
-\twemojiDefaultHeight=\skip59
+\twemojiDefaultHeight=\skip56
 ) (D:\pdf\RStudio\latex\tex/latex/fontspec\fontspec.sty (D:\pdf\RStudio\latex\tex/latex/l3packages/xparse\xparse.sty (D:\pdf\RStudio\latex\tex/latex/l3kernel\expl3.sty
 Package: expl3 2024-01-04 L3 programming layer (loader) 
  (D:\pdf\RStudio\latex\tex/latex/l3backend\l3backend-xetex.def
@@ -790,39 +779,278 @@ LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
 ) (D:\pdf\RStudio\latex\tex/latex/emptypage\emptypage.sty
 Package: emptypage 2010/05/30 v1.2 Suppress page numbers and headings on empty pages
+) (proofpack.sty
+Package: proofpack 2023/07/09 v0.2 Proof Pack for Natural Deduction
+ (D:\pdf\RStudio\latex\tex/latex/lm\lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+) (D:\pdf\RStudio\latex\tex/latex/newfloat\newfloat.sty
+Package: newfloat 2023/10/01 v1.2 Defining new floating environments (AR)
+Package newfloat Info: Unsupported document class, or \@chapter 
+(newfloat)             was already redefined by another package.
+Package newfloat Info: \@chapter = macro:->\def \Hy@next {\Hy@MakeCurrentHrefAuto {\Hy@chapapp *}\Hy@raisedlink {\hyper@anchorstart {\@currentHref }\hyper@anchorend }}\ifnum \c@secnumdepth >\m@ne \@ifundefined {if@mainmatter}\iftrue {\csname if@mainmatter\endcsname }\let \Hy@next \relax \fi \fi \Hy@next \Hy@org@chapter .
+Package newfloat Info: \Hy@org@chapter = macro:[#1]#2->\NR@gettitle {#1}\NR@chapter [{#1}]{#2}.
+Package newfloat Info: \algocf@original@chapter = undefined.
+) (D:\pdf\RStudio\latex\tex/latex/mathtools\mathtools.sty
+Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
+ (D:\pdf\RStudio\latex\tex/latex/tools\calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count370
+\calc@Bcount=\count371
+\calc@Adimen=\dimen448
+\calc@Bdimen=\dimen449
+\calc@Askip=\skip57
+\calc@Bskip=\skip58
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count372
+\calc@Cskip=\skip59
+) (D:\pdf\RStudio\latex\tex/latex/mathtools\mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
-\c@undefined=\count370
-\c@definition=\count371
-\c@theorem=\count372
-\c@lemma=\count373
-\c@axiom=\count374
-\c@example=\count375
-\c@exercise=\count376
-\c@Rule=\count377
-\c@Attention=\count378
+
+Package mathtools Warning: For best results, please load mathtools *before* 
+(mathtools)                unicode-math on input line 127.
+
+\g_MT_multlinerow_int=\count373
+\l_MT_multwidth_dim=\dimen450
+\origjot=\skip60
+\l_MT_shortvdotswithinadjustabove_dim=\dimen451
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen452
+\l_MT_above_intertext_sep=\dimen453
+\l_MT_below_intertext_sep=\dimen454
+\l_MT_above_shortintertext_sep=\dimen455
+\l_MT_below_shortintertext_sep=\dimen456
+\xmathstrut@box=\box83
+\xmathstrut@dim=\dimen457
+) (D:\pdf\RStudio\latex\tex/latex/tools\longtable.sty
+Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
+\LTleft=\skip61
+\LTright=\skip62
+\LTpre=\skip63
+\LTpost=\skip64
+\LTchunksize=\count374
+\LTcapwidth=\dimen458
+\LT@head=\box84
+\LT@firsthead=\box85
+\LT@foot=\box86
+\LT@lastfoot=\box87
+\LT@gbox=\box88
+\LT@cols=\count375
+\LT@rows=\count376
+\c@LT@tables=\count377
+\c@LT@chunks=\count378
+\LT@p@ftn=\toks41
+)
+\c@deducecounter=\count379
+\c@userlinecounternum=\count380
+\pplineht=\skip65
+\ppindent=\skip66
+\ppnumsep=\skip67
+\ppsep=\skip68
+\ppnumwd=\skip69
+\ppjustindent=\skip70
+\c@counthyp=\count381
+\c@sub=\count382
+ (D:\pdf\RStudio\latex\tex/latex/tabularray\tabularray.sty
+Package: tabularray 2025-11-27 v2025C Typeset tabulars and arrays with LaTeX3
+ (D:\pdf\RStudio\latex\tex/latex/ninecolors\ninecolors.sty
+Package: ninecolors 2022-02-13 v2022D Select colors with proper color contrast
+)
+\g__tblr_nohyper_int=\count383
+\l__tblr_a_int=\count384
+\l__tblr_c_int=\count385
+\l__tblr_r_int=\count386
+\l__tblr_d_dim=\dimen459
+\l__tblr_h_dim=\dimen460
+\l__tblr_o_dim=\dimen461
+\l__tblr_p_dim=\dimen462
+\l__tblr_q_dim=\dimen463
+\l__tblr_r_dim=\dimen464
+\l__tblr_s_dim=\dimen465
+\l__tblr_t_dim=\dimen466
+\l__tblr_v_dim=\dimen467
+\l__tblr_w_dim=\dimen468
+\l__tblr_a_box=\box89
+\l__tblr_b_box=\box90
+\l__tblr_c_box=\box91
+\l__tblr_d_box=\box92
+\c@tblrcount=\count387
+\c@rownum=\count388
+\c@colnum=\count389
+\c@rowcount=\count390
+\c@colcount=\count391
+\abovesep=\dimen469
+\belowsep=\dimen470
+\leftsep=\dimen471
+\rightsep=\dimen472
+\gTblrLevelInt=\count392
+\g__tblr_data_row_key_count_int=\count393
+\g__tblr_data_column_key_count_int=\count394
+\g__tblr_data_cell_key_count_int=\count395
+\g__tblr_array_int=\count396
+\l__tblr_key_count_int=\count397
+\l__tblr_key_quotient_int=\count398
+\l__tblr_key_quotient_two_int=\count399
+\l__tblr_key_remainder_int=\count400
+\g__tblr_data_str_value_count_int=\count401
+\lTblrChildTotalInt=\count402
+\lTblrChildHtotalInt=\count403
+\lTblrChildVtotalInt=\count404
+\l__child_diff_h_int=\count405
+\l__child_diff_v_int=\count406
+\l__child_sign_h_int=\count407
+\l__child_sign_v_int=\count408
+\l__child_step_int=\count409
+\lTblrDefaultHruleWidthDim=\dimen473
+\lTblrDefaultVruleWidthDim=\dimen474
+\l__tblr_split_balance_int=\count410
+\l__tblr_strut_dp_dim=\dimen475
+\l__tblr_strut_ht_dim=\dimen476
+\g__tblr_cell_wd_dim=\dimen477
+\g__tblr_cell_ht_dim=\dimen478
+\g__tblr_cell_head_dim=\dimen479
+\g__tblr_cell_foot_dim=\dimen480
+\l__tblr_measured_cell_box=\box93
+\g__tblr_last_box=\box94
+\l__tblr_temp_box=\box95
+\l__tblr_column_target_dim=\dimen481
+\l__tblr_hfuzz_dim=\dimen482
+\l__tblr_caption_box=\box96
+\l__tblr_caption_left_box=\box97
+\lTblrRowHeadInt=\count411
+\lTblrRowFootInt=\count412
+\l__tblr_row_head_box=\box98
+\l__tblr_row_foot_box=\box99
+\l__tblr_row_head_foot_dim=\dimen483
+\lTblrTableWidthDim=\dimen484
+\l__tblr_table_firsthead_box=\box100
+\l__tblr_table_middlehead_box=\box101
+\l__tblr_table_lasthead_box=\box102
+\l__tblr_table_firstfoot_box=\box103
+\l__tblr_table_middlefoot_box=\box104
+\l__tblr_table_lastfoot_box=\box105
+\l__tblr_remain_height_dim=\dimen485
+\l__tblr_next_rows_dim=\dimen486
+\l__tblr_page_overfill_dim=\dimen487
+\l__tblr_long_from_int=\count413
+\l__tblr_long_to_int=\count414
+\l__tblr_curr_i_int=\count415
+\l__tblr_prev_i_int=\count416
+\lTblrTablePageInt=\count417
+\l__tblr_table_head_box=\box106
+\l__tblr_table_foot_box=\box107
+\l__tblr_table_head_foot_dim=\dimen488
+\l__tblr_table_head_body_foot_dim=\dimen489
+\l__tblr_table_box=\box108
+\lTblrRowFirstInt=\count418
+\lTblrRowLastInt=\count419
+\l__tblr_cover_box_a_dim=\dimen490
+\l__tblr_cover_box_b_dim=\dimen491
+\l__tblr_table_hlines_box=\box109
+\l__tblr_hline_box=\box110
+\l__tblr_row_box=\box111
+\l__tblr_col_o_wd_dim=\dimen492
+\l__tblr_col_b_wd_dim=\dimen493
+\l__tblr_hline_leftskip_dim=\dimen494
+\l__tblr_hline_rightskip_dim=\dimen495
+\l__tblr_row_ht_dim=\dimen496
+\l__tblr_row_dp_dim=\dimen497
+\l__tblr_row_abovesep_dim=\dimen498
+\l__tblr_row_belowsep_dim=\dimen499
+\l__tblr_row_vlines_box=\box112
+\l__tblr_vline_box=\box113
+\l__tblr_cell_box=\box114
+\l__tblr_row_upper_dim=\dimen500
+\l__tblr_row_lower_dim=\dimen501
+\l__tblr_row_vpace_dim=\dimen502
+\l__tblr_vline_aboveskip_dim=\dimen503
+\l__tblr_vline_belowskip_dim=\dimen504
+\lTblrCellRowSpanInt=\count420
+\lTblrCellColSpanInt=\count421
+\l__tblr_cell_wd_dim=\dimen505
+\l__tblr_cell_ht_dim=\dimen506
+\lTblrCellAboveBorderWidthDim=\dimen507
+\lTblrCellBelowBorderWidthDim=\dimen508
+\lTblrCellLeftBorderWidthDim=\dimen509
+\lTblrCellRightBorderWidthDim=\dimen510
+\l__tblr_diag_box=\box115
+\l__tblr_cell_inner_wd_dim=\dimen511
+\l__tblr_cell_inner_dp_dim=\dimen512
+\l__tblr_cell_hanchor_dim=\dimen513
+\l__tblr_last_cell_table_ht_dim=\dimen514
+\l__tblr_last_cell_table_dp_dim=\dimen515
+\l__tblr_last_vline_wd_dim=\dimen516
+\l__tblr_tikz_node_box=\box116
+)
+Package newfloat Info: New float `proof' with options `name=Proof, placement=!htb' on input line 159.
+\c@proof=\count422
+\newfloat@ftype=\count423
+Package newfloat Info: float type `proof'=8 on input line 159.
+)
+\c@undefined=\count424
+\c@definition=\count425
+\c@theorem=\count426
+\c@lemma=\count427
+\c@axiom=\count428
+\c@example=\count429
+\c@exercise=\count430
+\c@Rule=\count431
+\c@Attention=\count432
  (Logic.aux)
 \openout1 = `Logic.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -858,28 +1086,28 @@ LaTeX Font Info:    ... okay on input line 67.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 67.
+Package hyperref Info: Link coloring OFF on input line 69.
 (Logic.out) (Logic.out)
 \@outlinefile=\write5
 \openout5 = `Logic.out'.
 
-\c__nicematrix_shift_Ldots_last_row_dim=\dimen448
-\c__nicematrix_shift_exterior_Vdots_dim=\dimen449
-\c__nicematrix_innersep_middle_dim=\dimen450
+\c__nicematrix_shift_Ldots_last_row_dim=\dimen517
+\c__nicematrix_shift_exterior_Vdots_dim=\dimen518
+\c__nicematrix_innersep_middle_dim=\dimen519
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 67.
+(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 69.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 67.
+(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 69.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/bx/n on input line 67.
+(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 69.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 67.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 69.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 67.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 69.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 67.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 69.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 67.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 69.
 
 Package fontspec Info: Font family 'latinmodern-math.otf(0)' created for font
 (fontspec)             'latinmodern-math.otf' with options
@@ -911,13 +1139,13 @@ Package fontspec Info: Font family 'latinmodern-math.otf(1)' created for font
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 67.
+(Font)              `operators' in the math version `normal' on input line 69.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 67.
+(Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 69.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 67.
+(Font)              `operators' in the math version `bold' on input line 69.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 67.
+(Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 69.
 
 Package fontspec Info: latinmodern-math scale = 1.0001.
 
@@ -981,13 +1209,13 @@ Package fontspec Info: Font family 'latinmodern-math.otf(2)' created for font
 (fontspec)             \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 67.
+(Font)              `symbols' in the math version `normal' on input line 69.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/cmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 67.
+(Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 69.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 67.
+(Font)              `symbols' in the math version `bold' on input line 69.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 67.
+(Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 69.
 
 Package fontspec Info: latinmodern-math scale = 0.9999.
 
@@ -1033,30 +1261,54 @@ Package fontspec Info: Font family 'latinmodern-math.otf(3)' created for font
 (fontspec)             =6.0pt\relax \fontdimen 13\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 67.
+(Font)              `largesymbols' in the math version `normal' on input line 69.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 67.
+(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 69.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 67.
+(Font)              `largesymbols' in the math version `bold' on input line 69.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 67.
+(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 69.
+
+
+Package unicode-math Warning: Using \overbracket and \underbracket from
+(unicode-math)                `mathtools' package.
+(unicode-math)                 
+(unicode-math)                 Use \Uoverbracket and \Uunderbracket for
+(unicode-math)                original `unicode-math' definition.
+
+
+Package unicode-math Warning: I'm going to overwrite the following commands
+(unicode-math)                from the `mathtools' package: 
+(unicode-math)                 
+(unicode-math)                     \dblcolon, \coloneqq, \Coloneqq, \eqqcolon.
+(unicode-math)                
+(unicode-math)                 
+(unicode-math)                 Note that since I won't overwrite the other
+(unicode-math)                colon-like commands, using them will lead to
+(unicode-math)                inconsistencies.
+
+Package newfloat Info: Trying Plan B...
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 77.
+(D:\pdf\RStudio\latex\tex/latex/lm\omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.00128pt on input line 75.
+(Font)              scaled to size 12.00128pt on input line 77.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.00085pt on input line 75.
+(Font)              scaled to size 8.00085pt on input line 77.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00064pt on input line 75.
+(Font)              scaled to size 6.00064pt on input line 77.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 75.
+(Font)              scaled to size 11.99872pt on input line 77.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 75.
+(Font)              scaled to size 7.99915pt on input line 77.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 75.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 75.
+(Font)              scaled to size 5.99936pt on input line 77.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 77.
  (D:\pdf\RStudio\latex\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 75.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 77.
  (D:\pdf\RStudio\latex\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -1086,130 +1338,154 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 
 ]
 Chapter 1.
+Package newfloat Info: Setting Plan B file extension to `lof'... on input line 82.
 [1
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2] [3] [4]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1122) has occurred while \output is active []
 
  [5]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 613--614
+ [6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 615--616
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 627--631
-
- []
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 646--650
+Underfull \hbox (badness 10000) in paragraph at lines 629--633
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 669--687
+Underfull \hbox (badness 10000) in paragraph at lines 648--652
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 671--689
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 702--706
+Underfull \hbox (badness 10000) in paragraph at lines 704--708
 
  []
 
-[10] [11] [12
+
+Underfull \vbox (badness 2698) has occurred while \output is active []
+
+ [9] [10]
+Chapter 2.
+[11
 
 ]
-Chapter 2.
-[13]
-\g__nicematrix_max_cell_width_dim=\dimen451
-\c@iRow=\count379
-\c@jCol=\count380
-\l__nicematrix_cell_box=\box83
-\l__nicematrix_the_array_box=\box84
-\l__nicematrix_left_delim_dim=\dimen452
-\l__nicematrix_right_delim_dim=\dimen453
+\g__nicematrix_max_cell_width_dim=\dimen520
+\c@iRow=\count433
+\c@jCol=\count434
+\l__nicematrix_cell_box=\box117
+\l__nicematrix_the_array_box=\box118
+\l__nicematrix_left_delim_dim=\dimen521
+\l__nicematrix_right_delim_dim=\dimen522
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14]
+ [12]
 Underfull \vbox (badness 1005) has occurred while \output is active []
 
- [15]
-Overfull \hbox (17.67082pt too wide) in paragraph at lines 1075--1089
+ [13]
+Overfull \hbox (17.81084pt too wide) in paragraph at lines 1082--1096
  []|[][][][][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16]
+ [14]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
- [17] [18]
+ [15] [16]
 Chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1183--1186
+Underfull \hbox (badness 10000) in paragraph at lines 1190--1193
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1186--1190
+Underfull \hbox (badness 10000) in paragraph at lines 1193--1197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1201--1243
+Underfull \hbox (badness 10000) in paragraph at lines 1208--1250
 
  []
 
-[19
+[17
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1247--1250
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 1254--1257
 
  []
 
-[20]
+
+Underfull \hbox (badness 10000) in paragraph at lines 1261--1264
+
+ []
+
+[18]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21]
+ [19]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
- [22] [23] [24
+ [20] [21] [22
 
 ]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1458--1460
+Underfull \hbox (badness 10000) in paragraph at lines 1465--1467
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 1555--1585
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1555--1585
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1555--1585
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24]
+Underfull \hbox (badness 10000) in paragraph at lines 1588--1592
 
  []
 
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 1548--1578
+Underfull \hbox (badness 10000) in paragraph at lines 1621--1660
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1548--1578
+Underfull \hbox (badness 10000) in paragraph at lines 1621--1660
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1548--1578
+Underfull \hbox (badness 10000) in paragraph at lines 1621--1660
 
  []
 
@@ -1217,47 +1493,62 @@ Underfull \hbox (badness 10000) in paragraph at lines 1548--1578
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [26]
-Underfull \hbox (badness 10000) in paragraph at lines 1581--1585
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- []
-
-[27]
-Underfull \hbox (badness 10000) in paragraph at lines 1615--1654
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1615--1654
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1615--1654
-
- []
-
-
+ [27]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [28]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [29]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [30]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [31]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Underfull \hbox (badness 10000) in paragraph at lines 1778--1806
+Underfull \hbox (badness 10000) in paragraph at lines 1784--1812
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1778--1806
+Underfull \hbox (badness 10000) in paragraph at lines 1784--1812
+
+ []
+
+[30]
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1829--1870
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1829--1870
+
+ []
+
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1887--1927
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1887--1927
+
+ []
+
+[31]
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1955--1976
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1955--1976
 
  []
 
@@ -1265,61 +1556,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 1778--1806
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Underfull \hbox (badness 10000) in paragraph at lines 1823--1864
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1823--1864
+Underfull \hbox (badness 10000) in paragraph at lines 1979--1983
 
  []
 
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Underfull \hbox (badness 10000) in paragraph at lines 1881--1921
+Underfull \hbox (badness 10000) in paragraph at lines 1995--2015
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1881--1921
+Underfull \hbox (badness 10000) in paragraph at lines 1995--2015
 
  []
 
-[33]
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-
-Underfull \hbox (badness 10000) in paragraph at lines 1949--1970
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1949--1970
-
- []
-
-[34]
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-
-Underfull \hbox (badness 10000) in paragraph at lines 1973--1977
-
- []
-
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-
-Underfull \hbox (badness 10000) in paragraph at lines 1990--2010
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1990--2010
-
- []
-
-[35] (Logic.aux)
+[33] (Logic.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -1328,12 +1581,12 @@ Package rerunfilecheck Info: File `Logic.out' has not changed.
 (rerunfilecheck)             Checksum: 8F9B0077D264B898A5674500BC64FAC4;2227.
  ) 
 Here is how much of TeX's memory you used:
- 57049 strings out of 409617
- 1246104 string characters out of 5778885
+ 60472 strings out of 409617
+ 1327228 string characters out of 5778885
  1992191 words of memory out of 5000000
- 78692 multiletter control sequences out of 15000+600000
- 563448 words of font info for 86 fonts, out of 8000000 for 9000
+ 82080 multiletter control sequences out of 15000+600000
+ 564536 words of font info for 91 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 84i,18n,114p,555b,1695s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,18n,114p,531b,1695s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Logic.xdv (39 pages, 898160 bytes).
+Output written on Logic.xdv (37 pages, 896804 bytes).

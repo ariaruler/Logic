@@ -1,6 +1,6 @@
 \documentclass[10pt]{book}
 \usepackage[utf8]{inputenc}
-\usepackage{amsmath, amssymb, amsthm}
+\usepackage{amsmath, amssymb}
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{hyperref}
@@ -11,7 +11,6 @@
 \makeindex
 \usepackage[thinlines]{easytable}
 \usepackage{array}
-\usepackage{amssymb} % for \therefore
 \usepackage{nicematrix,tikz}
 \usetikzlibrary{arrows.meta,ext.paths.ortho} % for "r-lr"
 \usepackage{mfirstuc}
@@ -22,6 +21,9 @@
 \usepackage{amssymb}
 \usepackage{emptypage}
 
+\usepackage{proofpack}
+
+
 \let\oldemptyset\emptyset
 \let\emptyset\varnothing
 
@@ -29,7 +31,7 @@
 \linespread{1.05} % Slightly increases line height
 
 
-\theoremstyle{definition}
+
 \newtheorem{undefined}{Undefined}[section]
 \newtheorem{definition}{Definition}[section]
 \newtheorem{theorem}{Theorem}[section]
@@ -897,9 +899,14 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
     (any proposition can't get out but it can get in.two lines of assumption must not intersect and every hypothesis that opens must be closed.)
     % (you will undrestnd what is proposition soon.)
 
-    \begin{tikzpicture}
-        \draw[->] (2,0) -- (0,0) -- (0,2) -- (1,2);
-    \end{tikzpicture}
+\begin{sdeduce}
+\hyp[1]  &   \\
+\sub[1]   &  \\
+\sub[2]   &  \\
+\sub[2]    &  \\
+\sub[2]    &  \\
+\sub[1]    &  \\
+\end{sdeduce}
 
 \end{undefined}
 
@@ -1592,10 +1599,9 @@ this axiom show that why Russell's paradox doesn't happened here because if ou
 assume $R=\{x|x \notin x\}$ is a set.you can't prove or disprove $R \in R$. (we
 don't need to prove that now.we will prove it in \textbf{'MetaLogic'}.)
 
-
 \section{Definitions of set theory}
-Let's talk about some definitions in set theoty.These definitions will come in handy later.
-
+Let's talk about some definitions in set theoty.These definitions will come in
+handy later.
 
 \begin{definition}
     \textbf{Empty set} also known as the null set,
@@ -1619,8 +1625,8 @@ Let's talk about some definitions in set theoty.These definitions will come in h
         $4.$  & $\perp $                                                                            & $I\bot,2,3$              \\
         $5.$  & $y \in \emptyset $                                                                  & $E\bot,4$                \\
         $6.$  & $y \in \emptyset $                                                                  & acp                      \\
-        $7.$  & $ \forall y (y \notin \emptyset  )$                               & Def.                 \\
-        $8.$  & $ y \notin \emptyset   $                                           & $E\forall,7$             \\
+        $7.$  & $ \forall y (y \notin \emptyset  )$                                                 & Def.                     \\
+        $8.$  & $ y \notin \emptyset   $                                                            & $E\forall,7$             \\
         $9.$  & $\perp $                                                                            & $E\leftrightarrow,6,8$   \\
         $10.$ & $ y \in A $                                                                         & $I\bot,9$                \\
         $11.$ & $ y \in A \leftrightarrow y \in \emptyset$                                          & $I\leftrightarrow,5,10$  \\
@@ -1644,8 +1650,8 @@ Let's talk about some definitions in set theoty.These definitions will come in h
         $5.$  & $y \in A $                                                                          & acp                    \\
         $6.$  & $y \in A \leftrightarrow y \in \emptyset$                                           & $E\forall,4$           \\
         $7.$  & $y \in \emptyset $                                                                  & $E\leftrightarrow,5,6$ \\
-        $8.$  & $ \forall y (y \notin \emptyset )$                               & Def.               \\
-        $9.$  & $ y \notin \emptyset  $                                           & $E\forall,8$           \\
+        $8.$  & $ \forall y (y \notin \emptyset )$                                                  & Def.                   \\
+        $9.$  & $ y \notin \emptyset  $                                                             & $E\forall,8$           \\
         $10.$ & $\perp $                                                                            & $E\leftrightarrow,7,9$ \\
         $11.$ & $y \notin A $                                                                       & $I\neg,5,10$           \\
         $12.$ & $\forall y (y \notin A )$                                                           & $I\forall,11$          \\
@@ -1976,7 +1982,6 @@ Let's talk about some definitions in set theoty.These definitions will come in h
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-
 \begin{definition}
     \textbf{Powerset}
     \[ P(A):=\{X \mid X \subseteq A \} \]
@@ -1990,13 +1995,13 @@ Let's talk about some definitions in set theoty.These definitions will come in h
     \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
         \hline
         \begin{NiceTabular}{ll}
-            $A \subseteq B $                  &      \\
+            $A \subseteq B $           &      \\
             \hline
             $\therefore  A \in  P(B) $ & $IP$ \\
         \end{NiceTabular}
          &
         \begin{NiceTabular}{ll}
-            $A \in  P(B)  $                                               &      \\
+            $A \in  P(B)  $              &      \\
             \hline
             $\therefore  A \subseteq B $ & $EP$ \\
         \end{NiceTabular}
@@ -2008,6 +2013,35 @@ Let's talk about some definitions in set theoty.These definitions will come in h
     \\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
+
+
+
+
+
+% \begin{sdeduce}
+% \hyp[1] {P \rightarrow (Q \lor R)} & Assumption  \\
+% \sub[1] {Q \rightarrow S}  & Assumption \\
+% \sub[1] {R \rightarrow T}  & Assumption \\
+% \hyp[2] {P}              & Assumption \\
+% \sub[2] {Q \lor R}      & 1,4 $\rightarrow$E \\
+
+% \hyp[3] {Q}              & Assumption \\
+% \sub[3] {S}              & 2,6 $\rightarrow$E \\
+% \sub[3] {S \lor T}       & 7 $\lor$I \\
+
+% \hyp[3] {R}              & Assumption \\
+% \sub[3] {T}             & 3,9 $\rightarrow$E \\
+% \sub[3] {S \lor T}      & 10 $\lor$I \\
+
+% \sub[2] {S \lor T}      & 5,6-8,9-11 $\lor$E \\
+
+% \sub[1] {P \rightarrow (S \lor T)} & 4-12 $\rightarrow$I \\
+
+% \end{sdeduce}
+
+
+
+
 
 \end{document}
 
