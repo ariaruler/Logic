@@ -21,7 +21,10 @@
 \usepackage{amssymb}
 \usepackage{emptypage}
 
-\usepackage{proofpack}
+
+\usepackage[outerline=false]{fitch}
+
+
 
 
 \let\oldemptyset\emptyset
@@ -42,7 +45,7 @@
 \newtheorem{Rule}{Rule}[section]
 \newtheorem{Attention}{Attention}[section]
 \makeatletter
-\renewcommand{\arraystretch}{1.8} % 2x standard row height
+\renewcommand{\arraystretch}{1.44} % 2x standard row height
 
 
 \newcommand*{\blankpage}{
@@ -65,6 +68,7 @@
   \fi
 }
 \makeatother
+
 
 \begin{document}
 
@@ -896,17 +900,23 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
 
 \begin{undefined}
     \textbf{Assumption for conditional proof(acp)} is a tool for assuming a proposition.
-    (any proposition can't get out but it can get in.two lines of assumption must not intersect and every hypothesis that opens must be closed.)
+    (any proposition can't get out but it can get in. right line must be shoter than left one.(it can't fall out).  and every hypothesis that opens must be closed.)
     % (you will undrestnd what is proposition soon.)
 
-\begin{sdeduce}
-\hyp[1]  &   \\
-\sub[1]   &  \\
-\sub[2]   &  \\
-\sub[2]    &  \\
-\sub[2]    &  \\
-\sub[1]    &  \\
-\end{sdeduce}
+    \begin{fitchproof}[arrayenv=tabular]
+        \open
+        \have {1} {}
+        \open
+        \have {2} {}
+        \open
+        \have {3} {}
+        \have {4} {}
+        \close
+        \have {5} {}
+        \close
+        \have {6} {}
+        \close
+    \end{fitchproof}
 
 \end{undefined}
 
@@ -914,101 +924,88 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
     \textbf{rules of logical operations} $(I\to , E\to ,I\land ,E\land ,I\lor ,E\lor ,I\neg ,E\neg,I\bot ,E\bot )$
     this rule is scheme it means it works everywhere for every propositions.
     (thats why we use $\varphi, \psi $ instead of $p,q$)
-    % (for more convenience we use $I\bot ,E\bot $ instead)
-
-    % \begin{NiceTabular}{rll}
-    %     1. & $A\supset B$ \rlap{\quad$/\therefore A\supset (A\cdot B)$}                   \\
-    %     2. & $A$                                                        & supuesto        \\
-    %     3. & $B$                                                        & $1$, $2$, M.P.  \\
-    %     4. & $A\cdot B$                                                 & $2$, $3$, Conj. \\
-    %     5. & $A\supset(A\cdot B)$                                       & $2$--$4$, C.P.
-    %     \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr ([yshift=1pt]4-|3);
-    % \end{NiceTabular}
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
         \hline
-        \begin{NiceTabular}{ll}
-            $\varphi$                     &        \\
-            $\vdots$                      &        \\
-            $\psi$                        &        \\
-            $\therefore \varphi \to \psi$ & $I\to$ \\
+        \begin{fitchproof}[arrayenv=tabular]
+            \open
+            \have [ ] {1} {\varphi}
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {\psi}
+            \close
+            \have  [ ]{2} {\therefore \varphi \to \psi} \by{$I\to$}{}
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ]{1} {\varphi \to \psi}
+            \hypo [ ] {2} {\varphi}
+            \have  [ ]{2} {\therefore \psi} \by{$E\to$}{}
+        \end{fitchproof}
+        \\
+        \hline
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ]{1} {\varphi}
+            \hypo [ ] {2} {\psi}
+            \have  [ ]{2} {\therefore \varphi \land \psi} \by{$I\land$}{}
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ]{1} {\varphi \land \psi}
+            \have  [ ]{2} {\therefore \varphi \hspace{.5cm} \therefore\psi} \by{$E\land$}{}
+        \end{fitchproof}
+        \\
+        \hline
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ]{1} {\varphi}
+            \have  [ ]{2} {\therefore \varphi \lor \psi \hspace{.5cm}  \therefore\psi \lor \varphi} \by{$I\lor$}{}
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \have [ ] {1} {\varphi \lor \psi}
+            \open
+            \have [ ] {1} {\varphi}
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {\theta}
+            \close
+            \open
+            \have [ ] {1} {\psi}
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {\theta}
+            \close
+            \have  [ ]{2} {\therefore \theta} \by{$E\lor$}{}
+        \end{fitchproof}
+        \\
+        \hline
+        \begin{fitchproof}[arrayenv=tabular]
+            \open
+            \have [ ] {1} {\varphi}
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {\bot}
+            \close
+            \have  [ ]{2} {\therefore \neg\varphi } \by{$I\neg$ }{}
+        \end{fitchproof}
 
-            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (4-|3);
-        \end{NiceTabular}
          &
-        \begin{NiceTabular}{ll}
-            $\varphi \to \psi$ &        \\
-            $\varphi$          &        \\
-            \hline
-            $\therefore \psi$  & $E\to$ \\
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \open
+            \have [ ] {1} {\neg\varphi}
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {\bot}
+            \close
+            \have  [ ]{2} {\therefore \varphi } \by{$E\neg$ }{}
+        \end{fitchproof}
         \\
         \hline
-        \begin{NiceTabular}{ll}
-            $\varphi$                       &          \\
-            $\psi$                          &          \\
-            \hline
-            $\therefore \varphi \land \psi$ & $I\land$ \\
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ]{1} {\varphi}
+            \hypo [ ] {2} {\neg\varphi}
+            \have  [ ]{2} {\therefore \bot} \by{$I\bot$}{}
+        \end{fitchproof}
          &
-        \begin{NiceTabular}{ll}
-            $\varphi \land \psi$                              &          \\
-            \hline
-            $\therefore \varphi \hspace{.5cm} \therefore\psi$ & $E\land$ \\
-        \end{NiceTabular}
-        \\
-        \hline
-        \begin{NiceTabular}{ll}
-            $\varphi $                                                                &         \\
-            \hline
-            $\therefore \varphi \lor \psi \hspace{.5cm}  \therefore\psi \lor \varphi$ & $I\lor$ \\
-        \end{NiceTabular}
-         &
-        \begin{NiceTabular}{ll}
-            $\varphi \lor \psi $ &         \\
-            $\varphi$            &         \\
-            $\vdots$             &         \\
-            $\theta$             &         \\
-            $\psi$               &         \\
-            $\vdots$             &         \\
-            $\theta$             &         \\
-            $\therefore \theta$  & $E\lor$ \\
-            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (2-1) r-lr (5-|3);
-            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (5-1) r-lr (8-|3);
-        \end{NiceTabular}
-        \\
-        \hline
-        \begin{NiceTabular}{ll}
-            $\varphi$                 &         \\
-            $\vdots$                  &         \\
-            $\bot$                    &         \\
-            $\therefore \neg\varphi $ & $I\neg$ \\
-
-            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (4-|3);
-        \end{NiceTabular}
-         &
-        \begin{NiceTabular}{ll}
-            $\neg\varphi$         &         \\
-            $\vdots$              &         \\
-            $\bot$                &         \\
-            $\therefore \varphi $ & $E\neg$ \\
-
-            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (4-|3);
-        \end{NiceTabular}
-        \\
-        \hline
-        \begin{NiceTabular}{ll}
-            $\varphi$         &         \\
-            $\neg\varphi$     &         \\
-            \hline
-            $\therefore \bot$ & $I\bot$ \\
-        \end{NiceTabular}
-         &
-        \begin{NiceTabular}{ll}
-            $\bot$               &         \\
-            \hline
-            $\therefore \varphi$ & $E\bot$ \\
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ] {2} {\bot}
+            \have  [ ]{2} {\therefore \varphi} \by{$E\bot$}{}
+        \end{fitchproof}
         \\
         \hline
     \end{tabular}
@@ -1031,79 +1028,53 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
         \hline
-
-        \begin{NiceTabular}{ll}
-            $\varphi$                                  &                    \\
-            $\vdots$                                   &                    \\
-            $\psi$                                     &                    \\
-            $\psi$                                     &                    \\
-            $\vdots$                                   &                    \\
-            $\varphi$                                  &                    \\
-            $\therefore \varphi \leftrightarrow \psi $ & $I\leftrightarrow$ \\
-            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (4-|3);
-            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (4-1) r-lr (7-|3);
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \open
+            \have [ ] {1} {\varphi}
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {\psi}
+            \close
+            \open
+            \have [ ] {1} {\psi}
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {\varphi}
+            \close
+            \have  [ ]{2} {\therefore \varphi \leftrightarrow \psi} \by{$I\leftrightarrow$}{}
+        \end{fitchproof}
          &
-        \begin{NiceTabular}{ll}
-            $\varphi \leftrightarrow \psi$                    &                    \\
-            $\varphi \hspace{1.1cm} \psi$                     &                    \\
-            \hline
-            $\therefore \psi \hspace{.5cm} \therefore\varphi$ & $E\leftrightarrow$ \\
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ]{1} {\varphi \leftrightarrow \psi}
+            \hypo [ ] {2} {\varphi \hspace{0.9cm} \psi}
+            \have  [ ]{2} {\therefore \psi \hspace{.5cm} \therefore\varphi} \by{$E\leftrightarrow$}{}
+        \end{fitchproof}
         \\
         \hline
     \end{tabular}
 
-    \begin{tabular}{>{\centering\arraybackslash}m{7cm}>{\centering\arraybackslash}m{7cm}}
-        % \begin{NiceTabular}{rll}
-        %     /   & $I\bot$                       &              \\
-        %     1.  & $\varphi$                     &              \\
-        %     2.  & $\varphi$                &              \\
-        %     3.  & $\vdots$                      & $ass$        \\
-        %     4.  & $\bot $ & $I\land,1,2$ \\
-        %     % 5.  & $\neg \varphi$                           & $E\neg,3,4$  \\
-        %     % 6.  & $\varphi \rightarrow \bot$                           & $ass$        \\
-        %     % 7.  & $\bot$ & $I\land,1,2$ \\
-        %     \CodeAfter \tikz \draw [<-,shorten < = 2pt] (3-1) r-lr ([yshift=1pt]6-|3);
-        % \end{NiceTabular}
-        %  &
-        % \begin{NiceTabular}{rll}
-        %     /  & $E\bot$           &             \\
-        %     1. & $\neg\varphi$     & $ass$       \\
-        %     2. & $\bot$            &             \\
-        %     3. & $p \land \neg p $ & $Def.2$     \\
-        %     5. & $\varphi$         & $E\neg,3,4$
-        %     \CodeAfter \tikz \draw [<-,shorten < = 2pt] (2-1) r-lr ([yshift=1pt]5-|3);
-        % \end{NiceTabular}
-        % \\
-        % \\
-        % \\
-        \begin{NiceTabular}{rll}
-            /    & $I\leftrightarrow$                             &                  \\
-            1.   & $\varphi$                                      &                  \\
-                 & $\vdots$                                       &                  \\
-            n.   & $\psi$                                         &                  \\
-            n+1. & $\psi$                                         &                  \\
-                 & $\vdots$                                       &                  \\
-            m.   & $\varphi$                                      &                  \\
-            m+1. & $\varphi \to \psi $                            & $I\to,1,n$       \\
-            m+2. & $\psi \to \varphi $                            & $I\to,n+1,m$     \\
-            m+3. & $ (\varphi \to \psi)\land (\psi \to \varphi) $ & $I\land,m+1,m+2$ \\
-            m+4. & $\varphi \leftrightarrow \psi $                & $Def.,m+3$       \\
-            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (2-1) r-lr (5-|3);
-            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (5-1) r-lr (8-|3);
-        \end{NiceTabular}
-         &
-        \begin{NiceTabular}{rll}
-            /  & $E\leftrightarrow$                            &            \\
-            1. & $\varphi \leftrightarrow \psi $               &            \\
-            2. & $\varphi  $                                   &            \\
-            3. & $(\varphi \to \psi)\land (\psi \to \varphi) $ & $Def. 1$   \\
-            4. & $\varphi \to \psi  $                          & $E\land 3$ \\
-            5. & $\psi$                                        & $E\to 1,4$
-        \end{NiceTabular}
+    \begin{fitchproof}[arrayenv=tabular]
+        \open
+        \have  {1} {\varphi}
+        \have [ ] {2} {\vdots}
+        \have  [n] {2} {\psi}
+        \close
+        \open
+        \have [n+1] {1} {\psi}
+        \have [ ] {2} {\vdots}
+        \have  [m] {2} {\varphi}
+        \close
+        \have  [m+1] {2} {\varphi \to \psi }                              \by{$I\to,1,n$ }{}
+        \have  [m+2] {2} {\psi \to \varphi }                              \by{$I\to,n+1,m$}{}
+        \have  [m+3] {2} {(\varphi \to \psi)\land (\psi \to \varphi)}     \by{$I\land,m+1,m+2$}{}
+        \have  [m+4]{2} {\varphi \leftrightarrow \psi}                     \by{$Def.,m+3$ }{}
+    \end{fitchproof}
 
-    \end{tabular}
+    \begin{fitchproof}[arrayenv=tabular]
+        \have {1} {\varphi \leftrightarrow \psi }
+        \have {2} {\varphi }
+        \have  {2} {(\varphi \to \psi)\land (\psi \to \varphi)}     \by{$Def. 1$}{}
+        \have  {2} {\varphi \to \psi }                              \by{$E\land 3$}{}
+        \have  {2} {\psi}                                           \by{$E\to 1,4$}{}
+    \end{fitchproof}
 
 \end{theorem}
 
@@ -1114,7 +1085,7 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
         % Vertical lines
         \draw (0,-1.5) -- (0,3.5);
         \draw (1,-1.5) -- (1,3.5);
-        \draw[<-] (0.7,3) -- (-0.1,3) -- (-0.1,-0.5) -- (1.5,-0.5);
+        \draw (1.5,3.3) -- (-0.1,3.3) -- (-0.1,-0.5) -- (1.5,-0.5);
         % Labels between lines
         \node at (-0.5,3) {1.};
         \node at (-0.5,2) {2.};
@@ -1207,46 +1178,45 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
 \begin{Rule}
     \textbf{use of open propositions} assume universe of discourse is $ \{a_{0},a_{1},a_{2},...,a_{n}\}$
     \\
-    \begin{NiceTabular}{ll}
-        $c.$ & $Px$ \\
-    \end{NiceTabular}
-    \\
+    \begin{fitchproof}[arrayenv=tabular]
+        \have [c] {1} {Px}
+    \end{fitchproof}
     means :
     \\
-    \begin{NiceTabular}{ll}
-        $c.$   & $Pa_{0}$ \\
-        $c+1.$ & $Pa_{1}$ \\
-        $c+2.$ & $Pa_{2}$ \\
-        $ $    & $\vdots$ \\
-        $c+n.$ & $Pa_{n}$ \\
-    \end{NiceTabular}
-    \\
+    \begin{fitchproof}[arrayenv=tabular]
+        \have [c_{0}] {1} {Pa_{0}}
+        \have [c_{1}] {1} {Pa_{1}}
+        \have [c_{2}] {1} {Pa_{2}}
+        \have [ ] {2} {\vdots}
+        \have [c_{n}] {1} {Pa_{n}}
+    \end{fitchproof}
+    \par
     if $Px$ was been assemed then like this
-    \\
-    \begin{NiceTabular}{rll}
-        $c.$ & $Px$     & \\
-             & $\vdots$ & \\
-        \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (3-|3);
-    \end{NiceTabular}
-    \\
-    \\
+    \begin{fitchproof}[arrayenv=tabular]
+        \open
+        \have [c] {1} {Px}
+        \have [ ] {2} {\vdots}
+        \close
+    \end{fitchproof}
     means :
-    \\
-    \begin{NiceTabular}{rll}
-        $c_{0}.$ & $Pa_{0}$ & \\
-                 & $\vdots$ & \\
-        $c_{1}.$ & $Pa_{1}$ & \\
-                 & $\vdots$ & \\
-        $c_{2}.$ & $Pa_{2}$ & \\
-                 & $\vdots$ & \\
-                 & $\vdots$ & \\
-        $c_{n}.$ & $Pa_{n}$ & \\
-                 & $\vdots$ & \\
-        \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (3-|3);
-        \CodeAfter \tikz \draw [<-,shorten < = 2pt] (3-1) r-lr (5-|3);
-        \CodeAfter \tikz \draw [<-,shorten < = 2pt] (5-1) r-lr (7-|3);
-        \CodeAfter \tikz \draw [<-,shorten < = 2pt] (8-1) r-lr (10-|3);
-    \end{NiceTabular}
+    \begin{fitchproof}[arrayenv=tabular]
+        \open
+        \have [c_{0}] {1} {Pa_{0}}
+        \have [ ] {2} {\vdots}
+        \close
+        \open
+        \have [c_{1}] {1} {Pa_{1}}
+        \have [ ] {2} {\vdots}
+        \close
+        \open
+        \have [c_{2}] {1} {Pa_{2}}
+        \have [ ] {2} {\vdots}
+        \close
+        \open
+        \have [c_{n}] {1} {Pa_{n}}
+        \have [ ] {2} {\vdots}
+        \close
+    \end{fitchproof}
 \end{Rule}
 %
 
@@ -1289,15 +1259,11 @@ as you can see $\forall x \Phi x $ and $\exists x \Phi x $ are sentences.
         Terms and Conditions
         \\
         \hline
-
-        \begin{NiceTabular}{ll}
-            $\Phi y$                      &            \\
-            \hline
-            $\therefore \forall x \Phi x$ & $I\forall$ \\
-        \end{NiceTabular}
-
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ] {2} {\Phi y}
+            \have  [ ]{2} {\therefore \forall x \Phi x} \by{$I\forall$}{}
+        \end{fitchproof}
          &
-
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
             \item  $y$ is a variable.
@@ -1306,15 +1272,11 @@ as you can see $\forall x \Phi x $ and $\exists x \Phi x $ are sentences.
 
         \\
         \hline
-
-        \begin{NiceTabular}{ll}
-            $\forall x \Phi x$   &            \\
-            \hline
-            $\therefore \Phi a $ & $E\forall$ \\
-        \end{NiceTabular}
-
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ] {2} {\forall x \Phi x}
+            \have  [ ]{2} {\therefore \Phi a} \by{$E\forall$}{}
+        \end{fitchproof}
          &
-
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
             \item  $a$ is an obj in universe of discourse.(it can be constant or variable.)
@@ -1322,12 +1284,10 @@ as you can see $\forall x \Phi x $ and $\exists x \Phi x $ are sentences.
 
         \\
         \hline
-
-        \begin{NiceTabular}{ll}
-            $\Phi a$                      &            \\
-            \hline
-            $\therefore \exists x \Phi x$ & $I\exists$ \\
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ] {2} {\Phi a}
+            \have  [ ]{2} {\therefore \exists x \Phi x} \by{$I\exists$}{}
+        \end{fitchproof}
 
          &
 
@@ -1338,74 +1298,74 @@ as you can see $\forall x \Phi x $ and $\exists x \Phi x $ are sentences.
 
         \\
         \hline
-
-        \begin{NiceTabular}{ll}
-            $\exists x \Phi x$  &            \\
-            $\Phi y$            &            \\
-            $\vdots$            &            \\
-            $\theta$            &            \\
-            $\therefore\theta $ & $E\exists$ \\
-            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (2-1) r-lr (5-|3);
-        \end{NiceTabular}
-
+        \begin{fitchproof}[arrayenv=tabular]
+            \have [ ] {1} {\exists x \Phi x}
+            \open
+            \have [ ] {1} {\Phi y}
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {\theta}
+            \close
+            \have  [ ]{2} {\therefore\theta } \by{$E\exists$}{}
+        \end{fitchproof}
          &
-
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
             \item  $y$ is a variable.
             \item  $\Phi y$ must not be assemed in previous lines.(except ones that are closed)
             \item $y$ is not free in $\theta$
         \end{enumerate}
-
         \\
         \hline
     \end{tabular}
     % \printindex
 
     \begin{tabular}{>{\centering\arraybackslash}m{7cm}>{\centering\arraybackslash}m{7cm}}
-        \begin{NiceTabular}{rll}
-            /      & $I\forall$                             &                      \\
-            1.     & $\Phi y$                               & $ass$                \\
-            2.     & $\Phi a_{0}$                           & $Def.1$              \\
-            $ $    & $\vdots$                               &                      \\
-            $n+2.$ & $\Phi a_{n}$                           & $Def.1$              \\
-            $n+3.$ & $\bigwedge\limits_{i=0}^n \Phi a_{i} $ & $I\land,2,3,...,n+2$ \\
-            $n+4.$ & $\forall x \Phi x$                     & $Def. n+3$           \\
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \have  {2} {\Phi y}                                         \by{$ass$  }{}
+            \have  {2} {\Phi a_{0}}                                     \by{$Def.1$ }{}
+            \have [ ] {2} {\vdots}
+            \have [n] {2} {\Phi a_{n}}                                       \by{$Def.1$}{}
+            \have [n+1] {2} {\bigwedge\limits_{i=0}^n \Phi a_{i} }          \by{$I\land,2,3,...,n+2$}{}
+            \have  [n+2]{2} { \forall x \Phi x}                  \by{$Def. n+3$ }{}
+        \end{fitchproof}
          &
-        \begin{NiceTabular}{rll}
-            /  & $E\forall$                             &            \\
-            1. & $\forall x \Phi x$                     & $ass$      \\
-            2. & $\bigwedge\limits_{i=0}^n \Phi a_{i} $ & $Def.1$    \\
-            3. & $\Phi a_{i}$                           & $E\land 2$ \\
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \have  {2} {\forall x \Phi x}                         \by{$ass$ }{}
+            \have  {2} {\bigwedge\limits_{i=0}^n \Phi a_{i}}      \by{$Def.1$}{}
+            \have  {2} { \Phi a}                         \by{$E\land 2$}{}
+        \end{fitchproof}
+
         \\
-        \begin{NiceTabular}{rll}
-            /  & $I\exists$                           &           \\
-            1. & $\Phi a_{i}$                         &           \\
-            2. & $\bigvee\limits_{i=0}^n \Phi a_{i} $ & $I\lor 1$ \\
-            3. & $\exists x \Phi x$                   & $Def 2$   \\
-        \end{NiceTabular}
+
+        \begin{fitchproof}[arrayenv=tabular]
+            \have  {2} {\Phi a}
+            \have  {2} {\bigvee\limits_{i=0}^n \Phi a_{i}}   \by{$I\lor 1$}{}
+            \have  {2} { \exists x \Phi x}         \by{$Def 2$}{}
+        \end{fitchproof}
+
          &
-        \begin{NiceTabular}{rll}
-            /                   & $I\exists$                           &           \\
-            1.                  & $\exists x \Phi x$                   & $ass$     \\
-            2.                  & $\bigvee\limits_{i=0}^n \Phi a_{i} $ & $Def 2$   \\
-            $\hspace{.5cm}  3.$ & $\Phi a_{0}$                         &           \\
-                                & $\vdots$                             &           \\
-            $m.$                & $\theta$                             &           \\
-            $m+1.$              & $\Phi a_{1}$                         &           \\
-                                & $\vdots$                             &           \\
-            $l.$                & $\theta$                             &           \\
-                                & $\vdots$                             &           \\
-            $l+1.$              & $\Phi a_{n}$                         &           \\
-                                & $\vdots$                             &           \\
-            $r.$                & $\theta$                             &           \\
-            $r+1.$              & $\theta$                             & $E\lor 1$ \\
-            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (4-1) r-lr (7-|3);
-            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (7-1) r-lr (10-|3);
-            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (11-1) r-lr (14-|3);
-        \end{NiceTabular}
+
+        \begin{fitchproof}[arrayenv=tabular]
+            \have  {1} {\exists x \Phi x}
+            \have  {1} {\bigvee\limits_{i=0}^n \Phi a_{i} }
+            \open
+            \have  {1} {\Phi a_{0}}
+            \have [ ] {2} {\vdots}
+            \have  [n] {2} {\theta}
+            \close
+            \open
+            \have [n+1] {1} {\Phi a_{1}}
+            \have [ ] {2} {\vdots}
+            \have  [m] {2} {\theta}
+            \close
+            \have [ ] {2} {\vdots}
+            \open
+            \have [l] {1} {\Phi a_{2}}
+            \have [ ] {2} {\vdots}
+            \have  [r] {2} {\theta}
+            \close
+            \have  [r+1]{2} {\theta } \by{$E\exists$}{}
+        \end{fitchproof}
 
     \end{tabular}
 
@@ -1462,6 +1422,13 @@ we emphasis before that set has no definition.but we can describe what set is
 with rules and axioms.
 
 \begin{axiom}
+    \textbf{Existence of universe of set theory}
+    There exists a set $V$, known as the Von Neumann Universe, which contains every set.
+    (this axiom can't be formolized in first order logic).
+    (there must be another axiom let us use logic for set theory but we ignore that)
+\end{axiom}
+
+\begin{axiom}
     \textbf{Extensionality}Two sets are equal (are the same set) if they have the same elements.
     \\
     \[  \forall X,Y (\forall x ( x \in X \leftrightarrow x \in Y ) \leftrightarrow X = Y )  \]
@@ -1481,41 +1448,49 @@ so we can rewrite axiom of Extensionality like this.
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
         \hline
-        \begin{NiceTabular}{ll}
-            $x \in A $                   &              \\
-            $\vdots$                     &              \\
-            $x \in B $                   &              \\
-            $\therefore A \subseteq B  $ & $I\subseteq$ \\
-            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (4-|3);
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \open
+            \have [ ] {1} {x \in A}
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {x \in B}
+            \close
+            \have  [ ]{2} {\therefore A \subseteq B  } \by{$I\subseteq$}{}
+        \end{fitchproof}
+
          &
-        \begin{NiceTabular}{ll}
-            $A \subseteq B $      &              \\
-            $a \in A$             &              \\
-            \hline
-            $\therefore  a \in B$ & $E\subseteq$ \\
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ]{1} {A \subseteq B}
+            \hypo [ ] {2} {a \in A}
+            \have  [ ]{2} {\therefore  a \in B} \by{$E\subseteq$}{}
+        \end{fitchproof}
         \\
         \hline
     \end{tabular}
 
     \begin{tabular}{>{\centering\arraybackslash}m{7cm}>{\centering\arraybackslash}m{7cm}}
-        \begin{NiceTabular}{lll}
-            /      & $I\subseteq $                             &                    \\
-            $1.$   & $x \in A$                                 & acp                \\
-                   & $\vdots$                                  &                    \\
-            $n.$   & $x \in B$                                 &                    \\
-            $n+1.$ & $x \in A \rightarrow x \in B $            & $I\rightarrow,1,n$ \\
-            $n+2.$ & $\forall x(x \in A \rightarrow x \in B )$ & $I\forall,n+1$     \\
-            $n+3.$ & $ A \subseteq B  $                        & Def.$n+2$          \\
-            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (2-1) r-lr (5-|3);
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \open
+            \have {1} {x \in A}
+            \have [ ] {2} {\vdots}
+            \have  [n] {2} {x \in B}
+            \close
+            \have  [n+1]{2} {x \in A \rightarrow x \in B }              \by{$I\rightarrow,1,n$ }{}
+            \have  [n+2]{2} {\forall x(x \in A \rightarrow x \in B )}   \by{$I\forall,n+1$ }{}
+            \have  [n+3]{2} {A \subseteq B  }                 \by{$Def.n+2$ }{}
+        \end{fitchproof}
          &
+        \begin{fitchproof}[arrayenv=tabular]
+            \have {1} {A \subseteq B}
+            \have  {2} {a \in A}
+            \have  {2} {\forall x(x \in A \rightarrow x \in A )}   \by{$Def.1$ }{}
+            \have  {2} {a \in A \rightarrow a \in B }             \by{$E\forall,4$ }{}
+            \have  {2} {  a \in B}                                   \by{$E\rightarrow 3,5$}{}
+        \end{fitchproof}
         \begin{NiceTabular}{lll}
-            /    & $E\subseteq $                             &                    \\
+
             $2.$ & $A \subseteq B$                           & ass                \\
             $3.$ & $a \in A$                                 & ass                \\
-            $4.$ & $\forall x(x \in A \rightarrow x \in A )$ & def.$1$            \\
+            $4.$ & $\forall x(x \in A \rightarrow x \in A )$ & $Def.1$            \\
             $5.$ & $a \in A \rightarrow a \in B $            & $E\forall,4$       \\
             $6.$ & $ a \in B$                                & $E\rightarrow 3,5$ \\
         \end{NiceTabular}
@@ -2014,10 +1989,6 @@ handy later.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-
-
-
-
 % \begin{sdeduce}
 % \hyp[1] {P \rightarrow (Q \lor R)} & Assumption  \\
 % \sub[1] {Q \rightarrow S}  & Assumption \\
@@ -2039,9 +2010,42 @@ handy later.
 
 % \end{sdeduce}
 
+\begin{fitchproof}[arrayenv=tabular]
+    \have {1} {P\vee Q}
+    \have {2} {\neg Q}
+    \open
+    \have {3} {P}
+    \have {4} {P} \r{3}
+    \close
+    \open
+    \have {aa} {Q}
+    \have {6} {\neg Q} \r{2}
+\end{fitchproof}
+Derivations can be interrupted and
+resumed at any point.
+\begin{fitchproof*}[arrayenv=tabular]
+    \have {7} {\bot} \ne{aa,6}
+    \have {8} {P} \be{7}
+    \close
+    \have {9} {P} \oe{1,3-4,aa-8}
+\end{fitchproof*}
 
-
-
+$
+    \begin{nd}[outerline=false]
+        \hypo {1} {P\vee Q}
+        \hypo {2} {\neg Q}
+        \open
+        \hypo {3} {P}
+        \have {4} {P} \r{3}
+        \close
+        \open
+        \hypo {aa} {Q}
+        \have {6} {\neg Q} \r{2}
+        \have {7} {\bot} \ne{aa,6}
+        \have {8} {P} \be{7}
+        \close
+        \have {9} {P} \oe{1,3-4,aa-8}
+    \end{nd}$
 
 \end{document}
 
