@@ -1,6 +1,7 @@
 \documentclass[10pt]{book}
 \usepackage[utf8]{inputenc}
-\usepackage{amsmath, amssymb}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{hyperref}
@@ -16,7 +17,6 @@
 \usepackage{mfirstuc}
 \usepackage{twemojis}
 \usepackage{fontspec}
-\usepackage{unicode-math}
 \usepackage{parskip}
 \usepackage{amssymb}
 \usepackage{emptypage}
@@ -44,6 +44,8 @@
 \newtheorem{exercise}{Exercise}[section]
 \newtheorem{Rule}{Rule}[section]
 \newtheorem{Attention}{Attention}[section]
+\newtheorem{observation}{Observation}[section]
+\newtheorem{colloraly}{Colloraly}[section]
 \makeatletter
 \renewcommand{\arraystretch}{1.44} % 2x standard row height
 
@@ -70,10 +72,10 @@
 \makeatother
 
 
+
 \begin{document}
 
 \frontmatter
-
 \title{\textbf{\Huge Logic}}
 \author{\Large Aria Ruler(Forouzandeh)}
 \date{\today}
@@ -888,7 +890,7 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
 \begin{definition}
     \textbf{open proposition} assume formula of a proposition but Substitute some
     obj and replace them with variables.we call it open proposition and denote it with
-    capital letter $(P,Q,R)$ showes other types of \textbf{predicates} and variables like$(Px ,Qxy ,..)$
+    capital letter $(P,Q,R)$ showes other types of \textbf{predicates} and variables like$(Px ,Q(x)y ,..)$
 \end{definition}
 
 \section{Rules of propositions.}
@@ -1053,24 +1055,24 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
 
     \begin{fitchproof}[arrayenv=tabular]
         \open
-        \have  {1} {\varphi}
+        \have  {1} {\varphi}                                            \by{acp  }{}
         \have [ ] {2} {\vdots}
         \have  [n] {2} {\psi}
         \close
         \open
-        \have [n+1] {1} {\psi}
+        \have {1} {\psi}                                            \by{acp  }{}
         \have [ ] {2} {\vdots}
         \have  [m] {2} {\varphi}
         \close
-        \have  [m+1] {2} {\varphi \to \psi }                              \by{$I\to,1,n$ }{}
-        \have  [m+2] {2} {\psi \to \varphi }                              \by{$I\to,n+1,m$}{}
-        \have  [m+3] {2} {(\varphi \to \psi)\land (\psi \to \varphi)}     \by{$I\land,m+1,m+2$}{}
-        \have  [m+4]{2} {\varphi \leftrightarrow \psi}                     \by{$Def.,m+3$ }{}
+        \have   {2} {\varphi \to \psi }                              \by{$I\to,1,n$ }{}
+        \have   {2} {\psi \to \varphi }                              \by{$I\to,n+1,m$}{}
+        \have  {2} {(\varphi \to \psi)\land (\psi \to \varphi)}     \by{$I\land,m+1,m+2$}{}
+        \have  {2} {\varphi \leftrightarrow \psi}                     \by{$Def.,m+3$ }{}
     \end{fitchproof}
 
     \begin{fitchproof}[arrayenv=tabular]
-        \have {1} {\varphi \leftrightarrow \psi }
-        \have {2} {\varphi }
+        \have {1} {\varphi \leftrightarrow \psi }                   \by{ass}{}
+        \have {2} {\varphi }                                        \by{ass}{}
         \have  {2} {(\varphi \to \psi)\land (\psi \to \varphi)}     \by{$Def. 1$}{}
         \have  {2} {\varphi \to \psi }                              \by{$E\land 3$}{}
         \have  {2} {\psi}                                           \by{$E\to 1,4$}{}
@@ -1161,11 +1163,11 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
     \textbf{Big AND and OR} assume a set like $ \{a_{0},a_{1},a_{2},...,a_{n}\}$
     we define \textbf{big AND} like this.
     \\
-    \[ \bigwedge\limits_{i=0}^n Pa_{i} : Pa_{0} \land Pa_{1} \land Pa_{2} \land... \land Pa_{n}\]
+    \[ \bigwedge\limits_{i=0}^n P(a_{i}) : Pa_{0} \land P(a_{1}) \land P(a_{2}) \land... \land P(a_{n})\]
     \\
     and \textbf{big OR}
     \\
-    \[ \bigvee\limits_{i=0}^n Pa_{i} : Pa_{0} \lor Pa_{1} \lor Pa_{2} \lor... \lor Pa_{n}\]
+    \[ \bigvee\limits_{i=0}^n P(a_{i}) : P(a_{0}) \lor P(a_{1}) \lor P(a_{2}) \lor... \lor P(a_{n})\]
 
 \end{definition}
 
@@ -1179,41 +1181,41 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
     \textbf{use of open propositions} assume universe of discourse is $ \{a_{0},a_{1},a_{2},...,a_{n}\}$
     \\
     \begin{fitchproof}[arrayenv=tabular]
-        \have [c] {1} {Px}
+        \have [c] {1} {P(x)}
     \end{fitchproof}
     means :
     \\
     \begin{fitchproof}[arrayenv=tabular]
-        \have [c_{0}] {1} {Pa_{0}}
-        \have [c_{1}] {1} {Pa_{1}}
-        \have [c_{2}] {1} {Pa_{2}}
+        \have [c_{0}] {1} {P(a_{0})}
+        \have [c_{1}] {1} {P(a_{1})}
+        \have [c_{2}] {1} {P(a_{2})}
         \have [ ] {2} {\vdots}
-        \have [c_{n}] {1} {Pa_{n}}
+        \have [c_{n}] {1} {P(a_{n})}
     \end{fitchproof}
     \par
     if $Px$ was been assemed then like this
     \begin{fitchproof}[arrayenv=tabular]
         \open
-        \have [c] {1} {Px}
+        \have [c] {1} {P(x)}
         \have [ ] {2} {\vdots}
         \close
     \end{fitchproof}
     means :
     \begin{fitchproof}[arrayenv=tabular]
         \open
-        \have [c_{0}] {1} {Pa_{0}}
+        \have [c_{0}] {1} {P(a_{0})}
         \have [ ] {2} {\vdots}
         \close
         \open
-        \have [c_{1}] {1} {Pa_{1}}
+        \have [c_{1}] {1} {P(a_{1})}
         \have [ ] {2} {\vdots}
         \close
         \open
-        \have [c_{2}] {1} {Pa_{2}}
+        \have [c_{2}] {1} {P(a_{2})}
         \have [ ] {2} {\vdots}
         \close
         \open
-        \have [c_{n}] {1} {Pa_{n}}
+        \have [c_{n}] {1} {P(a_{n})}
         \have [ ] {2} {\vdots}
         \close
     \end{fitchproof}
@@ -1222,16 +1224,16 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
 
 \begin{definition}
     \textbf{Universal quantification} assume universe of discourse is $ \{a_{0},a_{1},a_{2},...,a_{n}\}$
-    we define $\forall x Px$
+    we define $\forall x P(x)$
     \\
-    \[ \forall x Px : \bigwedge\limits_{i=0}^n Pa_{i} \]
+    \[ \forall x Px : \bigwedge\limits_{i=0}^n P(a_{i}) \]
 \end{definition}
 
 \begin{definition}
     \textbf{Existential quantification} assume universe of discourse is $ \{a_{0},a_{1},a_{2},...,a_{n}\}$
     we define $\exists x Px$
     \\
-    \[ \exists  x Px : \bigvee\limits_{i=0}^n Pa_{i} \]
+    \[ \exists  x Px : \bigvee\limits_{i=0}^n P(a_{i}) \]
 \end{definition}
 
 \begin{definition}
@@ -1239,7 +1241,7 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
     for us and it works as variable.(we show them with $\Phi ,\Psi ,\Theta ,... $)
 \end{definition}
 
-as you can see $\forall x \Phi x $ and $\exists x \Phi x $ are sentences.
+as you can see $\forall x \Phi (x) $ and $\exists x \Phi (x) $ are sentences.
 
 \begin{definition}
     \textbf{Free variables} variables that are not bound by a quantifier.
@@ -1260,21 +1262,21 @@ as you can see $\forall x \Phi x $ and $\exists x \Phi x $ are sentences.
         \\
         \hline
         \begin{fitchproof}[arrayenv=tabular]
-            \hypo [ ] {2} {\Phi y}
-            \have  [ ]{2} {\therefore \forall x \Phi x} \by{$I\forall$}{}
+            \hypo [ ] {2} {\Phi (y)}
+            \have  [ ]{2} {\therefore \forall x \Phi (x)} \by{$I\forall$}{}
         \end{fitchproof}
          &
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
             \item  $y$ is a variable.
-            \item  $\Phi y$ must not be assumed.
+            \item  $\Phi (y)$ must not be assumed.
         \end{enumerate}
 
         \\
         \hline
         \begin{fitchproof}[arrayenv=tabular]
-            \hypo [ ] {2} {\forall x \Phi x}
-            \have  [ ]{2} {\therefore \Phi a} \by{$E\forall$}{}
+            \hypo [ ] {2} {\forall x \Phi (x)}
+            \have  [ ]{2} {\therefore \Phi (a)} \by{$E\forall$}{}
         \end{fitchproof}
          &
         \begin{enumerate}
@@ -1285,8 +1287,8 @@ as you can see $\forall x \Phi x $ and $\exists x \Phi x $ are sentences.
         \\
         \hline
         \begin{fitchproof}[arrayenv=tabular]
-            \hypo [ ] {2} {\Phi a}
-            \have  [ ]{2} {\therefore \exists x \Phi x} \by{$I\exists$}{}
+            \hypo [ ] {2} {\Phi (a)}
+            \have  [ ]{2} {\therefore \exists x \Phi (x)} \by{$I\exists$}{}
         \end{fitchproof}
 
          &
@@ -1299,9 +1301,9 @@ as you can see $\forall x \Phi x $ and $\exists x \Phi x $ are sentences.
         \\
         \hline
         \begin{fitchproof}[arrayenv=tabular]
-            \have [ ] {1} {\exists x \Phi x}
+            \have [ ] {1} {\exists x \Phi (x)}
             \open
-            \have [ ] {1} {\Phi y}
+            \have [ ] {1} {\Phi (y)}
             \have [ ] {2} {\vdots}
             \have  [ ] {2} {\theta}
             \close
@@ -1311,7 +1313,7 @@ as you can see $\forall x \Phi x $ and $\exists x \Phi x $ are sentences.
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
             \item  $y$ is a variable.
-            \item  $\Phi y$ must not be assemed in previous lines.(except ones that are closed)
+            \item  $\Phi (y)$ must not be assumed in previous lines.(except ones that are closed)
             \item $y$ is not free in $\theta$
         \end{enumerate}
         \\
@@ -1321,50 +1323,50 @@ as you can see $\forall x \Phi x $ and $\exists x \Phi x $ are sentences.
 
     \begin{tabular}{>{\centering\arraybackslash}m{7cm}>{\centering\arraybackslash}m{7cm}}
         \begin{fitchproof}[arrayenv=tabular]
-            \have  {2} {\Phi y}                                         \by{$ass$  }{}
-            \have  {2} {\Phi a_{0}}                                     \by{$Def.1$ }{}
+            \have  {2} {\Phi (y)}                                         \by{$ass$  }{}
+            \have  {2} {\Phi (a_{0})}                                     \by{$Def.1$ }{}
             \have [ ] {2} {\vdots}
-            \have [n] {2} {\Phi a_{n}}                                       \by{$Def.1$}{}
-            \have [n+1] {2} {\bigwedge\limits_{i=0}^n \Phi a_{i} }          \by{$I\land,2,3,...,n+2$}{}
-            \have  [n+2]{2} { \forall x \Phi x}                  \by{$Def. n+3$ }{}
+            \have [n] {2} {\Phi (a_{n})}                                       \by{$Def.1$}{}
+            \have {2} {\bigwedge\limits_{i=0}^n \Phi (a_{i}) }          \by{$I\land,2,3,...,n+2$}{}
+            \have  {2} { \forall x \Phi (x)}                  \by{$Def. n+3$ }{}
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
-            \have  {2} {\forall x \Phi x}                         \by{$ass$ }{}
-            \have  {2} {\bigwedge\limits_{i=0}^n \Phi a_{i}}      \by{$Def.1$}{}
-            \have  {2} { \Phi a}                         \by{$E\land 2$}{}
+            \have  {2} {\forall x \Phi (x)}                         \by{$ass$ }{}
+            \have  {2} {\bigwedge\limits_{i=0}^n \Phi (a_{i})}      \by{$Def.1$}{}
+            \have  {2} { \Phi (a)}                         \by{$E\land 2$}{}
         \end{fitchproof}
 
         \\
 
         \begin{fitchproof}[arrayenv=tabular]
-            \have  {2} {\Phi a}
-            \have  {2} {\bigvee\limits_{i=0}^n \Phi a_{i}}   \by{$I\lor 1$}{}
-            \have  {2} { \exists x \Phi x}         \by{$Def 2$}{}
+            \have  {2} {\Phi (a)}
+            \have  {2} {\bigvee\limits_{i=0}^n \Phi (a_{i})}   \by{$I\lor 1$}{}
+            \have  {2} { \exists x \Phi (x)}         \by{$Def 2$}{}
         \end{fitchproof}
 
          &
 
         \begin{fitchproof}[arrayenv=tabular]
-            \have  {1} {\exists x \Phi x}
-            \have  {1} {\bigvee\limits_{i=0}^n \Phi a_{i} }
+            \have  {1} {\exists x \Phi (x)}
+            \have  {1} {\bigvee\limits_{i=0}^n \Phi (a_{i}) }
             \open
-            \have  {1} {\Phi a_{0}}
+            \have  {1} {\Phi (a_{0})}                  \by{acp  }{}
             \have [ ] {2} {\vdots}
             \have  [n] {2} {\theta}
             \close
             \open
-            \have [n+1] {1} {\Phi a_{1}}
+            \have  {1} {\Phi (a_{1})}                \by{acp  }{}
             \have [ ] {2} {\vdots}
             \have  [m] {2} {\theta}
             \close
             \have [ ] {2} {\vdots}
             \open
-            \have [l] {1} {\Phi a_{2}}
+            \have [l] {1} {\Phi (a_{2})}                    \by{acp  }{}
             \have [ ] {2} {\vdots}
             \have  [r] {2} {\theta}
             \close
-            \have  [r+1]{2} {\theta } \by{$E\exists$}{}
+            \have  {2} {\theta }                    \by{$E\exists$}{}
         \end{fitchproof}
 
     \end{tabular}
@@ -1377,21 +1379,22 @@ as you can see $\forall x \Phi x $ and $\exists x \Phi x $ are sentences.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
 
-        \item   $ \forall x(Px \wedge Qx) \therefore / \therefore \forall x Px \wedge \forall x Qx $
-        \item   $ \exists x(Px \vee Qx) \therefore /\therefore \exists x Px \vee \exists x Qx $
-        \item   $ \forall x Px \vee \forall x Qx /\therefore \forall x(Px \vee Qx) $
-        \item   $ \exists x(Px \wedge Qx) /\therefore \exists x Px \wedge \exists x Qx $
-        \item   $(\exists x Px \rightarrow \exists x Qx) /\therefore \exists x(Px \rightarrow Qx) $
-        \item   $ \forall x Px \wedge Q \therefore /\therefore \forall x(Px \wedge Q) $
-        \item   $ \forall x Px \vee Q \therefore /\therefore \forall x(Px \vee Q) $
-        \item   $ \exists x Px \wedge Q \therefore /\therefore \exists x(Px \wedge Q) $
-        \item   $ \exists x Px \vee Q \therefore /\therefore \exists x(Px \vee Q) $
-        \item   $(Q \rightarrow \forall x Px) \therefore /\therefore \forall x(Q \rightarrow Px) $
-        \item   $(Q \rightarrow \exists x Px) \therefore /\therefore \exists x(Q \rightarrow Px) $
-        \item   $(\forall x Px \rightarrow Q) \therefore /\therefore \exists x(Px \rightarrow Q) $
-        \item   $(\exists x Px \rightarrow Q) \therefore /\therefore \forall x(Px \rightarrow Q) $
-        \item   $ \exists x \neg Px \therefore /\therefore \neg \forall x Px  $
-        \item   $ \forall x \neg Px \therefore /\therefore \neg \exists x Px $
+        \item   $ \forall x(P(x) \wedge Q(x)) \therefore / \therefore \forall x P(x) \wedge \forall x Q(x) $
+        \item   $ \exists x(P(x) \vee Q(x)) \therefore /\therefore \exists x P(x) \vee \exists x Q(x) $
+        \item   $ \forall x P(x) \vee \forall x Q(x) /\therefore \forall x(P(x) \vee Q(x)) $
+        \item   $ \exists x(P(x) \wedge Q(x)) /\therefore \exists x P(x) \wedge \exists x Q(x) $
+        \item   $ \forall x(P(x) \rightarrow Q(x)) /\therefore  \forall x P(x) \rightarrow \forall x Q(x) $
+        \item   $\exists x P(x) \rightarrow \exists x Q(x) /\therefore \exists x(P(x) \rightarrow Q(x)) $
+        \item   $ \forall x P(x) \wedge Q \therefore /\therefore \forall x(P(x) \wedge Q) $
+        \item   $ \forall x P(x) \vee Q \therefore /\therefore \forall x(P(x) \vee Q) $
+        \item   $ \exists x P(x) \wedge Q \therefore /\therefore \exists x(P(x) \wedge Q) $
+        \item   $ \exists x P(x) \vee Q \therefore /\therefore \exists x(P(x) \vee Q) $
+        \item   $(Q \rightarrow \forall x P(x)) \therefore /\therefore \forall x(Q \rightarrow P(x)) $
+        \item   $(Q \rightarrow \exists x P(x)) \therefore /\therefore \exists x(Q \rightarrow P(x)) $
+        \item   $(\forall x P(x) \rightarrow Q) \therefore /\therefore \exists x(P(x) \rightarrow Q) $
+        \item   $(\exists x P(x) \rightarrow Q) \therefore /\therefore \forall x(P(x) \rightarrow Q) $
+        \item   $ \exists x \neg P(x) \therefore /\therefore \neg \forall x P(x)  $
+        \item   $ \forall x \neg P(x) \therefore /\therefore \neg \exists x P(x) $
 
     \end{enumerate}
 \end{example}
@@ -1400,13 +1403,13 @@ as you can see $\forall x \Phi x $ and $\exists x \Phi x $ are sentences.
     \textbf{}for conatants P,Q,R prove.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item   $ \exists x(Px \wedge \exists y Qy \rightarrow \forall z Rz) /\therefore \forall y \forall z(\forall x Px \wedge Qy \rightarrow Rz) $
-        \item   $ \forall x \exists y(Px \wedge Qy \rightarrow \forall z Rz) /\therefore \forall z(\exists x Px \wedge \forall y Qy \rightarrow Rz) $
-        \item   $(\forall x Px \rightarrow \exists y Qy) /\therefore \exists x \exists y(Px \rightarrow Qy) $
-        \item   $ \forall x \forall z \exists y \exists w(Pyz \vee Qz \rightarrow Rxw) /\therefore(\exists z \forall y Pyz \vee \exists z Qz) \rightarrow \forall x \exists w Rxw $
-        \item   $ \exists x Px \vee \exists x(Qx \wedge Rx) /\therefore \exists x(Px \vee Qx) \wedge \exists x(Px \vee Rx) $
-        \item   $\exists x \exists z \forall y(Pxy \rightarrow Qz \vee Rxz) /\therefore \forall x \exists y Pxy \rightarrow(\exists z Qz \vee \exists x \exists z Rxz) $
-        \item   $ \forall x \exists y(\exists z Pxyz \wedge Qxy) \vee \forall x \exists y \exists z(Pxyz \wedge Rxy) /\therefore \forall x \exists y \exists z(Pxyz \wedge(Qxy \vee Rxy)) $
+        \item   $ \exists x(P(x) \wedge \exists y Q(y) \rightarrow \forall z R(z)) /\therefore \forall y \forall z(\forall x P(x) \wedge Q(y) \rightarrow R(z)) $
+        \item   $ \forall x \exists y(P(x) \wedge Q(y) \rightarrow \forall z R(z)) /\therefore \forall z(\exists x P(x) \wedge \forall y Q(y) \rightarrow R(z)) $
+        \item   $(\forall x P(x) \rightarrow \exists y Q(y)) /\therefore \exists x \exists y(P(x) \rightarrow Q(y)) $
+        \item   $ \forall x \forall z \exists y \exists w(P(y,z) \vee Q(z) \rightarrow R(x,w)) /\therefore(\exists z \forall y P(y,z) \vee \exists z Q(z)) \rightarrow \forall x \exists w R(x,w) $
+        \item   $ \exists x P(x) \vee \exists x(Q(x) \wedge R(x)) /\therefore \exists x(P(x) \vee Q(x)) \wedge \exists x(P(x) \vee R(x)) $
+        \item   $\exists x \exists z \forall y(P(x,y) \rightarrow Q(z) \vee R(x,y)) /\therefore \forall x \exists y P(x,y) \rightarrow(\exists z Q(z) \vee \exists x \exists z R(x,y)) $
+        \item   $ \forall x \exists y(\exists z P(x,y,z) \wedge Q(x,y)) \vee \forall x \exists y \exists z(P(x,y,z) \wedge R(x,y)) /\therefore \forall x \exists y \exists z(P(x,y,z) \wedge(Q(x,y) \vee R(x,y))) $
     \end{enumerate}
 \end{exercise}
 
@@ -1423,25 +1426,15 @@ with rules and axioms.
 
 \begin{axiom}
     \textbf{Existence of universe of set theory}
-    There exists a set $V$, known as the Von Neumann Universe, which contains every set.
+    There exists a set $V$ (we denote it as V.it simply means the set of all sets), known as the Von Neumann Universe, which contains every set.
     (this axiom can't be formolized in first order logic).
     (there must be another axiom let us use logic for set theory but we ignore that)
-\end{axiom}
-
-\begin{axiom}
-    \textbf{Extensionality}Two sets are equal (are the same set) if they have the same elements.
-    \\
-    \[  \forall X,Y (\forall x ( x \in X \leftrightarrow x \in Y ) \leftrightarrow X = Y )  \]
 \end{axiom}
 
 \begin{definition}
     \textbf{Subset} a subset is a set where every element is also an element of another, larger set called the superset
     \[ A \subseteq B: \forall x(x \in A \rightarrow x \in B) \]
 \end{definition}
-
-so we can rewrite axiom of Extensionality like this.
-
-\[ \forall X,Y ((X \subseteq Y \wedge Y \subseteq X) \leftrightarrow X=Y)\]
 
 \begin{theorem}
     \textbf{$(schema)$} $(I\subseteq , E\subseteq)$
@@ -1470,93 +1463,108 @@ so we can rewrite axiom of Extensionality like this.
     \begin{tabular}{>{\centering\arraybackslash}m{7cm}>{\centering\arraybackslash}m{7cm}}
         \begin{fitchproof}[arrayenv=tabular]
             \open
-            \have {1} {x \in A}
+            \have {1} {x \in A}                                         \by{acp}{}
             \have [ ] {2} {\vdots}
             \have  [n] {2} {x \in B}
             \close
-            \have  [n+1]{2} {x \in A \rightarrow x \in B }              \by{$I\rightarrow,1,n$ }{}
-            \have  [n+2]{2} {\forall x(x \in A \rightarrow x \in B )}   \by{$I\forall,n+1$ }{}
-            \have  [n+3]{2} {A \subseteq B  }                 \by{$Def.n+2$ }{}
+            \have  {2} {x \in A \rightarrow x \in B }              \by{$I\rightarrow,1,n$ }{}
+            \have  {2} {\forall x(x \in A \rightarrow x \in B )}   \by{$I\forall,n+1$ }{}
+            \have  {2} {A \subseteq B  }                           \by{$Def.n+2$ }{}
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
-            \have {1} {A \subseteq B}
-            \have  {2} {a \in A}
+            \have {1} {A \subseteq B}                               \by{ass }{}
+            \have  {2} {a \in A}                                   \by{ass }{}
             \have  {2} {\forall x(x \in A \rightarrow x \in A )}   \by{$Def.1$ }{}
             \have  {2} {a \in A \rightarrow a \in B }             \by{$E\forall,4$ }{}
             \have  {2} {  a \in B}                                   \by{$E\rightarrow 3,5$}{}
         \end{fitchproof}
-        \begin{NiceTabular}{lll}
-
-            $2.$ & $A \subseteq B$                           & ass                \\
-            $3.$ & $a \in A$                                 & ass                \\
-            $4.$ & $\forall x(x \in A \rightarrow x \in A )$ & $Def.1$            \\
-            $5.$ & $a \in A \rightarrow a \in B $            & $E\forall,4$       \\
-            $6.$ & $ a \in B$                                & $E\rightarrow 3,5$ \\
-        \end{NiceTabular}
         \\
     \end{tabular}
 
 \end{theorem}
+
+\begin{example}
+    \textbf{} $A \subseteq B , B \subseteq C/\therefore A \subseteq C$
+    \begin{fitchproof}[arrayenv=tabular]
+        \have{1} {A \subseteq B }                 \by{ass}{}
+        \have {2} {B \subseteq C}                  \by{ass}{}
+        \open
+        \have   {2} {x \in A }                     \by{$acp$}{}
+        \have   {2} {x \in B }                     \by{$E\subseteq ,1,3$ }{}
+        \have {1} {x \in C  }                       \by{$E\subseteq ,2,4$}{}
+        \close
+        \have  {2} {A \subseteq C }             \by{$I\subseteq ,3,5$}{}
+    \end{fitchproof}
+\end{example}
+
+\begin{axiom}
+    \textbf{Extensionality}Two sets are equal (are the same set) if they have the same elements.
+    \\
+    \[  \forall X,Y (\forall x ( x \in X \leftrightarrow x \in Y ) \rightarrow X = Y )  \]
+\end{axiom}
+
+
+so we can rewrite axiom of Extensionality like this.
+
+\[ \forall X,Y ((X \subseteq Y \wedge Y \subseteq X) \rightarrow X=Y)\]
 
 \begin{theorem}
     \textbf{$(schema)$} $(I= , E=)$
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
         \hline
-        \begin{NiceTabular}{ll}
-            $x \in A $           &      \\
-            $\vdots$             &      \\
-            $x \in B $           &      \\
-            $x \in B $           &      \\
-            $\vdots$             &      \\
-            $x \in A $           &      \\
-            $\therefore A = B  $ & $I=$ \\
-            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (4-|3);
-            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (4-1) r-lr (7-|3);
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \open
+            \have [ ] {1} {x \in A }
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {x \in B}
+            \close
+            \open
+            \have [ ] {1} {x \in B}
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {x \in A}
+            \close
+            \have  [ ]{2} {\therefore A = B } \by{$I=$}{}
+        \end{fitchproof}
          &
-        \begin{NiceTabular}{ll}
-            $A = B $              &      \\
-            $a \in A$             &      \\
-            \hline
-            $\therefore  a \in B$ & $E=$ \\
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ]{1} {A = B }
+            \hypo [ ] {2} {a \in A \hspace{0.9cm} a \in B}
+            \have  [ ]{2} {\therefore  a \in B \hspace{.5cm} \therefore  a \in A} \by{$E=$}{}
+        \end{fitchproof}
         \\
         \hline
     \end{tabular}
 
-    \begin{NiceTabular}{lll}
-        /      & $I\subseteq $                                                            &                            \\
-        $1.$   & $x \in A $                                                               & acp                        \\
-               & $\vdots$                                                                 &                            \\
-        $n.$   & $x \in B $                                                               &                            \\
-        $n+1.$ & $ A \subseteq B  $                                                       & $I\subseteq,1,n$           \\
-        $n+2.$ & $x \in B $                                                               & acp                        \\
-               & $\vdots$                                                                 &                            \\
-        $m.$   & $x \in A $                                                               &                            \\
-        $m+1.$ & $ B \subseteq A  $                                                       & $I\subseteq,n+2,m$         \\
-        $m+2.$ & $\forall X, Y((X \subseteq Y \wedge Y \subseteq X) \leftrightarrow X=Y)$ & Extensionality             \\
-        $m+3.$ & $(A \subseteq B \wedge B \subseteq A) \leftrightarrow A=B$               & $E\forall,m+2$             \\
-        $m+4.$ & $A \subseteq B \wedge B \subseteq A$                                     & $I\wedge,n+1,m+1$          \\
-        $m+5.$ & $A=B$                                                                    & $E\leftrightarrow,m+3,m+4$ \\
-        \CodeAfter \tikz \draw [<-,shorten < = 2pt] (2-1) r-lr (5-|3);
-        \CodeAfter \tikz \draw [<-,shorten < = 2pt] (6-1) r-lr (9-|3);
-    \end{NiceTabular}
-    \\
-    \\
-    \\
-    \\
-    \begin{NiceTabular}{lll}
-        /    & $E\subseteq $                                                            &                        \\
-        $1.$ & $A = B $                                                                 &                        \\
-        $2.$ & $a \in A$                                                                &                        \\
-        $3.$ & $\forall X, Y((X \subseteq Y \wedge Y \subseteq X) \leftrightarrow X=Y)$ & Extensionality         \\
-        $4.$ & $(A \subseteq B \wedge B \subseteq A) \leftrightarrow A=B$               & $E\forall,3$           \\
-        $5.$ & $A \subseteq B \wedge B \subseteq A$                                     & $E\leftrightarrow,1,4$ \\
-        $6.$ & $A \subseteq B$                                                          & $E\wedge 5$            \\
-        $7.$ & $ a \in B$                                                               & $E\subseteq,2,6$       \\
-    \end{NiceTabular}
+    \begin{fitchproof}[arrayenv=tabular]
+        \open
+        \have  {1} {x \in A }                                                                 \by{acp  }{}
+        \have [ ] {2} {\vdots}
+        \have  [n] {2} {x \in B}
+        \close
+        \have   {2} {A \subseteq B }                                                        \by{$I\subseteq,1,n$  }{}
+        \open
+        \have  {1} {x \in B}                                                                \by{acp }{}
+        \have [ ] {2} {\vdots}
+        \have  [m] {2} {x \in A}
+        \close
+        \have  {2} {B \subseteq A }                                                          \by{$I\subseteq,n+2,m$ }{}
+        \have  {2} {\forall X, Y((X \subseteq Y \wedge Y \subseteq X) \rightarrow X=Y)}   \by{Extensionality }{}
+        \have  {2} {(A \subseteq B \wedge B \subseteq A) \rightarrow A=B}                 \by{$E\forall,m+2$ }{}
+        \have  {2} {A \subseteq B \wedge B \subseteq A}                                       \by{$I\wedge,n+1,m+1$}{}
+        \have  {2} {A=B}                                                                        \by{$E\rightarrow,m+3,m+4$}{}
+    \end{fitchproof}
+    \par
+    % \begin{fitchproof}[arrayenv=tabular]
+    %     \have {1} {A = B }
+    %     \have  {2} {a \in A }
+    %     \have  {2} {\forall X, Y((X \subseteq Y \wedge Y \subseteq X) \leftrightarrow X=Y)}    \by{Extensionality}{}
+    %     \have  {2} {(A \subseteq B \wedge B \subseteq A) \leftrightarrow A=B}                   \by{$E\forall,3$ }{}
+    %     \have  {2} {A \subseteq B \wedge B \subseteq A}                                          \by{$E\leftrightarrow,1,4$}{}
+    %     \have  {2} {A \subseteq B}                                                              \by{$E\wedge 5$}{}
+    %     \have  {2} {  a \in B }                                                                   \by{$E\subseteq,2,6$ }{}
+    % \end{fitchproof}
 \end{theorem}
 
 \begin{axiom}
@@ -1564,10 +1572,10 @@ so we can rewrite axiom of Extensionality like this.
     like $\phi x$ there is a set such that every $x$ is a member of that set if and only if it holds
     $\phi x$.
     \\
-    \[ \exists X \forall x  (\Phi x \leftrightarrow x \in X) \]
+    \[ \exists X \forall x  (\Phi (x) \leftrightarrow x \in X) \]
     \\
-    by axiom of extentionality we can show that y is uniq.
-    so we denote it as $\{ x | \Phi x\}$.
+    by axiom of extentionality we can show that y is unique.
+    so we denote it as $\{ x | \Phi (x)\}$.
 \end{axiom}
 
 this axiom show that why Russell's paradox doesn't happened here because if ou
@@ -1589,162 +1597,141 @@ handy later.
     \[ \forall x(x \notin \emptyset ) \]
 \end{definition}
 
+\begin{example}
+    \textbf{} $/\therefore \forall X(\emptyset \subseteq X)$
+    \begin{fitchproof}[arrayenv=tabular]
+        \open
+        \have{1} {x \in \emptyset}                                \by{acp}{}
+        \have {2} {\forall x(x \notin \emptyset)}                  \by{lemma $4.4.1 $ }{}
+        \have   {2} {x \notin \emptyset}                           \by{$E\forall ,2$}{}
+        \have   {2} {\bot}                                          \by{$I\bot ,1,3$ }{}
+        \have {1} {x \in X  }                                        \by{$E\bot ,4$}{}
+        \close
+        \have  {2} {\emptyset \subseteq X}                       \by{$I\subseteq ,1,5$}{}
+        \have  {2} {\forall X(\emptyset \subseteq X)}             \by{$I\forall ,6$}{}
+    \end{fitchproof}
+\end{example}
+
 \begin{lemma}
     \textbf{} $A = \emptyset \therefore / \therefore \forall y( y \notin A)$
+    \begin{fitchproof}[arrayenv=tabular]
+        \have  {1} {\forall y (y \notin A )}                                \by{ass}{}
+        \open
+        \have  {1} {y \in A }                                               \by{acp}{}
+        \have  {1} {y \notin A }                                            \by{$E\forall,1$}{}
+        \have  {2} {\bot}                                                  \by{$I\bot,2,3$}{}
+        \have   {2} {y \in \emptyset }                                       \by{$E\bot,4$ }{}
+        \close
+        \open
+        \have   {2} {y \in \emptyset }                                      \by{acp}{}
+        \have  {1} {\forall y (y \notin \emptyset  )}                        \by{Def.}{}
+        \have {2} {y \notin \emptyset  }                                    \by{$E\forall,7$  }{}
+        \have   {2} {\bot}                                                 \by{$I\bot,6,8$ }{}
+        \have   {2} {y \in A}                                                 \by{$E\bot,9$}{}
+        \close
+        \have  {2} {A = \emptyset }                                                    \by{$I=$}{}
+    \end{fitchproof}
 
-    \begin{NiceTabular}{lll}
-              & $\forall y( y \notin A)  / \therefore A = \emptyset  $                              &                          \\
-        $1.$  & $\forall y (y \notin A )$                                                           & ass                      \\
-        $2.$  & $y \in A $                                                                          & acp                      \\
-        $3.$  & $y \notin A $                                                                       & $E\forall,1$             \\
-        $4.$  & $\perp $                                                                            & $I\bot,2,3$              \\
-        $5.$  & $y \in \emptyset $                                                                  & $E\bot,4$                \\
-        $6.$  & $y \in \emptyset $                                                                  & acp                      \\
-        $7.$  & $ \forall y (y \notin \emptyset  )$                                                 & Def.                     \\
-        $8.$  & $ y \notin \emptyset   $                                                            & $E\forall,7$             \\
-        $9.$  & $\perp $                                                                            & $E\leftrightarrow,6,8$   \\
-        $10.$ & $ y \in A $                                                                         & $I\bot,9$                \\
-        $11.$ & $ y \in A \leftrightarrow y \in \emptyset$                                          & $I\leftrightarrow,5,10$  \\
-        $12.$ & $ \forall y(y \in A \leftrightarrow y \in \emptyset) $                              & $I\forall,11$            \\
-        $13.$ & $ \forall X,Y(\forall y(y \in X \leftrightarrow y \in Y) \leftrightarrow X=Y) $     & extentionality           \\
-        $14.$ & $ (\forall y(y \in A \leftrightarrow y \in \emptyset) \leftrightarrow A=\emptyset)$ & $E\forall,13$            \\
-        $15.$ & $ A=\emptyset$                                                                      & $E\leftrightarrow,12,14$ \\
-        \CodeAfter \tikz \draw [<-,shorten < = 2pt] (3-1) r-lr (7-|3);
-        \CodeAfter \tikz \draw [<-,shorten < = 2pt] (7-1) r-lr (12-|3);
-    \end{NiceTabular}
-    \\
-    \\
-    \\
-    \\
-    \begin{NiceTabular}{lll}
-              & $A = \emptyset  / \therefore \forall y( y \notin A) $                               &                        \\
-        $1.$  & $ A=\emptyset$                                                                      & ass                    \\
-        $2.$  & $ \forall X,Y(\forall y(y \in X \leftrightarrow y \in Y) \leftrightarrow X=Y) $     & extentionality         \\
-        $3.$  & $ (\forall y(y \in A \leftrightarrow y \in \emptyset) \leftrightarrow A=\emptyset)$ & $E\forall,2$           \\
-        $4.$  & $ \forall y(y \in A \leftrightarrow y \in \emptyset) $                              & $E\leftrightarrow,1,3$ \\
-        $5.$  & $y \in A $                                                                          & acp                    \\
-        $6.$  & $y \in A \leftrightarrow y \in \emptyset$                                           & $E\forall,4$           \\
-        $7.$  & $y \in \emptyset $                                                                  & $E\leftrightarrow,5,6$ \\
-        $8.$  & $ \forall y (y \notin \emptyset )$                                                  & Def.                   \\
-        $9.$  & $ y \notin \emptyset  $                                                             & $E\forall,8$           \\
-        $10.$ & $\perp $                                                                            & $E\leftrightarrow,7,9$ \\
-        $11.$ & $y \notin A $                                                                       & $I\neg,5,10$           \\
-        $12.$ & $\forall y (y \notin A )$                                                           & $I\forall,11$          \\
-        \CodeAfter \tikz \draw [<-,shorten < = 2pt] (6-1) r-lr (12-|3);
-
-    \end{NiceTabular}
-
+    \begin{fitchproof}[arrayenv=tabular]
+        \have  {2} {A = \emptyset }                                                    \by{ass}{}
+        \open
+        \have  {1} {y \in A }                                               \by{acp}{}
+        \have  {1} {\forall y (y \notin \emptyset )}                                \by{Def.}{}
+        \have   {2} {y \in \emptyset }                                       \by{$E=,1,2$}{}
+        \have   {2} {y \notin \emptyset }                                    \by{$E\forall,3$ }{}
+        \have  {2} {\bot}                                                  \by{$I\bot,4,5$ }{}
+        \close
+        \have  {1} {y \notin A }                                            \by{$I\neg$}{}
+        \have  {1} {\forall y (y \notin A )}                                \by{$I\forall,7$}{}
+    \end{fitchproof}
 \end{lemma}
+
+
+
+
 
 \begin{theorem}
     \textbf{$(schema)$} $(I\emptyset\not= , E \emptyset \not= ,I\emptyset= , E\emptyset=)$
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
         \hline
-        \begin{NiceTabular}{ll}
-            $a \in A$            &                   \\
-            \hline
-            $A \not= \emptyset $ & $I\emptyset\not=$ \\
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ] {2} {a \in A}
+            \have  [ ]{2} {\therefore A \not= \emptyset} \by{$I\emptyset\not=$}{}
+        \end{fitchproof}
          &
-        \begin{NiceTabular}{ll}
-            $A \not= \emptyset $ &                     \\
-            $x \in A $           &                     \\
-            $\vdots$             &                     \\
-            $\theta $            &                     \\
-            $\theta  $           & $E \emptyset \not=$ \\
-            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (2-1) r-lr (5-|3);
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \have [ ] {1} {A \not= \emptyset }
+            \open
+            \have [ ] {1} {x \in A}
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {\theta}
+            \close
+            \have  [ ]{2} {\therefore\theta } \by{$E \emptyset \not=$}{}
+        \end{fitchproof}
         \\
         \hline
-        \begin{NiceTabular}{ll}
-            $x \in A $       &               \\
-            $\vdots$         &               \\
-            $\bot $          &               \\
-            $A = \emptyset $ & $I\emptyset=$ \\
-            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (4-|3);
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \open
+            \have [ ] {1} {x \in A}
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {\bot }
+            \close
+            \have  [ ]{2} {\therefore A = \emptyset } \by{$I\emptyset=$}{}
+        \end{fitchproof}
          &
-        \begin{NiceTabular}{ll}
-            $A = \emptyset $ &               \\
-            \hline
-            $a \notin A$     & $E\emptyset=$ \\
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ] {2} {A = \emptyset }
+            \have  [ ]{2} {\therefore a \notin A} \by{$E\emptyset=$}{}
+        \end{fitchproof}
         \\
         \hline
     \end{tabular}
 
     \begin{tabular}{>{\centering\arraybackslash}m{7cm}>{\centering\arraybackslash}m{7cm}}
+        \begin{fitchproof}[arrayenv=tabular]
+            \have  {2} {a \in A}                         \by{ass}{}
+            \have  {2} {\exists x(x \in A)}             \by{$I\exists,1$ }{}
+            \have  {2} {\neg (\forall x(x \notin A))}   \by{De Morgan $2$ }{}
+            \have  {2} { A \not= \emptyset}             \by{lemma $4.4.1 , 3$}{}
+        \end{fitchproof}
 
-        \begin{NiceTabular}{lll}
-            $1.$ & $a \in A$                      &                   \\
-            $2.$ & $\exists x(x \in A)$           & $I\exists,1$      \\
-            $3.$ & $\neg (\forall x(x \notin A))$ & De Morgan $2$     \\
-            $4.$ & $A \not= \emptyset $           & lemma $4.4.1 , 3$ \\
-        \end{NiceTabular}
          &
-        \begin{NiceTabular}{lll}
-            $1.$   & $A \not= \emptyset $           &                   \\
-            $2.$   & $\neg (\forall x(x \notin A))$ & lemma $4.4.1 , 2$ \\
-            $3.$   & $\exists x(x \in A)$           & De Morgan $2$     \\
-            $4.$   & $x \in A $                     & acp               \\
-                   & $\vdots$                       &                   \\
-            $n.$   & $\theta $                      &                   \\
-            $n+1.$ & $\theta  $                     & $E\exists,4,n$    \\
-            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (4-1) r-lr (7-|3);
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \have {1} {A \not= \emptyset }              \by{ass}{}
+            \have  {2} {\neg (\forall x(x \notin A))}   \by{lemma $4.4.1 , 3$}{}
+            \have  {2} {\exists x(x \in A)}             \by{De Morgan $2$ }{}
+            \open
+            \have{1} {x \in A}                           \by{acp}{}
+            \have [ ] {2} {\vdots}
+            \have  [n] {2} {\theta}
+            \close
+            \have  [n+1]{2} {\theta }                    \by{$E\exists$}{}
+        \end{fitchproof}
         \\
+        \begin{fitchproof}[arrayenv=tabular]
+            \open
+            \have{1} {x \in A}                           \by{acp}{}
+            \have [ ] {2} {\vdots}
+            \have  [n] {2} {\bot}
+            \close
+            \have {1} {x \notin A  }             \by{$I\neg $ }{}
+            \have  {2} {\forall x(x \notin A)}   \by{$I\forall ,n+1$}{}
+            \have  {2} {A = \emptyset }             \by{lemma $4.4.1 , 1$}{}
+        \end{fitchproof}
 
-        \begin{NiceTabular}{lll}
-            $1.$   & $x \in A $               & acp                  \\
-                   & $\vdots$                 &                      \\
-            $n.$   & $\bot $                  &                      \\
-            $n+1.$ & $x \notin A $            & $I\neg ,n$           \\
-            $n+2.$ & $\forall x(x \notin A) $ & $I\forall ,n+1$      \\
-            $n+3.$ & $A = \emptyset $         & lemma $4.4.1 , 1$  \
-            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (4-|3);
-        \end{NiceTabular}
          &
-        \begin{NiceTabular}{lll}
-            $1.$ & $A = \emptyset $        &                   \\
-            $2.$ & $\forall x(x \notin A)$ & lemma $4.4.1 , 1$ \\
-            $1.$ & $a \notin A$            & $E\forall 2$      \\
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \have  {2} { A = \emptyset}             \by{ass}{}
+            \have  {2} {\forall x(x \notin A)}   \by{lemma $4.4.1 , 1$}{}
+            \have  {2} {a \notin A}               \by{$E\forall 2$  }{}
+        \end{fitchproof}
         \\
 
     \end{tabular}
 \end{theorem}
 
-\begin{example}
-    \textbf{} $/\therefore \forall X(\emptyset \subseteq X)$
 
-    \begin{NiceTabular}{lll}
-        $1.$ & $x \in \emptyset $                 & acp                  \\
-        $2.$ & $\forall x(x \notin \emptyset) $   & lemma $4.4.1 $       \\
-        $3.$ & $x \notin \emptyset $              & $E\forall ,2$        \\
-        $4.$ & $\bot $                            & $I\bot ,1,3$         \\
-        $5.$ & $x \in X $                         & $E\bot ,4$           \\
-        $6.$ & $\emptyset \subseteq X $           & $I\subseteq ,1,5$    \\
-        $7.$ & $\forall X(\emptyset \subseteq X)$ & lemma $4.4.1 , 1$  \
-        \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (6-|3);
-    \end{NiceTabular}
-
-\end{example}
-
-\begin{example}
-    \textbf{} $A \subseteq B , B \subseteq C/\therefore A \subseteq C$
-
-    \begin{NiceTabular}{lll}
-        $1.$ & $A \subseteq B $ & ass               \\
-        $2.$ & $B \subseteq C$  & ass               \\
-        $3.$ & $x \in A $       & acp               \\
-        $4.$ & $x \in B $       & $E\subseteq ,1,3$ \\
-        $5.$ & $x \in C  $      & $E\subseteq ,2,4$ \\
-        $6.$ & $A \subseteq C $ & $I\subseteq ,3,5$ \\
-        \CodeAfter \tikz \draw [<-,shorten < = 2pt] (3-1) r-lr (6-|3);
-    \end{NiceTabular}
-
-\end{example}
 
 \begin{definition}
     \textbf{pairing set}
@@ -1758,25 +1745,26 @@ handy later.
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
         \hline
-        \begin{NiceTabular}{ll}
-            $a = a_{i} $                                               &         \\
-            \hline
-            $\therefore  a \in  \{a_{0}, a_{1}, a_{2}, ... ,a_{n} \} $ & $I\{\}$ \\
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ] {2} {a = a_{i} }
+            \have  [ ]{2} {\therefore  a \in  \{a_{0}, a_{1}, a_{2}, ... ,a_{n} \}} \by{$I\{\}$}{}
+        \end{fitchproof}
          &
-        \begin{NiceTabular}{ll}
-            $ a \in  \{a_{0}, a_{1}, a_{2}, ... ,a_{n} \} $ &         \\
-            $a = a_{0} $                                    &         \\
-            $\vdots$                                        &         \\
-            $\theta $                                       &         \\
-            $\vdots$                                        &         \\
-            $a = a_{n} $                                    &         \\
-            $\vdots$                                        &         \\
-            $\theta $                                       &         \\
-            $\therefore \theta $                            & $E\{\}$ \\
-            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (2-1) r-lr (5-|3);
-            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (6-1) r-lr (9-|3);
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \have [ ] {1} {a \in  \{a_{0}, a_{1}, a_{2}, ... ,a_{n} \} }
+            \open
+            \have [ ] {1} {a = a_{0} }
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {\theta}
+            \close
+            \have [ ] {2} {\vdots}
+            \open
+            \have [ ] {1} {a = a_{n}}
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {\theta}
+            \close
+            \have  [ ]{2} {\therefore\theta } \by{$E\{\}$}{}
+        \end{fitchproof}
         \\
         \hline
     \end{tabular}
@@ -1803,38 +1791,37 @@ handy later.
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
         \hline
-        \begin{NiceTabular}{ll}
-            $a \in A $                     &         \\
-            $a \in B $                     &         \\
-            \hline
-            $\therefore  a \in  A \cap B $ & $I\cap$ \\
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ] {2} {a \in A}
+            \hypo [ ] {2} {a \in B  }
+            \have  [ ]{2} {\therefore  a \in  A \cap B } \by{$I\cap$}{}
+        \end{fitchproof}
          &
-        \begin{NiceTabular}{ll}
-            $ a \in  A \cap B $                                         &         \\
-            \hline
-            $\therefore  a \in  A \hspace{.5cm}  \therefore  a \in  B $ & $E\cap$ \\
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ] {2} {a \in  A \cap B }
+            \have  [ ]{2} {\therefore a \in  A \hspace{.5cm}  \therefore  a \in  B } \by{$E\cap$}{}
+        \end{fitchproof}
         \\
         \hline
-        \begin{NiceTabular}{ll}
-            $a \in A  $                                                               &         \\
-            \hline
-            $\therefore  a \in  A \cup B \hspace{.5cm}  \therefore  a \in  B \cup A $ & $I\cup$ \\
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ] {2} {a \in A   }
+            \have  [ ]{2} {\therefore   a \in  A \cup B \hspace{.5cm}  \therefore  a \in  B \cup A } \by{$I\cup$}{}
+        \end{fitchproof}
          &
-        \begin{NiceTabular}{ll}
-            $ a \in  A \cup B  $ &         \\
-            $a \in A $           &         \\
-            $\vdots$             &         \\
-            $\theta $            &         \\
-            $ a \in B  $         &         \\
-            $\vdots$             &         \\
-            $\theta $            &         \\
-            $\therefore \theta $ & $E\cup$ \\
-            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (2-1) r-lr (5-|3);
-            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (5-1) r-lr (8-|3);
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \have [ ] {1} { a \in  A \cup B  }
+            \open
+            \have [ ] {1} {a \in A }
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {\theta}
+            \close
+            \open
+            \have [ ] {1} { a \in B }
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {\theta}
+            \close
+            \have  [ ]{2} {\therefore\theta } \by{$E\cup$}{}
+        \end{fitchproof}
         \\
         \hline
     \end{tabular}
@@ -1861,37 +1848,37 @@ handy later.
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
         \hline
-        \begin{NiceTabular}{ll}
-            $X \in A $                     &            \\
-            $\vdots$                       &            \\
-            $a \in X $                     &            \\
-            $\therefore  a \in \bigcap A $ & $I\bigcap$ \\
-            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (4-|3);
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \open
+            \have [ ] {1} {X \in A }
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {a \in X}
+            \close
+            \have  [ ]{2} {\therefore a \in \bigcap A } \by{$I\bigcap$}{}
+        \end{fitchproof}
          &
-        \begin{NiceTabular}{ll}
-            $ a \in \bigcap A  $    &            \\
-            $ B \in  A  $           &            \\
-            \hline
-            $\therefore  a \in  B $ & $E\bigcap$ \\
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ] {2} {a \in \bigcap A }
+            \hypo [ ] {2} {B \in  A  }
+            \have  [ ]{2} {\therefore  a \in  B} \by{$E\bigcap$}{}
+        \end{fitchproof}
         \\
         \hline
-        \begin{NiceTabular}{ll}
-            $a \in B  $                    &            \\
-            $B \in A  $                    &            \\
-            \hline
-            $\therefore  a \in \bigcup A $ & $I\bigcup$ \\
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ] {2} {a \in B  }
+            \hypo [ ] {2} {B \in A  }
+            \have  [ ]{2} {\therefore  a \in \bigcup A } \by{$I\bigcup$}{}
+        \end{fitchproof}
          &
-        \begin{NiceTabular}{ll}
-            $ a \in \bigcup A  $      &            \\
-            $a \in X \wedge X \in A $ &            \\
-            $\vdots$                  &            \\
-            $\theta $                 &            \\
-            $\therefore \theta $      & $E\bigcup$ \\
-            \CodeAfter \tikz \draw [<-,shorten < = 2pt] (2-1) r-lr (5-|3);
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \have [ ] {1} { a \in \bigcup A  }
+            \open
+            \have [ ] {1} {a \in X \wedge X \in A }
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {\theta}
+            \close
+            \have  [ ]{2} {\therefore\theta } \by{$E\bigcup$}{}
+        \end{fitchproof}
         \\
         \hline
     \end{tabular}
@@ -1908,14 +1895,45 @@ handy later.
     \[\forall x( x \in A^c \leftrightarrow  x \notin A ) \]
 \end{definition}
 
-\begin{definition}
-    \textbf{Universal set}(we denote it as V.it simply means the set of all sets)
-    \[   V:=\{x \mid \top \} \]
+\begin{theorem}
+    \textbf{$(schema)$} $(I- , E- )$
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+        \hline
+        \begin{fitchproof}[arrayenv=tabular]
+            \open
+            \have [ ] {1} {a \in  A }
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {\bot}
+            \close
+            \have  [ ]{2} {\therefore a \notin  A} \by{$I()^c$}{}
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \open
+            \have [ ] {1} {a \notin  A }
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {\bot}
+            \close
+            \have  [ ]{2} {\therefore a \in  A} \by{$E()^c$}{}
+        \end{fitchproof}
+        \\
+        \hline
+    \end{tabular}
+    \\
+    \\
+    \\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\begin{observation}
+    \textbf{}we can show Universal set with... 
+    \[   V=\{x \mid \top \} \]
     therefore.
     \[\forall x( x \in V \leftrightarrow  \top ) \]
     therefore.
     \[\forall x( x \in V ) \]
-\end{definition}
+\end{observation}
 
 \begin{definition}
     \textbf{Subtraction}
@@ -1929,18 +1947,16 @@ handy later.
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
         \hline
-        \begin{NiceTabular}{ll}
-            $a \in A $                  &      \\
-            $a \notin B $               &      \\
-            \hline
-            $\therefore  a \in  A - B $ & $I-$ \\
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ] {2} {a \in A  }
+            \hypo [ ] {2} {a \notin B  }
+            \have  [ ]{2} {\therefore  a \in A - B } \by{$I-$}{}
+        \end{fitchproof}
          &
-        \begin{NiceTabular}{ll}
-            $ a \in  A - B $                                               &      \\
-            \hline
-            $\therefore  a \in  A \hspace{.5cm}  \therefore  a \notin  B $ & $E-$ \\
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ] {2} {a \in  A - B  }
+            \have  [ ]{2} {\therefore  a \in  A \hspace{.5cm}  \therefore  a \notin  B  } \by{$E-$}{}
+        \end{fitchproof}
         \\
         \hline
     \end{tabular}
@@ -1969,17 +1985,20 @@ handy later.
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
         \hline
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ] {2} {A \subseteq B }
+            \have  [ ]{2} {\therefore   A \in  P(B) } \by{$IP$}{}
+        \end{fitchproof}
         \begin{NiceTabular}{ll}
             $A \subseteq B $           &      \\
             \hline
             $\therefore  A \in  P(B) $ & $IP$ \\
         \end{NiceTabular}
          &
-        \begin{NiceTabular}{ll}
-            $A \in  P(B)  $              &      \\
-            \hline
-            $\therefore  A \subseteq B $ & $EP$ \\
-        \end{NiceTabular}
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ] {2} {A \in  P(B) }
+            \have  [ ]{2} {\therefore  A \subseteq B } \by{$EP$}{}
+        \end{fitchproof}
         \\
         \hline
     \end{tabular}
@@ -1989,63 +2008,6 @@ handy later.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-% \begin{sdeduce}
-% \hyp[1] {P \rightarrow (Q \lor R)} & Assumption  \\
-% \sub[1] {Q \rightarrow S}  & Assumption \\
-% \sub[1] {R \rightarrow T}  & Assumption \\
-% \hyp[2] {P}              & Assumption \\
-% \sub[2] {Q \lor R}      & 1,4 $\rightarrow$E \\
-
-% \hyp[3] {Q}              & Assumption \\
-% \sub[3] {S}              & 2,6 $\rightarrow$E \\
-% \sub[3] {S \lor T}       & 7 $\lor$I \\
-
-% \hyp[3] {R}              & Assumption \\
-% \sub[3] {T}             & 3,9 $\rightarrow$E \\
-% \sub[3] {S \lor T}      & 10 $\lor$I \\
-
-% \sub[2] {S \lor T}      & 5,6-8,9-11 $\lor$E \\
-
-% \sub[1] {P \rightarrow (S \lor T)} & 4-12 $\rightarrow$I \\
-
-% \end{sdeduce}
-
-\begin{fitchproof}[arrayenv=tabular]
-    \have {1} {P\vee Q}
-    \have {2} {\neg Q}
-    \open
-    \have {3} {P}
-    \have {4} {P} \r{3}
-    \close
-    \open
-    \have {aa} {Q}
-    \have {6} {\neg Q} \r{2}
-\end{fitchproof}
-Derivations can be interrupted and
-resumed at any point.
-\begin{fitchproof*}[arrayenv=tabular]
-    \have {7} {\bot} \ne{aa,6}
-    \have {8} {P} \be{7}
-    \close
-    \have {9} {P} \oe{1,3-4,aa-8}
-\end{fitchproof*}
-
-$
-    \begin{nd}[outerline=false]
-        \hypo {1} {P\vee Q}
-        \hypo {2} {\neg Q}
-        \open
-        \hypo {3} {P}
-        \have {4} {P} \r{3}
-        \close
-        \open
-        \hypo {aa} {Q}
-        \have {6} {\neg Q} \r{2}
-        \have {7} {\bot} \ne{aa,6}
-        \have {8} {P} \be{7}
-        \close
-        \have {9} {P} \oe{1,3-4,aa-8}
-    \end{nd}$
 
 \end{document}
 
