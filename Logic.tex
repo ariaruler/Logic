@@ -1,4 +1,4 @@
-\documentclass[10pt]{book}
+\documentclass[10pt,a4paper]{book}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{enumitem}
@@ -1896,7 +1896,7 @@ handy later.
 \end{definition}
 
 \begin{theorem}
-    \textbf{$(schema)$} $(I- , E- )$
+    \textbf{$(schema)$} $(I()^c, E()^c)$
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
         \hline
@@ -1989,11 +1989,6 @@ handy later.
             \hypo [ ] {2} {A \subseteq B }
             \have  [ ]{2} {\therefore   A \in  P(B) } \by{$IP$}{}
         \end{fitchproof}
-        \begin{NiceTabular}{ll}
-            $A \subseteq B $           &      \\
-            \hline
-            $\therefore  A \in  P(B) $ & $IP$ \\
-        \end{NiceTabular}
          &
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {A \in  P(B) }
@@ -2008,6 +2003,104 @@ handy later.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
+\chapter{Relations and functions}
+
+\section{cartesian product}
+
+\begin{definition}
+    \textbf{Ordered pair}
+		\[ (x,y) := \{ \{x\},\{x,y\} \}. \]
+\end{definition}
+
+\begin{lemma}
+    \textbf{} $/ \therefore  (x_0,y_0) = (x_1,y_1) \leftrightarrow ((x_0=x_1) \wedge (y_0=y_1))$
+    \\
+    \\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+
+\begin{definition}
+    \textbf{Cartesian product}
+					\[ A \times B := \{ (x,y)|x \in A \land y\in B \}. \]
+\end{definition}
+
+\begin{example}
+    if
+		$ A= \{ a,b,c \}$
+		and
+		$ B= \{ 0,1,2,3 \} $
+        then
+        \[ A \times B = \{ (a,0),(a,1),(a,2),(a,3),(b,0),(b,1),(b,2),(b,3),(c,0),(c,1),(c,2),(c,3) \} \]
+		
+		%\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+		\begin{center}
+		\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+			%uncomment if require: \path (0,236); %set diagram left start at 0, and has height of 236
+			
+			%Shape: Grid [id:dp8962445968853252] 
+			\draw  [draw opacity=0] (238,106.71) -- (350,106.71) -- (350,197.71) -- (238,197.71) -- cycle ; \draw   (238,106.71) -- (238,197.71)(268,106.71) -- (268,197.71)(298,106.71) -- (298,197.71)(328,106.71) -- (328,197.71) ; \draw   (238,106.71) -- (350,106.71)(238,136.71) -- (350,136.71)(238,166.71) -- (350,166.71)(238,196.71) -- (350,196.71) ; \draw    ;
+			%Straight Lines [id:da7823525488347933] 
+			\draw    (238,106.71) -- (238,53.71) ;
+			%Straight Lines [id:da16160951335480722] 
+			\draw    (346,196.71) -- (415,196.71) ;
+			%Shape: Circle [id:dp156078133071738] 
+			\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (295.5,106.71) .. controls (295.5,105.33) and (296.62,104.21) .. (298,104.21) .. controls (299.38,104.21) and (300.5,105.33) .. (300.5,106.71) .. controls (300.5,108.09) and (299.38,109.21) .. (298,109.21) .. controls (296.62,109.21) and (295.5,108.09) .. (295.5,106.71) -- cycle ;
+			%Shape: Circle [id:dp014119138766861328] 
+			\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (265.5,106.71) .. controls (265.5,105.33) and (266.62,104.21) .. (268,104.21) .. controls (269.38,104.21) and (270.5,105.33) .. (270.5,106.71) .. controls (270.5,108.09) and (269.38,109.21) .. (268,109.21) .. controls (266.62,109.21) and (265.5,108.09) .. (265.5,106.71) -- cycle ;
+			%Shape: Circle [id:dp9335360358083578] 
+			\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (325.5,136.71) .. controls (325.5,135.33) and (326.62,134.21) .. (328,134.21) .. controls (329.38,134.21) and (330.5,135.33) .. (330.5,136.71) .. controls (330.5,138.09) and (329.38,139.21) .. (328,139.21) .. controls (326.62,139.21) and (325.5,138.09) .. (325.5,136.71) -- cycle ;
+			%Shape: Circle [id:dp3324405345176744] 
+			\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (295.5,136.71) .. controls (295.5,135.33) and (296.62,134.21) .. (298,134.21) .. controls (299.38,134.21) and (300.5,135.33) .. (300.5,136.71) .. controls (300.5,138.09) and (299.38,139.21) .. (298,139.21) .. controls (296.62,139.21) and (295.5,138.09) .. (295.5,136.71) -- cycle ;
+			%Shape: Circle [id:dp05976349076523668] 
+			\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (265.5,136.71) .. controls (265.5,135.33) and (266.62,134.21) .. (268,134.21) .. controls (269.38,134.21) and (270.5,135.33) .. (270.5,136.71) .. controls (270.5,138.09) and (269.38,139.21) .. (268,139.21) .. controls (266.62,139.21) and (265.5,138.09) .. (265.5,136.71) -- cycle ;
+			%Shape: Circle [id:dp1185510356053987] 
+			\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (325.5,166.71) .. controls (325.5,165.33) and (326.62,164.21) .. (328,164.21) .. controls (329.38,164.21) and (330.5,165.33) .. (330.5,166.71) .. controls (330.5,168.09) and (329.38,169.21) .. (328,169.21) .. controls (326.62,169.21) and (325.5,168.09) .. (325.5,166.71) -- cycle ;
+			%Shape: Circle [id:dp73861862126658] 
+			\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (295.5,166.71) .. controls (295.5,165.33) and (296.62,164.21) .. (298,164.21) .. controls (299.38,164.21) and (300.5,165.33) .. (300.5,166.71) .. controls (300.5,168.09) and (299.38,169.21) .. (298,169.21) .. controls (296.62,169.21) and (295.5,168.09) .. (295.5,166.71) -- cycle ;
+			%Shape: Circle [id:dp45750223430189485] 
+			\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (265.5,166.71) .. controls (265.5,165.33) and (266.62,164.21) .. (268,164.21) .. controls (269.38,164.21) and (270.5,165.33) .. (270.5,166.71) .. controls (270.5,168.09) and (269.38,169.21) .. (268,169.21) .. controls (266.62,169.21) and (265.5,168.09) .. (265.5,166.71) -- cycle ;
+			%Shape: Circle [id:dp12188610146223189] 
+			\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (325.5,106.71) .. controls (325.5,105.33) and (326.62,104.21) .. (328,104.21) .. controls (329.38,104.21) and (330.5,105.33) .. (330.5,106.71) .. controls (330.5,108.09) and (329.38,109.21) .. (328,109.21) .. controls (326.62,109.21) and (325.5,108.09) .. (325.5,106.71) -- cycle ;
+			%Shape: Circle [id:dp7752204991191636] 
+			\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (265.5,196.71) .. controls (265.5,195.33) and (266.62,194.21) .. (268,194.21) .. controls (269.38,194.21) and (270.5,195.33) .. (270.5,196.71) .. controls (270.5,198.09) and (269.38,199.21) .. (268,199.21) .. controls (266.62,199.21) and (265.5,198.09) .. (265.5,196.71) -- cycle ;
+			%Shape: Circle [id:dp930145804031062] 
+			\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (295.5,196.71) .. controls (295.5,195.33) and (296.62,194.21) .. (298,194.21) .. controls (299.38,194.21) and (300.5,195.33) .. (300.5,196.71) .. controls (300.5,198.09) and (299.38,199.21) .. (298,199.21) .. controls (296.62,199.21) and (295.5,198.09) .. (295.5,196.71) -- cycle ;
+			%Shape: Circle [id:dp7628268550179333] 
+			\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (325.5,196.71) .. controls (325.5,195.33) and (326.62,194.21) .. (328,194.21) .. controls (329.38,194.21) and (330.5,195.33) .. (330.5,196.71) .. controls (330.5,198.09) and (329.38,199.21) .. (328,199.21) .. controls (326.62,199.21) and (325.5,198.09) .. (325.5,196.71) -- cycle ;
+			
+			% Text Node
+			\draw (219,190) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle 0$};
+			% Text Node
+			\draw (219,159) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle 1$};
+			% Text Node
+			\draw (220,130) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle 2$};
+			% Text Node
+			\draw (220,99) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle 3$};
+			% Text Node
+			\draw (262,206) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle a$};
+			% Text Node
+			\draw (293,203) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle b$};
+			% Text Node
+			\draw (322,206) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle c$};
+			
+			
+		\end{tikzpicture}	
+	\end{center}
+
+    \end{example}
+
+\begin{exercise}
+    \textbf{} for sets A, B, C, prove.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item  $/\therefore A \times (B \cap C) = (A \times B)\cap (A \times C)$
+        \item  $/\therefore A \times (B \cup C) = (A \times B) \cup (A \times C)$
+        \item  $ /\therefore A \times (B-C) = (A \times B) - (A \times C)$
+    \end{enumerate}
+\end{exercise}
+
+\section{Relations}
 
 \end{document}
 
