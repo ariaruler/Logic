@@ -16,3 +16,5 @@
 \contentsline {chapter}{\numberline {5}Relations and functions}{31}{chapter.5}%
 \contentsline {section}{\numberline {5.1}cartesian product}{31}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Relations}{32}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Functions}{33}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Family of sets}{36}{section.5.4}%

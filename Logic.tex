@@ -22,8 +22,8 @@
 \usepackage{emptypage}
 
 
-\usepackage[outerline=false]{fitch}
 
+\usepackage[outerline=false]{fitch}
 
 
 
@@ -840,7 +840,7 @@ formula(WWF).
                   ,\land ,\lor$)
     \end{enumerate}
 
-    for example $(A_0 \to A_1 ,\neg A_3)$ \\ we call WWF easily formula and also we
+    for example $(A_0 \to A_1 ,\neg A_3)$ \\ we easily call WWF ``formula''  and also we
     denote WWF with $A ,B ,C ,...$.
 \end{definition}
 
@@ -851,10 +851,10 @@ say formula is an atomic formula or combination of them.
     \textbf{open formula} formulas that variables used in one of its atomic formulas.
 \end{definition}
 
-the formulas that are not open call \textbf{"closed formulas"} or
-\textbf{"sentece"}. Now question is "are very closed formulas proposition?"
+the formulas that are not open call \textbf{``closed formulas''} or
+\textbf{``sentence''}. Now question is ``are very closed formulas proposition?''
 (propositions in classic logic are sentences that are true or false?) the
-answer is unfortunately \textbf{No}
+answer is unfortunately \textbf{No}.
 
 %
 \begin{definition}
@@ -869,7 +869,7 @@ answer is unfortunately \textbf{No}
     \textbf{proposition} every WWF formula that its atomes are all atomic
     propositions.
     \\
-    we denote propositions with $p ,q ,r ,...$ .
+    we denote propositions with $p ,q ,r ,...$.
 \end{definition}
 
 %
@@ -890,7 +890,7 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
 \begin{definition}
     \textbf{open proposition} assume formula of a proposition but Substitute some
     obj and replace them with variables.we call it open proposition and denote it with
-    capital letter $(P,Q,R)$ showes other types of \textbf{predicates} and variables like$(Px ,Q(x)y ,..)$
+    capital letter $(P,Q,R)$ showes other types of \textbf{predicates} and variables like$(P(x) ,Q(x,y) ,..)$
 \end{definition}
 
 \section{Rules of propositions.}
@@ -1389,10 +1389,10 @@ as you can see $\forall x \Phi (x) $ and $\exists x \Phi (x) $ are sentences.
         \item   $ \forall x P(x) \vee Q \therefore /\therefore \forall x(P(x) \vee Q) $
         \item   $ \exists x P(x) \wedge Q \therefore /\therefore \exists x(P(x) \wedge Q) $
         \item   $ \exists x P(x) \vee Q \therefore /\therefore \exists x(P(x) \vee Q) $
-        \item   $(Q \rightarrow \forall x P(x)) \therefore /\therefore \forall x(Q \rightarrow P(x)) $
-        \item   $(Q \rightarrow \exists x P(x)) \therefore /\therefore \exists x(Q \rightarrow P(x)) $
-        \item   $(\forall x P(x) \rightarrow Q) \therefore /\therefore \exists x(P(x) \rightarrow Q) $
-        \item   $(\exists x P(x) \rightarrow Q) \therefore /\therefore \forall x(P(x) \rightarrow Q) $
+        \item   $Q \rightarrow \forall x P(x) \therefore /\therefore \forall x(Q \rightarrow P(x)) $
+        \item   $Q \rightarrow \exists x P(x) \therefore /\therefore \exists x(Q \rightarrow P(x)) $
+        \item   $\forall x P(x) \rightarrow Q \therefore /\therefore \exists x(P(x) \rightarrow Q) $
+        \item   $\exists x P(x) \rightarrow Q \therefore /\therefore \forall x(P(x) \rightarrow Q) $
         \item   $ \exists x \neg P(x) \therefore /\therefore \neg \forall x P(x)  $
         \item   $ \forall x \neg P(x) \therefore /\therefore \neg \exists x P(x) $
 
@@ -1403,13 +1403,13 @@ as you can see $\forall x \Phi (x) $ and $\exists x \Phi (x) $ are sentences.
     \textbf{}for conatants P,Q,R prove.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item   $ \exists x(P(x) \wedge \exists y Q(y) \rightarrow \forall z R(z)) /\therefore \forall y \forall z(\forall x P(x) \wedge Q(y) \rightarrow R(z)) $
-        \item   $ \forall x \exists y(P(x) \wedge Q(y) \rightarrow \forall z R(z)) /\therefore \forall z(\exists x P(x) \wedge \forall y Q(y) \rightarrow R(z)) $
-        \item   $(\forall x P(x) \rightarrow \exists y Q(y)) /\therefore \exists x \exists y(P(x) \rightarrow Q(y)) $
-        \item   $ \forall x \forall z \exists y \exists w(P(y,z) \vee Q(z) \rightarrow R(x,w)) /\therefore(\exists z \forall y P(y,z) \vee \exists z Q(z)) \rightarrow \forall x \exists w R(x,w) $
-        \item   $ \exists x P(x) \vee \exists x(Q(x) \wedge R(x)) /\therefore \exists x(P(x) \vee Q(x)) \wedge \exists x(P(x) \vee R(x)) $
-        \item   $\exists x \exists z \forall y(P(x,y) \rightarrow Q(z) \vee R(x,y)) /\therefore \forall x \exists y P(x,y) \rightarrow(\exists z Q(z) \vee \exists x \exists z R(x,y)) $
-        \item   $ \forall x \exists y(\exists z P(x,y,z) \wedge Q(x,y)) \vee \forall x \exists y \exists z(P(x,y,z) \wedge R(x,y)) /\therefore \forall x \exists y \exists z(P(x,y,z) \wedge(Q(x,y) \vee R(x,y))) $
+        \item   $ \exists x \Big(P(x) \wedge \exists y Q(y) \rightarrow \forall z R(z)\Big) /\therefore \forall y \forall z \Big(\forall x P(x) \wedge Q(y) \rightarrow R(z)\Big) $
+        \item   $ \forall x \exists y \Big(P(x) \wedge Q(y) \rightarrow \forall z R(z)\Big) /\therefore \forall z \Big(\exists x P(x) \wedge \forall y Q(y) \rightarrow R(z)\Big) $
+        \item   $\forall x P(x) \rightarrow \exists y Q(y) /\therefore \exists x \exists y \Big(P(x) \rightarrow Q(y)\Big) $
+        \item   $ \forall x \forall z \exists y \exists w \Big(P(y,z) \vee Q(z) \rightarrow R(x,w)\Big) /\therefore \Big(\exists z \forall y P(y,z) \vee \exists z Q(z)\Big) \rightarrow \forall x \exists w R(x,w) $
+        \item   $ \exists x P(x) \vee \exists x \Big(Q(x) \wedge R(x) \Big) /\therefore \exists x \Big(P(x) \vee Q(x) \Big) \wedge \exists x \Big(P(x) \vee R(x)\Big) $
+        \item   $\exists x \exists z \forall y \Big(P(x,y) \rightarrow Q(z) \vee R(x,y) \Big) /\therefore \forall x \exists y P(x,y) \rightarrow \Big(\exists z Q(z) \vee \exists x \exists z R(x,y)\Big) $
+        \item   $ \forall x \exists y \Big(\exists z P(x,y,z) \wedge Q(x,y)\Big) \vee \forall x \exists y \exists z \Big(P(x,y,z) \wedge R(x,y)\Big) /\therefore \forall x \exists y \exists z \Big(P(x,y,z) \wedge(Q(x,y) \vee R(x,y))\Big) $
     \end{enumerate}
 \end{exercise}
 
@@ -1503,7 +1503,6 @@ with rules and axioms.
     \\
     \[  \forall X,Y (\forall x ( x \in X \leftrightarrow x \in Y ) \rightarrow X = Y )  \]
 \end{axiom}
-
 
 so we can rewrite axiom of Extensionality like this.
 
@@ -1646,10 +1645,6 @@ handy later.
     \end{fitchproof}
 \end{lemma}
 
-
-
-
-
 \begin{theorem}
     \textbf{$(schema)$} $(I\emptyset\not= , E \emptyset \not= ,I\emptyset= , E\emptyset=)$
 
@@ -1730,8 +1725,6 @@ handy later.
 
     \end{tabular}
 \end{theorem}
-
-
 
 \begin{definition}
     \textbf{pairing set}
@@ -1836,7 +1829,7 @@ handy later.
     Intersection:
     \[  \bigcap A:=\{x \mid \forall X (X \in A \rightarrow x \in X) \} \]
     therefore.
-    \[\forall x( x \in \bigcap A  \leftrightarrow  (\forall X (X \in A \rightarrow x \in X))) \]
+    \[\forall x \Big( x \in \bigcap A  \leftrightarrow  \forall X (X \in A \rightarrow x \in X)\Big) \]
     Union:
     \[  \bigcup A:=\{x \mid \exists X (X \in A \wedge x \in X) \} \]
     therefore.
@@ -1927,7 +1920,7 @@ handy later.
 \end{theorem}
 
 \begin{observation}
-    \textbf{}we can show Universal set with... 
+    \textbf{}we can show Universal set with...
     \[   V=\{x \mid \top \} \]
     therefore.
     \[\forall x( x \in V \leftrightarrow  \top ) \]
@@ -1939,7 +1932,7 @@ handy later.
     \textbf{Subtraction}
     \[ A - B:=\{x \mid x \in A \wedge x \notin B \} \]
     therefore.
-    \[\forall x( x \in A - B  \leftrightarrow  (x \in A \wedge x \notin B )) \]
+    \[\forall x \Big( x \in A - B  \leftrightarrow  (x \in A \wedge x \notin B ) \Big) \]
 \end{definition}
 
 \begin{theorem}
@@ -1977,7 +1970,7 @@ handy later.
     \textbf{Powerset}
     \[ P(A):=\{X \mid X \subseteq A \} \]
     therefore.
-    \[\forall X( X \in P(A) \leftrightarrow  (X \subseteq A )) \]
+    \[\forall X \Big( X \in P(A) \leftrightarrow  (X \subseteq A )\Big) \]
 \end{definition}
 
 \begin{theorem}
@@ -2009,7 +2002,7 @@ handy later.
 
 \begin{definition}
     \textbf{Ordered pair}
-		\[ (x,y) := \{ \{x\},\{x,y\} \}. \]
+    \[ (x,y) := \{ \{x\},\{x,y\} \}. \]
 \end{definition}
 
 \begin{lemma}
@@ -2019,76 +2012,76 @@ handy later.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-
 \begin{definition}
     \textbf{Cartesian product}
-					\[ A \times B := \{ (x,y)|x \in A \land y\in B \}. \]
+    \[ A \times B := \{ u \mid \exists x,y \Big((x,y)=u \land x \in A \land y\in B \Big)\}. \]
+    or i.e.
+    \[ A \times B := \{ (x,y) \mid x \in A \land y\in B \}. \]
 \end{definition}
 
 \begin{example}
     if
-		$ A= \{ a,b,c \}$
-		and
-		$ B= \{ 0,1,2,3 \} $
-        then
-        \[ A \times B = \{ (a,0),(a,1),(a,2),(a,3),(b,0),(b,1),(b,2),(b,3),(c,0),(c,1),(c,2),(c,3) \} \]
-		
-		%\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-		\begin{center}
-		\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-			%uncomment if require: \path (0,236); %set diagram left start at 0, and has height of 236
-			
-			%Shape: Grid [id:dp8962445968853252] 
-			\draw  [draw opacity=0] (238,106.71) -- (350,106.71) -- (350,197.71) -- (238,197.71) -- cycle ; \draw   (238,106.71) -- (238,197.71)(268,106.71) -- (268,197.71)(298,106.71) -- (298,197.71)(328,106.71) -- (328,197.71) ; \draw   (238,106.71) -- (350,106.71)(238,136.71) -- (350,136.71)(238,166.71) -- (350,166.71)(238,196.71) -- (350,196.71) ; \draw    ;
-			%Straight Lines [id:da7823525488347933] 
-			\draw    (238,106.71) -- (238,53.71) ;
-			%Straight Lines [id:da16160951335480722] 
-			\draw    (346,196.71) -- (415,196.71) ;
-			%Shape: Circle [id:dp156078133071738] 
-			\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (295.5,106.71) .. controls (295.5,105.33) and (296.62,104.21) .. (298,104.21) .. controls (299.38,104.21) and (300.5,105.33) .. (300.5,106.71) .. controls (300.5,108.09) and (299.38,109.21) .. (298,109.21) .. controls (296.62,109.21) and (295.5,108.09) .. (295.5,106.71) -- cycle ;
-			%Shape: Circle [id:dp014119138766861328] 
-			\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (265.5,106.71) .. controls (265.5,105.33) and (266.62,104.21) .. (268,104.21) .. controls (269.38,104.21) and (270.5,105.33) .. (270.5,106.71) .. controls (270.5,108.09) and (269.38,109.21) .. (268,109.21) .. controls (266.62,109.21) and (265.5,108.09) .. (265.5,106.71) -- cycle ;
-			%Shape: Circle [id:dp9335360358083578] 
-			\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (325.5,136.71) .. controls (325.5,135.33) and (326.62,134.21) .. (328,134.21) .. controls (329.38,134.21) and (330.5,135.33) .. (330.5,136.71) .. controls (330.5,138.09) and (329.38,139.21) .. (328,139.21) .. controls (326.62,139.21) and (325.5,138.09) .. (325.5,136.71) -- cycle ;
-			%Shape: Circle [id:dp3324405345176744] 
-			\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (295.5,136.71) .. controls (295.5,135.33) and (296.62,134.21) .. (298,134.21) .. controls (299.38,134.21) and (300.5,135.33) .. (300.5,136.71) .. controls (300.5,138.09) and (299.38,139.21) .. (298,139.21) .. controls (296.62,139.21) and (295.5,138.09) .. (295.5,136.71) -- cycle ;
-			%Shape: Circle [id:dp05976349076523668] 
-			\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (265.5,136.71) .. controls (265.5,135.33) and (266.62,134.21) .. (268,134.21) .. controls (269.38,134.21) and (270.5,135.33) .. (270.5,136.71) .. controls (270.5,138.09) and (269.38,139.21) .. (268,139.21) .. controls (266.62,139.21) and (265.5,138.09) .. (265.5,136.71) -- cycle ;
-			%Shape: Circle [id:dp1185510356053987] 
-			\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (325.5,166.71) .. controls (325.5,165.33) and (326.62,164.21) .. (328,164.21) .. controls (329.38,164.21) and (330.5,165.33) .. (330.5,166.71) .. controls (330.5,168.09) and (329.38,169.21) .. (328,169.21) .. controls (326.62,169.21) and (325.5,168.09) .. (325.5,166.71) -- cycle ;
-			%Shape: Circle [id:dp73861862126658] 
-			\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (295.5,166.71) .. controls (295.5,165.33) and (296.62,164.21) .. (298,164.21) .. controls (299.38,164.21) and (300.5,165.33) .. (300.5,166.71) .. controls (300.5,168.09) and (299.38,169.21) .. (298,169.21) .. controls (296.62,169.21) and (295.5,168.09) .. (295.5,166.71) -- cycle ;
-			%Shape: Circle [id:dp45750223430189485] 
-			\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (265.5,166.71) .. controls (265.5,165.33) and (266.62,164.21) .. (268,164.21) .. controls (269.38,164.21) and (270.5,165.33) .. (270.5,166.71) .. controls (270.5,168.09) and (269.38,169.21) .. (268,169.21) .. controls (266.62,169.21) and (265.5,168.09) .. (265.5,166.71) -- cycle ;
-			%Shape: Circle [id:dp12188610146223189] 
-			\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (325.5,106.71) .. controls (325.5,105.33) and (326.62,104.21) .. (328,104.21) .. controls (329.38,104.21) and (330.5,105.33) .. (330.5,106.71) .. controls (330.5,108.09) and (329.38,109.21) .. (328,109.21) .. controls (326.62,109.21) and (325.5,108.09) .. (325.5,106.71) -- cycle ;
-			%Shape: Circle [id:dp7752204991191636] 
-			\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (265.5,196.71) .. controls (265.5,195.33) and (266.62,194.21) .. (268,194.21) .. controls (269.38,194.21) and (270.5,195.33) .. (270.5,196.71) .. controls (270.5,198.09) and (269.38,199.21) .. (268,199.21) .. controls (266.62,199.21) and (265.5,198.09) .. (265.5,196.71) -- cycle ;
-			%Shape: Circle [id:dp930145804031062] 
-			\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (295.5,196.71) .. controls (295.5,195.33) and (296.62,194.21) .. (298,194.21) .. controls (299.38,194.21) and (300.5,195.33) .. (300.5,196.71) .. controls (300.5,198.09) and (299.38,199.21) .. (298,199.21) .. controls (296.62,199.21) and (295.5,198.09) .. (295.5,196.71) -- cycle ;
-			%Shape: Circle [id:dp7628268550179333] 
-			\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (325.5,196.71) .. controls (325.5,195.33) and (326.62,194.21) .. (328,194.21) .. controls (329.38,194.21) and (330.5,195.33) .. (330.5,196.71) .. controls (330.5,198.09) and (329.38,199.21) .. (328,199.21) .. controls (326.62,199.21) and (325.5,198.09) .. (325.5,196.71) -- cycle ;
-			
-			% Text Node
-			\draw (219,190) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle 0$};
-			% Text Node
-			\draw (219,159) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle 1$};
-			% Text Node
-			\draw (220,130) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle 2$};
-			% Text Node
-			\draw (220,99) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle 3$};
-			% Text Node
-			\draw (262,206) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle a$};
-			% Text Node
-			\draw (293,203) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle b$};
-			% Text Node
-			\draw (322,206) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle c$};
-			
-			
-		\end{tikzpicture}	
-	\end{center}
+    $ A= \{ a,b,c \}$
+    and
+    $ B= \{ 0,1,2,3 \} $
+    then
+    \[ A \times B = \{ (a,0),(a,1),(a,2),(a,3),(b,0),(b,1),(b,2),(b,3),(c,0),(c,1),(c,2),(c,3) \} \]
 
-    \end{example}
+    %\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+    \begin{center}
+        \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+            %uncomment if require: \path (0,236); %set diagram left start at 0, and has height of 236
+
+            %Shape: Grid [id:dp8962445968853252] 
+            \draw  [draw opacity=0] (238,106.71) -- (350,106.71) -- (350,197.71) -- (238,197.71) -- cycle ; \draw   (238,106.71) -- (238,197.71)(268,106.71) -- (268,197.71)(298,106.71) -- (298,197.71)(328,106.71) -- (328,197.71) ; \draw   (238,106.71) -- (350,106.71)(238,136.71) -- (350,136.71)(238,166.71) -- (350,166.71)(238,196.71) -- (350,196.71) ; \draw    ;
+            %Straight Lines [id:da7823525488347933] 
+            \draw    (238,106.71) -- (238,53.71) ;
+            %Straight Lines [id:da16160951335480722] 
+            \draw    (346,196.71) -- (415,196.71) ;
+            %Shape: Circle [id:dp156078133071738] 
+            \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (295.5,106.71) .. controls (295.5,105.33) and (296.62,104.21) .. (298,104.21) .. controls (299.38,104.21) and (300.5,105.33) .. (300.5,106.71) .. controls (300.5,108.09) and (299.38,109.21) .. (298,109.21) .. controls (296.62,109.21) and (295.5,108.09) .. (295.5,106.71) -- cycle ;
+            %Shape: Circle [id:dp014119138766861328] 
+            \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (265.5,106.71) .. controls (265.5,105.33) and (266.62,104.21) .. (268,104.21) .. controls (269.38,104.21) and (270.5,105.33) .. (270.5,106.71) .. controls (270.5,108.09) and (269.38,109.21) .. (268,109.21) .. controls (266.62,109.21) and (265.5,108.09) .. (265.5,106.71) -- cycle ;
+            %Shape: Circle [id:dp9335360358083578] 
+            \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (325.5,136.71) .. controls (325.5,135.33) and (326.62,134.21) .. (328,134.21) .. controls (329.38,134.21) and (330.5,135.33) .. (330.5,136.71) .. controls (330.5,138.09) and (329.38,139.21) .. (328,139.21) .. controls (326.62,139.21) and (325.5,138.09) .. (325.5,136.71) -- cycle ;
+            %Shape: Circle [id:dp3324405345176744] 
+            \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (295.5,136.71) .. controls (295.5,135.33) and (296.62,134.21) .. (298,134.21) .. controls (299.38,134.21) and (300.5,135.33) .. (300.5,136.71) .. controls (300.5,138.09) and (299.38,139.21) .. (298,139.21) .. controls (296.62,139.21) and (295.5,138.09) .. (295.5,136.71) -- cycle ;
+            %Shape: Circle [id:dp05976349076523668] 
+            \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (265.5,136.71) .. controls (265.5,135.33) and (266.62,134.21) .. (268,134.21) .. controls (269.38,134.21) and (270.5,135.33) .. (270.5,136.71) .. controls (270.5,138.09) and (269.38,139.21) .. (268,139.21) .. controls (266.62,139.21) and (265.5,138.09) .. (265.5,136.71) -- cycle ;
+            %Shape: Circle [id:dp1185510356053987] 
+            \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (325.5,166.71) .. controls (325.5,165.33) and (326.62,164.21) .. (328,164.21) .. controls (329.38,164.21) and (330.5,165.33) .. (330.5,166.71) .. controls (330.5,168.09) and (329.38,169.21) .. (328,169.21) .. controls (326.62,169.21) and (325.5,168.09) .. (325.5,166.71) -- cycle ;
+            %Shape: Circle [id:dp73861862126658] 
+            \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (295.5,166.71) .. controls (295.5,165.33) and (296.62,164.21) .. (298,164.21) .. controls (299.38,164.21) and (300.5,165.33) .. (300.5,166.71) .. controls (300.5,168.09) and (299.38,169.21) .. (298,169.21) .. controls (296.62,169.21) and (295.5,168.09) .. (295.5,166.71) -- cycle ;
+            %Shape: Circle [id:dp45750223430189485] 
+            \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (265.5,166.71) .. controls (265.5,165.33) and (266.62,164.21) .. (268,164.21) .. controls (269.38,164.21) and (270.5,165.33) .. (270.5,166.71) .. controls (270.5,168.09) and (269.38,169.21) .. (268,169.21) .. controls (266.62,169.21) and (265.5,168.09) .. (265.5,166.71) -- cycle ;
+            %Shape: Circle [id:dp12188610146223189] 
+            \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (325.5,106.71) .. controls (325.5,105.33) and (326.62,104.21) .. (328,104.21) .. controls (329.38,104.21) and (330.5,105.33) .. (330.5,106.71) .. controls (330.5,108.09) and (329.38,109.21) .. (328,109.21) .. controls (326.62,109.21) and (325.5,108.09) .. (325.5,106.71) -- cycle ;
+            %Shape: Circle [id:dp7752204991191636] 
+            \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (265.5,196.71) .. controls (265.5,195.33) and (266.62,194.21) .. (268,194.21) .. controls (269.38,194.21) and (270.5,195.33) .. (270.5,196.71) .. controls (270.5,198.09) and (269.38,199.21) .. (268,199.21) .. controls (266.62,199.21) and (265.5,198.09) .. (265.5,196.71) -- cycle ;
+            %Shape: Circle [id:dp930145804031062] 
+            \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (295.5,196.71) .. controls (295.5,195.33) and (296.62,194.21) .. (298,194.21) .. controls (299.38,194.21) and (300.5,195.33) .. (300.5,196.71) .. controls (300.5,198.09) and (299.38,199.21) .. (298,199.21) .. controls (296.62,199.21) and (295.5,198.09) .. (295.5,196.71) -- cycle ;
+            %Shape: Circle [id:dp7628268550179333] 
+            \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (325.5,196.71) .. controls (325.5,195.33) and (326.62,194.21) .. (328,194.21) .. controls (329.38,194.21) and (330.5,195.33) .. (330.5,196.71) .. controls (330.5,198.09) and (329.38,199.21) .. (328,199.21) .. controls (326.62,199.21) and (325.5,198.09) .. (325.5,196.71) -- cycle ;
+
+            % Text Node
+            \draw (219,190) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle 0$};
+            % Text Node
+            \draw (219,159) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle 1$};
+            % Text Node
+            \draw (220,130) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle 2$};
+            % Text Node
+            \draw (220,99) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle 3$};
+            % Text Node
+            \draw (262,206) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle a$};
+            % Text Node
+            \draw (293,203) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle b$};
+            % Text Node
+            \draw (322,206) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle c$};
+
+        \end{tikzpicture}
+    \end{center}
+
+\end{example}
 
 \begin{exercise}
     \textbf{} for sets A, B, C, prove.
@@ -2101,6 +2094,325 @@ handy later.
 \end{exercise}
 
 \section{Relations}
+
+\begin{definition}
+    \textbf{Relation} we call a set like \textbf{R} a \textbf{Relation} when there are
+    two sets like $X$ and $Y$ s.t. $R \subseteq X \times Y$.
+    \[ Rel(R) : \exists X,Y (R \subseteq X \times Y). \]
+\end{definition}
+
+\begin{definition}
+    \textbf{ِDomain and Range(also called Image)} \\
+    Domain of a set $R$ is all $x$ that there exists a $y$ s.t. $(x,y) \in R$
+    \[ Dom (R) := \{ x \mid \exists y  \quad (x,y) \in R \} \]
+    Range(Image) of a set $R$ is all $y$ that there exists a $x$ s.t. $(x,y) \in R$ \[ Range (R) := \{ y  \mid \exists x \quad (x,y) \in R \}. \]
+\end{definition}
+
+\begin{center}
+    \includegraphics[scale=.4]{R-Im-Dom (1).pdf}
+\end{center}
+
+\begin{definition}
+    \textbf{Inverse of a Relation} \\
+
+    \[ 		R^{-1}=\{u \mid \exists x,y \Big( u=(x,y) \land x\in B \land y\in A \land (y,x)\in R \Big)\}   \]
+    or i.e.
+    \[ 		R^{-1}=\{(x,y) \mid x\in B \land y\in A \land (y,x)\in R\}   \]
+    therefore.
+    \[\forall x,y \Big( (x,y) \in R^{-1} \leftrightarrow (y,x) \in R \Big) \]
+
+\end{definition}
+
+\begin{definition}
+    \textbf{Inverse of a Relation} \\
+
+    \[ 		S\circ R = \{u \mid \exists x,y \Big(u=(x,y) \land \exists z \big( (x,z) \in R \wedge (z,y) \in S \big)\Big)\}   \]
+
+    or i.e.
+    \[ 		S\circ R =\{(x,y) \mid \exists z \Big( (x,z) \in R \wedge (z,y) \in S \Big) \}   \]
+    therefore.
+    \[\forall x,y\Big( (x,y) \in S\circ R \leftrightarrow \exists z  \big( (x,z) \in R \wedge (z,y) \in S \big) \Big) \]
+
+\end{definition}
+
+\begin{definition}
+    \textbf{Image} \\
+    \[ R[A] = \{y \mid \exists x \in A \quad (x,y) \in R\} \]
+\end{definition}
+
+
+\begin{definition}
+    \textbf{Pre-image} \\
+    \[ R^{-1}[B] = \{ x  \mid \exists y \in B \quad (x,y) \in R\} \]
+
+\end{definition}
+
+\section{Functions}
+
+\begin{definition}
+    \textbf{Inverse of a Relation} \\
+
+    \[ 		S\circ R = \{u \mid \exists x,y \Big(u=(x,y) \land \exists z \big( (x,z) \in R \wedge (z,y) \in S \big)\Big)\}   \]
+
+    or i.e.
+    \[ 		S\circ R =\{(x,y) \mid \exists z \Big( (x,z) \in R \wedge (z,y) \in S \Big) \}   \]
+    therefore.
+    \[\forall x,y\Big( (x,y) \in S\circ R \leftrightarrow \exists z  \big( (x,z) \in R \wedge (z,y) \in S \big) \Big) \]
+\end{definition}
+
+\begin{definition}
+    \textbf{Function}  we call a relation \textbf{f} a \textbf{function} when every input has exactly one
+    output i.e.
+    \[ Func(f) : \forall x ,y_1 , y_2 \Big((x,y_1) \in f \wedge (x,y_2) \in f \rightarrow y_1 = y_2 \Big). \]
+\end{definition}
+
+\begin{definition}
+    \textbf{Term}  
+        \[  \bigcap_{i \in I} A_i := \bigcap \{ A_i \}_{i \in I}  \]
+            \[ \bigcup_{i \in I} A_i := \bigcup \{ A_i \}_{i \in I}  \]
+\end{definition}
+
+
+\begin{theorem}
+    \textbf{$(schema)$} $(I\forall ,E\forall ,I\exists , E\exists)$
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+        \hline
+        Rules
+         &
+        Terms and Conditions
+        \\
+        \hline
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ] {2} {\Phi (y)}
+            \have  [ ]{2} {\therefore \forall x \Phi (x)} \by{$I\forall$}{}
+        \end{fitchproof}
+         &
+        \begin{enumerate}
+            \setlength{\itemsep}{0pt} % No extra space between items
+            \item  $y$ is a variable.
+            \item  $\Phi (y)$ must not be assumed.
+        \end{enumerate}
+
+        \\
+        \hline
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ] {2} {\forall x \Phi (x)}
+            \have  [ ]{2} {\therefore \Phi (t)} \by{$E\forall$}{}
+        \end{fitchproof}
+         &
+        \begin{enumerate}
+            \setlength{\itemsep}{0pt} % No extra space between items
+            \item  $t$ is a term. 
+        \end{enumerate}
+
+        \\
+        \hline
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ] {2} {\Phi (t)}
+            \have  [ ]{2} {\therefore \exists x \Phi (x)} \by{$I\exists$}{}
+        \end{fitchproof}
+
+         &
+
+        \begin{enumerate}
+            \setlength{\itemsep}{0pt} % No extra space between items
+            \item  $t$ is a term.
+        \end{enumerate}
+
+        \\
+        \hline
+        \begin{fitchproof}[arrayenv=tabular]
+            \have [ ] {1} {\exists x \Phi (x)}
+            \open
+            \have [ ] {1} {\Phi (y)}
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {\theta}
+            \close
+            \have  [ ]{2} {\therefore\theta } \by{$E\exists$}{}
+        \end{fitchproof}
+         &
+        \begin{enumerate}
+            \setlength{\itemsep}{0pt} % No extra space between items
+            \item  $y$ is a variable.
+            \item  $\Phi (y)$ must not be assumed in previous lines.(except ones that are closed)
+            \item $y$ is not free in $\theta$
+        \end{enumerate}
+        \\
+        \hline
+    \end{tabular}
+    % \printindex
+
+    \begin{tabular}{>{\centering\arraybackslash}m{7cm}>{\centering\arraybackslash}m{7cm}}
+        \begin{fitchproof}[arrayenv=tabular]
+            \have  {2} {\Phi (y)}                                         \by{$ass$  }{}
+            \have  {2} {\Phi (a_{0})}                                     \by{$Def.1$ }{}
+            \have [ ] {2} {\vdots}
+            \have [n] {2} {\Phi (a_{n})}                                       \by{$Def.1$}{}
+            \have {2} {\bigwedge\limits_{i=0}^n \Phi (a_{i}) }          \by{$I\land,2,3,...,n+2$}{}
+            \have  {2} { \forall x \Phi (x)}                  \by{$Def. n+3$ }{}
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \have  {2} {\forall x \Phi (x)}                         \by{$ass$ }{}
+            \have  {2} {\bigwedge\limits_{i=0}^n \Phi (a_{i})}      \by{$Def.1$}{}
+            \have  {2} { \Phi (t)}                         \by{$E\land 2$}{}
+        \end{fitchproof}
+
+        \\
+
+        \begin{fitchproof}[arrayenv=tabular]
+            \have  {2} {\Phi (t)}
+            \have  {2} {\bigvee\limits_{i=0}^n \Phi (a_{i})}   \by{$I\lor 1$}{}
+            \have  {2} { \exists x \Phi (x)}         \by{$Def 2$}{}
+        \end{fitchproof}
+
+         &
+
+        \begin{fitchproof}[arrayenv=tabular]
+            \have  {1} {\exists x \Phi (x)}
+            \have  {1} {\bigvee\limits_{i=0}^n \Phi (a_{i}) }
+            \open
+            \have  {1} {\Phi (a_{0})}                  \by{acp  }{}
+            \have [ ] {2} {\vdots}
+            \have  [n] {2} {\theta}
+            \close
+            \open
+            \have  {1} {\Phi (a_{1})}                \by{acp  }{}
+            \have [ ] {2} {\vdots}
+            \have  [m] {2} {\theta}
+            \close
+            \have [ ] {2} {\vdots}
+            \open
+            \have [l] {1} {\Phi (a_{2})}                    \by{acp  }{}
+            \have [ ] {2} {\vdots}
+            \have  [r] {2} {\theta}
+            \close
+            \have  {2} {\theta }                    \by{$E\exists$}{}
+        \end{fitchproof}
+
+    \end{tabular}
+
+\end{theorem}
+
+\begin{definition}
+    \textbf{Function from set to set}  we call a function \textbf{f} from \textbf{A} to \textbf{B}
+    when it's domain is  \textbf{A} and it's range is subset of \textbf{B} i.e.
+    \[ (f:A \rightarrow B) : Func(f) \land Dom(f)=A \land Range(f) \subseteq B \]
+\end{definition}
+
+\begin{definition}
+    \textbf{Injective function}
+    we call a function \textbf{f} injective when every output has at most one input i.e.
+    \[ Injective(f) : \forall y ,x_1 , x_2 \Big((x_1,y) \in f \wedge (x_2,y) \in f \rightarrow x_1 = x_2 \Big). \]
+    
+    we call a function \textbf{f} injective from \textbf{A} to \textbf{B}
+    when it's function from  \textbf{A} to \textbf{B} and it's injective i.e.
+    \[ (f:A \xrightarrow{inj} B) :  (f:A \rightarrow B) \land Injective(f) \]
+\end{definition}
+
+
+\begin{definition}
+    \textbf{Surjective function}  we call a function \textbf{f} from \textbf{A} to \textbf{B}
+    when it's domain is  \textbf{A} and it's range is equal to \textbf{B} i.e.
+    \[ (f:A \xrightarrow[surj]{} B) :  (f:A \rightarrow B)  \land Range(f) = B \]
+    or i.e.
+    \[ (f:A \xrightarrow[surj]{} B) :  (f:A \rightarrow B)  \land (\forall y \in B \quad \exists x \in A \quad (x,y) \in f) \]
+\end{definition}
+
+
+\begin{definition}
+    \textbf{Bijection function}  we call a function \textbf{f} from \textbf{A} to \textbf{B}
+    when it's domain is  \textbf{A} and it's range is equal to \textbf{B} i.e.
+    \[ (f:A \xrightarrow[surj]{inj} B) :  (f:A \xrightarrow{inj} B)  \land (f:A \xrightarrow[surj]{} B) \]
+\end{definition}
+
+
+
+
+
+\section{Family of sets}
+
+
+\begin{Attention}
+    \textbf{Indexes} are objects (like numbers) allows us to give a unique "tag" to every object.
+    we use $i,j,k,...$ for variable indexes and we use $m,n,l,...$ for constant indexes.
+
+\end{Attention}
+
+\begin{definition}
+    \textbf{Family of sets}  assume $A: I \to \mathcal{F}$ is a function from a set of
+    indices $I$ to a family of sets $\mathcal{F}$, then we call $(Range[A])$ an indexed family of sets.
+     we can write $A_i$ instead of $A(i)$ and we can write $\{ A_i \}_{i \in I}$ instead 
+     of $Range[A]$ or ($A[I])$.
+    \[ \{ A_i \}_{i \in I} :=  A[I] \]
+\end{definition}
+
+\begin{definition}
+    \textbf{Intersrction and union of an family of sets}  
+        \[  \bigcap_{i \in I} A_i := \bigcap \{ A_i \}_{i \in I}  \]
+            \[ \bigcup_{i \in I} A_i := \bigcup \{ A_i \}_{i \in I}  \]
+\end{definition}
+
+
+\begin{Attention}
+    \textbf{}we can write $\forall i \in I  \quad P(i)$ instead of
+     $\forall i (i\in I \rightarrow  P(i) )$ and we can write $\exists i \in I  \quad P(i)$ 
+     instead of $\exists i (i\in I  \land P(i))$.  
+
+\end{Attention}
+
+\begin{lemma}
+    \textbf{Intersrction and union of an family of sets}  
+        \[ /\therefore  \bigcap_{i \in I} A_i =  \{x \mid \forall i \in I \quad x \in A_i\} \]
+        \[ /\therefore \bigcup_{i \in I} A_i =  \{x \mid \exists i \in I \quad x \in A_i\}  \]
+\end{lemma}
+
+\begin{theorem}
+    \textbf{$(schema)$} $(I\bigcap_{I} , E\bigcap_{I} , I\bigcup_{I} , E\bigcup_{I})$
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+        \hline
+        \begin{fitchproof}[arrayenv=tabular]
+            \open
+            \have [ ] {1} {i \in I }
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {a \in A_i}
+            \close
+            \have  [ ]{2} {\therefore a \in \bigcap_{i \in I} A_i } \by{$I\bigcap_{I}$}{}
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ] {2} {a \in \bigcap_{i \in I} A_i }
+            \hypo [ ] {2} {n \in  I  }
+            \have  [ ]{2} {\therefore  a \in  A_n} \by{$E\bigcap_{I}$}{}
+        \end{fitchproof}
+        \\
+        \hline
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ] {2} {a \in A_n  }
+            \hypo [ ] {2} {n \in I  }
+            \have  [ ]{2} {\therefore  a \in \bigcup_{i \in I} A_i } \by{$I\bigcup_{I}$}{}
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \have [ ] {1} { a \in \bigcup_{i \in I} A_i  }
+            \open
+            \have [ ] {1} { i \in I \land a \in A_i }
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {\theta}
+            \close
+            \have  [ ]{2} {\therefore\theta } \by{$E\bigcup_{I}$}{}
+        \end{fitchproof}
+        \\
+        \hline
+    \end{tabular}
+    \\
+    \\
+    \\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
 
 \end{document}
 
