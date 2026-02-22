@@ -840,8 +840,8 @@ formula(WWF).
                   ,\land ,\lor$)
     \end{enumerate}
 
-    for example $(A_0 \to A_1 ,\neg A_3)$ \\ we easily call WWF ``formula''  and also we
-    denote WWF with $A ,B ,C ,...$.
+    for example $(A_0 \to A_1 ,\neg A_3)$ \\ we easily call WWF ``formula'' and
+    also we denote WWF with $A ,B ,C ,...$.
 \end{definition}
 
 you can easily see that formula are made up by atomic formulas.in general we
@@ -852,9 +852,9 @@ say formula is an atomic formula or combination of them.
 \end{definition}
 
 the formulas that are not open call \textbf{``closed formulas''} or
-\textbf{``sentence''}. Now question is ``are very closed formulas proposition?''
-(propositions in classic logic are sentences that are true or false?) the
-answer is unfortunately \textbf{No}.
+\textbf{``sentence''}. Now question is ``are very closed formulas
+proposition?'' (propositions in classic logic are sentences that are true or
+false?) the answer is unfortunately \textbf{No}.
 
 %
 \begin{definition}
@@ -951,16 +951,41 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
             \have  [ ]{2} {\therefore \varphi \land \psi} \by{$I\land$}{}
         \end{fitchproof}
          &
-        \begin{fitchproof}[arrayenv=tabular]
-            \hypo [ ]{1} {\varphi \land \psi}
-            \have  [ ]{2} {\therefore \varphi \hspace{.5cm} \therefore\psi} \by{$E\land$}{}
-        \end{fitchproof}
+        \begin{minipage}[t]{\linewidth}
+            \centering
+            \begin{minipage}[t]{0.48\linewidth}
+                \begin{fitchproof}[arrayenv=tabular]
+                    \hypo [ ]{1} {\varphi \land \psi}
+                    \have [ ]{2} {\therefore \varphi}  \by{$E\land$}{}
+                \end{fitchproof}
+            \end{minipage}
+            % \hfill
+            \begin{minipage}[t]{0.48\linewidth}
+                \begin{fitchproof}[arrayenv=tabular]
+                    \hypo [ ]{1} {\varphi \land \psi}
+                    \have [ ]{2} {\therefore\psi} \by{$E\land$}{}
+                \end{fitchproof}
+            \end{minipage}
+        \end{minipage}
         \\
         \hline
+        \begin{minipage}[t]{\linewidth}
+            \centering
+            \begin{minipage}[t]{0.48\linewidth}
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ]{1} {\varphi}
-            \have  [ ]{2} {\therefore \varphi \lor \psi \hspace{.5cm}  \therefore\psi \lor \varphi} \by{$I\lor$}{}
+            \have  [ ]{2} {\therefore \varphi \lor \psi } \by{$I\lor$}{}
         \end{fitchproof}
+            \end{minipage}
+            % \hfill
+            \begin{minipage}[t]{0.48\linewidth}
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ]{1} {\varphi}
+            \have  [ ]{2} {\therefore  \psi \lor \varphi} \by{$I\lor$}{}
+        \end{fitchproof}
+            \end{minipage}
+        \end{minipage}
+
          &
         \begin{fitchproof}[arrayenv=tabular]
             \have [ ] {1} {\varphi \lor \psi}
@@ -1568,8 +1593,8 @@ so we can rewrite axiom of Extensionality like this.
 
 \begin{axiom}
     \textbf{Weak comprehension} this axioms says for every open proposition with just one variable
-    like $\phi x$ there is a set such that every $x$ is a member of that set if and only if it holds
-    $\phi x$.
+    like $\Phi(x)$ there is a set such that every $x$ is a member of that set if and only if it holds
+    $\Phi(x)$.
     \\
     \[ \exists X \forall x  (\Phi (x) \leftrightarrow x \in X) \]
     \\
@@ -2005,6 +2030,11 @@ handy later.
     \[ (x,y) := \{ \{x\},\{x,y\} \}. \]
 \end{definition}
 
+\begin{definition}
+    \textbf{Tuples}(n is a arbitrary number.)(this is a temporary definition, we will give a better one in the next chapter.)
+    \[ (x_1,x_2,...,x_n) := ((x_1,x_2,...,x_{n-1}),x_n) \]
+\end{definition}
+
 \begin{lemma}
     \textbf{} $/ \therefore  (x_0,y_0) = (x_1,y_1) \leftrightarrow ((x_0=x_1) \wedge (y_0=y_1))$
     \\
@@ -2115,9 +2145,9 @@ handy later.
 \begin{definition}
     \textbf{Inverse of a Relation} \\
 
-    \[ 		R^{-1}=\{u \mid \exists x,y \Big( u=(x,y) \land x\in B \land y\in A \land (y,x)\in R \Big)\}   \]
+    \[ 		R^{-1}=\{u \mid \exists x,y \Big( u=(x,y) \land (y,x)\in R \Big)\}   \]
     or i.e.
-    \[ 		R^{-1}=\{(x,y) \mid x\in B \land y\in A \land (y,x)\in R\}   \]
+    \[ 		R^{-1}=\{(x,y) \mid (y,x)\in R\}   \]
     therefore.
     \[\forall x,y \Big( (x,y) \in R^{-1} \leftrightarrow (y,x) \in R \Big) \]
 
@@ -2139,7 +2169,6 @@ handy later.
     \textbf{Image} \\
     \[ R[A] = \{y \mid \exists x \in A \quad (x,y) \in R\} \]
 \end{definition}
-
 
 \begin{definition}
     \textbf{Pre-image} \\
@@ -2167,11 +2196,22 @@ handy later.
 \end{definition}
 
 \begin{definition}
-    \textbf{Term}  
-        \[  \bigcap_{i \in I} A_i := \bigcap \{ A_i \}_{i \in I}  \]
-            \[ \bigcup_{i \in I} A_i := \bigcup \{ A_i \}_{i \in I}  \]
+    \textbf{Term} assume a function \textbf{f} and  \textbf{$(x,y) \in f$},
+    we define ``$f(x):= y$'' and we call $f(x)$ a term. and the reverse is also true, if we have a term $f(x)$,
+    we have a function  $f$ and we can say there exists a $y$ s.t.  $(x,y) \in f$.
+    terms are objects too, so we can have $f(f(x))$ and it is a term as well.
+    we denote terms with small letters like $t,s,r,...$.
+    so we can write\dots
+    \[  Func(f) \land (x,y) \in f \rightarrow f(x) = y \]
+    and
+    \[   \Phi(f(x)) \rightarrow Func(f) \land \exists y (x,y) \in f \]
 \end{definition}
 
+\begin{Attention}
+    \textbf{} input of a function can be a ordered pair itself, so we can have $f((x,y))$ and it is a term.
+    we define $f(x,y):=f((x,y))$ for simplicity.
+    this is true for tuples as well, so we can have $f((x_{1},x_{2},...,x_{n}))$ and we define $f(x_{1},x_{2},...,x_{n}):=f((x_{1},x_{2},...,x_{n}))$ for simplicity.
+\end{Attention}
 
 \begin{theorem}
     \textbf{$(schema)$} $(I\forall ,E\forall ,I\exists , E\exists)$
@@ -2203,7 +2243,7 @@ handy later.
          &
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
-            \item  $t$ is a term. 
+            \item  $t$ is a term.
         \end{enumerate}
 
         \\
@@ -2242,6 +2282,10 @@ handy later.
         \hline
     \end{tabular}
     % \printindex
+    \\
+    \\
+    $(I\forall , E\exists)$ is the same as $(I\forall , E\exists)$ in chapter three so we have
+    to prove $(E\forall , I\exists )$ .
 
     \begin{tabular}{>{\centering\arraybackslash}m{7cm}>{\centering\arraybackslash}m{7cm}}
         \begin{fitchproof}[arrayenv=tabular]
@@ -2305,12 +2349,11 @@ handy later.
     \textbf{Injective function}
     we call a function \textbf{f} injective when every output has at most one input i.e.
     \[ Injective(f) : \forall y ,x_1 , x_2 \Big((x_1,y) \in f \wedge (x_2,y) \in f \rightarrow x_1 = x_2 \Big). \]
-    
-    we call a function \textbf{f} injective from \textbf{A} to \textbf{B}
-    when it's function from  \textbf{A} to \textbf{B} and it's injective i.e.
+
+    we call a function \textbf{f} injective from \textbf{A} to \textbf{B} when it's
+    function from \textbf{A} to \textbf{B} and it's injective i.e.
     \[ (f:A \xrightarrow{inj} B) :  (f:A \rightarrow B) \land Injective(f) \]
 \end{definition}
-
 
 \begin{definition}
     \textbf{Surjective function}  we call a function \textbf{f} from \textbf{A} to \textbf{B}
@@ -2320,19 +2363,13 @@ handy later.
     \[ (f:A \xrightarrow[surj]{} B) :  (f:A \rightarrow B)  \land (\forall y \in B \quad \exists x \in A \quad (x,y) \in f) \]
 \end{definition}
 
-
 \begin{definition}
     \textbf{Bijection function}  we call a function \textbf{f} from \textbf{A} to \textbf{B}
     when it's domain is  \textbf{A} and it's range is equal to \textbf{B} i.e.
     \[ (f:A \xrightarrow[surj]{inj} B) :  (f:A \xrightarrow{inj} B)  \land (f:A \xrightarrow[surj]{} B) \]
 \end{definition}
 
-
-
-
-
 \section{Family of sets}
-
 
 \begin{Attention}
     \textbf{Indexes} are objects (like numbers) allows us to give a unique "tag" to every object.
@@ -2343,29 +2380,28 @@ handy later.
 \begin{definition}
     \textbf{Family of sets}  assume $A: I \to \mathcal{F}$ is a function from a set of
     indices $I$ to a family of sets $\mathcal{F}$, then we call $(Range[A])$ an indexed family of sets.
-     we can write $A_i$ instead of $A(i)$ and we can write $\{ A_i \}_{i \in I}$ instead 
-     of $Range[A]$ or ($A[I])$.
+    we can write $A_i$ instead of $A(i)$ and we can write $\{ A_i \}_{i \in I}$ instead
+    of $Range[A]$ or ($A[I])$.
     \[ \{ A_i \}_{i \in I} :=  A[I] \]
 \end{definition}
 
 \begin{definition}
-    \textbf{Intersrction and union of an family of sets}  
-        \[  \bigcap_{i \in I} A_i := \bigcap \{ A_i \}_{i \in I}  \]
-            \[ \bigcup_{i \in I} A_i := \bigcup \{ A_i \}_{i \in I}  \]
+    \textbf{Intersrction and union of an family of sets}
+    \[  \bigcap_{i \in I} A_i := \bigcap \{ A_i \}_{i \in I}  \]
+    \[ \bigcup_{i \in I} A_i := \bigcup \{ A_i \}_{i \in I}  \]
 \end{definition}
-
 
 \begin{Attention}
     \textbf{}we can write $\forall i \in I  \quad P(i)$ instead of
-     $\forall i (i\in I \rightarrow  P(i) )$ and we can write $\exists i \in I  \quad P(i)$ 
-     instead of $\exists i (i\in I  \land P(i))$.  
+    $\forall i (i\in I \rightarrow  P(i) )$ and we can write $\exists i \in I  \quad P(i)$
+    instead of $\exists i (i\in I  \land P(i))$.
 
 \end{Attention}
 
 \begin{lemma}
-    \textbf{Intersrction and union of an family of sets}  
-        \[ /\therefore  \bigcap_{i \in I} A_i =  \{x \mid \forall i \in I \quad x \in A_i\} \]
-        \[ /\therefore \bigcup_{i \in I} A_i =  \{x \mid \exists i \in I \quad x \in A_i\}  \]
+    \textbf{Intersrction and union of an family of sets}
+    \[ /\therefore  \bigcap_{i \in I} A_i =  \{x \mid \forall i \in I \quad x \in A_i\} \]
+    \[ /\therefore \bigcup_{i \in I} A_i =  \{x \mid \exists i \in I \quad x \in A_i\}  \]
 \end{lemma}
 
 \begin{theorem}
@@ -2412,7 +2448,6 @@ handy later.
     \\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
-
 
 \end{document}
 
