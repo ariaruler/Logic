@@ -99,8 +99,8 @@ to explain them for you to understand.but they don't have any definition.
     Urelements simply are.
 \end{undefined}
 
-In this book, we will denote individual urelements using lowercase letters such
-as $a$, $b$, $c$,$...$
+In this book, we will denote individual urelements using lowercase letters $u$,
+$v$, $w$,$...$
 
 \begin{undefined}
     \textbf{Type} parallel lines used to show that an object exists
@@ -117,9 +117,9 @@ as $a$, $b$, $c$,$...$
         \node at (-0.5,3) {1.};
         \node at (-0.5,2) {2.};
         \node at (-0.5,1) {3.};
-        \node at (0.2,3) {$a$};
-        \node at (1.2,2) {$b$};
-        \node at (2.2,1) {$c$};
+        \node at (0.2,3) {$u$};
+        \node at (1.2,2) {$v$};
+        \node at (2.2,1) {$w$};
     \end{tikzpicture}
 \end{undefined}
 
@@ -136,20 +136,22 @@ as $a$, $b$, $c$,$...$
         \node at (-0.5,4) {$m.$};
         \node at (-0.6,2) {$m+n.$};
         \node at (-0.5,1) {$o.$};
-        \node at (0.2,4) {$a_{0}$};
+        \node at (0.2,4) {$u_{0}$};
         \node at (0.2,3) {$\vdots$};
-        \node at (0.2,2) {$a_{n}$};
-        \node at (2,1) {$\{a_{0} , a_{1}... a_{n}\}$};
+        \node at (0.2,2) {$u_{n}$};
+        \node at (2,1) {$\{u_{0} , u_{1}... u_{n}\}$};
     \end{tikzpicture}
 \end{Rule}
 
 \begin{undefined}
     \textbf{Set} we can't say what exactly sets are but we know sets can be made by fusion
-    (from now we denote sets with uppercase letters).
+    (from now we denote sets with uppercase letters like $A$, $B$, $C$, ...).
 \end{undefined}
 
 \begin{definition}
     \textbf{Object} urelements and sets.(we write obj instead of object).
+    (from now we denote objects with lowercase letters like $a$, $b$, $c$, ...).
+
 \end{definition}
 
 \begin{Rule}
@@ -612,7 +614,7 @@ also called "bottom".means impossible, or a logical symbol denoting a
 impossible situation.
 
 \begin{Rule}
-    \textbf{$I\bot$} (this rule is scheme it means it works everywhere for every obj.)
+    \textbf{$\bot I$} (this rule is scheme it means it works everywhere for every obj.)
     assume that $a_{0} , a_{1} , a_{2} ... a_{n}$ are  distinct obj.if someone says $ a_{0} \in \{a_{1} , a_{2}\}$
     or if someone says $a_{0} = a_{1}$.
     we know it's not right but how do we must show that?
@@ -631,7 +633,7 @@ impossible situation.
         \node at (0.3,2) {$a_{1}$};
         \node at (2,2) {rp1};
         \node at (0.2,1) {$\bot$};
-        \node at (2,1) {$I\bot$,$n,m$};
+        \node at (2,1) {$\bot I$,$n,m$};
     \end{tikzpicture}
     \\
     for (fu):
@@ -650,7 +652,7 @@ impossible situation.
         \node at (2,2) {$\{a_{1} , a_{2}... a_{n}\}$};
         \node at (4,2) {fu1};
         \node at (1.2,1) {$\bot$};
-        \node at (4,1) {$I\bot$,$n,m$};
+        \node at (4,1) {$\bot I$,$n,m$};
     \end{tikzpicture}
     \\
     for (fi):
@@ -669,12 +671,12 @@ impossible situation.
         \node at (0.3,2) {$a_{0}$};
         \node at (4,2) {fi1};
         \node at (1.2,1) {$\bot$};
-        \node at (4,1) {$I\bot$,$n,m$};
+        \node at (4,1) {$\bot I$,$n,m$};
     \end{tikzpicture}
 \end{Rule}
 
 \begin{Rule}
-    \textbf{$E\bot$} (this rule is scheme it means it works everywhere for every obj.)
+    \textbf{$\bot E$} (this rule is scheme it means it works everywhere for every obj.)
     (see attention 1.1).
     for (rp): \\
     \begin{tikzpicture}
@@ -815,7 +817,7 @@ formula(WWF).
 
 %
 \begin{definition}
-    \textbf{Atomic formula} every two obj(conatants and variable) and a binary
+    \textbf{Atomic formula} every single obbject or two obj(conatants and variable) and a binary
     predicate $(=,\in)$ between them like $x=b , y\in C, ...$
     \\
     we denote atomic formulas with $A_{i}$.
@@ -859,7 +861,7 @@ false?) the answer is unfortunately \textbf{No}.
 %
 \begin{definition}
     \textbf{Atomic proposition} every atomic formula that can be
-    proven by tools introduced in chapter 1($I= , E= , I\in , E\in , I \bot , E\bot $).
+    proven by tools introduced in chapter 1($I= , E= , I\in , E\in , I \bot , \bot E $).
     \\
     we denote atomic formulas with $p_{i}$.
 \end{definition}
@@ -923,11 +925,11 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
 \end{undefined}
 
 \begin{Rule}
-    \textbf{rules of logical operations} $(I\to , E\to ,I\land ,E\land ,I\lor ,E\lor ,I\neg ,E\neg,I\bot ,E\bot )$
+    \textbf{rules of logical operations} $(\to  I, \to E ,\land I ,\land E ,\lor I ,\lor E ,\neg I ,\neg E,\bot I ,\bot E )$
     this rule is scheme it means it works everywhere for every propositions.
     (thats why we use $\varphi, \psi $ instead of $p,q$)
 
-    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{fitchproof}[arrayenv=tabular]
             \open
@@ -935,20 +937,20 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
             \have [ ] {2} {\vdots}
             \have  [ ] {2} {\psi}
             \close
-            \have  [ ]{2} {\therefore \varphi \to \psi} \by{$I\to$}{}
+            \have  [ ]{2} {\therefore \varphi \to \psi} \by{$\to I$}{}
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ]{1} {\varphi \to \psi}
             \hypo [ ] {2} {\varphi}
-            \have  [ ]{2} {\therefore \psi} \by{$E\to$}{}
+            \have  [ ]{2} {\therefore \psi} \by{$\to E$}{}
         \end{fitchproof}
         \\
         \hline
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ]{1} {\varphi}
             \hypo [ ] {2} {\psi}
-            \have  [ ]{2} {\therefore \varphi \land \psi} \by{$I\land$}{}
+            \have  [ ]{2} {\therefore \varphi \land \psi} \by{$\land I$}{}
         \end{fitchproof}
          &
         \begin{minipage}[t]{\linewidth}
@@ -956,14 +958,14 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
             \begin{minipage}[t]{0.48\linewidth}
                 \begin{fitchproof}[arrayenv=tabular]
                     \hypo [ ]{1} {\varphi \land \psi}
-                    \have [ ]{2} {\therefore \varphi}  \by{$E\land$}{}
+                    \have [ ]{2} {\therefore \varphi}  \by{$\land E$}{}
                 \end{fitchproof}
             \end{minipage}
             % \hfill
             \begin{minipage}[t]{0.48\linewidth}
                 \begin{fitchproof}[arrayenv=tabular]
                     \hypo [ ]{1} {\varphi \land \psi}
-                    \have [ ]{2} {\therefore\psi} \by{$E\land$}{}
+                    \have [ ]{2} {\therefore\psi} \by{$\land E$}{}
                 \end{fitchproof}
             \end{minipage}
         \end{minipage}
@@ -972,17 +974,17 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
         \begin{minipage}[t]{\linewidth}
             \centering
             \begin{minipage}[t]{0.48\linewidth}
-        \begin{fitchproof}[arrayenv=tabular]
-            \hypo [ ]{1} {\varphi}
-            \have  [ ]{2} {\therefore \varphi \lor \psi } \by{$I\lor$}{}
-        \end{fitchproof}
+                \begin{fitchproof}[arrayenv=tabular]
+                    \hypo [ ]{1} {\varphi}
+                    \have  [ ]{2} {\therefore \varphi \lor \psi } \by{$\lor I$}{}
+                \end{fitchproof}
             \end{minipage}
             % \hfill
             \begin{minipage}[t]{0.48\linewidth}
-        \begin{fitchproof}[arrayenv=tabular]
-            \hypo [ ]{1} {\varphi}
-            \have  [ ]{2} {\therefore  \psi \lor \varphi} \by{$I\lor$}{}
-        \end{fitchproof}
+                \begin{fitchproof}[arrayenv=tabular]
+                    \hypo [ ]{1} {\varphi}
+                    \have  [ ]{2} {\therefore  \psi \lor \varphi} \by{$\lor I$}{}
+                \end{fitchproof}
             \end{minipage}
         \end{minipage}
 
@@ -999,7 +1001,7 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
             \have [ ] {2} {\vdots}
             \have  [ ] {2} {\theta}
             \close
-            \have  [ ]{2} {\therefore \theta} \by{$E\lor$}{}
+            \have  [ ]{2} {\therefore \theta} \by{$\lor E$}{}
         \end{fitchproof}
         \\
         \hline
@@ -1009,7 +1011,7 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
             \have [ ] {2} {\vdots}
             \have  [ ] {2} {\bot}
             \close
-            \have  [ ]{2} {\therefore \neg\varphi } \by{$I\neg$ }{}
+            \have  [ ]{2} {\therefore \neg\varphi } \by{$\neg I$ }{}
         \end{fitchproof}
 
          &
@@ -1019,19 +1021,19 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
             \have [ ] {2} {\vdots}
             \have  [ ] {2} {\bot}
             \close
-            \have  [ ]{2} {\therefore \varphi } \by{$E\neg$ }{}
+            \have  [ ]{2} {\therefore \varphi } \by{$\neg E$ }{}
         \end{fitchproof}
         \\
         \hline
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ]{1} {\varphi}
             \hypo [ ] {2} {\neg\varphi}
-            \have  [ ]{2} {\therefore \bot} \by{$I\bot$}{}
+            \have  [ ]{2} {\therefore \bot} \by{$\bot I$}{}
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {\bot}
-            \have  [ ]{2} {\therefore \varphi} \by{$E\bot$}{}
+            \have  [ ]{2} {\therefore \varphi} \by{$\bot E$}{}
         \end{fitchproof}
         \\
         \hline
@@ -1051,9 +1053,9 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
 \end{definition}
 
 \begin{theorem}
-    \textbf{$(schema)$} $(I\leftrightarrow , E\leftrightarrow)$
+    \textbf{$(schema)$} $(\leftrightarrow I , \leftrightarrow E)$
 
-    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{fitchproof}[arrayenv=tabular]
             \open
@@ -1066,14 +1068,29 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
             \have [ ] {2} {\vdots}
             \have  [ ] {2} {\varphi}
             \close
-            \have  [ ]{2} {\therefore \varphi \leftrightarrow \psi} \by{$I\leftrightarrow$}{}
+            \have  [ ]{2} {\therefore \varphi \leftrightarrow \psi} \by{$\leftrightarrow I$}{}
         \end{fitchproof}
          &
-        \begin{fitchproof}[arrayenv=tabular]
-            \hypo [ ]{1} {\varphi \leftrightarrow \psi}
-            \hypo [ ] {2} {\varphi \hspace{0.9cm} \psi}
-            \have  [ ]{2} {\therefore \psi \hspace{.5cm} \therefore\varphi} \by{$E\leftrightarrow$}{}
-        \end{fitchproof}
+
+        \begin{minipage}[t]{\linewidth}
+            \centering
+            \begin{minipage}[t]{0.48\linewidth}
+                \begin{fitchproof}[arrayenv=tabular]
+                    \hypo [ ]{1} {\varphi \leftrightarrow \psi}
+                    \hypo [ ] {2} {\varphi }
+                    \have  [ ]{2} {\therefore \psi } \by{$\leftrightarrow E$}{}
+                \end{fitchproof}
+            \end{minipage}
+            % \hfill
+            \begin{minipage}[t]{0.48\linewidth}
+                \begin{fitchproof}[arrayenv=tabular]
+                    \hypo [ ]{1} {\varphi \leftrightarrow \psi}
+                    \hypo [ ] {2} {\psi}
+                    \have  [ ]{2} {\therefore \varphi} \by{$\leftrightarrow E$}{}
+                \end{fitchproof}
+            \end{minipage}
+        \end{minipage}
+
         \\
         \hline
     \end{tabular}
@@ -1089,9 +1106,9 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
         \have [ ] {2} {\vdots}
         \have  [m] {2} {\varphi}
         \close
-        \have   {2} {\varphi \to \psi }                              \by{$I\to,1,n$ }{}
-        \have   {2} {\psi \to \varphi }                              \by{$I\to,n+1,m$}{}
-        \have  {2} {(\varphi \to \psi)\land (\psi \to \varphi)}     \by{$I\land,m+1,m+2$}{}
+        \have   {2} {\varphi \to \psi }                              \by{$\to, I1,n$ }{}
+        \have   {2} {\psi \to \varphi }                              \by{$\to, In+1,m$}{}
+        \have  {2} {(\varphi \to \psi)\land (\psi \to \varphi)}     \by{$\land I,m+1,m+2$}{}
         \have  {2} {\varphi \leftrightarrow \psi}                     \by{$Def.,m+3$ }{}
     \end{fitchproof}
 
@@ -1099,39 +1116,39 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
         \have {1} {\varphi \leftrightarrow \psi }                   \by{ass}{}
         \have {2} {\varphi }                                        \by{ass}{}
         \have  {2} {(\varphi \to \psi)\land (\psi \to \varphi)}     \by{$Def. 1$}{}
-        \have  {2} {\varphi \to \psi }                              \by{$E\land 3$}{}
-        \have  {2} {\psi}                                           \by{$E\to 1,4$}{}
+        \have  {2} {\varphi \to \psi }                              \by{$\land E 3$}{}
+        \have  {2} {\psi}                                           \by{$\to E 1,4$}{}
     \end{fitchproof}
 
 \end{theorem}
 
-\begin{example}
-    \textbf{} $a_{0} \notin \{a_{1} , a_{2}... a_{n}\}$
+% \begin{example}
+%     \textbf{} $a_{0} \notin \{a_{1} , a_{2}... a_{n}\}$
 
-    \begin{tikzpicture}
-        % Vertical lines
-        \draw (0,-1.5) -- (0,3.5);
-        \draw (1,-1.5) -- (1,3.5);
-        \draw (1.5,3.3) -- (-0.1,3.3) -- (-0.1,-0.5) -- (1.5,-0.5);
-        % Labels between lines
-        \node at (-0.5,3) {1.};
-        \node at (-0.5,2) {2.};
-        \node at (-0.5,1) {3.};
-        \node at (-0.5,0) {4.};
-        \node at (-0.5,-1) {5.};
-        \node at (-0.5,-2) {6.};
-        \node at (2.4,3) {$a_{0} \in \{a_{1} , a_{2}... a_{n}\}$};
-        \node at (4.8,3) {acp};
-        \node at (2,2) {$\{a_{1} , a_{2}... a_{n}\}$};
-        \node at (4.8,2) {ass};
-        \node at (0.2,1) {$a$};
-        \node at (4.8,1) {fiss $1,2$};
-        \node at (1.5,0) {$\bot$};
-        \node at (4.8,0) {$I\bot 2,3$};
-        \node at (2.4,-1) {$a_{0} \notin \{a_{1} , a_{2}... a_{n}\}$};
-        \node at (4.8,-1) {$I\in$};
-    \end{tikzpicture}
-\end{example}
+%     \begin{tikzpicture}
+%         % Vertical lines
+%         \draw (0,-1.5) -- (0,3.5);
+%         \draw (1,-1.5) -- (1,3.5);
+%         \draw (1.5,3.3) -- (-0.1,3.3) -- (-0.1,-0.5) -- (1.5,-0.5);
+%         % Labels between lines
+%         \node at (-0.5,3) {1.};
+%         \node at (-0.5,2) {2.};
+%         \node at (-0.5,1) {3.};
+%         \node at (-0.5,0) {4.};
+%         \node at (-0.5,-1) {5.};
+%         \node at (-0.5,-2) {6.};
+%         \node at (2.4,3) {$a_{0} \in \{a_{1} , a_{2}... a_{n}\}$};
+%         \node at (4.8,3) {acp};
+%         \node at (2,2) {$\{a_{1} , a_{2}... a_{n}\}$};
+%         \node at (4.8,2) {ass};
+%         \node at (0.2,1) {$a$};
+%         \node at (4.8,1) {fiss $1,2$};
+%         \node at (1.5,0) {$\bot$};
+%         \node at (4.8,0) {$\bot I 2,3$};
+%         \node at (2.4,-1) {$a_{0} \notin \{a_{1} , a_{2}... a_{n}\}$};
+%         \node at (4.8,-1) {$I\in$};
+%     \end{tikzpicture}
+% \end{example}
 
 \begin{example}
     \textbf{} for conatants p,q,r we can prove these.Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
@@ -1152,6 +1169,219 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
         \item  $p \rightarrow q /\therefore \neg p \vee q$
 
     \end{enumerate}
+    proofs.
+    \\
+    \begin{tabular}{>{\centering\arraybackslash}m{5cm}|>{\centering\arraybackslash}m{5cm}|>{\centering\arraybackslash}m{5cm}}
+
+        \begin{fitchproof}[arrayenv=tabular]
+            \have {} {p \to q} \by {$ass$} {}
+            \have {} {q \to r} \by {$ass$} {}
+            \open
+            \have {} {p} \by {$acp$} {}
+            \have {} {q} \by {$\to E  1,3$} {}
+            \have {} {r} \by {$\to E  2,4$} {}
+            \close
+            \have {} {p \to r} \by  {$I \to 3,5$} {}
+
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \have {} {q } \by {$ass$} {}
+            \open
+            \have {} {p} \by {$acp$} {}
+            \have {} {q} \by {$ass$} {}
+            \close
+            \have {} {p \to q} \by {$I \to $} {}
+
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \have{1}{(p \land q) \land r}      \by{ass}{}
+            \have{2}{p \land q}               \by{$\land E 1$}{}
+            \have{3}{r}                       \by{$\land E 1$}{}
+            \have{4}{p}                       \by{$\land E 2$}{}
+            \have{5}{q}                       \by{$\land E 2$}{}
+            \have{6}{q \land r}               \by{$\land I 3,5$}{}
+            \have{7}{p \land (q \land r)}     \by{$\land I 4,6$}{}
+        \end{fitchproof}
+        \\
+        \hline
+        \begin{fitchproof}[arrayenv=tabular]
+            \have {} {p \land q} \by {ass} {}
+            \have {} {p} \by {E $\land$ 1} {}
+            \have {} {q} \by {E $\land$ 1} {}
+            \have {} {q \land p} \by {I $\land$ 2,3} {}
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \have {} {p \to q} \by {ass} {}
+            \open
+            \have {} {p \land r} \by {acp} {}
+            \have {} {p} \by {E $\land$ 2} {}
+            \have {} {q} \by {E $\to$ 1,3} {}
+            \close
+            \have {} {(p \land r) \to q} \by {I $\to$ 2,4} {}
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \have {} {(p \land q) \to r} \by {$ass$} {}
+            \open
+            \have {} {p} \by {$acp$} {}
+            \open
+            \have {} {q} \by {$acp$} {}
+            \have {} {p \land q} \by {$I \land 2,3$} {}
+            \have {} {r} \by {$\to E  1,4$} {}
+            \close
+            \have {} {q \to r} \by {$I \to 3,5$} {}
+            \close
+            \have {} {p \to (q \to r)} \by  {$I \to 2,6$} {}
+        \end{fitchproof}
+        \\
+        \hline
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \have{1}{p \rightarrow (q \rightarrow r)} \by{$ass$}{}
+        \open
+        \have{2} {p \land q} \by{$acp$}{}
+
+        \have{3}{p} \by{2, $\land$E}{}
+        \have{4}{q \rightarrow r} \by{1,3, $\rightarrow$E}{}
+        \have{5}{q} \by{2, $\land$E}{}
+        \have{6}{r} \by{4,5, $\rightarrow$E}{}
+        \close
+        \have{7}{(p \land q) \rightarrow r} \by{2-6, $\rightarrow$I}{}
+
+    \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \have {} {p \to q} \by {ass} {}
+            \open
+            \have {} {p \land r} \by {acp} {}
+            \have {} {p} \by {E $\land$ 2} {}
+            \have {} {q} \by {E $\to$ 1,3} {}
+            \close
+            \have {} {(p \land r) \to q} \by {I $\to$ 2,4} {}
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \have {} {(p \land q) \to r} \by {$ass$} {}
+            \open
+            \have {} {p} \by {$acp$} {}
+            \open
+            \have {} {q} \by {$acp$} {}
+            \have {} {p \land q} \by {$I \land 2,3$} {}
+            \have {} {r} \by {$\to E  1,4$} {}
+            \close
+            \have {} {q \to r} \by {$I \to 3,5$} {}
+            \close
+            \have {} {p \to (q \to r)} \by  {$I \to 2,6$} {}
+        \end{fitchproof}
+        \\
+    \end{tabular}
+
+
+
+
+    \begin{fitchproof}[arrayenv=tabular]
+        \have {} {(p \land q) \to r} \by {$ass$} {}
+        \open
+        \have {} {p} \by {$acp$} {}
+        \open
+        \have {} {q} \by {$acp$} {}
+        \have {} {p \land q} \by {$I \land 2,3$} {}
+        \have {} {r} \by {$E \to 1,4$} {}
+        \close
+        \have {} {q \to r} \by {$I \to 3,5$} {}
+        \close
+        \have {} {p \to (q \to r)} \by  {$I \to 2,6$} {}
+
+    \end{fitchproof}
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \have{1} {p \land (q \lor r)} \by {ass} {}
+
+        \open
+        \have{2} {p} \by {E\(\land\) 1} {}
+        \have{3} {q \lor r} \by {E\(\land\) 1} {}
+
+        \open
+        \have{4} {q} \by {acp} {}
+        \have{5} {p \land q} \by {I\(\land\) 2,4} {}
+        \have{6} {(p \land q) \lor (p \land r)} \by {I\(\lor\) 5} {}
+        \close
+
+        \open
+        \have{7} {r} \by {acp} {}
+        \have{8} {p \land r} \by {I\(\land\) 2,7} {}
+        \have{9} {(p \land q) \lor (p \land r)} \by {I\(\lor\) 8} {}
+        \close
+        \have{9} {(p \land q) \lor (p \land r)} \by {I\(\lor\) 8} {}
+        \close
+
+        \have{10} {(p \land q) \lor (p \land r)} \by {E\(\lor\) 3,6,9} {}
+
+    \end{fitchproof}
+
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{(p \lor q) \lor r} \by{ass}{}
+\open
+    \have{2}{p \lor q} \by{$acp$}{}
+    \open
+        \have{3}{p} \by{$acp$}{}
+        \have{4}{p \lor (q \lor r)} \by{3, $\lor$I}{}
+    \close
+     \open
+        \have{5}{q} \by{$acp$}{}
+        \have{6}{q \lor r} \by{5, $\lor$I}{}
+        \have{7}{p \lor (q \lor r)} \by{6, $\lor$I}{}
+\close
+   \have{8}{p \lor (q \lor r)} \by{2,4,7, $\lor$E}{}
+\close
+\open
+    \have{9}{r} \by{$acp$}{}
+    \have{10}{q \lor r} \by{9, $\lor$I}{}
+    \have{11}{p \lor (q \lor r)} \by{10, $\lor$I}{}
+\close
+\have{12}{p \lor (q \lor r)} \by{1,8,11, $\lor$E}{}
+\end{fitchproof}
+
+
+\begin{fitchproof}[arrayenv=tabular]
+    \have{1}{p \to q} \by{$assumption$}{}
+    \open
+        \have{2}{\neg p \lor q} \by{$acp$}{}
+        \open
+            \have{3}{p} \by{$acp$}{}
+            \have{4}{q} \by{$E\to,1,3$}{}
+            \have{5}{\neg p \lor q} \by{$I\lor,4$}{}
+            \have{6}{\bot} \by{$E\neg,2,5$}{}
+        \close
+        \have{7}{\neg p} \by{$I\neg,3-6$}{}
+        \have{8}{\neg p \lor q} \by{$I\lor,7$}{}
+        \have{9}{\bot} \by{$E\neg,2,8$}{}
+    \close
+    \have{10}{\neg(\neg p \lor q)} \by{$RAA$}{2-9}
+\end{fitchproof}
+
+\begin{fitchproof}[arrayenv=tabular]
+    \have {} {p \to q} \by {$assumption$} {}
+    \have {} {\neg q} \by {$assumption$} {}
+    \open
+        \have {} {p} \by {$acp$} {}
+        \have {} {q} \by {$E \to$} {}
+        \have {} {\bot} \by {$E \neg 2,4$} {}
+    \close
+    \have {} {\neg p} \by  {$I \neg$} {}
+\end{fitchproof}
+
+
+
+
+
+
 \end{example}
 
 \begin{exercise}
@@ -1277,9 +1507,9 @@ as you can see $\forall x \Phi (x) $ and $\exists x \Phi (x) $ are sentences.
 \section{Rules of predicates.}
 
 \begin{theorem}
-    \textbf{$(schema)$} $(I\forall ,E\forall ,I\exists , E\exists)$
+    \textbf{$(schema)$} $(\forall I ,\forall E ,\exists I , \exists E)$
 
-    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         Rules
          &
@@ -1288,7 +1518,7 @@ as you can see $\forall x \Phi (x) $ and $\exists x \Phi (x) $ are sentences.
         \hline
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {\Phi (y)}
-            \have  [ ]{2} {\therefore \forall x \Phi (x)} \by{$I\forall$}{}
+            \have  [ ]{2} {\therefore \forall x \Phi (x)} \by{$\forall I$}{}
         \end{fitchproof}
          &
         \begin{enumerate}
@@ -1301,7 +1531,7 @@ as you can see $\forall x \Phi (x) $ and $\exists x \Phi (x) $ are sentences.
         \hline
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {\forall x \Phi (x)}
-            \have  [ ]{2} {\therefore \Phi (a)} \by{$E\forall$}{}
+            \have  [ ]{2} {\therefore \Phi (a)} \by{$\forall E$}{}
         \end{fitchproof}
          &
         \begin{enumerate}
@@ -1313,7 +1543,7 @@ as you can see $\forall x \Phi (x) $ and $\exists x \Phi (x) $ are sentences.
         \hline
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {\Phi (a)}
-            \have  [ ]{2} {\therefore \exists x \Phi (x)} \by{$I\exists$}{}
+            \have  [ ]{2} {\therefore \exists x \Phi (x)} \by{$\exists I$}{}
         \end{fitchproof}
 
          &
@@ -1332,7 +1562,7 @@ as you can see $\forall x \Phi (x) $ and $\exists x \Phi (x) $ are sentences.
             \have [ ] {2} {\vdots}
             \have  [ ] {2} {\theta}
             \close
-            \have  [ ]{2} {\therefore\theta } \by{$E\exists$}{}
+            \have  [ ]{2} {\therefore\theta } \by{$\exists E$}{}
         \end{fitchproof}
          &
         \begin{enumerate}
@@ -1346,27 +1576,27 @@ as you can see $\forall x \Phi (x) $ and $\exists x \Phi (x) $ are sentences.
     \end{tabular}
     % \printindex
 
-    \begin{tabular}{>{\centering\arraybackslash}m{7cm}>{\centering\arraybackslash}m{7cm}}
+    \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}>{\centering\arraybackslash}m{7.5cm}}
         \begin{fitchproof}[arrayenv=tabular]
             \have  {2} {\Phi (y)}                                         \by{$ass$  }{}
             \have  {2} {\Phi (a_{0})}                                     \by{$Def.1$ }{}
             \have [ ] {2} {\vdots}
             \have [n] {2} {\Phi (a_{n})}                                       \by{$Def.1$}{}
-            \have {2} {\bigwedge\limits_{i=0}^n \Phi (a_{i}) }          \by{$I\land,2,3,...,n+2$}{}
+            \have {2} {\bigwedge\limits_{i=0}^n \Phi (a_{i}) }          \by{$\land I,2,3,...,n+2$}{}
             \have  {2} { \forall x \Phi (x)}                  \by{$Def. n+3$ }{}
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
             \have  {2} {\forall x \Phi (x)}                         \by{$ass$ }{}
             \have  {2} {\bigwedge\limits_{i=0}^n \Phi (a_{i})}      \by{$Def.1$}{}
-            \have  {2} { \Phi (a)}                         \by{$E\land 2$}{}
+            \have  {2} { \Phi (a)}                         \by{$\land E 2$}{}
         \end{fitchproof}
 
         \\
 
         \begin{fitchproof}[arrayenv=tabular]
             \have  {2} {\Phi (a)}
-            \have  {2} {\bigvee\limits_{i=0}^n \Phi (a_{i})}   \by{$I\lor 1$}{}
+            \have  {2} {\bigvee\limits_{i=0}^n \Phi (a_{i})}   \by{$\lor I 1$}{}
             \have  {2} { \exists x \Phi (x)}         \by{$Def 2$}{}
         \end{fitchproof}
 
@@ -1391,7 +1621,7 @@ as you can see $\forall x \Phi (x) $ and $\exists x \Phi (x) $ are sentences.
             \have [ ] {2} {\vdots}
             \have  [r] {2} {\theta}
             \close
-            \have  {2} {\theta }                    \by{$E\exists$}{}
+            \have  {2} {\theta }                    \by{$\exists E$}{}
         \end{fitchproof}
 
     \end{tabular}
@@ -1462,9 +1692,9 @@ with rules and axioms.
 \end{definition}
 
 \begin{theorem}
-    \textbf{$(schema)$} $(I\subseteq , E\subseteq)$
+    \textbf{$(schema)$} $(\subseteq I , \subseteq E)$
 
-    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{fitchproof}[arrayenv=tabular]
             \open
@@ -1472,20 +1702,20 @@ with rules and axioms.
             \have [ ] {2} {\vdots}
             \have  [ ] {2} {x \in B}
             \close
-            \have  [ ]{2} {\therefore A \subseteq B  } \by{$I\subseteq$}{}
+            \have  [ ]{2} {\therefore A \subseteq B  } \by{$\subseteq I$}{}
         \end{fitchproof}
 
          &
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ]{1} {A \subseteq B}
             \hypo [ ] {2} {a \in A}
-            \have  [ ]{2} {\therefore  a \in B} \by{$E\subseteq$}{}
+            \have  [ ]{2} {\therefore  a \in B} \by{$\subseteq E$}{}
         \end{fitchproof}
         \\
         \hline
     \end{tabular}
 
-    \begin{tabular}{>{\centering\arraybackslash}m{7cm}>{\centering\arraybackslash}m{7cm}}
+    \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}>{\centering\arraybackslash}m{7.5cm}}
         \begin{fitchproof}[arrayenv=tabular]
             \open
             \have {1} {x \in A}                                         \by{acp}{}
@@ -1493,7 +1723,7 @@ with rules and axioms.
             \have  [n] {2} {x \in B}
             \close
             \have  {2} {x \in A \rightarrow x \in B }              \by{$I\rightarrow,1,n$ }{}
-            \have  {2} {\forall x(x \in A \rightarrow x \in B )}   \by{$I\forall,n+1$ }{}
+            \have  {2} {\forall x(x \in A \rightarrow x \in B )}   \by{$\forall I,n+1$ }{}
             \have  {2} {A \subseteq B  }                           \by{$Def.n+2$ }{}
         \end{fitchproof}
          &
@@ -1501,7 +1731,7 @@ with rules and axioms.
             \have {1} {A \subseteq B}                               \by{ass }{}
             \have  {2} {a \in A}                                   \by{ass }{}
             \have  {2} {\forall x(x \in A \rightarrow x \in A )}   \by{$Def.1$ }{}
-            \have  {2} {a \in A \rightarrow a \in B }             \by{$E\forall,4$ }{}
+            \have  {2} {a \in A \rightarrow a \in B }             \by{$\forall E,4$ }{}
             \have  {2} {  a \in B}                                   \by{$E\rightarrow 3,5$}{}
         \end{fitchproof}
         \\
@@ -1516,10 +1746,10 @@ with rules and axioms.
         \have {2} {B \subseteq C}                  \by{ass}{}
         \open
         \have   {2} {x \in A }                     \by{$acp$}{}
-        \have   {2} {x \in B }                     \by{$E\subseteq ,1,3$ }{}
-        \have {1} {x \in C  }                       \by{$E\subseteq ,2,4$}{}
+        \have   {2} {x \in B }                     \by{$\subseteq E ,1,3$ }{}
+        \have {1} {x \in C  }                       \by{$\subseteq E ,2,4$}{}
         \close
-        \have  {2} {A \subseteq C }             \by{$I\subseteq ,3,5$}{}
+        \have  {2} {A \subseteq C }             \by{$\subseteq I ,3,5$}{}
     \end{fitchproof}
 \end{example}
 
@@ -1536,7 +1766,7 @@ so we can rewrite axiom of Extensionality like this.
 \begin{theorem}
     \textbf{$(schema)$} $(I= , E=)$
 
-    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{fitchproof}[arrayenv=tabular]
             \open
@@ -1552,11 +1782,24 @@ so we can rewrite axiom of Extensionality like this.
             \have  [ ]{2} {\therefore A = B } \by{$I=$}{}
         \end{fitchproof}
          &
-        \begin{fitchproof}[arrayenv=tabular]
-            \hypo [ ]{1} {A = B }
-            \hypo [ ] {2} {a \in A \hspace{0.9cm} a \in B}
-            \have  [ ]{2} {\therefore  a \in B \hspace{.5cm} \therefore  a \in A} \by{$E=$}{}
-        \end{fitchproof}
+        \begin{minipage}[t]{\linewidth}
+            \centering
+            \begin{minipage}[t]{0.48\linewidth}
+                \begin{fitchproof}[arrayenv=tabular]
+                    \hypo [ ]{1} {A = B }
+                    \hypo [ ] {2} {a \in A }
+                    \have  [ ]{2} {\therefore  a \in B } \by{$E=$}{}
+                \end{fitchproof}
+            \end{minipage}
+            % \hfill
+            \begin{minipage}[t]{0.48\linewidth}
+                \begin{fitchproof}[arrayenv=tabular]
+                    \hypo [ ]{1} {A = B }
+                    \hypo [ ] {2} { a \in B}
+                    \have  [ ]{2} { \therefore  a \in A} \by{$E=$}{}
+                \end{fitchproof}
+            \end{minipage}
+        \end{minipage}
         \\
         \hline
     \end{tabular}
@@ -1567,15 +1810,15 @@ so we can rewrite axiom of Extensionality like this.
         \have [ ] {2} {\vdots}
         \have  [n] {2} {x \in B}
         \close
-        \have   {2} {A \subseteq B }                                                        \by{$I\subseteq,1,n$  }{}
+        \have   {2} {A \subseteq B }                                                        \by{$\subseteq I,1,n$  }{}
         \open
         \have  {1} {x \in B}                                                                \by{acp }{}
         \have [ ] {2} {\vdots}
         \have  [m] {2} {x \in A}
         \close
-        \have  {2} {B \subseteq A }                                                          \by{$I\subseteq,n+2,m$ }{}
+        \have  {2} {B \subseteq A }                                                          \by{$\subseteq I,n+2,m$ }{}
         \have  {2} {\forall X, Y((X \subseteq Y \wedge Y \subseteq X) \rightarrow X=Y)}   \by{Extensionality }{}
-        \have  {2} {(A \subseteq B \wedge B \subseteq A) \rightarrow A=B}                 \by{$E\forall,m+2$ }{}
+        \have  {2} {(A \subseteq B \wedge B \subseteq A) \rightarrow A=B}                 \by{$\forall E,m+2$ }{}
         \have  {2} {A \subseteq B \wedge B \subseteq A}                                       \by{$I\wedge,n+1,m+1$}{}
         \have  {2} {A=B}                                                                        \by{$E\rightarrow,m+3,m+4$}{}
     \end{fitchproof}
@@ -1584,10 +1827,10 @@ so we can rewrite axiom of Extensionality like this.
     %     \have {1} {A = B }
     %     \have  {2} {a \in A }
     %     \have  {2} {\forall X, Y((X \subseteq Y \wedge Y \subseteq X) \leftrightarrow X=Y)}    \by{Extensionality}{}
-    %     \have  {2} {(A \subseteq B \wedge B \subseteq A) \leftrightarrow A=B}                   \by{$E\forall,3$ }{}
-    %     \have  {2} {A \subseteq B \wedge B \subseteq A}                                          \by{$E\leftrightarrow,1,4$}{}
+    %     \have  {2} {(A \subseteq B \wedge B \subseteq A) \leftrightarrow A=B}                   \by{$\forall E,3$ }{}
+    %     \have  {2} {A \subseteq B \wedge B \subseteq A}                                          \by{$\leftrightarrow E,1,4$}{}
     %     \have  {2} {A \subseteq B}                                                              \by{$E\wedge 5$}{}
-    %     \have  {2} {  a \in B }                                                                   \by{$E\subseteq,2,6$ }{}
+    %     \have  {2} {  a \in B }                                                                   \by{$\subseteq E,2,6$ }{}
     % \end{fitchproof}
 \end{theorem}
 
@@ -1614,9 +1857,9 @@ handy later.
     \textbf{Empty set} also known as the null set,
     is the unique mathematical set containing no elements at all.
     (uniqueness can be proven.)
-    \[ \emptyset:=\{x \mid \perp\} \]
+    \[ \emptyset:=\{x \mid \bot\} \]
     therefore.
-    \[ \forall x(x \in \emptyset \leftrightarrow  \perp) \]
+    \[ \forall x(x \in \emptyset \leftrightarrow  \bot) \]
     therefore.
     \[ \forall x(x \notin \emptyset ) \]
 \end{definition}
@@ -1627,12 +1870,12 @@ handy later.
         \open
         \have{1} {x \in \emptyset}                                \by{acp}{}
         \have {2} {\forall x(x \notin \emptyset)}                  \by{lemma $4.4.1 $ }{}
-        \have   {2} {x \notin \emptyset}                           \by{$E\forall ,2$}{}
-        \have   {2} {\bot}                                          \by{$I\bot ,1,3$ }{}
-        \have {1} {x \in X  }                                        \by{$E\bot ,4$}{}
+        \have   {2} {x \notin \emptyset}                           \by{$\forall E ,2$}{}
+        \have   {2} {\bot}                                          \by{$\bot I ,1,3$ }{}
+        \have {1} {x \in X  }                                        \by{$\bot E ,4$}{}
         \close
-        \have  {2} {\emptyset \subseteq X}                       \by{$I\subseteq ,1,5$}{}
-        \have  {2} {\forall X(\emptyset \subseteq X)}             \by{$I\forall ,6$}{}
+        \have  {2} {\emptyset \subseteq X}                       \by{$\subseteq I ,1,5$}{}
+        \have  {2} {\forall X(\emptyset \subseteq X)}             \by{$\forall I ,6$}{}
     \end{fitchproof}
 \end{example}
 
@@ -1642,16 +1885,16 @@ handy later.
         \have  {1} {\forall y (y \notin A )}                                \by{ass}{}
         \open
         \have  {1} {y \in A }                                               \by{acp}{}
-        \have  {1} {y \notin A }                                            \by{$E\forall,1$}{}
-        \have  {2} {\bot}                                                  \by{$I\bot,2,3$}{}
-        \have   {2} {y \in \emptyset }                                       \by{$E\bot,4$ }{}
+        \have  {1} {y \notin A }                                            \by{$\forall E,1$}{}
+        \have  {2} {\bot}                                                  \by{$\bot I,2,3$}{}
+        \have   {2} {y \in \emptyset }                                       \by{$\bot E,4$ }{}
         \close
         \open
         \have   {2} {y \in \emptyset }                                      \by{acp}{}
         \have  {1} {\forall y (y \notin \emptyset  )}                        \by{Def.}{}
-        \have {2} {y \notin \emptyset  }                                    \by{$E\forall,7$  }{}
-        \have   {2} {\bot}                                                 \by{$I\bot,6,8$ }{}
-        \have   {2} {y \in A}                                                 \by{$E\bot,9$}{}
+        \have {2} {y \notin \emptyset  }                                    \by{$\forall E,7$  }{}
+        \have   {2} {\bot}                                                 \by{$\bot I,6,8$ }{}
+        \have   {2} {y \in A}                                                 \by{$\bot E,9$}{}
         \close
         \have  {2} {A = \emptyset }                                                    \by{$I=$}{}
     \end{fitchproof}
@@ -1662,18 +1905,18 @@ handy later.
         \have  {1} {y \in A }                                               \by{acp}{}
         \have  {1} {\forall y (y \notin \emptyset )}                                \by{Def.}{}
         \have   {2} {y \in \emptyset }                                       \by{$E=,1,2$}{}
-        \have   {2} {y \notin \emptyset }                                    \by{$E\forall,3$ }{}
-        \have  {2} {\bot}                                                  \by{$I\bot,4,5$ }{}
+        \have   {2} {y \notin \emptyset }                                    \by{$\forall E,3$ }{}
+        \have  {2} {\bot}                                                  \by{$\bot I,4,5$ }{}
         \close
-        \have  {1} {y \notin A }                                            \by{$I\neg$}{}
-        \have  {1} {\forall y (y \notin A )}                                \by{$I\forall,7$}{}
+        \have  {1} {y \notin A }                                            \by{$\neg I$}{}
+        \have  {1} {\forall y (y \notin A )}                                \by{$\forall I,7$}{}
     \end{fitchproof}
 \end{lemma}
 
 \begin{theorem}
-    \textbf{$(schema)$} $(I\emptyset\not= , E \emptyset \not= ,I\emptyset= , E\emptyset=)$
+    \textbf{$(schema)$} $(I\emptyset\not= , E \emptyset \not= ,\emptyset= I , \emptyset= E)$
 
-    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {a \in A}
@@ -1697,37 +1940,26 @@ handy later.
             \have [ ] {2} {\vdots}
             \have  [ ] {2} {\bot }
             \close
-            \have  [ ]{2} {\therefore A = \emptyset } \by{$I\emptyset=$}{}
+            \have  [ ]{2} {\therefore A = \emptyset } \by{$\emptyset= I$}{}
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {A = \emptyset }
-            \have  [ ]{2} {\therefore a \notin A} \by{$E\emptyset=$}{}
+            \have  [ ]{2} {\therefore a \notin A} \by{$\emptyset= E$}{}
         \end{fitchproof}
         \\
         \hline
     \end{tabular}
 
-    \begin{tabular}{>{\centering\arraybackslash}m{7cm}>{\centering\arraybackslash}m{7cm}}
+    \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}>{\centering\arraybackslash}m{7.5cm}}
         \begin{fitchproof}[arrayenv=tabular]
             \have  {2} {a \in A}                         \by{ass}{}
-            \have  {2} {\exists x(x \in A)}             \by{$I\exists,1$ }{}
+            \have  {2} {\exists x(x \in A)}             \by{$\exists I,1$ }{}
             \have  {2} {\neg (\forall x(x \notin A))}   \by{De Morgan $2$ }{}
             \have  {2} { A \not= \emptyset}             \by{lemma $4.4.1 , 3$}{}
         \end{fitchproof}
 
          &
-        \begin{fitchproof}[arrayenv=tabular]
-            \have {1} {A \not= \emptyset }              \by{ass}{}
-            \have  {2} {\neg (\forall x(x \notin A))}   \by{lemma $4.4.1 , 3$}{}
-            \have  {2} {\exists x(x \in A)}             \by{De Morgan $2$ }{}
-            \open
-            \have{1} {x \in A}                           \by{acp}{}
-            \have [ ] {2} {\vdots}
-            \have  [n] {2} {\theta}
-            \close
-            \have  [n+1]{2} {\theta }                    \by{$E\exists$}{}
-        \end{fitchproof}
         \\
         \begin{fitchproof}[arrayenv=tabular]
             \open
@@ -1735,8 +1967,8 @@ handy later.
             \have [ ] {2} {\vdots}
             \have  [n] {2} {\bot}
             \close
-            \have {1} {x \notin A  }             \by{$I\neg $ }{}
-            \have  {2} {\forall x(x \notin A)}   \by{$I\forall ,n+1$}{}
+            \have {1} {x \notin A  }             \by{$\neg I $ }{}
+            \have  {2} {\forall x(x \notin A)}   \by{$\forall I ,n+1$}{}
             \have  {2} {A = \emptyset }             \by{lemma $4.4.1 , 1$}{}
         \end{fitchproof}
 
@@ -1744,7 +1976,7 @@ handy later.
         \begin{fitchproof}[arrayenv=tabular]
             \have  {2} { A = \emptyset}             \by{ass}{}
             \have  {2} {\forall x(x \notin A)}   \by{lemma $4.4.1 , 1$}{}
-            \have  {2} {a \notin A}               \by{$E\forall 2$  }{}
+            \have  {2} {a \notin A}               \by{$\forall E 2$  }{}
         \end{fitchproof}
         \\
 
@@ -1761,7 +1993,7 @@ handy later.
 \begin{theorem}
     \textbf{$(schema)$} $(I\{\} , E\{\})$
 
-    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {a = a_{i} }
@@ -1805,26 +2037,46 @@ handy later.
 \end{definition}
 
 \begin{theorem}
-    \textbf{$(schema)$} $(I\cap , E\cap , I\cup , E\cup)$
+    \textbf{$(schema)$} $(\cap I , \cap E , \cup I , \cup E)$
 
-    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {a \in A}
             \hypo [ ] {2} {a \in B  }
-            \have  [ ]{2} {\therefore  a \in  A \cap B } \by{$I\cap$}{}
+            \have  [ ]{2} {\therefore  a \in  A \cap B } \by{$\cap I$}{}
         \end{fitchproof}
          &
-        \begin{fitchproof}[arrayenv=tabular]
-            \hypo [ ] {2} {a \in  A \cap B }
-            \have  [ ]{2} {\therefore a \in  A \hspace{.5cm}  \therefore  a \in  B } \by{$E\cap$}{}
-        \end{fitchproof}
+
+        \begin{minipage}[t]{\linewidth}
+            \centering
+            \begin{minipage}[t]{0.48\linewidth}
+                \begin{fitchproof}[arrayenv=tabular]
+                    \hypo [ ] {2} {a \in  A \cap B }
+                    \have  [ ]{2} {\therefore a \in  A } \by{$\cap E$}{}
+                \end{fitchproof}
+            \end{minipage}
+            % \hfill
+            \begin{minipage}[t]{0.48\linewidth}
+                \begin{fitchproof}[arrayenv=tabular]
+                    \hypo [ ] {2} {a \in  A \cap B }
+                    \have  [ ]{2} {\therefore  a \in  B } \by{$\cap E$}{}
+                \end{fitchproof}
+            \end{minipage}
+        \end{minipage}
         \\
         \hline
+
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {a \in A   }
-            \have  [ ]{2} {\therefore   a \in  A \cup B \hspace{.5cm}  \therefore  a \in  B \cup A } \by{$I\cup$}{}
+            \have  [ ]{2} {\therefore   a \in  A \cup B  } \by{$\cup I$}{}
         \end{fitchproof}
+
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ] {2} {a \in A   }
+            \have  [ ]{2} { \therefore  a \in  B \cup A } \by{$\cup I$}{}
+        \end{fitchproof}
+
          &
         \begin{fitchproof}[arrayenv=tabular]
             \have [ ] {1} { a \in  A \cup B  }
@@ -1838,7 +2090,7 @@ handy later.
             \have [ ] {2} {\vdots}
             \have  [ ] {2} {\theta}
             \close
-            \have  [ ]{2} {\therefore\theta } \by{$E\cup$}{}
+            \have  [ ]{2} {\therefore\theta } \by{$\cup E$}{}
         \end{fitchproof}
         \\
         \hline
@@ -1862,9 +2114,9 @@ handy later.
 \end{definition}
 
 \begin{theorem}
-    \textbf{$(schema)$} $(I\bigcap , E\bigcap , I\bigcup , E\bigcup)$
+    \textbf{$(schema)$} $(\bigcap I , \bigcap E , \bigcup I , \bigcup E)$
 
-    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{fitchproof}[arrayenv=tabular]
             \open
@@ -1872,30 +2124,31 @@ handy later.
             \have [ ] {2} {\vdots}
             \have  [ ] {2} {a \in X}
             \close
-            \have  [ ]{2} {\therefore a \in \bigcap A } \by{$I\bigcap$}{}
+            \have  [ ]{2} {\therefore a \in \bigcap A } \by{$\bigcap I$}{}
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {a \in \bigcap A }
             \hypo [ ] {2} {B \in  A  }
-            \have  [ ]{2} {\therefore  a \in  B} \by{$E\bigcap$}{}
+            \have  [ ]{2} {\therefore  a \in  B} \by{$\bigcap E$}{}
         \end{fitchproof}
         \\
         \hline
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {a \in B  }
             \hypo [ ] {2} {B \in A  }
-            \have  [ ]{2} {\therefore  a \in \bigcup A } \by{$I\bigcup$}{}
+            \have  [ ]{2} {\therefore  a \in \bigcup A } \by{$\bigcup I$}{}
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
             \have [ ] {1} { a \in \bigcup A  }
             \open
-            \have [ ] {1} {a \in X \wedge X \in A }
+            \have [ ] {1} {a \in X  }
+            \have [ ] {1} { X \in A }
             \have [ ] {2} {\vdots}
             \have  [ ] {2} {\theta}
             \close
-            \have  [ ]{2} {\therefore\theta } \by{$E\bigcup$}{}
+            \have  [ ]{2} {\therefore\theta } \by{$\bigcup E$}{}
         \end{fitchproof}
         \\
         \hline
@@ -1914,9 +2167,9 @@ handy later.
 \end{definition}
 
 \begin{theorem}
-    \textbf{$(schema)$} $(I()^c, E()^c)$
+    \textbf{$(schema)$} $(()^c I, ()^c E)$
 
-    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{fitchproof}[arrayenv=tabular]
             \open
@@ -1924,7 +2177,7 @@ handy later.
             \have [ ] {2} {\vdots}
             \have  [ ] {2} {\bot}
             \close
-            \have  [ ]{2} {\therefore a \notin  A} \by{$I()^c$}{}
+            \have  [ ]{2} {\therefore a \notin  A} \by{$()^c I$}{}
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
@@ -1933,7 +2186,7 @@ handy later.
             \have [ ] {2} {\vdots}
             \have  [ ] {2} {\bot}
             \close
-            \have  [ ]{2} {\therefore a \in  A} \by{$E()^c$}{}
+            \have  [ ]{2} {\therefore a \in  A} \by{$()^c E$}{}
         \end{fitchproof}
         \\
         \hline
@@ -1961,20 +2214,33 @@ handy later.
 \end{definition}
 
 \begin{theorem}
-    \textbf{$(schema)$} $(I- , E- )$
+    \textbf{$(schema)$} $(- I , - E )$
 
-    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {a \in A  }
             \hypo [ ] {2} {a \notin B  }
-            \have  [ ]{2} {\therefore  a \in A - B } \by{$I-$}{}
+            \have  [ ]{2} {\therefore  a \in A - B } \by{$- I$}{}
         \end{fitchproof}
          &
-        \begin{fitchproof}[arrayenv=tabular]
-            \hypo [ ] {2} {a \in  A - B  }
-            \have  [ ]{2} {\therefore  a \in  A \hspace{.5cm}  \therefore  a \notin  B  } \by{$E-$}{}
-        \end{fitchproof}
+        \begin{minipage}[t]{\linewidth}
+            \centering
+            \begin{minipage}[t]{0.48\linewidth}
+                \begin{fitchproof}[arrayenv=tabular]
+                    \hypo [ ] {2} {a \in  A - B  }
+                    \have  [ ]{2} {\therefore  a \in  A} \by{$- E$}{}
+                \end{fitchproof}
+            \end{minipage}
+            % \hfill
+            \begin{minipage}[t]{0.48\linewidth}
+                \begin{fitchproof}[arrayenv=tabular]
+                    \hypo [ ] {2} {a \in  A - B  }
+                    \have  [ ]{2} {  \therefore  a \notin  B  } \by{$- E$}{}
+                \end{fitchproof}
+            \end{minipage}
+        \end{minipage}
+
         \\
         \hline
     \end{tabular}
@@ -1999,18 +2265,18 @@ handy later.
 \end{definition}
 
 \begin{theorem}
-    \textbf{$(schema)$} $(IP, EP )$
+    \textbf{$(schema)$} $(PI, PE )$
 
-    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {A \subseteq B }
-            \have  [ ]{2} {\therefore   A \in  P(B) } \by{$IP$}{}
+            \have  [ ]{2} {\therefore   A \in  P(B) } \by{$PI$}{}
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {A \in  P(B) }
-            \have  [ ]{2} {\therefore  A \subseteq B } \by{$EP$}{}
+            \have  [ ]{2} {\therefore  A \subseteq B } \by{$PE$}{}
         \end{fitchproof}
         \\
         \hline
@@ -2171,7 +2437,7 @@ handy later.
 \end{definition}
 
 \begin{definition}
-    \textbf{Pre-image} \\
+    \textbf{Pr- Eimage} \\
     \[ R^{-1}[B] = \{ x  \mid \exists y \in B \quad (x,y) \in R\} \]
 
 \end{definition}
@@ -2204,7 +2470,7 @@ handy later.
     so we can write\dots
     \[  Func(f) \land (x,y) \in f \rightarrow f(x) = y \]
     and
-    \[   \Phi(f(x)) \rightarrow Func(f) \land \exists y (x,y) \in f \]
+    \[   f(x) \rightarrow Func(f) \land \exists y (x,y) \in f \]
 \end{definition}
 
 \begin{Attention}
@@ -2214,9 +2480,9 @@ handy later.
 \end{Attention}
 
 \begin{theorem}
-    \textbf{$(schema)$} $(I\forall ,E\forall ,I\exists , E\exists)$
+    \textbf{$(schema)$} $(\forall I ,\forall E ,\exists I , \exists E)$
 
-    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         Rules
          &
@@ -2225,7 +2491,7 @@ handy later.
         \hline
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {\Phi (y)}
-            \have  [ ]{2} {\therefore \forall x \Phi (x)} \by{$I\forall$}{}
+            \have  [ ]{2} {\therefore \forall x \Phi (x)} \by{$\forall I$}{}
         \end{fitchproof}
          &
         \begin{enumerate}
@@ -2238,7 +2504,7 @@ handy later.
         \hline
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {\forall x \Phi (x)}
-            \have  [ ]{2} {\therefore \Phi (t)} \by{$E\forall$}{}
+            \have  [ ]{2} {\therefore \Phi (t)} \by{$\forall E$}{}
         \end{fitchproof}
          &
         \begin{enumerate}
@@ -2250,7 +2516,7 @@ handy later.
         \hline
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {\Phi (t)}
-            \have  [ ]{2} {\therefore \exists x \Phi (x)} \by{$I\exists$}{}
+            \have  [ ]{2} {\therefore \exists x \Phi (x)} \by{$\exists I$}{}
         \end{fitchproof}
 
          &
@@ -2269,7 +2535,7 @@ handy later.
             \have [ ] {2} {\vdots}
             \have  [ ] {2} {\theta}
             \close
-            \have  [ ]{2} {\therefore\theta } \by{$E\exists$}{}
+            \have  [ ]{2} {\therefore\theta } \by{$\exists E$}{}
         \end{fitchproof}
          &
         \begin{enumerate}
@@ -2284,30 +2550,30 @@ handy later.
     % \printindex
     \\
     \\
-    $(I\forall , E\exists)$ is the same as $(I\forall , E\exists)$ in chapter three so we have
-    to prove $(E\forall , I\exists )$ .
+    $(\forall I , \exists E)$ is the same as $(\forall I , \exists E)$ in chapter three so we have
+    to prove $(\forall E , \exists I )$ .
 
-    \begin{tabular}{>{\centering\arraybackslash}m{7cm}>{\centering\arraybackslash}m{7cm}}
+    \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}>{\centering\arraybackslash}m{7.5cm}}
         \begin{fitchproof}[arrayenv=tabular]
             \have  {2} {\Phi (y)}                                         \by{$ass$  }{}
             \have  {2} {\Phi (a_{0})}                                     \by{$Def.1$ }{}
             \have [ ] {2} {\vdots}
             \have [n] {2} {\Phi (a_{n})}                                       \by{$Def.1$}{}
-            \have {2} {\bigwedge\limits_{i=0}^n \Phi (a_{i}) }          \by{$I\land,2,3,...,n+2$}{}
+            \have {2} {\bigwedge\limits_{i=0}^n \Phi (a_{i}) }          \by{$\land I,2,3,...,n+2$}{}
             \have  {2} { \forall x \Phi (x)}                  \by{$Def. n+3$ }{}
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
             \have  {2} {\forall x \Phi (x)}                         \by{$ass$ }{}
             \have  {2} {\bigwedge\limits_{i=0}^n \Phi (a_{i})}      \by{$Def.1$}{}
-            \have  {2} { \Phi (t)}                         \by{$E\land 2$}{}
+            \have  {2} { \Phi (t)}                         \by{$\land E 2$}{}
         \end{fitchproof}
 
         \\
 
         \begin{fitchproof}[arrayenv=tabular]
             \have  {2} {\Phi (t)}
-            \have  {2} {\bigvee\limits_{i=0}^n \Phi (a_{i})}   \by{$I\lor 1$}{}
+            \have  {2} {\bigvee\limits_{i=0}^n \Phi (a_{i})}   \by{$\lor I 1$}{}
             \have  {2} { \exists x \Phi (x)}         \by{$Def 2$}{}
         \end{fitchproof}
 
@@ -2332,7 +2598,7 @@ handy later.
             \have [ ] {2} {\vdots}
             \have  [r] {2} {\theta}
             \close
-            \have  {2} {\theta }                    \by{$E\exists$}{}
+            \have  {2} {\theta }                    \by{$\exists E$}{}
         \end{fitchproof}
 
     \end{tabular}
@@ -2405,9 +2671,9 @@ handy later.
 \end{lemma}
 
 \begin{theorem}
-    \textbf{$(schema)$} $(I\bigcap_{I} , E\bigcap_{I} , I\bigcup_{I} , E\bigcup_{I})$
+    \textbf{$(schema)$} $(\bigcap_{I} I , \bigcap_{I} E , \bigcup_{I} I , \bigcup_{I} E)$
 
-    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\centering\arraybackslash}m{7cm}|}
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{fitchproof}[arrayenv=tabular]
             \open
@@ -2415,30 +2681,31 @@ handy later.
             \have [ ] {2} {\vdots}
             \have  [ ] {2} {a \in A_i}
             \close
-            \have  [ ]{2} {\therefore a \in \bigcap_{i \in I} A_i } \by{$I\bigcap_{I}$}{}
+            \have  [ ]{2} {\therefore a \in \bigcap_{i \in I} A_i } \by{$\bigcap_{I} I$}{}
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {a \in \bigcap_{i \in I} A_i }
             \hypo [ ] {2} {n \in  I  }
-            \have  [ ]{2} {\therefore  a \in  A_n} \by{$E\bigcap_{I}$}{}
+            \have  [ ]{2} {\therefore  a \in  A_n} \by{$\bigcap_{I} E$}{}
         \end{fitchproof}
         \\
         \hline
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {a \in A_n  }
             \hypo [ ] {2} {n \in I  }
-            \have  [ ]{2} {\therefore  a \in \bigcup_{i \in I} A_i } \by{$I\bigcup_{I}$}{}
+            \have  [ ]{2} {\therefore  a \in \bigcup_{i \in I} A_i } \by{$\bigcup_{I} I$}{}
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
             \have [ ] {1} { a \in \bigcup_{i \in I} A_i  }
             \open
-            \have [ ] {1} { i \in I \land a \in A_i }
+            \have [ ] {1} { i \in I }
+            \have [ ] {1} {  a \in A_i }
             \have [ ] {2} {\vdots}
             \have  [ ] {2} {\theta}
             \close
-            \have  [ ]{2} {\therefore\theta } \by{$E\bigcup_{I}$}{}
+            \have  [ ]{2} {\therefore\theta } \by{$\bigcup_{I} E$}{}
         \end{fitchproof}
         \\
         \hline
