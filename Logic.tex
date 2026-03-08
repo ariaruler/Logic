@@ -36,7 +36,7 @@
 
 
 \newtheorem{undefined}{Undefined}[section]
-\newtheorem{definition}{Definition}[section]
+\newtheorem{definition}{definition}[section]
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}{Lemma}[section]
 \newtheorem{axiom}{Axiom}[section]
@@ -817,7 +817,7 @@ formula(WWF).
 
 %
 \begin{definition}
-    \textbf{Atomic formula} every single obbject or two obj(conatants and variable) and a binary
+    \textbf{Atomic formula} every single obj or two obj(conatants and variable) and a binary
     predicate $(=,\in)$ between them like $x=b , y\in C, ...$
     \\
     we denote atomic formulas with $A_{i}$.
@@ -838,8 +838,7 @@ formula(WWF).
         \setlength{\itemsep}{0pt} % No extra space between items
         \item atomic formulas $(A_{i})$
         \item if $A$ is a formula then $\neg A$ is a formula too.
-        \item if $A ,B$ are two formulas then $A ** B $ is a formula too.($**$ can be $\to
-                  ,\land ,\lor$)
+        \item if $A ,B$ are two formulas then $A \bigcirc  B $ is a formula too.($\bigcirc $ can be $\to,\land ,\lor$).
     \end{enumerate}
 
     for example $(A_0 \to A_1 ,\neg A_3)$ \\ we easily call WWF ``formula'' and
@@ -876,15 +875,30 @@ false?) the answer is unfortunately \textbf{No}.
 
 %
 \begin{definition}
-    \textbf{Substitution} we define Substitution for a formula like this.
+    \textbf{Substitution for obj} we define Substitution an obj with variable  like this.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item for atomic formulas like $(A_{i})$ if obj was not used before just replace it.
-              (example $(a \in A)[b/a]$ is $b \in A$ and if the alternative was in formula.
-              it will not change.)
-        \item if formula $A$ is complex do it for all atomes.
+        \item for variables if $x=y$ then $y[a/x]:=a$ and if $x \not= y$ then $y[a/x]:=y$.
+        \item for constants  $c[a/x]:=a$.
     \end{enumerate}
 \end{definition}
+
+\begin{definition}
+    \textbf{Substitution for formulas} we define Substitution for a formula like this.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item for atomic formulas we define it like this. if it's a single object we do it 
+        as we explain in ``\textbf{Substitution for obj}''. if it's like $x = y$ or $x \in X$
+        ($x,y$ can be both constants and variables). we define it like this.
+            \[ (x=y)[a/z] := (x[a/z] = y[a/z]) \]
+            \[ (x \in X)[a/z] := (x[a/z] \in X[a/z]) \]
+        \item if formula $A$ is complex we define it like this.
+            \[ (B \bigcirc C)[a/x] := (B[a/x] \bigcirc C[a/x]) \]
+            ($\bigcirc $ can be $\to,\land ,\lor$).
+            \[ (\neg B)[a/x] := (\neg B[a/x]) \]
+    \end{enumerate}
+\end{definition}
+
 
 simply means in a formula put an obj like $b$ instead of another like $a$.we
 denote it by $A[b/a]$ or $A[\frac{b}{a}]$
@@ -937,7 +951,7 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
             \have [ ] {2} {\vdots}
             \have  [ ] {2} {\psi}
             \close
-            \have  [ ]{2} {\therefore \varphi \to \psi} \by{$\to I$}{}
+            \have  [ ]{2} {\therefore \varphi \to  \psi} \by{$\to I$}{}
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
@@ -1109,13 +1123,13 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
         \have   {2} {\varphi \to \psi }                              \by{$\to, I1,n$ }{}
         \have   {2} {\psi \to \varphi }                              \by{$\to, In+1,m$}{}
         \have  {2} {(\varphi \to \psi)\land (\psi \to \varphi)}     \by{$\land I,m+1,m+2$}{}
-        \have  {2} {\varphi \leftrightarrow \psi}                     \by{$Def.,m+3$ }{}
+        \have  {2} {\varphi \leftrightarrow \psi}                     \by{$def.,m+3$ }{}
     \end{fitchproof}
 
     \begin{fitchproof}[arrayenv=tabular]
         \have {1} {\varphi \leftrightarrow \psi }                   \by{ass}{}
         \have {2} {\varphi }                                        \by{ass}{}
-        \have  {2} {(\varphi \to \psi)\land (\psi \to \varphi)}     \by{$Def. 1$}{}
+        \have  {2} {(\varphi \to \psi)\land (\psi \to \varphi)}     \by{$def. 1$}{}
         \have  {2} {\varphi \to \psi }                              \by{$\land E 3$}{}
         \have  {2} {\psi}                                           \by{$\to E 1,4$}{}
     \end{fitchproof}
@@ -1181,7 +1195,7 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
             \have {} {q} \by {$\to E  1,3$} {}
             \have {} {r} \by {$\to E  2,4$} {}
             \close
-            \have {} {p \to r} \by  {$I \to 3,5$} {}
+            \have {} {p \to r} \by  {$\to I$} {}
 
         \end{fitchproof}
          &
@@ -1191,36 +1205,36 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
             \have {} {p} \by {$acp$} {}
             \have {} {q} \by {$ass$} {}
             \close
-            \have {} {p \to q} \by {$I \to $} {}
+            \have {} {p \to q} \by {$\to I $} {}
 
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
-            \have{1}{(p \land q) \land r}      \by{ass}{}
-            \have{2}{p \land q}               \by{$\land E 1$}{}
-            \have{3}{r}                       \by{$\land E 1$}{}
-            \have{4}{p}                       \by{$\land E 2$}{}
-            \have{5}{q}                       \by{$\land E 2$}{}
-            \have{6}{q \land r}               \by{$\land I 3,5$}{}
-            \have{7}{p \land (q \land r)}     \by{$\land I 4,6$}{}
+            \have{1}{(p \land q) \land r}      \by{$ass$}{}
+            \have{2}{p \land q}               \by{$\land E,1$}{}
+            \have{3}{r}                       \by{$\land E,1$}{}
+            \have{4}{p}                       \by{$\land E,2$}{}
+            \have{5}{q}                       \by{$\land E,2$}{}
+            \have{6}{q \land r}               \by{$\land I,3,5$}{}
+            \have{7}{p \land (q \land r)}     \by{$\land I,4,6$}{}
         \end{fitchproof}
         \\
         \hline
         \begin{fitchproof}[arrayenv=tabular]
-            \have {} {p \land q} \by {ass} {}
-            \have {} {p} \by {E $\land$ 1} {}
-            \have {} {q} \by {E $\land$ 1} {}
-            \have {} {q \land p} \by {I $\land$ 2,3} {}
+            \have {} {p \land q} \by {$ass$} {}
+            \have {} {p} \by {$\land E,1$} {}
+            \have {} {q} \by {$\land E,1$} {}
+            \have {} {q \land p} \by {$\land I,2,3$} {}
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
-            \have {} {p \to q} \by {ass} {}
+            \have {} {p \to q} \by {$ass$} {}
             \open
             \have {} {p \land r} \by {acp} {}
-            \have {} {p} \by {E $\land$ 2} {}
-            \have {} {q} \by {E $\to$ 1,3} {}
+            \have {} {p} \by {$\land E,2$} {}
+            \have {} {q} \by {$\to E,1,3$} {}
             \close
-            \have {} {(p \land r) \to q} \by {I $\to$ 2,4} {}
+            \have {} {(p \land r) \to q} \by {$\to I$} {}
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
@@ -1229,158 +1243,149 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
             \have {} {p} \by {$acp$} {}
             \open
             \have {} {q} \by {$acp$} {}
-            \have {} {p \land q} \by {$I \land 2,3$} {}
+            \have {} {p \land q} \by {$\land I 2,3$} {}
             \have {} {r} \by {$\to E  1,4$} {}
             \close
-            \have {} {q \to r} \by {$I \to 3,5$} {}
+            \have {} {q \to r} \by {$\to I$} {}
             \close
-            \have {} {p \to (q \to r)} \by  {$I \to 2,6$} {}
+            \have {} {p \to (q \to r)} \by  {$\to I$} {}
         \end{fitchproof}
         \\
-        \hline
-    \begin{fitchproof}[arrayenv=tabular]
 
-        \have{1}{p \rightarrow (q \rightarrow r)} \by{$ass$}{}
-        \open
-        \have{2} {p \land q} \by{$acp$}{}
+    \end{tabular}
 
-        \have{3}{p} \by{2, $\land$E}{}
-        \have{4}{q \rightarrow r} \by{1,3, $\rightarrow$E}{}
-        \have{5}{q} \by{2, $\land$E}{}
-        \have{6}{r} \by{4,5, $\rightarrow$E}{}
-        \close
-        \have{7}{(p \land q) \rightarrow r} \by{2-6, $\rightarrow$I}{}
+    \begin{tabular}{>{\centering\arraybackslash}m{5cm}|>{\centering\arraybackslash}m{5cm}|>{\centering\arraybackslash}m{5cm}}
 
-    \end{fitchproof}
-         &
         \begin{fitchproof}[arrayenv=tabular]
-            \have {} {p \to q} \by {ass} {}
+
+            \have{1}{p \rightarrow (q \rightarrow r)} \by{$ass$}{}
             \open
-            \have {} {p \land r} \by {acp} {}
-            \have {} {p} \by {E $\land$ 2} {}
-            \have {} {q} \by {E $\to$ 1,3} {}
+            \have{2} {p \land q} \by{$acp$}{}
+
+            \have{3}{p} \by{$\land E,2 $}{}
+            \have{4}{q \rightarrow r} \by{$\to E,1,3$}{}
+            \have{5}{q} \by{$\land E,2 $}{}
+            \have{6}{r} \by{$\to E,4,5$}{}
             \close
-            \have {} {(p \land r) \to q} \by {I $\to$ 2,4} {}
+            \have{7}{(p \land q) \rightarrow r} \by{$\to I $}{}
+
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
-            \have {} {(p \land q) \to r} \by {$ass$} {}
+
+            \have{2}{p \lor q} \by{$ass$}{}
             \open
-            \have {} {p} \by {$acp$} {}
+            \have{3}{p} \by{$acp$}{}
+            \have{4}{p \lor q } \by{$\lor I,2$}{}
+            \close
             \open
-            \have {} {q} \by {$acp$} {}
-            \have {} {p \land q} \by {$I \land 2,3$} {}
-            \have {} {r} \by {$\to E  1,4$} {}
+            \have{5}{q} \by{$acp$}{}
+            \have{6}{q \lor p} \by{$\lor I,4$}{}
+
             \close
-            \have {} {q \to r} \by {$I \to 3,5$} {}
+            \have{8}{q \lor p } \by{$\lor E,1$}{}
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \have{1}{(p \lor q) \lor r} \by{ass}{}
+            \open
+            \have{2}{p \lor q} \by{$acp$}{}
+            \open
+            \have{3}{p} \by{$acp$}{}
+            \have{4}{p \lor (q \lor r)} \by{$\lor I,3$}{}
             \close
-            \have {} {p \to (q \to r)} \by  {$I \to 2,6$} {}
+            \open
+            \have{5}{q} \by{$acp$}{}
+            \have{6}{q \lor r} \by{$\lor I,5$}{}
+            \have{7}{p \lor (q \lor r)} \by{$\lor I,6$}{}
+            \close
+            \have{8}{p \lor (q \lor r)} \by{$\lor E,2$}{}
+            \close
+            \open
+            \have{9}{r} \by{$acp$}{}
+            \have{10}{q \lor r} \by{ $\lor I,9$}{}
+            \have{11}{p \lor (q \lor r)} \by{ $\lor I,10$}{}
+            \close
+            \have{12}{p \lor (q \lor r)} \by{ $\lor E,1$}{}
         \end{fitchproof}
         \\
     \end{tabular}
 
+    \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}}
 
+        \begin{fitchproof}[arrayenv=tabular]
+            \have{1} {p \land (q \lor r)} \by {ass} {}
+            \open
+            \have{2} {p} \by {$\land E 1 $} {}
+            \have{3} {q \lor r} \by {$\land E 1$} {}
+            \open
+            \have{4} {q} \by {$acp$} {}
+            \have{5} {p \land q} \by {$\land E 2,4$} {}
+            \have{6} {(p \land q) \lor (p \land r)} \by {$\lor I 5$} {}
+            \close
+            \open
+            \have{7} {r} \by {$acp$} {}
+            \have{8} {p \land r} \by {I\(\land\) 2,7} {}
+            \have{9} {(p \land q) \lor (p \land r)} \by {$\lor I 8$} {}
+            \close
+            \have{9} {(p \land q) \lor (p \land r)} \by {$\lor I 8$} {}
+            \close
+            \have{10} {(p \land q) \lor (p \land r)} \by {$\lor E 3$} {}
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \have{1} {(p \to q) \land (r \to s)} \by {ass} {}
+            \have{1} {(p \to q) } \by {$\land E 1$} {}
+            \have{1} { (r \to s)} \by {$\land E 1$} {}
+            \open
+            \have{2} {p \lor r} \by {$acp$} {}
+            \open
+            \have{4} {p} \by {$acp$} {}
+            \have{5} { q} \by {$\to E 2,5$} {}
+            \have{6} {q \lor s} \by {$\lor I,6$} {}
+            \close
+            \open
+            \have{7} {r} \by {$acp$} {}
+            \have{8} {s} \by {$\to E 3,8$} {}
+            \have{9} {q \lor s} \by {$\lor I 9$} {}
+            \close
+            \have{9} {q \lor s} \by {$\lor E,4$} {}
+            \close
+            \have{10} {(p \lor r) \to (q \lor s)} \by {$\to I $} {}
+        \end{fitchproof}
+        \\
+    \end{tabular}
 
-
-    \begin{fitchproof}[arrayenv=tabular]
-        \have {} {(p \land q) \to r} \by {$ass$} {}
-        \open
-        \have {} {p} \by {$acp$} {}
-        \open
-        \have {} {q} \by {$acp$} {}
-        \have {} {p \land q} \by {$I \land 2,3$} {}
-        \have {} {r} \by {$E \to 1,4$} {}
-        \close
-        \have {} {q \to r} \by {$I \to 3,5$} {}
-        \close
-        \have {} {p \to (q \to r)} \by  {$I \to 2,6$} {}
-
-    \end{fitchproof}
-
-    \begin{fitchproof}[arrayenv=tabular]
-
-        \have{1} {p \land (q \lor r)} \by {ass} {}
-
-        \open
-        \have{2} {p} \by {E\(\land\) 1} {}
-        \have{3} {q \lor r} \by {E\(\land\) 1} {}
-
-        \open
-        \have{4} {q} \by {acp} {}
-        \have{5} {p \land q} \by {I\(\land\) 2,4} {}
-        \have{6} {(p \land q) \lor (p \land r)} \by {I\(\lor\) 5} {}
-        \close
-
-        \open
-        \have{7} {r} \by {acp} {}
-        \have{8} {p \land r} \by {I\(\land\) 2,7} {}
-        \have{9} {(p \land q) \lor (p \land r)} \by {I\(\lor\) 8} {}
-        \close
-        \have{9} {(p \land q) \lor (p \land r)} \by {I\(\lor\) 8} {}
-        \close
-
-        \have{10} {(p \land q) \lor (p \land r)} \by {E\(\lor\) 3,6,9} {}
-
-    \end{fitchproof}
-
-
-    \begin{fitchproof}[arrayenv=tabular]
-
-\have{1}{(p \lor q) \lor r} \by{ass}{}
-\open
-    \have{2}{p \lor q} \by{$acp$}{}
-    \open
-        \have{3}{p} \by{$acp$}{}
-        \have{4}{p \lor (q \lor r)} \by{3, $\lor$I}{}
-    \close
-     \open
-        \have{5}{q} \by{$acp$}{}
-        \have{6}{q \lor r} \by{5, $\lor$I}{}
-        \have{7}{p \lor (q \lor r)} \by{6, $\lor$I}{}
-\close
-   \have{8}{p \lor (q \lor r)} \by{2,4,7, $\lor$E}{}
-\close
-\open
-    \have{9}{r} \by{$acp$}{}
-    \have{10}{q \lor r} \by{9, $\lor$I}{}
-    \have{11}{p \lor (q \lor r)} \by{10, $\lor$I}{}
-\close
-\have{12}{p \lor (q \lor r)} \by{1,8,11, $\lor$E}{}
-\end{fitchproof}
-
-
-\begin{fitchproof}[arrayenv=tabular]
-    \have{1}{p \to q} \by{$assumption$}{}
-    \open
-        \have{2}{\neg p \lor q} \by{$acp$}{}
-        \open
+    \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}}
+        \begin{fitchproof}[arrayenv=tabular]
+            \have {} {p \to q} \by {$ass$} {}
+            \have {} {\neg q} \by {$ass$} {}
+            \open
+            \have {} {p} \by {$acp$} {}
+            \have {} {q} \by {$\to E,1,3$} {}
+            \have {} {\bot} \by {$\bot I,2,4$} {}
+            \close
+            \have {} {\neg p} \by  {$\neg I$} {}
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \have{1}{p \to q} \by{$ass$}{}
+            \open
+            \have{2}{\neg(\neg p \lor q)} \by{$acp$}{}
+            \open
             \have{3}{p} \by{$acp$}{}
-            \have{4}{q} \by{$E\to,1,3$}{}
-            \have{5}{\neg p \lor q} \by{$I\lor,4$}{}
-            \have{6}{\bot} \by{$E\neg,2,5$}{}
-        \close
-        \have{7}{\neg p} \by{$I\neg,3-6$}{}
-        \have{8}{\neg p \lor q} \by{$I\lor,7$}{}
-        \have{9}{\bot} \by{$E\neg,2,8$}{}
-    \close
-    \have{10}{\neg(\neg p \lor q)} \by{$RAA$}{2-9}
-\end{fitchproof}
-
-\begin{fitchproof}[arrayenv=tabular]
-    \have {} {p \to q} \by {$assumption$} {}
-    \have {} {\neg q} \by {$assumption$} {}
-    \open
-        \have {} {p} \by {$acp$} {}
-        \have {} {q} \by {$E \to$} {}
-        \have {} {\bot} \by {$E \neg 2,4$} {}
-    \close
-    \have {} {\neg p} \by  {$I \neg$} {}
-\end{fitchproof}
-
-
-
-
-
+            \have{4}{q} \by{$\to E,1,3$}{}
+            \have{5}{\neg p \lor q} \by{$\lor I,4$}{}
+            \have{6}{\bot} \by{$\bot I,2,5$}{}
+            \close
+            \have{7}{\neg p} \by{$\neg I$}{}
+            \have{8}{\neg p \lor q} \by{$\lor I,7$}{}
+            \have{9}{\bot} \by{$\bot I,2,8$}{}
+            \close
+            \have{10}{\neg p \lor q} \by{$\neg I$}{}
+        \end{fitchproof}
+        \\
+    \end{tabular}
 
 \end{example}
 
@@ -1418,7 +1423,7 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
     \textbf{Big AND and OR} assume a set like $ \{a_{0},a_{1},a_{2},...,a_{n}\}$
     we define \textbf{big AND} like this.
     \\
-    \[ \bigwedge\limits_{i=0}^n P(a_{i}) : Pa_{0} \land P(a_{1}) \land P(a_{2}) \land... \land P(a_{n})\]
+    \[ \bigwedge\limits_{i=0}^n P(a_{i}) : P(a_{0}) \land P(a_{1}) \land P(a_{2}) \land... \land P(a_{n})\]
     \\
     and \textbf{big OR}
     \\
@@ -1432,6 +1437,8 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
 
 \end{definition}
 
+
+
 \begin{Rule}
     \textbf{use of open propositions} assume universe of discourse is $ \{a_{0},a_{1},a_{2},...,a_{n}\}$
     \\
@@ -1441,11 +1448,11 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
     means :
     \\
     \begin{fitchproof}[arrayenv=tabular]
-        \have [c_{0}] {1} {P(a_{0})}
-        \have [c_{1}] {1} {P(a_{1})}
-        \have [c_{2}] {1} {P(a_{2})}
+        \have [c_{0}] {1} {P[a_{0}/x]}
+        \have [c_{1}] {1} {P[a_{1}/x]}
+        \have [c_{2}] {1} {P[a_{2}/x]}
         \have [ ] {2} {\vdots}
-        \have [c_{n}] {1} {P(a_{n})}
+        \have [c_{n}] {1} {P[a_{n}/x]}
     \end{fitchproof}
     \par
     if $Px$ was been assemed then like this
@@ -1458,19 +1465,19 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
     means :
     \begin{fitchproof}[arrayenv=tabular]
         \open
-        \have [c_{0}] {1} {P(a_{0})}
+        \have [c_{0}] {1} {P[a_{0}/x]}
         \have [ ] {2} {\vdots}
         \close
         \open
-        \have [c_{1}] {1} {P(a_{1})}
+        \have [c_{1}] {1} {P[a_{1}/x]}
         \have [ ] {2} {\vdots}
         \close
         \open
-        \have [c_{2}] {1} {P(a_{2})}
+        \have [c_{2}] {1} {P[a_{2}/x]}
         \have [ ] {2} {\vdots}
         \close
         \open
-        \have [c_{n}] {1} {P(a_{n})}
+        \have [c_{n}] {1} {P[a_{n}/x]}
         \have [ ] {2} {\vdots}
         \close
     \end{fitchproof}
@@ -1481,14 +1488,14 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
     \textbf{Universal quantification} assume universe of discourse is $ \{a_{0},a_{1},a_{2},...,a_{n}\}$
     we define $\forall x P(x)$
     \\
-    \[ \forall x Px : \bigwedge\limits_{i=0}^n P(a_{i}) \]
+    \[ \forall x P(x) : \bigwedge\limits_{i=0}^n P[a_{i}/x] \]
 \end{definition}
 
 \begin{definition}
     \textbf{Existential quantification} assume universe of discourse is $ \{a_{0},a_{1},a_{2},...,a_{n}\}$
     we define $\exists x Px$
     \\
-    \[ \exists  x Px : \bigvee\limits_{i=0}^n P(a_{i}) \]
+    \[ \exists  x P(x) : \bigvee\limits_{i=0}^n P[a_{i}/x] \]
 \end{definition}
 
 \begin{definition}
@@ -1517,21 +1524,21 @@ as you can see $\forall x \Phi (x) $ and $\exists x \Phi (x) $ are sentences.
         \\
         \hline
         \begin{fitchproof}[arrayenv=tabular]
-            \hypo [ ] {2} {\Phi (y)}
-            \have  [ ]{2} {\therefore \forall x \Phi (x)} \by{$\forall I$}{}
+            \hypo [ ] {2} {\phi (x)}
+            \have  [ ]{2} {\therefore \forall x \phi (x)} \by{$\forall I$}{}
         \end{fitchproof}
          &
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
-            \item  $y$ is a variable.
-            \item  $\Phi (y)$ must not be assumed.
+            \item  $x$ is a variable.
+            \item  $\phi (x)$ must not be assumed.
         \end{enumerate}
 
         \\
         \hline
         \begin{fitchproof}[arrayenv=tabular]
-            \hypo [ ] {2} {\forall x \Phi (x)}
-            \have  [ ]{2} {\therefore \Phi (a)} \by{$\forall E$}{}
+            \hypo [ ] {2} {\forall x \phi (x)}
+            \have  [ ]{2} {\therefore \phi [a/x]} \by{$\forall E$}{}
         \end{fitchproof}
          &
         \begin{enumerate}
@@ -1542,8 +1549,8 @@ as you can see $\forall x \Phi (x) $ and $\exists x \Phi (x) $ are sentences.
         \\
         \hline
         \begin{fitchproof}[arrayenv=tabular]
-            \hypo [ ] {2} {\Phi (a)}
-            \have  [ ]{2} {\therefore \exists x \Phi (x)} \by{$\exists I$}{}
+            \hypo [ ] {2} {\phi [a/x]}
+            \have  [ ]{2} {\therefore \exists x \phi (x)} \by{$\exists I$}{}
         \end{fitchproof}
 
          &
@@ -1556,9 +1563,9 @@ as you can see $\forall x \Phi (x) $ and $\exists x \Phi (x) $ are sentences.
         \\
         \hline
         \begin{fitchproof}[arrayenv=tabular]
-            \have [ ] {1} {\exists x \Phi (x)}
+            \have [ ] {1} {\exists x \phi (x)}
             \open
-            \have [ ] {1} {\Phi (y)}
+            \have [ ] {1} {\phi (x)}
             \have [ ] {2} {\vdots}
             \have  [ ] {2} {\theta}
             \close
@@ -1567,9 +1574,9 @@ as you can see $\forall x \Phi (x) $ and $\exists x \Phi (x) $ are sentences.
          &
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
-            \item  $y$ is a variable.
-            \item  $\Phi (y)$ must not be assumed in previous lines.(except ones that are closed)
-            \item $y$ is not free in $\theta$
+            \item  $x$ is a variable.
+            \item  $\phi (x)$ must not be assumed in previous lines.(except ones that are closed)
+            \item $x$ is not free in $\theta$
         \end{enumerate}
         \\
         \hline
@@ -1578,50 +1585,50 @@ as you can see $\forall x \Phi (x) $ and $\exists x \Phi (x) $ are sentences.
 
     \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}>{\centering\arraybackslash}m{7.5cm}}
         \begin{fitchproof}[arrayenv=tabular]
-            \have  {2} {\Phi (y)}                                         \by{$ass$  }{}
-            \have  {2} {\Phi (a_{0})}                                     \by{$Def.1$ }{}
+            \have  {2} {\phi (x)}                                         \by{$ass$  }{}
+            \have  {2} {\phi [a_{0}/x]}                                     \by{$def.1$ }{}
             \have [ ] {2} {\vdots}
-            \have [n] {2} {\Phi (a_{n})}                                       \by{$Def.1$}{}
-            \have {2} {\bigwedge\limits_{i=0}^n \Phi (a_{i}) }          \by{$\land I,2,3,...,n+2$}{}
-            \have  {2} { \forall x \Phi (x)}                  \by{$Def. n+3$ }{}
+            \have [n] {2} {\phi [a_{n}/x]}                                       \by{$def.1$}{}
+            \have {2} {\bigwedge\limits_{i=0}^n \phi [a_{i}/x] }          \by{$\land I,2,3,...,n+2$}{}
+            \have  {2} { \forall x \phi (x)}                  \by{$def. n+3$ }{}
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
-            \have  {2} {\forall x \Phi (x)}                         \by{$ass$ }{}
-            \have  {2} {\bigwedge\limits_{i=0}^n \Phi (a_{i})}      \by{$Def.1$}{}
-            \have  {2} { \Phi (a)}                         \by{$\land E 2$}{}
+            \have  {2} {\forall x \phi (x)}                         \by{$ass$ }{}
+            \have  {2} {\bigwedge\limits_{i=0}^n \phi [a_{i}/x]}      \by{$def.1$}{}
+            \have  {2} { \phi [a/x]}                         \by{$\land E 2$}{}
         \end{fitchproof}
 
         \\
 
         \begin{fitchproof}[arrayenv=tabular]
-            \have  {2} {\Phi (a)}
-            \have  {2} {\bigvee\limits_{i=0}^n \Phi (a_{i})}   \by{$\lor I 1$}{}
-            \have  {2} { \exists x \Phi (x)}         \by{$Def 2$}{}
+            \have  {2} {\phi [a/x]}
+            \have  {2} {\bigvee\limits_{i=0}^n \phi [a_{i}/x]}   \by{$\lor I 1$}{}
+            \have  {2} { \exists x \phi (x)}         \by{$def 2$}{}
         \end{fitchproof}
 
          &
 
         \begin{fitchproof}[arrayenv=tabular]
-            \have  {1} {\exists x \Phi (x)}
-            \have  {1} {\bigvee\limits_{i=0}^n \Phi (a_{i}) }
+            \have  {1} {\exists x \phi (x)}
+            \have  {1} {\bigvee\limits_{i=0}^n \phi [a_{i}/x] }
             \open
-            \have  {1} {\Phi (a_{0})}                  \by{acp  }{}
+            \have  {1} {\phi [a_{0}/x]}                  \by{acp  }{}
             \have [ ] {2} {\vdots}
             \have  [n] {2} {\theta}
             \close
             \open
-            \have  {1} {\Phi (a_{1})}                \by{acp  }{}
+            \have  {1} {\phi [a_{1}/x]}                \by{acp  }{}
             \have [ ] {2} {\vdots}
             \have  [m] {2} {\theta}
             \close
             \have [ ] {2} {\vdots}
             \open
-            \have [l] {1} {\Phi (a_{2})}                    \by{acp  }{}
+            \have [l] {1} {\phi [a_{2}/x]}                    \by{acp  }{}
             \have [ ] {2} {\vdots}
             \have  [r] {2} {\theta}
             \close
-            \have  {2} {\theta }                    \by{$\exists E$}{}
+            \have  {2} {\theta }                    \by{$\exists E,3$}{}
         \end{fitchproof}
 
     \end{tabular}
@@ -1724,13 +1731,13 @@ with rules and axioms.
             \close
             \have  {2} {x \in A \rightarrow x \in B }              \by{$I\rightarrow,1,n$ }{}
             \have  {2} {\forall x(x \in A \rightarrow x \in B )}   \by{$\forall I,n+1$ }{}
-            \have  {2} {A \subseteq B  }                           \by{$Def.n+2$ }{}
+            \have  {2} {A \subseteq B  }                           \by{$def.n+2$ }{}
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
             \have {1} {A \subseteq B}                               \by{ass }{}
             \have  {2} {a \in A}                                   \by{ass }{}
-            \have  {2} {\forall x(x \in A \rightarrow x \in A )}   \by{$Def.1$ }{}
+            \have  {2} {\forall x(x \in A \rightarrow x \in A )}   \by{$def.1$ }{}
             \have  {2} {a \in A \rightarrow a \in B }             \by{$\forall E,4$ }{}
             \have  {2} {  a \in B}                                   \by{$E\rightarrow 3,5$}{}
         \end{fitchproof}
@@ -1819,7 +1826,7 @@ so we can rewrite axiom of Extensionality like this.
         \have  {2} {B \subseteq A }                                                          \by{$\subseteq I,n+2,m$ }{}
         \have  {2} {\forall X, Y((X \subseteq Y \wedge Y \subseteq X) \rightarrow X=Y)}   \by{Extensionality }{}
         \have  {2} {(A \subseteq B \wedge B \subseteq A) \rightarrow A=B}                 \by{$\forall E,m+2$ }{}
-        \have  {2} {A \subseteq B \wedge B \subseteq A}                                       \by{$I\wedge,n+1,m+1$}{}
+        \have  {2} {A \subseteq B \wedge B \subseteq A}                                       \by{$\land I,n+1,m+1$}{}
         \have  {2} {A=B}                                                                        \by{$E\rightarrow,m+3,m+4$}{}
     \end{fitchproof}
     \par
@@ -1835,21 +1842,21 @@ so we can rewrite axiom of Extensionality like this.
 \end{theorem}
 
 \begin{axiom}
-    \textbf{Weak comprehension} this axioms says for every open proposition with just one variable
-    like $\Phi(x)$ there is a set such that every $x$ is a member of that set if and only if it holds
-    $\Phi(x)$.
+    \textbf{Weak comprehension} $(schema)$ this axioms says for every open proposition with just one variable
+    like $\phi (x,x_0 , x_1, ... , x_n)$ there is a set such that every $x$ is a member of that set if and only if it holds
+    $\phi (x,x_0 , x_1, ... , x_n)$.
     \\
-    \[ \exists X \forall x  (\Phi (x) \leftrightarrow x \in X) \]
+    \[ \forall x_0 , x_1, ... , x_n \exists X \forall x  (\phi (x,x_0 , x_1, ... , x_n) \leftrightarrow x \in X) \]
     \\
-    by axiom of extentionality we can show that y is unique.
-    so we denote it as $\{ x | \Phi (x)\}$.
+    by axiom of extentionality we can show that $X$ is unique.
+    so we denote it as $\{ x | \phi (x,x_0 , x_1, ... , x_n)\}$.
 \end{axiom}
 
 this axiom show that why Russell's paradox doesn't happened here because if ou
 assume $R=\{x|x \notin x\}$ is a set.you can't prove or disprove $R \in R$. (we
 don't need to prove that now.we will prove it in \textbf{'MetaLogic'}.)
 
-\section{Definitions of set theory}
+\section{definitions of set theory}
 Let's talk about some definitions in set theoty.These definitions will come in
 handy later.
 
@@ -1869,7 +1876,7 @@ handy later.
     \begin{fitchproof}[arrayenv=tabular]
         \open
         \have{1} {x \in \emptyset}                                \by{acp}{}
-        \have {2} {\forall x(x \notin \emptyset)}                  \by{lemma $4.4.1 $ }{}
+        \have {2} {\forall x(x \notin \emptyset)}                  \by{$def$ }{}
         \have   {2} {x \notin \emptyset}                           \by{$\forall E ,2$}{}
         \have   {2} {\bot}                                          \by{$\bot I ,1,3$ }{}
         \have {1} {x \in X  }                                        \by{$\bot E ,4$}{}
@@ -1891,7 +1898,7 @@ handy later.
         \close
         \open
         \have   {2} {y \in \emptyset }                                      \by{acp}{}
-        \have  {1} {\forall y (y \notin \emptyset  )}                        \by{Def.}{}
+        \have  {1} {\forall y (y \notin \emptyset  )}                        \by{def.}{}
         \have {2} {y \notin \emptyset  }                                    \by{$\forall E,7$  }{}
         \have   {2} {\bot}                                                 \by{$\bot I,6,8$ }{}
         \have   {2} {y \in A}                                                 \by{$\bot E,9$}{}
@@ -1903,7 +1910,7 @@ handy later.
         \have  {2} {A = \emptyset }                                                    \by{ass}{}
         \open
         \have  {1} {y \in A }                                               \by{acp}{}
-        \have  {1} {\forall y (y \notin \emptyset )}                                \by{Def.}{}
+        \have  {1} {\forall y (y \notin \emptyset )}                                \by{def.}{}
         \have   {2} {y \in \emptyset }                                       \by{$E=,1,2$}{}
         \have   {2} {y \notin \emptyset }                                    \by{$\forall E,3$ }{}
         \have  {2} {\bot}                                                  \by{$\bot I,4,5$ }{}
@@ -2105,10 +2112,14 @@ handy later.
     \textbf{Big Union and Intersection} \\
     Intersection:
     \[  \bigcap A:=\{x \mid \forall X (X \in A \rightarrow x \in X) \} \]
+    i.e.
+    \[  \bigcap A:=\{x \mid \forall X \in A \quad x \in X \} \]
     therefore.
     \[\forall x \Big( x \in \bigcap A  \leftrightarrow  \forall X (X \in A \rightarrow x \in X)\Big) \]
     Union:
     \[  \bigcup A:=\{x \mid \exists X (X \in A \wedge x \in X) \} \]
+    i.e.
+    \[  \bigcup A:=\{x \mid \exists X \in A \quad x \in X \} \]
     therefore.
     \[\forall x( x \in \bigcup A \leftrightarrow  (\exists X (X \in A \wedge x \in X))) \]
 \end{definition}
@@ -2490,21 +2501,21 @@ handy later.
         \\
         \hline
         \begin{fitchproof}[arrayenv=tabular]
-            \hypo [ ] {2} {\Phi (y)}
-            \have  [ ]{2} {\therefore \forall x \Phi (x)} \by{$\forall I$}{}
+            \hypo [ ] {2} {\phi (x)}
+            \have  [ ]{2} {\therefore \forall x \phi (x)} \by{$\forall I$}{}
         \end{fitchproof}
          &
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
-            \item  $y$ is a variable.
-            \item  $\Phi (y)$ must not be assumed.
+            \item  $x$ is a variable.
+            \item  $\phi (x)$ must not be assumed.
         \end{enumerate}
 
         \\
         \hline
         \begin{fitchproof}[arrayenv=tabular]
-            \hypo [ ] {2} {\forall x \Phi (x)}
-            \have  [ ]{2} {\therefore \Phi (t)} \by{$\forall E$}{}
+            \hypo [ ] {2} {\forall x \phi (x)}
+            \have  [ ]{2} {\therefore \phi [t/x]} \by{$\forall E$}{}
         \end{fitchproof}
          &
         \begin{enumerate}
@@ -2515,8 +2526,8 @@ handy later.
         \\
         \hline
         \begin{fitchproof}[arrayenv=tabular]
-            \hypo [ ] {2} {\Phi (t)}
-            \have  [ ]{2} {\therefore \exists x \Phi (x)} \by{$\exists I$}{}
+            \hypo [ ] {2} {\phi [t/x]}
+            \have  [ ]{2} {\therefore \exists x \phi (x)} \by{$\exists I$}{}
         \end{fitchproof}
 
          &
@@ -2529,9 +2540,9 @@ handy later.
         \\
         \hline
         \begin{fitchproof}[arrayenv=tabular]
-            \have [ ] {1} {\exists x \Phi (x)}
+            \have [ ] {1} {\exists x \phi (x)}
             \open
-            \have [ ] {1} {\Phi (y)}
+            \have [ ] {1} {\phi (x)}
             \have [ ] {2} {\vdots}
             \have  [ ] {2} {\theta}
             \close
@@ -2540,9 +2551,9 @@ handy later.
          &
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
-            \item  $y$ is a variable.
-            \item  $\Phi (y)$ must not be assumed in previous lines.(except ones that are closed)
-            \item $y$ is not free in $\theta$
+            \item  $x$ is a variable.
+            \item  $\phi (x)$ must not be assumed in previous lines.(except ones that are closed)
+            \item $x$ is not free in $\theta$
         \end{enumerate}
         \\
         \hline
@@ -2555,46 +2566,46 @@ handy later.
 
     \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}>{\centering\arraybackslash}m{7.5cm}}
         \begin{fitchproof}[arrayenv=tabular]
-            \have  {2} {\Phi (y)}                                         \by{$ass$  }{}
-            \have  {2} {\Phi (a_{0})}                                     \by{$Def.1$ }{}
+            \have  {2} {\phi (y)}                                         \by{$ass$  }{}
+            \have  {2} {\phi (a_{0})}                                     \by{$def.1$ }{}
             \have [ ] {2} {\vdots}
-            \have [n] {2} {\Phi (a_{n})}                                       \by{$Def.1$}{}
-            \have {2} {\bigwedge\limits_{i=0}^n \Phi (a_{i}) }          \by{$\land I,2,3,...,n+2$}{}
-            \have  {2} { \forall x \Phi (x)}                  \by{$Def. n+3$ }{}
+            \have [n] {2} {\phi (a_{n})}                                       \by{$def.1$}{}
+            \have {2} {\bigwedge\limits_{i=0}^n \phi (a_{i}) }          \by{$\land I,2,3,...,n+2$}{}
+            \have  {2} { \forall x \phi (x)}                  \by{$def. n+3$ }{}
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
-            \have  {2} {\forall x \Phi (x)}                         \by{$ass$ }{}
-            \have  {2} {\bigwedge\limits_{i=0}^n \Phi (a_{i})}      \by{$Def.1$}{}
-            \have  {2} { \Phi (t)}                         \by{$\land E 2$}{}
+            \have  {2} {\forall x \phi (x)}                         \by{$ass$ }{}
+            \have  {2} {\bigwedge\limits_{i=0}^n \phi (a_{i})}      \by{$def.1$}{}
+            \have  {2} { \phi (t)}                         \by{$\land E 2$}{}
         \end{fitchproof}
 
         \\
 
         \begin{fitchproof}[arrayenv=tabular]
-            \have  {2} {\Phi (t)}
-            \have  {2} {\bigvee\limits_{i=0}^n \Phi (a_{i})}   \by{$\lor I 1$}{}
-            \have  {2} { \exists x \Phi (x)}         \by{$Def 2$}{}
+            \have  {2} {\phi (t)}
+            \have  {2} {\bigvee\limits_{i=0}^n \phi (a_{i})}   \by{$\lor I 1$}{}
+            \have  {2} { \exists x \phi (x)}         \by{$def 2$}{}
         \end{fitchproof}
 
          &
 
         \begin{fitchproof}[arrayenv=tabular]
-            \have  {1} {\exists x \Phi (x)}
-            \have  {1} {\bigvee\limits_{i=0}^n \Phi (a_{i}) }
+            \have  {1} {\exists x \phi (x)}
+            \have  {1} {\bigvee\limits_{i=0}^n \phi (a_{i}) }
             \open
-            \have  {1} {\Phi (a_{0})}                  \by{acp  }{}
+            \have  {1} {\phi [a_{0}/x]}                  \by{$acp$}{}
             \have [ ] {2} {\vdots}
             \have  [n] {2} {\theta}
             \close
             \open
-            \have  {1} {\Phi (a_{1})}                \by{acp  }{}
+            \have  {1} {\phi [a_{1}/x]}                \by{$acp$}{}
             \have [ ] {2} {\vdots}
             \have  [m] {2} {\theta}
             \close
             \have [ ] {2} {\vdots}
             \open
-            \have [l] {1} {\Phi (a_{2})}                    \by{acp  }{}
+            \have [l] {1} {\phi [a_{2}/x]}                    \by{$acp$}{}
             \have [ ] {2} {\vdots}
             \have  [r] {2} {\theta}
             \close
@@ -2604,6 +2615,11 @@ handy later.
     \end{tabular}
 
 \end{theorem}
+
+\begin{Attention}
+    \textbf{} in all rules and theorems you can replace all constants like $a,b,c,...$ with 
+    terms like $t,s,r,....$ and rewrite them.
+\end{Attention}
 
 \begin{definition}
     \textbf{Function from set to set}  we call a function \textbf{f} from \textbf{A} to \textbf{B}
@@ -2644,10 +2660,13 @@ handy later.
 \end{Attention}
 
 \begin{definition}
-    \textbf{Family of sets}  assume $A: I \to \mathcal{F}$ is a function from a set of
+    \textbf{Family of sets}  assume $A: I \to  \mathcal{F}$ is a function from a nonempty set of
     indices $I$ to a family of sets $\mathcal{F}$, then we call $(Range[A])$ an indexed family of sets.
-    we can write $A_i$ instead of $A(i)$ and we can write $\{ A_i \}_{i \in I}$ instead
-    of $Range[A]$ or ($A[I])$.
+    we can write $A_i$ instead of $A(i)$ and we can write $( A_i )_{i \in I}$ instead
+    of ``$A$''  and $\{ A_i \}_{i \in I}$ instead
+    of ``$Range[A]$'' or ``$A[I]$''.
+    \[ ( A_i )_{i \in I} :=  A \]
+    and
     \[ \{ A_i \}_{i \in I} :=  A[I] \]
 \end{definition}
 
@@ -2665,9 +2684,96 @@ handy later.
 \end{Attention}
 
 \begin{lemma}
-    \textbf{Intersrction and union of an family of sets}
     \[ /\therefore  \bigcap_{i \in I} A_i =  \{x \mid \forall i \in I \quad x \in A_i\} \]
+    \begin{fitchproof}[arrayenv=tabular]
+        \open
+        \have {1} { x \in \bigcap_{i \in I} A_i  }                                 \by{$acp$}{}
+        \have  {2} {x \in \bigcap \{ A_i \}_{i \in I}}                                \by{$def.1$}{}
+        \have  {2} {x \in \bigcap A[I]}                                               \by{$def.1$}{}
+        \have  {2} {\forall Y  \in  A[I] \quad x \in Y }                              \by{$def \bigcap$}{}
+        \have  {2} {\forall Y ((\exists i \in I \quad A_i=Y) \to x \in Y) }           \by{$def image$}{}
+        \have  {2} {(\exists i \in I \quad A_i=A_{i'}) \to x \in A_{i'} }              \by{$\forall E$}{}
+        \open
+        \have  {2} {i' \in I }                                                         \by{$acp$}{}
+        \have  {2} { A_{i'}=A_{i'} }                                                   \by{$=I$}{}
+        \have  {2} { i' \in I \land A_{i'}=A_{i'} }                                      \by{$\land I$}{}
+        \have  {2} { \exists i \in I \quad A_i=A_{i'} }                                   \by{$\exists I$}{}
+        \have {1} {  x \in A_{i'}  }                                                       \by{$\to E$}{}
+        \close
+        \have {1} {  i' \in I \to x \in A_{i'}  }                                            \by{$\to I$}{}
+        \have {1} { \forall i \in I \quad x \in A_i  }                                    \by{$\forall I$}{}
+        \have {1} { x \in \{x \mid \forall i \in I \quad x \in A_i\}  }                 \by{$def$}{}
+        \close
+        \open
+        \have {1} { x \in \{x \mid \forall i \in I \quad x \in A_i\}  }                \by{$acp$}{}
+        \have {1} { \forall i \in I \quad x \in A_i  }                                 \by{$def$}{}
+        \open
+        \have  {2} {\exists i \in I \quad A_i=Y}                                       \by{$acp$}{}
+        \open
+        \have  {2} { i \in I }                                                              \by{$acp$}{}
+        \have  {2} {x \in A_i}                                                             \by{$\forall E$}{}
+        \have  {2} {  A_i=Y}                                                             \by{$\land E$}{}
+        \have  {2} {x \in Y}                                                             \by{$= E$}{}
+        \close
+        \have  {2} {x \in Y}                                                                \by{$\exists E$}{}
+        \close
+        \have  {2} {(\exists i \in I \quad A_i=Y) \to x \in Y }                            \by{$\to I$}{}
+        \have  {2} {\forall Y ((\exists i \in I \quad A_i=Y) \to x \in Y) }              \by{$\forall I$}{}
+        \have  {2} {\forall Y  \in  A[I] \quad x \in Y }                                  \by{$def$}{}
+        \have  {2} {x \in \bigcap A[I]}                                                   \by{$def$}{}
+        \have  {2} {x \in \bigcap \{ A_i \}_{i \in I}}                                   \by{$def$}{}
+        \have {1} { x \in \bigcap_{i \in I} A_i  }                                        \by{$def$}{}
+        \close
+        \have  {2} { \bigcap_{i \in I} A_i =  \{x \mid \forall i \in I \quad x \in A_i\}  }  \by{$=I$}{}
+
+    \end{fitchproof}
+
     \[ /\therefore \bigcup_{i \in I} A_i =  \{x \mid \exists i \in I \quad x \in A_i\}  \]
+
+        \begin{fitchproof}[arrayenv=tabular]
+        \open
+        \have {1} { x \in \bigcup_{i \in I} A_i  }                                 \by{$acp$}{}
+        \have  {2} {x \in \bigcup \{ A_i \}_{i \in I}}                                \by{$def.1$}{}
+        \have  {2} {x \in \bigcup A[I]}                                               \by{$def.1$}{}
+        \have  {2} {\exists Y  \in  A[I] \quad x \in Y }                              \by{$def \bigcup$}{}
+        \have  {2} {\exists Y ((\exists i \in I \quad A_i=Y) \land x \in Y) }           \by{$def.image$}{}
+        \open
+        \have  {2} { x \in Y }                                                          \by{$acp$}{}
+        \have  {2} {\exists i \in I \quad A_i=Y }                                        \by{$acp$}{}
+        \open
+        \have  {2} {i \in I }                                                         \by{$acp$}{}
+        \have  {2} { A_i=Y }                                                   \by{$acp$}{}
+        \have  {2} { x \in A_i }                                      \by{$= E$}{}
+        \have  {2} {\exists i \in I \quad x \in A_i }                                      \by{$\exists I$}{}
+        \close
+        \have  {2} {\exists i \in I \quad x \in A_i }                                      \by{$\exists E$}{}
+        \close
+        \have  {2} {\exists i \in I \quad x \in A_i }                                      \by{$\exists E$}{}
+        \have {1} { x \in \{x \mid \exists i \in I \quad x \in A_i\}  }                 \by{$def$}{}
+        \close
+        \open
+        \have {1} { x \in \{x \mid \exists i \in I \quad x \in A_i\}  }                \by{$acp$}{}
+        \have {1} { \exists i \in I \quad x \in A_i  }                                 \by{$def$}{}
+        \open
+        \have  {2} { i' \in I }                                                        \by{$acp$}{}
+        \have  {2} { x \in A_{i'} }                                                      \by{$acp$}{}
+        \have  {2} {  A_{i'}=A_{i'} }                                                     \by{$= I$}{}
+        \have  {2} {\exists i \in I \quad  A_i=A_{i'} }                                       \by{$\exists I$}{}
+        \have  {2} {(\exists i \in I \quad  A_i=A_{i'})\land x \in A_{i'} }                    \by{$\land I$}{}
+        \have  {2} {\exists Y ((\exists i \in I \quad A_i=Y) \land x \in Y) }              \by{$\exists I$}{}
+
+        \close
+
+        \have  {2} {\exists Y ((\exists i \in I \quad A_i=Y) \land x \in Y) }              \by{$\exists E$}{}
+        \have  {2} {\exists Y  \in  A[I] \quad x \in Y }                                  \by{$def$}{}
+        \have  {2} {x \in \bigcup A[I]}                                                   \by{$def$}{}
+        \have  {2} {x \in \bigcup \{ A_i \}_{i \in I}}                                   \by{$def$}{}
+        \have {1} { x \in \bigcup_{i \in I} A_i  }                                        \by{$def$}{}
+        \close
+        \have  {2} { \bigcup_{i \in I} A_i =  \{x \mid \exists i \in I \quad x \in A_i\}  }  \by{$=I$}{}
+
+    \end{fitchproof}
+
 \end{lemma}
 
 \begin{theorem}
@@ -2679,29 +2785,29 @@ handy later.
             \open
             \have [ ] {1} {i \in I }
             \have [ ] {2} {\vdots}
-            \have  [ ] {2} {a \in A_i}
+            \have  [ ] {2} {t \in A_i}
             \close
-            \have  [ ]{2} {\therefore a \in \bigcap_{i \in I} A_i } \by{$\bigcap_{I} I$}{}
+            \have  [ ]{2} {\therefore t \in \bigcap_{i \in I} A_i } \by{$\bigcap_{I} I$}{}
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
-            \hypo [ ] {2} {a \in \bigcap_{i \in I} A_i }
+            \hypo [ ] {2} {t \in \bigcap_{i \in I} A_i }
             \hypo [ ] {2} {n \in  I  }
-            \have  [ ]{2} {\therefore  a \in  A_n} \by{$\bigcap_{I} E$}{}
+            \have  [ ]{2} {\therefore  t \in  A_n} \by{$\bigcap_{I} E$}{}
         \end{fitchproof}
         \\
         \hline
         \begin{fitchproof}[arrayenv=tabular]
-            \hypo [ ] {2} {a \in A_n  }
+            \hypo [ ] {2} {t \in A_n  }
             \hypo [ ] {2} {n \in I  }
-            \have  [ ]{2} {\therefore  a \in \bigcup_{i \in I} A_i } \by{$\bigcup_{I} I$}{}
+            \have  [ ]{2} {\therefore  t \in \bigcup_{i \in I} A_i } \by{$\bigcup_{I} I$}{}
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
-            \have [ ] {1} { a \in \bigcup_{i \in I} A_i  }
+            \have [ ] {1} { t \in \bigcup_{i \in I} A_i  }
             \open
             \have [ ] {1} { i \in I }
-            \have [ ] {1} {  a \in A_i }
+            \have [ ] {1} {  t \in A_i }
             \have [ ] {2} {\vdots}
             \have  [ ] {2} {\theta}
             \close
