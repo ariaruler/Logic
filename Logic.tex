@@ -145,7 +145,8 @@ $v$, $w$,$...$
 
 \begin{undefined}
     \textbf{Set} we can't say what exactly sets are but we know sets can be made by fusion
-    (from now we denote sets with uppercase letters like $A$, $B$, $C$, ...).
+    (if ``$a$'' is a set we write ``$set(a)$'' 
+    from now we denote sets with uppercase letters like $A$, $B$, $C$, ...).
 \end{undefined}
 
 \begin{definition}
@@ -226,565 +227,23 @@ $v$, $w$,$...$
     \end{tikzpicture}
 \end{example}
 
-\begin{Rule}
-    \textbf{repetition} you can repeat an obj
-    (this rule is scheme it means it works everywhere for every obj.)
-
-    \begin{tikzpicture}
-        % Vertical lines
-        \draw (0,1.5) -- (0,3.5);
-        % \draw (1.5,2.6) -- (-0.1,2.6) -- (-0.1,0.5) -- (1.5,0.5);
-        % Labels between lines
-        \node at (-0.5,3) {$n.$};
-        \node at (-0.5,2) {$m.$};
-        \node at (0.2,3) {$a$};
-        \node at (0.2,2) {$a$};
-        \node at (2.2,2) {rp};
-    \end{tikzpicture}
-\end{Rule}
-
-\begin{undefined}
-    \textbf{Gutter} is a tool to make an object isolated.
-    (nothing can get in or out and the focused obj is the first obj in gutter)
-    with Gutter we can undrestnd object
-    More precisely we denote Gutter like this.
-
-    \begin{tikzpicture}
-        \draw (1,0) -- (0,0) -- (0,2) -- (1,2);
-    \end{tikzpicture}
-
-\end{undefined}
-
-\begin{Rule}
-    \textbf{repetition in Gutter} you can only repeat an obj
-    in Gutter once(Gutter isolated obj).
-
-    \begin{tikzpicture}
-        % Vertical lines
-        \draw (0,1) -- (0,3.5);
-        \draw (1.5,2.6) -- (-0.1,2.6) -- (-0.1,1.5) -- (1.5,1.5);
-        % Labels between lines
-        \node at (-0.5,3) {$n.$};
-        \node at (-0.5,2) {$m.$};
-        \node at (0.2,3) {$a$};
-        \node at (0.2,2) {$a$};
-        \node at (2.2,2) {rpg.$n$};
-    \end{tikzpicture}
-\end{Rule}
-
-\section{ Identity }
-
-\begin{undefined}
-    \textbf{identity} $(=)$ one of the basice concepts that talk about two things are the same.
-\end{undefined}
-
-\begin{Rule}
-    \textbf{$I=$} (this rule is scheme it means it works everywhere for every obj.)
-
-    \begin{tikzpicture}
-        % Vertical lines
-        \draw (0,-1.5) -- (0,6);
-        \draw (1.5,5.6) -- (-0.1,5.6) -- (-0.1,2.5) -- (1.5,2.5);
-        \draw (1.5,2.4) -- (-0.1,2.4) -- (-0.1,-0.5) -- (1.5,-0.5);
-        % Labels between lines
-        \node at (-0.5,5) {$n.$};
-        \node at (-0.5,3) {$m.$};
-        \node at (-0.7,2) {$m+1.$};
-        \node at (-0.5,0) {$o.$};
-        \node at (-0.7,-1) {$o+1.$};
-        \node at (0.2,5) {$a$};
-        \node at (0.2,4) {$\vdots$};
-        \node at (0.2,3) {$b$};
-        \node at (0.2,2) {$b$};
-        \node at (0.2,1) {$\vdots$};
-        \node at (0.2,0) {$a$};
-        \node at (0.5,-1) {$a=b$};
-    \end{tikzpicture}
-
-\end{Rule}
-
-\begin{Rule}
-    \textbf{$E=$} (this rule is scheme it means it works everywhere for every obj.)
-
-    \begin{tikzpicture}
-        % Vertical lines
-        \draw (0,0) -- (0,4);
-        % Labels between lines
-        \node at (-0.5,3) {$n.$};
-        \node at (-0.5,2) {$m.$};
-        \node at (-0.5,1) {$o.$};
-        \node at (0.2,3) {$a$};
-        \node at (0.5,2) {$a=b$};
-        \node at (0.2,1) {$b$};
-        \node at (3,1) {$E= n,m$};
-
-    \end{tikzpicture}
-
-\end{Rule}
-
-\begin{example}
-    \textbf{} $a/\therefore a = a$
-
-    \begin{tikzpicture}
-        % Vertical lines
-        \draw (0,-1.5) -- (0,4);
-        \draw (1.5,3.6) -- (-0.1,3.6) -- (-0.1,1.5) -- (1.5,1.5);
-        \draw (1.5,1.4) -- (-0.1,1.4) -- (-0.1,-0.5) -- (1.5,-0.5);
-        % Labels between lines
-        \node at (-0.5,3) {1.};
-        \node at (-0.5,2) {2.};
-        \node at (-0.5,1) {3.};
-        \node at (-0.5,0) {4.};
-        \node at (-0.5,-1) {5.};
-        \node at (0.2,3) {$a$};
-        \node at (0.2,2) {$a$};
-        \node at (2.2,2) {rp.1};
-        \node at (0.2,1) {$a$};
-        \node at (0.2,0) {$a$};
-        \node at (2.2,0) {rp.3};
-        \node at (0.5,-1) {$a=a$};
-    \end{tikzpicture}
-
-\end{example}
-
-\begin{example}
-    \textbf{} $a,b/\therefore \{a,b\} = \{b,a\}$
-
-    \begin{tikzpicture}
-        % Vertical lines
-        \draw (0,-5.5) -- (0,7);
-        \draw (1,-5.5) -- (1,7);
-        \draw (1.5,3.6) -- (-0.1,3.6) -- (-0.1,-0.5) -- (1.5,-0.5);
-        \draw (1.5,-4.4) -- (-0.1,-4.4) -- (-0.1,-0.6) -- (1.5,-0.6);
-        \node at (-0.5,7) {1.};
-        \node at (-0.5,6) {2.};
-        \node at (-0.5,5) {3.};
-        \node at (-0.5,4) {4.};
-        \node at (-0.5,3) {5.};
-        \node at(-0.5,2) {6.};
-        \node at (-0.5,1) {7.};
-        \node at (-0.5,0) {8.};
-        \node at(-0.5,-1) {9.};
-        \node at (-0.5,-2) {10.};
-        \node at (-0.5,-3) {11.};
-        \node at (-0.5,-4) {12.};
-        \node at (-0.5,-5) {13.};
-        \node at (0.2,7) {$a$};
-        \node at(0.2,6) {$b$};
-        \node at (1.5,5) {$\{a,b\}$};
-        \node at (5,5) {fu1,2};
-        \node at(1.5,4) {$\{b,a\}$};
-        \node at (5,4) {fu1,2};
-        \node at (1.5,3) {$\{a,b\}$};
-        \node at (5,3) {rpg3};
-        \node at (0.2,2) {$a$};
-        \node at (5,2) {fi1};
-        \node at(0.2,1) {$b$};
-        \node at (5,1) {fi1};
-        \node at (1.5,0) {$\{b,a\}$};
-        \node at(5,0) {fu2,3};
-        \node at (1.5,-1) {$\{b,a\}$};
-        \node at (5,-1) {rpg4}; \node at(0.2,-2) {$b$};
-        \node at (5,-2) {fi5};
-        \node at (0.2,-3) {$a$};
-        \node at (5,-3){fi5};
-        \node at (1.5,-4) {$\{a,b\}$};
-        \node at (5,-4) {fu6,7};
-        \node at(2.3,-5) {$\{a,b\} = \{b,a\}$};
-        \node at (5,-5) {$I=4,8$};
-    \end{tikzpicture}
-\end{example}
-
-\begin{example}
-    \textbf{} $a,b,c,b=c /\therefore \{a,b\} = \{a,c\}$
-
-    \begin{tikzpicture}
-        % Vertical lines
-        \draw (0,-9.5) -- (0,8);
-        \draw (1,-9.5) -- (1,8);
-        \draw (1.5,3.6) -- (-0.1,3.6) -- (-0.1,-2.5) -- (1.5,-2.5);
-        \draw (1.5,-8.4) -- (-0.1,-8.4) -- (-0.1,-2.6) -- (1.5,-2.6);
-        % Labels between lines
-        \node at (-0.5,8) {1.};
-        \node at (-0.5,7) {2.};
-        \node at (-0.5,6) {3.};
-        \node at (-0.5,5) {4.};
-        \node at (-0.5,4) {5.};
-        \node at (-0.5,3) {6.};
-        \node at (-0.5,2) {7.};
-        \node at (-0.5,1) {8.};
-        \node at (-0.5,0) {9.};
-        \node at (-0.5,-1) {10.};
-        \node at (-0.5,-2) {11.};
-        \node at (-0.5,-3) {12.};
-        \node at (-0.5,-4) {13.};
-        \node at (-0.5,-5) {14.};
-        \node at (-0.5,-6) {15.};
-        \node at (-0.5,-7) {16.};
-        \node at (-0.5,-8) {17.};
-        \node at (-0.5,-9) {18.};
-        \node at (0.2,8) {$a$};
-        \node at (5,8) {ass};
-        \node at (0.2,7) {$b$};
-        \node at (5,7) {ass};
-        \node at (0.2,6) {$c$};
-        \node at (5,6) {ass};
-        \node at (1.5,5) {$\{a,b\}$};
-        \node at (5,5) {fu1,2};
-        \node at (1.5,4) {$\{a,c\}$};
-        \node at (5,4) {fu2,3};
-        \node at (1.5,3) {$\{a,b\}$};
-        \node at (5,3) {rp4};
-        \node at (0.2,2) {$a$};
-        \node at (5,2) {fi6};
-        \node at (0.2,1) {$b$};
-        \node at (5,1) {fi6};
-        \node at (1.5,0) {$b=c$};
-        \node at (5,0) {ass};
-        \node at (0.2,-1) {$c$};
-        \node at (5,-1) {$E=8,9$};
-        \node at (1.5,-2) {$\{a,c\}$};
-        \node at (5,-2) {fi7,10};
-        \node at (1.5,-3) {$\{a,c\}$};
-        \node at (5,-3) {rp5};
-        \node at (0.2,-4) {$a$};
-        \node at (5,-4) {fi12};
-        \node at (0.2,-5) {$c$};
-        \node at (5,-5) {fi12};
-        \node at (1.5,-6) {$b=c$};
-        \node at (5,-6) {ass};
-        \node at (0.2,-7) {$b$};
-        \node at (5,-7) {$E=15,16$};
-        \node at (1.5,-8) {$\{a,b\}$};
-        \node at (5,-8) {fu13,15};
-        \node at (2.3,-9) {$\{a,b\} = \{a,c\}$};
-        \node at (5,-9) {$I=11,17$};
-    \end{tikzpicture}
-
-\end{example}
-
-\section{ Membership }
-
-\begin{undefined}
-    \textbf{membership} $(\in)$ a binary relation show that an obj is a member of another obj.
-\end{undefined}
-
-\begin{Rule}
-    \textbf{$I\in$} (this rule is scheme it means it works everywhere for every obj.)
-
-    \begin{tikzpicture}
-        % Vertical lines
-        \draw (0,0.5) -- (0,4);
-        \draw (1,0.5) -- (1,4);
-        % \draw (1.5,3.6) -- (-0.1,3.6) -- (-0.1,1.5) -- (1.5,1.5);
-        % Labels between lines
-        \node at (-0.5,3) {$n.$};
-        \node at (-0.5,2) {$m.$};
-        \node at (-0.5,1) {$o.$};
-        \node at (1.2,3) {$A$};
-        \node at (0.2,2) {$a$};
-        \node at (3,2) {$fi,n$};
-        \node at (1.5,1) {$a \in A$};
-        \node at (3,1) {$I\in,n,m$};
-    \end{tikzpicture}
-
-    \begin{tikzpicture}
-        % Vertical lines
-        \draw (0,0.5) -- (0,4);
-        \draw (1,0.5) -- (1,4);
-        % \draw (1.5,3.6) -- (-0.1,3.6) -- (-0.1,1.5) -- (1.5,1.5);
-        % Labels between lines
-        \node at (-0.5,3) {$n.$};
-        \node at (-0.5,2) {$m.$};
-        \node at (-0.5,1) {$o.$};
-        \node at (0.2,3) {$a$};
-        \node at (1.2,2) {$A$};
-        \node at (3,2) {$fu,n$};
-        \node at (1.5,1) {$a \in A$};
-        \node at (3,1) {$I\in,n,m$};
-    \end{tikzpicture}
-\end{Rule}
-
-\begin{Rule}
-    \textbf{$E\in$}
-    (this rule is scheme it means it works everywhere for every obj.)
-
-    \begin{tikzpicture}
-        % Vertical lines
-        \draw (0,0) -- (0,4);
-        \draw (1,0) -- (1,4);
-        % \draw (1.5,2.6) -- (-0.1,2.6) -- (-0.1,0.5) -- (1.5,0.5);
-        % Labels between lines
-        \node at (-0.5,3) {$n.$};
-        \node at (-0.5,2) {$m.$};
-        \node at (-0.5,1)  {$o.$};
-        \node at (1.5,3) {$a \in A$};
-        \node at (1.2,2) {$A$};
-        \node at (0.2,1) {$a$};
-        \node at (3,1) {fiss,$n,m$};
-    \end{tikzpicture}
-
-    \begin{tikzpicture}
-        % Vertical lines
-        \draw (0,0) -- (0,4);
-        \draw (1,0) -- (1,4);
-        % \draw (1.5,2.6) -- (-0.1,2.6) -- (-0.1,0.5) -- (1.5,0.5);
-        % Labels between lines
-        \node at (-0.5,3) {$n.$};
-        \node at (-0.5,2) {$m.$};
-        \node at (-0.5,1) {$o.$};
-        \node at (1.5,3) {$a \in A$};
-        \node at (0.2,2) {$a$};
-        \node at (1.2,1) {$A$};
-        \node at (3,1) {fus,$n,m$};
-    \end{tikzpicture}
-\end{Rule}
-
-\begin{Rule}
-    \textbf{$E=$}
-    (this rule is scheme it means it works everywhere for every obj.)
-
-    \begin{tikzpicture}
-        % Vertical lines
-        \draw (0,0) -- (0,4);
-        % Labels between lines
-        \node at (-0.5,3) {$n.$};
-        \node at (-0.5,2) {$m.$};
-        \node at (-0.5,1) {$o.$};
-        \node at (0.5,3) {$a\in A$};
-        \node at (0.5,2) {$a=b$};
-        \node at (0.5,1) {$b\in A$};
-        \node at (3,1) {$E=$};
-    \end{tikzpicture}
-
-    \begin{tikzpicture}
-        % Vertical lines
-        \draw (0,0) -- (0,4);
-        % Labels between lines
-        \node at (-0.5,3) {$n.$};
-        \node at (-0.5,2) {$m.$};
-        \node at (-0.5,1) {$o.$};
-        \node at (0.5,3) {$a\in A$};
-        \node at (0.55,2) {$A=B$};
-        \node at (0.5,1) {$a\in B$};
-        \node at (3,1) {$E=$};
-    \end{tikzpicture}
-\end{Rule}
-
-% \begin{example}
-%     \textbf{} $a \in A,a=b /\therefore b \in A$
-% \end{example}
-
-% \begin{tikzpicture}
-%     % Vertical lines
-%     \draw (0,-2.5) -- (0,3);
-%     \draw (1,-2.5) -- (1,3);
-
-%     \draw (1.5,2.6) -- (-0.1,2.6) -- (-0.1,-1.5) -- (1.5,-1.5);
-
-%     % Labels between lines
-%     \node at (-0.5,3) {1.};
-%     \node at (-0.5,2) {2.};
-%     \node at (-0.5,1) {3.};
-%     \node at (-0.5,0) {4.};
-%     \node at (-0.5,-1) {5.};
-%     \node at (-0.5,-2) {6.};
-
-%     \node at (1.5,3) {$a \in A$};
-%     \node at (1.2,2) {$A$};
-%     \node at (3,2) {rpg};
-%     \node at (0.2,1) {$a$};
-%     \node at (3,1) {$E\in$};
-%     \node at (1.5,0) {$a=b$};
-%     \node at (0.2,-1) {$b$};
-%     \node at (3,-1) {$E=$};
-%     \node at (1.5,-2) {$b \in A$};
-%     \node at (3,-2) {$I\in$};
-
-% \end{tikzpicture}
-
-\section{Bot}
-
-\begin{undefined}
-    \textbf{bot} $(\bot)$ also called "bottom".means impossible, or a logical symbol denoting a
-    impossible situation.
-\end{undefined}
-
-also called "bottom".means impossible, or a logical symbol denoting a
-impossible situation.
-
-\begin{Rule}
-    \textbf{$\bot I$} (this rule is scheme it means it works everywhere for every obj.)
-    assume that $a_{0} , a_{1} , a_{2} ... a_{n}$ are  distinct obj.if someone says $ a_{0} \in \{a_{1} , a_{2}\}$
-    or if someone says $a_{0} = a_{1}$.
-    we know it's not right but how do we must show that?
-    (see attention 1.1).
-
-    for (rp): \\
-
-    \begin{tikzpicture}
-        % Vertical lines
-        \draw (0,0) -- (0,4);
-        % Labels between lines
-        \node at (-0.5,3) {$n.$};
-        \node at (-0.5,2) {$m.$};
-        \node at (-0.5,1) {$o.$};
-        \node at (0.3,3) {$a_{0}$};
-        \node at (0.3,2) {$a_{1}$};
-        \node at (2,2) {rp1};
-        \node at (0.2,1) {$\bot$};
-        \node at (2,1) {$\bot I$,$n,m$};
-    \end{tikzpicture}
-    \\
-    for (fu):
-    \\
-
-    \begin{tikzpicture}
-        % Vertical lines
-        \draw (0,0.5) -- (0,4);
-        \draw (1,0.5) -- (1,4);
-        % \draw (1.5,3.6) -- (-0.1,3.6) -- (-0.1,1.5) -- (1.5,1.5);
-        % Labels between lines
-        \node at (-0.5,3) {$n.$};
-        \node at (-0.5,2) {$m.$};
-        \node at (-0.5,1) {$o.$};
-        \node at (0.3,3) {$a_{0}$};
-        \node at (2,2) {$\{a_{1} , a_{2}... a_{n}\}$};
-        \node at (4,2) {fu1};
-        \node at (1.2,1) {$\bot$};
-        \node at (4,1) {$\bot I$,$n,m$};
-    \end{tikzpicture}
-    \\
-    for (fi):
-    \\
-
-    \begin{tikzpicture}
-        % Vertical lines
-        \draw (0,0.5) -- (0,4);
-        \draw (1,0.5) -- (1,4);
-        % \draw (1.5,3.6) -- (-0.1,3.6) -- (-0.1,1.5) -- (1.5,1.5);
-        % Labels between lines
-        \node at (-0.5,3) {$n.$};
-        \node at (-0.5,2) {$m.$};
-        \node at (-0.5,1) {$o.$};
-        \node at (2,3) {$\{a_{1} , a_{2}... a_{n}\}$};
-        \node at (0.3,2) {$a_{0}$};
-        \node at (4,2) {fi1};
-        \node at (1.2,1) {$\bot$};
-        \node at (4,1) {$\bot I$,$n,m$};
-    \end{tikzpicture}
-\end{Rule}
-
-\begin{Rule}
-    \textbf{$\bot E$} (this rule is scheme it means it works everywhere for every obj.)
-    (see attention 1.1).
-    for (rp): \\
-    \begin{tikzpicture}
-        % Vertical lines
-        \draw (0,0) -- (0,4);
-        % Labels between lines
-        \node at (-0.5,3) {$n.$};
-        \node at (-0.5,2) {$m.$};
-        \node at (-0.5,1) {$o.$};
-        \node at (0.2,3) {$\bot$};
-        \node at (0.3,2) {$a_{0}$};
-        \node at (0.3,1) {$a_{1}$};
-        \node at (4,1) {rp,$n,m$};
-    \end{tikzpicture}
-    \\
-    for (fu):
-    \\
-
-    \begin{tikzpicture}
-        % Vertical lines
-        \draw (0,0) -- (0,3.5);
-        \draw (1,0) -- (1,3.5);
-        % \draw (1.5,2.6) -- (-0.1,2.6) -- (-0.1,0.5) -- (1.5,0.5);
-        % Labels between lines
-        \node at (-0.5,3) {$n.$};
-        \node at (-0.5,2) {$m.$};
-        \node at (-0.5,1) {$o.$};
-        \node at (1.2,3) {$\bot$};
-        \node at (0.3,2) {$a_{0}$};
-        \node at (2,1) {$\{a_{1} , a_{2}... a_{n}\}$};
-        \node at (4,1) {fu,$n,m$};
-        \\
-    \end{tikzpicture}
-    \\
-    for (fi):
-    \\
-
-    \begin{tikzpicture}
-        % Vertical lines
-        \draw (0,0) -- (0,3.5);
-        \draw (1,0) -- (1,3.5);
-        % \draw (1.5,2.6) -- (-0.1,2.6) -- (-0.1,0.5) -- (1.5,0.5);
-        % Labels between lines
-        \node at (-0.5,3) {$n.$};
-        \node at (-0.5,2) {$m.$};
-        \node at (-0.5,1) {$o.$};
-        \node at (1.2,3) {$\bot$};
-        \node at (2,2) {$\{a_{1} , a_{2}... a_{n}\}$};
-        \node at (0.3,1) {$a_{0}$};
-        \node at (4,1) {fiss,$n,m$};
-    \end{tikzpicture}
-
-\end{Rule}
-
 % \begin{Rule}
-%     \textbf{$I\not=$}
+%     \textbf{repetition} you can repeat an obj
 %     (this rule is scheme it means it works everywhere for every obj.)
 
-%     \begin{NiceTabular}{lll}
-%         1.     & $a = b$     & acp      \\
-%                & $\vdots$    &          \\
-%         $n.$   & $\bot$      &          \\
-%         $n+1.$ & $a \not= b$ & $I\not=$ \\
-%         \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (4-|3);
-%     \end{NiceTabular}
+%     \begin{tikzpicture}
+%         % Vertical lines
+%         \draw (0,1.5) -- (0,3.5);
+%         % \draw (1.5,2.6) -- (-0.1,2.6) -- (-0.1,0.5) -- (1.5,0.5);
+%         % Labels between lines
+%         \node at (-0.5,3) {$n.$};
+%         \node at (-0.5,2) {$m.$};
+%         \node at (0.2,3) {$a$};
+%         \node at (0.2,2) {$a$};
+%         \node at (2.2,2) {rp};
+%     \end{tikzpicture}
 % \end{Rule}
 
-% \begin{Rule}
-%     \textbf{$I\notin$}
-%     (this rule is scheme it means it works everywhere for every obj.)
-
-%     \begin{NiceTabular}{lll}
-%         1.     & $a \in A$    & acp       \\
-%                & $\vdots$     &           \\
-%         $n.$   & $\bot$       &           \\
-%         $n+1.$ & $a \notin A$ & $I\notin$ \\
-%         \CodeAfter \tikz \draw [<-,shorten < = 2pt] (1-1) r-lr (4-|3);
-%     \end{NiceTabular}
-
-% \end{Rule}
-
-% \begin{Rule}
-%     \textbf{$E\not=$}
-%     (this rule is scheme it means it works everywhere for every obj.)
-
-%     \begin{NiceTabular}{lll}
-%         $n.$ & $a = b$     &          \\
-%         $m.$ & $a \not= b$ &          \\
-%         $o.$ & $\bot$      & $E\not=$ \\
-%     \end{NiceTabular}
-% \end{Rule}
-
-% \begin{Rule}
-%     \textbf{$E\notin$}
-%     (this rule is scheme it means it works everywhere for every obj.)
-
-%     \begin{NiceTabular}{lll}
-%         $n.$ & $a \in A$    &           \\
-%         $m.$ & $a \notin A$ &           \\
-%         $o.$ & $\bot$       & $E\notin$ \\
-%     \end{NiceTabular}
-
-% \end{Rule}
-
-% \begin{Attention}
-%     in rules $(I,E)\bot $ obj must be in correct type.for example $\bot$ can't prove
-%     $a \in a$.
-% \end{Attention}
 
 \section{constants and variables}
 obj are two types.we know them and we know what exactly are we talking about
@@ -797,18 +256,18 @@ call them \textbf{"constants"}.
     that represents an unknown obj.
 \end{undefined}
 
-\begin{definition}
-    \textbf{variables sets} A variable that is a set
-    (usually a letter like $X, Y, or Z$)
-    that represents an unknown set.
-\end{definition}
+% \begin{definition}
+%     \textbf{variables sets} A variable that is a set
+%     (usually a letter like $X, Y, or Z$)
+%     that represents an unknown set.
+% \end{definition}
 
 \begin{definition}
-    \textbf{predicate} identity and membership symbols are predicates.
-    we will introduce them all to you.
+    \textbf{predicate}  ``$set()$'' and identity ``$=$'' and membership ``$\in$'' symbols are predicates.
+     ``$set()$'' is unary and identity and membership  are binary.
 \end{definition}
 
-\chapter{propositional logic(zeroth-order logic)}
+\chapter{propositional logic (zeroth-order logic)}
 
 \section{What is proposition?}
 
@@ -817,7 +276,7 @@ formula(WWF).
 
 %
 \begin{definition}
-    \textbf{Atomic formula} every single obj or two obj(conatants and variable) and a binary
+    \textbf{Atomic formula} every single obj or  or two obj(conatants and variable) and a binary
     predicate $(=,\in)$ between them like $x=b , y\in C, ...$
     \\
     we denote atomic formulas with $A_{i}$.
@@ -873,13 +332,21 @@ false?) the answer is unfortunately \textbf{No}.
     we denote propositions with $p ,q ,r ,...$.
 \end{definition}
 
+
+
+\begin{definition}
+    \textbf{open proposition} assume formula of a proposition but Substitute some
+    obj and replace them with variables.we call it open proposition and denote it with
+    capital letter $(P,Q,R)$ showes other types of \textbf{predicates} and variables like$(P(x) ,Q(x,y) ,..)$
+\end{definition}
+
 %
 \begin{definition}
     \textbf{Substitution for obj} we define Substitution an obj with variable  like this.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item for variables if $x=y$ then $y[a/x]:=a$ and if $x \not= y$ then $y[a/x]:=y$.
-        \item for constants  $c[a/x]:=a$.
+        \item for constants  $c[a/x]:=c$.
     \end{enumerate}
 \end{definition}
 
@@ -888,10 +355,10 @@ false?) the answer is unfortunately \textbf{No}.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item for atomic formulas we define it like this. if it's a single object we do it 
-        as we explain in ``\textbf{Substitution for obj}''. if it's like $x = y$ or $x \in X$
+        as we explain in ``\textbf{Substitution for obj}''. if it's like $x = y$ or $x \in y$
         ($x,y$ can be both constants and variables). we define it like this.
             \[ (x=y)[a/z] := (x[a/z] = y[a/z]) \]
-            \[ (x \in X)[a/z] := (x[a/z] \in X[a/z]) \]
+            \[ (x \in y)[a/z] := (x[a/z] \in y[a/z]) \]
         \item if formula $A$ is complex we define it like this.
             \[ (B \bigcirc C)[a/x] := (B[a/x] \bigcirc C[a/x]) \]
             ($\bigcirc $ can be $\to,\land ,\lor$).
@@ -903,11 +370,6 @@ false?) the answer is unfortunately \textbf{No}.
 simply means in a formula put an obj like $b$ instead of another like $a$.we
 denote it by $A[b/a]$ or $A[\frac{b}{a}]$
 
-\begin{definition}
-    \textbf{open proposition} assume formula of a proposition but Substitute some
-    obj and replace them with variables.we call it open proposition and denote it with
-    capital letter $(P,Q,R)$ showes other types of \textbf{predicates} and variables like$(P(x) ,Q(x,y) ,..)$
-\end{definition}
 
 \section{Rules of propositions.}
 
@@ -1420,7 +882,7 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
 
 %
 \begin{definition}
-    \textbf{Big AND and OR} assume a set like $ \{a_{0},a_{1},a_{2},...,a_{n}\}$
+    \textbf{Big AND and OR} assume a set like ``$ \{a_{0},a_{1},a_{2},...,a_{n}\}$''
     we define \textbf{big AND} like this.
     \\
     \[ \bigwedge\limits_{i=0}^n P(a_{i}) : P(a_{0}) \land P(a_{1}) \land P(a_{2}) \land... \land P(a_{n})\]
@@ -1432,7 +894,7 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
 \end{definition}
 
 \begin{definition}
-    \textbf{Universe of discourse} we specify a set like $ \{a_{0},a_{1},a_{2},...,a_{n}\}$
+    \textbf{Universe of discourse} we specify a set like ``$ \{a_{0},a_{1},a_{2},...,a_{n}\}$''
     as universe of a Logic world.
 
 \end{definition}
@@ -1440,7 +902,7 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
 
 
 \begin{Rule}
-    \textbf{use of open propositions} assume universe of discourse is $ \{a_{0},a_{1},a_{2},...,a_{n}\}$
+    \textbf{use of open propositions} assume universe of discourse is ``$ \{a_{0},a_{1},a_{2},...,a_{n}\}$''
     \\
     \begin{fitchproof}[arrayenv=tabular]
         \have [c] {1} {P(x)}
@@ -1482,28 +944,31 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
         \close
     \end{fitchproof}
 \end{Rule}
+
 %
 
 \begin{definition}
-    \textbf{Universal quantification} assume universe of discourse is $ \{a_{0},a_{1},a_{2},...,a_{n}\}$
+    \textbf{predicate schema(variable predicate)} a predicate that is unknown
+    for us and it works as variable.(we show them with $\phi ,\psi ,\theta ,... $)
+\end{definition}
+
+\begin{definition}
+    \textbf{Universal quantification} assume universe of discourse is ``$ \{a_{0},a_{1},a_{2},...,a_{n}\}$''
     we define $\forall x P(x)$
     \\
-    \[ \forall x P(x) : \bigwedge\limits_{i=0}^n P[a_{i}/x] \]
+    \[ \forall x \phi(x) : \bigwedge\limits_{i=0}^n \phi[a_{i}/x] \]
 \end{definition}
 
 \begin{definition}
-    \textbf{Existential quantification} assume universe of discourse is $ \{a_{0},a_{1},a_{2},...,a_{n}\}$
+    \textbf{Existential quantification} assume universe of discourse is ``$ \{a_{0},a_{1},a_{2},...,a_{n}\}$''
     we define $\exists x Px$
     \\
-    \[ \exists  x P(x) : \bigvee\limits_{i=0}^n P[a_{i}/x] \]
+    \[ \exists  x \phi(x) : \bigvee\limits_{i=0}^n \phi[a_{i}/x] \]
 \end{definition}
 
-\begin{definition}
-    \textbf{predicate schema(variable predicate)} a predicate that is unknown
-    for us and it works as variable.(we show them with $\Phi ,\Psi ,\Theta ,... $)
-\end{definition}
 
-as you can see $\forall x \Phi (x) $ and $\exists x \Phi (x) $ are sentences.
+
+as you can see $\forall x \phi (x) $ and $\exists x \phi (x) $ are sentences.
 
 \begin{definition}
     \textbf{Free variables} variables that are not bound by a quantifier.
@@ -1514,7 +979,7 @@ as you can see $\forall x \Phi (x) $ and $\exists x \Phi (x) $ are sentences.
 \section{Rules of predicates.}
 
 \begin{theorem}
-    \textbf{$(schema)$} $(\forall I ,\forall E ,\exists I , \exists E)$
+    \textbf{$(schema)$} $(\forall I ,\forall E ,\exists I , \exists E)$ assume universe of discourse is ``$ \{a_{0},a_{1},a_{2},...,a_{n}\}$''
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
@@ -1849,12 +1314,12 @@ so we can rewrite axiom of Extensionality like this.
     \[ \forall x_0 , x_1, ... , x_n \exists X \forall x  (\phi (x,x_0 , x_1, ... , x_n) \leftrightarrow x \in X) \]
     \\
     by axiom of extentionality we can show that $X$ is unique.
-    so we denote it as $\{ x | \phi (x,x_0 , x_1, ... , x_n)\}$.
+    so we denote it as ``$\{ x | \phi (x,x_0 , x_1, ... , x_n)\}$''.
 \end{axiom}
 
 this axiom show that why Russell's paradox doesn't happened here because if ou
-assume $R=\{x|x \notin x\}$ is a set.you can't prove or disprove $R \in R$. (we
-don't need to prove that now.we will prove it in \textbf{'MetaLogic'}.)
+assume ``$R=\{x|x \notin x\}$'' is a set.you can't prove or disprove ``$R \in R$''. (we
+don't need to prove that now.we will prove it in ``\textbf{'MetaLogic'}''.)
 
 \section{definitions of set theory}
 Let's talk about some definitions in set theoty.These definitions will come in
@@ -2393,7 +1858,7 @@ handy later.
 \begin{exercise}
     \textbf{} for sets A, B, C, prove.
     \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
+                \setlength{\itemsep}{0pt} % No extra space between items
         \item  $/\therefore A \times (B \cap C) = (A \times B)\cap (A \times C)$
         \item  $/\therefore A \times (B \cup C) = (A \times B) \cup (A \times C)$
         \item  $ /\therefore A \times (B-C) = (A \times B) - (A \times C)$
@@ -2410,7 +1875,7 @@ handy later.
 
 \begin{definition}
     \textbf{ِDomain and Range(also called Image)} \\
-    Domain of a set $R$ is all $x$ that there exists a $y$ s.t. $(x,y) \in R$
+    Domain of a set $R$ is all $x$ that there exists a $y$ s.t. ``$(x,y) \in R$''
     \[ Dom (R) := \{ x \mid \exists y  \quad (x,y) \in R \} \]
     Range(Image) of a set $R$ is all $y$ that there exists a $x$ s.t. $(x,y) \in R$ \[ Range (R) := \{ y  \mid \exists x \quad (x,y) \in R \}. \]
 \end{definition}
@@ -2431,7 +1896,7 @@ handy later.
 \end{definition}
 
 \begin{definition}
-    \textbf{Inverse of a Relation} \\
+    \textbf{Combination of a Relations} \\
 
     \[ 		S\circ R = \{u \mid \exists x,y \Big(u=(x,y) \land \exists z \big( (x,z) \in R \wedge (z,y) \in S \big)\Big)\}   \]
 
@@ -2439,56 +1904,83 @@ handy later.
     \[ 		S\circ R =\{(x,y) \mid \exists z \Big( (x,z) \in R \wedge (z,y) \in S \Big) \}   \]
     therefore.
     \[\forall x,y\Big( (x,y) \in S\circ R \leftrightarrow \exists z  \big( (x,z) \in R \wedge (z,y) \in S \big) \Big) \]
-
 \end{definition}
 
 \begin{definition}
     \textbf{Image} \\
     \[ R[A] = \{y \mid \exists x \in A \quad (x,y) \in R\} \]
-\end{definition}
-
-\begin{definition}
-    \textbf{Pr- Eimage} \\
+you can olso see by definition of ``inverse of a Relation'' and ``image'' this equation holds.
     \[ R^{-1}[B] = \{ x  \mid \exists y \in B \quad (x,y) \in R\} \]
+    we cal this ``\textbf{Pre-image}''
 
 \end{definition}
 
 \section{Functions}
 
-\begin{definition}
-    \textbf{Inverse of a Relation} \\
 
-    \[ 		S\circ R = \{u \mid \exists x,y \Big(u=(x,y) \land \exists z \big( (x,z) \in R \wedge (z,y) \in S \big)\Big)\}   \]
-
-    or i.e.
-    \[ 		S\circ R =\{(x,y) \mid \exists z \Big( (x,z) \in R \wedge (z,y) \in S \Big) \}   \]
-    therefore.
-    \[\forall x,y\Big( (x,y) \in S\circ R \leftrightarrow \exists z  \big( (x,z) \in R \wedge (z,y) \in S \big) \Big) \]
-\end{definition}
 
 \begin{definition}
-    \textbf{Function}  we call a relation \textbf{f} a \textbf{function} when every input has exactly one
+    \textbf{Function}  we call a relation ``\textbf{f}'' a ``\textbf{function}'' when every input has exactly one
     output i.e.
     \[ Func(f) : \forall x ,y_1 , y_2 \Big((x,y_1) \in f \wedge (x,y_2) \in f \rightarrow y_1 = y_2 \Big). \]
 \end{definition}
 
 \begin{definition}
-    \textbf{Term} assume a function \textbf{f} and  \textbf{$(x,y) \in f$},
-    we define ``$f(x):= y$'' and we call $f(x)$ a term. and the reverse is also true, if we have a term $f(x)$,
-    we have a function  $f$ and we can say there exists a $y$ s.t.  $(x,y) \in f$.
-    terms are objects too, so we can have $f(f(x))$ and it is a term as well.
-    we denote terms with small letters like $t,s,r,...$.
-    so we can write\dots
-    \[  Func(f) \land (x,y) \in f \rightarrow f(x) = y \]
-    and
-    \[   f(x) \rightarrow Func(f) \land \exists y (x,y) \in f \]
+    \textbf{Output of a function} assume a function \textbf{f} and  \textbf{$(x,y) \in f$},
+    we define ``$f(x):= y$'' and we call ``$f(x)$'' a ``\textbf{output of a function}''.
+     and the reverse is also true, if we use ``$f(x)$'',
+    we have a function  ``\textbf{f}'' and we can say  ``$x \in Dom(f)$''.
+    ``output of a function'' is object too, so we can have $f(f(x))$  as well.
 \end{definition}
 
 \begin{Attention}
-    \textbf{} input of a function can be a ordered pair itself, so we can have $f((x,y))$ and it is a term.
-    we define $f(x,y):=f((x,y))$ for simplicity.
-    this is true for tuples as well, so we can have $f((x_{1},x_{2},...,x_{n}))$ and we define $f(x_{1},x_{2},...,x_{n}):=f((x_{1},x_{2},...,x_{n}))$ for simplicity.
+    \textbf{} input of a function can be a ordered pair itself, so we can have $f((x,y))$ and it is a ``\textbf{output of a function}''.
+    we define ``$f(x,y):=f((x,y))$'' for simplicity.
+    this is true for tuples as well, so we can have ``$f((x_{1},x_{2},...,x_{n}))$'' and we define 
+    ``$f(x_{1},x_{2},...,x_{n}):=f((x_{1},x_{2},...,x_{n}))$'' for simplicity.
 \end{Attention}
+
+
+\begin{definition}
+    \textbf{Term} we define term like this.
+        \begin{enumerate}
+                    \setlength{\itemsep}{0pt} % No extra space between items
+        \item every obj is a term.
+        \item  if $t_{0},...t_{n}$ are terms and ``$Func(f)$'' and ``$(t_{0},...t_{n}) \in Dom(f)$''. 
+        then ``$f(t_{0},...t_{n})$'' is also a term.
+    \end{enumerate}
+    we denote terms with small letters like $t,s,r,...$.
+\end{definition}
+
+
+
+%
+\begin{definition}
+    \textbf{Substitution for term} we define Substitution an term with variable  like this.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item for variables if $x=y$ then $y[t/x]:=t$ and if $x \not= y$ then $y[t/x]:=y$.
+        \item for constants  $c[t/x]:=c$.
+        \item for terms like  $f(t_{0},...t_{n})$
+         \[ f(t_{0},...t_{n})[t/x] := f(t_{0}[t/x],...t_{n}[t/x])\]
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}
+    \textbf{Substitution for formulas} we define Substitution for a formula like this.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item for atomic formulas we define it like this. if it's a single term we do it 
+        as we explain in ``\textbf{Substitution for term}''. if it's like $t_0=t_1$ or $t_0 \in t_1$
+        ($t_0 , t_1$ are terms). we define it like this.
+            \[ (t_0=t_1)[t/x] := (t_0[t/x] = t_1[t/x]) \]
+            \[ (t_0 \in t_1)[t/x] := (t_0[t/x] \in t_1[t/x]) \]
+        \item if formula $A$ is complex we define it like this.
+            \[ (B \bigcirc C)[t/x] := (B[t/x] \bigcirc C[t/x]) \]
+            ($\bigcirc $ can be $\to,\land ,\lor$).
+            \[ (\neg B)[t/x] := (\neg B[t/x]) \]
+    \end{enumerate}
+\end{definition}
 
 \begin{theorem}
     \textbf{$(schema)$} $(\forall I ,\forall E ,\exists I , \exists E)$
@@ -2508,7 +2000,7 @@ handy later.
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
             \item  $x$ is a variable.
-            \item  $\phi (x)$ must not be assumed.
+            \item  ``$\phi (x)$'' must not be assumed.
         \end{enumerate}
 
         \\
@@ -2552,7 +2044,7 @@ handy later.
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
             \item  $x$ is a variable.
-            \item  $\phi (x)$ must not be assumed in previous lines.(except ones that are closed)
+            \item  ``$\phi (x)$'' must not be assumed in previous lines.(except ones that are closed)
             \item $x$ is not free in $\theta$
         \end{enumerate}
         \\
@@ -2562,55 +2054,36 @@ handy later.
     \\
     \\
     $(\forall I , \exists E)$ is the same as $(\forall I , \exists E)$ in chapter three so we have
-    to prove $(\forall E , \exists I )$ .
+    to prove $(\forall E , \exists I )$. so assume $t= f(x)$ so to it's easy to see 
+    $Func(f)$ and $x \in Dom(f)$.
 
     \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}>{\centering\arraybackslash}m{7.5cm}}
         \begin{fitchproof}[arrayenv=tabular]
-            \have  {2} {\phi (y)}                                         \by{$ass$  }{}
-            \have  {2} {\phi (a_{0})}                                     \by{$def.1$ }{}
-            \have [ ] {2} {\vdots}
-            \have [n] {2} {\phi (a_{n})}                                       \by{$def.1$}{}
-            \have {2} {\bigwedge\limits_{i=0}^n \phi (a_{i}) }          \by{$\land I,2,3,...,n+2$}{}
-            \have  {2} { \forall x \phi (x)}                  \by{$def. n+3$ }{}
+            \have  {1} {\forall x \phi (x)}           \by{$ass$}{}
+            \have  {1} {Func(f)}                          \by{$ass$}{}
+            \have  {1} {\exists y \big((x,y) \in f\big)}         \by{$ass$}{}
+            \open
+            \have  {1} { (x,y) \in f}                   \by{$acp$}{}
+            \have  {1} {  f(x)=y}                       \by{$def$}{}
+            \have  {1} {\phi(y)}                        \by{$\forall E$}{} 
+            \have  {2} {\phi(f(x))}                     \by{$= E$}{}
+            \close
+            \have  {2} {\phi(f(x))}                    \by{$\exists E$}{}
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
-            \have  {2} {\forall x \phi (x)}                         \by{$ass$ }{}
-            \have  {2} {\bigwedge\limits_{i=0}^n \phi (a_{i})}      \by{$def.1$}{}
-            \have  {2} { \phi (t)}                         \by{$\land E 2$}{}
+            \have  {2} {\phi(f(x))}                    \by{$ass$}{}
+            \have  {1} {Func(f)}                          \by{$ass$}{}
+            \have  {1} {\exists y \big((x,y) \in f\big)}         \by{$ass$}{}
+            \open
+            \have  {1} { (x,y) \in f}                   \by{$acp$}{}
+            \have  {1} { f(x)=y}                       \by{$def$}{}
+            \have  {1} {\phi(y)}                        \by{$= E$}{} 
+            \have  {1} {\exists x \phi (x)}           \by{$\exists I$}{}
+            \close
+            \have  {1} {\exists x \phi (x)}           \by{$\exists E$}{}
         \end{fitchproof}
-
         \\
-
-        \begin{fitchproof}[arrayenv=tabular]
-            \have  {2} {\phi (t)}
-            \have  {2} {\bigvee\limits_{i=0}^n \phi (a_{i})}   \by{$\lor I 1$}{}
-            \have  {2} { \exists x \phi (x)}         \by{$def 2$}{}
-        \end{fitchproof}
-
-         &
-
-        \begin{fitchproof}[arrayenv=tabular]
-            \have  {1} {\exists x \phi (x)}
-            \have  {1} {\bigvee\limits_{i=0}^n \phi (a_{i}) }
-            \open
-            \have  {1} {\phi [a_{0}/x]}                  \by{$acp$}{}
-            \have [ ] {2} {\vdots}
-            \have  [n] {2} {\theta}
-            \close
-            \open
-            \have  {1} {\phi [a_{1}/x]}                \by{$acp$}{}
-            \have [ ] {2} {\vdots}
-            \have  [m] {2} {\theta}
-            \close
-            \have [ ] {2} {\vdots}
-            \open
-            \have [l] {1} {\phi [a_{2}/x]}                    \by{$acp$}{}
-            \have [ ] {2} {\vdots}
-            \have  [r] {2} {\theta}
-            \close
-            \have  {2} {\theta }                    \by{$\exists E$}{}
-        \end{fitchproof}
 
     \end{tabular}
 
