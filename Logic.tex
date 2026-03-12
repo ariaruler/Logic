@@ -145,7 +145,7 @@ $v$, $w$,$...$
 
 \begin{undefined}
     \textbf{Set} we can't say what exactly sets are but we know sets can be made by fusion
-    (if ``$a$'' is a set we write ``$set(a)$'' 
+    (if ``$a$'' is a set we write ``$set(a)$''
     from now we denote sets with uppercase letters like $A$, $B$, $C$, ...).
 \end{undefined}
 
@@ -244,138 +244,62 @@ $v$, $w$,$...$
 %     \end{tikzpicture}
 % \end{Rule}
 
-
-\section{constants and variables}
-obj are two types.we know them and we know what exactly are we talking about
-and unknowns are mystery.all the obj we have used until now were known ones we
-call them \textbf{"constants"}.
-
-\begin{undefined}
-    \textbf{variables} A variable is a symbol
-    (usually a letter like $x, y, or z$)
-    that represents an unknown obj.
-\end{undefined}
-
-% \begin{definition}
-%     \textbf{variables sets} A variable that is a set
-%     (usually a letter like $X, Y, or Z$)
-%     that represents an unknown set.
-% \end{definition}
-
-\begin{definition}
-    \textbf{predicate}  ``$set()$'' and identity ``$=$'' and membership ``$\in$'' symbols are predicates.
-     ``$set()$'' is unary and identity and membership  are binary.
-\end{definition}
-
 \chapter{propositional logic (zeroth-order logic)}
 
 \section{What is proposition?}
 
-before answering to this question let me show you what is well formed
-formula(WWF).
+
+\begin{definition}
+    \textbf{predicate}  ``$set()$'' and identity ``$=$'' and membership ``$\in$'' symbols are predicates.
+    ``$set()$'' is unary and identity and membership  are binary.
+\end{definition}
+
+capital letter ``$(P,Q,R)$'' showes \textbf{predicates}.
 
 %
 \begin{definition}
-    \textbf{Atomic formula} every single obj or  or two obj(conatants and variable) and a binary
-    predicate $(=,\in)$ between them like $x=b , y\in C, ...$
-    \\
-    we denote atomic formulas with $A_{i}$.
+    \textbf{Atomic proposition} we define atomic propositions like this.
+
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item if ``$a$'' is an obj then ``$set(a)$'' is an atomic proposition.
+        \item if ``$a,b$'' are obj then ``$a=b$'' is an atomic proposition.
+        \item if ``$a,b$'' are obj then ``$a \in b$'' is an atomic proposition.
+    \end{enumerate}
+    we denote atomic propositions with ``$p_{i}$''.
 \end{definition}
 
 %
 \begin{undefined}
     \textbf{logical operators} ($\neg ,\to ,\land ,\lor$) tool that used between
-    atoms to make more complex formulas
+    atoms to make more complex propositions
     (all of the opratores are binary except "$\neg$" that is unary ).
 \end{undefined}
 
+you can easily see that formula are made up by atomic propositions.in general
+we say formula is an atomic formula or combination of them.
+
 %
 \begin{definition}
-    \textbf{well formed formula(WWF)} these are formulas.
+    \textbf{Propositions} these are propositions.
 
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item atomic formulas $(A_{i})$
-        \item if $A$ is a formula then $\neg A$ is a formula too.
-        \item if $A ,B$ are two formulas then $A \bigcirc  B $ is a formula too.($\bigcirc $ can be $\to,\land ,\lor$).
+        \item atomic propositions ``$(p_{i})$''.
+        \item if ``$p$'' is a formula then ``$\neg p$'' is a formula too.
+        \item if ``$p ,q$'' are two propositions then ``$p \bigcirc q $'' is a formula
+              too.($\bigcirc $ can be ``$\to,\land ,\lor$'').
     \end{enumerate}
 
-    for example $(A_0 \to A_1 ,\neg A_3)$ \\ we easily call WWF ``formula'' and
-    also we denote WWF with $A ,B ,C ,...$.
 \end{definition}
-
-you can easily see that formula are made up by atomic formulas.in general we
-say formula is an atomic formula or combination of them.
-%
-\begin{definition}
-    \textbf{open formula} formulas that variables used in one of its atomic formulas.
-\end{definition}
-
-the formulas that are not open call \textbf{``closed formulas''} or
-\textbf{``sentence''}. Now question is ``are very closed formulas
-proposition?'' (propositions in classic logic are sentences that are true or
-false?) the answer is unfortunately \textbf{No}.
-
-%
-\begin{definition}
-    \textbf{Atomic proposition} every atomic formula that can be
-    proven by tools introduced in chapter 1($I= , E= , I\in , E\in , I \bot , \bot E $).
-    \\
-    we denote atomic formulas with $p_{i}$.
-\end{definition}
-
-%
-\begin{definition}
-    \textbf{proposition} every WWF formula that its atomes are all atomic
-    propositions.
-    \\
-    we denote propositions with $p ,q ,r ,...$.
-\end{definition}
-
-
-
-\begin{definition}
-    \textbf{open proposition} assume formula of a proposition but Substitute some
-    obj and replace them with variables.we call it open proposition and denote it with
-    capital letter $(P,Q,R)$ showes other types of \textbf{predicates} and variables like$(P(x) ,Q(x,y) ,..)$
-\end{definition}
-
-%
-\begin{definition}
-    \textbf{Substitution for obj} we define Substitution an obj with variable  like this.
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item for variables if $x=y$ then $y[a/x]:=a$ and if $x \not= y$ then $y[a/x]:=y$.
-        \item for constants  $c[a/x]:=c$.
-    \end{enumerate}
-\end{definition}
-
-\begin{definition}
-    \textbf{Substitution for formulas} we define Substitution for a formula like this.
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item for atomic formulas we define it like this. if it's a single object we do it 
-        as we explain in ``\textbf{Substitution for obj}''. if it's like $x = y$ or $x \in y$
-        ($x,y$ can be both constants and variables). we define it like this.
-            \[ (x=y)[a/z] := (x[a/z] = y[a/z]) \]
-            \[ (x \in y)[a/z] := (x[a/z] \in y[a/z]) \]
-        \item if formula $A$ is complex we define it like this.
-            \[ (B \bigcirc C)[a/x] := (B[a/x] \bigcirc C[a/x]) \]
-            ($\bigcirc $ can be $\to,\land ,\lor$).
-            \[ (\neg B)[a/x] := (\neg B[a/x]) \]
-    \end{enumerate}
-\end{definition}
-
-
-simply means in a formula put an obj like $b$ instead of another like $a$.we
-denote it by $A[b/a]$ or $A[\frac{b}{a}]$
-
+for example ``$(p_0 \to p_1 ,\neg p_3)$'' \\
+we denote propositions with ``$p ,q ,r ,...$''.
 
 \section{Rules of propositions.}
 
 \begin{definition}
     \textbf{proposition schema(variable proposition)} a proposition that is unknown
-    for us and it works as variable.(we show them with $\varphi ,\psi ,\theta ,... $)
+    for us and it works as variable.(we show them with ``$\varphi ,\psi ,\theta ,... $'')
 \end{definition}
 
 \begin{undefined}
@@ -423,6 +347,46 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
         \end{fitchproof}
         \\
         \hline
+    \end{tabular}
+    \begin{example}
+        \textbf{} for  ``$p,q,r$'' we can prove these.
+        \begin{enumerate}
+            \setlength{\itemsep}{0pt} % No extra space between items
+            \item  $p \rightarrow q, q \rightarrow r /\therefore p \rightarrow r$
+            \item  $q /\therefore p \rightarrow q$
+        \end{enumerate}
+
+    \end{example}
+
+    \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}}
+
+        \begin{fitchproof}[arrayenv=tabular]
+            \have {} {p \to q} \by {$ass$} {}
+            \have {} {q \to r} \by {$ass$} {}
+            \open
+            \have {} {p} \by {$acp$} {}
+            \have {} {q} \by {$\to E  1,3$} {}
+            \have {} {r} \by {$\to E  2,4$} {}
+            \close
+            \have {} {p \to r} \by  {$\to I$} {}
+
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \have {} {q } \by {$ass$} {}
+            \open
+            \have {} {p} \by {$acp$} {}
+            \have {} {q} \by {$ass$} {}
+            \close
+            \have {} {p \to q} \by {$\to I $} {}
+
+        \end{fitchproof}
+        \\
+
+    \end{tabular}
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
+        \hline
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ]{1} {\varphi}
             \hypo [ ] {2} {\psi}
@@ -446,6 +410,87 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
             \end{minipage}
         \end{minipage}
         \\
+        \hline
+    \end{tabular}
+
+    \begin{example}
+        \textbf{} for  ``$p,q,r$'' we can prove these.
+        \begin{enumerate}
+            \setlength{\itemsep}{0pt} % No extra space between items
+            \item $p \wedge q /\therefore q \wedge p$
+            \item $(p \wedge q) \wedge r /\therefore p \wedge(q \wedge r)$
+            \item $p \rightarrow q /\therefore(p \wedge r) \rightarrow q$
+            \item $(p \wedge q) \rightarrow r /\therefore p \rightarrow(q \rightarrow r)$
+            \item  $p \rightarrow(q \rightarrow r) /\therefore(p \wedge r) \rightarrow q$
+        \end{enumerate}
+
+    \end{example}
+
+    \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}}
+        \begin{fitchproof}[arrayenv=tabular]
+            \have {} {p \land q} \by {$ass$} {}
+            \have {} {p} \by {$\land E,1$} {}
+            \have {} {q} \by {$\land E,1$} {}
+            \have {} {q \land p} \by {$\land I,2,3$} {}
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \have{1}{(p \land q) \land r}      \by{$ass$}{}
+            \have{2}{p \land q}               \by{$\land E,1$}{}
+            \have{3}{r}                       \by{$\land E,1$}{}
+            \have{4}{p}                       \by{$\land E,2$}{}
+            \have{5}{q}                       \by{$\land E,2$}{}
+            \have{6}{q \land r}               \by{$\land I,3,5$}{}
+            \have{7}{p \land (q \land r)}     \by{$\land I,4,6$}{}
+        \end{fitchproof}
+        \\
+    \end{tabular}
+
+    \begin{tabular}{>{\centering\arraybackslash}m{5cm}|>{\centering\arraybackslash}m{5cm}|>{\centering\arraybackslash}m{5cm}}
+
+        \begin{fitchproof}[arrayenv=tabular]
+            \have {} {p \to q} \by {$ass$} {}
+            \open
+            \have {} {p \land r} \by {acp} {}
+            \have {} {p} \by {$\land E,2$} {}
+            \have {} {q} \by {$\to E,1,3$} {}
+            \close
+            \have {} {(p \land r) \to q} \by {$\to I$} {}
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \have {} {(p \land q) \to r} \by {$ass$} {}
+            \open
+            \have {} {p} \by {$acp$} {}
+            \open
+            \have {} {q} \by {$acp$} {}
+            \have {} {p \land q} \by {$\land I 2,3$} {}
+            \have {} {r} \by {$\to E  1,4$} {}
+            \close
+            \have {} {q \to r} \by {$\to I$} {}
+            \close
+            \have {} {p \to (q \to r)} \by  {$\to I$} {}
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+
+            \have{1}{p \rightarrow (q \rightarrow r)} \by{$ass$}{}
+            \open
+            \have{2} {p \land q} \by{$acp$}{}
+
+            \have{3}{p} \by{$\land E,2 $}{}
+            \have{4}{q \rightarrow r} \by{$\to E,1,3$}{}
+            \have{5}{q} \by{$\land E,2 $}{}
+            \have{6}{r} \by{$\to E,4,5$}{}
+            \close
+            \have{7}{(p \land q) \rightarrow r} \by{$\to I $}{}
+
+        \end{fitchproof}
+        \\
+
+    \end{tabular}
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{minipage}[t]{\linewidth}
             \centering
@@ -481,258 +526,21 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
         \end{fitchproof}
         \\
         \hline
-        \begin{fitchproof}[arrayenv=tabular]
-            \open
-            \have [ ] {1} {\varphi}
-            \have [ ] {2} {\vdots}
-            \have  [ ] {2} {\bot}
-            \close
-            \have  [ ]{2} {\therefore \neg\varphi } \by{$\neg I$ }{}
-        \end{fitchproof}
-
-         &
-        \begin{fitchproof}[arrayenv=tabular]
-            \open
-            \have [ ] {1} {\neg\varphi}
-            \have [ ] {2} {\vdots}
-            \have  [ ] {2} {\bot}
-            \close
-            \have  [ ]{2} {\therefore \varphi } \by{$\neg E$ }{}
-        \end{fitchproof}
-        \\
-        \hline
-        \begin{fitchproof}[arrayenv=tabular]
-            \hypo [ ]{1} {\varphi}
-            \hypo [ ] {2} {\neg\varphi}
-            \have  [ ]{2} {\therefore \bot} \by{$\bot I$}{}
-        \end{fitchproof}
-         &
-        \begin{fitchproof}[arrayenv=tabular]
-            \hypo [ ] {2} {\bot}
-            \have  [ ]{2} {\therefore \varphi} \by{$\bot E$}{}
-        \end{fitchproof}
-        \\
-        \hline
     \end{tabular}
 
-\end{Rule}
+    \begin{example}
+        \textbf{} for  ``$p,q,r$'' we can prove these.
+        \begin{enumerate}
+            \setlength{\itemsep}{0pt} % No extra space between items
+            \item $p \vee q /\therefore q \vee p$
+            \item $(p \vee q) \vee r /\therefore p \vee(q \vee r)$
+            \item $ p \wedge(q \vee r) /\therefore(p \wedge q) \vee(p \wedge r)$
+            \item  $(p \rightarrow q) \wedge(r \rightarrow s) /\therefore(p \vee r) \rightarrow(q \vee s)$
+        \end{enumerate}
+    \end{example}
 
-\begin{definition}
-    \textbf{$\varphi \leftrightarrow \psi$} : $(\varphi \to \psi) \land (\psi \to \varphi)$
-\end{definition}
+    \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}}
 
-\begin{definition}
-    \textbf{schema of prove} you've got knowed by now what is schema of a rule.
-    if you want to prove a theorem that it's schema form.you can't prove it directly.
-    here we use a technique calls \textbf{"schema of prove"}.
-    it let us prove for all situations at the same time.
-\end{definition}
-
-\begin{theorem}
-    \textbf{$(schema)$} $(\leftrightarrow I , \leftrightarrow E)$
-
-    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
-        \hline
-        \begin{fitchproof}[arrayenv=tabular]
-            \open
-            \have [ ] {1} {\varphi}
-            \have [ ] {2} {\vdots}
-            \have  [ ] {2} {\psi}
-            \close
-            \open
-            \have [ ] {1} {\psi}
-            \have [ ] {2} {\vdots}
-            \have  [ ] {2} {\varphi}
-            \close
-            \have  [ ]{2} {\therefore \varphi \leftrightarrow \psi} \by{$\leftrightarrow I$}{}
-        \end{fitchproof}
-         &
-
-        \begin{minipage}[t]{\linewidth}
-            \centering
-            \begin{minipage}[t]{0.48\linewidth}
-                \begin{fitchproof}[arrayenv=tabular]
-                    \hypo [ ]{1} {\varphi \leftrightarrow \psi}
-                    \hypo [ ] {2} {\varphi }
-                    \have  [ ]{2} {\therefore \psi } \by{$\leftrightarrow E$}{}
-                \end{fitchproof}
-            \end{minipage}
-            % \hfill
-            \begin{minipage}[t]{0.48\linewidth}
-                \begin{fitchproof}[arrayenv=tabular]
-                    \hypo [ ]{1} {\varphi \leftrightarrow \psi}
-                    \hypo [ ] {2} {\psi}
-                    \have  [ ]{2} {\therefore \varphi} \by{$\leftrightarrow E$}{}
-                \end{fitchproof}
-            \end{minipage}
-        \end{minipage}
-
-        \\
-        \hline
-    \end{tabular}
-
-    \begin{fitchproof}[arrayenv=tabular]
-        \open
-        \have  {1} {\varphi}                                            \by{acp  }{}
-        \have [ ] {2} {\vdots}
-        \have  [n] {2} {\psi}
-        \close
-        \open
-        \have {1} {\psi}                                            \by{acp  }{}
-        \have [ ] {2} {\vdots}
-        \have  [m] {2} {\varphi}
-        \close
-        \have   {2} {\varphi \to \psi }                              \by{$\to, I1,n$ }{}
-        \have   {2} {\psi \to \varphi }                              \by{$\to, In+1,m$}{}
-        \have  {2} {(\varphi \to \psi)\land (\psi \to \varphi)}     \by{$\land I,m+1,m+2$}{}
-        \have  {2} {\varphi \leftrightarrow \psi}                     \by{$def.,m+3$ }{}
-    \end{fitchproof}
-
-    \begin{fitchproof}[arrayenv=tabular]
-        \have {1} {\varphi \leftrightarrow \psi }                   \by{ass}{}
-        \have {2} {\varphi }                                        \by{ass}{}
-        \have  {2} {(\varphi \to \psi)\land (\psi \to \varphi)}     \by{$def. 1$}{}
-        \have  {2} {\varphi \to \psi }                              \by{$\land E 3$}{}
-        \have  {2} {\psi}                                           \by{$\to E 1,4$}{}
-    \end{fitchproof}
-
-\end{theorem}
-
-% \begin{example}
-%     \textbf{} $a_{0} \notin \{a_{1} , a_{2}... a_{n}\}$
-
-%     \begin{tikzpicture}
-%         % Vertical lines
-%         \draw (0,-1.5) -- (0,3.5);
-%         \draw (1,-1.5) -- (1,3.5);
-%         \draw (1.5,3.3) -- (-0.1,3.3) -- (-0.1,-0.5) -- (1.5,-0.5);
-%         % Labels between lines
-%         \node at (-0.5,3) {1.};
-%         \node at (-0.5,2) {2.};
-%         \node at (-0.5,1) {3.};
-%         \node at (-0.5,0) {4.};
-%         \node at (-0.5,-1) {5.};
-%         \node at (-0.5,-2) {6.};
-%         \node at (2.4,3) {$a_{0} \in \{a_{1} , a_{2}... a_{n}\}$};
-%         \node at (4.8,3) {acp};
-%         \node at (2,2) {$\{a_{1} , a_{2}... a_{n}\}$};
-%         \node at (4.8,2) {ass};
-%         \node at (0.2,1) {$a$};
-%         \node at (4.8,1) {fiss $1,2$};
-%         \node at (1.5,0) {$\bot$};
-%         \node at (4.8,0) {$\bot I 2,3$};
-%         \node at (2.4,-1) {$a_{0} \notin \{a_{1} , a_{2}... a_{n}\}$};
-%         \node at (4.8,-1) {$I\in$};
-%     \end{tikzpicture}
-% \end{example}
-
-\begin{example}
-    \textbf{} for conatants p,q,r we can prove these.Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item  $p \rightarrow q, q \rightarrow r /\therefore p \rightarrow r$
-        \item  $q /\therefore p \rightarrow q$
-        \item $(p \wedge q) \wedge r /\therefore p \wedge(q \wedge r)$
-        \item $p \wedge q /\therefore q \wedge p$
-        \item $p \rightarrow q /\therefore(p \wedge r) \rightarrow q$
-        \item $(p \wedge q) \rightarrow r /\therefore p \rightarrow(q \rightarrow r)$
-        \item  $p \rightarrow(q \rightarrow r) /\therefore(p \wedge r) \rightarrow q$
-        \item $p \vee q /\therefore q \vee p$
-        \item $(p \vee q) \vee r /\therefore p \vee(q \vee r)$
-        \item $ p \wedge(q \vee r) /\therefore(p \wedge q) \vee(p \wedge r)$
-        \item  $(p \rightarrow q) \wedge(r \rightarrow s) /\therefore(p \vee r) \rightarrow(q \vee s)$
-        \item  $p \rightarrow q, \neg q /\therefore \neg p$
-        \item  $p \rightarrow q /\therefore \neg p \vee q$
-
-    \end{enumerate}
-    proofs.
-    \\
-    \begin{tabular}{>{\centering\arraybackslash}m{5cm}|>{\centering\arraybackslash}m{5cm}|>{\centering\arraybackslash}m{5cm}}
-
-        \begin{fitchproof}[arrayenv=tabular]
-            \have {} {p \to q} \by {$ass$} {}
-            \have {} {q \to r} \by {$ass$} {}
-            \open
-            \have {} {p} \by {$acp$} {}
-            \have {} {q} \by {$\to E  1,3$} {}
-            \have {} {r} \by {$\to E  2,4$} {}
-            \close
-            \have {} {p \to r} \by  {$\to I$} {}
-
-        \end{fitchproof}
-         &
-        \begin{fitchproof}[arrayenv=tabular]
-            \have {} {q } \by {$ass$} {}
-            \open
-            \have {} {p} \by {$acp$} {}
-            \have {} {q} \by {$ass$} {}
-            \close
-            \have {} {p \to q} \by {$\to I $} {}
-
-        \end{fitchproof}
-         &
-        \begin{fitchproof}[arrayenv=tabular]
-            \have{1}{(p \land q) \land r}      \by{$ass$}{}
-            \have{2}{p \land q}               \by{$\land E,1$}{}
-            \have{3}{r}                       \by{$\land E,1$}{}
-            \have{4}{p}                       \by{$\land E,2$}{}
-            \have{5}{q}                       \by{$\land E,2$}{}
-            \have{6}{q \land r}               \by{$\land I,3,5$}{}
-            \have{7}{p \land (q \land r)}     \by{$\land I,4,6$}{}
-        \end{fitchproof}
-        \\
-        \hline
-        \begin{fitchproof}[arrayenv=tabular]
-            \have {} {p \land q} \by {$ass$} {}
-            \have {} {p} \by {$\land E,1$} {}
-            \have {} {q} \by {$\land E,1$} {}
-            \have {} {q \land p} \by {$\land I,2,3$} {}
-        \end{fitchproof}
-         &
-        \begin{fitchproof}[arrayenv=tabular]
-            \have {} {p \to q} \by {$ass$} {}
-            \open
-            \have {} {p \land r} \by {acp} {}
-            \have {} {p} \by {$\land E,2$} {}
-            \have {} {q} \by {$\to E,1,3$} {}
-            \close
-            \have {} {(p \land r) \to q} \by {$\to I$} {}
-        \end{fitchproof}
-         &
-        \begin{fitchproof}[arrayenv=tabular]
-            \have {} {(p \land q) \to r} \by {$ass$} {}
-            \open
-            \have {} {p} \by {$acp$} {}
-            \open
-            \have {} {q} \by {$acp$} {}
-            \have {} {p \land q} \by {$\land I 2,3$} {}
-            \have {} {r} \by {$\to E  1,4$} {}
-            \close
-            \have {} {q \to r} \by {$\to I$} {}
-            \close
-            \have {} {p \to (q \to r)} \by  {$\to I$} {}
-        \end{fitchproof}
-        \\
-
-    \end{tabular}
-
-    \begin{tabular}{>{\centering\arraybackslash}m{5cm}|>{\centering\arraybackslash}m{5cm}|>{\centering\arraybackslash}m{5cm}}
-
-        \begin{fitchproof}[arrayenv=tabular]
-
-            \have{1}{p \rightarrow (q \rightarrow r)} \by{$ass$}{}
-            \open
-            \have{2} {p \land q} \by{$acp$}{}
-
-            \have{3}{p} \by{$\land E,2 $}{}
-            \have{4}{q \rightarrow r} \by{$\to E,1,3$}{}
-            \have{5}{q} \by{$\land E,2 $}{}
-            \have{6}{r} \by{$\to E,4,5$}{}
-            \close
-            \have{7}{(p \land q) \rightarrow r} \by{$\to I $}{}
-
-        \end{fitchproof}
-         &
         \begin{fitchproof}[arrayenv=tabular]
 
             \have{2}{p \lor q} \by{$ass$}{}
@@ -771,6 +579,7 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
             \have{12}{p \lor (q \lor r)} \by{ $\lor E,1$}{}
         \end{fitchproof}
         \\
+
     \end{tabular}
 
     \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}}
@@ -818,6 +627,96 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
         \\
     \end{tabular}
 
+    \begin{definition}
+        \textbf{$\bot$} : $\varphi  \land \neg \varphi$
+    \end{definition}
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
+        \hline
+        \begin{fitchproof}[arrayenv=tabular]
+            \open
+            \have [ ] {1} {\varphi}
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {\bot}
+            \close
+            \have  [ ]{2} {\therefore \neg\varphi } \by{$\neg I$ }{}
+        \end{fitchproof}
+
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \open
+            \have [ ] {1} {\neg\varphi}
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {\bot}
+            \close
+            \have  [ ]{2} {\therefore \varphi } \by{$\neg E$ }{}
+        \end{fitchproof}
+        \\
+        \hline
+    \end{tabular}
+
+    \begin{definition}
+        \textbf{schema of prove} you've got knowed by now what is schema of a rule.
+        if you want to prove a theorem that it's schema form.you can't prove it directly.
+        here we use a technique calls \textbf{"schema of prove"}.
+        it let us prove for all situations at the same time.
+    \end{definition}
+
+    \begin{theorem}
+        \textbf{$(schema)$} $(\bot I , \bot E)$
+
+        \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
+            \hline
+            \begin{fitchproof}[arrayenv=tabular]
+                \hypo [ ]{1} {\varphi}
+                \hypo [ ] {2} {\neg\varphi}
+                \have  [ ]{2} {\therefore \bot} \by{$\bot I$}{}
+            \end{fitchproof}
+             &
+            \begin{fitchproof}[arrayenv=tabular]
+                \hypo [ ] {2} {\bot}
+                \have  [ ]{2} {\therefore \varphi} \by{$\bot E$}{}
+            \end{fitchproof}
+            \\
+            \hline
+        \end{tabular}
+
+        \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}}
+            \begin{fitchproof}[arrayenv=tabular]
+                \have {1} {\varphi}                    \by{$ass$}{}
+                \have {2} {\neg\varphi}             \by{$ass$}{}
+                \have {1} {\varphi \land \neg\varphi } \by{$\land I$}{}
+                \have  {2} { \bot}              \by{$def.3$}{}
+            \end{fitchproof}
+             &
+            \begin{fitchproof}[arrayenv=tabular]
+                \have {2} {\bot} \by{$ass$}{}
+                \open
+                \have  {2} {\neg \varphi} \by{$acp$}{}
+                \have  {2} { \vdots}
+                \have  {2} { \bot} \by{$rp 1$}{}
+                \close
+                \have  {2} { \varphi} \by{$\neg E$}{}
+            \end{fitchproof}
+            \\
+        \end{tabular}
+
+    \end{theorem}
+
+    \begin{Attention}
+        \textbf{}Intuitionists can skip the ``$\neg E$'' rule that is the ``$RAA$'' rule in old notation
+        and use ``$\bot E$'' as a rule instead.
+    \end{Attention}
+
+    \begin{example}
+        \textbf{} for  ``$p,q,r$'' we can prove these.
+        \begin{enumerate}
+            \setlength{\itemsep}{0pt} % No extra space between items
+            \item  $p \rightarrow q, \neg q /\therefore \neg p$
+            \item  $p \rightarrow q /\therefore \neg p \vee q$
+        \end{enumerate}
+    \end{example}
+
     \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}}
         \begin{fitchproof}[arrayenv=tabular]
             \have {} {p \to q} \by {$ass$} {}
@@ -849,10 +748,87 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
         \\
     \end{tabular}
 
-\end{example}
+\end{Rule}
+
+\begin{definition}
+    \textbf{$\varphi \leftrightarrow \psi$} : $(\varphi \to \psi) \land (\psi \to \varphi)$
+\end{definition}
+
+\begin{theorem}
+    \textbf{$(schema)$} $(\leftrightarrow I , \leftrightarrow E)$
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
+        \hline
+        \begin{fitchproof}[arrayenv=tabular]
+            \open
+            \have [ ] {1} {\varphi}
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {\psi}
+            \close
+            \open
+            \have [ ] {1} {\psi}
+            \have [ ] {2} {\vdots}
+            \have  [ ] {2} {\varphi}
+            \close
+            \have  [ ]{2} {\therefore \varphi \leftrightarrow \psi} \by{$\leftrightarrow I$}{}
+        \end{fitchproof}
+         &
+
+        \begin{minipage}[t]{\linewidth}
+            \centering
+            \begin{minipage}[t]{0.48\linewidth}
+                \begin{fitchproof}[arrayenv=tabular]
+                    \hypo [ ]{1} {\varphi \leftrightarrow \psi}
+                    \hypo [ ] {2} {\varphi }
+                    \have  [ ]{2} {\therefore \psi } \by{$\leftrightarrow E$}{}
+                \end{fitchproof}
+            \end{minipage}
+            % \hfill
+            \begin{minipage}[t]{0.48\linewidth}
+                \begin{fitchproof}[arrayenv=tabular]
+                    \hypo [ ]{1} {\varphi \leftrightarrow \psi}
+                    \hypo [ ] {2} {\psi}
+                    \have  [ ]{2} {\therefore \varphi} \by{$\leftrightarrow E$}{}
+                \end{fitchproof}
+            \end{minipage}
+        \end{minipage}
+
+        \\
+        \hline
+    \end{tabular}
+
+    \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}}
+        \begin{fitchproof}[arrayenv=tabular]
+            \open
+            \have  {1} {\varphi}                                            \by{acp  }{}
+            \have [ ] {2} {\vdots}
+            \have  [n] {2} {\psi}
+            \close
+            \have   {2} {\varphi \to \psi }                              \by{$\to, I$ }{}
+            \open
+            \have {1} {\psi}                                            \by{acp  }{}
+            \have [ ] {2} {\vdots}
+            \have  [m] {2} {\varphi}
+            \close
+            \have   {2} {\psi \to \varphi }                              \by{$\to, I$}{}
+            \have  {2} {(\varphi \to \psi)\land (\psi \to \varphi)}     \by{$\land I$}{}
+            \have  {2} {\varphi \leftrightarrow \psi}                     \by{$def.,m+3$ }{}
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \have {1} {\varphi \leftrightarrow \psi }                   \by{ass}{}
+            \have {2} {\varphi }                                        \by{ass}{}
+            \have  {2} {(\varphi \to \psi)\land (\psi \to \varphi)}     \by{$def. 1$}{}
+            \have  {2} {\varphi \to \psi }                              \by{$\land E 3$}{}
+            \have  {2} {\psi}                                           \by{$\to E 1,4$}{}
+        \end{fitchproof}
+        \\
+    \end{tabular}
+
+\end{theorem}
 
 \begin{exercise}
-    \textbf{} for conatants p,q,r prove.
+    \textbf{} for  ``$p,q,r$'' prove.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item  $p /\therefore p$
@@ -878,28 +854,128 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
 
 \chapter{first-order logic}
 
-\section{what is predicate?}
+
+
+\section{what is formula?}
+
+
+
+obj are two types.we know them and we know what exactly are we talking about
+and unknowns are mystery.all the obj we have used until now were known ones we
+call them \textbf{"constants"}.
+
+\begin{undefined}
+    \textbf{variables} A variable is a symbol
+    (usually a letter like $x, y, or z$)
+    that represents an unknown obj.
+\end{undefined}
+
+% \begin{definition}
+%     \textbf{variables sets} A variable that is a set
+%     (usually a letter like $X, Y, or Z$)
+%     that represents an unknown set.
+% \end{definition}
+\begin{definition}
+    \textbf{Atomic formula} we define atomic formulas like this.
+
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item if ``$x$'' is an obj(constant or variable) then ``$set(x)$'' is an atomic
+              formula.
+        \item if ``$x,y$'' are obj(constant or variable) then ``$x=y$'' is an atomic formula.
+        \item if ``$x,y$'' are obj(constant or variable) then ``$x \in y$'' is an atomic
+              formula.
+    \end{enumerate}
+    we denote atomic formulas with ``$A_{i}$''.
+\end{definition}
 
 %
 \begin{definition}
-    \textbf{Big AND and OR} assume a set like ``$ \{a_{0},a_{1},a_{2},...,a_{n}\}$''
-    we define \textbf{big AND} like this.
+    \textbf{well formed formula(WWF)} these are formulas.
+
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item atomic formulas $(A_{i})$.
+        \item if $A$ is a formula then $\neg A$ is a formula too.
+        \item if $A ,B$ are two formulas then $A \bigcirc B $ is a formula too.($\bigcirc $
+              can be $\to,\land ,\lor$).
+    \end{enumerate}
+
+\end{definition}
+for example $(A_0 \to A_1 ,\neg A_3)$ \\ we easily call WWF ``formula'' and
+also we denote WWF with $A ,B ,C ,...$.
+
+%
+\begin{definition}
+    \textbf{open formula} formulas that variables used in one of its atomic formulas.
+\end{definition}
+
+the formulas that are not open call \textbf{``closed formulas''} or
+\textbf{``sentence''}. Now question is ``are very closed formulas
+proposition?'' (propositions in classic logic are sentences that are true or
+false?) the answer is unfortunately \textbf{No}.
+
+%
+\begin{definition}
+    \textbf{Substitution for obj} we define Substitution an obj with variable  like this.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item for variables if $x=y$ then $y[a/x]:=a$ and if $x \not= y$ then $y[a/x]:=y$.
+        \item for constants $c[a/x]:=c$.
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}
+    \textbf{Substitution for formulas} we define Substitution for a formula like this.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item for atomic formulas we define it like this. if it's a single object we do it as
+              we explain in ``\textbf{Substitution for obj}''. if it's like $x = y$ or $x \in
+                  y$ ($x,y$ can be both constants and variables). we define it like this.
+              \[ set(y)[a/x] := set(y[a/x]) \]
+              \[ (x=y)[a/z] := (x[a/z] = y[a/z]) \]
+              \[ (x \in y)[a/z] := (x[a/z] \in y[a/z]) \]
+        \item if formula $A$ is complex we define it like this.
+              \[ (B \bigcirc C)[a/x] := (B[a/x] \bigcirc C[a/x]) \]
+              ($\bigcirc $ can be $\to,\land ,\lor$).
+              \[ (\neg B)[a/x] := (\neg B[a/x]) \]
+    \end{enumerate}
+\end{definition}
+
+simply means in a formula put an obj like $a$ instead of a variable like $x$.we
+denote it by $A[a/x]$ or $A[\frac{a}{x}]$
+
+\begin{definition}
+    \textbf{Open proposition} assume formula ``$A$'' with variables ``$x_0,x_1,..,x_n$'' in it and a set ``$U$''.
+    we say formula ``$A$''is a ``open proposition in $U$'' when for every obj ``$a_0,a_1,..,a_n$'' in ``$U$''
+    \[A([a_0/x_0][a_1/x_1]...[a_n/x_n]) \]
+    is a proposition we call it open proposition and denote it with ``$(P(x)
+        ,Q(x,y) ,..)$''
+
+\end{definition}
+
+%
+\begin{definition}
+    \textbf{Big ``AND'' and ``OR''} assume a set like ``$ \{a_{0},a_{1},a_{2},...,a_{n}\}$''
+    we define \textbf{big ``AND''} like this.
     \\
     \[ \bigwedge\limits_{i=0}^n P(a_{i}) : P(a_{0}) \land P(a_{1}) \land P(a_{2}) \land... \land P(a_{n})\]
     \\
-    and \textbf{big OR}
+    and \textbf{big ``OR''}
     \\
     \[ \bigvee\limits_{i=0}^n P(a_{i}) : P(a_{0}) \lor P(a_{1}) \lor P(a_{2}) \lor... \lor P(a_{n})\]
 
 \end{definition}
+
+
+
+
 
 \begin{definition}
     \textbf{Universe of discourse} we specify a set like ``$ \{a_{0},a_{1},a_{2},...,a_{n}\}$''
     as universe of a Logic world.
 
 \end{definition}
-
-
 
 \begin{Rule}
     \textbf{use of open propositions} assume universe of discourse is ``$ \{a_{0},a_{1},a_{2},...,a_{n}\}$''
@@ -966,8 +1042,6 @@ denote it by $A[b/a]$ or $A[\frac{b}{a}]$
     \[ \exists  x \phi(x) : \bigvee\limits_{i=0}^n \phi[a_{i}/x] \]
 \end{definition}
 
-
-
 as you can see $\forall x \phi (x) $ and $\exists x \phi (x) $ are sentences.
 
 \begin{definition}
@@ -976,7 +1050,7 @@ as you can see $\forall x \phi (x) $ and $\exists x \phi (x) $ are sentences.
     (previously we sayed that every sentece is not necessary a proposition)
 \end{definition}
 
-\section{Rules of predicates.}
+\section{Rules of first order logic.}
 
 \begin{theorem}
     \textbf{$(schema)$} $(\forall I ,\forall E ,\exists I , \exists E)$ assume universe of discourse is ``$ \{a_{0},a_{1},a_{2},...,a_{n}\}$''
@@ -1318,8 +1392,9 @@ so we can rewrite axiom of Extensionality like this.
 \end{axiom}
 
 this axiom show that why Russell's paradox doesn't happened here because if ou
-assume ``$R=\{x|x \notin x\}$'' is a set.you can't prove or disprove ``$R \in R$''. (we
-don't need to prove that now.we will prove it in ``\textbf{'MetaLogic'}''.)
+assume ``$R=\{x|x \notin x\}$'' is a set.you can't prove or disprove ``$R \in
+    R$''. (we don't need to prove that now.we will prove it in
+``\textbf{'MetaLogic'}''.)
 
 \section{definitions of set theory}
 Let's talk about some definitions in set theoty.These definitions will come in
@@ -1373,15 +1448,8 @@ handy later.
 
     \begin{fitchproof}[arrayenv=tabular]
         \have  {2} {A = \emptyset }                                                    \by{ass}{}
-        \open
-        \have  {1} {y \in A }                                               \by{acp}{}
         \have  {1} {\forall y (y \notin \emptyset )}                                \by{def.}{}
-        \have   {2} {y \in \emptyset }                                       \by{$E=,1,2$}{}
-        \have   {2} {y \notin \emptyset }                                    \by{$\forall E,3$ }{}
-        \have  {2} {\bot}                                                  \by{$\bot I,4,5$ }{}
-        \close
-        \have  {1} {y \notin A }                                            \by{$\neg I$}{}
-        \have  {1} {\forall y (y \notin A )}                                \by{$\forall I,7$}{}
+        \have  {1} {\forall y (y \notin A )}                                \by{$= E,1,2$}{}
     \end{fitchproof}
 \end{lemma}
 
@@ -1405,6 +1473,9 @@ handy later.
             \have  [ ]{2} {\therefore\theta } \by{$E \emptyset \not=$}{}
         \end{fitchproof}
         \\
+        \hline
+    \end{tabular}
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{fitchproof}[arrayenv=tabular]
             \open
@@ -1858,7 +1929,7 @@ handy later.
 \begin{exercise}
     \textbf{} for sets A, B, C, prove.
     \begin{enumerate}
-                \setlength{\itemsep}{0pt} % No extra space between items
+        \setlength{\itemsep}{0pt} % No extra space between items
         \item  $/\therefore A \times (B \cap C) = (A \times B)\cap (A \times C)$
         \item  $/\therefore A \times (B \cup C) = (A \times B) \cup (A \times C)$
         \item  $ /\therefore A \times (B-C) = (A \times B) - (A \times C)$
@@ -1909,15 +1980,14 @@ handy later.
 \begin{definition}
     \textbf{Image} \\
     \[ R[A] = \{y \mid \exists x \in A \quad (x,y) \in R\} \]
-you can olso see by definition of ``inverse of a Relation'' and ``image'' this equation holds.
+    you can olso see by definition of ``inverse of a Relation'' and ``image'' this
+    equation holds.
     \[ R^{-1}[B] = \{ x  \mid \exists y \in B \quad (x,y) \in R\} \]
     we cal this ``\textbf{Pre-image}''
 
 \end{definition}
 
 \section{Functions}
-
-
 
 \begin{definition}
     \textbf{Function}  we call a relation ``\textbf{f}'' a ``\textbf{function}'' when every input has exactly one
@@ -1928,7 +1998,7 @@ you can olso see by definition of ``inverse of a Relation'' and ``image'' this e
 \begin{definition}
     \textbf{Output of a function} assume a function \textbf{f} and  \textbf{$(x,y) \in f$},
     we define ``$f(x):= y$'' and we call ``$f(x)$'' a ``\textbf{output of a function}''.
-     and the reverse is also true, if we use ``$f(x)$'',
+    and the reverse is also true, if we use ``$f(x)$'',
     we have a function  ``\textbf{f}'' and we can say  ``$x \in Dom(f)$''.
     ``output of a function'' is object too, so we can have $f(f(x))$  as well.
 \end{definition}
@@ -1936,23 +2006,20 @@ you can olso see by definition of ``inverse of a Relation'' and ``image'' this e
 \begin{Attention}
     \textbf{} input of a function can be a ordered pair itself, so we can have $f((x,y))$ and it is a ``\textbf{output of a function}''.
     we define ``$f(x,y):=f((x,y))$'' for simplicity.
-    this is true for tuples as well, so we can have ``$f((x_{1},x_{2},...,x_{n}))$'' and we define 
+    this is true for tuples as well, so we can have ``$f((x_{1},x_{2},...,x_{n}))$'' and we define
     ``$f(x_{1},x_{2},...,x_{n}):=f((x_{1},x_{2},...,x_{n}))$'' for simplicity.
 \end{Attention}
 
-
 \begin{definition}
     \textbf{Term} we define term like this.
-        \begin{enumerate}
-                    \setlength{\itemsep}{0pt} % No extra space between items
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
         \item every obj is a term.
-        \item  if $t_{0},...t_{n}$ are terms and ``$Func(f)$'' and ``$(t_{0},...t_{n}) \in Dom(f)$''. 
-        then ``$f(t_{0},...t_{n})$'' is also a term.
+        \item  if $t_{0},...t_{n}$ are terms and ``$Func(f)$'' and ``$(t_{0},...t_{n}) \in
+                  Dom(f)$''. then ``$f(t_{0},...t_{n})$'' is also a term.
     \end{enumerate}
     we denote terms with small letters like $t,s,r,...$.
 \end{definition}
-
-
 
 %
 \begin{definition}
@@ -1960,9 +2027,9 @@ you can olso see by definition of ``inverse of a Relation'' and ``image'' this e
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item for variables if $x=y$ then $y[t/x]:=t$ and if $x \not= y$ then $y[t/x]:=y$.
-        \item for constants  $c[t/x]:=c$.
-        \item for terms like  $f(t_{0},...t_{n})$
-         \[ f(t_{0},...t_{n})[t/x] := f(t_{0}[t/x],...t_{n}[t/x])\]
+        \item for constants $c[t/x]:=c$.
+        \item for terms like $f(t_{0},...t_{n})$
+              \[ f(t_{0},...t_{n})[t/x] := f(t_{0}[t/x],...t_{n}[t/x])\]
     \end{enumerate}
 \end{definition}
 
@@ -1970,15 +2037,16 @@ you can olso see by definition of ``inverse of a Relation'' and ``image'' this e
     \textbf{Substitution for formulas} we define Substitution for a formula like this.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item for atomic formulas we define it like this. if it's a single term we do it 
-        as we explain in ``\textbf{Substitution for term}''. if it's like $t_0=t_1$ or $t_0 \in t_1$
-        ($t_0 , t_1$ are terms). we define it like this.
-            \[ (t_0=t_1)[t/x] := (t_0[t/x] = t_1[t/x]) \]
-            \[ (t_0 \in t_1)[t/x] := (t_0[t/x] \in t_1[t/x]) \]
+        \item for atomic formulas we define it like this. if it's a single term we do it as
+              we explain in ``\textbf{Substitution for term}''. if it's like $t_0=t_1$ or
+              $t_0 \in t_1$ ($t_0 , t_1$ are terms). we define it like this.
+              \[ set(y)[t/x] := set(y[t/x]) \]
+              \[ (t_0=t_1)[t/x] := (t_0[t/x] = t_1[t/x]) \]
+              \[ (t_0 \in t_1)[t/x] := (t_0[t/x] \in t_1[t/x]) \]
         \item if formula $A$ is complex we define it like this.
-            \[ (B \bigcirc C)[t/x] := (B[t/x] \bigcirc C[t/x]) \]
-            ($\bigcirc $ can be $\to,\land ,\lor$).
-            \[ (\neg B)[t/x] := (\neg B[t/x]) \]
+              \[ (B \bigcirc C)[t/x] := (B[t/x] \bigcirc C[t/x]) \]
+              ($\bigcirc $ can be $\to,\land ,\lor$).
+              \[ (\neg B)[t/x] := (\neg B[t/x]) \]
     \end{enumerate}
 \end{definition}
 
@@ -2054,7 +2122,7 @@ you can olso see by definition of ``inverse of a Relation'' and ``image'' this e
     \\
     \\
     $(\forall I , \exists E)$ is the same as $(\forall I , \exists E)$ in chapter three so we have
-    to prove $(\forall E , \exists I )$. so assume $t= f(x)$ so to it's easy to see 
+    to prove $(\forall E , \exists I )$. so assume $t= f(x)$ so to it's easy to see
     $Func(f)$ and $x \in Dom(f)$.
 
     \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}>{\centering\arraybackslash}m{7.5cm}}
@@ -2065,7 +2133,7 @@ you can olso see by definition of ``inverse of a Relation'' and ``image'' this e
             \open
             \have  {1} { (x,y) \in f}                   \by{$acp$}{}
             \have  {1} {  f(x)=y}                       \by{$def$}{}
-            \have  {1} {\phi(y)}                        \by{$\forall E$}{} 
+            \have  {1} {\phi(y)}                        \by{$\forall E$}{}
             \have  {2} {\phi(f(x))}                     \by{$= E$}{}
             \close
             \have  {2} {\phi(f(x))}                    \by{$\exists E$}{}
@@ -2078,7 +2146,7 @@ you can olso see by definition of ``inverse of a Relation'' and ``image'' this e
             \open
             \have  {1} { (x,y) \in f}                   \by{$acp$}{}
             \have  {1} { f(x)=y}                       \by{$def$}{}
-            \have  {1} {\phi(y)}                        \by{$= E$}{} 
+            \have  {1} {\phi(y)}                        \by{$= E$}{}
             \have  {1} {\exists x \phi (x)}           \by{$\exists I$}{}
             \close
             \have  {1} {\exists x \phi (x)}           \by{$\exists E$}{}
@@ -2090,7 +2158,7 @@ you can olso see by definition of ``inverse of a Relation'' and ``image'' this e
 \end{theorem}
 
 \begin{Attention}
-    \textbf{} in all rules and theorems you can replace all constants like $a,b,c,...$ with 
+    \textbf{} in all rules and theorems you can replace all constants like $a,b,c,...$ with
     terms like $t,s,r,....$ and rewrite them.
 \end{Attention}
 
@@ -2203,7 +2271,7 @@ you can olso see by definition of ``inverse of a Relation'' and ``image'' this e
 
     \[ /\therefore \bigcup_{i \in I} A_i =  \{x \mid \exists i \in I \quad x \in A_i\}  \]
 
-        \begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
         \open
         \have {1} { x \in \bigcup_{i \in I} A_i  }                                 \by{$acp$}{}
         \have  {2} {x \in \bigcup \{ A_i \}_{i \in I}}                                \by{$def.1$}{}

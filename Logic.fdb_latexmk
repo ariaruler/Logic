@@ -1,16 +1,16 @@
 # Fdb version 4
-["makeindex Logic.idx"] 1771789620.66365 "Logic.idx" "Logic.ind" "Logic" 1773237357.45681 0
-  "Logic.idx" 1773237355 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+["makeindex Logic.idx"] 1771789620.66365 "Logic.idx" "Logic.ind" "Logic" 1773339884.66096 0
+  "Logic.idx" 1773339883 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
   (generated)
   "Logic.ilg"
   "Logic.ind"
   (rewritten before read)
-["xdvipdfmx"] 1773237357.12277 "Logic.xdv" "Logic.pdf" "Logic" 1773237357.46088 0
-  "Logic.xdv" 1773237356 297468 be26751f816c5847b8106bfda7d45190 "xelatex"
+["xdvipdfmx"] 1773339884.32227 "Logic.xdv" "Logic.pdf" "Logic" 1773339884.6653 0
+  "Logic.xdv" 1773339884 302388 5736d0429baa6984f6d9289e8afa547b "xelatex"
   (generated)
   "Logic.pdf"
   (rewritten before read)
-["xelatex"] 1773237355.14468 "d:/pdf/Logic/Logic.tex" "Logic.xdv" "Logic" 1773237357.45692 0
+["xelatex"] 1773339882.61746 "d:/pdf/Logic/Logic.tex" "Logic.xdv" "Logic" 1773339884.66106 0
   "C:/Users/RayanPouya/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1726690372 37536304 2cb9bea4a9620edb01bdcfe51d65eb2e ""
   "D:/pdf/RStudio/latex/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136759654 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "D:/pdf/RStudio/latex/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -186,13 +186,13 @@
   "D:/pdf/RStudio/latex/tex/latex/twemojis/twemojis.sty" 1649148999 365308 f83b238af2ba6ee3863a4efa272f41c8 ""
   "D:/pdf/RStudio/latex/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "D:/pdf/RStudio/latex/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "Logic.aux" 1773237356 2561 8a88a35a5b9395964176246b7fa2251c "xelatex"
+  "Logic.aux" 1773339884 2442 34027a0af070ecd8355c4486cbe0e17b "xelatex"
   "Logic.ind" 1771789620 0 d41d8cd98f00b204e9800998ecf8427e "makeindex Logic.idx"
-  "Logic.out" 1773237356 2572 a1d8cfd85d741145ed2bfcf941355f57 "xelatex"
-  "Logic.tex" 1773237354 95276 f9b34e297b3020f303ff19244446ded5 ""
-  "Logic.toc" 1773237356 1332 3261117c0cc24091fb673ecb607178cf "xelatex"
+  "Logic.out" 1773339884 2427 c614b1554dfbb484e02414181278adb4 "xelatex"
+  "Logic.tex" 1773339880 98001 cb9bf29a5d64a82da8a13a6cf373fabd ""
+  "Logic.toc" 1773339884 1254 849bf0cfde309a27d20d2aab75a93d7a "xelatex"
   "R-Im-Dom (1).pdf" 1771233638 7419 c1582c39d92191940df593f07f25b211 ""
-  "d:/pdf/Logic/Logic.tex" 1773237354 95276 f9b34e297b3020f303ff19244446ded5 ""
+  "d:/pdf/Logic/Logic.tex" 1773339880 98001 cb9bf29a5d64a82da8a13a6cf373fabd ""
   "fitch.sty" 1702824496 10414 bb855575fc376ae11afeb3d4c92c18eb ""
   (generated)
   "Logic.aux"

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.9.18)  11 MAR 2026 17:25
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.9.18)  12 MAR 2026 21:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -963,79 +963,122 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 Chapter 2.
-[5] [6]
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 408--517
+[5]
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 332--351
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 554--558
-[]
- []
-
-
-Overfull \hbox (0.74188pt too wide) in paragraph at lines 554--558
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 562--566
-[]
- []
-
-
-Overfull \hbox (0.74188pt too wide) in paragraph at lines 562--566
-[] 
- []
-
-
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 534--573
-[][] 
- []
-
-[7]
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
- [8]
-Overfull \hbox (4.91396pt too wide) in paragraph at lines 692--700
+Overfull \hbox (32.93764pt too wide) in paragraph at lines 361--387
 [][] 
  []
 
 
-Overfull \hbox (5.48515pt too wide) in paragraph at lines 702--714
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 388--415
 [][] 
  []
 
 
-Overfull \hbox (45.33765pt too wide) in paragraph at lines 648--718
-[] 
- []
+Underfull \vbox (badness 2020) has occurred while \output is active []
 
-
-Overfull \hbox (9.35837pt too wide) in paragraph at lines 721--734
+ [6]
+Overfull \hbox (32.93764pt too wide) in paragraph at lines 429--448
 [][] 
  []
 
 
-Overfull \hbox (28.85455pt too wide) in paragraph at lines 751--772
+Overfull \hbox (4.91396pt too wide) in paragraph at lines 451--459
 [][] 
  []
 
 
-Overfull \hbox (45.33765pt too wide) in paragraph at lines 719--775
+Overfull \hbox (5.48515pt too wide) in paragraph at lines 461--473
+[][] 
+ []
+
+
+Overfull \hbox (9.35837pt too wide) in paragraph at lines 475--488
+[][] 
+ []
+
+
+Overfull \hbox (45.33765pt too wide) in paragraph at lines 449--492
+[][] 
+ []
+
+
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 493--530
 [][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9]
-Overfull \hbox (32.93764pt too wide) in paragraph at lines 776--820
+ [7]
+Overfull \hbox (32.93764pt too wide) in paragraph at lines 542--584
 [][] 
  []
 
 
-Overfull \hbox (32.93764pt too wide) in paragraph at lines 821--851
+Overfull \hbox (32.93764pt too wide) in paragraph at lines 585--629
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 634--657
+[][] 
+ []
+
+
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 668--683
+[][] 
+ []
+
+
+Overfull \hbox (32.93764pt too wide) in paragraph at lines 684--703
+[][] 
+ []
+
+[9]
+Overfull \hbox (32.93764pt too wide) in paragraph at lines 720--750
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 780--784
+[]
+ []
+
+
+Overfull \hbox (0.74188pt too wide) in paragraph at lines 780--784
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 788--792
+[]
+ []
+
+
+Overfull \hbox (0.74188pt too wide) in paragraph at lines 788--792
+[] 
+ []
+
+
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 760--799
+[][] 
+ []
+
+
+Overfull \hbox (2.76022pt too wide) in paragraph at lines 801--816
+[][] 
+ []
+
+
+Overfull \hbox (32.93764pt too wide) in paragraph at lines 800--827
 [][] 
  []
 
@@ -1046,113 +1089,113 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 Chapter 3.
-
-Underfull \hbox (badness 10000) in paragraph at lines 885--888
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 888--892
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 905--907
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 910--912
-
- []
-
 [13]
-Overfull \hbox (5.11604pt too wide) in paragraph at lines 956--959
-[][]\TU/lmr/bx/n/10 definition 3.1.4. []\TU/lmr/bx/it/10 Universal quantification \TU/lmr/m/it/10 assume universe of discourse is “$\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 a[]; a[]; a[]; :::; a[]\OMS/cmsy/m/n/10 g$\TU/lmr/m/it/10 ”
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 956--959
+Underfull \hbox (badness 10000) in paragraph at lines 959--962
 
  []
 
 
-Overfull \hbox (10.40605pt too wide) in paragraph at lines 963--966
-[][]\TU/lmr/bx/n/10 definition 3.1.5. []\TU/lmr/bx/it/10 Existential quantification \TU/lmr/m/it/10 assume universe of discourse is “$\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 a[]; a[]; a[]; :::; a[]\OMS/cmsy/m/n/10 g$\TU/lmr/m/it/10 ”
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 963--966
+Underfull \hbox (badness 10000) in paragraph at lines 962--966
 
  []
 
 
-Underfull \hbox (badness 1028) in paragraph at lines 1043--1044
+Underfull \hbox (badness 10000) in paragraph at lines 981--983
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 986--988
+
+ []
+
+[14]
+Overfull \hbox (10.86604pt too wide) in paragraph at lines 1032--1035
+[][]\TU/lmr/bx/n/10 definition 3.1.10. []\TU/lmr/bx/it/10 Universal quantification \TU/lmr/m/it/10 assume universe of discourse is “$\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 a[]; a[]; a[]; :::; a[]\OMS/cmsy/m/n/10 g$\TU/lmr/m/it/10 ”
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1032--1035
+
+ []
+
+
+Overfull \hbox (16.15605pt too wide) in paragraph at lines 1039--1042
+[][]\TU/lmr/bx/n/10 definition 3.1.11. []\TU/lmr/bx/it/10 Existential quantification \TU/lmr/m/it/10 assume universe of discourse is “$\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 a[]; a[]; a[]; :::; a[]\OMS/cmsy/m/n/10 g$\TU/lmr/m/it/10 ”
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1039--1042
+
+ []
+
+[15]
+Underfull \hbox (badness 1028) in paragraph at lines 1117--1118
 []$\OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )$ \TU/lmr/m/it/10 must not be assumed in previous
  []
 
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 984--1050
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 1058--1124
 [][] 
  []
 
-[14]
-Overfull \hbox (32.53764pt too wide) in paragraph at lines 1051--1100
+
+Overfull \hbox (32.53764pt too wide) in paragraph at lines 1125--1174
 [][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15]
+ [16]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
- [16]
-Overfull \hbox (3.96057pt too wide) in paragraph at lines 1139--1140
+ [17]
+Overfull \hbox (3.96057pt too wide) in paragraph at lines 1213--1214
 []$\OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 x\OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 y[]\OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 zP\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y; z\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^ \OML/cmm/m/it/10 Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y\OT1/cmr/m/n/10 )[] \OMS/cmsy/m/n/10 _ 8\OML/cmm/m/it/10 x\OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 y\OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 z[]P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y; z\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^ \OML/cmm/m/it/10 R\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y\OT1/cmr/m/n/10 )[]/ \U/msa/m/n/10 ) \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 x\OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 y\OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 z[]P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y; z\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^ \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 _
  []
 
-[17] [18
-
-]
+[18]
 Chapter 4.
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 1169--1189
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 1243--1263
 [][] 
  []
 
 
-Overfull \hbox (32.53764pt too wide) in paragraph at lines 1190--1211
+Overfull \hbox (32.53764pt too wide) in paragraph at lines 1264--1285
 [][] 
  []
 
-[19]
-Underfull \hbox (badness 10000) in paragraph at lines 1229--1231
+[19
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1303--1305
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1260--1264
+Underfull \hbox (badness 10000) in paragraph at lines 1334--1338
 []
  []
 
 
-Overfull \hbox (4.58907pt too wide) in paragraph at lines 1260--1264
+Overfull \hbox (4.58907pt too wide) in paragraph at lines 1334--1338
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1268--1272
+Underfull \hbox (badness 10000) in paragraph at lines 1342--1346
 []
  []
 
 
-Overfull \hbox (4.00227pt too wide) in paragraph at lines 1268--1272
+Overfull \hbox (4.00227pt too wide) in paragraph at lines 1342--1346
 [] 
  []
 
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 1241--1278
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 1315--1352
 [][] 
  []
 
@@ -1160,275 +1203,270 @@ Overfull \hbox (33.73763pt too wide) in paragraph at lines 1241--1278
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20]
-Underfull \hbox (badness 10000) in paragraph at lines 1310--1314
+Underfull \hbox (badness 10000) in paragraph at lines 1384--1388
 
  []
 
 
-Overfull \hbox (7.88835pt too wide) in paragraph at lines 1314--1318
+Overfull \hbox (7.88835pt too wide) in paragraph at lines 1388--1392
 \TU/lmr/m/it/10 by axiom of extentionality we can show that $\OML/cmm/m/it/10 X$ \TU/lmr/m/it/10 is unique. so we denote it as “$\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 x\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; x[]; x[]; :::; x[]\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 g$\TU/lmr/m/it/10 ”. 
  []
 
 [21]
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 1391--1425
-[][] 
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 1459--1496
+[][]
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 1459--1496
+[] 
+ []
+
+
+Underfull \vbox (badness 2698) has occurred while \output is active []
 
  [22]
-Overfull \hbox (32.53764pt too wide) in paragraph at lines 1426--1456
+Overfull \hbox (32.53764pt too wide) in paragraph at lines 1497--1527
 [][] 
  []
 
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 1468--1497
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 1539--1568
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1468--1497
+Underfull \hbox (badness 10000) in paragraph at lines 1539--1568
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1468--1497
+Underfull \hbox (badness 10000) in paragraph at lines 1539--1568
 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [23]
-Underfull \hbox (badness 10000) in paragraph at lines 1526--1529
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 1597--1600
 []
  []
 
 
-Overfull \hbox (9.86688pt too wide) in paragraph at lines 1526--1529
+Overfull \hbox (9.86688pt too wide) in paragraph at lines 1597--1600
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1533--1536
+Underfull \hbox (badness 10000) in paragraph at lines 1604--1607
 []
  []
 
 
-Overfull \hbox (9.86688pt too wide) in paragraph at lines 1533--1536
+Overfull \hbox (9.86688pt too wide) in paragraph at lines 1604--1607
 [] 
  []
 
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 1514--1574
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 1585--1645
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1514--1574
+Underfull \hbox (badness 10000) in paragraph at lines 1585--1645
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1514--1574
+Underfull \hbox (badness 10000) in paragraph at lines 1585--1645
 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [24]
+[24]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 1595--1636
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 1666--1707
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1595--1636
+Underfull \hbox (badness 10000) in paragraph at lines 1666--1707
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1595--1636
+Underfull \hbox (badness 10000) in paragraph at lines 1666--1707
 
  []
 
-
-Underfull \vbox (badness 1436) has occurred while \output is active []
-
- [25]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 1648--1674
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 1719--1745
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1648--1674
+Underfull \hbox (badness 10000) in paragraph at lines 1719--1745
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1648--1674
+Underfull \hbox (badness 10000) in paragraph at lines 1719--1745
+
+ []
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 1777--1780
+[]
+ []
+
+
+Overfull \hbox (12.08911pt too wide) in paragraph at lines 1777--1780
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1784--1787
+[]
+ []
+
+
+Overfull \hbox (12.08911pt too wide) in paragraph at lines 1784--1787
+[] 
+ []
+
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 1766--1798
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1766--1798
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1766--1798
+
+ []
+
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1801--1805
+
+ []
+
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 1817--1835
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1817--1835
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1817--1835
 
  []
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 1706--1709
-[]
- []
-
-
-Overfull \hbox (12.08911pt too wide) in paragraph at lines 1706--1709
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1713--1716
-[]
- []
-
-
-Overfull \hbox (12.08911pt too wide) in paragraph at lines 1713--1716
-[] 
- []
-
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 1695--1727
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1695--1727
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1695--1727
-
- []
-
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-
-Underfull \hbox (badness 10000) in paragraph at lines 1730--1734
-
- []
-
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 1746--1764
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1746--1764
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1746--1764
-
- []
-
-[27] [28
-
-]
 Chapter 5.
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Underfull \hbox (badness 10000) in paragraph at lines 1781--1785
+Underfull \hbox (badness 10000) in paragraph at lines 1852--1856
 
  []
 
 
-Underfull \vbox (badness 1681) has occurred while \output is active []
+Underfull \vbox (badness 1565) has occurred while \output is active []
 
- [29]
+ [27
+
+]
 Missing character: There is no ِ in font [lmroman10-bolditalic]:mapping=tex-text;!
 File: R-Im-Dom (1).pdf Graphic file (type pdf)
 <use R-Im-Dom (1).pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [30]
-Underfull \hbox (badness 10000) in paragraph at lines 1888--1889
+ [28]
+Underfull \hbox (badness 10000) in paragraph at lines 1959--1960
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1899--1900
+Underfull \hbox (badness 10000) in paragraph at lines 1970--1971
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1910--1911
+Underfull \hbox (badness 10000) in paragraph at lines 1981--1982
 
  []
 
-[31]
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 1988--2059
+[29]
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 2056--2127
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1988--2059
+Underfull \hbox (badness 10000) in paragraph at lines 2056--2127
 
  []
 
-[32]
-Overfull \hbox (32.53764pt too wide) in paragraph at lines 2060--2089
+[30]
+Overfull \hbox (32.53764pt too wide) in paragraph at lines 2128--2157
 [][] 
  []
 
-[33] [34] [35]
+[31] [32] [33]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 2255--2296
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 2323--2364
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2255--2296
+Underfull \hbox (badness 10000) in paragraph at lines 2323--2364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2255--2296
+Underfull \hbox (badness 10000) in paragraph at lines 2323--2364
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [36] [37] (Logic.aux)
+ [34] [35] (Logic.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `Logic.out' has not changed.
-(rerunfilecheck)             Checksum: A1D8CFD85D741145ED2BFCF941355F57;2572.
+(rerunfilecheck)             Checksum: C614B1554DFBB484E02414181278ADB4;2427.
  ) 
 Here is how much of TeX's memory you used:
  37348 strings out of 409617
  851701 string characters out of 5778885
- 1951191 words of memory out of 5000000
+ 1947191 words of memory out of 5000000
  59007 multiletter control sequences out of 15000+600000
  564917 words of font info for 81 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 84i,27n,93p,555b,708s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,27n,93p,555b,710s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Logic.xdv (41 pages, 297468 bytes).
+Output written on Logic.xdv (39 pages, 302388 bytes).
