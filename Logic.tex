@@ -248,7 +248,6 @@ $v$, $w$,$...$
 
 \section{What is proposition?}
 
-
 \begin{definition}
     \textbf{predicate}  ``$set()$'' and identity ``$=$'' and membership ``$\in$'' symbols are predicates.
     ``$set()$'' is unary and identity and membership  are binary.
@@ -854,11 +853,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
 
 \chapter{first-order logic}
 
-
-
 \section{what is formula?}
-
-
 
 obj are two types.we know them and we know what exactly are we talking about
 and unknowns are mystery.all the obj we have used until now were known ones we
@@ -967,10 +962,6 @@ denote it by $A[a/x]$ or $A[\frac{a}{x}]$
 
 \end{definition}
 
-
-
-
-
 \begin{definition}
     \textbf{Universe of discourse} we specify a set like ``$ \{a_{0},a_{1},a_{2},...,a_{n}\}$''
     as universe of a Logic world.
@@ -1030,19 +1021,20 @@ denote it by $A[a/x]$ or $A[\frac{a}{x}]$
 
 \begin{definition}
     \textbf{Universal quantification} assume universe of discourse is ``$ \{a_{0},a_{1},a_{2},...,a_{n}\}$''
-    we define $\forall x P(x)$
+    we define ``$\forall x P(x)$''
     \\
     \[ \forall x \phi(x) : \bigwedge\limits_{i=0}^n \phi[a_{i}/x] \]
 \end{definition}
 
 \begin{definition}
     \textbf{Existential quantification} assume universe of discourse is ``$ \{a_{0},a_{1},a_{2},...,a_{n}\}$''
-    we define $\exists x Px$
+    we define ``$\exists x Px$''
     \\
     \[ \exists  x \phi(x) : \bigvee\limits_{i=0}^n \phi[a_{i}/x] \]
 \end{definition}
 
-as you can see $\forall x \phi (x) $ and $\exists x \phi (x) $ are sentences.
+as you can see ``$\forall x \phi (x) $'' and ``$\exists x \phi (x) $'' are
+sentences.
 
 \begin{definition}
     \textbf{Free variables} variables that are not bound by a quantifier.
@@ -1174,8 +1166,48 @@ as you can see $\forall x \phi (x) $ and $\exists x \phi (x) $ are sentences.
 
 \end{theorem}
 
+\begin{Rule}
+    \textbf{$(schema)$} $(I= , E=)$
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
+        \hline
+        \begin{fitchproof}[arrayenv=tabular]
+            \have  [ ]{2} {\therefore a = a } \by{$I=$}{}
+        \end{fitchproof}
+         &
+        \begin{minipage}[t]{\linewidth}
+            \centering
+            \begin{minipage}[t]{0.48\linewidth}
+                \begin{fitchproof}[arrayenv=tabular]
+                    \hypo [ ]{1} {a = b }
+                    \hypo [ ] {2} {\phi(a) }
+                    \have  [ ]{2} {\therefore  \phi(b) } \by{$E=$}{}
+                \end{fitchproof}
+            \end{minipage}
+            % \hfill
+            \begin{minipage}[t]{0.48\linewidth}
+                \begin{fitchproof}[arrayenv=tabular]
+                    \hypo [ ]{1} {a = b }
+                    \hypo [ ] {2} { \phi(a)}
+                    \have  [ ]{2} { \therefore  \phi(a)} \by{$E=$}{}
+                \end{fitchproof}
+            \end{minipage}
+        \end{minipage}
+        \\
+        \hline
+    \end{tabular}
+
+\end{Rule}
+
+\begin{definition}
+    \textbf{Uniqueness}
+    we define ``$\exists ! x Px$''
+    \\
+    \[ \exists !  x \phi(x) : \exists   x (\phi(x) \land \forall y(\phi(y) \to x=y)) \]
+\end{definition}
+
 \begin{example}
-    \textbf{}for conatants P,Q,R we can prove these.Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    \textbf{}for P,Q,R we can prove these.Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
@@ -1201,7 +1233,7 @@ as you can see $\forall x \phi (x) $ and $\exists x \phi (x) $ are sentences.
 \end{example}
 
 \begin{exercise}
-    \textbf{}for conatants P,Q,R prove.
+    \textbf{}for P,Q,R prove.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item   $ \exists x \Big(P(x) \wedge \exists y Q(y) \rightarrow \forall z R(z)\Big) /\therefore \forall y \forall z \Big(\forall x P(x) \wedge Q(y) \rightarrow R(z)\Big) $
@@ -1221,6 +1253,10 @@ as you can see $\forall x \phi (x) $ and $\exists x \phi (x) $ are sentences.
 
 \chapter{The beginning of set theory}
 
+In language of set theory if we are talking about ``$\forall X (P(X))$'' it
+means ``$\forall x (set(x) \to P(x))$'' and when we are talking about
+``$\exists X (P(X))$'' it means ``$\exists x (set(x) \land P(x))$''.
+
 \section{Axioms of set theory}
 we emphasis before that set has no definition.but we can describe what set is
 with rules and axioms.
@@ -1229,7 +1265,9 @@ with rules and axioms.
     \textbf{Existence of universe of set theory}
     There exists a set $V$ (we denote it as V.it simply means the set of all sets), known as the Von Neumann Universe, which contains every set.
     (this axiom can't be formolized in first order logic).
-    (there must be another axiom let us use logic for set theory but we ignore that)
+    (there must be another axiom let us use logic for set theory but we ignore that).
+    (from now on when we are talking about proposition ``$\phi$'' in ``set theory'' we mean
+    proposition ``$\phi$'' in ``$V$'').
 \end{axiom}
 
 \begin{definition}
@@ -1381,9 +1419,10 @@ so we can rewrite axiom of Extensionality like this.
 \end{theorem}
 
 \begin{axiom}
-    \textbf{Weak comprehension} $(schema)$ this axioms says for every open proposition with just one variable
-    like $\phi (x,x_0 , x_1, ... , x_n)$ there is a set such that every $x$ is a member of that set if and only if it holds
-    $\phi (x,x_0 , x_1, ... , x_n)$.
+    \textbf{Weak comprehension} $(schema)$ this axioms says for every open proposition
+    like ``$\phi (x,x_0 , x_1, ... , x_n)$'' there is a set like ``$X$'' such that every ``$x$'' is a
+    member of that set if and only if it holds
+    ``$\phi (x,x_0 , x_1, ... , x_n)$''.
     \\
     \[ \forall x_0 , x_1, ... , x_n \exists X \forall x  (\phi (x,x_0 , x_1, ... , x_n) \leftrightarrow x \in X) \]
     \\
@@ -1393,8 +1432,10 @@ so we can rewrite axiom of Extensionality like this.
 
 this axiom show that why Russell's paradox doesn't happened here because if ou
 assume ``$R=\{x|x \notin x\}$'' is a set.you can't prove or disprove ``$R \in
-    R$''. (we don't need to prove that now.we will prove it in
-``\textbf{'MetaLogic'}''.)
+    R$'' so ``$x not\in x$'' is not a proposition in ``set theorhy''. (we don't
+need to prove that now.we will prove it in``\textbf{'MetaLogic'}''). (it's not
+obvios in ``$x not\in x$'' witch set holds and witch not). (and likely ``$\{ X
+    \mid a \in X \}$'' is not a set either).
 
 \section{definitions of set theory}
 Let's talk about some definitions in set theoty.These definitions will come in
@@ -2362,6 +2403,26 @@ handy later.
     \\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
+
+\chapter{From natural numbers complex numbers }
+
+\chapter{Finite and Infinite sets}
+
+\chapter{Ordinals }
+
+\chapter{Axiom of chioce}
+
+\chapter{Cardinals }
+
+\chapter{hyperreal numbers($\mathbb{N} * , \mathbb{Q} * ,\mathbb{R} *$) and surreal numbers }
+
+\chapter{fantacy numbers($\mathbb{N} (Ord) , \mathbb{Q} (Ord) ,\mathbb{R} (Ord)$) }
+
+\chapter{New beginning for calculus }
+
+\chapter{Lebesgue Intergral}
+
+\chapter{New beginning for Probability theory}
 
 \end{document}
 

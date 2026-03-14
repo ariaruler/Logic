@@ -14,3 +14,13 @@
 \contentsline {section}{\numberline {5.2}Relations}{28}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Functions}{30}{section.5.3}%
 \contentsline {section}{\numberline {5.4}Family of sets}{32}{section.5.4}%
+\contentsline {chapter}{\numberline {6}From natural numbers complex numbers }{37}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Finite and Infinite sets}{39}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Ordinals }{41}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Axiom of chioce}{43}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Cardinals }{45}{chapter.10}%
+\contentsline {chapter}{\numberline {11}hyperreal numbers($\mathbb {N} * , \mathbb {Q} * ,\mathbb {R} *$) and surreal numbers }{47}{chapter.11}%
+\contentsline {chapter}{\numberline {12}fantacy numbers($\mathbb {N} (Ord) , \mathbb {Q} (Ord) ,\mathbb {R} (Ord)$) }{49}{chapter.12}%
+\contentsline {chapter}{\numberline {13}New beginning for calculus }{51}{chapter.13}%
+\contentsline {chapter}{\numberline {14}Lebesgue Intergral}{53}{chapter.14}%
+\contentsline {chapter}{\numberline {15}New beginning for Probability theory}{55}{chapter.15}%
