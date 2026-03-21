@@ -2045,9 +2045,14 @@ somtimes all members of a set is also set we call it ``set of sets''.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-\chapter{Relations and functions}
+from now on we don't get in to all details of proofs because it will be too
+long and hard to read. so we will take it easy from now and don't write all
+details like reasons of lines and all lines we left it to reader to undrestand
+what happened there.\twemoji{1f600}
 
-\section{cartesian product}
+\chapter{Relations and Functions}
+
+\section{Orderd pair and Cartesian product}
 
 \begin{definition}
     \textbf{Ordered pair}
@@ -2157,15 +2162,13 @@ somtimes all members of a set is also set we call it ``set of sets''.
 
 sometimes instead of ``$(x,y) \in R$'' we write ``$xRy $''.
 
-\begin{definition}
-    \textbf{Model} (this is a temporary definition, we will give a better one in the next chapter.)
-    ``$\mathfrak{M} $'' is a tuple defined like this.
-    \[\mathfrak{M}  := (M ,R_{0}, R_{1} ,...,R_{n}, \{c_i \}_{i \in I}) \]
-    ``$M$'' is a set shows our universe  and ``$R_I$'' are relations and ``$c_i$'' are constants.
-    and for the case we have infinite relations.
-    \[\mathfrak{M}  := (M ,\{R_i \}_{i \in I}, \{c_i \}_{i \in I}) \]
+% \begin{definition}
+%     \textbf{Model} (this is a temporary definition, we will give a better one in the next chapter.)
+%     ``$\mathfrak{M} $'' is a tuple defined like this.
+%     \[\mathfrak{M}  := (M ,R_{0}, R_{1} ,...,R_{n}, c_{0}, c_{1} ,...,c_{m}) \]
+%     ``$M$'' is a set shows our universe  and ``$R_i$'' are relations and ``$c_i$'' are constants.
 
-\end{definition}
+% \end{definition}
 
 \begin{definition}
     \textbf{ِDomain and Range(also called Image)} \\
@@ -2212,227 +2215,6 @@ sometimes instead of ``$(x,y) \in R$'' we write ``$xRy $''.
 
 \end{definition}
 
-\section{Equivalence relation and partitions}
-
-\begin{definition}
-    \textbf{Equivalence relation} assume  a model ``$\mathfrak{A} := \{A , \sim \} $''(``$\sim $'' is a relation).
-    we say ``$\sim $''
-    is a ``Equivalence relation'' in  ``$\mathfrak{A}$'' if it's  reflexive,symmetric, and transitive.
-    \[ (reflexive) :  \forall x \in A \quad x \sim x \]
-    \[ (symmetric) :   \forall x,y \in A \quad x \sim y \to y \sim x \]
-    \[ (transitive) :  \forall x,y,z \in A \quad x \sim y \land y \sim z \to x \sim z  \]
-\end{definition}
-
-\begin{definition}
-    \textbf{Equivalence class of ``$x$''} Let ``$\sim$'' be an equivalence relation on ``$\mathfrak{A}$''. For every ``$x \in A$''
-
-    \[ [x]_{\sim} := \{y \in A \mid y \sim x \} \]
-
-\end{definition}
-
-\begin{lemma}
-    For every ``$a,b \in A$''
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item  $a \sim b \therefore / \therefore [a]_{\sim} = [b]_{\sim}$
-        \item  $a \nsim  b \therefore / \therefore [a]_{\sim} \cap [b]_{\sim} = \emptyset$
-    \end{enumerate}
-
-    prove.1 \\
-    \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}>{\centering\arraybackslash}m{7.5cm}}
-
-        $/ \therefore$
-
-        \begin{fitchproof}[arrayenv=tabular]
-            \have  {2} { a \sim b}
-            \open
-            \have  {2} {x \in [a]_{\sim} }
-            \have  {2} {x \sim a}
-            \have  {2} {a \sim b}
-            \have  {2} {x \sim b}
-            \have  {2} {x \in [b]_{\sim} }
-            \close
-            \open
-            \have  {2} {x \in [b]_{\sim} }
-            \have  {2} {x \sim b}
-            \have  {2} {a \sim b}
-            \have  {2} {x \sim a}
-            \have  {2} {x \in [a]_{\sim} }
-            \close
-            \have  {2} { [a]_{\sim} = [b]_{\sim} }
-        \end{fitchproof}
-         &
-        $ \therefore /$
-        \begin{fitchproof}[arrayenv=tabular]
-            \have  {2} { [a]_{\sim} = [b]_{\sim} }
-            \have  {2} {a \sim a  }
-            \have  {2} {a \in [a]_{\sim} }
-            \have  {2} {a \in [b]_{\sim} }
-            \have  {2} {a \sim b  }
-        \end{fitchproof}
-        \\
-
-    \end{tabular}
-
-    prove.2 \\
-    \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}>{\centering\arraybackslash}m{7.5cm}}
-
-        $/ \therefore$
-        \begin{fitchproof}[arrayenv=tabular]
-            \have  {2} { a \nsim b}
-            \open
-            \have  {2} { [a]_{\sim} \cap [b]_{\sim}  \not= \emptyset }
-            \have  {2} {\exists x \quad x \in [a]_{\sim} \cap [b]_{\sim} }
-            \open
-            \have  {2} { x \in [a]_{\sim} \cap [b]_{\sim} }
-            \have  {2} {x \sim a}
-            \have  {2} {x \sim b}
-            \have  {2} {a \sim b }
-            \have  {2} {\bot }
-            \close
-            \have  {2} {\bot }
-            \close
-            \have  {2} { [a]_{\sim} \cap [b]_{\sim}  = \emptyset }
-        \end{fitchproof}
-         &
-        $ \therefore /$
-        \begin{fitchproof}[arrayenv=tabular]
-            \have  {2} { [a]_{\sim} \cap [b]_{\sim}  = \emptyset }
-            \open
-            \have  {2} {a \sim b  }
-            \have  {2} {a \sim a  }
-            \have  {2} {a \in [a]_{\sim} }
-            \have  {2} {a \in [b]_{\sim} }
-            \have  {2} {a \in [a]_{\sim} \cap [b]_{\sim} }
-            \have  {2} {\bot}
-            \close
-            \have  {2} {a \nsim b  }
-        \end{fitchproof}
-        \\
-
-    \end{tabular}
-
-\end{lemma}
-
-\begin{definition}
-    \textbf{Partition} is a ``set of sets''  like ``$P$'' of a set like  ``$A$''  with this conditions.
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item  $\forall X \in P \quad X \not= \emptyset$
-        \item  $\forall X,Y \in P \quad  X \not= Y \to X \cap Y = \emptyset$
-        \item  $\bigcup P = A$ \\
-              if these condition holds then we say ``$Part(P,A)$''.
-    \end{enumerate}
-\end{definition}
-
-\begin{definition}
-    \textbf{Set of Equivalence classes}
-
-    \[ A/\sim := \{ [x]_{\sim} \mid x \in  A \} \]
-
-\end{definition}
-
-\begin{theorem} if ``$\sim$'' is a equivalence class in ``$(A,\sim)$'' then
-    ``$A/\sim$'' is a partition for ``$A$'' i.e. ``$Part(A/\sim,A)$''.
-
-    \begin{fitchproof}[arrayenv=tabular]
-        \have  {2} { [x]_{\sim} \in A  }
-        \have  {2} { x \in [x]_{\sim}  }
-        \have  {2} {  [x]_{\sim} \not= \emptyset  }
-
-    \end{fitchproof}
-
-    \begin{fitchproof}[arrayenv=tabular]
-        \have  {2} { [a]_{\sim} \not= [b]_{\sim}  }
-        \have  {2} { a \nsim  b  }
-        \have  {2} { [a]_{\sim} \cap [b]_{\sim}  = \emptyset }
-    \end{fitchproof}
-
-    \begin{fitchproof}[arrayenv=tabular]
-        \open
-        \have  {2} { x \in \bigcup (A/\sim)  }
-        \open
-        \have  {2} { y \in A   }
-        \have  {2} { x \in [y]_{\sim}  }
-        \have  {2} { x \in A  }
-        \close
-        \have  {2} { x \in A  }
-        \close
-        \open
-        \have  {2} { x \in A  }
-        \have  {2} { x \in [x]_\sim \land [x]_\sim \in (A/\sim)  }
-        \have  {2} {\exists Y ( x \in Y \land Y \in (A/\sim) ) }
-        \have  {2} { x \in \bigcup(A/\sim)  }
-        \close
-        \have  {2} { A  = \bigcup(A/\sim)  }
-    \end{fitchproof}
-
-\end{theorem}
-
-\begin{theorem} if ``$P$'' is a partition for ``$A$''  we define
-    \[ \sim_P := \{ (x,y) \mid \exists Y \in P \quad ( x \in  Y \land y \in  Y) \} \]
-    then ``$\sim_P$'' is a equivalence class in ``$(A,\sim_P)$''.
-
-    \begin{fitchproof}[arrayenv=tabular]
-        \open
-        \have  {2} { x \in A  }
-        \have  {2} { x \in \bigcup P  }
-        \have  {2} {\exists Y (x \in Y \land Y \in P)  }
-        \open
-        \have  {2} {x \in Y \land Y \in P  }
-        \have  {2} {\exists Y \in P \quad (x \in Y \land x \in Y  )  }
-        \have  {2} {x \sim_P x  }
-        \close
-        \have  {2} {x \sim_P x  }
-        \close
-        \have  {2} {\forall x \in A \quad x \sim_P x  }
-
-    \end{fitchproof}
-
-
-    \begin{fitchproof}[arrayenv=tabular]
-        \open
-        \have  {2} { x , y \in A }
-        \have  {2} { x \sim_P y  }
-        \have  {2} {\exists Y \in P \quad ( x \in Y \land y \in Y  )  }
-        \open
-        \have  {2} { Y \in P \land  x \in Y \land y \in Y    }
-        \have  {2} {\exists Y \in P \quad ( y \in Y \land x \in Y  )  }
-        \have  {2} { y \sim_P x  }
-        \close
-        \have  {2} { y \sim_P x  }
-        \close
-        \have  {2} {\forall x,y \in A \quad x \sim_P y \to  y \sim_P x }
-    \end{fitchproof}
-
-
-    \begin{fitchproof}[arrayenv=tabular]
-        \open
-        \have  {2} { x , y ,z \in A }
-        \have  {2} { x \sim_P y  }
-        \have  {2} { y \sim_P z  }
-        \have  {2} {\exists Y \in P \quad ( x \in Y \land y \in Y  )  }
-        \have  {2} {\exists Y \in P \quad ( y \in Y \land z \in Y  )  }
-        \open
-        \have  {2} { Y \in P \land  x \in Y \land y \in Y    }
-        \open
-        \have  {2} { Y' \in P \land  y \in Y' \land z \in Y'    }
-        \have  {2} {Y \cap Y' \not= \emptyset  }
-        \have  {2} {Y = Y'  }
-        \have  {2} {Y \in P \land  x \in Y \land z \in Y   }
-        \have  {2} {\exists Y \in P \quad ( x \in Y \land z \in Y  )  }
-        \have  {2} { x \sim_P z  }
-        \close
-        \have  {2} { x \sim_P z  }
-        \close
-        \have  {2} { x \sim_P z  }
-
-        \close
-        \have  {2} {\forall x,y,z \in A \quad x \sim_P y \land y \sim_p z \to  x \sim_P z }
-    \end{fitchproof}
-
-\end{theorem}
-
 \section{Functions}
 
 \begin{definition}
@@ -2445,15 +2227,6 @@ sometimes instead of ``$(x,y) \in R$'' we write ``$xRy $''.
     \textbf{Restriction of a function}   to a set ``$X$'' (usually a subset of ``$dom(f)$'') is
     the function
     \[ f\upharpoonright X := \{(x, y) \in f \mid x \in X \} \]
-\end{definition}
-
-\begin{definition}
-    \textbf{Model} ``$\mathfrak{M} $'' is a tuple defined like this.
-    \[\mathfrak{M}  := (M , f_{0}, f_{1},..., f_{n},R_{0}, R_{1} ,...,R_{n}, \{c_i \}_{i \in I}) \]
-    ``$M$'' is a set shows our universe ``$f_i$'' are funcions and ``$R_I$'' are relations and ``$c_i$'' are constants.
-    and for the case we have infinite functions and relations.
-    \[\mathfrak{M}  := (M , \{f_i \}_{i \in I},\{R_i \}_{i \in I}, \{c_i \}_{i \in I}) \]
-
 \end{definition}
 
 \begin{definition}
@@ -2824,9 +2597,510 @@ sometimes instead of ``$(x,y) \in R$'' we write ``$xRy $''.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-\chapter{From natural numbers to complex numbers }
+\begin{definition}
+    \textbf{Model} ``$\mathfrak{M} $'' is a tuple defined like this.
+    \[\mathfrak{M}  := (M , f_{0}, f_{1},..., f_{n},R_{0}, R_{1} ,...,R_{n}, \{c_i \}_{i \in I}) \]
+    ``$M$'' is a set shows our universe ``$f_i$'' are funcions and ``$R_I$'' are relations and ``$c_i$'' are constants.
+    and for the case we have infinite functions and relations.
+    \[\mathfrak{M}  := (M , \{f_i \}_{i \in I},\{R_i \}_{i \in I}, \{c_i \}_{i \in I}) \]
 
-\section{Natural numbers}
+\end{definition}
+
+\section{Equivalences and Partitions}
+
+\begin{definition}
+    \textbf{Equivalence relation} assume  a model ``$\mathfrak{A} := (A , \sim ) $''(``$\sim $'' is a relation).
+    we say ``$\sim $''
+    is a ``Equivalence relation'' in  ``$\mathfrak{A}$'' if it's  reflexive,symmetric, and transitive.
+    \[ (reflexive) :  \forall x \in A \quad x \sim x \]
+    \[ (symmetric) :   \forall x,y \in A \quad x \sim y \to y \sim x \]
+    \[ (transitive) :  \forall x,y,z \in A \quad x \sim y \land y \sim z \to x \sim z  \]
+\end{definition}
+
+\begin{definition}
+    \textbf{Equivalence class of ``$x$''} Let ``$\sim$'' be an equivalence relation on ``$\mathfrak{A}$''. For every ``$x \in A$''
+
+    \[ [x]_{\sim} := \{y \in A \mid y \sim x \} \]
+
+    you can also see it as a function $[\_]_{\sim} : A \to V$.
+
+\end{definition}
+
+\begin{lemma}
+    For every ``$a,b \in A$''
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item  $a \sim b \therefore / \therefore [a]_{\sim} = [b]_{\sim}$
+        \item  $a \nsim  b \therefore / \therefore [a]_{\sim} \cap [b]_{\sim} = \emptyset$
+    \end{enumerate}
+
+    prove.1 \\
+    \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}>{\centering\arraybackslash}m{7.5cm}}
+
+        $/ \therefore$
+
+        \begin{fitchproof}[arrayenv=tabular]
+            \have  {2} { a \sim b}
+            \open
+            \have  {2} {x \in [a]_{\sim} }
+            \have  {2} {x \sim a}
+            \have  {2} {a \sim b}
+            \have  {2} {x \sim b}
+            \have  {2} {x \in [b]_{\sim} }
+            \close
+            \open
+            \have  {2} {x \in [b]_{\sim} }
+            \have  {2} {x \sim b}
+            \have  {2} {a \sim b}
+            \have  {2} {x \sim a}
+            \have  {2} {x \in [a]_{\sim} }
+            \close
+            \have  {2} { [a]_{\sim} = [b]_{\sim} }
+        \end{fitchproof}
+         &
+        $ \therefore /$
+        \begin{fitchproof}[arrayenv=tabular]
+            \have  {2} { [a]_{\sim} = [b]_{\sim} }
+            \have  {2} {a \sim a  }
+            \have  {2} {a \in [a]_{\sim} }
+            \have  {2} {a \in [b]_{\sim} }
+            \have  {2} {a \sim b  }
+        \end{fitchproof}
+        \\
+
+    \end{tabular}
+
+    prove.2 \\
+    \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}>{\centering\arraybackslash}m{7.5cm}}
+
+        $/ \therefore$
+        \begin{fitchproof}[arrayenv=tabular]
+            \have  {2} { a \nsim b}
+            \open
+            \have  {2} { [a]_{\sim} \cap [b]_{\sim}  \not= \emptyset }
+            \have  {2} {\exists x \quad x \in [a]_{\sim} \cap [b]_{\sim} }
+            \open
+            \have  {2} { x \in [a]_{\sim} \cap [b]_{\sim} }
+            \have  {2} {x \sim a}
+            \have  {2} {x \sim b}
+            \have  {2} {a \sim b }
+            \have  {2} {\bot }
+            \close
+            \have  {2} {\bot }
+            \close
+            \have  {2} { [a]_{\sim} \cap [b]_{\sim}  = \emptyset }
+        \end{fitchproof}
+         &
+        $ \therefore /$
+        \begin{fitchproof}[arrayenv=tabular]
+            \have  {2} { [a]_{\sim} \cap [b]_{\sim}  = \emptyset }
+            \open
+            \have  {2} {a \sim b  }
+            \have  {2} {a \sim a  }
+            \have  {2} {a \in [a]_{\sim} }
+            \have  {2} {a \in [b]_{\sim} }
+            \have  {2} {a \in [a]_{\sim} \cap [b]_{\sim} }
+            \have  {2} {\bot}
+            \close
+            \have  {2} {a \nsim b  }
+        \end{fitchproof}
+        \\
+
+    \end{tabular}
+
+\end{lemma}
+
+\begin{definition}
+    \textbf{Partition} is a ``set of sets''  like ``$P$'' of a set like  ``$A$''  with this conditions.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item  $\forall X \in P \quad X \not= \emptyset$
+        \item  $\forall X,Y \in P \quad  X \not= Y \to X \cap Y = \emptyset$
+        \item  $\bigcup P = A$ \\
+              if these condition holds then we say ``$Part(P,A)$''.
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}
+    \textbf{Set of Equivalence classes}
+
+    \[ A/\sim := \{ [x]_{\sim} \mid x \in  A \} \]
+
+\end{definition}
+
+\begin{theorem} if ``$\sim$'' is a equivalence class in ``$(A,\sim)$'' then
+    ``$A/\sim$'' is a partition for ``$A$'' i.e. ``$Part(A/\sim,A)$''.
+
+    \begin{fitchproof}[arrayenv=tabular]
+        \have  {2} { [x]_{\sim} \in A  }
+        \have  {2} { x \in [x]_{\sim}  }
+        \have  {2} {  [x]_{\sim} \not= \emptyset  }
+
+    \end{fitchproof}
+
+    \begin{fitchproof}[arrayenv=tabular]
+        \have  {2} { [a]_{\sim} \not= [b]_{\sim}  }
+        \have  {2} { a \nsim  b  }
+        \have  {2} { [a]_{\sim} \cap [b]_{\sim}  = \emptyset }
+    \end{fitchproof}
+
+    \begin{fitchproof}[arrayenv=tabular]
+        \open
+        \have  {2} { x \in \bigcup (A/\sim)  }
+        \open
+        \have  {2} { y \in A   }
+        \have  {2} { x \in [y]_{\sim}  }
+        \have  {2} { x \in A  }
+        \close
+        \have  {2} { x \in A  }
+        \close
+        \open
+        \have  {2} { x \in A  }
+        \have  {2} { x \in [x]_\sim \land [x]_\sim \in (A/\sim)  }
+        \have  {2} {\exists Y ( x \in Y \land Y \in (A/\sim) ) }
+        \have  {2} { x \in \bigcup(A/\sim)  }
+        \close
+        \have  {2} { A  = \bigcup(A/\sim)  }
+    \end{fitchproof}
+
+\end{theorem}
+
+\begin{theorem} if ``$P$'' is a partition for ``$A$''  we define
+    \[ \sim_P := \{ (x,y) \mid \exists Y \in P \quad ( x \in  Y \land y \in  Y) \} \]
+    then ``$\sim_P$'' is a equivalence class in ``$(A,\sim_P)$''.
+
+    \begin{fitchproof}[arrayenv=tabular]
+        \open
+        \have  {2} { x \in A  }
+        \have  {2} { x \in \bigcup P  }
+        \have  {2} {\exists Y (x \in Y \land Y \in P)  }
+        \open
+        \have  {2} {x \in Y \land Y \in P  }
+        \have  {2} {\exists Y \in P \quad (x \in Y \land x \in Y  )  }
+        \have  {2} {x \sim_P x  }
+        \close
+        \have  {2} {x \sim_P x  }
+        \close
+        \have  {2} {\forall x \in A \quad x \sim_P x  }
+
+    \end{fitchproof}
+
+    \begin{fitchproof}[arrayenv=tabular]
+        \open
+        \have  {2} { x , y \in A }
+        \have  {2} { x \sim_P y  }
+        \have  {2} {\exists Y \in P \quad ( x \in Y \land y \in Y  )  }
+        \open
+        \have  {2} { Y \in P \land  x \in Y \land y \in Y    }
+        \have  {2} {\exists Y \in P \quad ( y \in Y \land x \in Y  )  }
+        \have  {2} { y \sim_P x  }
+        \close
+        \have  {2} { y \sim_P x  }
+        \close
+        \have  {2} {\forall x,y \in A \quad x \sim_P y \to  y \sim_P x }
+    \end{fitchproof}
+
+    \begin{fitchproof}[arrayenv=tabular]
+        \open
+        \have  {2} { x , y ,z \in A }
+        \have  {2} { x \sim_P y  }
+        \have  {2} { y \sim_P z  }
+        \have  {2} {\exists Y \in P \quad ( x \in Y \land y \in Y  )  }
+        \have  {2} {\exists Y \in P \quad ( y \in Y \land z \in Y  )  }
+        \open
+        \have  {2} { Y \in P \land  x \in Y \land y \in Y    }
+        \open
+        \have  {2} { Y' \in P \land  y \in Y' \land z \in Y'    }
+        \have  {2} {Y \cap Y' \not= \emptyset  }
+        \have  {2} {Y = Y'  }
+        \have  {2} {Y \in P \land  x \in Y \land z \in Y   }
+        \have  {2} {\exists Y \in P \quad ( x \in Y \land z \in Y  )  }
+        \have  {2} { x \sim_P z  }
+        \close
+        \have  {2} { x \sim_P z  }
+        \close
+        \have  {2} { x \sim_P z  }
+
+        \close
+        \have  {2} {\forall x,y,z \in A \quad x \sim_P y \land y \sim_p z \to  x \sim_P z }
+    \end{fitchproof}
+
+\end{theorem}
+
+\section{Orderings}
+\begin{definition}
+    \textbf{(partial) Order relation} assume  a model ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a relation).
+    we say ``$\preceq  $''
+    is a ``(partial) Order relation'' in  ``$\mathfrak{A}$'' if it's  reflexive,antisymmetric, and transitive.
+    \[ (reflexive) :  \forall x \in A \quad x \preceq x \]
+    \[ (antisymmetric) :   \forall x,y \in A \quad x \preceq y \land y \preceq x \to x=y \]
+    \[ (transitive) :  \forall x,y,z \in A \quad x \preceq y \land y \preceq z \to x \preceq z  \]
+\end{definition}
+
+\begin{definition}
+    \textbf{(partial) Strict order relation} assume  a model ``$\mathfrak{A} := (A , \prec  ) $''(``$\prec $'' is a relation).
+    we say ``$\prec  $''
+    is a ``(partial) Strict order relation'' in  ``$\mathfrak{A}$'' if it's  irreflexive, and transitive.
+    \[ (irreflexive) :  \forall x \in A \quad x \nprec  x \]
+    \[ (transitive) :  \forall x,y,z \in A \quad x \prec y \land y \prec z \to x \prec z  \]
+    by two conditions bellow we can proof asymmetric too.
+    \[ (asymmetric) :   \forall x,y \in A \quad x \prec y \to y \nprec x \]
+
+\end{definition}
+
+now we will show you relation between ``(partial) Order relation'' and
+``(partial) Strict order relation''.
+
+\begin{theorem}.\\
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       if ``$\preceq $'' is a ``(partial) Order relation'' in ``$\mathfrak{A}$''
+              define ``$a \prec b : a \preceq b \land a \not= b $'' prove that ``$\prec $''
+              is ``(partial) Strict order relation''.
+
+              \begin{fitchproof}[arrayenv=tabular]
+                  \open
+                  \have  {2} { x \in A }
+                  \open
+                  \have  {2} { x \prec x }
+                  \have  {2} { x \not= x }
+                  \have  {2} { \bot  }
+                  \close
+                  \have  {2} { x \nprec x }
+                  \close
+                  \have  {2} {\forall x \in A \quad x \nprec x }
+              \end{fitchproof}
+
+              \begin{fitchproof}[arrayenv=tabular]
+                  \open
+                  \have  {2} { x,y,z \in A }
+                  \open
+                  \have  {2} { x \prec y }
+                  \have  {2} { y \prec z }
+                  \have  {2} { x \preceq y }
+                  \have  {2} { y \preceq z }
+                  \have  {2} { x \preceq z }
+                  \have  {2} { x \not= y }
+                  \have  {2} { y \not= z }
+                  \open
+                  \have  {2} { x = z }
+                  \have  {2} { y \preceq x }
+                  \have  {2} { x = y }
+                  \have  {2} { \bot  }
+                  \close
+                  \have  {2} { x \not= z }
+                  \have  {2} { x \prec z }
+                  \close
+                  \close
+                  \have  {2} {\forall x,y,z \in A \quad x \prec z }
+
+              \end{fitchproof}
+
+        \item       if ``$\prec $'' is a ``(partial) Strict Order relation'' in ``$\mathfrak{A}$''
+              define ``$a \preceq b : a \prec b \lor a = b $'' prove that ``$\preceq $'' is
+              ``(partial) order relation''.
+
+              \begin{fitchproof}[arrayenv=tabular]
+                  \open
+                  \have  {2} { x \in A }
+                  \have  {2} { x = x }
+                  \have  {2} { x \preceq x }
+                  \close
+                  \have  {2} {\forall x \in A \quad x \preceq x }
+              \end{fitchproof}
+
+              \begin{fitchproof}[arrayenv=tabular]
+                  \open
+                  \have  {2} { x,y \in A }
+                  \open
+                  \have  {2} { x \preceq y \land y \preceq x }
+                  \open
+                  \have  {2} { x \prec y \land y \prec x }
+                  \have  {2} { \bot  }
+                  \have  {2} { x = y  }
+                  \close
+                  \open
+                  \have  {2} { x \prec y \land y = x }
+                  \have  {2} { x = y  }
+                  \close
+                  \open
+                  \have  {2} { x = y \land y \prec x }
+                  \have  {2} { x = y  }
+                  \close
+                  \open
+                  \have  {2} { x = y \land y = x }
+                  \have  {2} { x = y  }
+                  \close
+                  \have  {2} { x = y  }
+                  \close
+                  \close
+                  \have  {2} {\forall x,y \in A \quad x \preceq y \land y \preceq x \to x=y }
+              \end{fitchproof}
+
+              \begin{fitchproof}[arrayenv=tabular]
+                  \open
+                  \have  {2} { x,y,z \in A }
+                  \open
+                  \have  {2} { x \preceq y \land y \preceq z }
+                  \open
+                  \have  {2} { x \prec y \land y \prec z }
+                  \have  {2} { x \prec z }
+                  \have  {2} { x \preceq z }
+                  \close
+                  \open
+                  \have  {2} { z \prec y \land y = z }
+                  \have  {2} { x \prec z }
+                  \have  {2} { x \preceq z }
+                  \close
+                  \open
+                  \have  {2} { z = y \land y \prec z }
+                  \have  {2} { x \prec z }
+                  \have  {2} { x \preceq z }
+                  \close
+                  \open
+                  \have  {2} { z = y \land y = z }
+                  \have  {2} { x = z }
+                  \have  {2} { x \preceq z }
+                  \close
+                  \have  {2} {x \preceq z  }
+                  \close
+                  \close
+                  \have  {2} {\forall x,y \in A \quad x \preceq y \land y \preceq x \to x=y }
+              \end{fitchproof}
+
+    \end{enumerate}
+
+\end{theorem}
+
+\begin{definition}
+    \textbf{(Total-Linear) Order relation} assume  a model ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
+    we say ``$\preceq  $''
+    is a ``(Total-Linear) Order relation'' in  ``$\mathfrak{A}$'' if every two elements are comparable.
+
+    \[ (comparablity) :   \forall x,y \in A \quad x \preceq y \lor y \preceq x  \]
+
+\end{definition}
+
+\begin{definition}
+    \textbf{(Total-Linear) Strict order relation} assume  a model ``$\mathfrak{A} := (A , \prec  ) $''(``$\prec $'' is a Strict order relation).
+    we say ``$\prec  $''
+    is a ``(Total-Linear) Strict order relation'' in  ``$\mathfrak{A}$'' if every two elements are comparable.
+
+    \[ (comparablity) :   \forall x,y \in A \quad x \prec y \lor x=y \lor y \prec x \]
+
+\end{definition}
+
+\begin{theorem}.\\
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       if ``$\preceq $'' is a ``(Total-Linear) Order relation'' in ``$\mathfrak{A}$''
+              define ``$a \prec b : a \preceq b \land a \not= b $'' prove that ``$\prec $''
+              is ``(Total-Linear) Strict order relation''. \\ Proof Is Left As An Exercise To
+              The Reader.\twemoji{1f600}
+        \item       if ``$\prec $'' is a ``(Total-Linear) Strict Order relation'' in
+              ``$\mathfrak{A}$'' define ``$a \preceq b : a \prec b \lor a = b $'' prove that
+              ``$\preceq $'' is ``(Total-Linear) order relation''. \\ Proof Is Left As An
+              Exercise To The Reader.\twemoji{1f600}
+    \end{enumerate}
+
+\end{theorem}
+
+\begin{lemma}
+    assume  a model ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
+    and $ B,C \subseteq A $ prove
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\exists b \in B \quad \forall x \in B \quad b \preceq x / 
+        \therefore \exists ! b \in B \quad \forall x \in B \quad b \preceq x $.
+              \\ Proof Is Left As An Exercise To
+              The Reader.\twemoji{1f600}
+        \item       $\exists c \in C \quad \forall x \in C \quad x \preceq c / 
+        \therefore \exists ! c \in C \quad \forall x \in C \quad x \preceq c $.
+              \\ Proof Is Left As An Exercise To
+              The Reader.\twemoji{1f600}
+
+    \end{enumerate}
+
+\end{lemma}
+
+\begin{theorem}
+    \textbf{Minimum and Maximum} assume  a model ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
+    and $\mathcal{B} := \{ B \subseteq A \mid \exists b \in B \quad \forall x \in B \quad b \preceq x \}$ and
+    $ \mathcal{C} := \{ C \subseteq A \mid \exists c \in C \quad \forall x \in C \quad x \preceq c \}$
+    we define  like this
+    \[ min_\mathfrak{A} :=  \{ (B,b) \in \mathcal{B} \times V \mid \forall x \in B \quad b \preceq x \}  \]
+    \[ max_\mathfrak{A} := \{ (C,c) \in \mathcal{C} \times V \mid \forall x \in C \quad x \preceq c \}  \]
+    prove these two relations are two functions ``$min_\mathfrak{A} : \mathcal{B} \to V$'' and
+    ``$max_\mathfrak{A} : \mathcal{C} \to V$''.
+\end{theorem}
+
+\begin{definition}
+    \textbf{Minimal and Maximal} assume  a model ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
+    we define ``Minimal and Maximal'' like this
+    \[ Minimal_\mathfrak{A}(b) :   \forall x \in A \quad x \nprec   b  \]
+    \[ Maximal_\mathfrak{A}(c) :   \forall x \in A \quad c \nprec    x \]
+\end{definition}
+
+\begin{definition}
+    \textbf{Well ordering} assume  a model ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
+    we say ``$\mathfrak{A} $ '' is ``Well ordered'' when every nonempty subset of ``$A $ '' has a ``Minimum '' i.e.
+    \[ WellO(\mathfrak{A}) :   \forall X \subseteq A \quad X \not= \emptyset \to \exists y \in X \quad \forall x \in X \quad y \preceq   x  \]
+\end{definition}
+
+\begin{definition}
+    \textbf{Lower and Upper Bound} assume  a model ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
+    $ B,C \subseteq A $. we define ``Lower and Upper Bound'' like this
+    \[ Lowerb(b,B)_\mathfrak{A} :   \forall x \in B \quad b \preceq   x  \]
+    \[ Upperb(c,C)_\mathfrak{A} :   \forall x \in C \quad x \preceq   c \]
+\end{definition}
+
+\begin{lemma}
+    assume  a model ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
+    and $ B,C \subseteq A $ prove
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\exists b \in A \quad (\forall x \in B \quad b \preceq x \land \forall x \in A \quad Lowerb_\mathfrak{A}(x,B) \to x \preceq b ) 
+        / \therefore \exists ! b \in A \quad (\forall x \in B \quad b \preceq x \land \forall x \in A \quad Lowerb_\mathfrak{A}(x,B) \to x \preceq b ) $.
+              \\ Proof Is Left As An Exercise To
+              The Reader.\twemoji{1f600}
+        \item       $\exists c \in A \quad (\forall x \in C \quad x \preceq c \land \forall x \in A \quad Upperb_\mathfrak{A}(x,C) \to c \preceq x )
+         / \therefore \exists ! c \in A \quad (\forall x \in C \quad x \preceq c \land \forall x \in A \quad Upperb_\mathfrak{A}(x,C) \to c \preceq x ) $.
+              \\ Proof Is Left As An Exercise To
+              The Reader.\twemoji{1f600}
+
+    \end{enumerate}
+
+\end{lemma}
+
+\begin{theorem}
+    \textbf{Infimum and Supremum} assume  a model ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
+    and $\mathcal{B} := \{ B \subseteq A \mid \exists b \in A \quad \forall x \in B \quad b \preceq x \}$ and
+    $ \mathcal{C} := \{ C \subseteq A \mid \exists c \in A \quad \forall x \in C \quad x \preceq c \}$
+    we define  like this
+    \[ inf_\mathfrak{A} :=  \{ (B,b) \in \mathcal{B} \times V \mid \forall x \in B \quad b \preceq x \land \forall x \in A \quad Lowerb_\mathfrak{A}(x,B) \to x \preceq b \}  \]
+    \[ sup_\mathfrak{A} := \{ (C,c) \in \mathcal{C} \times V \mid \forall x \in C \quad x \preceq c \land \forall x \in A \quad Upperb_\mathfrak{A}(x,C) \to c \preceq x \}  \]
+    prove these two relations are two functions ``$inf_\mathfrak{A} : \mathcal{B}
+        \to V$'' and ``$sup_\mathfrak{A} : \mathcal{C} \to V$''.
+\end{theorem}
+
+\begin{theorem}
+        assume  a model ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
+    and $ B \subseteq A $ prove
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $ min_\mathfrak{A}(B) = b / 
+        \therefore inf_\mathfrak{A}(B) = b $.
+              \\ Proof Is Left As An Exercise ToThe Reader.\twemoji{1f600}
+        \item       $  inf_\mathfrak{A}(B) = b , b \in B / 
+        \therefore  min_\mathfrak{A}(B) = b $.
+              \\ Proof Is Left As An Exercise ToThe Reader.\twemoji{1f600}
+            \end{enumerate}
+            this theorem holds for ``$max , sup$'' too.
+\end{theorem}
+
+\chapter{From Natural numbers to Complex numbers }
+
+\section{Introduction to Natural numbers}
 
 \begin{definition}
     \textbf{Natural numbers} we define ``$0,1,2,3,...$'' like this.
@@ -2863,7 +3137,7 @@ sometimes instead of ``$(x,y) \in R$'' we write ``$xRy $''.
     \textbf{Set of natural numbers($\mathbb{N}$)}
 
     \[
-        \mathbb{N} := \{ x  |\underbrace{\forall Y \Big( \big( \underbrace{\emptyset \in Y \wedge \forall z (z \in Y \to s(z)\in Y)}_{Ind(Y)} \big) \to x \in Y \Big)}_{\phi(x)} \}
+        \mathbb{N} := \{ x  \mid \underbrace{\forall Y \Big( \big( \underbrace{\emptyset \in Y \wedge \forall z (z \in Y \to s(z)\in Y)}_{Ind(Y)} \big) \to x \in Y \Big)}_{\phi(x)} \}
     \]
 \end{definition}
 \begin{lemma}
@@ -2872,6 +3146,11 @@ sometimes instead of ``$(x,y) \in R$'' we write ``$xRy $''.
     \[ \mathbb{N} = \bigcap S \]
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
+
+
+\section{Properties of Natural numbers}
+
+
 \begin{theorem}\textbf{Induction}
     $P(0) , \forall n \Big( P(n) \to P(s(n)) \Big) /\therefore \forall n\in \mathbb{N} \quad P(n)$
     \\
@@ -2907,40 +3186,58 @@ sometimes instead of ``$(x,y) \in R$'' we write ``$xRy $''.
     \end{fitchproof}
 \end{theorem}
 
-\begin{theorem}\textbf{Recurtion}
-    $P(0) , \forall n \Big( P(n) \to P(s(n)) \Big) /\therefore \forall n\in \mathbb{N} \quad P(n)$
+\begin{definition}
+    \textbf{Less than in Natural numbers($\mathbb{N}$)}
+
+    \[
+        < := \{ (x,y) \in \mathbb{N} \times \mathbb{N}  \mid x \in y \}
+    \]
+\end{definition}
+
+\begin{theorem}
+    \textbf{Linear order of Natural numbers($\mathbb{N}$)} prove   ``$ (\mathbb{N} , <  )  $ is lineary ordered.\\
+     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+
+\end{theorem}
+
+\begin{theorem}
+    \textbf{Linear order of Natural numbers($\mathbb{N}$)} prove   ``$ (\mathbb{N} , <  )  $ is Well ordered.\\
+     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+
+\end{theorem}
+
+
+\begin{theorem}\textbf{Induction ,second vrsion}
+    $ \forall k < n \Big( P(k) \to P(n) \Big) /\therefore \forall n\in \mathbb{N} \quad P(n)$
     \\
     proof.
 
-    \begin{fitchproof}[arrayenv=tabular]
-        \have {1} { P(0)  }                                 \by{$acp$}{}
-        \have  {2} {\forall n \Big( P(n) \to P(s(n)) \Big)}                                \by{$def.1$}{}
-        \have  {2} {A := \{n \mid P(n) \}  }                              \by{$def.1$}{}
-        \have  {2} {\emptyset \in A   }                              \by{$def.1$}{}
-        \open
-        \have  {2} {n \in A   }                              \by{$def.1$}{}
-        \have  {2} {P(n) }                              \by{$def.1$}{}
-        \have  {2} {P(s(n)) }                              \by{$def.1$}{}
-        \have  {2} {s(n) \in  A }                              \by{$def.1$}{}
-        \close
-        \have  {2} {n \in  A \to  s(n) \in  A}                              \by{$def.1$}{}
-        \have  {2} {\forall n (n \in  A \to  s(n) \in  A)}                              \by{$def.1$}{}
-        \have  {2} {Ind(A) }                                               \by{$def.1$}{}
-        \open
-        \have  {2} {n\in \mathbb{N} }                                               \by{$def.1$}{}
-        \have  {2} {n\in \bigcap S }                                               \by{$def.1$}{}
-        \have  {2} {\forall X ( Ind(X) \to n\in X )}                                               \by{$def.1$}{}
-        \have  {2} { Ind(A) \to n\in A }                                               \by{$def.1$}{}
-        \have  {2} { n\in A }                                               \by{$def.1$}{}
-        \have  {2} {P(n) }                              \by{$def.1$}{}
-        \close
-        \have  {2} {n\in A \to P(n) }                              \by{$def.1$}{}
-        \have  {2} {\forall n\in \mathbb{N} \quad P(n) }                              \by{$def.1$}{}
 
-        \close
-
-    \end{fitchproof}
 \end{theorem}
+
+\section{The Recurtion theorem}
+
+\begin{definition}
+    \textbf{Tuple-Finite sequence} is a function ``$a : n \to V$'' s.t. $n \in  \mathbb{N}$ we know we can show this
+    by ``$(a_i)_{i \in n}$'' we can also show it by ``$(a_0 , a_1 ,a_2 , ... , a_{n-1})$''
+\end{definition}
+
+\begin{definition}
+    \textbf{Sequence} is a function ``$a : \mathbb{N} \to V$''  we know we can show this
+    by ``$(a_i)_{i \in \mathbb{N}}$'' we can also show it by ``$(a_i)_{i = 0}^{\infty}$''
+\end{definition}
+
+\begin{theorem}\textbf{Recurtion} for any set ``$A$'' and ``$a \in A$'' and any function ``$g : A \times \mathbb{N} \to A$''
+    there is a unique infinite sequence ``$f : \mathbb{N} \to A$'' s.t.
+        \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $ f(0) = a$.
+        \item       $\forall n \in \mathbb{N} \quad f(s(n)) = g(f(n),n)  $.
+    \end{enumerate}
+     Proof Is Left As An Exercise ToThe Reader.\twemoji{1f600}
+\end{theorem}
+
+\section{Arithmetic of Natural numbers}
 \chapter{Finite and Infinite sets}
 
 \chapter{Ordinals }

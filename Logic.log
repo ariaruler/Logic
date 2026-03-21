@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.9.18)  18 MAR 2026 00:53
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.9.18)  21 MAR 2026 13:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1419,12 +1419,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 2028--2046
 
  []
 
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
 [28]
 Chapter 5.
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Underfull \hbox (badness 10000) in paragraph at lines 2063--2067
+Underfull \hbox (badness 10000) in paragraph at lines 2068--2072
 
  []
 
@@ -1434,157 +1436,191 @@ Underfull \vbox (badness 1565) has occurred while \output is active []
  [29
 
 ]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 2162.
- (D:\pdf\RStudio\latex\tex/latex/amsfonts\ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
 Missing character: There is no ِ in font [lmroman10-bolditalic]:mapping=tex-text;!
 File: R-Im-Dom (1).pdf Graphic file (type pdf)
 <use R-Im-Dom (1).pdf>
-[30]
-Underfull \hbox (badness 10000) in paragraph at lines 2184--2185
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30]
+Underfull \hbox (badness 10000) in paragraph at lines 2187--2188
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2195--2196
+Underfull \hbox (badness 10000) in paragraph at lines 2198--2199
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2206--2207
+Underfull \hbox (badness 10000) in paragraph at lines 2209--2210
 
  []
 
-[31]
-Overfull \hbox (32.53764pt too wide) in paragraph at lines 2241--2276
-[] 
- []
-
-
-Overfull \hbox (32.53764pt too wide) in paragraph at lines 2277--2314
-[] 
- []
-
-[32]
-Underfull \vbox (badness 2762) has occurred while \output is active []
-
- [33] [34] [35]
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 2517--2588
+[31] [32]
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 2290--2361
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2517--2588
+Underfull \hbox (badness 10000) in paragraph at lines 2290--2361
 
  []
 
 
-Underfull \vbox (badness 1264) has occurred while \output is active []
-
- [36]
-Overfull \hbox (32.53764pt too wide) in paragraph at lines 2589--2618
+Overfull \hbox (32.53764pt too wide) in paragraph at lines 2362--2391
 [][] 
  []
 
-[37] [38] [39]
+[33] [34] [35]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 2784--2825
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 2557--2598
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2784--2825
+Underfull \hbox (badness 10000) in paragraph at lines 2557--2598
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2784--2825
+Underfull \hbox (badness 10000) in paragraph at lines 2557--2598
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [40] [41] [42
+ [36]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 2601.
+ (D:\pdf\RStudio\latex\tex/latex/amsfonts\ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+Overfull \hbox (32.53764pt too wide) in paragraph at lines 2637--2672
+[] 
+ []
+
+[37]
+Overfull \hbox (32.53764pt too wide) in paragraph at lines 2673--2710
+[] 
+ []
+
+[38]
+Underfull \vbox (badness 7540) has occurred while \output is active []
+
+ [39]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [40]
+Underfull \hbox (badness 10000) in paragraph at lines 2854--2856
+
+ []
+
+[41] [42] [43]
+Underfull \hbox (badness 10000) in paragraph at lines 2993--2995
+
+ []
+
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+[44]
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+ [45] [46
 
 ]
 Chapter 6.
-[43]
+[47]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [44] [45] [46
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+ [48]
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+ [49] [50
 
 ]
 Chapter 7.
-[47] [48
-
-]
-Chapter 8.
-[49] [50
-
-]
-Chapter 9.
 [51] [52
 
 ]
-Chapter 10.
+Chapter 8.
 [53] [54
+
+]
+Chapter 9.
+[55] [56
+
+]
+Chapter 10.
+[57] [58
 
 ]
 Chapter 11.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2952.
+(hyperref)                removing `math shift' on input line 3249.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2952.
+(hyperref)                removing `math shift' on input line 3249.
 
-[55] [56
+[59] [60
 
 ]
 Chapter 12.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2954.
+(hyperref)                removing `math shift' on input line 3251.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2954.
+(hyperref)                removing `math shift' on input line 3251.
 
-[57] [58
-
-]
-Chapter 13.
-[59] [60
-
-]
-Chapter 14.
 [61] [62
 
 ]
+Chapter 13.
+[63] [64
+
+]
+Chapter 14.
+[65] [66
+
+]
 Chapter 15.
-[63] (Logic.aux)
+[67] (Logic.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `Logic.out' has not changed.
-(rerunfilecheck)             Checksum: 41EA0035D27D899DD3F62C4EB0946F1F;4783.
+(rerunfilecheck)             Checksum: 4A7269AF507040F5FB6AB7D1A11D5706;5599.
  ) 
 Here is how much of TeX's memory you used:
- 37389 strings out of 409617
- 852349 string characters out of 5778885
+ 37394 strings out of 409617
+ 852480 string characters out of 5778885
  1947191 words of memory out of 5000000
- 59041 multiletter control sequences out of 15000+600000
- 570971 words of font info for 105 fonts, out of 8000000 for 9000
+ 59043 multiletter control sequences out of 15000+600000
+ 570987 words of font info for 107 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  84i,27n,93p,555b,708s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Logic.xdv (67 pages, 381600 bytes).
+Output written on Logic.xdv (71 pages, 439228 bytes).
