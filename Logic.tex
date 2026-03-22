@@ -1201,7 +1201,7 @@ sentences.
 
 \begin{definition}
     \textbf{Uniqueness}
-    we define ``$\exists ! x Px$''
+    we define ``$\exists ! x \phi(x)$''
     \\
     \[ \exists !  x \phi(x) : \exists   x (\phi(x) \land \forall y(\phi(y) \to x=y)) \]
 \end{definition}
@@ -1420,7 +1420,10 @@ sentences.
 
 In language of set theory if we are talking about ``$\forall X (P(X))$'' it
 means ``$\forall x (set(x) \to P(x))$'' and when we are talking about
-``$\exists X (P(X))$'' it means ``$\exists x (set(x) \land P(x))$''.
+``$\exists X (P(X))$'' it means ``$\exists x (set(x) \land P(x))$''. similarly
+if we are talking about ``$\forall x \in A \quad P(x)$'' it means ``$\forall x
+    (x \in A \to P(x))$'' and when we are talking about ``$\exists x \in A \quad
+    P(x)$'' it means ``$\exists x (x \in A \land P(x))$''.
 
 \section{Axioms of set theory}
 we emphasis before that set has no definition.but we can describe what set is
@@ -1438,6 +1441,8 @@ with rules and axioms.
 \begin{definition}
     \textbf{Subset} a subset is a set where every element is also an element of another, larger set called the superset
     \[ A \subseteq B: \forall x(x \in A \rightarrow x \in B) \]
+    or i.e.
+    \[ \forall x \in A \quad x \in B \]
 \end{definition}
 
 \begin{theorem}
@@ -2160,10 +2165,16 @@ what happened there.\twemoji{1f600}
     \[ Rel(R) : \exists X,Y (R \subseteq X \times Y). \]
 \end{definition}
 
-sometimes instead of ``$(x,y) \in R$'' we write ``$xRy $''.
+somtimes we use different notations in this book. you have to be smart and recognize it by yourself.
+sometimes instead of ``$x \in R$'' we denote it by ``$R(x) $''.
+and instead of ``$(x_0, x_1 , ... , x_n) \in R$'' we denote it by ``$R(x_0, x_1 , ... , x_n) $''.
+if tuple is binary, instead of ``$(x,y) \in R$'' we denote it by ``$xRy $''.\\
+so if we have a definition like ``$ R(x) : \phi(x)$'' s.t. ``$\phi(x)$'' is a first order proposition.
+``weak comprehension'' show us there is a straight relatioon between ``propositions'' and ``sets'' so you can
+see it as ``$ R := \{ x \mid \phi(x) \}$''. if it is confusing so forget it.\twemoji{1f600}
 
 % \begin{definition}
-%     \textbf{Model} (this is a temporary definition, we will give a better one in the next chapter.)
+%     \textbf{structure} (this is a temporary definition, we will give a better one in the next chapter.)
 %     ``$\mathfrak{M} $'' is a tuple defined like this.
 %     \[\mathfrak{M}  := (M ,R_{0}, R_{1} ,...,R_{n}, c_{0}, c_{1} ,...,c_{m}) \]
 %     ``$M$'' is a set shows our universe  and ``$R_i$'' are relations and ``$c_i$'' are constants.
@@ -2220,7 +2231,7 @@ sometimes instead of ``$(x,y) \in R$'' we write ``$xRy $''.
 \begin{definition}
     \textbf{Function}  we call a relation ``\textbf{f}'' a ``\textbf{function}'' when every input has exactly one
     output i.e.
-    \[ Func(f) : \forall x ,y_1 , y_2 \Big((x,y_1) \in f \wedge (x,y_2) \in f \rightarrow y_1 = y_2 \Big) \]
+    \[ Func(f) : Rel(f) \land \forall x ,y_1 , y_2 \Big((x,y_1) \in f \wedge (x,y_2) \in f \rightarrow y_1 = y_2 \Big) \]
 \end{definition}
 
 \begin{definition}
@@ -2395,6 +2406,34 @@ sometimes instead of ``$(x,y) \in R$'' we write ``$xRy $''.
     \textbf{} in all rules and theorems you can replace all constants like $a,b,c,...$ with
     terms like $t,s,r,....$ and rewrite them.
 \end{Attention}
+
+\begin{definition}
+    \textbf{Compatible Function}
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item  $Compatible(f,g) : \forall x \in dom(f) \cap dom(g) \quad f(x) = g(x) $.
+        \item  $Compatible(F) : \forall f,g \in F \quad Compatible(f,g) $.
+    \end{enumerate}
+\end{definition}
+
+\begin{lemma} .\\
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item  $Compatible(f,g) \therefore / \therefore Func(f \cup g) $.
+        \item  $Compatible(f,g) \therefore / \therefore f \upharpoonright (dom(f) \cap dom(g)) = g \upharpoonright (dom(f) \cap dom(g)) $.
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{theorem} $Compatible(F) / \therefore (1),(2),(3)  $
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item  $Func(\bigcup F) $.
+        \item  $ dom(\bigcup F) = \bigcup \{ dom(f) \mid f \in F \} $.
+        \item  $ \forall f \in F \quad Compatible(f,\bigcup F) $.
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
 
 \begin{definition}
     \textbf{Function from set to set}  we call a function \textbf{f} from \textbf{A} to \textbf{B}
@@ -2597,19 +2636,46 @@ sometimes instead of ``$(x,y) \in R$'' we write ``$xRy $''.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
+\section{Structures and morphisms}
+
 \begin{definition}
-    \textbf{Model} ``$\mathfrak{M} $'' is a tuple defined like this.
+    \textbf{Structure} ``$\mathfrak{M} $'' is a tuple defined like this.
     \[\mathfrak{M}  := (M , f_{0}, f_{1},..., f_{n},R_{0}, R_{1} ,...,R_{n}, \{c_i \}_{i \in I}) \]
     ``$M$'' is a set shows our universe ``$f_i$'' are funcions and ``$R_I$'' are relations and ``$c_i$'' are constants.
     and for the case we have infinite functions and relations.
     \[\mathfrak{M}  := (M , \{f_i \}_{i \in I},\{R_i \}_{i \in I}, \{c_i \}_{i \in I}) \]
-
 \end{definition}
+
+\begin{definition}
+    \textbf{Homorphism} if  ``$\mathfrak{M} := (M , \{f_{i,m} \}_{i \in I},\{R_{i,m} \}_{i \in I}, \{c_{i,m} \}_{i \in I}) $''
+     and ``$\mathfrak{N} := (N , \{f_{i,n} \}_{i \in I},\{R_{i,n} \}_{i \in I}, \{c_{i,n} \}_{i \in I}) $'' are two structures. 
+     function ``$h : M \to N$''is called ``(weak) Homorphism'' when this conditions holds
+            \begin{enumerate}
+            \setlength{\itemsep}{0pt} % No extra space between items
+        \item for eveery relation ``$R_{i,m}$''
+         \[ \forall x_0 , x_1 , x_2 , ... , x_k \in M \quad R_{i,m}(x_0 , x_1 , x_2 , ... , x_k) \to R_{i,n}(h(x_0),h(x_1) ,h(x_2), ... ,h(x_k)) \].
+        \item for eveery function ``$f_{i,m}$'' 
+        \[ \forall x_0 , x_1 , x_2 , ... , x_k \in M \quad h(f_{i,m}(x_0 , x_1 , x_2 , ... , x_k)) = f_{i,n}(h(x_0),h(x_1) ,h(x_2), ... ,h(x_k)) \].
+        \item for eveery constant ``$c_{i,m}$'' 
+        \[  h(c_{i,m}) = c_{i,n} \].
+    \end{enumerate}
+in condition (1) if ``$\leftrightarrow$'' be instead of ``$\to $'' then it's called  ``(strong) Homorphism''
+\end{definition}
+
+few notices: we usually talk about ``(strong) Homorphism'' when we are talking about ``Homorphism''.\\
+in the case (in definition ``(strong) Homorphism'') we denote it by ``$Hom(h,\mathfrak{M} , \mathfrak{N} )$''. if exists function ``$h$''
+``$Hom(h,\mathfrak{M} , \mathfrak{N} )$'' we say ``$\mathfrak{M}$'' and ``$\mathfrak{N}$'' are homomorphic.
+ we denote it by ``$Hom(\mathfrak{M} , \mathfrak{N} )$''.\\
+ if ``$h : M \xrightarrow[]{inj} N$'' we call it ``Monomorphism'' or ``Embedding''.we say ``$\mathfrak{M}$'' and ``$\mathfrak{N}$'' are momomorphic.\\
+ if ``$h : M \xrightarrow[surj]{} N$'' we call it ``Epimorphism''.we say ``$\mathfrak{M}$'' and ``$\mathfrak{N}$'' are Eomomorphic.\\
+ if ``$h : M \xrightarrow[surj]{inj} N$'' we call it ``Isomorphism''.we say ``$\mathfrak{M}$'' and ``$\mathfrak{N}$'' are Iomomorphic. and denote it by ``$ \mathfrak{M} \cong  \mathfrak{N}$''.\\
+ if ``$k : M \to M$'' is a function and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$'' ``Indomorphism''.\\
+ if ``$k : M \xrightarrow[surj]{inj} M$'' is a bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$'' ``Automorphism''.\\
 
 \section{Equivalences and Partitions}
 
 \begin{definition}
-    \textbf{Equivalence relation} assume  a model ``$\mathfrak{A} := (A , \sim ) $''(``$\sim $'' is a relation).
+    \textbf{Equivalence relation} assume  a structure ``$\mathfrak{A} := (A , \sim ) $''(``$\sim $'' is a relation).
     we say ``$\sim $''
     is a ``Equivalence relation'' in  ``$\mathfrak{A}$'' if it's  reflexive,symmetric, and transitive.
     \[ (reflexive) :  \forall x \in A \quad x \sim x \]
@@ -2829,7 +2895,7 @@ sometimes instead of ``$(x,y) \in R$'' we write ``$xRy $''.
 
 \section{Orderings}
 \begin{definition}
-    \textbf{(partial) Order relation} assume  a model ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a relation).
+    \textbf{(partial) Order relation} assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a relation).
     we say ``$\preceq  $''
     is a ``(partial) Order relation'' in  ``$\mathfrak{A}$'' if it's  reflexive,antisymmetric, and transitive.
     \[ (reflexive) :  \forall x \in A \quad x \preceq x \]
@@ -2838,7 +2904,7 @@ sometimes instead of ``$(x,y) \in R$'' we write ``$xRy $''.
 \end{definition}
 
 \begin{definition}
-    \textbf{(partial) Strict order relation} assume  a model ``$\mathfrak{A} := (A , \prec  ) $''(``$\prec $'' is a relation).
+    \textbf{(partial) Strict order relation} assume  a structure ``$\mathfrak{A} := (A , \prec  ) $''(``$\prec $'' is a relation).
     we say ``$\prec  $''
     is a ``(partial) Strict order relation'' in  ``$\mathfrak{A}$'' if it's  irreflexive, and transitive.
     \[ (irreflexive) :  \forall x \in A \quad x \nprec  x \]
@@ -2973,7 +3039,7 @@ now we will show you relation between ``(partial) Order relation'' and
 \end{theorem}
 
 \begin{definition}
-    \textbf{(Total-Linear) Order relation} assume  a model ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
+    \textbf{(Total-Linear) Order relation} assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
     we say ``$\preceq  $''
     is a ``(Total-Linear) Order relation'' in  ``$\mathfrak{A}$'' if every two elements are comparable.
 
@@ -2982,7 +3048,7 @@ now we will show you relation between ``(partial) Order relation'' and
 \end{definition}
 
 \begin{definition}
-    \textbf{(Total-Linear) Strict order relation} assume  a model ``$\mathfrak{A} := (A , \prec  ) $''(``$\prec $'' is a Strict order relation).
+    \textbf{(Total-Linear) Strict order relation} assume  a structure ``$\mathfrak{A} := (A , \prec  ) $''(``$\prec $'' is a Strict order relation).
     we say ``$\prec  $''
     is a ``(Total-Linear) Strict order relation'' in  ``$\mathfrak{A}$'' if every two elements are comparable.
 
@@ -3006,16 +3072,16 @@ now we will show you relation between ``(partial) Order relation'' and
 \end{theorem}
 
 \begin{lemma}
-    assume  a model ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
+    assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
     and $ B,C \subseteq A $ prove
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\exists b \in B \quad \forall x \in B \quad b \preceq x / 
-        \therefore \exists ! b \in B \quad \forall x \in B \quad b \preceq x $.
+        \item       $\exists b \in B \quad \forall x \in B \quad b \preceq x /
+                  \therefore \exists ! b \in B \quad \forall x \in B \quad b \preceq x $.
               \\ Proof Is Left As An Exercise To
               The Reader.\twemoji{1f600}
-        \item       $\exists c \in C \quad \forall x \in C \quad x \preceq c / 
-        \therefore \exists ! c \in C \quad \forall x \in C \quad x \preceq c $.
+        \item       $\exists c \in C \quad \forall x \in C \quad x \preceq c /
+                  \therefore \exists ! c \in C \quad \forall x \in C \quad x \preceq c $.
               \\ Proof Is Left As An Exercise To
               The Reader.\twemoji{1f600}
 
@@ -3024,47 +3090,47 @@ now we will show you relation between ``(partial) Order relation'' and
 \end{lemma}
 
 \begin{theorem}
-    \textbf{Minimum and Maximum} assume  a model ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
+    \textbf{Minimum and Maximum} assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
     and $\mathcal{B} := \{ B \subseteq A \mid \exists b \in B \quad \forall x \in B \quad b \preceq x \}$ and
     $ \mathcal{C} := \{ C \subseteq A \mid \exists c \in C \quad \forall x \in C \quad x \preceq c \}$
     we define  like this
     \[ min_\mathfrak{A} :=  \{ (B,b) \in \mathcal{B} \times V \mid \forall x \in B \quad b \preceq x \}  \]
     \[ max_\mathfrak{A} := \{ (C,c) \in \mathcal{C} \times V \mid \forall x \in C \quad x \preceq c \}  \]
-    prove these two relations are two functions ``$min_\mathfrak{A} : \mathcal{B} \to V$'' and
-    ``$max_\mathfrak{A} : \mathcal{C} \to V$''.
+    prove these two relations are two functions ``$min_\mathfrak{A} : \mathcal{B}
+        \to V$'' and ``$max_\mathfrak{A} : \mathcal{C} \to V$''.
 \end{theorem}
 
 \begin{definition}
-    \textbf{Minimal and Maximal} assume  a model ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
+    \textbf{Minimal and Maximal} assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
     we define ``Minimal and Maximal'' like this
     \[ Minimal_\mathfrak{A}(b) :   \forall x \in A \quad x \nprec   b  \]
     \[ Maximal_\mathfrak{A}(c) :   \forall x \in A \quad c \nprec    x \]
 \end{definition}
 
 \begin{definition}
-    \textbf{Well ordering} assume  a model ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
+    \textbf{Well ordering} assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
     we say ``$\mathfrak{A} $ '' is ``Well ordered'' when every nonempty subset of ``$A $ '' has a ``Minimum '' i.e.
     \[ WellO(\mathfrak{A}) :   \forall X \subseteq A \quad X \not= \emptyset \to \exists y \in X \quad \forall x \in X \quad y \preceq   x  \]
 \end{definition}
 
 \begin{definition}
-    \textbf{Lower and Upper Bound} assume  a model ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
+    \textbf{Lower and Upper Bound} assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
     $ B,C \subseteq A $. we define ``Lower and Upper Bound'' like this
     \[ Lowerb(b,B)_\mathfrak{A} :   \forall x \in B \quad b \preceq   x  \]
     \[ Upperb(c,C)_\mathfrak{A} :   \forall x \in C \quad x \preceq   c \]
 \end{definition}
 
 \begin{lemma}
-    assume  a model ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
+    assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
     and $ B,C \subseteq A $ prove
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\exists b \in A \quad (\forall x \in B \quad b \preceq x \land \forall x \in A \quad Lowerb_\mathfrak{A}(x,B) \to x \preceq b ) 
-        / \therefore \exists ! b \in A \quad (\forall x \in B \quad b \preceq x \land \forall x \in A \quad Lowerb_\mathfrak{A}(x,B) \to x \preceq b ) $.
+        \item       $\exists b \in A \quad (\forall x \in B \quad b \preceq x \land \forall x \in A \quad Lowerb_\mathfrak{A}(x,B) \to x \preceq b )
+                  / \therefore \exists ! b \in A \quad (\forall x \in B \quad b \preceq x \land \forall x \in A \quad Lowerb_\mathfrak{A}(x,B) \to x \preceq b ) $.
               \\ Proof Is Left As An Exercise To
               The Reader.\twemoji{1f600}
         \item       $\exists c \in A \quad (\forall x \in C \quad x \preceq c \land \forall x \in A \quad Upperb_\mathfrak{A}(x,C) \to c \preceq x )
-         / \therefore \exists ! c \in A \quad (\forall x \in C \quad x \preceq c \land \forall x \in A \quad Upperb_\mathfrak{A}(x,C) \to c \preceq x ) $.
+                  / \therefore \exists ! c \in A \quad (\forall x \in C \quad x \preceq c \land \forall x \in A \quad Upperb_\mathfrak{A}(x,C) \to c \preceq x ) $.
               \\ Proof Is Left As An Exercise To
               The Reader.\twemoji{1f600}
 
@@ -3073,7 +3139,7 @@ now we will show you relation between ``(partial) Order relation'' and
 \end{lemma}
 
 \begin{theorem}
-    \textbf{Infimum and Supremum} assume  a model ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
+    \textbf{Infimum and Supremum} assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
     and $\mathcal{B} := \{ B \subseteq A \mid \exists b \in A \quad \forall x \in B \quad b \preceq x \}$ and
     $ \mathcal{C} := \{ C \subseteq A \mid \exists c \in A \quad \forall x \in C \quad x \preceq c \}$
     we define  like this
@@ -3084,18 +3150,18 @@ now we will show you relation between ``(partial) Order relation'' and
 \end{theorem}
 
 \begin{theorem}
-        assume  a model ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
+    assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
     and $ B \subseteq A $ prove
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $ min_\mathfrak{A}(B) = b / 
-        \therefore inf_\mathfrak{A}(B) = b $.
+        \item       $ min_\mathfrak{A}(B) = b /
+                  \therefore inf_\mathfrak{A}(B) = b $.
               \\ Proof Is Left As An Exercise ToThe Reader.\twemoji{1f600}
-        \item       $  inf_\mathfrak{A}(B) = b , b \in B / 
-        \therefore  min_\mathfrak{A}(B) = b $.
+        \item       $  inf_\mathfrak{A}(B) = b , b \in B /
+                  \therefore  min_\mathfrak{A}(B) = b $.
               \\ Proof Is Left As An Exercise ToThe Reader.\twemoji{1f600}
-            \end{enumerate}
-            this theorem holds for ``$max , sup$'' too.
+    \end{enumerate}
+    this theorem holds for ``$max , sup$'' too.
 \end{theorem}
 
 \chapter{From Natural numbers to Complex numbers }
@@ -3141,15 +3207,13 @@ now we will show you relation between ``(partial) Order relation'' and
     \]
 \end{definition}
 \begin{lemma}
-    \textbf{} if we define ``$S :=  \{ X \mid ind(X) \} $'' prove.
+    \textbf{}  prove.
 
-    \[ \mathbb{N} = \bigcap S \]
+    \[ \mathbb{N} = \bigcap Ind \]
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-
 \section{Properties of Natural numbers}
-
 
 \begin{theorem}\textbf{Induction}
     $P(0) , \forall n \Big( P(n) \to P(s(n)) \Big) /\therefore \forall n\in \mathbb{N} \quad P(n)$
@@ -3172,7 +3236,7 @@ now we will show you relation between ``(partial) Order relation'' and
         \have  {2} {Ind(A) }                                               \by{$def.1$}{}
         \open
         \have  {2} {n\in \mathbb{N} }                                               \by{$def.1$}{}
-        \have  {2} {n\in \bigcap S }                                               \by{$def.1$}{}
+        \have  {2} {n\in \bigcap Ind }                                               \by{$def.1$}{}
         \have  {2} {\forall X ( Ind(X) \to n\in X )}                                               \by{$def.1$}{}
         \have  {2} { Ind(A) \to n\in A }                                               \by{$def.1$}{}
         \have  {2} { n\in A }                                               \by{$def.1$}{}
@@ -3196,22 +3260,20 @@ now we will show you relation between ``(partial) Order relation'' and
 
 \begin{theorem}
     \textbf{Linear order of Natural numbers($\mathbb{N}$)} prove   ``$ (\mathbb{N} , <  )  $ is lineary ordered.\\
-     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 
 \end{theorem}
 
 \begin{theorem}
     \textbf{Linear order of Natural numbers($\mathbb{N}$)} prove   ``$ (\mathbb{N} , <  )  $ is Well ordered.\\
-     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 
 \end{theorem}
-
 
 \begin{theorem}\textbf{Induction ,second vrsion}
     $ \forall k < n \Big( P(k) \to P(n) \Big) /\therefore \forall n\in \mathbb{N} \quad P(n)$
     \\
     proof.
-
 
 \end{theorem}
 
@@ -3229,15 +3291,71 @@ now we will show you relation between ``(partial) Order relation'' and
 
 \begin{theorem}\textbf{Recurtion} for any set ``$A$'' and ``$a \in A$'' and any function ``$g : A \times \mathbb{N} \to A$''
     there is a unique infinite sequence ``$f : \mathbb{N} \to A$'' s.t.
-        \begin{enumerate}
+    \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       $ f(0) = a$.
         \item       $\forall n \in \mathbb{N} \quad f(s(n)) = g(f(n),n)  $.
     \end{enumerate}
-     Proof Is Left As An Exercise ToThe Reader.\twemoji{1f600}
+    Claim 1 : Existing of ``$f$''
+    \begin{fitchproof}[arrayenv=tabular]
+        \have {1} { F := \{ t \mid \forall k,m \in \mathbb{N} \quad 0 < k < m \to
+            \Big( \big(t : s(m) \to A \big) \land t(0) = a \land t \big( s(k) \big) = g \big( t(k),k \big)\Big)  \}  }
+        \have {1} { f := \bigcup F  }
+    \end{fitchproof}
+    Claim 2 :  ``$f$'' is a function
+    \begin{fitchproof}[arrayenv=tabular]
+        \have {1} { Func(f)  }
+    \end{fitchproof}
+    Claim 3 :  ``$Dom(f) =  \mathbb{N}$'' and ``$Range(f) \subseteq A$''
+
+    Claim 4 : ``$f$'' satisfies conditions (1) and (2)
+\end{theorem}
+
+\begin{theorem}\textbf{(Parametric version) recurtion} for any set ``$A , P$'' and ``$a : P \to A$'' and any function ``$g :P \times A \times \mathbb{N} \to A$''
+    there is a unique infinite function ``$f :P \times \mathbb{N} \to A$'' s.t.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $ f(p,0) = a(p)$.
+        \item       $\forall n \in \mathbb{N} \quad f(p,s(n)) = g(p,f(n),n)  $.
+    \end{enumerate}
+    Claim 1 : Existing of ``$f$''
+    % \begin{fitchproof}[arrayenv=tabular]
+    %     \have {1} { F := \{ t \mid \forall k,m \in \mathbb{N} \quad 0 < k < m \to
+    %         \Big( \big(t : s(m) \to A \big) \land t(0) = a \land t \big( s(k) \big) = g \big( t(k),k \big)\Big)  \}  }
+    %     \have {1} { f := \bigcup F  }
+    % \end{fitchproof}
+    Claim 2 : ``$f$'' is a function
+    % \begin{fitchproof}[arrayenv=tabular]
+    %     \have {1} { Func(f)  }
+    % \end{fitchproof}
+    Claim 3 : ``$Dom(f) = \mathbb{N}$'' and ``$Range(f) \subseteq A$''
+
+    Claim 4 : ``$f$'' satisfies conditions (1) and (2)
 \end{theorem}
 
 \section{Arithmetic of Natural numbers}
+we want to introduce a function ``$+ :\mathbb{N} \times \mathbb{N} \to
+    \mathbb{N}$'' to you. we use ``$m+n$'' instead of ``$+(m,n)$''.
+
+\begin{theorem}there is a unique infinite function ``$+ :\mathbb{N} \times \mathbb{N} \to \mathbb{N}$'' s.t.
+
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall m \in \mathbb{N} \quad m+0 = m$.
+        \item       $\forall m,n \in \mathbb{N} \quad m+s(n) = s(m +n)  $.
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\begin{lemma}.\\
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall m,n \in \mathbb{N} \quad m+n = n+m$.
+        \item       $\forall m,n,k \in \mathbb{N} \quad (m+n)+k = m+(n+k)  $.
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
 \chapter{Finite and Infinite sets}
 
 \chapter{Ordinals }
