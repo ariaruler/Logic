@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.9.18)  22 MAR 2026 18:32
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.9.18)  24 MAR 2026 00:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1488,17 +1488,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 2596--2637
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 2601--2642
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2596--2637
+Underfull \hbox (badness 10000) in paragraph at lines 2601--2642
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2596--2637
+Underfull \hbox (badness 10000) in paragraph at lines 2601--2642
 
  []
 
@@ -1506,16 +1506,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 2596--2637
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [37]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 2642.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 2647.
  (D:\pdf\RStudio\latex\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-Underfull \hbox (badness 10000) in paragraph at lines 2665--2674
+Underfull \hbox (badness 10000) in paragraph at lines 2670--2679
 
  []
 
 [38]
-Overfull \hbox (32.53764pt too wide) in paragraph at lines 2703--2738
+Overfull \hbox (32.53764pt too wide) in paragraph at lines 2708--2743
 [] 
  []
 
@@ -1523,7 +1523,7 @@ Overfull \hbox (32.53764pt too wide) in paragraph at lines 2703--2738
 Underfull \vbox (badness 1472) has occurred while \output is active []
 
  [39]
-Overfull \hbox (32.53764pt too wide) in paragraph at lines 2739--2776
+Overfull \hbox (32.53764pt too wide) in paragraph at lines 2744--2781
 [] 
  []
 
@@ -1534,12 +1534,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [42]
-Underfull \hbox (badness 10000) in paragraph at lines 2920--2922
+Underfull \hbox (badness 10000) in paragraph at lines 2925--2927
 
  []
 
 [43] [44] [45]
-Underfull \hbox (badness 10000) in paragraph at lines 3059--3061
+Underfull \hbox (badness 10000) in paragraph at lines 3064--3066
 
  []
 
@@ -1572,21 +1572,22 @@ File: all-twemojis.pdf Graphic file (type pdf)
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
  [50]
-Overfull \hbox (21.20822pt too wide) in paragraph at lines 3300--3304
+Overfull \hbox (21.20822pt too wide) in paragraph at lines 3312--3316
 [][] 
  []
 
 [51]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
-
-Underfull \hbox (badness 10000) in paragraph at lines 3350--3352
-
- []
-
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
-[52]
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+ [52]
 Chapter 7.
 [53
 
@@ -1608,11 +1609,11 @@ Chapter 10.
 Chapter 11.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3367.
+(hyperref)                removing `math shift' on input line 3420.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3367.
+(hyperref)                removing `math shift' on input line 3420.
 
 [61] [62
 
@@ -1620,11 +1621,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Chapter 12.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3369.
+(hyperref)                removing `math shift' on input line 3422.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3369.
+(hyperref)                removing `math shift' on input line 3422.
 
 [63] [64
 
@@ -1655,4 +1656,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  84i,27n,93p,555b,708s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Logic.xdv (73 pages, 472040 bytes).
+Output written on Logic.xdv (73 pages, 486104 bytes).

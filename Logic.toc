@@ -21,7 +21,7 @@
 \contentsline {section}{\numberline {6.1}Introduction to Natural numbers}{49}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Properties of Natural numbers}{50}{section.6.2}%
 \contentsline {section}{\numberline {6.3}The Recurtion theorem}{51}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Arithmetic of Natural numbers}{51}{section.6.4}%
+\contentsline {section}{\numberline {6.4}Arithmetic of Natural numbers}{52}{section.6.4}%
 \contentsline {chapter}{\numberline {7}Finite and Infinite sets}{53}{chapter.7}%
 \contentsline {chapter}{\numberline {8}Ordinals }{55}{chapter.8}%
 \contentsline {chapter}{\numberline {9}Cardinals }{57}{chapter.9}%

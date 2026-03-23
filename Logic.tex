@@ -2442,6 +2442,11 @@ see it as ``$ R := \{ x \mid \phi(x) \}$''. if it is confusing so forget it.\twe
 \end{definition}
 
 \begin{definition}
+    \textbf{Set of functions from set to set}  we denote set of all ``$f:A \rightarrow B$'' with ``$B^A$''  i.e.
+    \[ B^A : \{ f \mid f :A \rightarrow B \} \]
+\end{definition}
+
+\begin{definition}
     \textbf{Injective function}
     we call a function \textbf{f} injective when every output has at most one input i.e.
     \[ Injective(f) : \forall y ,x_1 , x_2 \Big((x_1,y) \in f \wedge (x_2,y) \in f \rightarrow x_1 = x_2 \Big). \]
@@ -3280,7 +3285,7 @@ now we will show you relation between ``(partial) Order relation'' and
 \section{The Recurtion theorem}
 
 \begin{definition}
-    \textbf{Tuple-Finite sequence} is a function ``$a : n \to V$'' s.t. $n \in  \mathbb{N}$ we know we can show this
+    \textbf{Tuple (new definition)-Finite sequence} is a function ``$a : n \to V$'' s.t. $n \in  \mathbb{N}$ we know we can show this
     by ``$(a_i)_{i \in n}$'' we can also show it by ``$(a_0 , a_1 ,a_2 , ... , a_{n-1})$''
 \end{definition}
 
@@ -3288,6 +3293,13 @@ now we will show you relation between ``(partial) Order relation'' and
     \textbf{Sequence} is a function ``$a : \mathbb{N} \to V$''  we know we can show this
     by ``$(a_i)_{i \in \mathbb{N}}$'' we can also show it by ``$(a_i)_{i = 0}^{\infty}$''
 \end{definition}
+
+now we can redefine ``Cartesian product''. we
+ define finite Cartesian product ``$\prod_{i \in n} A_i := \{ (a_i)_{i \in n} \mid a_i \in A_i \}$'' and
+ define infinite Cartesian product ``$\prod_{i \in \mathbb{N}} A_i := \{ (a_i)_{i \in \mathbb{N}} \mid a_i \in A_i \}$'' and
+ define  Cartesian product in general way ``$\prod_{i \in I} A_i := \{ (a_i)_{i \in I} \mid a_i \in A_i \}$''.
+ and you can easily see that from the definition of ``$B^A$'', ``$A^n$'' is the set of all  $n$-length finite sequences of $a \in A$ and 
+``$A^\mathbb{N}$'' is the set of all infinite sequences of $a \in A$. 
 
 \begin{theorem}\textbf{Recurtion} for any set ``$A$'' and ``$a \in A$'' and any function ``$g : A \times \mathbb{N} \to A$''
     there is a unique infinite sequence ``$f : \mathbb{N} \to A$'' s.t.
@@ -3334,10 +3346,10 @@ now we will show you relation between ``(partial) Order relation'' and
 \end{theorem}
 
 \section{Arithmetic of Natural numbers}
-we want to introduce a function ``$+ :\mathbb{N} \times \mathbb{N} \to
-    \mathbb{N}$'' to you. we use ``$m+n$'' instead of ``$+(m,n)$''.
+we want to introduce some functions ``$\bigcirc  :\mathbb{N} \times \mathbb{N} \to
+    \mathbb{N}$'' to you. we use ``$m\bigcirc n$'' instead of ``$\bigcirc (m,n)$''.
 
-\begin{theorem}there is a unique infinite function ``$+ :\mathbb{N} \times \mathbb{N} \to \mathbb{N}$'' s.t.
+\begin{theorem}\textbf{Summation} there is a unique infinite function ``$+ :\mathbb{N} \times \mathbb{N} \to \mathbb{N}$'' s.t.
 
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
@@ -3347,16 +3359,57 @@ we want to introduce a function ``$+ :\mathbb{N} \times \mathbb{N} \to
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-\begin{lemma}.\\
+\begin{lemma}prove.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall m,n \in \mathbb{N} \quad m+n = n+m$.
-        \item       $\forall m,n,k \in \mathbb{N} \quad (m+n)+k = m+(n+k)  $.
+        \item       $\forall m,n \in \mathbb{N} \quad m+n = n+m$
+        \item       $\forall m,n,k \in \mathbb{N} \quad (m+n)+k = m+(n+k)  $
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
+\begin{theorem}\textbf{Multiplication} there is a unique infinite function ``$\cdot :\mathbb{N} \times \mathbb{N} \to \mathbb{N}$'' s.t.
+
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall m \in \mathbb{N} \quad m \cdot 0 = 0$ 
+        \item       $\forall m,n \in \mathbb{N} \quad m \cdot s(n) = m \cdot n+ m   $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+we denote also ``Multiplication'' with ``$m \times n$'' and ``$mn$'' too.
+
+\begin{lemma}prove.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall m,n \in \mathbb{N} \quad mn = nm$
+        \item       $\forall m,n,k \in \mathbb{N} \quad (mn)k = m(nk)  $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{theorem}\textbf{Exponents} there is a unique infinite function ``$(\_)^{(\_)} :\mathbb{N} \times \mathbb{N} \to \mathbb{N}$'' s.t.
+
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall m \in \mathbb{N} \quad m ^ 0 = 1$ 
+        \item       $\forall m,n \in \mathbb{N} \quad m ^ {s(n)} = m ^ n \cdot m   $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
 \chapter{Finite and Infinite sets}
+
+
+we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A} := (A)$ and
+$\mathfrak{B} := (B)$. because these Structures have only a set  ``Isomorphism'' between them 
+only means there is a bijection function $f:A \xrightarrow[surj]{inj} B $. 
+
+
+\begin{definition}
+    \textbf{Equipotent} 
+in  situation above we say ``$A$'' and ``$B$'' are ``Equipotent''  we denote it with ``$A \cong B$'' i.e.
+\[ A \cong B : \exists f  (f:A \xrightarrow[surj]{inj} B) \]
+\end{definition}
 
 \chapter{Ordinals }
 
