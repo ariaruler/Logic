@@ -45,7 +45,7 @@
 \newtheorem{Rule}{Rule}[section]
 \newtheorem{Attention}{Attention}[section]
 \newtheorem{observation}{Observation}[section]
-\newtheorem{colloraly}{Colloraly}[section]
+\newtheorem{corollary}{Corollary}[section]
 \makeatletter
 \renewcommand{\arraystretch}{1.44} % 2x standard row height
 
@@ -3169,7 +3169,7 @@ now we will show you relation between ``(partial) Order relation'' and
     this theorem holds for ``$max , sup$'' too.
 \end{theorem}
 
-\chapter{From Natural numbers to Complex numbers }
+\chapter{ Natural numbers  }
 
 \section{Introduction to Natural numbers}
 
@@ -3324,7 +3324,7 @@ now we can redefine ``Cartesian product''. we
 \end{theorem}
 
 \begin{theorem}\textbf{(Parametric version) recurtion} for any set ``$A , P$'' and ``$a : P \to A$'' and any function ``$g :P \times A \times \mathbb{N} \to A$''
-    there is a unique infinite function ``$f :P \times \mathbb{N} \to A$'' s.t.
+    there is a unique function ``$f :P \times \mathbb{N} \to A$'' s.t.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       $ f(p,0) = a(p)$.
@@ -3349,7 +3349,7 @@ now we can redefine ``Cartesian product''. we
 we want to introduce some functions ``$\bigcirc  :\mathbb{N} \times \mathbb{N} \to
     \mathbb{N}$'' to you. we use ``$m\bigcirc n$'' instead of ``$\bigcirc (m,n)$''.
 
-\begin{theorem}\textbf{Summation} there is a unique infinite function ``$+ :\mathbb{N} \times \mathbb{N} \to \mathbb{N}$'' s.t.
+\begin{theorem}\textbf{Summation} there is a unique function ``$+ :\mathbb{N} \times \mathbb{N} \to \mathbb{N}$'' s.t.
 
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
@@ -3368,7 +3368,7 @@ we want to introduce some functions ``$\bigcirc  :\mathbb{N} \times \mathbb{N} \
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-\begin{theorem}\textbf{Multiplication} there is a unique infinite function ``$\cdot :\mathbb{N} \times \mathbb{N} \to \mathbb{N}$'' s.t.
+\begin{theorem}\textbf{Multiplication} there is a unique function ``$\cdot :\mathbb{N} \times \mathbb{N} \to \mathbb{N}$'' s.t.
 
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
@@ -3388,17 +3388,166 @@ we denote also ``Multiplication'' with ``$m \times n$'' and ``$mn$'' too.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-\begin{theorem}\textbf{Exponents} there is a unique infinite function ``$(\_)^{(\_)} :\mathbb{N} \times \mathbb{N} \to \mathbb{N}$'' s.t.
+% \begin{theorem}\textbf{Exponents} there is a unique function ``$(\_)^{(\_)} :\mathbb{N} \times \mathbb{N} \to \mathbb{N}$'' s.t.
+
+%     \begin{enumerate}
+%         \setlength{\itemsep}{0pt} % No extra space between items
+%         \item       $\forall m \in \mathbb{N} \quad m ^ 0 = 1$ 
+%         \item       $\forall m,n \in \mathbb{N} \quad m ^ {s(n)} = m ^ n \cdot m   $
+%     \end{enumerate}
+%     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+% \end{theorem}
+
+\chapter{From Natural numbers to Complex numbers }
+
+\section{Integers``$\mathbb{Z}$''}
+
+we learned about  ``$\mathbb{N}$'' before and we constructed structure  ``$(\mathbb{N} , + , \cdot  , <)$''.
+if you assume ``$\mathbb{N} \times \mathbb{N}$'' we can define a equivalence relation 
+``$ (n_1 , m_1) \sim (n_2 , m_2) : n_1 + m_2 = n_2 + m_1 $''
+
+\begin{definition}\textbf{Integers``$\mathbb{Z}$''} is a set 
+\[ \mathbb{Z} := \mathbb{N} \times \mathbb{N} / \sim\]
+we denote it's members with ``$z_0 , z_1 ,...$''
+\end{definition}
+
+in this system ``$ 0 := [(0,0)]$'' and ``$ \forall n \in \mathbb{N} \quad n := [(n,0)]$''
+and ``$\forall n \in \mathbb{N} \quad -n := [(0,n)]$''. in general ``$\forall m,n \in \mathbb{N} \quad m-n := [(m,n)]$''.  so we can say ``$ \mathbb{N} \subseteq \mathbb{Z}$''.
+
+\begin{theorem}\textbf{Summation} there is a unique function ``$+_\mathbb{Z} :\mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$'' s.t.
 
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall m \in \mathbb{N} \quad m ^ 0 = 1$ 
-        \item       $\forall m,n \in \mathbb{N} \quad m ^ {s(n)} = m ^ n \cdot m   $
+        \item       $\forall m_1 , m_2 , n_1 , n_2 \in \mathbb{N} \quad
+         [(m_1 , n_1)] + [(m_2 , n_2)]  = [(m_1 + m_2, n_1 + n_2)] $.
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
+
+\begin{lemma}prove.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall z_1,z_2 \in \mathbb{Z} \quad z_1+z_2 = z_2+z_1$
+        \item       $\forall z_1,z_2,z_3 \in \mathbb{Z} \quad (z_1+z_2)+z_3 = z_1+(z_2+z_3)  $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{theorem}\textbf{Multiplication} there is a unique function ``$\cdot_\mathbb{Z} :\mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$'' s.t.
+
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall m_1 , m_2 , n_1 , n_2 \in \mathbb{N} \quad
+         [(m_1 , n_1)] \cdot [(m_2 , n_2)]  = [(m_1 m_2  + n_1 n_2 , m_1 n_2 + m_2 n_1)] $.
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+we denote also ``Multiplication'' with ``$m \times n$'' and ``$mn$'' too.
+
+\begin{lemma}prove.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall z_1,z_2 \in \mathbb{Z} \quad z_1 z_2 = z_2 z_1$
+        \item       $\forall z_1,z_2,z_3 \in \mathbb{Z} \quad (z_1 z_2)z_3 = z_1(z_2 z_3)  $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{definition}\textbf{Order in $\mathbb{Z}$} 
+        \[ [(m_1 , n_1)] <_\mathbb{Z} [(m_2 , n_2)]  : m_1 + n_2  < m_2 + n_1 \]
+\end{definition}
+this lemma let us use ``$<$'' instead of ``$<_\mathbb{Z}$''.
+
+\begin{lemma} $ \forall m,n \in \mathbb{N} \quad m <_\mathbb{Z} n  \therefore / \therefore m  < n$\\
+        Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+% \begin{theorem}\textbf{Exponents} there is a unique function ``$(\_)^{(\_)_\mathbb{Z}} :\mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$'' s.t.
+
+%     \begin{enumerate}
+%         \setlength{\itemsep}{0pt} % No extra space between items
+%         \item       $\forall m \in \mathbb{Z} \quad m ^ 0 = 1$ 
+%         \item       $\forall m,n \in \mathbb{Z} \quad m ^ {s(n)} = m ^ n \cdot m   $
+%     \end{enumerate}
+%     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+% \end{theorem}
+
+\section{Rational numbers ``$\mathbb{Q}$''}
+
+we learned about  ``$\mathbb{Z}$'' before and we constructed structure  ``$(\mathbb{Z} , + , \cdot  , <)$''.
+if you assume ``$\mathbb{Z} \times (\mathbb{Z} - \{0\})$'' we can define a equivalence relation 
+``$ (z'_1 , z_1) \sim (z_2 , z_2) : z'_1 \cdot z_2 = z_2 \cdot z_1 $''
+
+\begin{definition}\textbf{Integers``$\mathbb{Q}$''} is a set 
+\[ \mathbb{Q} := \mathbb{Z} \times (\mathbb{Z} - \{0\}) / \sim\]
+we denote it's members with ``$q_0 , q_1 ,...$''
+\end{definition}
+
+in this system ``$ 0 := [(0,1)]$'' and ``$ \forall z \in \mathbb{Z} \quad z := [(z,1)]$''
+and ``$\forall z \in \mathbb{Z} \quad 1/z := [(1,z)]$''. in general ``$\forall z,z' \in \mathbb{Z} \quad z/z' := [(z,z')]$''.
+so we can say ``$ \mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q} $''.
+
+\begin{theorem}\textbf{Summation} there is a unique function ``$+_\mathbb{Q} :\mathbb{Q} \times \mathbb{Q} \to \mathbb{Q}$'' s.t.
+
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall z_1 , z_2 , z'_1 , z_2 \in \mathbb{Z} \quad
+         [(z_1 , z'_1)] + [(z_2 , z'_2)]  = [(z_1  z'_2  + z'_1 z_2,  z'_1  z'_2)] $.
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\begin{lemma}prove.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall q_1,q_2 \in \mathbb{Q} \quad q_1+q_2 = q_2+q_1$
+        \item       $\forall q_1,q_2,q_3 \in \mathbb{Q} \quad (q_1+q_2)+q_3 = q_1+(q_2+q_3)  $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{theorem}\textbf{Multiplication} there is a unique function ``$\cdot_\mathbb{Q} :\mathbb{Q} \times \mathbb{Q} \to \mathbb{Q}$'' s.t.
+
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall z_1 , z_2 , z'_1 , z_2 \in \mathbb{Z} \quad
+         [(z_1 , z'_1)] \cdot [(z_2 , z'_2)]  = [(z_1 z_2  , z'_2 z'_1)] $.
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+we denote also ``Multiplication'' with ``$q \times q'$'' and ``$q q'$'' too.
+
+\begin{lemma}prove.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall q_1,q_2 \in \mathbb{Q} \quad q_1 q_2 = q_2 q_1$
+        \item       $\forall q_1,q_2,q_3 \in \mathbb{Q} \quad (q_1 q_2)q_3 = q_1(q_2 q_3)  $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{definition}\textbf{Order in $\mathbb{Q}$} 
+        \[ [(z_1 , z'_1)] <_\mathbb{Q} [(z_2 , z_2)]  : z_1 + z_2  < z_2 + z'_1 \]
+\end{definition}
+this lemma let us use ``$<$'' instead of ``$<_\mathbb{Q}$''.
+
+\begin{lemma} $ \forall z,z' \in \mathbb{Z} \quad z <_\mathbb{Q} z'  \therefore / \therefore z  < z'$\\
+        Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+% \begin{theorem}\textbf{Exponents} there is a unique function ``$(\_)^{(\_)_\mathbb{Q}} :\mathbb{Q} \times \mathbb{Q} \to \mathbb{Q}$'' s.t.
+
+%     \begin{enumerate}
+%         \setlength{\itemsep}{0pt} % No extra space between items
+%         \item       $\forall m \in \mathbb{Q} \quad m ^ 0 = 1$ 
+%         \item       $\forall m,n \in \mathbb{Q} \quad m ^ {s(n)} = m ^ n \cdot m   $
+%     \end{enumerate}
+%     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+% \end{theorem}
+
 \chapter{Finite and Infinite sets}
 
+\section{Equipotent and Order in sets}
 
 we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A} := (A)$ and
 $\mathfrak{B} := (B)$. because these Structures have only a set  ``Isomorphism'' between them 
@@ -3407,9 +3556,64 @@ only means there is a bijection function $f:A \xrightarrow[surj]{inj} B $.
 
 \begin{definition}
     \textbf{Equipotent} 
-in  situation above we say ``$A$'' and ``$B$'' are ``Equipotent''  we denote it with ``$A \cong B$'' i.e.
+in  situation above we say ``$A$'' and ``$B$'' are ``Equipotent''.  we denote it with ``$A \cong B$'' i.e.
 \[ A \cong B : \exists f  (f:A \xrightarrow[surj]{inj} B) \]
 \end{definition}
+
+\begin{lemma} ``$\cong$'' is a equivalence relation in ``$(V , \cong)$''\\
+        Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+so ``$ V / \cong $'' is a partision for ``$V$'' and every partition equals to a $[A]_{\cong}$ we denote it by $[A]$.
+
+\begin{definition}
+    \textbf{Equipotent} if there is a  function $f:A \xrightarrow[]{inj} B $.
+in  situation above we say ``$A$'' is less than or equipotent ``$B$''.   we denote it with ``$A \precsim  B$'' i.e.
+\[ A \precsim  B : \exists f  (f:A \xrightarrow[]{inj} B) \]
+\end{definition}
+
+similarly we define ``$[A] \preceq  [B] : \forall X \in [A] , Y \in  [B]  \quad  X \precsim Y$''
+
+\begin{lemma} $A \precsim  B \therefore / \therefore [A] \preceq  [B] $\\
+        Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{theorem} \textbf{Schroeder-Bernstein} $A \precsim  B , B \precsim  A / \therefore A \cong  B$\\
+        Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\begin{lemma} ``$\preceq$'' is a order relation in ``$(V / \cong , \preceq)$''\\
+        Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\section{Finite sets}
+
+
+\begin{definition}\textbf{Finite set} if there is a ``$n \in \mathbb{N}$'' s.t. $ A \cong n$ we call it ``Finite''($Finite(A)$).
+if a set is not finite we call it ``Infinite''($Infinite(A)$).
+\end{definition}
+
+\begin{lemma} $ / \therefore \forall  n \in \mathbb{N} \quad  X \subseteq n \to X \ncong n   $\\
+        Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+
+\begin{corollary}.\\
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall m,n \in \mathbb{N} \quad m \not= n \to m \ncong n$
+        \item       $\forall m,n \in \mathbb{N} \quad A \cong m \land A \cong n \to  m = n   $
+        \item       $ Infinite(\mathbb{N})  $
+        \item       $\forall m,n \in \mathbb{N} \quad m \prec n \leftrightarrow m < n$
+    \end{enumerate}
+            Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{corollary}
+
+corollary (4) let us use ``$<$'' instead of ``$\prec$''
+
+\begin{lemma} $ Finite(X) , Y \subseteq X / \therefore  Finite(Y)    $\\
+        Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
 
 \chapter{Ordinals }
 
@@ -3417,9 +3621,9 @@ in  situation above we say ``$A$'' and ``$B$'' are ``Equipotent''  we denote it 
 
 \chapter{Axiom of chioce}
 
-\chapter{hyperreal numbers($\mathbb{N} * , \mathbb{Q} * ,\mathbb{R} *$) and surreal numbers }
+\chapter{hyperreal numbers($*\mathbb{N}  , *\mathbb{Z},*\mathbb{Q}    ,*\mathbb{R} $) and surreal numbers }
 
-\chapter{fantacy numbers($\mathbb{N} (Ord) , \mathbb{Q} (Ord) ,\mathbb{R} (Ord)$) }
+\chapter{fantacy numbers($\mathbb{N} (Ord) , \mathbb{Z} (Ord) , \mathbb{Q} (Ord) ,\mathbb{R} (Ord)$) }
 
 \chapter{New beginning for calculus }
 
