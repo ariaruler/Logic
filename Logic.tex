@@ -875,7 +875,7 @@ call them \textbf{"constants"}.
 
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item if ``$x$'' is an obj(constant or variable) then ``$set(x)$'' is an atomic
+        \item if ``$x$'' is an obj(constant or variable) then ``$Set(x)$'' is an atomic
               formula.
         \item if ``$x,y$'' are obj(constant or variable) then ``$x=y$'' is an atomic formula.
         \item if ``$x,y$'' are obj(constant or variable) then ``$x \in y$'' is an atomic
@@ -927,7 +927,7 @@ false?) the answer is unfortunately \textbf{No}.
         \item for atomic formulas we define it like this. if it's a single object we do it as
               we explain in ``\textbf{Substitution for obj}''. if it's like $x = y$ or $x \in
                   y$ ($x,y$ can be both constants and variables). we define it like this.
-              \[ set(y)[a/x] := set(y[a/x]) \]
+              \[ Set(y)[a/x] := Set(y[a/x]) \]
               \[ (x=y)[a/z] := (x[a/z] = y[a/z]) \]
               \[ (x \in y)[a/z] := (x[a/z] \in y[a/z]) \]
         \item if formula $A$ is complex we define it like this.
@@ -1419,8 +1419,8 @@ sentences.
 \chapter{The beginning of set theory}
 
 In language of set theory if we are talking about ``$\forall X (P(X))$'' it
-means ``$\forall x (set(x) \to P(x))$'' and when we are talking about
-``$\exists X (P(X))$'' it means ``$\exists x (set(x) \land P(x))$''. similarly
+means ``$\forall x (Set(x) \to P(x))$'' and when we are talking about
+``$\exists X (P(X))$'' it means ``$\exists x (Set(x) \land P(x))$''. similarly
 if we are talking about ``$\forall x \in A \quad P(x)$'' it means ``$\forall x
     (x \in A \to P(x))$'' and when we are talking about ``$\exists x \in A \quad
     P(x)$'' it means ``$\exists x (x \in A \land P(x))$''.
@@ -1603,7 +1603,7 @@ so we can rewrite axiom of Extensionality like this.
 \end{axiom}
 
 this axiom show that why Russell's paradox doesn't happened here because if ou
-assume ``$R=\{x|x \notin x\}$'' is a set.you can't prove or disprove ``$R \in
+assume ``$R=\{x|x \notin x\}$'' is a set. you can't prove or disprove ``$R \in
     R$'' so ``$x \notin x$'' is not a proposition in ``set theorhy''. (we don't
 need to prove that now.we will prove it in``\textbf{'MetaLogic'}''). (it's not
 obvios in ``$x \notin x$'' witch set holds and witch not). (and likely ``$\{ X
@@ -2165,13 +2165,15 @@ what happened there.\twemoji{1f600}
     \[ Rel(R) : \exists X,Y (R \subseteq X \times Y). \]
 \end{definition}
 
-somtimes we use different notations in this book. you have to be smart and recognize it by yourself.
-sometimes instead of ``$x \in R$'' we denote it by ``$R(x) $''.
-and instead of ``$(x_0, x_1 , ... , x_n) \in R$'' we denote it by ``$R(x_0, x_1 , ... , x_n) $''.
-if tuple is binary, instead of ``$(x,y) \in R$'' we denote it by ``$xRy $''.\\
-so if we have a definition like ``$ R(x) : \phi(x)$'' s.t. ``$\phi(x)$'' is a first order proposition.
-``weak comprehension'' show us there is a straight relatioon between ``propositions'' and ``sets'' so you can
-see it as ``$ R := \{ x \mid \phi(x) \}$''. if it is confusing so forget it.\twemoji{1f600}
+somtimes we use different notations in this book. you have to be smart and
+recognize it by yourself. sometimes instead of ``$x \in R$'' we denote it by
+``$R(x) $''. and instead of ``$(x_0, x_1 , ... , x_n) \in R$'' we denote it by
+``$R(x_0, x_1 , ... , x_n) $''. if tuple is binary, instead of ``$(x,y) \in
+    R$'' we denote it by ``$xRy $''.\\ so if we have a definition like ``$ R(x) :
+    \phi(x)$'' s.t. ``$\phi(x)$'' is a first order proposition. ``weak
+comprehension'' show us there is a straight relatioon between ``propositions''
+and ``sets'' so you can see it as ``$ R := \{ x \mid \phi(x) \}$''. if it is
+confusing so forget it.\twemoji{1f600}
 
 % \begin{definition}
 %     \textbf{structure} (this is a temporary definition, we will give a better one in the next chapter.)
@@ -2285,7 +2287,7 @@ see it as ``$ R := \{ x \mid \phi(x) \}$''. if it is confusing so forget it.\twe
         \item for atomic formulas we define it like this. if it's a single term we do it as
               we explain in ``\textbf{Substitution for term}''. if it's like $t_0=t_1$ or
               $t_0 \in t_1$ ($t_0 , t_1$ are terms). we define it like this.
-              \[ set(y)[t/x] := set(y[t/x]) \]
+              \[ Set(y)[t/x] := Set(y[t/x]) \]
               \[ (t_0=t_1)[t/x] := (t_0[t/x] = t_1[t/x]) \]
               \[ (t_0 \in t_1)[t/x] := (t_0[t/x] \in t_1[t/x]) \]
         \item if formula $A$ is complex we define it like this.
@@ -2645,37 +2647,44 @@ see it as ``$ R := \{ x \mid \phi(x) \}$''. if it is confusing so forget it.\twe
 
 \begin{definition}
     \textbf{Structure} ``$\mathfrak{M} $'' is a tuple defined like this.
-    \[\mathfrak{M}  := (M , f_{0}, f_{1},..., f_{n},R_{0}, R_{1} ,...,R_{n}, \{c_i \}_{i \in I}) \]
-    ``$M$'' is a set shows our universe ``$f_i$'' are funcions and ``$R_I$'' are relations and ``$c_i$'' are constants.
-    and for the case we have infinite functions and relations.
-    \[\mathfrak{M}  := (M , \{f_i \}_{i \in I},\{R_i \}_{i \in I}, \{c_i \}_{i \in I}) \]
+    \[\mathfrak{M}  := (M , f_{0}, f_{1},..., f_{n},R_{0}, R_{1} ,...,R_{m}, c_{0}, c_{1},..., c_{k}) \]
+    ``$M$'' is a \textbf{nonempty} set shows our universe ``$f_i$'' are funcions and ``$R_I$'' are relations and ``$c_i$'' are constants.
+    and for the case we have arbitary family of functions and relations and constants.
+    \[\mathfrak{M}  := (M , \{f_i \}_{i \in I_f},\{R_i \}_{i \in I_R}, \{c_i \}_{i \in I}) \]
 \end{definition}
 
 \begin{definition}
-    \textbf{Homorphism} if  ``$\mathfrak{M} := (M , \{f_{i,m} \}_{i \in I},\{R_{i,m} \}_{i \in I}, \{c_{i,m} \}_{i \in I}) $''
-     and ``$\mathfrak{N} := (N , \{f_{i,n} \}_{i \in I},\{R_{i,n} \}_{i \in I}, \{c_{i,n} \}_{i \in I}) $'' are two structures. 
-     function ``$h : M \to N$''is called ``(weak) Homorphism'' when this conditions holds
-            \begin{enumerate}
-            \setlength{\itemsep}{0pt} % No extra space between items
+    \textbf{Homorphism} if  ``$\mathfrak{M} := (M , \{f_{i,m} \}_{i \in I_f},\{R_{i,m} \}_{i \in I_R}, \{c_{i,m} \}_{i \in I}) $''
+    and ``$\mathfrak{N} := (N , \{f_{i,n} \}_{i \in I_f},\{R_{i,n} \}_{i \in I_R}, \{c_{i,n} \}_{i \in I}) $'' are two structures.
+    function ``$h : M \to N$''is called ``(weak) Homorphism'' when this conditions holds
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
         \item for eveery relation ``$R_{i,m}$''
-         \[ \forall x_0 , x_1 , x_2 , ... , x_k \in M \quad R_{i,m}(x_0 , x_1 , x_2 , ... , x_k) \to R_{i,n}(h(x_0),h(x_1) ,h(x_2), ... ,h(x_k)) \].
-        \item for eveery function ``$f_{i,m}$'' 
-        \[ \forall x_0 , x_1 , x_2 , ... , x_k \in M \quad h(f_{i,m}(x_0 , x_1 , x_2 , ... , x_k)) = f_{i,n}(h(x_0),h(x_1) ,h(x_2), ... ,h(x_k)) \].
-        \item for eveery constant ``$c_{i,m}$'' 
-        \[  h(c_{i,m}) = c_{i,n} \].
+              \[ \forall x_0 , x_1 , x_2 , ... , x_k \in M \quad R_{i,m}(x_0 , x_1 , x_2 , ... , x_k) \to R_{i,n}(h(x_0),h(x_1) ,h(x_2), ... ,h(x_k)) \].
+        \item for eveery function ``$f_{i,m}$''
+              \[ \forall x_0 , x_1 , x_2 , ... , x_k \in M \quad h(f_{i,m}(x_0 , x_1 , x_2 , ... , x_k)) = f_{i,n}(h(x_0),h(x_1) ,h(x_2), ... ,h(x_k)) \].
+        \item for eveery constant ``$c_{i,m}$''
+              \[  h(c_{i,m}) = c_{i,n} \].
     \end{enumerate}
-in condition (1) if ``$\leftrightarrow$'' be instead of ``$\to $'' then it's called  ``(strong) Homorphism''
+    in condition (1) if ``$\leftrightarrow$'' be instead of ``$\to $'' then it's called  ``(strong) Homorphism''
 \end{definition}
 
-few notices: we usually talk about ``(strong) Homorphism'' when we are talking about ``Homorphism''.\\
-in the case (in definition ``(strong) Homorphism'') we denote it by ``$Hom(h,\mathfrak{M} , \mathfrak{N} )$''. if exists function ``$h$''
-``$Hom(h,\mathfrak{M} , \mathfrak{N} )$'' we say ``$\mathfrak{M}$'' and ``$\mathfrak{N}$'' are homomorphic.
- we denote it by ``$Hom(\mathfrak{M} , \mathfrak{N} )$''.\\
- if ``$h : M \xrightarrow[]{inj} N$'' we call it ``Monomorphism'' or ``Embedding''.we say ``$\mathfrak{M}$'' and ``$\mathfrak{N}$'' are momomorphic.\\
- if ``$h : M \xrightarrow[surj]{} N$'' we call it ``Epimorphism''.we say ``$\mathfrak{M}$'' and ``$\mathfrak{N}$'' are Eomomorphic.\\
- if ``$h : M \xrightarrow[surj]{inj} N$'' we call it ``Isomorphism''.we say ``$\mathfrak{M}$'' and ``$\mathfrak{N}$'' are Iomomorphic. and denote it by ``$ \mathfrak{M} \cong  \mathfrak{N}$''.\\
- if ``$k : M \to M$'' is a function and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$'' ``Indomorphism''.\\
- if ``$k : M \xrightarrow[surj]{inj} M$'' is a bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$'' ``Automorphism''.\\
+few notices: when we are talking about ``Homorphism'' we usually talk about 
+``(strong) Homorphism'' .\\ in the case (in definition ``(strong) Homorphism'') we
+denote it by ``$Hom(h,\mathfrak{M} , \mathfrak{N} )$''. if exists function
+``$h$'' ``$Hom(h,\mathfrak{M} , \mathfrak{N} )$'' we say ``$\mathfrak{M}$'' and
+``$\mathfrak{N}$'' are homomorphic. we denote it by ``$Hom(\mathfrak{M} ,
+    \mathfrak{N} )$''.\\ if ``$h : M \xrightarrow[]{inj} N$'' we call it
+``Monomorphism'' or ``Embedding''.we say ``$\mathfrak{M}$'' and
+``$\mathfrak{N}$'' are momomorphic.\\ if ``$h : M \xrightarrow[surj]{} N$'' we
+call it ``Epimorphism''.we say ``$\mathfrak{M}$'' and ``$\mathfrak{N}$'' are
+Eomomorphic.\\ if ``$h : M \xrightarrow[surj]{inj} N$'' we call it
+``Isomorphism''.we say ``$\mathfrak{M}$'' and ``$\mathfrak{N}$'' are
+Iomomorphic. and denote it by ``$ \mathfrak{M} \cong \mathfrak{N}$''.\\ if ``$k
+    : M \to M$'' is a function and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call
+``$k$'' ``Indomorphism''.\\ if ``$k : M \xrightarrow[surj]{inj} M$'' is a
+bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
+``Automorphism''.\\
 
 \section{Equivalences and Partitions}
 
@@ -3082,11 +3091,11 @@ now we will show you relation between ``(partial) Order relation'' and
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       $\exists b \in B \quad \forall x \in B \quad b \preceq x /
-                  \therefore \exists ! b \in B \quad \forall x \in B \quad b \preceq x $.
+                  \therefore \exists ! b \in B \quad \forall x \in B \quad b \preceq x $
               \\ Proof Is Left As An Exercise To
               The Reader.\twemoji{1f600}
         \item       $\exists c \in C \quad \forall x \in C \quad x \preceq c /
-                  \therefore \exists ! c \in C \quad \forall x \in C \quad x \preceq c $.
+                  \therefore \exists ! c \in C \quad \forall x \in C \quad x \preceq c $
               \\ Proof Is Left As An Exercise To
               The Reader.\twemoji{1f600}
 
@@ -3196,20 +3205,24 @@ now we will show you relation between ``(partial) Order relation'' and
     \[s(x) := x\cup \{x\}\]
 \end{definition}
 
-\begin{definition}
-    \textbf{Inductive set} we define a set ``Inductive'' like this.
+\begin{axiom}
+    \textbf{The Axiom of Infinity} we define a set ``Inductive'' like this.
 
     \[
         Ind(X) :  \emptyset\in X \wedge \forall y(y\in X\to s(y) \in X)
-    \]
-\end{definition}
+    \] 
+
+    notice that ``$Ind(X)$'' is not a proposition. so we can't use weak comprehension. this axiom says it is a proposition.
+    so ``$Ind$'' is a set.
+\end{axiom}
 
 \begin{definition}
-    \textbf{Set of natural numbers($\mathbb{N}$)}
+    \textbf{Set of Natural numbers($\mathbb{N}$)}
 
     \[
         \mathbb{N} := \{ x  \mid \underbrace{\forall Y \Big( \big( \underbrace{\emptyset \in Y \wedge \forall z (z \in Y \to s(z)\in Y)}_{Ind(Y)} \big) \to x \in Y \Big)}_{\phi(x)} \}
     \]
+     notice that now ``$\phi(x)$'' is a proposition. so ``$\mathbb{N}$'' is a set.
 \end{definition}
 \begin{lemma}
     \textbf{}  prove.
@@ -3256,7 +3269,7 @@ now we will show you relation between ``(partial) Order relation'' and
 \end{theorem}
 
 \begin{definition}
-    \textbf{Less than in Natural numbers($\mathbb{N}$)}
+    \textbf{Order in Natural numbers($\mathbb{N}$)}
 
     \[
         < := \{ (x,y) \in \mathbb{N} \times \mathbb{N}  \mid x \in y \}
@@ -3270,7 +3283,7 @@ now we will show you relation between ``(partial) Order relation'' and
 \end{theorem}
 
 \begin{theorem}
-    \textbf{Linear order of Natural numbers($\mathbb{N}$)} prove   ``$ (\mathbb{N} , <  )  $ is Well ordered.\\
+    \textbf{Well order of Natural numbers($\mathbb{N}$)} prove   ``$ (\mathbb{N} , <  )  $ is Well ordered.\\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 
 \end{theorem}
@@ -3294,12 +3307,14 @@ now we will show you relation between ``(partial) Order relation'' and
     by ``$(a_i)_{i \in \mathbb{N}}$'' we can also show it by ``$(a_i)_{i = 0}^{\infty}$''
 \end{definition}
 
-now we can redefine ``Cartesian product''. we
- define finite Cartesian product ``$\prod_{i \in n} A_i := \{ (a_i)_{i \in n} \mid a_i \in A_i \}$'' and
- define infinite Cartesian product ``$\prod_{i \in \mathbb{N}} A_i := \{ (a_i)_{i \in \mathbb{N}} \mid a_i \in A_i \}$'' and
- define  Cartesian product in general way ``$\prod_{i \in I} A_i := \{ (a_i)_{i \in I} \mid a_i \in A_i \}$''.
- and you can easily see that from the definition of ``$B^A$'', ``$A^n$'' is the set of all  $n$-length finite sequences of $a \in A$ and 
-``$A^\mathbb{N}$'' is the set of all infinite sequences of $a \in A$. 
+now we can redefine ``Cartesian product''. we define finite Cartesian product
+``$\prod_{i \in n} A_i := \{ (a_i)_{i \in n} \mid a_i \in A_i \}$'' and define
+infinite Cartesian product ``$\prod_{i \in \mathbb{N}} A_i := \{ (a_i)_{i \in
+            \mathbb{N}} \mid a_i \in A_i \}$'' and define Cartesian product in general way
+``$\prod_{i \in I} A_i := \{ (a_i)_{i \in I} \mid a_i \in A_i \}$''. and you
+can easily see that from the definition of ``$B^A$'', ``$A^n$'' is the set of
+all $n$-length finite sequences of $a \in A$ and ``$A^\mathbb{N}$'' is the set
+of all infinite sequences of $a \in A$.
 
 \begin{theorem}\textbf{Recurtion} for any set ``$A$'' and ``$a \in A$'' and any function ``$g : A \times \mathbb{N} \to A$''
     there is a unique infinite sequence ``$f : \mathbb{N} \to A$'' s.t.
@@ -3327,8 +3342,8 @@ now we can redefine ``Cartesian product''. we
     there is a unique function ``$f :P \times \mathbb{N} \to A$'' s.t.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $ f(p,0) = a(p)$.
-        \item       $\forall n \in \mathbb{N} \quad f(p,s(n)) = g(p,f(n),n)  $.
+        \item       $ f(p,0) = a(p)$
+        \item       $\forall n \in \mathbb{N} \quad f(p,s(n)) = g(p,f(n),n)  $
     \end{enumerate}
     Claim 1 : Existing of ``$f$''
     % \begin{fitchproof}[arrayenv=tabular]
@@ -3346,15 +3361,16 @@ now we can redefine ``Cartesian product''. we
 \end{theorem}
 
 \section{Arithmetic of Natural numbers}
-we want to introduce some functions ``$\bigcirc  :\mathbb{N} \times \mathbb{N} \to
-    \mathbb{N}$'' to you. we use ``$m\bigcirc n$'' instead of ``$\bigcirc (m,n)$''.
+we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
+    \to \mathbb{N}$'' to you. we use ``$m\bigcirc n$'' instead of ``$\bigcirc
+    (m,n)$''.
 
 \begin{theorem}\textbf{Summation} there is a unique function ``$+ :\mathbb{N} \times \mathbb{N} \to \mathbb{N}$'' s.t.
 
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall m \in \mathbb{N} \quad m+0 = m$.
-        \item       $\forall m,n \in \mathbb{N} \quad m+s(n) = s(m +n)  $.
+        \item       $\forall m \in \mathbb{N} \quad m+0 = m$
+        \item       $\forall m,n \in \mathbb{N} \quad m+s(n) = s(m +n)  $
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
@@ -3362,28 +3378,30 @@ we want to introduce some functions ``$\bigcirc  :\mathbb{N} \times \mathbb{N} \
 \begin{lemma}prove.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall m,n \in \mathbb{N} \quad m+n = n+m$
-        \item       $\forall m,n,k \in \mathbb{N} \quad (m+n)+k = m+(n+k)  $
+        \item       $\forall m,n,k \in \mathbb{N} \quad (m+n)+k = m+(n+k)  $ (assosiative $+$)
+        \item       $\forall m \in \mathbb{N} \quad m + 0 = 0 + m = m$ (identity  $+$)
+        \item       $\forall m,n \in \mathbb{N} \quad m+n = n+m$  (commutative(abelian)  $+$)
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-\begin{theorem}\textbf{Multiplication} there is a unique function ``$\cdot :\mathbb{N} \times \mathbb{N} \to \mathbb{N}$'' s.t.
+\begin{theorem}\textbf{Multiplication} there is a unique function ``$\times :\mathbb{N} \times \mathbb{N} \to \mathbb{N}$'' s.t.
 
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall m \in \mathbb{N} \quad m \cdot 0 = 0$ 
-        \item       $\forall m,n \in \mathbb{N} \quad m \cdot s(n) = m \cdot n+ m   $
+        \item       $\forall m \in \mathbb{N} \quad m \times 0 = 0$
+        \item       $\forall m,n \in \mathbb{N} \quad m \times s(n) = m \times n+ m   $
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
-we denote also ``Multiplication'' with ``$m \times n$'' and ``$mn$'' too.
+we denote also ``Multiplication'' with ``$m \cdot n$'' and ``$mn$'' too.
 
 \begin{lemma}prove.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall m,n \in \mathbb{N} \quad mn = nm$
-        \item       $\forall m,n,k \in \mathbb{N} \quad (mn)k = m(nk)  $
+        \item       $\forall m,n,k \in \mathbb{N} \quad (mn)k = m(nk)  $ (assosiative $\times$)
+        \item       $\forall m \in \mathbb{N} \quad m \cdot 1 = 1 \cdot m = m$ (identity  $\times$)
+        \item       $\forall m,n \in \mathbb{N} \quad mn = nm$ (commutative(abelian)  $\times$)
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
@@ -3402,24 +3420,27 @@ we denote also ``Multiplication'' with ``$m \times n$'' and ``$mn$'' too.
 
 \section{Integers``$\mathbb{Z}$''}
 
-we learned about  ``$\mathbb{N}$'' before and we constructed structure  ``$(\mathbb{N} , + , \cdot  , <)$''.
-if you assume ``$\mathbb{N} \times \mathbb{N}$'' we can define a equivalence relation 
-``$ (n_1 , m_1) \sim (n_2 , m_2) : n_1 + m_2 = n_2 + m_1 $''
+we learned about ``$\mathbb{N}$'' before and we constructed structure
+``$(\mathbb{N} , + , \cdot , <)$''. if you assume ``$\mathbb{N} \times
+    \mathbb{N}$'' we can define a equivalence relation ``$ (n_1 , m_1) \sim (n_2 ,
+    m_2) : n_1 + m_2 = n_2 + m_1 $''
 
-\begin{definition}\textbf{Integers``$\mathbb{Z}$''} is a set 
-\[ \mathbb{Z} := \mathbb{N} \times \mathbb{N} / \sim\]
-we denote it's members with ``$z_0 , z_1 ,...$''
+\begin{definition}\textbf{Integers``$\mathbb{Z}$''} is a set
+    \[ \mathbb{Z} := \mathbb{N} \times \mathbb{N} / \sim\]
+    we denote it's members with ``$z_0 , x  ,...$''
 \end{definition}
 
-in this system ``$ 0 := [(0,0)]$'' and ``$ \forall n \in \mathbb{N} \quad n := [(n,0)]$''
-and ``$\forall n \in \mathbb{N} \quad -n := [(0,n)]$''. in general ``$\forall m,n \in \mathbb{N} \quad m-n := [(m,n)]$''.  so we can say ``$ \mathbb{N} \subseteq \mathbb{Z}$''.
+in this system ``$ 0 := [(0,0)]$'' and ``$ \forall n \in \mathbb{N} \quad n :=
+    [(n,0)]$'' and ``$\forall n \in \mathbb{N} \quad -n := [(0,n)]$''. in general
+``$\forall m,n \in \mathbb{N} \quad m-n := [(m,n)]$''. so we can say ``$
+    \mathbb{N} \subseteq \mathbb{Z}$''.
 
 \begin{theorem}\textbf{Summation} there is a unique function ``$+_\mathbb{Z} :\mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$'' s.t.
 
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       $\forall m_1 , m_2 , n_1 , n_2 \in \mathbb{N} \quad
-         [(m_1 , n_1)] + [(m_2 , n_2)]  = [(m_1 + m_2, n_1 + n_2)] $.
+                  [(m_1 , n_1)] + [(m_2 , n_2)]  = [(m_1 + m_2, n_1 + n_2)] $
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
@@ -3427,40 +3448,66 @@ and ``$\forall n \in \mathbb{N} \quad -n := [(0,n)]$''. in general ``$\forall m,
 \begin{lemma}prove.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall z_1,z_2 \in \mathbb{Z} \quad z_1+z_2 = z_2+z_1$
-        \item       $\forall z_1,z_2,z_3 \in \mathbb{Z} \quad (z_1+z_2)+z_3 = z_1+(z_2+z_3)  $
+        \item       $\forall x ,y ,z  \in \mathbb{Z} \quad (x +y )+z  = x +(y +z )  $ (assosiative $+$)
+        \item       $\forall z \in \mathbb{Z} \quad z + 0 = 0 + z = z$ (identity  $+$)
+        \item       $\forall z \in \mathbb{Z} \quad \exists y \in \mathbb{Z} \quad z + y = y + z = 0$  (inverse  $+$)
+        \item       $\forall x ,y  \in \mathbb{Z} \quad x +y  = y +x $   (commutative(abelian)  $+$)
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-\begin{theorem}\textbf{Multiplication} there is a unique function ``$\cdot_\mathbb{Z} :\mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$'' s.t.
+\begin{theorem}\textbf{Multiplication} there is a unique function ``$\times_\mathbb{Z} :\mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$'' s.t.
 
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       $\forall m_1 , m_2 , n_1 , n_2 \in \mathbb{N} \quad
-         [(m_1 , n_1)] \cdot [(m_2 , n_2)]  = [(m_1 m_2  + n_1 n_2 , m_1 n_2 + m_2 n_1)] $.
+                  [(m_1 , n_1)] \times_\mathbb{Z} [(m_2 , n_2)]  = [(m_1 m_2  + n_1 n_2 , m_1 n_2 + m_2 n_1)] $
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
-we denote also ``Multiplication'' with ``$m \times n$'' and ``$mn$'' too.
+
 
 \begin{lemma}prove.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall z_1,z_2 \in \mathbb{Z} \quad z_1 z_2 = z_2 z_1$
-        \item       $\forall z_1,z_2,z_3 \in \mathbb{Z} \quad (z_1 z_2)z_3 = z_1(z_2 z_3)  $
+        \item       $\forall x ,y ,z  \in \mathbb{Z} \quad (x  \times y ) \times z  = x  \times(y  \times z )  $ (assosiative $\times$)
+        \item       $\forall x ,y ,z  \in \mathbb{Z} \quad \Big(x  \times (y  + z ) = x  \times y  +  x  \times z  \Big)
+                  \land     \Big((x  + y ) \times z  = x  \times z  +  y  \times z  \Big)  $ (distributive $\times$)
+        \item       $\forall z \in \mathbb{Z} \quad z \times 1 = 1 \times  z = z$ (identity  $\times$)
+        \item       $\forall x ,y  \in \mathbb{Z} \quad x  \times y  = y  \times x $  (commutative(abelian)  $\times$)
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-\begin{definition}\textbf{Order in $\mathbb{Z}$} 
-        \[ [(m_1 , n_1)] <_\mathbb{Z} [(m_2 , n_2)]  : m_1 + n_2  < m_2 + n_1 \]
+\begin{definition}\textbf{Order in $\mathbb{Z}$}
+    \[ [(m_1 , n_1)] <_\mathbb{Z} [(m_2 , n_2)]  : m_1 + n_2  < m_2 + n_1 \]
 \end{definition}
-this lemma let us use ``$<$'' instead of ``$<_\mathbb{Z}$''.
 
-\begin{lemma} $ \forall m,n \in \mathbb{N} \quad m <_\mathbb{Z} n  \therefore / \therefore m  < n$\\
-        Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\begin{theorem}
+    \textbf{Order of Integers($\mathbb{Z}$)} prove   ``$ (\mathbb{Z} , <_\mathbb{Z}  )  $ 
+        \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       is lineary ordered.
+        \item       $ \Big( \forall x \in \mathbb{Z} \quad   \exists y \in \mathbb{Z} \quad  x < y \Big) 
+        \land \Big( \forall x \in \mathbb{Z} \quad   \exists y \in \mathbb{Z} \quad   y < x \Big)  $ (doesn't have endpoints)
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+this lemma let us use ``$<$'' instead of ``$<_\mathbb{Z}$'', ``$+$'' instead of
+``$+_\mathbb{Z}$'' and ``$\times$'' instead of ``$\times_\mathbb{Z}$''.
+
+\begin{lemma}prove.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $/ \therefore   \forall m,n \in \mathbb{N} \quad m <_\mathbb{Z} n  \leftrightarrow m  < n$
+        \item       $/ \therefore   \forall m,n \in \mathbb{N} \quad m +_\mathbb{Z} n  = m  + n$
+        \item       $/ \therefore   \forall m,n \in \mathbb{N} \quad m \times_\mathbb{Z} n  = m  \times n$
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
+
+we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
 
 % \begin{theorem}\textbf{Exponents} there is a unique function ``$(\_)^{(\_)_\mathbb{Z}} :\mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$'' s.t.
 
@@ -3474,66 +3521,102 @@ this lemma let us use ``$<$'' instead of ``$<_\mathbb{Z}$''.
 
 \section{Rational numbers ``$\mathbb{Q}$''}
 
-we learned about  ``$\mathbb{Z}$'' before and we constructed structure  ``$(\mathbb{Z} , + , \cdot  , <)$''.
-if you assume ``$\mathbb{Z} \times (\mathbb{Z} - \{0\})$'' we can define a equivalence relation 
-``$ (z'_1 , z_1) \sim (z_2 , z_2) : z'_1 \cdot z_2 = z_2 \cdot z_1 $''
+we learned about ``$\mathbb{Z}$'' before and we constructed structure
+``$(\mathbb{Z} , + , \cdot , <)$''. if you assume ``$\mathbb{Z} \times
+    (\mathbb{Z} - \{0\})$'' we can define a equivalence relation ``$ (y_1 , x )
+    \sim (y_2 , y ) : y_1 \cdot y  = y_2 \cdot x  $''
 
-\begin{definition}\textbf{Integers``$\mathbb{Q}$''} is a set 
-\[ \mathbb{Q} := \mathbb{Z} \times (\mathbb{Z} - \{0\}) / \sim\]
-we denote it's members with ``$q_0 , q_1 ,...$''
+\begin{definition}\textbf{Rational numbers``$\mathbb{Q}$''} is a set
+    \[ \mathbb{Q} := \mathbb{Z} \times (\mathbb{Z} - \{0\}) / \sim\]
+    we denote it's members with ``$q_0 , q_1  ,...$''
 \end{definition}
 
-in this system ``$ 0 := [(0,1)]$'' and ``$ \forall z \in \mathbb{Z} \quad z := [(z,1)]$''
-and ``$\forall z \in \mathbb{Z} \quad 1/z := [(1,z)]$''. in general ``$\forall z,z' \in \mathbb{Z} \quad z/z' := [(z,z')]$''.
-so we can say ``$ \mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q} $''.
+in this system ``$ 0 := [(0,1)]$'' and ``$ 1 := [(1,1)]$'' and ``$ \forall x
+    \in \mathbb{Z} \quad x := [(x,1)]$'' and ``$\forall x \in \mathbb{Z} \quad
+    \frac{1}{x} := [(1,x)]$''. in general ``$\forall x,y \in \mathbb{Z} \quad
+    \frac{x}{y} := [(x,y)]$''. so we can say ``$ \mathbb{N} \subseteq \mathbb{Z}
+    \subseteq \mathbb{Q} $''.
 
 \begin{theorem}\textbf{Summation} there is a unique function ``$+_\mathbb{Q} :\mathbb{Q} \times \mathbb{Q} \to \mathbb{Q}$'' s.t.
 
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall z_1 , z_2 , z'_1 , z_2 \in \mathbb{Z} \quad
-         [(z_1 , z'_1)] + [(z_2 , z'_2)]  = [(z_1  z'_2  + z'_1 z_2,  z'_1  z'_2)] $.
+        \item       $\forall x  , y  , z , u  \in \mathbb{Z} \quad
+                  [(x  , z)] + [(y  , u)]  = [(x u  + z y ,  z  u)] $
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
+
 \begin{lemma}prove.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall q_1,q_2 \in \mathbb{Q} \quad q_1+q_2 = q_2+q_1$
-        \item       $\forall q_1,q_2,q_3 \in \mathbb{Q} \quad (q_1+q_2)+q_3 = q_1+(q_2+q_3)  $
+        \item       $\forall x ,y ,z  \in \mathbb{Q} \quad (x +y )+z  = x +(y +z )  $ (assosiative $+$)
+        \item       $\forall x \in \mathbb{Q} \quad x + 0 = 0 + x = x$  (identity  $+$)
+        \item       $\forall x \in \mathbb{Q} \quad \exists y \in \mathbb{Q} \quad x + y = y + x = 0$  (inverse  $+$)
+        \item       $\forall x ,y  \in \mathbb{Q} \quad x +y  = y +x $  (commutative(abelian)  $+$)
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-\begin{theorem}\textbf{Multiplication} there is a unique function ``$\cdot_\mathbb{Q} :\mathbb{Q} \times \mathbb{Q} \to \mathbb{Q}$'' s.t.
+\begin{theorem}\textbf{Multiplication} there is a unique function ``$\times_\mathbb{Q} :\mathbb{Q} \times \mathbb{Q} \to \mathbb{Q}$'' s.t.
 
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall z_1 , z_2 , z'_1 , z_2 \in \mathbb{Z} \quad
-         [(z_1 , z'_1)] \cdot [(z_2 , z'_2)]  = [(z_1 z_2  , z'_2 z'_1)] $.
+        \item       $\forall x  , y  , z , u  \in \mathbb{Z} \quad
+                  [(x  , z)] \times_\mathbb{Q} [(y  , u)]  = [(x  y , z u)] $
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
-we denote also ``Multiplication'' with ``$q \times q'$'' and ``$q q'$'' too.
+
 
 \begin{lemma}prove.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall q_1,q_2 \in \mathbb{Q} \quad q_1 q_2 = q_2 q_1$
-        \item       $\forall q_1,q_2,q_3 \in \mathbb{Q} \quad (q_1 q_2)q_3 = q_1(q_2 q_3)  $
+        \item       $\forall x ,y ,z  \in \mathbb{Q} \quad (x  \times y ) \times z  = x  \times(y  \times z )  $  (assosiative $\times$)
+        \item       $\forall x ,y ,z  \in \mathbb{Q} \quad \Big(x  \times (y  + z ) = x  \times y  +  x  \times z  \Big)
+                  \land     \Big((x  + y ) \times z  = x  \times z  +  y  \times z  \Big)  $ (distributive $\times$)
+        \item       $\forall x \in \mathbb{Q} \quad x \times 1 = 1 \times x = x$  (identity  $\times$)
+        \item       $\forall x  \in \mathbb{Q} - \{0\} \quad \exists y \in \mathbb{Q} \quad x \times y = y \times x = 1$  (inverse  $\times$)
+        \item       $\forall x ,y  \in \mathbb{Q} \quad x  \times y  = y  \times x $  (commutative(abelian)  $\times$)
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-\begin{definition}\textbf{Order in $\mathbb{Q}$} 
-        \[ [(z_1 , z'_1)] <_\mathbb{Q} [(z_2 , z_2)]  : z_1 + z_2  < z_2 + z'_1 \]
+\begin{definition}\textbf{Order in $\mathbb{Q}$} .\\
+    if ($z > 0 , u > 0$) or ($z < 0 , u < 0$)
+    \[ [(x  , z)] <_\mathbb{Q} [(y  , u)]  : x  \cdot u  < y  \cdot z \]
+    if ($z > 0 , u < 0$) or ($z < 0 , u > 0$)
+    \[ [(x  , z)] <_\mathbb{Q} [(y  , u)]  : x  \cdot u  > y  \cdot z \]
 \end{definition}
-this lemma let us use ``$<$'' instead of ``$<_\mathbb{Q}$''.
 
-\begin{lemma} $ \forall z,z' \in \mathbb{Z} \quad z <_\mathbb{Q} z'  \therefore / \therefore z  < z'$\\
-        Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\begin{theorem}
+    \textbf{Order of Rational numbers($\mathbb{Q}$)} prove   ``$ (\mathbb{Q} , <_\mathbb{Q}  )  $ 
+        \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item        is lineary ordered.
+        \item       $ \Big( \forall x \in \mathbb{Q} \quad   \exists y \in \mathbb{Q} \quad  x < y \Big) 
+        \land \Big( \forall x \in \mathbb{Q} \quad   \exists y \in \mathbb{Q} \quad   y < x \Big)  $ (doesn't have endpoints)
+        \item       $  \forall x,y  \in \mathbb{Q} \quad  x \not= y \to (\exists z \in \mathbb{Q} \quad  x < z < y)  $ (dense)
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+
+\end{theorem}
+
+this lemma let us use ``$<$'' instead of ``$<_\mathbb{Q}$'', ``$+$'' instead of
+``$+_\mathbb{Q}$'' and ``$\times$'' instead of ``$\times_\mathbb{Q}$''.
+
+\begin{lemma}prove.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $/ \therefore   \forall z,y \in \mathbb{Z} \quad z <_\mathbb{Q} y  \leftrightarrow z  < y$
+        \item       $/ \therefore   \forall z,y \in \mathbb{Z} \quad z +_\mathbb{Q} y  = z  + y$
+        \item       $/ \therefore   \forall z,y \in \mathbb{Z} \quad z \times_\mathbb{Q} y  = z  \times y$
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
+
+we denote ``Multiplication'' with ``$x \cdot y$'' and ``$x y$'' too.
 
 % \begin{theorem}\textbf{Exponents} there is a unique function ``$(\_)^{(\_)_\mathbb{Q}} :\mathbb{Q} \times \mathbb{Q} \to \mathbb{Q}$'' s.t.
 
@@ -3545,58 +3628,168 @@ this lemma let us use ``$<$'' instead of ``$<_\mathbb{Q}$''.
 %     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 % \end{theorem}
 
+\section{Real numbers ``$\mathbb{R}$''}
+
+
+we learned about ``$\mathbb{Q}$'' before and we constructed structure
+``$(\mathbb{Q} , + , \cdot , <)$''. if you assume ``$\mathbb{Q} \times
+    (\mathbb{Q} - \{0\})$'' we can define a equivalence relation ``$ (y_1 , x )
+    \sim (y_2 , y ) : y_1 \cdot y  = y_2 \cdot x  $''
+
+\begin{definition}\textbf{Rational numbers``$\mathbb{R}$''} is a set
+    \[ \mathbb{Q} := \mathbb{Q} \times (\mathbb{Q} - \{0\}) / \sim\]
+    we denote it's members with ``$r_0 , r_1  ,...$''
+\end{definition}
+
+in this system ``$ 0 := [(0,1)]$'' and ``$ 1 := [(1,1)]$'' and ``$ \forall z
+    \in \mathbb{Z} \quad z := [(z,1)]$'' and ``$\forall z \in \mathbb{Z} \quad
+    \frac{1}{z} := [(1,z)]$''. in general ``$\forall z,y \in \mathbb{Z} \quad
+    \frac{z}{y} := [(z,y)]$''. so we can say ``$ \mathbb{N} \subseteq \mathbb{Z}
+    \subseteq \mathbb{Z} $''.
+
+\begin{theorem}\textbf{Summation} there is a unique function ``$+_\mathbb{R} :\mathbb{R} \times \mathbb{R} \to \mathbb{R}$'' s.t.
+
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall x  , y  , y_1 , y  \in \mathbb{Q} \quad
+                  [(x  , y_1)] + [(y  , y_2)]  = [(x   y_2  + y_1 y ,  y_1  y_2)] $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+
+\begin{lemma}prove.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall x ,y ,z  \in \mathbb{R} \quad (x +y )+z  = x +(y +z )  $  (assosiative $+$)
+        \item       $\forall x \in \mathbb{R} \quad x + 0 = 0 + x = x$  (identity  $+$)
+        \item       $\forall x \in \mathbb{R} \quad \exists y \in \mathbb{R} \quad x + y = y + x = 0$ (inverse  $+$)
+        \item       $\forall x ,y  \in \mathbb{R} \quad x +y  = y +x $  (commutative(abelian)  $+$)
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{theorem}\textbf{Multiplication} there is a unique function ``$\times_\mathbb{R} :\mathbb{R} \times \mathbb{R} \to \mathbb{R}$'' s.t.
+
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall x  , y  , y_1 , y  \in \mathbb{Z} \quad
+                  [(x  , y_1)] \times_\mathbb{Q} [(y  , y_2)]  = [(x  y   , y_2 y_1)] $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\begin{lemma}prove.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall x ,y ,z  \in \mathbb{R} \quad (x  \times y ) \times z  = x  \times(y  \times z )  $  (assosiative $\times$)
+        \item       $\forall x ,y ,z  \in \mathbb{R} \quad \Big(x  \times (y  + z ) = x  \times y  +  x  \times z  \Big)
+                  \land     \Big((x  + y ) \times z  = x  \times z  +  y  \times z  \Big)  $  (distributive $\times$)
+        \item       $\forall x \in \mathbb{R} \quad x \times 1 = 1 \times x = x$  (identity  $\times$)
+        \item       $\forall x  \in \mathbb{R} - \{0\} \quad \exists y \in \mathbb{R} \quad x \times y = y \times x = 1$  (inverse  $\times$)
+        \item       $\forall x ,y  \in \mathbb{R} \quad x  \times y  = y  \times x $  (commutative(abelian)  $\times$)
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{definition}\textbf{Order in $\mathbb{Q}$} .\\
+    if ($z > 0 , u > 0$) or ($z < 0 , u < 0$)
+    \[ [(x  , z)] <_\mathbb{Q} [(y  , u)]  : x  \cdot u  < y  \cdot z \]
+    if ($z > 0 , u < 0$) or ($z < 0 , u > 0$)
+    \[ [(x  , z)] <_\mathbb{Q} [(y  , u)]  : x  \cdot u  > y  \cdot z \]
+\end{definition}
+
+\begin{theorem}
+    \textbf{Linear order of Rational numbers($\mathbb{R}$)} prove   ``$ (\mathbb{R} , <_\mathbb{R}  )  $      
+       \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item        is lineary ordered.
+        \item       $ \Big( \forall x \in \mathbb{R} \quad   \exists y \in \mathbb{R} \quad  x < y \Big) 
+        \land \Big( \forall x \in \mathbb{R} \quad   \exists y \in \mathbb{R} \quad   y < x \Big)  $ (doesn't have endpoints)
+        \item       $  \forall x,y  \in \mathbb{R} \quad  x \not= y \to (\exists z \in \mathbb{R} \quad  x < z < y)  $ (dense)
+        \item       $  \forall X  \subseteq \mathbb{R} \quad  (X \not= \emptyset \land \exists y \in \mathbb{R} \quad Uppreb(X,y))  \to (\exists y \in \mathbb{R} \quad  max(X)=y)  $ (complete)
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+this lemma let us use ``$<$'' instead of ``$<_\mathbb{R}$'', ``$+$'' instead of
+``$+_\mathbb{R}$'' and ``$\times$'' instead of ``$\times_\mathbb{R}$''.
+
+\begin{lemma}prove.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $/ \therefore   \forall x,y \in \mathbb{Q} \quad x <_\mathbb{R} y  \leftrightarrow x  < y$
+        \item       $/ \therefore   \forall x,y \in \mathbb{Q} \quad x +_\mathbb{R} y  = x  + y$
+        \item       $/ \therefore   \forall x,y \in \mathbb{Q} \quad x \times_\mathbb{R} y  = x  \times y$
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+we denote ``Multiplication'' with ``$x \cdot y$'' and ``$x y$'' too.
+
+% \begin{theorem}\textbf{Exponents} there is a unique function ``$(\_)^{(\_)_\mathbb{Q}} :\mathbb{Q} \times \mathbb{Q} \to \mathbb{Q}$'' s.t.
+
+%     \begin{enumerate}
+%         \setlength{\itemsep}{0pt} % No extra space between items
+%         \item       $\forall m \in \mathbb{Q} \quad m ^ 0 = 1$ 
+%         \item       $\forall m,n \in \mathbb{Q} \quad m ^ {s(n)} = m ^ n \cdot m   $
+%     \end{enumerate}
+%     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+% \end{theorem}
+
+
 \chapter{Finite and Infinite sets}
 
 \section{Equipotent and Order in sets}
 
-we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A} := (A)$ and
-$\mathfrak{B} := (B)$. because these Structures have only a set  ``Isomorphism'' between them 
-only means there is a bijection function $f:A \xrightarrow[surj]{inj} B $. 
-
+we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
+    := (A)$ and $\mathfrak{B} := (B)$. because these Structures have only a set
+``Isomorphism'' between them only means there is a bijection function $f:A
+    \xrightarrow[surj]{inj} B $.
 
 \begin{definition}
-    \textbf{Equipotent} 
-in  situation above we say ``$A$'' and ``$B$'' are ``Equipotent''.  we denote it with ``$A \cong B$'' i.e.
-\[ A \cong B : \exists f  (f:A \xrightarrow[surj]{inj} B) \]
+    \textbf{Equipotent}
+    in  situation above we say ``$A$'' and ``$B$'' are ``Equipotent''.  we denote it with ``$A \cong B$'' i.e.
+    \[ A \cong B : \exists f  (f:A \xrightarrow[surj]{inj} B) \]
 \end{definition}
 
 \begin{lemma} ``$\cong$'' is a equivalence relation in ``$(V , \cong)$''\\
-        Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-so ``$ V / \cong $'' is a partision for ``$V$'' and every partition equals to a $[A]_{\cong}$ we denote it by $[A]$.
+so ``$ V / \cong $'' is a partision for ``$V$'' and every partition equals to a
+$[A]_{\cong}$ we denote it by $[A]$.
 
 \begin{definition}
     \textbf{Equipotent} if there is a  function $f:A \xrightarrow[]{inj} B $.
-in  situation above we say ``$A$'' is less than or equipotent ``$B$''.   we denote it with ``$A \precsim  B$'' i.e.
-\[ A \precsim  B : \exists f  (f:A \xrightarrow[]{inj} B) \]
+    in  situation above we say ``$A$'' is less than or equipotent ``$B$''.   we denote it with ``$A \precsim  B$'' i.e.
+    \[ A \precsim  B : \exists f  (f:A \xrightarrow[]{inj} B) \]
 \end{definition}
 
-similarly we define ``$[A] \preceq  [B] : \forall X \in [A] , Y \in  [B]  \quad  X \precsim Y$''
+similarly we define ``$[A] \preceq [B] : \forall X \in [A] , Y \in [B] \quad X
+    \precsim Y$''
 
 \begin{lemma} $A \precsim  B \therefore / \therefore [A] \preceq  [B] $\\
-        Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
 \begin{theorem} \textbf{Schroeder-Bernstein} $A \precsim  B , B \precsim  A / \therefore A \cong  B$\\
-        Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
 \begin{lemma} ``$\preceq$'' is a order relation in ``$(V / \cong , \preceq)$''\\
-        Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
 \section{Finite sets}
 
-
 \begin{definition}\textbf{Finite set} if there is a ``$n \in \mathbb{N}$'' s.t. $ A \cong n$ we call it ``Finite''($Finite(A)$).
-if a set is not finite we call it ``Infinite''($Infinite(A)$).
+    if a set is not finite we call it ``Infinite''($Infinite(A)$).
 \end{definition}
 
 \begin{lemma} $ / \therefore \forall  n \in \mathbb{N} \quad  X \subseteq n \to X \ncong n   $\\
-        Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
-
 
 \begin{corollary}.\\
     \begin{enumerate}
@@ -3606,13 +3799,13 @@ if a set is not finite we call it ``Infinite''($Infinite(A)$).
         \item       $ Infinite(\mathbb{N})  $
         \item       $\forall m,n \in \mathbb{N} \quad m \prec n \leftrightarrow m < n$
     \end{enumerate}
-            Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{corollary}
 
 corollary (4) let us use ``$<$'' instead of ``$\prec$''
 
 \begin{lemma} $ Finite(X) , Y \subseteq X / \therefore  Finite(Y)    $\\
-        Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
 \chapter{Ordinals }
