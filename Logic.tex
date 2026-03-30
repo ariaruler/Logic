@@ -2222,7 +2222,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
 
 \begin{definition}
     \textbf{Image} \\
-    \[ R[A] = \{y \mid \exists x \in A \quad xRy \} \]
+    \[ R[A] := \{y \mid \exists x \in A \quad xRy \} \]
     you can olso see by definition of ``inverse of a Relation'' and ``image'' this
     equation holds.
     \[ R^{-1}[B] = \{ x  \mid \exists y \in B \quad xRy \} \]
@@ -2687,8 +2687,6 @@ Iomomorphic. and denote it by ``$ \mathfrak{M} \cong \mathfrak{N}$''.\\ if ``$k
 ``$k$'' ``Indomorphism''.\\ if ``$k : M \xrightarrow[surj]{inj} M$'' is a
 bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
 ``Automorphism''.\\
-
-
 
 \section{Equivalences and Partitions}
 
@@ -3242,11 +3240,13 @@ if the stucture clear to us we don't write stucture index ``$min(\_),
 
 \begin{lemma}
     \textbf{}  prove.
-    \[
-        \mathbb{N} = \{ x  \mid \underbrace{\forall Y \Big( \big( \underbrace{\emptyset \in Y \wedge \forall z (z \in Y \to s(z)\in Y)}_{Ind(Y)} \big) \to x \in Y \Big)}_{\phi(x)} \}
-    \]
 
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $ \mathbb{N} = \{ x  \mid \underbrace{\forall Y \Big( \big( \underbrace{\emptyset \in Y \wedge \forall z (z \in Y \to s(z)\in Y)}_{Ind(Y)} \big) \to x \in Y \Big)}_{\phi(x)} \} $
+        \item       $ Ind(\mathbb{N}) $\\
+              Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    \end{enumerate}
 \end{lemma}
 
 notice that now ``$\phi(x)$'' is a proposition. so ``$\{ x \mid \forall Y \Big(
@@ -3256,33 +3256,23 @@ notice that now ``$\phi(x)$'' is a proposition. so ``$\{ x \mid \forall Y \Big(
 \section{Properties of Natural numbers}
 
 \begin{theorem}\textbf{Induction}
-    $P(0) , \forall n \Big( P(n) \to P(s(n)) \Big) /\therefore \forall n\in \mathbb{N} \quad P(n)$
+    $P(0) , \forall n \in \mathbb{N} \quad \Big( P(n) \to P(s(n)) \Big) /\therefore \forall n\in \mathbb{N} \quad P(n)$
     \\
     proof.
 
     \begin{fitchproof}[arrayenv=tabular]
         \have {1} { P(0)  }
-        \have  {2} {\forall n \Big( P(n) \to P(s(n)) \Big)}
-        \have  {2} {A := \{n \mid P(n) \}  }
-        \have  {2} {\emptyset \in A   }
-        \open
-        \have  {2} {n \in A   }
-        \have  {2} {P(n) }
-        \have  {2} {P(s(n)) }
-        \have  {2} {s(n) \in  A }
-        \close
-        \have  {2} {n \in  A \to  s(n) \in  A}
-        \have  {2} {\forall n (n \in  A \to  s(n) \in  A)}
-        \have  {2} {Ind(A) }
+        \have  {2} {\forall n \in \mathbb{N} \quad \Big( P(n) \to P(s(n)) \Big)}
         \open
         \have  {2} {n\in \mathbb{N} }
+        \have  {2} {\forall n  \Big( P(n) \to P(s(n)) \Big)}
+        \have  {2} {Ind(P) }
         \have  {2} {n\in \bigcap Ind }
         \have  {2} {\forall X ( Ind(X) \to n\in X )}
-        \have  {2} { Ind(A) \to n\in A }
-        \have  {2} { n\in A }
+        \have  {2} { Ind(P) \to P(n) }
         \have  {2} {P(n) }
         \close
-        \have  {2} {n\in A \to P(n) }
+        \have  {2} {n\in \mathbb{N} \to P(n) }
         \have  {2} {\forall n\in \mathbb{N} \quad P(n) }
 
         \close
@@ -3382,6 +3372,7 @@ of all infinite sequences of $a \in A$.
 \end{theorem}
 
 \section{Arithmetic of Natural numbers}
+
 we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
     \to \mathbb{N}$'' to you. we use ``$m\bigcirc n$'' instead of ``$\bigcirc
     (m,n)$''.
@@ -3422,9 +3413,10 @@ we denote also ``Multiplication'' with ``$m \cdot n$'' and ``$mn$'' too.
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       $\forall m,n,k \in \mathbb{N} \quad (mn)k = m(nk)  $ (assosiative $\times$)
         \item       $\forall m \in \mathbb{N} \quad m \cdot 1 = 1 \cdot m = m$ (identity  $\times$)
+        \item       $\forall m ,n   \in \mathbb{N} \quad   m n = 0   \to  m = 0  \lor  n = 0 $ (zero divisor free $\times$)
         \item       $\forall m,n \in \mathbb{N} \quad mn = nm$ (commutative(abelian)  $\times$)
-        \item       $\forall m ,n ,k  \in \mathbb{N} \quad \Big(m  \times (n  + k ) = m  \times n  +  m  \times k  \Big)
-                  \land     \Big((m  + n ) \times k  = m  \times k  +  n  \times k  \Big)  $ (distributive $\times$)
+        \item       $\forall m ,n ,k  \in \mathbb{N} \quad \Big(m   (n  + k ) = m   n  +  m   k  \Big)
+                  \land     \Big((m  + n )  k  = m   k  +  n   k  \Big)  $ (distributive $\times$)
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
@@ -3438,15 +3430,69 @@ we denote also ``Multiplication'' with ``$m \cdot n$'' and ``$mn$'' too.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-% \begin{theorem}\textbf{Exponents} there is a unique function ``$(\_)^{(\_)} :\mathbb{N} \times \mathbb{N} \to \mathbb{N}$'' s.t.
+\begin{theorem}\textbf{Exponents} there is a unique function ``$(\_)^{(\_)} :\mathbb{N} \times \mathbb{N} \to \mathbb{N}$'' s.t.
 
-%     \begin{enumerate}
-%         \setlength{\itemsep}{0pt} % No extra space between items
-%         \item       $\forall m \in \mathbb{N} \quad m ^ 0 = 1$ 
-%         \item       $\forall m,n \in \mathbb{N} \quad m ^ {s(n)} = m ^ n \cdot m   $
-%     \end{enumerate}
-%     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-% \end{theorem}
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall m \in \mathbb{N} \quad m ^ 0 = 1$ 
+        \item       $\forall m,n \in \mathbb{N} \quad m ^ {s(n)} = m ^ n \cdot m   $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\section{Peano arithmetic}
+
+assume a structure ``$\mathfrak{N} := (N , + , \cdot , s , 0)$''(here ``$+ , \cdot , s , 0 $'' are arbitary functions 
+and constants and doesn't have meaning we defined before). with these properties.
+
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall m,n \in N \quad m+s(n) = s(m +n)  $
+        \item       $\forall m \in N \quad m+0 = m$
+        \item       $\forall m \in N \quad m+0 = m$
+        \item       $\forall m,n \in N \quad m+s(n) = s(m +n)  $
+        \item       $\forall m \in N \quad m \cdot 0 = 0$
+        \item       $\forall m,n \in N \quad m \cdot s(n) = m \cdot n+ m   $
+        \item        $\phi(0) \land \forall n \in N \quad \Big( \phi(n) \to \phi(s(n)) \Big) \to \forall n\in N \quad \phi(n)$ 
+        (this is true for arbitary ``$\phi$'')
+    \end{enumerate}
+we call ``$\mathfrak{N}$'' a model of ``Peano arithmetic''.
+
+\begin{lemma}prove for ``$(N , +)$''
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall m,n,k \in \mathbb{N} \quad (m+n)+k = m+(n+k)  $ (assosiative $+$)
+        \item       $\forall m \in \mathbb{N} \quad m + 0 = 0 + m = m$ (identity  $+$)
+        \item       $\forall m,n \in \mathbb{N} \quad m+n = n+m$  (commutative(abelian)  $+$)
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{lemma}prove for ``$(N , + , \times)$''
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall m,n,k \in \mathbb{N} \quad (mn)k = m(nk)  $ (assosiative $\times$)
+        \item       $\forall m \in \mathbb{N} \quad m \cdot 1 = 1 \cdot m = m$ (identity  $\times$)
+        \item       $\forall m ,n   \in \mathbb{N} \quad   m n = 0   \to  m = 0  \lor  n = 0 $ (zero divisor free $\times$)
+        \item       $\forall m,n \in \mathbb{N} \quad mn = nm$ (commutative(abelian)  $\times$)
+        \item       $\forall m ,n ,k  \in \mathbb{N} \quad \Big(m   (n  + k ) = m   n  +  m   k  \Big)
+                  \land     \Big((m  + n )  k  = m   k  +  n   k  \Big)  $ (distributive $\times$)
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+as you can see  ``$(\mathbb{N} , + , \times , s , 0)$'' is a model of peano arithmetic.
+so properties are true for them. you can add ``Exponents'' axioms and prove more.
+
+\begin{lemma}prove for ``$(N , + , \times , (\_)^{(\_)} , s , 0 )$''
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall m ,n ,k  \in \mathbb{N} \quad   m^n  \cdot  m^k = m^{n  + k}  $
+        \item       $\forall m ,n ,k  \in \mathbb{N} \quad (m^n)^k = m^{nk}  $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
 
 \chapter{From Natural numbers to Complex numbers }
 
@@ -3514,11 +3560,12 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
 \begin{lemma}prove for  ``$ (\mathbb{Z} , + , \times )  $''
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall x ,y ,z  \in \mathbb{Z} \quad (x  \times y ) \times z  = x  \times(y  \times z )  $ (assosiative $\times$)
-        \item       $\forall z \in \mathbb{Z} \quad z \times 1 = 1 \times  z = z$ (identity  $\times$)
-        \item       $\forall x ,y  \in \mathbb{Z} \quad x  \times y  = y  \times x $  (commutative(abelian)  $\times$)
-        \item       $\forall x ,y ,z  \in \mathbb{Z} \quad \Big(x  \times (y  + z ) = x  \times y  +  x  \times z  \Big)
-                  \land     \Big((x  + y ) \times z  = x  \times z  +  y  \times z  \Big)  $ (distributive $\times$)
+        \item       $\forall x ,y ,z  \in \mathbb{Z} \quad (x   y )  z  = x  (y   z )  $ (assosiative $\times$)
+        \item       $\forall z \in \mathbb{Z} \quad z \cdot 1 = 1 \cdot  z = z$ (identity  $\times$)
+        \item       $\forall x ,y   \in \mathbb{Z} \quad   x y = 0   \to  x = 0  \lor  y = 0 $ (zero divisor free $\times$)
+        \item       $\forall x ,y  \in \mathbb{Z} \quad x   y  = y   x $  (commutative(abelian)  $\times$)
+        \item       $\forall x ,y ,z  \in \mathbb{Z} \quad \Big(x   (y  + z ) = x   y  +  x   z  \Big)
+                  \land     \Big((x  + y )  z  = x   z  +  y   z  \Big)  $ (distributive $\times$)
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
@@ -3551,7 +3598,8 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
 we learned about ``$\mathbb{Z}$'' before and we constructed structure
 ``$(\mathbb{Z} , + , \cdot , <)$''. if you assume ``$\mathbb{Z} \times
     (\mathbb{Z} - \{0\})$'' we can define an equivalence relation ``$ (y_1 , x )
-    \sim (y_2 , y ) : y_1 \cdot y = y_2 \cdot x $''(check it's an equivalence relation).
+    \sim (y_2 , y ) : y_1 \cdot y = y_2 \cdot x $''(check it's an equivalence
+relation).
 
 \begin{definition}\textbf{Rational numbers``$\mathbb{Q}$''} is a set
     \[ \mathbb{Q} := \mathbb{Z} \times (\mathbb{Z} - \{0\}) / \sim\]
@@ -3614,12 +3662,13 @@ we denote ``Multiplication'' with ``$x \cdot y$'' and ``$x y$'' too.
 \begin{lemma}prove for  ``$ (\mathbb{Q} , + , \times  )  $''
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall x ,y ,z  \in \mathbb{Q} \quad (x  \times y ) \times z  = x  \times(y  \times z )  $  (assosiative $\times$)
-        \item       $\forall x \in \mathbb{Q} \quad x \times 1 = 1 \times x = x$  (identity  $\times$)
-        \item       $\forall x  \in \mathbb{Q} - \{0\} \quad \exists y \in \mathbb{Q} \quad x \times y = y \times x = 1$  (inverse  $\times$)
-        \item       $\forall x ,y  \in \mathbb{Q} \quad x  \times y  = y  \times x $  (commutative(abelian)  $\times$)
-        \item       $\forall x ,y ,z  \in \mathbb{Q} \quad \Big(x  \times (y  + z ) = x  \times y  +  x  \times z  \Big)
-                  \land     \Big((x  + y ) \times z  = x  \times z  +  y  \times z  \Big)  $ (distributive $\times$)
+        \item       $\forall x ,y ,z  \in \mathbb{Q} \quad (x   y )  z  = x  (y   z )  $  (assosiative $\times$)
+        \item       $\forall x \in \mathbb{Q} \quad x \cdot 1 = 1 \cdot x = x$  (identity  $\times$)
+        \item       $\forall x  \in \mathbb{Q} - \{0\} \quad \exists y \in \mathbb{Q} \quad x  y = y  x = 1$  (inverse  $\times$)
+        \item       $\forall x ,y  \in \mathbb{Q} \quad x   y  = y   x $  (commutative(abelian)  $\times$)
+        \item       $\forall x ,y ,z  \in \mathbb{Q} \quad \Big(x   (y  + z ) = x   y  +  x   z  \Big)
+                  \land     \Big((x  + y )  z  = x   z  +  y   z  \Big)  $ (distributive $\times$)
+              % \item       $\forall x ,y   \in \mathbb{Q} \quad   x y = 0   \to  x = 0  \lor  y = 0 $ (zero divisor free $\times$)
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
@@ -3743,12 +3792,13 @@ we denote ``Multiplication'' with ``$x \cdot y$'' and ``$x y$'' too.
 \begin{lemma}prove.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall x ,y ,z  \in \mathbb{R} \quad (x  \times y ) \times z  = x  \times(y  \times z )  $  (assosiative $\times$)
-        \item       $\forall x \in \mathbb{R} \quad x \times 1 = 1 \times x = x$  (identity  $\times$)
-        \item       $\forall x  \in \mathbb{R} - \{0\} \quad \exists y \in \mathbb{R} \quad x \times y = y \times x = 1$  (inverse  $\times$)
-        \item       $\forall x ,y  \in \mathbb{R} \quad x  \times y  = y  \times x $  (commutative(abelian)  $\times$)
-        \item       $\forall x ,y ,z  \in \mathbb{R} \quad \Big(x  \times (y  + z ) = x  \times y  +  x  \times z  \Big)
-                  \land     \Big((x  + y ) \times z  = x  \times z  +  y  \times z  \Big)  $  (distributive $\times$)
+        \item       $\forall x ,y ,z  \in \mathbb{R} \quad (x   y )  z  = x  (y   z )  $  (assosiative $\times$)
+        \item       $\forall x \in \mathbb{R} \quad x \cdot 1 = 1 \cdot x = x$  (identity  $\times$)
+        \item       $\forall x  \in \mathbb{R} - \{0\} \quad \exists y \in \mathbb{R} \quad x  y = y  x = 1$  (inverse  $\times$)
+        \item       $\forall x ,y  \in \mathbb{R} \quad x   y  = y   x $  (commutative(abelian)  $\times$)
+        \item       $\forall x ,y ,z  \in \mathbb{R} \quad \Big(x   (y  + z ) = x   y  +  x   z  \Big)
+                  \land     \Big((x  + y )  z  = x   z  +  y   z  \Big)  $  (distributive $\times$)
+              % \item       $\forall x ,y   \in \mathbb{R} \quad   x y = 0   \to  x = 0  \lor  y = 0 $ (zero divisor free $\times$)
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
@@ -3790,32 +3840,31 @@ if you are not fimiliar to this notation it means ``$ |\_| := \{ (x,y) \in
     \mathbb{Q} \times \mathbb{Q} \mid (0 \leq x \to y=x ) \land ( x < 0 \to y = -x
     ) \} $''. learn this notation because we want to use later.
 
-
 we learned about ``$\mathbb{Q}$'' before and we constructed structure
-``$(\mathbb{Q} , + , \cdot , <)$''. now assume $\mathbb{Q}^\mathbb{N}$(we know what does it mean by the definition.
- it means all the sequences of $\mathbb{Q}$). we don't want it all we just want a subset.
-
+``$(\mathbb{Q} , + , \cdot , <)$''. now assume $\mathbb{Q}^\mathbb{N}$(we know
+what does it mean by the definition. it means all the sequences of
+$\mathbb{Q}$). we don't want it all we just want a subset.
 
 \begin{definition}\textbf{Cauchy sequence} is a sequence like ``$(a_i)_{i \in \mathbb{N}} \in \mathbb{Q}^\mathbb{N}$'' s.t. elements of it get infinitly
     close to each other i.e.
     \[  Cauchy(a_i)_{i \in \mathbb{N}} : \forall \epsilon > 0 \quad \exists N  \quad \forall n,m > N  \quad | a_n - a_m | < \epsilon   \]
 \end{definition}
 
-we usually  give  ``$N$'' natural numbers but it's not necessary.
+we usually give ``$N$'' natural numbers but it's not necessary.
 
- we  define an equivalence relation ``$ (a_i)_{i \in \mathbb{N}}  \sim (b_i)_{i \in \mathbb{N}} : 
- \forall \epsilon > 0 \quad \exists N  \quad \forall n > N  \quad | a_n - b_n | < \epsilon  $''(check it's an equivalence relation).
-
-
+we define an equivalence relation ``$ (a_i)_{i \in \mathbb{N}} \sim (b_i)_{i
+    \in \mathbb{N}} : \forall \epsilon > 0 \quad \exists N \quad \forall n > N
+    \quad | a_n - b_n | < \epsilon $''(check it's an equivalence relation).
 
 \begin{definition}\textbf{Real numbers ``$\mathbb{R}$''} is a set
     \[ \mathbb{R} :=  Cauchy/ \sim  \]
     we denote it's members with ``$r_0 , r_1 ,...$''
 \end{definition}
 
-in this system ``$ 0 := [(0)_{i \in \mathbb{N}}]$'' and ``$ 1 := [(1)_{i \in \mathbb{N}}]$'' and ``$ \forall q \in
-    \mathbb{Q} \quad q := [(q)_{i \in \mathbb{N}}]$''. so we can say ``$ \mathbb{N} \subseteq \mathbb{Z}
-    \subseteq \mathbb{Q} \subseteq \mathbb{R}$''.
+in this system ``$ 0 := [(0)_{i \in \mathbb{N}}]$'' and ``$ 1 := [(1)_{i \in
+            \mathbb{N}}]$'' and ``$ \forall q \in \mathbb{Q} \quad q := [(q)_{i \in
+            \mathbb{N}}]$''. so we can say ``$ \mathbb{N} \subseteq \mathbb{Z} \subseteq
+    \mathbb{Q} \subseteq \mathbb{R}$''.
 
 \begin{theorem}\textbf{Summation} there is a unique function ``$+_\mathbb{R} :\mathbb{R} \times \mathbb{R} \to \mathbb{R}$'' s.t.
 
@@ -3832,11 +3881,9 @@ in this system ``$ 0 := [(0)_{i \in \mathbb{N}}]$'' and ``$ 1 := [(1)_{i \in \ma
 \end{theorem}
 
 \begin{definition}\textbf{Order in $\mathbb{R}$} .\\
-    \[  [(a_i)_{i \in \mathbb{N}}] <_\mathbb{R} [(b_i)_{i \in \mathbb{N}}]  : 
-     \exists \epsilon > 0 \quad \exists N  \quad \forall n > N  \quad  b_n - a_n  > \epsilon  \]
+    \[  [(a_i)_{i \in \mathbb{N}}] <_\mathbb{R} [(b_i)_{i \in \mathbb{N}}]  :
+        \exists \epsilon > 0 \quad \exists N  \quad \forall n > N  \quad  b_n - a_n  > \epsilon  \]
 \end{definition}
-
-
 
 this lemma let us use ``$<$'' instead of ``$<_\mathbb{R}$'', ``$+$'' instead of
 ``$+_\mathbb{R}$'' and ``$\times$'' instead of ``$\times_\mathbb{R}$''.
@@ -3867,12 +3914,13 @@ we denote ``Multiplication'' with ``$x \cdot y$'' and ``$x y$'' too.
 \begin{lemma}prove.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall x ,y ,z  \in \mathbb{R} \quad (x  \times y ) \times z  = x  \times(y  \times z )  $  (assosiative $\times$)
-        \item       $\forall x \in \mathbb{R} \quad x \times 1 = 1 \times x = x$  (identity  $\times$)
-        \item       $\forall x  \in \mathbb{R} - \{0\} \quad \exists y \in \mathbb{R} \quad x \times y = y \times x = 1$  (inverse  $\times$)
-        \item       $\forall x ,y  \in \mathbb{R} \quad x  \times y  = y  \times x $  (commutative(abelian)  $\times$)
-        \item       $\forall x ,y ,z  \in \mathbb{R} \quad \Big(x  \times (y  + z ) = x  \times y  +  x  \times z  \Big)
-                  \land     \Big((x  + y ) \times z  = x  \times z  +  y  \times z  \Big)  $  (distributive $\times$)
+        \item       $\forall x ,y ,z  \in \mathbb{R} \quad (x   y )  z  = x  (y   z )  $  (assosiative $\times$)
+        \item       $\forall x \in \mathbb{R} \quad x \cdot 1 = 1 \cdot x = x$  (identity  $\times$)
+        \item       $\forall x  \in \mathbb{R} - \{0\} \quad \exists y \in \mathbb{R} \quad x  y = y  x = 1$  (inverse  $\times$)
+        \item       $\forall x ,y  \in \mathbb{R} \quad x   y  = y   x $  (commutative(abelian)  $\times$)
+        \item       $\forall x ,y ,z  \in \mathbb{R} \quad \Big(x   (y  + z ) = x   y  +  x   z  \Big)
+                  \land     \Big((x  + y )  z  = x   z  +  y   z  \Big)  $  (distributive $\times$)
+              % \item       $\forall x ,y   \in \mathbb{R} \quad   x y = 0   \to  x = 0  \lor  y = 0 $ (zero divisor free $\times$)
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
@@ -3893,11 +3941,10 @@ we denote ``Multiplication'' with ``$x \cdot y$'' and ``$x y$'' too.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-
 \section{Complex numbers``$\mathbb{C}$''}
 
 we learned about ``$\mathbb{R}$'' before and we constructed structure
-``$(\mathbb{R} , + , \cdot , <)$''. 
+``$(\mathbb{R} , + , \cdot , <)$''.
 
 \begin{definition}\textbf{Complex numbers``$\mathbb{C}$''} is a set
     \[ \mathbb{C} := \mathbb{R} \times \mathbb{R} \]
@@ -3905,9 +3952,9 @@ we learned about ``$\mathbb{R}$'' before and we constructed structure
 \end{definition}
 
 in this system ``$ 0 := (0,0)$'' and ``$ \forall n \in \mathbb{R} \quad r :=
-    (r,0)$'' . in general
-``$\forall x,y \in \mathbb{R} \quad x + iy := (x,y)$''. so we can say ``$\mathbb{N} \subseteq \mathbb{Z}
-    \subseteq \mathbb{Q} \subseteq \mathbb{R} \subseteq \mathbb{C}$''.
+    (r,0)$'' . in general ``$\forall x,y \in \mathbb{R} \quad x + iy := (x,y)$''.
+so we can say ``$\mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq
+    \mathbb{R} \subseteq \mathbb{C}$''.
 
 \begin{theorem}\textbf{Summation} there is a unique function ``$+_\mathbb{C} :\mathbb{C} \times \mathbb{C} \to \mathbb{C}$'' s.t.
 
@@ -3923,10 +3970,8 @@ in this system ``$ 0 := (0,0)$'' and ``$ \forall n \in \mathbb{R} \quad r :=
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-
-
-this lemma let us use  ``$+$'' instead of
-``$+_\mathbb{C}$'' and ``$\times$'' instead of ``$\times_\mathbb{C}$''.
+this lemma let us use ``$+$'' instead of ``$+_\mathbb{C}$'' and ``$\times$''
+instead of ``$\times_\mathbb{C}$''.
 
 \begin{lemma}prove.
     \begin{enumerate}
@@ -3953,15 +3998,15 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
 \begin{lemma}prove for  ``$ (\mathbb{C} , + , \times )  $''
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall x ,y ,z  \in \mathbb{C} \quad (x  \times y ) \times z  = x  \times(y  \times z )  $ (assosiative $\times$)
-        \item       $\forall z \in \mathbb{C} \quad z \times 1 = 1 \times  z = z$ (identity  $\times$)
-        \item       $\forall x ,y  \in \mathbb{C} \quad x  \times y  = y  \times x $  (commutative(abelian)  $\times$)
-        \item       $\forall x ,y ,z  \in \mathbb{C} \quad \Big(x  \times (y  + z ) = x  \times y  +  x  \times z  \Big)
-                  \land     \Big((x  + y ) \times z  = x  \times z  +  y  \times z  \Big)  $ (distributive $\times$)
+        \item       $\forall x ,y ,z  \in \mathbb{C} \quad (x   y )  z  = x  (y   z )  $ (assosiative $\times$)
+        \item       $\forall z \in \mathbb{C} \quad z \cdot 1 = 1 \cdot  z = z$ (identity  $\times$)
+        \item       $\forall x ,y  \in \mathbb{C} \quad x   y  = y   x $  (commutative(abelian)  $\times$)
+        \item       $\forall x ,y ,z  \in \mathbb{C} \quad \Big(x   (y  + z ) = x   y  +  x   z  \Big)
+                  \land     \Big((x  + y )  z  = x   z  +  y   z  \Big)  $ (distributive $\times$)
+              % \item       $\forall x ,y   \in \mathbb{C} \quad   x y = 0   \to  x = 0  \lor  y = 0 $ (zero divisor free $\times$)
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
-
 
 % \begin{theorem}\textbf{Exponents} there is a unique function ``$(\_)^{(\_)_\mathbb{Z}} :\mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$'' s.t.
 
@@ -3972,8 +4017,6 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
 %     \end{enumerate}
 %     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 % \end{theorem}
-
-
 
 % \begin{theorem}\textbf{Exponents} there is a unique function ``$(\_)^{(\_)_\mathbb{Q}} :\mathbb{Q} \times \mathbb{Q} \to \mathbb{Q}$'' s.t.
 
@@ -4030,8 +4073,8 @@ similarly we define ``$[A] \preceq [B] : \forall X \in [A] , Y \in [B] \quad X
 
 \section{Finite sets}
 
-\begin{definition}\textbf{Finite set} if there is a ``$n \in \mathbb{N}$'' s.t. $ A \cong n$ we call it ``Finite''($Finite(A)$).
-    if a set is not finite we call it ``Infinite''($Infinite(A)$).
+\begin{definition} if there is a ``$n \in \mathbb{N}$'' s.t. $ A \cong n$ we call it \textbf{``Finite''}($Finite(A)$).
+    if a set is not finite we call it \textbf{``Infinite''}($Infinite(A)$).
 \end{definition}
 
 \begin{lemma} $ / \therefore \forall  n \in \mathbb{N} \quad  X \subseteq n \to X \ncong n   $\\
@@ -4052,6 +4095,48 @@ similarly we define ``$[A] \preceq [B] : \forall X \in [A] , Y \in [B] \quad X
 corollary (4) let us use ``$<$'' instead of ``$\prec$''
 
 \begin{lemma} $ Finite(X) , Y \subseteq X / \therefore  Finite(Y)    $\\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\section{Countable sets}
+
+\begin{definition}
+    set ``$A$'' is \textbf{``Countable''} if  ``$ A \cong \mathbb{N}$''. set ``$A$'' is\textbf{``At most countable''}  if  ``$ A \precsim \mathbb{N}$''
+\end{definition}
+
+\begin{lemma} $ Countable(X) ,Infinite(Y) , Y \subseteq X / \therefore  Countable(Y)   $\\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{corollary} a set is at most countable iff it's finite or countable. 
+\end{corollary}
+
+\begin{lemma} range of infinite set is atmost countable.\\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+
+\begin{lemma} union of two countable set is  countable.\\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{corollary} finite union of countable sets is countable. 
+\end{corollary}
+
+\begin{lemma} if ``$A$'' and ``$B$'' are countable sets then ``$A \times B$'' is  countable.\\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{corollary} finite cartesian product of countable sets is countable. and ``$A^n$''
+    is countable for any ``$A$'' countable and ``$n > 0$''.
+\end{corollary}
+
+\begin{lemma} if ``$(A_i)_{i \in \mathbb{N}}$'' is family of countable sets with a family of sequences ``$(a_i)_{i \in \mathbb{N}}$''
+    s.t. ``$ \forall n \in \mathbb{N} \quad a_n : \mathbb{N} \xrightarrow[surj]{inj} A_n $'' then ``$\bigcup_{i \in \mathbb{N}} A_i$'' is  countable.\\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{lemma} if ``$A$'' is countable set then ``$\bigcup_{n \in \mathbb{N}} A^n$'' is  countable.\\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 

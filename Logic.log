@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.9.18)  29 MAR 2026 00:51
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.9.18)  30 MAR 2026 18:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1518,12 +1518,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 2674--2690
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Overfull \hbox (32.53764pt too wide) in paragraph at lines 2725--2760
+Overfull \hbox (32.53764pt too wide) in paragraph at lines 2723--2758
 [] 
  []
 
 [39]
-Overfull \hbox (32.53764pt too wide) in paragraph at lines 2761--2798
+Overfull \hbox (32.53764pt too wide) in paragraph at lines 2759--2796
 [] 
  []
 
@@ -1534,12 +1534,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [42]
-Underfull \hbox (badness 10000) in paragraph at lines 2942--2944
+Underfull \hbox (badness 10000) in paragraph at lines 2940--2942
 
  []
 
 [43] [44] [45]
-Underfull \hbox (badness 10000) in paragraph at lines 3081--3083
+Underfull \hbox (badness 10000) in paragraph at lines 3079--3081
 
  []
 
@@ -1567,19 +1567,19 @@ Chapter 6.
 [49]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
- [50]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
-
-Overfull \hbox (21.20822pt too wide) in paragraph at lines 3348--3352
+ [50]
+Overfull \hbox (21.20822pt too wide) in paragraph at lines 3338--3342
 [][] 
  []
 
-[51]
-Underfull \hbox (badness 10000) in paragraph at lines 3369--3380
+
+Underfull \hbox (badness 10000) in paragraph at lines 3359--3370
 
  []
 
+[51]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 File: all-twemojis.pdf Graphic file (type pdf)
@@ -1588,7 +1588,15 @@ File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
-[52]
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+ [52]
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
  [53] [54
@@ -1597,11 +1605,11 @@ File: all-twemojis.pdf Graphic file (type pdf)
 Chapter 7.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3453.
+(hyperref)                removing `math shift' on input line 3499.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3453.
+(hyperref)                removing `math shift' on input line 3499.
 
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
@@ -1619,11 +1627,11 @@ File: all-twemojis.pdf Graphic file (type pdf)
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3549.
+(hyperref)                removing `math shift' on input line 3596.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3549.
+(hyperref)                removing `math shift' on input line 3596.
 
 [56]
 File: all-twemojis.pdf Graphic file (type pdf)
@@ -1642,27 +1650,27 @@ File: all-twemojis.pdf Graphic file (type pdf)
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3652.
+(hyperref)                removing `math shift' on input line 3701.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3652.
-
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-
-Underfull \hbox (badness 10000) in paragraph at lines 3692--3693
-
- []
+(hyperref)                removing `math shift' on input line 3701.
 
 [58]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
+
+Underfull \hbox (badness 10000) in paragraph at lines 3741--3742
+
+ []
+
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
- [59]
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+[59]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 File: all-twemojis.pdf Graphic file (type pdf)
@@ -1670,11 +1678,11 @@ File: all-twemojis.pdf Graphic file (type pdf)
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3772.
+(hyperref)                removing `math shift' on input line 3822.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3772.
+(hyperref)                removing `math shift' on input line 3822.
 
 [60]
 File: all-twemojis.pdf Graphic file (type pdf)
@@ -1682,7 +1690,7 @@ File: all-twemojis.pdf Graphic file (type pdf)
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Underfull \hbox (badness 10000) in paragraph at lines 3834--3835
+Underfull \hbox (badness 10000) in paragraph at lines 3883--3884
 
  []
 
@@ -1698,19 +1706,19 @@ File: all-twemojis.pdf Graphic file (type pdf)
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3897.
+(hyperref)                removing `math shift' on input line 3944.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3897.
+(hyperref)                removing `math shift' on input line 3944.
 
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 [62]
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 File: all-twemojis.pdf Graphic file (type pdf)
@@ -1731,7 +1739,7 @@ File: all-twemojis.pdf Graphic file (type pdf)
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Underfull \hbox (badness 10000) in paragraph at lines 4041--4043
+Underfull \hbox (badness 10000) in paragraph at lines 4084--4086
 
  []
 
@@ -1739,66 +1747,78 @@ File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
-[66]
-Chapter 9.
-[67
-
-] [68
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+[66] [67] [68
 
 ]
-Chapter 10.
+Chapter 9.
 [69] [70
 
 ]
-Chapter 11.
+Chapter 10.
 [71] [72
+
+]
+Chapter 11.
+[73] [74
 
 ]
 Chapter 12.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 4064.
+(hyperref)                removing `math shift' on input line 4149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 4064.
+(hyperref)                removing `math shift' on input line 4149.
 
-[73] [74
+[75] [76
 
 ]
 Chapter 13.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 4066.
+(hyperref)                removing `math shift' on input line 4151.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 4066.
+(hyperref)                removing `math shift' on input line 4151.
 
 
-Overfull \hbox (57.54887pt too wide) in paragraph at lines 4066--4066
+Overfull \hbox (57.54887pt too wide) in paragraph at lines 4151--4151
 \TU/lmr/bx/n/24.88 numbers($\U/msb/m/n/24.88 N\OT1/cmr/m/n/24.88 (\OML/cmm/m/it/24.88 Ord\OT1/cmr/m/n/24.88 )\OML/cmm/m/it/24.88 ; \U/msb/m/n/24.88 Z\OT1/cmr/m/n/24.88 (\OML/cmm/m/it/24.88 Ord\OT1/cmr/m/n/24.88 )\OML/cmm/m/it/24.88 ; \U/msb/m/n/24.88 Q\OT1/cmr/m/n/24.88 (\OML/cmm/m/it/24.88 Ord\OT1/cmr/m/n/24.88 )\OML/cmm/m/it/24.88 ; \U/msb/m/n/24.88 R\OT1/cmr/m/n/24.88 (\OML/cmm/m/it/24.88 Ord\OT1/cmr/m/n/24.88 )$\TU/lmr/bx/n/24.88 )  
  []
 
-[75] [76
-
-]
-Chapter 14.
 [77] [78
 
 ]
-Chapter 15.
+Chapter 14.
 [79] [80
 
 ]
+Chapter 15.
+[81] [82
+
+]
 Chapter 16.
-[81] (Logic.aux)
+[83] (Logic.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `Logic.out' has not changed.
-(rerunfilecheck)             Checksum: 7B0AEAB0165E66EF2FC584496680658D;7232.
+(rerunfilecheck)             Checksum: 5B42DFBCDBB16C846B9075E0EFD83A1F;7498.
  ) 
 Here is how much of TeX's memory you used:
  37407 strings out of 409617
@@ -1809,4 +1829,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  84i,27n,93p,555b,708s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Logic.xdv (85 pages, 629424 bytes).
+Output written on Logic.xdv (87 pages, 660092 bytes).
