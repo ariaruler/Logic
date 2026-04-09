@@ -1218,16 +1218,6 @@ sentences.
         \item   $ \exists x(P(x) \wedge Q(x)) /\therefore \exists x P(x) \wedge \exists x Q(x) $   (D $\exists \land$)
         \item   $ \forall x(P(x) \rightarrow Q(x)) /\therefore  \forall x P(x) \rightarrow \forall x Q(x) $  (D $\forall \to$)
         \item   $\exists x P(x) \rightarrow \exists x Q(x) /\therefore \exists x(P(x) \rightarrow Q(x)) $  (F $\exists \to$)
-        \item   $ \forall x P(x) \wedge Q \therefore /\therefore \forall x(P(x) \wedge Q) $
-        \item   $ \forall x P(x) \vee Q \therefore /\therefore \forall x(P(x) \vee Q) $
-        \item   $ \exists x P(x) \wedge Q \therefore /\therefore \exists x(P(x) \wedge Q) $
-        \item   $ \exists x P(x) \vee Q \therefore /\therefore \exists x(P(x) \vee Q) $
-        \item   $Q \rightarrow \forall x P(x) \therefore /\therefore \forall x(Q \rightarrow P(x)) $
-        \item   $Q \rightarrow \exists x P(x) \therefore /\therefore \exists x(Q \rightarrow P(x)) $
-        \item   $\forall x P(x) \rightarrow Q \therefore /\therefore \exists x(P(x) \rightarrow Q) $
-        \item   $\exists x P(x) \rightarrow Q \therefore /\therefore \forall x(P(x) \rightarrow Q) $
-        \item   $ \exists x \neg P(x) \therefore /\therefore \neg \forall x P(x)  $  (De morgan)
-        \item   $ \forall x \neg P(x) \therefore /\therefore \neg \exists x P(x) $ (De morgan)
 
     \end{enumerate}
 
@@ -1360,9 +1350,10 @@ sentences.
             \have {} {\forall x (P(x) \to Q(x))} \by {$ass$} {}
             \open
             \have {} {\forall x P(x) } \by {$acp$} {}
+            \have {} { P(x) } \by {$\forall E$} {}
             \have {} {P(x) \to Q(x)} \by {$\forall E$} {}
             \have {} {Q(x)} \by {$\to E$} {}
-            \have {} {\forall Q(x)} \by {$\forall I$} {}
+            \have {} {\forall x Q(x)} \by {$\forall I$} {}
             \close
             \have {} {\forall x P(x) \to \forall x  Q(x) } \by {$\to I$} {}
 
@@ -1401,6 +1392,16 @@ sentences.
     \textbf{}for P,Q,R prove.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
+        \item   $ \forall x P(x) \wedge Q \therefore /\therefore \forall x(P(x) \wedge Q) $
+        \item   $ \forall x P(x) \vee Q \therefore /\therefore \forall x(P(x) \vee Q) $
+        \item   $ \exists x P(x) \wedge Q \therefore /\therefore \exists x(P(x) \wedge Q) $
+        \item   $ \exists x P(x) \vee Q \therefore /\therefore \exists x(P(x) \vee Q) $
+        \item   $Q \rightarrow \forall x P(x) \therefore /\therefore \forall x(Q \rightarrow P(x)) $
+        \item   $Q \rightarrow \exists x P(x) \therefore /\therefore \exists x(Q \rightarrow P(x)) $
+        \item   $\forall x P(x) \rightarrow Q \therefore /\therefore \exists x(P(x) \rightarrow Q) $
+        \item   $\exists x P(x) \rightarrow Q \therefore /\therefore \forall x(P(x) \rightarrow Q) $
+        \item   $ \exists x \neg P(x) \therefore /\therefore \neg \forall x P(x)  $  (De morgan)
+        \item   $ \forall x \neg P(x) \therefore /\therefore \neg \exists x P(x) $ (De morgan)
         \item   $ \exists x \Big(P(x) \wedge \exists y Q(y) \rightarrow \forall z R(z)\Big) /\therefore \forall y \forall z \Big(\forall x P(x) \wedge Q(y) \rightarrow R(z)\Big) $
         \item   $ \forall x \exists y \Big(P(x) \wedge Q(y) \rightarrow \forall z R(z)\Big) /\therefore \forall z \Big(\exists x P(x) \wedge \forall y Q(y) \rightarrow R(z)\Big) $
         \item   $\forall x P(x) \rightarrow \exists y Q(y) /\therefore \exists x \exists y \Big(P(x) \rightarrow Q(y)\Big) $
@@ -1425,17 +1426,22 @@ if we are talking about ``$\forall x \in A \quad P(x)$'' it means ``$\forall x
     (x \in A \to P(x))$'' and when we are talking about ``$\exists x \in A \quad
     P(x)$'' it means ``$\exists x (x \in A \land P(x))$''.
 
+and we have a definitions.
+\[ Type_0(X) : \exists Y \quad X \in Y \]
+
+\[ Type_1(X) : \neg \exists Y \quad X \in Y \]
+
 \section{Axioms of set theory}
 we emphasis before that set has no definition.but we can describe what set is
 with rules and axioms.
 
 \begin{axiom}
     \textbf{Existence of universe of set theory}
-    There exists a set $V$ (we denote it as V.it simply means the set of all sets), known as the Von Neumann Universe, which contains every set.
+    There exists a set $V_2$ (we denote it as $V_2$.it simply means the set of all sets), known as the Von Neumann Universe, which contains every set.
     (this axiom can't be formolized in first order logic).
     (there must be another axiom let us use logic for set theory but we ignore that).
     (from now on when we are talking about proposition ``$\phi$'' in ``set theory'' we mean
-    proposition ``$\phi$'' in ``$V$'').
+    proposition ``$\phi$'' in ``$V_2$'').
 \end{axiom}
 
 \begin{definition}
@@ -1590,11 +1596,11 @@ so we can rewrite axiom of Extensionality like this.
 
 \begin{axiom}
     \textbf{Weak comprehension} $(schema)$ this axioms says for every open proposition
-    like ``$\phi (x,x_0 , x_1, ... , x_n)$'' there is a set like ``$X$'' such that every ``$x$'' is a
+    like ``$\phi (x,x_0 , x_1, ... , x_n)$'' there is a set like ``$X$'' such that every ``$x$'' with ``$Type_0$'' is a
     member of that set if and only if it holds
     ``$\phi (x,x_0 , x_1, ... , x_n)$''.
     \\
-    \[ \forall x_0 , x_1, ... , x_n \exists X \forall x  (\phi (x,x_0 , x_1, ... , x_n) \leftrightarrow x \in X) \]
+    \[ \forall x_0 , x_1, ... , x_n \exists X \forall x  (Type_0(x) \land \phi (x,x_0 , x_1, ... , x_n) \leftrightarrow x \in X) \]
     \\
     by axiom of extentionality we can show that $X$ is unique.
     so we denote it as ``$\{ x \mid  \phi (x,x_0 , x_1, ... , x_n)\}$''.
@@ -1602,16 +1608,24 @@ so we can rewrite axiom of Extensionality like this.
     ``$\{ x \in A \mid  \phi (x,x_0 , x_1, ... , x_n)\}$''.
 \end{axiom}
 
-this axiom show that why Russell's paradox doesn't happened here because if ou
-assume ``$R=\{x|x \notin x\}$'' is a set. you can't prove or disprove ``$R \in
-    R$'' so ``$x \notin x$'' is not a proposition in ``set theorhy''. (we don't
-need to prove that now.we will prove it in``\textbf{'MetaLogic'}''). (it's not
-obvios in ``$x \notin x$'' witch set holds and witch not). (and likely ``$\{ X
-    \mid a \in X \}$'' is not a set either).
+% this axiom show that why Russell's paradox doesn't happened here because if ou
+% assume ``$R=\{x|x \notin x\}$'' is a set. you can't prove or disprove ``$R \in
+%     R$'' so ``$x \notin x$'' is not a proposition in ``set theorhy''. (we don't
+% need to prove that now.we will prove it in``\textbf{'MetaLogic'}''). (it's not
+% obvios in ``$x \notin x$'' witch set holds and witch not). (and likely ``$\{ X
+%     \mid a \in X \}$'' is not a set either).
 
-\section{definitions of set theory}
-Let's talk about some definitions in set theoty.These definitions will come in
-handy later.
+% \section{definitions of set theory}
+% Let's talk about some definitions in set theoty.These definitions will come in
+% handy later.
+
+Let's talk about some axioms in set theoty.These daxioms will come in handy
+later.
+
+\begin{axiom}
+    \textbf{Existence} there is a ``Set'' with no member i.e..
+    \[ \exists x \quad Type_0(x) \]
+\end{axiom}
 
 \begin{definition}
     \textbf{Empty set} also known as the null set,
@@ -1619,7 +1633,7 @@ handy later.
     (uniqueness can be proven.)
     \[ \emptyset:=\{x \mid \bot\} \]
     therefore.
-    \[ \forall x(x \in \emptyset \leftrightarrow  \bot) \]
+    \[ \forall x(x \in \emptyset \leftrightarrow  \bot \land Type_0(x) ) \]
     therefore.
     \[ \forall x(x \notin \emptyset ) \]
 \end{definition}
@@ -1686,9 +1700,9 @@ handy later.
             \have  [ ]{2} {\therefore\theta } \by{$E \emptyset \not=$}{}
         \end{fitchproof}
         \\
-        \hline
-    \end{tabular}
-    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
+        % \hline
+        % \end{tabular}
+        % \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{fitchproof}[arrayenv=tabular]
             \open
@@ -1739,11 +1753,16 @@ handy later.
     \end{tabular}
 \end{theorem}
 
+\begin{axiom}
+    \textbf{Existence}
+    \[  Type_0(\emptyset) \]
+\end{axiom}
+
 \begin{definition}
-    \textbf{pairing set}
+    \textbf{Pairing set}
     \[ \{a_{0}, a_{1}, a_{2}, ... ,a_{n} \}:=\{x \mid x=a_{0} \lor x=a_{1} \lor x=a_{2} \lor ... \lor x=a_{n} \} \]
     therefore.
-    \[\forall x( x \in \{a_{0}, a_{1}, a_{2}, ... ,a_{n} \} \leftrightarrow  (x=a_{0} \lor x=a_{1} \lor x=a_{2} \lor ... \lor x=a_{n} )) \]
+    \[\forall x( x \in \{a_{0}, a_{1}, a_{2}, ... ,a_{n} \} \leftrightarrow  ( Type_0(x) \land x=a_{0} \lor x=a_{1} \lor x=a_{2} \lor ... \lor x=a_{n} )) \]
 \end{definition}
 
 \begin{theorem}
@@ -1779,6 +1798,11 @@ handy later.
     \\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
+
+\begin{axiom}
+    \textbf{Pairing}  $(schema)$
+    \[  Type_0(\{a_{0}, a_{1}, a_{2}, ... ,a_{n} \}) \]
+\end{axiom}
 
 \begin{definition}
     \textbf{Union and Intersection} \\
@@ -1867,13 +1891,13 @@ somtimes all members of a set is also set we call it ``set of sets''.
     i.e.
     \[  \bigcap A:=\{x \mid \forall X \in A \quad x \in X \} \]
     therefore.
-    \[\forall x \Big( x \in \bigcap A  \leftrightarrow  \forall X (X \in A \rightarrow x \in X)\Big) \]
+    \[\forall x \Big( x \in \bigcap A  \leftrightarrow (Type_0(x) \land   \forall X (X \in A \rightarrow x \in X))\Big) \]
     Big Union:
     \[  \bigcup A:=\{x \mid \exists X (X \in A \wedge x \in X) \} \]
     i.e.
     \[  \bigcup A:=\{x \mid \exists X \in A \quad x \in X \} \]
     therefore.
-    \[\forall x( x \in \bigcup A \leftrightarrow  (\exists X (X \in A \wedge x \in X))) \]
+    \[\forall x \Big( x \in \bigcup A \leftrightarrow  ( Type_0(x) \land  \exists X (X \in A \wedge x \in X))\Big) \]
 \end{definition}
 
 \begin{theorem}
@@ -1926,7 +1950,7 @@ somtimes all members of a set is also set we call it ``set of sets''.
     \textbf{Complement}
     \[   A^c:=\{x \mid x \notin A  \} \]
     therefore.
-    \[\forall x( x \in A^c \leftrightarrow  x \notin A ) \]
+    \[\forall x( x \in A^c \leftrightarrow Type_0(x) \land  x \notin A ) \]
 \end{definition}
 
 \begin{theorem}
@@ -1964,7 +1988,7 @@ somtimes all members of a set is also set we call it ``set of sets''.
     \textbf{}we can show Universal set with...
     \[   V=\{x \mid \top \} \]
     therefore.
-    \[\forall x( x \in V \leftrightarrow  \top ) \]
+    \[\forall x( x \in V \leftrightarrow Type_0(x) \land  \top ) \]
     therefore.
     \[\forall x( x \in V ) \]
 \end{observation}
@@ -1973,7 +1997,7 @@ somtimes all members of a set is also set we call it ``set of sets''.
     \textbf{Subtraction}
     \[ A - B:=\{x \mid x \in A \wedge x \notin B \} \]
     therefore.
-    \[\forall x \Big( x \in A - B  \leftrightarrow  (x \in A \wedge x \notin B ) \Big) \]
+    \[\forall x \Big( x \in A - B  \leftrightarrow  ( Type_0(x) \land  x \in A \wedge x \notin B ) \Big) \]
 \end{definition}
 
 \begin{theorem}
@@ -2020,25 +2044,43 @@ somtimes all members of a set is also set we call it ``set of sets''.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
+\begin{axiom}
+    \textbf{Seperation}
+    \[ \forall X,Y \quad  Type_0(X) \to Type_0(X \cap Y) \]
+    therefore.
+    \[ Type_0(A) \to  Type_0(A \cap B) \]
+    therefore.
+    \[  Type_0(\bigcap A) \]
+    therefore.
+    \[ Type_0(A) \to  Type_0(A - B) \]
+\end{axiom}
+
+\begin{axiom}
+    \textbf{union}
+    \[ \forall X \quad  Type_0(X) \to Type_0(\bigcup X) \]
+    therefore.
+    \[ Type_0(A) \land Type_0(B)  \to  Type_0(A \cup B) \]
+\end{axiom}
+
 \begin{definition}
     \textbf{Powerset}
-    \[ P(A):=\{X \mid X \subseteq A \} \]
+    \[ \mathcal{P}(A):=\{X \mid X \subseteq A \} \]
     therefore.
-    \[\forall X \Big( X \in P(A) \leftrightarrow  (X \subseteq A )\Big) \]
+    \[\forall X \Big( X \in \mathcal{P}(A) \leftrightarrow  ( Type_0(X) \land  X \subseteq A )\Big) \]
 \end{definition}
 
 \begin{theorem}
-    \textbf{$(schema)$} $(PI, PE )$
+    \textbf{$(schema)$} $(\mathcal{P}I, \mathcal{P}E )$
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {A \subseteq B }
-            \have  [ ]{2} {\therefore   A \in  P(B) } \by{$PI$}{}
+            \have  [ ]{2} {\therefore   A \in  \mathcal{P}(B) } \by{$PI$}{}
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
-            \hypo [ ] {2} {A \in  P(B) }
+            \hypo [ ] {2} {A \in  \mathcal{P}(B) }
             \have  [ ]{2} {\therefore  A \subseteq B } \by{$PE$}{}
         \end{fitchproof}
         \\
@@ -2049,6 +2091,11 @@ somtimes all members of a set is also set we call it ``set of sets''.
     \\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
+
+\begin{axiom}
+    \textbf{Powerset}
+    \[ \forall X \quad  Type_0(X) \to Type_0(P(X)) \]
+\end{axiom}
 
 from now on we don't get in to all details of proofs because it will be too
 long and hard to read. so we will take it easy from now and don't write all
@@ -2063,6 +2110,8 @@ what happened there.\twemoji{1f600}
     \textbf{Ordered pair}
     \[ (x,y) := \{ \{x\},\{x,y\} \}. \]
 \end{definition}
+
+so $\forall x,y \quad Type_0((x,y))$
 
 \begin{definition}
     \textbf{Tuples}(n is a arbitrary number.)(this is a temporary definition, we will give a better one in the next chapter.)
@@ -2146,6 +2195,8 @@ what happened there.\twemoji{1f600}
     \end{center}
 
 \end{example}
+
+so $ \forall X,Y \quad Type_0(X) \land Type_0(Y) \to Type_0( X \times Y )$
 
 \begin{exercise}
     \textbf{} for sets A, B, C, prove.
@@ -2249,7 +2300,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
     we define ``$f(x):= y$'' and we call ``$f(x)$'' a ``\textbf{output of a function}''.
     and the reverse is also true, if we use ``$f(x)$'',
     we have a function  ``\textbf{f}'' and we can say  ``$x \in Dom(f)$''.
-    ``output of a function'' is object too, so we can have $f(f(x))$  as well.
+    ``output of a function'' is object too.
 \end{definition}
 
 \begin{Attention}
@@ -3132,7 +3183,7 @@ now we will show you relation between ``(partial) Order relation'' and
 \begin{definition}
     \textbf{Well ordering} assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
     we say ``$\mathfrak{A} $ '' is ``Well ordered'' when every nonempty subset of ``$A $ '' has a ``Minimum '' i.e.
-    \[ WellOrdered(\mathfrak{A}) :   \forall X \subseteq A \quad X \not= \emptyset \to \exists y \in X \quad \forall x \in X \quad y \preceq   x  \]
+    \[ WellOrdered(\mathfrak{A}) :   \forall X \subseteq A \quad X \not= \emptyset \to  HaveLeast(X)  \]
 \end{definition}
 
 \begin{definition}
@@ -3213,23 +3264,35 @@ if the stucture clear to us we don't write stucture index ``$min(\_),
     \end{align*}
 
 \end{definition}
+
 \begin{definition}
     \textbf{Successor function} is a function ``$s :V \to V$'' defined like this.
     \[s(x) := x\cup \{x\}\]
 \end{definition}
 
-\begin{axiom}
-    \textbf{The Axiom of Infinity} we define a set ``Inductive'' like this.
+you can see $\forall x \quad Type_0(x) \to Type_0(s(x))$
+
+\begin{definition}
+    we define a set  \textbf{``Inductive''} like this.
 
     \[
         Ind(X) :  \emptyset\in X \wedge \forall y(y\in X\to s(y) \in X)
     \]
 
-    notice that ``$Ind(X)$'' is not a proposition. so we can't use weak
-    comprehension. this axiom says it is a proposition. so ``$Ind$'' is a set and
-    it's a nonepmty set because we can prove ``$ V \in Ind $''. so we can define
-    ``$\bigcap Ind$''.
+\end{definition}
+
+notice that ``$Ind(X)$'' might be empty.
+
+\begin{axiom}
+    \textbf{The Axiom of Infinity} we define a set ``Inductive'' like this.
+
+    \[
+        \exists X \quad Type_0(X) \land Ind(X)
+    \]
+
 \end{axiom}
+
+so ``$Ind(X)$'' is a nonempty set. so we can define
 
 \begin{definition}
     \textbf{Set of Natural numbers($\mathbb{N}$)}
@@ -3430,69 +3493,50 @@ we denote also ``Multiplication'' with ``$m \cdot n$'' and ``$mn$'' too.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-\begin{theorem}\textbf{Exponents} there is a unique function ``$(\_)^{(\_)} :\mathbb{N} \times \mathbb{N} \to \mathbb{N}$'' s.t.
-
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall m \in \mathbb{N} \quad m ^ 0 = 1$ 
-        \item       $\forall m,n \in \mathbb{N} \quad m ^ {s(n)} = m ^ n \cdot m   $
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{theorem}
-
 \section{Peano arithmetic}
 
-assume a structure ``$\mathfrak{N} := (N , + , \cdot , s , 0)$''(here ``$+ , \cdot , s , 0 $'' are arbitary functions 
-and constants and doesn't have meaning we defined before). with these properties.
+assume a structure ``$\mathfrak{N} := (N , + , \cdot , s , 0)$''(here ``$+ ,
+    \cdot , s , 0 $'' are arbitary functions and constants and doesn't have meaning
+we defined before). with these properties.
 
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall m,n \in N \quad m+s(n) = s(m +n)  $
-        \item       $\forall m \in N \quad m+0 = m$
-        \item       $\forall m \in N \quad m+0 = m$
-        \item       $\forall m,n \in N \quad m+s(n) = s(m +n)  $
-        \item       $\forall m \in N \quad m \cdot 0 = 0$
-        \item       $\forall m,n \in N \quad m \cdot s(n) = m \cdot n+ m   $
-        \item        $\phi(0) \land \forall n \in N \quad \Big( \phi(n) \to \phi(s(n)) \Big) \to \forall n\in N \quad \phi(n)$ 
-        (this is true for arbitary ``$\phi$'')
-    \end{enumerate}
+\begin{enumerate}
+    \setlength{\itemsep}{0pt} % No extra space between items
+    \item       $\forall m,n \in N \quad s(m) = s(n) \to m=n  $
+    \item       $\forall m \in N \quad s(m) \not= 0$
+    \item       $\forall m \in N \quad m+0 = m$
+    \item       $\forall m,n \in N \quad m+s(n) = s(m +n)  $
+    \item       $\forall m \in N \quad m \cdot 0 = 0$
+    \item       $\forall m,n \in N \quad m \cdot s(n) = m \cdot n+ m   $
+    \item        $\phi(0) \land \forall n \in N \quad \Big( \phi(n) \to \phi(s(n)) \Big) \to \forall n\in N \quad \phi(n)$
+          (this is true for arbitary ``$\phi$'')
+\end{enumerate}
 we call ``$\mathfrak{N}$'' a model of ``Peano arithmetic''.
 
 \begin{lemma}prove for ``$(N , +)$''
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall m,n,k \in \mathbb{N} \quad (m+n)+k = m+(n+k)  $ (assosiative $+$)
-        \item       $\forall m \in \mathbb{N} \quad m + 0 = 0 + m = m$ (identity  $+$)
-        \item       $\forall m,n \in \mathbb{N} \quad m+n = n+m$  (commutative(abelian)  $+$)
+        \item       $\forall m,n,k \in N \quad (m+n)+k = m+(n+k)  $ (assosiative $+$)
+        \item       $\forall m \in N \quad m + 0 = 0 + m = m$ (identity  $+$)
+        \item       $\forall m,n \in N \quad m+n = n+m$  (commutative(abelian)  $+$)
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-\begin{lemma}prove for ``$(N , + , \times)$''
+\begin{lemma}prove for ``$(N , + , \cdot)$''
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall m,n,k \in \mathbb{N} \quad (mn)k = m(nk)  $ (assosiative $\times$)
-        \item       $\forall m \in \mathbb{N} \quad m \cdot 1 = 1 \cdot m = m$ (identity  $\times$)
-        \item       $\forall m ,n   \in \mathbb{N} \quad   m n = 0   \to  m = 0  \lor  n = 0 $ (zero divisor free $\times$)
-        \item       $\forall m,n \in \mathbb{N} \quad mn = nm$ (commutative(abelian)  $\times$)
-        \item       $\forall m ,n ,k  \in \mathbb{N} \quad \Big(m   (n  + k ) = m   n  +  m   k  \Big)
+        \item       $\forall m,n,k \in N \quad (mn)k = m(nk)  $ (assosiative $\times$)
+        \item       $\forall m \in N \quad m \cdot 1 = 1 \cdot m = m$ (identity  $\times$)
+        \item       $\forall m ,n   \in N \quad   m n = 0   \to  m = 0  \lor  n = 0 $ (zero divisor free $\times$)
+        \item       $\forall m,n \in N \quad mn = nm$ (commutative(abelian)  $\times$)
+        \item       $\forall m ,n ,k  \in N \quad \Big(m   (n  + k ) = m   n  +  m   k  \Big)
                   \land     \Big((m  + n )  k  = m   k  +  n   k  \Big)  $ (distributive $\times$)
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-as you can see  ``$(\mathbb{N} , + , \times , s , 0)$'' is a model of peano arithmetic.
-so properties are true for them. you can add ``Exponents'' axioms and prove more.
-
-\begin{lemma}prove for ``$(N , + , \times , (\_)^{(\_)} , s , 0 )$''
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall m ,n ,k  \in \mathbb{N} \quad   m^n  \cdot  m^k = m^{n  + k}  $
-        \item       $\forall m ,n ,k  \in \mathbb{N} \quad (m^n)^k = m^{nk}  $
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{lemma}
-
+as you can see ``$(\mathbb{N} , + , \times , s , 0)$'' is a model of peano
+arithmetic. so properties are true for them.
 
 \chapter{From Natural numbers to Complex numbers }
 
@@ -3505,12 +3549,12 @@ we learned about ``$\mathbb{N}$'' before and we constructed structure
 
 \begin{definition}\textbf{Integers``$\mathbb{Z}$''} is a set
     \[ \mathbb{Z} := \mathbb{N} \times \mathbb{N} / \sim\]
-    we denote it's members with ``$z_0 , x ,...$''
+    we denote it's members with ``$z_0 , z_1 ,...$''
 \end{definition}
 
 in this system ``$ 0 := [(0,0)]$'' and ``$ \forall n \in \mathbb{N} \quad n :=
-    [(n,0)]$'' and ``$\forall n \in \mathbb{N} \quad -n := [(0,n)]$''. in general
-``$\forall m,n \in \mathbb{N} \quad m-n := [(m,n)]$''. so we can say ``$
+    [(n,0)]$'' and ``$\forall n \in \mathbb{N} \quad -n := [(0,n)]$''. in
+general``$\forall m,n \in \mathbb{N} \quad m-n := [(m,n)]$''. so we can say ``$
     \mathbb{N} \subseteq \mathbb{Z}$''.
 
 \begin{theorem}\textbf{Summation} there is a unique function ``$+_\mathbb{Z} :\mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$'' s.t.
@@ -3583,22 +3627,12 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-% \begin{theorem}\textbf{Exponents} there is a unique function ``$(\_)^{(\_)_\mathbb{Z}} :\mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$'' s.t.
-
-%     \begin{enumerate}
-%         \setlength{\itemsep}{0pt} % No extra space between items
-%         \item       $\forall m \in \mathbb{Z} \quad m ^ 0 = 1$ 
-%         \item       $\forall m,n \in \mathbb{Z} \quad m ^ {s(n)} = m ^ n \cdot m   $
-%     \end{enumerate}
-%     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-% \end{theorem}
-
 \section{Rational numbers ``$\mathbb{Q}$''}
 
 we learned about ``$\mathbb{Z}$'' before and we constructed structure
 ``$(\mathbb{Z} , + , \cdot , <)$''. if you assume ``$\mathbb{Z} \times
-    (\mathbb{Z} - \{0\})$'' we can define an equivalence relation ``$ (y_1 , x )
-    \sim (y_2 , y ) : y_1 \cdot y = y_2 \cdot x $''(check it's an equivalence
+    (\mathbb{Z} - \{0\})$'' we can define an equivalence relation ``$ (y_1 , x_1 )
+    \sim (y_2 , x_2 ) : y_1 \cdot x_2 = y_2 \cdot x_1 $''(check it's an equivalence
 relation).
 
 \begin{definition}\textbf{Rational numbers``$\mathbb{Q}$''} is a set
@@ -3688,142 +3722,7 @@ we denote ``Multiplication'' with ``$x \cdot y$'' and ``$x y$'' too.
 
 \end{theorem}
 
-% \begin{theorem}\textbf{Exponents} there is a unique function ``$(\_)^{(\_)_\mathbb{Q}} :\mathbb{Q} \times \mathbb{Q} \to \mathbb{Q}$'' s.t.
-
-%     \begin{enumerate}
-%         \setlength{\itemsep}{0pt} % No extra space between items
-%         \item       $\forall m \in \mathbb{Q} \quad m ^ 0 = 1$ 
-%         \item       $\forall m,n \in \mathbb{Q} \quad m ^ {s(n)} = m ^ n \cdot m   $
-%     \end{enumerate}
-%     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-% \end{theorem}
-
-\section{Real numbers ``$\mathbb{R}$''(Dedekind Method)}
-
-we learned about ``$\mathbb{Q}$'' before and we constructed structure
-``$(\mathbb{Q} , + , \cdot , <)$''.
-
-\begin{definition}\textbf{Cut} is a set
-    \[  Cut := \{ (X,Y) \mid Part(\{ X ,Y \} , \mathbb{Q}) \land
-        (\forall y \in X \quad \forall x \quad x < y \to x \in X )\} \]
-\end{definition}
-
-notice that because $\mathbb{Q}$ is dense it's not possible both ``$X$'' has
-greatest element and ``$Y$'' has least element.
-
-\begin{definition}\textbf{Dedekind cut}
-    \[ Dedekind(X,Y) : Cut(X,Y) \land \forall x \in X \quad \exists y \in X \quad  x < y \]
-\end{definition}
-
-Dedekind cuts like ``$(X,Y)$'' are two types.
-\begin{enumerate}
-    \setlength{\itemsep}{0pt} % No extra space between items
-    \item       those ``$Y$'' has a least element we denote them by ``$ [min(Y)] := (X,Y) $''
-    \item       those ``$Y$'' has not a least element we call them ``Gaps''
-\end{enumerate}
-
-\begin{definition}\textbf{Real numbers ``$\mathbb{R}$''} is a set
-    \[ \mathbb{R} := \{ (X,Y) \mid Dedekind(X,Y) \} \]
-    we denote it's members with ``$r_0 , r_1 ,...$''
-\end{definition}
-
-in this system ``$ 0 := [0]$'' and ``$ 1 := [1]$'' and ``$ \forall q \in
-    \mathbb{Q} \quad q := [q]$''. so we can say ``$ \mathbb{N} \subseteq \mathbb{Z}
-    \subseteq \mathbb{Q} \subseteq \mathbb{R}$''.
-
-\begin{theorem}\textbf{Summation} there is a unique function ``$+_\mathbb{R} :\mathbb{R} \times \mathbb{R} \to \mathbb{R}$'' s.t.
-
-    \[ (X  , Y) +_\mathbb{R} (Z  , U)  = ( \{ x + y \mid x \in X \land y \in Y \}  ,  \{ x + y \mid x \in Z \land y \in U \} ) \]
-
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{theorem}
-
-\begin{definition}\textbf{Order in $\mathbb{R}$} .\\
-    \[ (X  , Y) <_\mathbb{R} (Z  , U)  : X \subseteq Z \]
-\end{definition}
-
-\begin{theorem}\textbf{Multiplication} there is a unique function ``$\times_\mathbb{R} :\mathbb{R} \times \mathbb{R} \to \mathbb{R}$'' s.t.
-    ($ \mathbb{Q} ^  {\leq 0} := \{ x \in \mathbb{Q} \mid x \leq 0 \} \quad , \quad \mathbb{Q} ^  {0 \leq } := \{ x \in \mathbb{Q} \mid 0 \leq x \}$)\\
-    if $  0 <_\mathbb{R} (X  , Y) , (Z  , U)$
-    \[ (X  , Y) \times_\mathbb{R} (Z  , U)  = (  \mathbb{Q} ^  {\leq 0 } \cup
-        \{ x y \mid x \in X \land y \in Z \land x,y > 0 \}  ,  \{ x  y \mid x \in Z \land y \in U \} ) \]
-
-    if $ 0 <_\mathbb{R} (X , Y) , 0 >_\mathbb{R} (Z , U) $
-    \[ (X  , Y) \times_\mathbb{R} (Z  , U)  = (   \{ x y \mid x \in Y \land y \in Z  \}  ,
-        \{ x  y \mid x \in X \land y \in U \land x > 0 \land y < 0 \} \cup \mathbb{Q} ^ {0 \leq}  ) \]
-
-    if $ 0 >_\mathbb{R} (X , Y) , 0 <_\mathbb{R} (Z , U) $
-    \[ (X  , Y) \times_\mathbb{R} (Z  , U)  = (  \{ x y \mid x \in X \land y \in U \}  ,
-        \{ x  y \mid x \in Y \land y \in Z \land x < 0 , y > 0  \} \cup \mathbb{Q} ^ {0 \leq}    ) \]
-
-    if $ 0 >_\mathbb{R} (X , Y) , (Z , U)$
-    \[ (X  , Y) \times_\mathbb{R} (Z  , U)  = (  \mathbb{Q} ^  {\leq 0} \cup
-        \{ x y \mid x \in Y \land y \in U \land x,y < 0 \}  ,  \{ x  y \mid x \in X \land y \in Z \} ) \]
-
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{theorem}
-
-this lemma let us use ``$<$'' instead of ``$<_\mathbb{R}$'', ``$+$'' instead of
-``$+_\mathbb{R}$'' and ``$\times$'' instead of ``$\times_\mathbb{R}$''.
-
-\begin{lemma}prove.
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $/ \therefore   \forall x,y \in \mathbb{Q} \quad x <_\mathbb{R} y  \leftrightarrow x  < y$
-        \item       $/ \therefore   \forall x,y \in \mathbb{Q} \quad x +_\mathbb{R} y  = x  + y$
-        \item       $/ \therefore   \forall x,y \in \mathbb{Q} \quad x \times_\mathbb{R} y  = x  \times y$
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{lemma}
-
-we denote ``Multiplication'' with ``$x \cdot y$'' and ``$x y$'' too.
-
-\begin{lemma}prove.
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall x ,y ,z  \in \mathbb{R} \quad (x +y )+z  = x +(y +z )  $  (assosiative $+$)
-        \item       $\forall x \in \mathbb{R} \quad x + 0 = 0 + x = x$  (identity  $+$)
-        \item       $\forall x \in \mathbb{R} \quad \exists y \in \mathbb{R} \quad x + y = y + x = 0$ (inverse  $+$)
-        \item       $\forall x ,y  \in \mathbb{R} \quad x +y  = y +x $  (commutative(abelian)  $+$)
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{lemma}
-
-\begin{lemma}prove.
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall x ,y ,z  \in \mathbb{R} \quad (x   y )  z  = x  (y   z )  $  (assosiative $\times$)
-        \item       $\forall x \in \mathbb{R} \quad x \cdot 1 = 1 \cdot x = x$  (identity  $\times$)
-        \item       $\forall x  \in \mathbb{R} - \{0\} \quad \exists y \in \mathbb{R} \quad x  y = y  x = 1$  (inverse  $\times$)
-        \item       $\forall x ,y  \in \mathbb{R} \quad x   y  = y   x $  (commutative(abelian)  $\times$)
-        \item       $\forall x ,y ,z  \in \mathbb{R} \quad \Big(x   (y  + z ) = x   y  +  x   z  \Big)
-                  \land     \Big((x  + y )  z  = x   z  +  y   z  \Big)  $  (distributive $\times$)
-              % \item       $\forall x ,y   \in \mathbb{R} \quad   x y = 0   \to  x = 0  \lor  y = 0 $ (zero divisor free $\times$)
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{lemma}
-
-\begin{theorem}
-    \textbf{Linear order of Real numbers($\mathbb{R}$)} prove   ``$ (\mathbb{R} , <_\mathbb{R}  )  $
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item        is lineary ordered.
-        \item       $ \Big( \forall x \in \mathbb{R} \quad   \exists y \in \mathbb{R} \quad  x < y \Big)
-                  \land \Big( \forall x \in \mathbb{R} \quad   \exists y \in \mathbb{R} \quad   y < x \Big)  $ (doesn't have endpoints)
-        \item       $  \forall x,y  \in \mathbb{R} \quad \exists z \in \mathbb{R} \quad  x \not= y \to   x < z < y  $ (dense)
-        \item       $  \forall X  \subseteq \mathbb{R} \quad  (X \not= \emptyset \land \exists y \in \mathbb{R} \quad Uppreb(X,y))
-                  \to (\exists y \in \mathbb{R} \quad  sup(X)=y)  $ (complete)
-        \item       $\forall x ,y ,z \in \mathbb{R} \quad x  < y  \to x  + z < y  + z  $
-        \item       $\forall x ,y ,z \in \mathbb{R} \quad x  < y  \land 0 < z \to x  z < y  k  $
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{theorem}
-
-\section{Real numbers ``$\mathbb{R}$''(Cauchy Method)}
-
-we want to make real numbers in another way. we use the ``$\mathbb{R}$'' name
-for this method too in the end you will see these two structures are
-isomprpphic.
+\section{Real numbers ``$\mathbb{R}$''}
 
 before we we get to lesson define function ``$|\_| : \mathbb{Q} \times
     \mathbb{Q} \to \mathbb{Q}$'' like this.
@@ -4008,25 +3907,81 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-% \begin{theorem}\textbf{Exponents} there is a unique function ``$(\_)^{(\_)_\mathbb{Z}} :\mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$'' s.t.
+\begin{theorem}\textbf{Exponents} there is a unique function ``$(\_)^{(\_)} :\mathbb{C} \times \mathbb{N} \to \mathbb{C}$'' s.t.
 
-%     \begin{enumerate}
-%         \setlength{\itemsep}{0pt} % No extra space between items
-%         \item       $\forall m \in \mathbb{Z} \quad m ^ 0 = 1$ 
-%         \item       $\forall m,n \in \mathbb{Z} \quad m ^ {s(n)} = m ^ n \cdot m   $
-%     \end{enumerate}
-%     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-% \end{theorem}
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall x \in \mathbb{C} \quad x ^ 0 = 1$
+        \item       $\forall x \in \mathbb{C} \quad \forall n \in \mathbb{N} \quad  x ^ {s(n)} = x ^ n \cdot x   $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
 
-% \begin{theorem}\textbf{Exponents} there is a unique function ``$(\_)^{(\_)_\mathbb{Q}} :\mathbb{Q} \times \mathbb{Q} \to \mathbb{Q}$'' s.t.
+\begin{lemma}prove for ``$(\mathbb{C} , + , \cdot , (\_)^{(\_)} )$''
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall x   \in \mathbb{Z} \quad \forall m ,n  \in \mathbb{N} \quad  x^m  \cdot  x^n = x^{m  + n}  $
+        \item       $\forall x   \in \mathbb{Z} \quad \forall m ,n  \in \mathbb{N} \quad (x^m)^n = x^{m n}  $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
 
-%     \begin{enumerate}
-%         \setlength{\itemsep}{0pt} % No extra space between items
-%         \item       $\forall m \in \mathbb{Q} \quad m ^ 0 = 1$ 
-%         \item       $\forall m,n \in \mathbb{Q} \quad m ^ {s(n)} = m ^ n \cdot m   $
-%     \end{enumerate}
-%     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-% \end{theorem}
+\begin{theorem}\textbf{Exponents} there is a unique function ``$(\_)^{(\_)} :\mathbb{C} \times \mathbb{Z} \to \mathbb{C}$'' s.t.
+
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall x \in \mathbb{C} \quad x ^ 0 = 1$
+        \item       $\forall x \in \mathbb{C} \quad \forall m ,n  \in \mathbb{N} \quad  x ^ {m-n} = \frac{x ^ m}{x^n}    $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\begin{lemma}prove for ``$(\mathbb{C} , + , \cdot  )$''
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall x   \in \mathbb{C} \quad \forall y ,z  \in \mathbb{Z} \quad  x^y  \cdot  x^z = x^{y  + z}  $
+        \item       $\forall x   \in \mathbb{C} \quad \forall y ,z  \in \mathbb{Z} \quad (x^y)^z = x^{y z}  $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{theorem}\textbf{Big Sum} if ``$a : \mathbb{N} \to \mathbb{C}$'' there is a unique function ``$\sum_{i = 0}^{(\_)} (\_)  :\mathbb{C} \times \mathbb{N} \to \mathbb{C}$'' s.t.
+
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall a \quad  \sum_{i = 0}^{0} (a_0)  = a_0$
+        \item       $\forall a \quad \forall n \in \mathbb{N} \quad  \sum_{i = 0}^{s(n)} a_{s(n)} = \sum_{i = 0}^{n} a_n + a_{s(n)}  $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\begin{lemma}prove for ``$(\mathbb{C} , + , \cdot  )$''
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall n   \in \mathbb{N} \quad \forall a , b   \quad  \sum_{i = 0}^n a_n + \sum_{i = 0}^n b_n = \sum_{i = 0}^n (a_n + b_n )  $
+        \item       $\forall n   \in \mathbb{N} \quad \forall a   \quad k \sum_{i = 0}^n a_n = \sum_{i = 0}^n ka_n $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{theorem}\textbf{Big Product} if ``$a : \mathbb{N} \to \mathbb{C}$'' there is a unique function ``$\prod_{i = 0}^{(\_)} (\_)  :\mathbb{C} \times \mathbb{N} \to \mathbb{C}$'' s.t.
+
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall a \quad  \prod_{i = 0}^0 (a_0)  = a_0$
+        \item       $\forall a \quad \forall n \in \mathbb{N} \quad  \prod_{i = 0}^{s(n)} a_{s(n)} = \prod_{i = 0}^n a_n \cdot a_{s(n)}  $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\begin{lemma}prove for ``$(\mathbb{C} , + , \cdot  )$''
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall n   \in \mathbb{N} \quad \forall a , b   \quad  \prod_{i = 0}^n a_n  \prod_{i = 0}^n b_n = \prod_{i = 0}^n (a_n  b_n )  $
+        \item       $\forall n   \in \mathbb{N} \quad \forall a   \quad  (\prod_{i = 0}^n a_n)^k = \prod_{i = 0}^n (a_n)^k $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
 
 \chapter{Finite and Infinite sets}
 
@@ -4108,19 +4063,18 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-\begin{corollary} a set is at most countable iff it's finite or countable. 
+\begin{corollary} a set is at most countable iff it's finite or countable.
 \end{corollary}
 
-\begin{lemma} range of infinite set is atmost countable.\\
+\begin{lemma} range of infinite sequence is atmost countable.\\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
-
 
 \begin{lemma} union of two countable set is  countable.\\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-\begin{corollary} finite union of countable sets is countable. 
+\begin{corollary} finite union of countable sets is countable.
 \end{corollary}
 
 \begin{lemma} if ``$A$'' and ``$B$'' are countable sets then ``$A \times B$'' is  countable.\\
@@ -4140,7 +4094,85 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
+\begin{corollary} set of all finite subsets of countable set is countable.\\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{corollary}
+
+
+\begin{corollary} $\mathbb{Z}$ and $\mathbb{Q}$ are countable.\\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{corollary}
+
+
+\begin{corollary} a partition of countable set is countable.\\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{corollary}
+
+\section{Uncountable sets}
+
+
+
+\begin{lemma} $/ \therefore \mathbb{N} \prec  2^\mathbb{N} $ \\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{lemma} $/ \therefore  2^\mathbb{N} \cong \mathcal{P}(\mathbb{N})$ \\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{lemma} $/ \therefore  2^\mathbb{N} \cong \mathbb{R}$ \\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{theorem} \textbf{Cantor theorem} $/ \therefore \forall X \quad Type_0(X) \to X \prec  2^X $ \\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\begin{theorem} $/ \therefore \forall X \quad Type_0(X) \to 2^X \cong \mathcal{P}(X)$ \\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
 \chapter{Ordinals }
+
+\section{Well ordered sets}
+
+\begin{definition}
+   if  ``$(W , <)$'' is well ordered and $a \in W$  \textbf{``Initial segment''} is
+   \[ W[a] :=  \{ x \in W \mid x < a \} \]
+\end{definition}
+
+
+
+before get to next lemma Let's have a drfinition. assume  ``$(W_1 , <_1)$'' and ``$(W_2 , <_2)$''  are two  ordered  structures
+ function ``$f$'' is increasing when ``$f : W_1 \to W_2$'' is a (weak) homomorphism.
+
+ \begin{lemma}
+   if  ``$(W , <)$'' is well ordered and $f : W \to W$  is increasing then 
+   $ \forall x \in  W \quad x \leq f(x) $.
+       Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{corollary}  .\\
+        \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item      no well ordered structure is isomorph to it's initial segment of itself.
+        \item      each well orderd structure has only one automorphism, the identity.
+        \item      if  ``$(W_1 , <_1)$'' and ``$(W_2 , <_2)$''  are two isomorphic  well ordered  structures then the isomorphism is unique.
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{corollary}
+
+\begin{theorem}  if  ``$(W_1 , <_1)$'' and ``$(W_2 , <_2)$''  are two  well ordered  structures then exactly one of the following holds.\\
+        \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $(W_1 , <_1) \cong (W_2 , <_2) $
+        \item       $\exists a \in W_1 \quad  (W_1[a] , <_1) \cong (W_2 , <_2) $
+        \item       $\exists a \in W_2 \quad  (W_1 , <_1) \cong (W_2[a] , <_2) $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\section{Ordinal numbers}
 
 \chapter{Cardinals }
 
