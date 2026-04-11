@@ -3344,6 +3344,23 @@ notice that now ``$\phi(x)$'' is a proposition. so ``$\{ x \mid \forall Y \Big(
 \end{theorem}
 
 \begin{definition}
+    A set ``$T$'' is  \textbf{Transitive} if $u \in v \in T$ implies $ u \in T$.
+
+    \[
+        Transitive(T) : \forall u,v \quad  u \in v \in T \to u \in T
+    \]
+\end{definition}
+
+\begin{lemma}.\\
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall n \in \mathbb{N} \quad  Transitive(n)  $ 
+        \item       $Transitive( \mathbb{N})$ 
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{definition}
     \textbf{Order in Natural numbers($\mathbb{N}$)}
 
     \[
@@ -3351,12 +3368,15 @@ notice that now ``$\phi(x)$'' is a proposition. so ``$\{ x \mid \forall Y \Big(
     \]
 \end{definition}
 
+
+
 \begin{theorem}
-    \textbf{Order of Natural numbers($\mathbb{N}$)} prove   ``$ (\mathbb{N} , <  )  $
+    \textbf{Order of Natural numbers($\mathbb{N}$)} prove   
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       is lineary ordered.
-        \item       is Well ordered.
+        \item        $ \forall n \in \mathbb{N} \quad (n , <  )  $ is Well ordered.
+        \item        $ (\mathbb{N} , <  )  $ is lineary ordered.
+        \item        $ (\mathbb{N} , <  )  $ is Well ordered.
         \item       $ \Big( \forall x \in \mathbb{N} \quad   \exists y \in \mathbb{N} \quad  x < y \Big)  $ (doesn't have right endpoint)
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
@@ -3517,6 +3537,7 @@ we call ``$\mathfrak{N}$'' a model of ``Peano arithmetic''.
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       $\forall m,n,k \in N \quad (m+n)+k = m+(n+k)  $ (assosiative $+$)
         \item       $\forall m \in N \quad m + 0 = 0 + m = m$ (identity  $+$)
+        \item       $\forall m,n,k \in N \quad m + k = n + k  \to m = n $ (cancellative  $+$)
         \item       $\forall m,n \in N \quad m+n = n+m$  (commutative(abelian)  $+$)
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
@@ -4098,19 +4119,15 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{corollary}
 
-
 \begin{corollary} $\mathbb{Z}$ and $\mathbb{Q}$ are countable.\\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{corollary}
-
 
 \begin{corollary} a partition of countable set is countable.\\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{corollary}
 
 \section{Uncountable sets}
-
-
 
 \begin{lemma} $/ \therefore \mathbb{N} \prec  2^\mathbb{N} $ \\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
@@ -4137,33 +4154,33 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
 \section{Well ordered sets}
 
 \begin{definition}
-   if  ``$(W , <)$'' is well ordered and $a \in W$  \textbf{``Initial segment''} is
-   \[ W[a] :=  \{ x \in W \mid x < a \} \]
+    if  ``$(W , <)$'' is well ordered and $a \in W$  \textbf{``Initial segment''} is
+    \[ W[a] :=  \{ x \in W \mid x < a \} \]
 \end{definition}
 
+before get to next lemma Let's have a drfinition. assume ``$(W_1 , <_1)$'' and
+``$(W_2 , <_2)$'' are two ordered structures function ``$f$'' is increasing
+when ``$f : W_1 \to W_2$'' is a (weak) homomorphism.
 
-
-before get to next lemma Let's have a drfinition. assume  ``$(W_1 , <_1)$'' and ``$(W_2 , <_2)$''  are two  ordered  structures
- function ``$f$'' is increasing when ``$f : W_1 \to W_2$'' is a (weak) homomorphism.
-
- \begin{lemma}
-   if  ``$(W , <)$'' is well ordered and $f : W \to W$  is increasing then 
-   $ \forall x \in  W \quad x \leq f(x) $.
-       Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\begin{lemma}
+    if  ``$(W , <)$'' is well ordered and $f : W \to W$  is increasing then
+    $ \forall x \in  W \quad x \leq f(x) $.
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
 \begin{corollary}  .\\
-        \begin{enumerate}
+    \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item      no well ordered structure is isomorph to it's initial segment of itself.
         \item      each well orderd structure has only one automorphism, the identity.
-        \item      if  ``$(W_1 , <_1)$'' and ``$(W_2 , <_2)$''  are two isomorphic  well ordered  structures then the isomorphism is unique.
+        \item      if ``$(W_1 , <_1)$'' and ``$(W_2 , <_2)$'' are two isomorphic well ordered
+              structures then the isomorphism is unique.
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{corollary}
 
 \begin{theorem}  if  ``$(W_1 , <_1)$'' and ``$(W_2 , <_2)$''  are two  well ordered  structures then exactly one of the following holds.\\
-        \begin{enumerate}
+    \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       $(W_1 , <_1) \cong (W_2 , <_2) $
         \item       $\exists a \in W_1 \quad  (W_1[a] , <_1) \cong (W_2 , <_2) $
@@ -4173,6 +4190,64 @@ before get to next lemma Let's have a drfinition. assume  ``$(W_1 , <_1)$'' and 
 \end{theorem}
 
 \section{Ordinal numbers}
+
+\begin{definition}
+    \textbf{Order in sets}
+
+    \[
+        <_A := \{ (x,y) \in A \times A  \mid x \in y \}
+    \]
+\end{definition}
+
+
+\begin{definition}  A set ``$\alpha$'' is a \textbf{Ordinal} if 
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\alpha$ is transitive.
+        \item       $(\alpha , <_\alpha) $ is well ordered.
+    \end{enumerate}
+\end{definition}
+
+we denote it by $Ord(\aleph)$  so we have the set of ordinals($Ord$).
+
+
+\begin{lemma} Every natural number is an ordinal.\\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+In ordinal numbers we show ``$\mathbb{N}$'' with ``$\omega$''. 
+so it's just a renaming.
+
+\begin{lemma} if $\alpha$ is an ordinal then $s(\alpha)$ is an ordinal too.\\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{lemma}prove 
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $Transitive( Ord )$.
+        \item       $ \forall \alpha , \beta \in Ord \quad \alpha \subset \beta \to \alpha \in \beta $.
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+
+
+\begin{theorem}
+    \textbf{Order of Natural numbers($\mathbb{N}$)} prove   
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item        $ (Ord , <  )  $ is lineary ordered.
+        \item        $ (Ord , <  )  $ is Well ordered.
+        % \item       $ \Big( \forall x \in \mathbb{N} \quad   \exists y \in \mathbb{N} \quad  x < y \Big)  $ (doesn't have right endpoint)
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+
+\begin{theorem} The natural numbers are exactly finite ordinals.\\ 
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
 
 \chapter{Cardinals }
 
