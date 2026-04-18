@@ -2701,7 +2701,10 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
 \begin{definition}
     \textbf{Structure} ``$\mathfrak{M} $'' is a tuple defined like this.
     \[\mathfrak{M}  := (M , f_{0}, f_{1},..., f_{n},R_{0}, R_{1} ,...,R_{m}, c_{0}, c_{1},..., c_{k}) \]
-    ``$M$'' is a \textbf{nonempty} set shows our universe ``$f_i$'' are funcions and ``$R_I$'' are relations and ``$c_i$'' are constants.
+    ``$M$'' is a \textbf{nonempty} set shows our universe ``$\forall i \in \{ 0 , ... , n \} \quad f_i : M^{n'} \to M$'' are funcions and ``
+    $\forall i \in \{ 0 , ... , m \} \quad R_i \subseteq M^{m'}$''
+    are relations and ``$\forall i \in \{ 0 , ... , k \} \quad c_i \in M  $'' are constants.
+    ($M^n$ means $\overbrace{M \times M \times ... \times M}^{\text{n times}} $ we will define it later)
     and for the case we have arbitary family of functions and relations and constants.
     \[\mathfrak{M}  := (M , \{f_i \}_{i \in I_f},\{R_i \}_{i \in I_R}, \{c_i \}_{i \in I}) \]
 \end{definition}
@@ -3242,6 +3245,68 @@ if the stucture clear to us we don't write stucture index ``$min(\_),
     this theorem holds for ``$max , sup$'' too.
 \end{theorem}
 
+\chapter{ The beginning of Abstract Algebra }
+
+we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
+    \to \mathbb{N}$'' to you. we use ``$m\bigcirc n$'' instead of ``$\bigcirc
+    (m,n)$''.
+\section{Group theory}
+
+\begin{definition}
+    A structure $\mathfrak{G} := (G , \cdot) $
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       If $\forall x ,y ,z \in G \quad (x y ) z = x (y z ) $ (assosiative $\times$),
+              $\mathfrak{G}$ is a \textbf{semigroup}.
+        \item       If $\mathfrak{G}$ is a \textbf{semigroup} and $\forall x \in G \quad \exists y
+                  \in G \quad x y = y x = x$ (has identity $\times$), $\mathfrak{G}$ is a
+              \textbf{monoid}. you can prove for every \textbf{monoid} $\mathfrak{G}$
+              identity element is unique we denote it by ``$e$''(in $\times$ with ``$1$'' and
+              in $+$ with $0$).
+        \item       If $\mathfrak{G}$ is a \textbf{semigroup} and $\forall x \in G \quad \exists y
+                  \in G \quad x y = y x = e$ (has inverse $\times$), $\mathfrak{G}$ is a group.
+        \item       If $\mathfrak{G}$ is a \textbf{semigroup/monoid} and $\forall x , y , z \in N
+                  \quad x z = y z \to x = y $ (cancellative $\times$), $\mathfrak{G}$ is a
+              \textbf{cancellative semigroup/monoid}. (you can prove every group is
+              cancellative as an exercise.\twemoji{1f600})
+        \item       If $\mathfrak{G}$ is a \textbf{semigroup/monoid/group} and $\forall x ,y \in G
+                  \quad x y = y x $ (commutative(abelian) $\times$), $\mathfrak{G}$ is a
+              \textbf{commutative(abelian) semigroup/monoid/group}.
+
+    \end{enumerate}
+
+\end{definition}
+
+\section{Ring theory}
+
+\begin{definition}
+    A structure $\mathfrak{R} := (R , + ,  \cdot) $
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       If $(R , + )$ is a abelian \textbf{monoid/group} and $\forall x ,y ,z \in R
+                  \quad (x y ) z = x (y z ) $ (assosiative $\times$), $\forall x ,y ,z \in R
+                  \quad \Big(x (y + z ) = x y + x z \Big) \land \Big((x + y ) z = x z + y z \Big)
+              $ (distributive $\times$), $\mathfrak{R}$ is a \textbf{Semiring/Ring}.
+        \item       If $\mathfrak{R}$ is a \textbf{Semiring/Ring} and $\forall x \in R \quad
+                  \exists y \in R \quad x y = y x = x$ (has identity $\times$), $\mathfrak{R}$ is
+              a \textbf{Semiring/Ring with identity}. you can prove for every
+              \textbf{Semiring/Ring with identity} $\mathfrak{R}$ identity element is unique
+              we denote it by ``$1$''.
+        \item       If $\mathfrak{R}$ is a \textbf{Semiring/Ring} and $\forall x ,y \in R \quad x y
+                  = 0 \to x = 0 \lor y = 0 $ (zero divisor free $\times$), $\mathfrak{R}$ is a
+              \textbf{zero divisor free Semiring/Ring}. (you can prove every \textbf{division
+                  Semiring/Ring} is zero divisor free as an exercise.\twemoji{1f600})
+        \item       If $\mathfrak{R}$ is a \textbf{Semiring/Ring with identity} and $\forall x \in
+                  R \quad \exists y \in R \quad x y = y x = 1$ (has inverse $\times$),
+              $\mathfrak{R}$ is a \textbf{division Semiring/Ring} with.
+        \item       If $\mathfrak{R}$ is a \textbf{Semiring/Ring} and $\forall x ,y \in R \quad x y
+                  = y x $ (commutative(abelian) $\times$), $\mathfrak{R}$ is a
+              \textbf{commutative(abelian) Semiring/Ring}.
+
+    \end{enumerate}
+
+\end{definition}
+
 \chapter{ Natural numbers  }
 
 \section{Introduction to Natural numbers}
@@ -3354,8 +3419,8 @@ notice that now ``$\phi(x)$'' is a proposition. so ``$\{ x \mid \forall Y \Big(
 \begin{lemma}.\\
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall n \in \mathbb{N} \quad  Transitive(n)  $ 
-        \item       $Transitive( \mathbb{N})$ 
+        \item       $\forall n \in \mathbb{N} \quad  Transitive(n)  $
+        \item       $Transitive( \mathbb{N})$
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
@@ -3368,10 +3433,8 @@ notice that now ``$\phi(x)$'' is a proposition. so ``$\{ x \mid \forall Y \Big(
     \]
 \end{definition}
 
-
-
 \begin{theorem}
-    \textbf{Order of Natural numbers($\mathbb{N}$)} prove   
+    \textbf{Order of Natural numbers($\mathbb{N}$)} prove
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item        $ \forall n \in \mathbb{N} \quad (n , <  )  $ is Well ordered.
@@ -3456,10 +3519,6 @@ of all infinite sequences of $a \in A$.
 
 \section{Arithmetic of Natural numbers}
 
-we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
-    \to \mathbb{N}$'' to you. we use ``$m\bigcirc n$'' instead of ``$\bigcirc
-    (m,n)$''.
-
 \begin{theorem}\textbf{Summation} there is a unique function ``$+ :\mathbb{N} \times \mathbb{N} \to \mathbb{N}$'' s.t.
 
     \begin{enumerate}
@@ -3469,8 +3528,6 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
-
-
 
 \begin{theorem}\textbf{Multiplication} there is a unique function ``$\times :\mathbb{N} \times \mathbb{N} \to \mathbb{N}$'' s.t.
 
@@ -3482,17 +3539,6 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 we denote also ``Multiplication'' with ``$m \cdot n$'' and ``$mn$'' too.
-
-
-
-\begin{lemma}prove for ``$(\mathbb{N} , + , \times , <)$''
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall m,n,k \in \mathbb{N} \quad m < n \to m + k < n + k  $
-        \item       $\forall m,n,k \in \mathbb{N} \quad m < n \land 0 < k \to m k < n k  $
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{lemma}
 
 \section{Peano arithmetic}
 
@@ -3537,6 +3583,19 @@ we call ``$\mathfrak{N}$'' a model of ``Peano arithmetic''.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
+Now define ``$ x < y : \exists z \not=0 \quad x + z = y $''. You can prove for
+natural numbers
+\[  \forall m,n \in \mathbb{N} \quad m < n \leftrightarrow \exists k \not=0 \quad m + k = n \]
+
+\begin{lemma}prove for ``$(N , + , \times , <)$''
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall x , y , z \in N \quad x < y \to x + z < y + z  $
+        \item       $\forall x , y , z \in N \quad x < y \land 0 < z \to x z < y z  $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
 as you can see ``$(\mathbb{N} , + , \times , s , 0)$'' is a model of peano
 arithmetic. so properties are true for them.
 
@@ -3554,7 +3613,7 @@ we learned about ``$\mathbb{N}$'' before and we constructed structure
     we denote it's members with ``$z_0 , z_1 ,...$''
 \end{definition}
 
-in this system ``$ 0 := [(0,0)]$'' and ``$ \forall  n  \in \mathbb{N} \quad n :=
+in this system ``$ 0 := [(0,0)]$'' and ``$ \forall n \in \mathbb{N} \quad n :=
     [(n,0)]$'' and ``$\forall n \in \mathbb{N} \quad -n := [(0,n)]$''. in
 general``$\forall m,n \in \mathbb{N} \quad m-n := [(m,n)]$''. so we can say ``$
     \mathbb{N} \subseteq \mathbb{Z}$''.
@@ -4180,8 +4239,7 @@ when ``$f : W_1 \to W_2$'' is a (weak) homomorphism.
     \]
 \end{definition}
 
-
-\begin{definition}  A set ``$\alpha$'' is a \textbf{Ordinal} if 
+\begin{definition}  A set ``$\alpha$'' is a \textbf{Ordinal} if
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       $\alpha$ is transitive.
@@ -4189,21 +4247,20 @@ when ``$f : W_1 \to W_2$'' is a (weak) homomorphism.
     \end{enumerate}
 \end{definition}
 
-we denote it by $Ord(\aleph)$  so we have the set of ordinals($Ord$).
-
+we denote it by $Ord(\aleph)$ so we have the set of ordinals($Ord$).
 
 \begin{lemma} Every natural number is an ordinal.\\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-In ordinal numbers we show ``$\mathbb{N}$'' with ``$\omega$''. 
-so it's just a renaming.
+In ordinal numbers we show ``$\mathbb{N}$'' with ``$\omega$''. so it's just a
+renaming.
 
 \begin{lemma} if $\alpha$ is an ordinal then $s(\alpha)$ is an ordinal too.\\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-\begin{lemma}prove 
+\begin{lemma}prove
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       $Transitive( Ord )$.
@@ -4212,36 +4269,30 @@ so it's just a renaming.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-
-
 \begin{theorem}
-    \textbf{Order of Ordinals} prove   
+    \textbf{Order of Ordinals} prove
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item        $ (Ord , <  )  $ is lineary ordered.
         \item        $ (Ord , <  )  $ is Well ordered.
-        % \item       $ \Big( \forall x \in \mathbb{N} \quad   \exists y \in \mathbb{N} \quad  x < y \Big)  $ (doesn't have right endpoint)
+              % \item       $ \Big( \forall x \in \mathbb{N} \quad   \exists y \in \mathbb{N} \quad  x < y \Big)  $ (doesn't have right endpoint)
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-
-\begin{theorem} The natural numbers are exactly finite ordinals.\\ 
+\begin{theorem} The natural numbers are exactly finite ordinals.\\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-
 \section{Transfinite Induction}
-
 
 \section{Transfinite Recurtion}
 
-
 \section{Arithmetic of Ordinals}
 
-we want to introduce some functions ``$\bigcirc :Ord \times Ord
-    \to Ord$'' to you. we use ``$\alpha  \bigcirc n$'' instead of ``$\bigcirc
-    (\alpha ,  \beta  )$''.
+we want to introduce some functions ``$\bigcirc :Ord \times Ord \to Ord$'' to
+you. we use ``$\alpha \bigcirc n$'' instead of ``$\bigcirc (\alpha , \beta
+    )$''.
 
 \begin{theorem}\textbf{Summation} there is a unique function ``$+ :Ord \times Ord \to Ord$'' s.t.
 
@@ -4252,8 +4303,6 @@ we want to introduce some functions ``$\bigcirc :Ord \times Ord
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
-
-
 
 \begin{theorem}\textbf{Multiplication} there is a unique function ``$\times :Ord \times Ord \to Ord$'' s.t.
 
@@ -4266,38 +4315,33 @@ we want to introduce some functions ``$\bigcirc :Ord \times Ord
 \end{theorem}
 we denote also ``Multiplication'' with ``$\alpha  \cdot  \beta $'' and ``$mn$'' too.
 
-
-
-\begin{lemma}prove for ``$(Ord , + , \times , <)$''
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall \alpha , \beta ,\gamma  \in Ord \quad \alpha  <  \beta  \to \alpha  + \gamma  <  \beta  + \gamma   $
-        \item       $\forall \alpha , \beta ,\gamma  \in Ord \quad \alpha  <  \beta  \land 0 < \gamma  \to \alpha  \gamma  <  \beta  \gamma   $
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{lemma}
-
 \section{Hyper Peano arithmetic}
 
 assume a structure ``$\mathfrak{N} := (N , + , \cdot , s , 0)$''(here ``$+ ,
     \cdot , s , 0 $'' are arbitary functions and constants and doesn't have meaning
-we defined before). with ``$ Limit(x) : \forall y \in N \quad s(y) \not= x $ '' and these properties.
+we defined before). with ``$ Limit(x) : \forall y \in N \quad s(y) \not= x $ ''
+and these properties.
 
 \begin{enumerate}
     \setlength{\itemsep}{0pt} % No extra space between items
     \item       $\forall x , y  \in N \quad s(x ) = s( y ) \to x = y   $
     \item       $\forall x  \in N \quad s(x ) \not= 0$
     \item       $\forall x  \in N \quad x +0 = x $
-    \item       $\forall x , y  \in N \quad Limit(y) \to x + y = y + x $
-    \item       $\forall x , y , z \in N \quad Limit(z) \to (x + y) + z = y + (x + z) $
-    \item       $\forall x , y  \in N \quad x +s( y ) = s(x  + y )  $
     \item       $\forall x  \in N \quad x  \cdot 0 = 0$
+    \item       $\forall x , y  \in N \quad x +s( y ) = s(x  + y )  $
     \item       $\forall x , y  \in N \quad x  \cdot s( y ) = x  \cdot  y + x    $
-    \item        $\Big( \forall x \in N \quad Limit(x) \to  \phi(x) \Big) \land  
-    \Big( \forall  y  \in N \quad \big( \phi( y ) \to \phi(s( y )) \big) \Big) \to \forall  y \in N \quad \phi( y ) $
+    \item       $\forall x , y  \in N \quad Limit(y) \to x + y = y + x $
+    \item       $\forall x , y  \in N \quad Limit(y) \to x  y = y  x $
+    \item       $\forall x , y , z \in N \quad Limit(z) \to (x + y) + z = y + (x + z) $
+    \item       $\forall x , y , z \in N \quad Limit(z) \to (x  y)  z = y  (x  z) $
+    \item       $\forall x , y , z \in N \quad Limit(z) \to x ( y + z ) = x y + x  z $
+    \item       $\forall x , y , z  \in N \quad Limit(z) \to x  +  z  =  y  +  z   \to x  =  y  $
+    \item       $\forall x  , y    \in N \quad Limit(y) \to  x   y  = 0   \to  x  = 0  \lor   y  = 0 $
+    \item        $\Big( \forall x \in N \quad Limit(x) \to  \phi(x) \Big) \land
+              \Big( \forall  y  \in N \quad \big( \phi( y ) \to \phi(s( y )) \big) \Big) \to \forall  y \in N \quad \phi( y ) $
           (this is true for arbitary ``$\phi$'')
 \end{enumerate}
-we call ``$\mathfrak{N}$'' a model of ``Peano arithmetic''.
+we call ``$\mathfrak{N}$'' a model of ``Hyper Peano arithmetic''.
 
 \begin{lemma}prove for ``$(N , +)$''
     \begin{enumerate}
@@ -4316,16 +4360,28 @@ we call ``$\mathfrak{N}$'' a model of ``Peano arithmetic''.
         \item       $\forall x , y , z  \in N \quad (mn) z  = x (nk)  $ (assosiative $\times$)
         \item       $\forall x  \in N \quad x  \cdot 1 = 1 \cdot x  = x $ (identity  $\times$)
         \item       $\forall x  , y    \in N \quad   x   y  = 0   \to  x  = 0  \lor   y  = 0 $ (zero divisor free $\times$)
-        \item       $\forall x , y  \in N \quad mn = nm$ (commutative(abelian)  $\times$)
+        \item       $\forall x , y  \in N \quad x y = y x$ (commutative(abelian)  $\times$)
         \item       $\forall x  , y  , z   \in N \quad \Big(x    ( y   +  z  ) = x     y   +  x     z   \Big)
                   \land     \Big((x   +  y  )   z   = x     z   +   y     z   \Big)  $ (distributive $\times$)
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-as you can see ``$(Ord , + , \times , s , 0)$'' is a model of peano
-arithmetic. so properties are true for them.
+Now define ``$ x < y : \exists z \not=0 \quad x + z = y $''. You can prove for
+natural numbers
+\[  \forall \alpha , \beta \in Ord \quad \alpha < \beta \leftrightarrow \exists k \not=0 \quad \alpha + k = \beta \]
 
+\begin{lemma}prove for ``$(N , + , \times , <)$''
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall x , y , z \in N \quad x < y \to x + z < y + z  $
+        \item       $\forall x , y , z \in N \quad x < y \land 0 < z \to x z < y z  $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+as you can see ``$(Ord , + , \times , s , 0)$'' is a model of hyper peano
+arithmetic. so properties are true for them.
 
 \chapter{Cardinals }
 
@@ -4335,24 +4391,22 @@ arithmetic. so properties are true for them.
 
 \chapter{fantacy numbers($ \mathbb{Z} (Ord) , \mathbb{Q} (Ord) ,\mathbb{R} (Ord) ,\mathbb{C} (Ord)$) }
 
-
-
 \section{Hyper Integers``$\mathbb{Z} (Ord)$''}
 
-we learned about ``$Ord$'' before and we constructed structure
-``$(Ord , + , \cdot , <)$''. if you assume ``$Ord \times
-    Ord$'' we can define an equivalence relation ``$ (\alpha_1 , \beta_1) \sim (\alpha_2 ,
-    \beta_2) : \alpha_1 + \beta_2 = \alpha_2 + m_1 $''(check it's an equivalence relation).
+we learned about ``$Ord$'' before and we constructed structure ``$(Ord , + ,
+    \cdot , <)$''. if you assume ``$Ord \times Ord$'' we can define an equivalence
+relation ``$ (\alpha_1 , \beta_1) \sim (\alpha_2 , \beta_2) : \alpha_1 +
+    \beta_2 = \alpha_2 + m_1 $''(check it's an equivalence relation).
 
 \begin{definition}\textbf{Hyper Integers``$\mathbb{Z} (Ord)$''} is a set
     \[ \mathbb{Z} (Ord) := Ord \times Ord / \sim\]
     we denote it's members with ``$z_0 , z_1 ,...$''
 \end{definition}
 
-in this system ``$ 0 := [(0,0)]$'' and ``$ \forall  \beta  \in Ord \quad  \beta  :=
-    [( \beta ,0)]$'' and ``$\forall  \beta  \in Ord \quad - \beta  := [(0, \beta )]$''. in
-general``$\forall \alpha , \beta  \in Ord \quad \alpha - \beta  := [(\alpha , \beta )]$''. so we can say ``$
-    Ord \subseteq \mathbb{Z} (Ord)$''.
+in this system ``$ 0 := [(0,0)]$'' and ``$ \forall \beta \in Ord \quad \beta :=
+    [( \beta ,0)]$'' and ``$\forall \beta \in Ord \quad - \beta := [(0, \beta
+    )]$''. in general``$\forall \alpha , \beta \in Ord \quad \alpha - \beta :=
+    [(\alpha , \beta )]$''. so we can say ``$ Ord \subseteq \mathbb{Z} (Ord)$''.
 
 \begin{theorem}\textbf{Summation} there is a unique function ``$+_\mathbb{Z} (Ord) :\mathbb{Z} (Ord) \times \mathbb{Z} (Ord) \to \mathbb{Z} (Ord)$'' s.t.
 
@@ -4372,8 +4426,9 @@ general``$\forall \alpha , \beta  \in Ord \quad \alpha - \beta  := [(\alpha , \b
     \[ [(\alpha_1 , \beta_1)] <_{{\mathbb{Z} (Ord)}} [(\alpha_2 , \beta_2)]  : \alpha_1 + \beta_2  < \alpha_2 + \beta_1 \]
 \end{definition}
 
-this lemma let us use ``$<$'' instead of ``$<_{\mathbb{Z} (Ord)}$'', ``$+$'' instead of
-``$+_{\mathbb{Z} (Ord)}$'' and ``$\times$'' instead of ``$\times_{\mathbb{Z} (Ord)}$''.
+this lemma let us use ``$<$'' instead of ``$<_{\mathbb{Z} (Ord)}$'', ``$+$''
+instead of ``$+_{\mathbb{Z} (Ord)}$'' and ``$\times$'' instead of
+``$\times_{\mathbb{Z} (Ord)}$''.
 
 \begin{lemma}prove.
     \begin{enumerate}
@@ -4427,10 +4482,10 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
 \section{Hyper Rational numbers ``$\mathbb{Q} (Ord) $''}
 
 we learned about ``$\mathbb{Z} (Ord)$'' before and we constructed structure
-``$(\mathbb{Z} (Ord) , + , \cdot , <)$''. if you assume ``$\mathbb{Z} (Ord) \times
-    (\mathbb{Z} (Ord) - \{0\})$'' we can define an equivalence relation ``$ (y_1 , x_1 )
-    \sim (y_2 , x_2 ) : y_1 \cdot x_2 = y_2 \cdot x_1 $''(check it's an equivalence
-relation).
+``$(\mathbb{Z} (Ord) , + , \cdot , <)$''. if you assume ``$\mathbb{Z} (Ord)
+    \times (\mathbb{Z} (Ord) - \{0\})$'' we can define an equivalence relation ``$
+    (y_1 , x_1 ) \sim (y_2 , x_2 ) : y_1 \cdot x_2 = y_2 \cdot x_1 $''(check it's
+an equivalence relation).
 
 \begin{definition}\textbf{Hyper Rational numbers``$\mathbb{Q} (Ord)$''} is a set
     \[ \mathbb{Q} (Ord) := \mathbb{Z} (Ord) \times (\mathbb{Z} (Ord) - \{0\}) / \sim\]
@@ -4438,10 +4493,10 @@ relation).
 \end{definition}
 
 in this system ``$ 0 := [(0,1)]$'' and ``$ 1 := [(1,1)]$'' and ``$ \forall x
-    \in \mathbb{Z} (Ord) \quad x := [(x,1)]$'' and ``$\forall x \in \mathbb{Z} (Ord) \quad
-    \frac{1}{x} := [(1,x)]$''. in general ``$\forall x,y \in \mathbb{Z} (Ord) \quad
-    \frac{x}{y} := [(x,y)]$''. so we can say ``$ Ord \subseteq \mathbb{Z} (Ord)
-    \subseteq \mathbb{Q} (Ord) $''.
+    \in \mathbb{Z} (Ord) \quad x := [(x,1)]$'' and ``$\forall x \in \mathbb{Z}
+    (Ord) \quad \frac{1}{x} := [(1,x)]$''. in general ``$\forall x,y \in \mathbb{Z}
+    (Ord) \quad \frac{x}{y} := [(x,y)]$''. so we can say ``$ Ord \subseteq
+    \mathbb{Z} (Ord) \subseteq \mathbb{Q} (Ord) $''.
 
 \begin{theorem}\textbf{Summation} there is a unique function ``$+_{\mathbb{Q} (Ord)} :\mathbb{Q} (Ord) \times \mathbb{Q} (Ord) \to \mathbb{Q} (Ord)$'' s.t.
 
@@ -4464,8 +4519,9 @@ in this system ``$ 0 := [(0,1)]$'' and ``$ 1 := [(1,1)]$'' and ``$ \forall x
     \[ [(x  , z)] <_{\mathbb{Q} (Ord)} [(y  , u)]  : x  \cdot u  > y  \cdot z \]
 \end{definition}
 
-this lemma let us use ``$<$'' instead of ``$<_{\mathbb{Q} (Ord)}$'', ``$+$'' instead of
-``$+_{\mathbb{Q} (Ord)}$'' and ``$\times$'' instead of ``$\times_{\mathbb{Q} (Ord)}$''.
+this lemma let us use ``$<$'' instead of ``$<_{\mathbb{Q} (Ord)}$'', ``$+$''
+instead of ``$+_{\mathbb{Q} (Ord)}$'' and ``$\times$'' instead of
+``$\times_{\mathbb{Q} (Ord)}$''.
 
 \begin{lemma}prove.
     \begin{enumerate}
@@ -4533,12 +4589,12 @@ before we we get to lesson define function ``$|\_| : \mathbb{Q} (Ord) \times
 \]
 
 if you are not fimiliar to this notation it means ``$ |\_| := \{ (x,y) \in
-    \mathbb{Q} (Ord) \times \mathbb{Q} (Ord) \mid (0 \leq x \to y=x ) \land ( x < 0 \to y = -x
-    ) \} $''. learn this notation because we want to use later.
+    \mathbb{Q} (Ord) \times \mathbb{Q} (Ord) \mid (0 \leq x \to y=x ) \land ( x < 0
+    \to y = -x ) \} $''. learn this notation because we want to use later.
 
 we learned about ``$\mathbb{Q} (Ord)$'' before and we constructed structure
-``$(\mathbb{Q} (Ord) , + , \cdot , <)$''. now assume $\mathbb{Q} (Ord)^Ord$(we know
-what does it mean by the definition. it means all the sequences of
+``$(\mathbb{Q} (Ord) , + , \cdot , <)$''. now assume $\mathbb{Q} (Ord)^Ord$(we
+know what does it mean by the definition. it means all the sequences of
 $\mathbb{Q} (Ord)$). we don't want it all we just want a subset.
 
 \begin{definition}\textbf{Cauchy sequence} is a sequence like ``$(a_i)_{i \in Ord} \in \mathbb{Q} (Ord)^Ord$'' s.t. elements of it get infinitly
@@ -4548,19 +4604,19 @@ $\mathbb{Q} (Ord)$). we don't want it all we just want a subset.
 
 we usually give ``$N$'' natural numbers but it's not necessary.
 
-we define an equivalence relation ``$ (a_i)_{i \in Ord} \sim (b_i)_{i
-    \in Ord} : \forall \epsilon > 0 \quad \exists N \quad \forall n > N
-    \quad | a_n - b_n | < \epsilon $''(check it's an equivalence relation).
+we define an equivalence relation ``$ (a_i)_{i \in Ord} \sim (b_i)_{i \in Ord}
+    : \forall \epsilon > 0 \quad \exists N \quad \forall n > N \quad | a_n - b_n |
+    < \epsilon $''(check it's an equivalence relation).
 
 \begin{definition}\textbf{Hyper Real numbers ``$\mathbb{R} (Ord)$''} is a set
     \[ \mathbb{R} (Ord) :=  Cauchy/ \sim  \]
     we denote it's members with ``$r_0 , r_1 ,...$''
 \end{definition}
 
-in this system ``$ 0 := [(0)_{i \in Ord}]$'' and ``$ 1 := [(1)_{i \in
-            Ord}]$'' and ``$ \forall q \in \mathbb{Q} (Ord) \quad q := [(q)_{i \in
-            Ord}]$''. so we can say ``$ Ord \subseteq \mathbb{Z} (Ord) \subseteq
-    \mathbb{Q} (Ord) \subseteq \mathbb{R} (Ord)$''.
+in this system ``$ 0 := [(0)_{i \in Ord}]$'' and ``$ 1 := [(1)_{i \in Ord}]$''
+and ``$ \forall q \in \mathbb{Q} (Ord) \quad q := [(q)_{i \in Ord}]$''. so we
+can say ``$ Ord \subseteq \mathbb{Z} (Ord) \subseteq \mathbb{Q} (Ord) \subseteq
+    \mathbb{R} (Ord)$''.
 
 \begin{theorem}\textbf{Summation} there is a unique function ``$+_{\mathbb{R} (Ord)} :\mathbb{R} (Ord) \times \mathbb{R} (Ord) \to \mathbb{R} (Ord)$'' s.t.
 
@@ -4581,8 +4637,9 @@ in this system ``$ 0 := [(0)_{i \in Ord}]$'' and ``$ 1 := [(1)_{i \in
         \exists \epsilon > 0 \quad \exists N  \quad \forall n > N  \quad  b_n - a_n  > \epsilon  \]
 \end{definition}
 
-this lemma let us use ``$<$'' instead of ``$<_{\mathbb{R} (Ord)}$'', ``$+$'' instead of
-``$+_{\mathbb{R} (Ord)}$'' and ``$\times$'' instead of ``$\times_{\mathbb{R} (Ord)}$''.
+this lemma let us use ``$<$'' instead of ``$<_{\mathbb{R} (Ord)}$'', ``$+$''
+instead of ``$+_{\mathbb{R} (Ord)}$'' and ``$\times$'' instead of
+``$\times_{\mathbb{R} (Ord)}$''.
 
 \begin{lemma}prove.
     \begin{enumerate}
@@ -4647,10 +4704,10 @@ we learned about ``$\mathbb{R} (Ord)$'' before and we constructed structure
     we denote it's members with ``$z_0 , x ,...$''
 \end{definition}
 
-in this system ``$ 0 := (0,0)$'' and ``$ \forall n \in \mathbb{R} (Ord) \quad r :=
-    (r,0)$'' . in general ``$\forall x,y \in \mathbb{R} (Ord) \quad x + iy := (x,y)$''.
-so we can say ``$Ord \subseteq \mathbb{Z} (Ord) \subseteq \mathbb{Q} (Ord) \subseteq
-    \mathbb{R} (Ord) \subseteq \mathbb{C} (Ord)$''.
+in this system ``$ 0 := (0,0)$'' and ``$ \forall n \in \mathbb{R} (Ord) \quad r
+    := (r,0)$'' . in general ``$\forall x,y \in \mathbb{R} (Ord) \quad x + iy :=
+    (x,y)$''. so we can say ``$Ord \subseteq \mathbb{Z} (Ord) \subseteq \mathbb{Q}
+    (Ord) \subseteq \mathbb{R} (Ord) \subseteq \mathbb{C} (Ord)$''.
 
 \begin{theorem}\textbf{Summation} there is a unique function ``$+_{\mathbb{C} (Ord)} :\mathbb{C} (Ord) \times \mathbb{C} (Ord) \to \mathbb{C} (Ord)$'' s.t.
 
@@ -4666,8 +4723,8 @@ so we can say ``$Ord \subseteq \mathbb{Z} (Ord) \subseteq \mathbb{Q} (Ord) \subs
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-this lemma let us use ``$+$'' instead of ``$+_{\mathbb{C} (Ord)}$'' and ``$\times$''
-instead of ``$\times_{\mathbb{C} (Ord)}$''.
+this lemma let us use ``$+$'' instead of ``$+_{\mathbb{C} (Ord)}$'' and
+``$\times$'' instead of ``$\times_{\mathbb{C} (Ord)}$''.
 
 \begin{lemma}prove.
     \begin{enumerate}
@@ -4782,6 +4839,24 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
 
 \chapter{New beginning for calculus }
 
+\section{Derivatives}
+
+first we have to fix a ``Main variable'' it's almost all the time ``$x$''.
+(somtimes it's ``$t$'').
+\begin{definition} assume $f : \mathbb{R} (Ord) \to \mathbb{R} (Ord)$
+    we define \textbf{Difrential $(d_\alpha(f)$)}
+    \[ d_\alpha(f) := f[ x + \alpha / x] -  f(x) \]
+\end{definition}
+
+Main reason we choose ``$x$'' in defintion becuase it's ``Main variable''. you
+can prove $\forall x \in \mathbb{R} (Ord) \quad d_\alpha(x) = \alpha(x)$.
+
+\begin{definition} we define \textbf{Derivative}
+    \[ \frac{d}{dx}  :=  \{  (f , \frac{d_\alpha(f)}{d_\alpha(x)}) \mid f : \mathbb{R} (Ord) \to \mathbb{R} (Ord) \} \]
+    there is a biggest set like $A$ s.t. $ \frac{d}{dx} A$ is a function (you can
+    prove it as an exercise). we call that set ``Derivatible funsions'' and that
+    function ``Derivative''.
+\end{definition}
 \chapter{Lebesgue Intergral}
 
 \chapter{New beginning for Probability theory}
