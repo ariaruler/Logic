@@ -3307,6 +3307,266 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
 
 \end{definition}
 
+\begin{theorem}[Universal Ring Completion of a Semiring]
+    (Standard name: “Grothendieck Ring Completion Theorem for Commutative Semirings”)
+    Let $S$ be a (not necessarily commutative) semiring.
+    There exists a ring $R$ together with a semiring homomorphism
+    \[
+        \eta : S \longrightarrow R
+    \]
+    which is universal among semiring-to-ring homomorphisms (i.e.\ every
+    homomorphism $f:S\to T$ into a ring $T$ factors uniquely through $\eta$) if and
+    only if the additive monoid $(S,+,0)$ is a \emph{cancellative commutative
+        monoid}.
+
+    In this case, $R$ is the Grothendieck group $G(S)$ of the additive monoid of
+    $S$, with multiplication extending that of $S$ by
+    \[
+        [(a,b)] \cdot [(c,d)]
+        =
+        [(ac+bd,\; ad+bc)].
+    \]
+\end{theorem}
+
+\begin{proof}
+
+    We divide the proof into two parts.
+
+    %-----------------------------------------------------------
+    \subsection*{(1) Necessity of cancellativity and commutativity of $+$}
+
+    Suppose $\eta:S\to R$ is an embedding of $S$ as a subsemiring of a ring $R$.
+    The additive structure of a ring is an abelian group. Thus the image $\eta(S)$
+    must be closed under an abelian addition. Therefore $(S,+)$ must already be a
+    commutative monoid.
+
+    If $a+c=b+c$ in $S$, then in $R$ we have
+    \[
+        \eta(a)+\eta(c) = \eta(b)+\eta(c).
+    \]
+    Cancelling $\eta(c)$ in the ring gives $\eta(a)=\eta(b)$, hence $a=b$ since
+    $\eta$ is injective. Thus $(S,+)$ must be cancellative.
+
+    This proves necessity.
+
+    %-----------------------------------------------------------
+    \subsection*{(2) Construction of the universal ring when $(S,+)$ is cancellative and commutative}
+
+    Assume now that $(S,+)$ is a cancellative commutative monoid. We form its
+    Grothendieck group:
+    \[
+        G(S) = (S\times S)/\!\sim,
+    \]
+    where the relation is
+    \[
+        (a,b)\sim(a',b')
+        \quad\Longleftrightarrow\quad
+        a + b' = a' + b.
+    \]
+
+    %-----------------------------------------------------------
+    \subsubsection*{Equivalence relation}
+
+    Reflexivity and symmetry are immediate. For transitivity, assume
+    \[
+        a+b' = a'+b,
+        \qquad
+        a'+b'' = a''+b'.
+    \]
+    Add $b$ to the second equation and $b''$ to the first, and use commutativity
+    and cancellativity to deduce
+    \[
+        a+b'' = a''+b.
+    \]
+    Thus $\sim$ is an equivalence relation.
+
+    %-----------------------------------------------------------
+    \subsubsection*{Well-defined addition}
+
+    Define
+    \[
+        [(a,b)] + [(c,d)] := [(a+c,\; b+d)].
+    \]
+    If $(a,b)\sim(a',b')$ and $(c,d)\sim(c',d')$, then
+    \[
+        a+b' = a'+b,
+        \qquad
+        c+d' = c'+d.
+    \]
+    Compute:
+    \[
+        (a+c) + (b'+d')
+        = (a+b') + (c+d')
+        = (a'+b) + (c'+d)
+        = (a'+c') + (b+d).
+    \]
+    Thus $(a+c,b+d)\sim(a'+c',b'+d')$, so addition is well defined.
+
+    %-----------------------------------------------------------
+    \subsubsection*{Well-defined multiplication}
+
+    Define
+    \[
+        [(a,b)]\cdot[(c,d)]
+        := [(ac+bd,\; ad+bc)].
+    \]
+
+    Assume $(a,b)\sim(a',b')$ and $(c,d)\sim(c',d')$, so
+    \[
+        a+b' = a'+b,
+        \qquad
+        c+d' = c'+d.
+    \]
+    Expanding distributively:
+    \[
+        (ac+bd) + (a'd' + b'c')
+        = (a+b')(c+d')
+        = (a'+b)(c'+d)
+        = (a'c'+b'd') + (ad+bc).
+    \]
+    Thus multiplication is well defined.
+
+    %-----------------------------------------------------------
+    \subsubsection*{Ring structure}
+
+    The additive structure is an abelian group by construction. Multiplication is
+    associative and distributive because it is defined via bilinearity inherited
+    from $S$. The multiplicative identity is $[(1,0)]$.
+
+    Thus $G(S)$ is a ring.
+
+    %-----------------------------------------------------------
+    \subsection*{(3) Universality}
+
+    Given any semiring-to-ring homomorphism $f:S\to T$, define
+    \[
+        \overline{f}:\; G(S)\to T,
+        \qquad
+        \overline{f}([(a,b)]) := f(a)-f(b).
+    \]
+
+    If $(a,b)\sim(a',b')$, then $a+b'=a'+b$, so applying $f$ gives
+    \[
+        f(a)+f(b') = f(a')+f(b),
+    \]
+    hence $f(a)-f(b)=f(a')-f(b')$. Thus $\overline{f}$ is well defined. It is
+    easily checked to be a ring homomorphism, and satisfies $\overline{f}\circ\eta
+        = f$. Uniqueness follows since $[(a,b)]=[(a,0)]-[(b,0)]$.
+
+    This proves the universal property.
+
+    \section*{The Field of Fractions}
+
+    The field of fractions is a fundamental concept in abstract algebra that allows
+    us to extend a given integral domain to a field. It is the smallest field
+    containing the integral domain.
+
+    \subsection*{Integral Domain}
+    An integral domain is a commutative ring with a multiplicative identity ($1 \ne
+        0$) and no zero divisors. That is, if $a \cdot b = 0$, then either $a = 0$ or
+    $b = 0$. The set of integers, $\mathbb{Z}$, is a classic example.
+
+    \subsection*{Field}
+    A field is a commutative ring with a multiplicative identity where every
+    non-zero element has a multiplicative inverse. For every $a \ne 0$, there
+    exists $b$ such that $a \cdot b = 1$. The set of rational numbers,
+    $\mathbb{Q}$, is a field.
+
+    \subsection*{Construction of the Field of Fractions}
+    Given an integral domain $D$, its field of fractions, denoted by $F(D)$, is
+    constructed by formally creating fractions of elements from $D$. We consider
+    pairs $(a, b)$ where $a, b \in D$ and $b \ne 0$. An equivalence relation $\sim$
+    is defined on these pairs: $$ (a, b) \sim (c, d) \iff ad - bc = 0 $$ The
+    elements of $F(D)$ are the equivalence classes of these pairs, denoted by
+    $\frac{a}{b}$.
+
+    \textbf{Operations in $F(D)$:} For $\frac{a}{b}, \frac{c}{d} \in F(D)$:
+    \begin{itemize}
+        \item Addition: $\frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}$
+        \item Multiplication: $\frac{a}{b} \cdot \frac{c}{d} = \frac{ac}{bd}$
+    \end{itemize}
+
+    The original integral domain $D$ is embedded into $F(D)$ via the map $\phi: D
+        \to F(D)$ defined by $\phi(a) = \frac{a}{1}$.
+
+\end{proof}
+
+\section*{Theorem: Existence and Uniqueness of the Field of Fractions}
+
+\begin{theorem}
+    Let $D$ be an integral domain. Then there exists a field $F$ and an injective ring homomorphism $\phi: D \to F$ such that for every field $K$ and every ring homomorphism $\psi: D \to K$, there exists a unique field homomorphism $f: F \to K$ such that $\psi = f \circ \phi$.
+\end{theorem}
+
+\begin{proof}
+    Let $D$ be an integral domain.
+
+    \subsection*{Part 1: Existence}
+    Consider the set $S = \{(a, b) \mid a, b \in D, b \ne 0\}$. Define an
+    equivalence relation $\sim$ on $S$: $$ (a, b) \sim (c, d) \iff ad - bc = 0 $$
+    The relation is reflexive, symmetric, and transitive because $D$ is an integral
+    domain. Let $F(D)$ be the set of equivalence classes of $S$ under $\sim$. We
+    denote the equivalence class of $(a, b)$ by $\frac{a}{b}$.
+
+    \textbf{Operations:}
+    \begin{itemize}
+        \item Addition: $\frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}$
+        \item Multiplication: $\frac{a}{b} \cdot \frac{c}{d} = \frac{ac}{bd}$
+    \end{itemize}
+    These operations are well-defined. For example, for addition, if $\frac{a}{b} = \frac{a'}{b'}$ and $\frac{c}{d} = \frac{c'}{d'}$, then $ab' = ba'$ and $cd' = dc'$. We must show $\frac{ad+bc}{bd} = \frac{a'd'+b'c'}{b'd'}$, which means showing $(ad+bc)b'd' = (a'd'+b'c')bd$. This can be verified algebraically using the properties of $D$. Similarly for multiplication.
+
+    \textbf{Field Axioms:}
+    \begin{itemize}
+        \item $F(D)$ is closed under addition and multiplication.
+        \item Addition and multiplication are associative, commutative, and distributive
+              because these properties hold in $D$.
+        \item The additive identity is $\frac{0}{1}$: $\frac{a}{b} + \frac{0}{1} = \frac{a
+                      \cdot 1 + b \cdot 0}{b \cdot 1} = \frac{a}{b}$.
+        \item The multiplicative identity is $\frac{1}{1}$: $\frac{a}{b} \cdot \frac{1}{1} =
+                  \frac{a \cdot 1}{b \cdot 1} = \frac{a}{b}$.
+        \item The additive inverse of $\frac{a}{b}$ is $\frac{-a}{b}$: $\frac{a}{b} +
+                  \frac{-a}{b} = \frac{0}{b} = \frac{0}{1}$.
+        \item The multiplicative inverse of a non-zero element $\frac{a}{b}$ (where $a \ne
+                  0$) is $\frac{b}{a}$: $\frac{a}{b} \cdot \frac{b}{a} = \frac{ab}{ba} =
+                  \frac{1}{1}$.
+    \end{itemize}
+    Thus, $F(D)$ is a field.
+
+    \textbf{Injective Ring Homomorphism $\phi: D \to F(D)$:}
+    Define $\phi(a) = \frac{a}{1}$.
+    \begin{itemize}
+        \item $\phi(a+b) = \frac{a+b}{1} = \frac{a}{1} + \frac{b}{1} = \phi(a) + \phi(b)$.
+        \item $\phi(ab) = \frac{ab}{1} = \frac{a}{1} \cdot \frac{b}{1} = \phi(a) \cdot \phi(b)$.
+        \item $\phi$ is injective: If $\phi(a) = \phi(b)$, then $\frac{a}{1} = \frac{b}{1}$, which implies $a \cdot 1 = b \cdot 1$, so $a=b$.
+    \end{itemize}
+    This establishes the existence of $F(D)$ and $\phi$.
+
+    \subsection*{Part 2: Uniqueness}
+    Suppose $K$ is another field and $\psi: D \to K$ is an injective ring
+    homomorphism satisfying the universal property. We need to define a unique
+    field homomorphism $f: F(D) \to K$ such that $\psi = f \circ \phi$.
+
+    \textbf{Define $f$:} For any $\frac{a}{b} \in F(D)$, define
+    $$ f\left(\frac{a}{b}\right) = \psi(a) (\psi(b))^{-1} $$
+    Since $\psi$ is injective and $b \ne 0$, $\psi(b) \ne 0$, so $(\psi(b))^{-1}$ exists in $K$. This map $f$ is well-defined, as shown in the detailed explanation (if $\frac{a}{b} = \frac{c}{d}$, then $ad=bc$, and applying $\psi$ gives $\psi(a)\psi(d)=\psi(b)\psi(c)$, leading to $\psi(a)(\psi(b))^{-1} = \psi(c)(\psi(d))^{-1}$).
+
+    \textbf{$f$ is a Field Homomorphism:}
+    \begin{itemize}
+        \item $f\left(\frac{a}{b} + \frac{c}{d}\right) = f\left(\frac{ad+bc}{bd}\right) = \psi(ad+bc)(\psi(bd))^{-1} = (\psi(a)\psi(d)+\psi(b)\psi(c))(\psi(b)\psi(d))^{-1} = \psi(a)(\psi(b))^{-1} + \psi(c)(\psi(d))^{-1} = f\left(\frac{a}{b}\right) + f\left(\frac{c}{d}\right)$.
+        \item $f\left(\frac{a}{b} \cdot \frac{c}{d}\right) = f\left(\frac{ac}{bd}\right) = \psi(ac)(\psi(bd))^{-1} = (\psi(a)\psi(c))(\psi(b)\psi(d))^{-1} = (\psi(a)(\psi(b))^{-1}) (\psi(c)(\psi(d))^{-1}) = f\left(\frac{a}{b}\right)f\left(\frac{c}{d}\right)$.
+    \end{itemize}
+
+    \textbf{Check Composition:}
+    For $a \in D$, $(f \circ \phi)(a) = f(\phi(a)) = f(\frac{a}{1}) = \psi(a)(\psi(1))^{-1} = \psi(a) \cdot 1_K^{-1} = \psi(a)$. So $\psi = f \circ \phi$.
+
+    \textbf{Uniqueness of $f$:}
+    Suppose $g: F(D) \to K$ is another field homomorphism such that $\psi = g \circ \phi$.
+    For any $\frac{a}{b} \in F(D)$, we have $\frac{a}{b} = \frac{a}{1} \cdot (\frac{b}{1})^{-1}$ in $F(D)$.
+    Then $g(\frac{a}{b}) = g(\frac{a}{1} \cdot (\frac{b}{1})^{-1}) = g(\frac{a}{1}) \cdot g((\frac{b}{1})^{-1}) = g(\frac{a}{1}) \cdot (g(\frac{b}{1}))^{-1}$.
+    Since $\psi = g \circ \phi$, we have $g(\frac{a}{1}) = \psi(a)$ and $g(\frac{b}{1}) = \psi(b)$.
+    So, $g(\frac{a}{b}) = \psi(a) (\psi(b))^{-1}$, which is precisely $f(\frac{a}{b})$.
+    Thus, $f = g$, and $f$ is unique.
+\end{proof}
+
 \chapter{ Natural numbers  }
 
 \section{Introduction to Natural numbers}
@@ -4288,32 +4548,68 @@ renaming.
 
 \section{Transfinite Recurtion}
 
+\begin{theorem}\textbf{Classic Summation} there is a unique function ``$ +_c :Ord \times Ord \to Ord$'' s.t.
+
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall \alpha  \in Ord \quad \alpha +_c 0 = \alpha $
+        \item       $\forall \alpha , \beta  \in Ord \quad \alpha +_c s( \beta ) = s(\alpha  +_c \beta )  $
+        \item       $\forall \alpha , \beta  \in Ord \quad limit(\beta) \to \alpha +_c \beta = \bigcup_{\beta' \in \beta} (\alpha +_c \beta') $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\begin{lemma} $ \forall \alpha , \beta \in Ord ( \alpha \leq \beta \to \exists \gamma \in Ord \quad \alpha +_c \gamma = \beta)$\\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+we show this unique ``$ \gamma $'' with ``$\beta -_c \alpha$''
+
+\begin{definition} \textbf{Trunk and Branch}
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $trunk(\alpha) := sup\{ \beta \in \alpha \mid \beta +_c \alpha = \alpha \} $
+        \item       $branch(\alpha) := \alpha -_c trunk(\alpha) $
+        \item     $  trunk(\alpha):=
+        \left\{
+            \begin{array}{l}
+                trunk(\alpha)  \quad \quad  \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad  branch(\alpha) < \beta \\
+                trunk(\alpha) +_c trunk(branch(\alpha , \beta))  \quad \quad   branch(\alpha) \geq  \beta
+            \end{array}
+            \right.$
+            \item       $branch(\alpha , \beta) := \alpha -_c trunk(\alpha , \beta) $
+            
+    \end{enumerate}
+\end{definition}
+
 \section{Arithmetic of Ordinals}
 
-we want to introduce some functions ``$\bigcirc :Ord \times Ord \to Ord$'' to
-you. we use ``$\alpha \bigcirc n$'' instead of ``$\bigcirc (\alpha , \beta
-    )$''.
+
 
 \begin{theorem}\textbf{Summation} there is a unique function ``$+ :Ord \times Ord \to Ord$'' s.t.
-
+    
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       $\forall \alpha  \in Ord \quad \alpha +0 = \alpha $
         \item       $\forall \alpha , \beta  \in Ord \quad \alpha +s( \beta ) = s(\alpha  + \beta )  $
+        \item       $\forall \alpha , \beta  \in Ord \quad limit(\beta) \land \alpha < \beta \to \alpha + \beta = \beta + \alpha  $
+        \item       $\forall \alpha , \beta  \in Ord \quad limit(\beta) \land  \beta \leq \alpha  \to \alpha + \beta = (trunk( \alpha , \beta) +_c \beta )+ branch(\alpha ,\beta) $
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
 \begin{theorem}\textbf{Multiplication} there is a unique function ``$\times :Ord \times Ord \to Ord$'' s.t.
-
+    
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       $\forall \alpha  \in Ord \quad \alpha  \times 0 = 0$
         \item       $\forall \alpha , \beta  \in Ord \quad \alpha  \times s( \beta ) = \alpha  \times  \beta + \alpha    $
+        \item       $\forall \alpha , \beta  \in Ord \quad limit(\beta) \land \alpha < \beta \to \alpha \times  \beta = \beta  \times \alpha  $
+        \item       $\forall \alpha , \beta  \in Ord \quad limit(\beta) \land  \beta \leq \alpha  \to \alpha \times \beta = \bigcup_{\beta' \in trunk( \beta)}(\alpha \times \beta' ) + \alpha \times branch( \beta) $
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
-we denote also ``Multiplication'' with ``$\alpha  \cdot  \beta $'' and ``$mn$'' too.
+we denote also ``Multiplication'' with ``$\alpha  \cdot  \beta $'' and ``$\alpha  \beta$'' too.
 
 \section{Hyper Peano arithmetic}
 
@@ -4593,18 +4889,18 @@ if you are not fimiliar to this notation it means ``$ |\_| := \{ (x,y) \in
     \to y = -x ) \} $''. learn this notation because we want to use later.
 
 we learned about ``$\mathbb{Q} (Ord)$'' before and we constructed structure
-``$(\mathbb{Q} (Ord) , + , \cdot , <)$''. now assume $\mathbb{Q} (Ord)^Ord$(we
+``$(\mathbb{Q} (Ord) , + , \cdot , <)$''. now assume $\mathbb{Q} (Ord)^\omega$(we
 know what does it mean by the definition. it means all the sequences of
 $\mathbb{Q} (Ord)$). we don't want it all we just want a subset.
 
-\begin{definition}\textbf{Cauchy sequence} is a sequence like ``$(a_i)_{i \in Ord} \in \mathbb{Q} (Ord)^Ord$'' s.t. elements of it get infinitly
+\begin{definition}\textbf{Cauchy sequence} is a sequence like ``$(a_i)_{i \in \omega} \in \mathbb{Q} (Ord)^\omega$'' s.t. elements of it get infinitly
     close to each other i.e.
-    \[  Cauchy(a_i)_{i \in Ord} : \forall \epsilon > 0 \quad \exists N  \quad \forall n,m > N  \quad | a_n - a_m | < \epsilon   \]
+    \[  Cauchy(a_i)_{i \in \omega} : \forall \epsilon > 0 \quad \exists N  \quad \forall n,m > N  \quad | a_n - a_m | < \epsilon   \]
 \end{definition}
 
 we usually give ``$N$'' natural numbers but it's not necessary.
 
-we define an equivalence relation ``$ (a_i)_{i \in Ord} \sim (b_i)_{i \in Ord}
+we define an equivalence relation ``$ (a_i)_{i \in \omega} \sim (b_i)_{i \in \omega}
     : \forall \epsilon > 0 \quad \exists N \quad \forall n > N \quad | a_n - b_n |
     < \epsilon $''(check it's an equivalence relation).
 
@@ -4613,8 +4909,8 @@ we define an equivalence relation ``$ (a_i)_{i \in Ord} \sim (b_i)_{i \in Ord}
     we denote it's members with ``$r_0 , r_1 ,...$''
 \end{definition}
 
-in this system ``$ 0 := [(0)_{i \in Ord}]$'' and ``$ 1 := [(1)_{i \in Ord}]$''
-and ``$ \forall q \in \mathbb{Q} (Ord) \quad q := [(q)_{i \in Ord}]$''. so we
+in this system ``$ 0 := [(0)_{i \in \omega}]$'' and ``$ 1 := [(1)_{i \in \omega}]$''
+and ``$ \forall q \in \mathbb{Q} (Ord) \quad q := [(q)_{i \in \omega}]$''. so we
 can say ``$ Ord \subseteq \mathbb{Z} (Ord) \subseteq \mathbb{Q} (Ord) \subseteq
     \mathbb{R} (Ord)$''.
 
