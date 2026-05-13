@@ -102,6 +102,8 @@ to explain them for you to understand.but they don't have any definition.
 In this book, we will denote individual urelements using lowercase letters $u$,
 $v$, $w$,$...$
 
+
+
 \begin{undefined}
     \textbf{Type} parallel lines used to show that an object exists
     (you will undrestnd what is object soon.)
@@ -1167,12 +1169,12 @@ sentences.
 \end{theorem}
 
 \begin{Rule}
-    \textbf{$(schema)$} $(I= , E=)$
+    \textbf{$(schema)$} $( = I , = E)$
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{fitchproof}[arrayenv=tabular]
-            \have  [ ]{2} {\therefore a = a } \by{$I=$}{}
+            \have  [ ]{2} {\therefore a = a } \by{$ = I $}{}
         \end{fitchproof}
          &
         \begin{minipage}[t]{\linewidth}
@@ -1181,7 +1183,7 @@ sentences.
                 \begin{fitchproof}[arrayenv=tabular]
                     \hypo [ ]{1} {a = b }
                     \hypo [ ] {2} {\phi(a) }
-                    \have  [ ]{2} {\therefore  \phi(b) } \by{$E=$}{}
+                    \have  [ ]{2} {\therefore  \phi(b) } \by{$ = E $}{}
                 \end{fitchproof}
             \end{minipage}
             % \hfill
@@ -1189,7 +1191,7 @@ sentences.
                 \begin{fitchproof}[arrayenv=tabular]
                     \hypo [ ]{1} {a = b }
                     \hypo [ ] {2} { \phi(a)}
-                    \have  [ ]{2} { \therefore  \phi(a)} \by{$E=$}{}
+                    \have  [ ]{2} { \therefore  \phi(a)} \by{$ = E$}{}
                 \end{fitchproof}
             \end{minipage}
         \end{minipage}
@@ -1524,7 +1526,7 @@ so we can rewrite axiom of Extensionality like this.
 \[ \forall X,Y ((X \subseteq Y \wedge Y \subseteq X) \rightarrow X=Y)\]
 
 \begin{theorem}
-    \textbf{$(schema)$} $(I= , E=)$
+    \textbf{$(schema)$} $( = I,  = E)$
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
@@ -1539,7 +1541,7 @@ so we can rewrite axiom of Extensionality like this.
             \have [ ] {2} {\vdots}
             \have  [ ] {2} {x \in A}
             \close
-            \have  [ ]{2} {\therefore A = B } \by{$I=$}{}
+            \have  [ ]{2} {\therefore A = B } \by{$ = I$}{}
         \end{fitchproof}
          &
         \begin{minipage}[t]{\linewidth}
@@ -1548,7 +1550,7 @@ so we can rewrite axiom of Extensionality like this.
                 \begin{fitchproof}[arrayenv=tabular]
                     \hypo [ ]{1} {A = B }
                     \hypo [ ] {2} {a \in A }
-                    \have  [ ]{2} {\therefore  a \in B } \by{$E=$}{}
+                    \have  [ ]{2} {\therefore  a \in B } \by{$ = E$}{}
                 \end{fitchproof}
             \end{minipage}
             % \hfill
@@ -1556,7 +1558,7 @@ so we can rewrite axiom of Extensionality like this.
                 \begin{fitchproof}[arrayenv=tabular]
                     \hypo [ ]{1} {A = B }
                     \hypo [ ] {2} { a \in B}
-                    \have  [ ]{2} { \therefore  a \in A} \by{$E=$}{}
+                    \have  [ ]{2} { \therefore  a \in A} \by{$ = E$}{}
                 \end{fitchproof}
             \end{minipage}
         \end{minipage}
@@ -1681,13 +1683,13 @@ later.
 \end{lemma}
 
 \begin{theorem}
-    \textbf{$(schema)$} $(I\emptyset\not= , E \emptyset \not= ,\emptyset= I , \emptyset= E)$
+    \textbf{$(schema)$} $( \emptyset\not= I ,  \emptyset \not= E ,\emptyset= I , \emptyset= E)$
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {a \in A}
-            \have  [ ]{2} {\therefore A \not= \emptyset} \by{$I\emptyset\not=$}{}
+            \have  [ ]{2} {\therefore A \not= \emptyset} \by{$\emptyset\not=  I$}{}
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
@@ -1697,7 +1699,7 @@ later.
             \have [ ] {2} {\vdots}
             \have  [ ] {2} {\theta}
             \close
-            \have  [ ]{2} {\therefore\theta } \by{$E \emptyset \not=$}{}
+            \have  [ ]{2} {\therefore\theta } \by{$\emptyset \not= E $}{}
         \end{fitchproof}
         \\
         % \hline
@@ -1766,13 +1768,13 @@ later.
 \end{definition}
 
 \begin{theorem}
-    \textbf{$(schema)$} $(I\{\} , E\{\})$
+    \textbf{$(schema)$} $( \{\} I ,  \{\} E)$
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {a = a_{i} }
-            \have  [ ]{2} {\therefore  a \in  \{a_{0}, a_{1}, a_{2}, ... ,a_{n} \}} \by{$I\{\}$}{}
+            \have  [ ]{2} {\therefore  a \in  \{a_{0}, a_{1}, a_{2}, ... ,a_{n} \}} \by{$\{\} I$}{}
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
@@ -1788,7 +1790,7 @@ later.
             \have [ ] {2} {\vdots}
             \have  [ ] {2} {\theta}
             \close
-            \have  [ ]{2} {\therefore\theta } \by{$E\{\}$}{}
+            \have  [ ]{2} {\therefore\theta } \by{$\{\} E$}{}
         \end{fitchproof}
         \\
         \hline
@@ -2070,18 +2072,18 @@ somtimes all members of a set is also set we call it ``set of sets''.
 \end{definition}
 
 \begin{theorem}
-    \textbf{$(schema)$} $(\mathcal{P}I, \mathcal{P}E )$
+    \textbf{$(schema)$} $(\mathcal{P} I, \mathcal{P} E )$
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{fitchproof}[arrayenv=tabular]
-            \hypo [ ] {2} {A \subseteq B }
-            \have  [ ]{2} {\therefore   A \in  \mathcal{P}(B) } \by{$PI$}{}
+            \hypo [ ] {2} { A \subseteq B }
+            \have  [ ]{2} {\therefore   A \in  \mathcal{P}(B) } \by{$\mathcal{P} I$}{}
         \end{fitchproof}
          &
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {A \in  \mathcal{P}(B) }
-            \have  [ ]{2} {\therefore  A \subseteq B } \by{$PE$}{}
+            \have  [ ]{2} {\therefore  A \subseteq B } \by{$\mathcal{P} E$}{}
         \end{fitchproof}
         \\
         \hline
@@ -2198,6 +2200,60 @@ so $\forall x,y \quad Type_0((x,y))$
 
 so $ \forall X,Y \quad Type_0(X) \land Type_0(Y) \to Type_0( X \times Y )$
 
+\begin{theorem}
+    \textbf{$(schema)$} $(\times I, \times E )$
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
+        \hline
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ] {2} {t \in A }
+            \hypo [ ] {2} {s \in B }
+            \have  [ ]{2} {\therefore   (t,s) \in A \times B } \by{$\times I$}{}
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \have  [ ]{2} {\therefore   t \in A \times B }
+            \open
+            \have  [ ]{2} {   t = (x,y) }
+            \have [ ] {2} {x \in A }
+            \have [ ] {2} {y \in B }
+            \have [ ] {2} { \vdots }
+            \have [ ] {2} { \theta }
+            \close
+            \have [ ] {2} { \theta }     \by{$\times E$}{}
+        \end{fitchproof}
+        \\
+        \hline
+    \end{tabular}
+    \\
+    \\
+    \\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\begin{theorem}
+    \textbf{$(schema)$}
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
+        \hline
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo   [ ]{2} {  (t,s) \in A \times B }
+            \have [ ] {2} { \therefore  t \in A }
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo  [ ]{2} {  (t,s) \in A \times B }
+            \have  [ ] {2}  {\therefore  s \in B }
+        \end{fitchproof}
+        \\
+        \hline
+    \end{tabular}
+    \\
+    \\
+    \\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
 \begin{exercise}
     \textbf{} for sets A, B, C, prove.
     \begin{enumerate}
@@ -2249,6 +2305,62 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
     \includegraphics[scale=.4]{R-Im-Dom (1).pdf}
 \end{center}
 
+\begin{theorem}
+    \textbf{$(schema)$} $(Dom I, Dom E )$
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
+        \hline
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo   [ ]{2} {   t R s }
+            \have [ ] {2} {\therefore t \in Dom(R) }  \by{$Dom I$}{}
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \have  [ ]{2} {  t \in Dom(R) }
+            \open
+            \have  [ ]{2} {   t R y   }
+            \have [ ] {2} { \vdots }
+            \have [ ] {2} { \theta }
+            \close
+            \have [ ] {2} { \therefore  \theta }     \by{$Dom E$}{}
+        \end{fitchproof}
+        \\
+        \hline
+    \end{tabular}
+    \\
+    \\
+    \\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\begin{theorem}
+    \textbf{$(schema)$} $(Range I, Range E )$
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
+        \hline
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo   [ ]{2} {   t R s }
+            \have [ ] {2} {\therefore s \in Range(R) }  \by{$Range I$}{}
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \have  [ ]{2} {  s \in Range(R) }
+            \open
+            \have  [ ]{2} {   x R s   }
+            \have [ ] {2} { \vdots }
+            \have [ ] {2} { \theta }
+            \close
+            \have [ ] {2} { \therefore  \theta }     \by{$Range E$}{}
+        \end{fitchproof}
+        \\
+        \hline
+    \end{tabular}
+    \\
+    \\
+    \\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
 \begin{definition}
     \textbf{Inverse of a Relation} \\
 
@@ -2260,16 +2372,76 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
 
 \end{definition}
 
+\begin{theorem}
+    \textbf{$(schema)$} $( ()^{-1} I, ()^{-1} E )$
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
+        \hline
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo   [ ]{2} {   t R s }
+            \have [ ] {2} {\therefore s R^{-1} t  }  \by{$()^{-1} I$}{}
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \have  [ ]{2} {  t \in R^{-1} }
+            \open
+            \have  [ ]{2} {   t = (x,y) }
+            \have  [ ]{2} {   y R^{-1} x   }
+            \have [ ] {2} { \vdots }
+            \have [ ] {2} { \theta }
+            \close
+            \have [ ] {2} { \therefore  \theta }     \by{$ ()^{-1} E $}{}
+        \end{fitchproof}
+        \\
+        \hline
+    \end{tabular}
+    \\
+    \\
+    \\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
 \begin{definition}
     \textbf{Combination of a Relations} \\
 
-    \[ 		S\circ R = \{u \mid \exists x,y \Big(u=(x,y) \land \exists z \big( xRz \wedge zSy \big)\Big)\}   \]
+    \[ 		S \circ R = \{u \mid \exists x,y \Big(u=(x,y) \land \exists z \big( xRz \wedge zSy \big)\Big)\}   \]
 
     or i.e.
-    \[ 		S\circ R =\{(x,y) \mid \exists z \Big( xRz \wedge zSy \Big) \}   \]
+    \[ 		S \circ R =\{(x,y) \mid \exists z \Big( xRz \wedge zSy \Big) \}   \]
     therefore.
     \[\forall x,y\Big( (x,y) \in S\circ R \leftrightarrow \exists z  \big( xRz \wedge zSy \big) \Big) \]
 \end{definition}
+
+\begin{theorem}
+    \textbf{$(schema)$} $( \circ I, \circ E )$
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
+        \hline
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo   [ ]{2} {   t S s  }
+            \hypo   [ ]{2} {  s R r }
+            \have [ ] {2} {\therefore s R \circ S r  }  \by{$\circ I$}{}
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \have  [ ]{2} {  t \in R \circ S }
+            \open
+            \have  [ ]{2} {   t = (x,y) }
+            \have  [ ]{2} {   x S z  }
+            \have  [ ]{2} {   z R y  }
+            \have [ ] {2} { \vdots }
+            \have [ ] {2} { \theta }
+            \close
+            \have [ ] {2} { \therefore  \theta }     \by{$ \circ E $}{}
+        \end{fitchproof}
+        \\
+        \hline
+    \end{tabular}
+    \\
+    \\
+    \\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
 
 \begin{definition}
     \textbf{Image} \\
@@ -2281,6 +2453,54 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
 
 \end{definition}
 
+\begin{theorem}
+    \textbf{$(schema)$} $(R[] I, R[] E , R^{-1}[] I, R^{-1}[] E )$
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
+        \hline
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo   [ ]{2} {   t \in A }
+            \hypo   [ ]{2} {   t R s }
+            \have [ ] {2} {\therefore s \in R[A] }  \by{$R[] I$}{}
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \have  [ ]{2} {  s \in R[A] }
+            \open
+            \have  [ ]{2} {   x \in A   }
+            \have  [ ]{2} {   x R s   }
+            \have [ ] {2} { \vdots }
+            \have [ ] {2} { \theta }
+            \close
+            \have [ ] {2} { \therefore  \theta }     \by{$R[] E$}{}
+        \end{fitchproof}
+        \\
+        \hline
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo   [ ]{2} {   s \in B }
+            \hypo   [ ]{2} {   t R s }
+            \have [ ] {2} {\therefore t \in R^{-1}[B] }  \by{$R^{-1}[] I$}{}
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \have  [ ]{2} {  t \in R^{-1}[B] }
+            \open
+            \have  [ ]{2} {   y \in B   }
+            \have  [ ]{2} {   t R y   }
+            \have [ ] {2} { \vdots }
+            \have [ ] {2} { \theta }
+            \close
+            \have [ ] {2} { \therefore  \theta }     \by{$R^{-1}[] E$}{}
+        \end{fitchproof}
+        \\
+        \hline
+    \end{tabular}
+    \\
+    \\
+    \\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
 \section{Functions}
 
 \begin{definition}
@@ -2288,6 +2508,37 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
     output i.e.
     \[ Func(f) : Rel(f) \land \forall x ,y_1 , y_2 \Big((x,y_1) \in f \wedge (x,y_2) \in f \rightarrow y_1 = y_2 \Big) \]
 \end{definition}
+
+\begin{theorem}
+    \textbf{$(schema)$} $(Func I, Func E )$
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
+        \hline
+        \begin{fitchproof}[arrayenv=tabular]
+            \open
+            \have  [ ]{2} {   x f y }
+            \have  [ ]{2} {   x f z }
+            \have [ ] {2} { \vdots }
+            \have [ ] {2} { y = z }
+            \close
+            \have [ ] {2} { \therefore  Func(f) }      \by{$Func I$}{}
+        \end{fitchproof}
+
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \have [ ] {2} {  Func(f) }
+            \hypo   [ ]{2} {   t f s }
+            \hypo   [ ]{2} {   t f r }
+            \have [ ] {2} {\therefore s = r }    \by{$Func E$}{}
+        \end{fitchproof}
+        \\
+        \hline
+    \end{tabular}
+    \\
+    \\
+    \\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
 
 \begin{definition}
     \textbf{Restriction of a function}   to a set ``$X$'' (usually a subset of ``$dom(f)$'') is
@@ -2302,6 +2553,32 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
     we have a function  ``\textbf{f}'' and we can say  ``$x \in Dom(f)$''.
     ``output of a function'' is object too.
 \end{definition}
+
+\begin{theorem}
+    \textbf{$(schema)$} $(\forall I ,\forall E ,\exists I , \exists E)$
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
+        \hline
+
+                \begin{fitchproof}[arrayenv=tabular]
+            \have [ ] {2} {  Func(f) }
+            \hypo   [ ]{2} {   (x,y) \in f }
+            \have [ ] {2} {\therefore f(x)=y}    \by{$f() E$}{}
+        \end{fitchproof}
+        
+        &
+        
+        \begin{fitchproof}[arrayenv=tabular]
+            \have  [ ]  {2} {f(x)=y}                    
+            \hypo [ ] {2} {  Func(f) }
+
+            \have [ ] {2} {\therefore (x,y) \in f }    \by{$f() E$}{}
+        \end{fitchproof}
+        \\
+        \hline
+    \end{tabular}
+
+\end{theorem}
 
 \begin{Attention}
     \textbf{} input of a function can be a ordered pair itself, so we can have $f((x,y))$ and it is a ``\textbf{output of a function}''.
@@ -2428,8 +2705,8 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
     \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}>{\centering\arraybackslash}m{7.5cm}}
         \begin{fitchproof}[arrayenv=tabular]
             \have  {1} {\forall x \phi (x)}           \by{$ass$}{}
-            \have  {1} {Func(f)}                          \by{$ass$}{}
-            \have  {1} {\exists y \big((x,y) \in f\big)}         \by{$ass$}{}
+            \have  {1} {Func(f)}                          \by{$1$}{}
+            \have  {1} { x \in Dom(f)}         \by{$1$}{}
             \open
             \have  {1} { (x,y) \in f}                   \by{$acp$}{}
             \have  {1} {  f(x)=y}                       \by{$def$}{}
@@ -2442,7 +2719,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
         \begin{fitchproof}[arrayenv=tabular]
             \have  {2} {\phi(f(x))}                    \by{$ass$}{}
             \have  {1} {Func(f)}                          \by{$ass$}{}
-            \have  {1} {\exists y \big((x,y) \in f\big)}         \by{$ass$}{}
+            \have  {1} { x \in Dom(f)}         \by{$ass$}{}
             \open
             \have  {1} { (x,y) \in f}                   \by{$acp$}{}
             \have  {1} { f(x)=y}                       \by{$def$}{}
@@ -2502,14 +2779,45 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
 \end{definition}
 
 \begin{definition}
-    \textbf{Injective function}
-    we call a function \textbf{f} injective when every output has at most one input i.e.
+    \textbf{Injective function(Relation)}
+    we call a function(Relation) \textbf{f} injective when every output has at most one input i.e.
     \[ Injective(f) : \forall y ,x_1 , x_2 \Big((x_1,y) \in f \wedge (x_2,y) \in f \rightarrow x_1 = x_2 \Big). \]
 
     we call a function \textbf{f} injective from \textbf{A} to \textbf{B} when it's
     function from \textbf{A} to \textbf{B} and it's injective i.e.
     \[ (f:A \xrightarrow{inj} B) :  (f:A \rightarrow B) \land Injective(f) \]
 \end{definition}
+
+\begin{theorem}
+    \textbf{$(schema)$} $(Injective I, Injective E )$
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
+        \hline
+        \begin{fitchproof}[arrayenv=tabular]
+            \open
+            \have  [ ]{2} {   x f z }
+            \have  [ ]{2} {   y f z }
+            \have [ ] {2} { \vdots }
+            \have [ ] {2} { x = y }
+            \close
+            \have [ ] {2} { \therefore  Injective(f) }     \by{$Injective I$}{}
+        \end{fitchproof}
+
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \have [ ] {2} {  Injective(f) }
+            \hypo   [ ]{2} {   t f r }
+            \hypo   [ ]{2} {   s f r }
+            \have [ ] {2} {\therefore s = r }  \by{$Injective E$}{}
+        \end{fitchproof}
+        \\
+        \hline
+    \end{tabular}
+    \\
+    \\
+    \\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
 
 \begin{definition}
     \textbf{Surjective function}  we call a function \textbf{f} from \textbf{A} to \textbf{B}
@@ -2766,6 +3074,29 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
 
 \end{definition}
 
+\begin{theorem}
+    \textbf{$(schema)$} $([]_{\sim} I, []_{\sim}  E )$
+
+    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
+        \hline
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ] {2} { t \sim s }
+            \have  [ ]{2} {\therefore   t \in  [s]_{\sim}  } \by{$[]_{\sim} I$}{}
+        \end{fitchproof}
+         &
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ] {2} { t \in  [s]_{\sim} }
+            \have  [ ]{2} {\therefore  t \sim s  } \by{$[]_{\sim} E$}{}
+        \end{fitchproof}
+        \\
+        \hline
+    \end{tabular}
+    \\
+    \\
+    \\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
 \begin{lemma}
     For every ``$a,b \in A$''
     \begin{enumerate}
@@ -2780,31 +3111,29 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
         $/ \therefore$
 
         \begin{fitchproof}[arrayenv=tabular]
-            \have  {2} { a \sim b}
+            \have  {2} { a \sim b}     \by{$ass$}{}
             \open
-            \have  {2} {x \in [a]_{\sim} }
-            \have  {2} {x \sim a}
-            \have  {2} {a \sim b}
-            \have  {2} {x \sim b}
-            \have  {2} {x \in [b]_{\sim} }
+            \have  {2} {x \in [a]_{\sim} }   \by{$acp$}{}
+            \have  {2} {x \sim a}              \by{$[]_{\sim} E$}{}
+            \have  {2} {x \sim b}            \by{$trans$}{}
+            \have  {2} {x \in [b]_{\sim} }      \by{$[]_{\sim} I$}{}
             \close
             \open
-            \have  {2} {x \in [b]_{\sim} }
-            \have  {2} {x \sim b}
-            \have  {2} {a \sim b}
-            \have  {2} {x \sim a}
-            \have  {2} {x \in [a]_{\sim} }
+            \have  {2} {x \in [b]_{\sim} }         \by{$acp$}{}
+            \have  {2} {x \sim b}                    \by{$[]_{\sim} E$}{}
+            \have  {2} {x \sim a}                \by{$trans$}{}
+            \have  {2} {x \in [a]_{\sim} }         \by{$[]_{\sim} I$}{}
             \close
             \have  {2} { [a]_{\sim} = [b]_{\sim} }
         \end{fitchproof}
          &
         $ \therefore /$
         \begin{fitchproof}[arrayenv=tabular]
-            \have  {2} { [a]_{\sim} = [b]_{\sim} }
-            \have  {2} {a \sim a  }
-            \have  {2} {a \in [a]_{\sim} }
-            \have  {2} {a \in [b]_{\sim} }
-            \have  {2} {a \sim b  }
+            \have  {2} { [a]_{\sim} = [b]_{\sim} }      \by{$ass$}{}
+            \have  {2} {a \sim a  }                     \by{$reflex$}{}
+            \have  {2} {a \in [a]_{\sim} }               \by{$[]_{\sim} I$}{}
+            \have  {2} {a \in [b]_{\sim} }                  \by{$= E$}{}
+            \have  {2} {a \sim b  }                     \by{$[]_{\sim} E$}{}
         \end{fitchproof}
         \\
 
@@ -2815,15 +3144,16 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
 
         $/ \therefore$
         \begin{fitchproof}[arrayenv=tabular]
-            \have  {2} { a \nsim b}
+            \have  {2} { a \nsim b}     \by{$ass$}{}
             \open
-            \have  {2} { [a]_{\sim} \cap [b]_{\sim}  \not= \emptyset }
-            \have  {2} {\exists x \quad x \in [a]_{\sim} \cap [b]_{\sim} }
+            \have  {2} { [a]_{\sim} \cap [b]_{\sim}  \not= \emptyset }   \by{$acp$}{}
             \open
-            \have  {2} { x \in [a]_{\sim} \cap [b]_{\sim} }
-            \have  {2} {x \sim a}
-            \have  {2} {x \sim b}
-            \have  {2} {a \sim b }
+            \have  {2} { x \in [a]_{\sim} \cap [b]_{\sim} }        \by{$acp$}{}
+            \have  {2} { x \in [a]_{\sim}  }            \by{$ \cap E$}{}
+            \have  {2} { x \in  [b]_{\sim} }            \by{$ \cap E$}{}
+            \have  {2} {x \sim a}                     \by{$[]_{\sim} E$}{}
+            \have  {2} {x \sim b}                     \by{$[]_{\sim} E$}{}
+            \have  {2} {a \sim b }                   \by{$trans$}{}
             \have  {2} {\bot }
             \close
             \have  {2} {\bot }
@@ -2835,11 +3165,11 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
         \begin{fitchproof}[arrayenv=tabular]
             \have  {2} { [a]_{\sim} \cap [b]_{\sim}  = \emptyset }
             \open
-            \have  {2} {a \sim b  }
-            \have  {2} {a \sim a  }
-            \have  {2} {a \in [a]_{\sim} }
-            \have  {2} {a \in [b]_{\sim} }
-            \have  {2} {a \in [a]_{\sim} \cap [b]_{\sim} }
+            \have  {2} {a \sim b  }           \by{$acp$}{}
+            \have  {2} {a \sim a  }            \by{$reflex$}{}
+            \have  {2} {a \in [a]_{\sim} }      \by{$[]_{\sim} I$}{}
+            \have  {2} {a \in [b]_{\sim} }      \by{$[]_{\sim} I$}{}
+            \have  {2} {a \in [a]_{\sim} \cap [b]_{\sim} }       \by{$ \cap I$}{}
             \have  {2} {\bot}
             \close
             \have  {2} {a \nsim b  }
@@ -2872,35 +3202,42 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
     ``$A/\sim$'' is a partition for ``$A$'' i.e. ``$Part(A/\sim,A)$''.
 
     \begin{fitchproof}[arrayenv=tabular]
-        \have  {2} { [x]_{\sim} \in A  }
-        \have  {2} { x \in [x]_{\sim}  }
-        \have  {2} {  [x]_{\sim} \not= \emptyset  }
-
+        \open
+        \have  {2} {  [x]_{\sim} \in A / \sim  }  \by{$acp$}{}
+        \have  {2} { x  \sim  x  }        \by{$reflex$}{}
+        \have  {2} { x \in [x]_{\sim}  }       \by{$[]_{\sim} I$}{}
+        \have  {2} {  [x]_{\sim} \not= \emptyset  }        \by{$\not= \emptyset I$}{}
+        \close
+        \have  {2} { \forall  [x]_{\sim} \in A / \sim \quad  [x]_{\sim} \not= \emptyset   }
     \end{fitchproof}
 
     \begin{fitchproof}[arrayenv=tabular]
-        \have  {2} { [a]_{\sim} \not= [b]_{\sim}  }
-        \have  {2} { a \nsim  b  }
-        \have  {2} { [a]_{\sim} \cap [b]_{\sim}  = \emptyset }
+        \open
+        \have  {2} { [x]_{\sim} \not= [y]_{\sim}  }     \by{$acp$}{}
+        \have  {2} { x \nsim  y  }                       \by{$Lemma 5.6.2.1$}{}
+        \have  {2} { [x]_{\sim} \cap [y]_{\sim}  = \emptyset }  \by{$Lemma 5.6.2.2$}{}
+        \close
+        \have  {2} { \forall  [x]_{\sim} , [y]_{\sim} \in A / \sim \quad  [x]_{\sim} \not= [y]_{\sim}  \to   [x]_{\sim} \cap [y]_{\sim}  = \emptyset }
     \end{fitchproof}
 
     \begin{fitchproof}[arrayenv=tabular]
         \open
-        \have  {2} { x \in \bigcup (A/\sim)  }
+        \have  {2} { x \in \bigcup (A/\sim)  }           \by{$acp$}{}
         \open
-        \have  {2} { y \in A   }
-        \have  {2} { x \in [y]_{\sim}  }
-        \have  {2} { x \in A  }
+        \have  {2} { [y]_{\sim} \in A/\sim   }               \by{$acp$}{}
+        \have  {2} { x \in [y]_{\sim}  }                    \by{$acp$}{}
+        \have  {2} { [y]_{\sim} \subseteq A  }
+        \have  {2} { x \in A  }         \by{$\subseteq E$}{}
         \close
-        \have  {2} { x \in A  }
+        \have  {2} { x \in A  }                \by{$\bigcup E$}{}
         \close
         \open
         \have  {2} { x \in A  }
-        \have  {2} { x \in [x]_\sim \land [x]_\sim \in (A/\sim)  }
-        \have  {2} {\exists Y ( x \in Y \land Y \in (A/\sim) ) }
-        \have  {2} { x \in \bigcup(A/\sim)  }
+        \have  {2} { x \in [x]_\sim   }
+        \have  {2} {  [x]_\sim \in (A/\sim)  }
+        \have  {2} { x \in \bigcup(A/\sim)  }         \by{$\bigcup I$}{}
         \close
-        \have  {2} { A  = \bigcup(A/\sim)  }
+        \have  {2} { A  = \bigcup(A/\sim)  }            \by{$= I$}{}
     \end{fitchproof}
 
 \end{theorem}
@@ -2911,11 +3248,11 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
 
     \begin{fitchproof}[arrayenv=tabular]
         \open
-        \have  {2} { x \in A  }
-        \have  {2} { x \in \bigcup P  }
-        \have  {2} {\exists Y (x \in Y \land Y \in P)  }
+        \have  {2} { x \in A  }          \by{$acp$}{}
+        \have  {2} { x \in \bigcup P  }      \by{$Def$}{}
         \open
-        \have  {2} {x \in Y \land Y \in P  }
+        \have  {2} {x \in Y  }             \by{$acp$}{}
+        \have  {2} { Y \in P  }             \by{$acp$}{}
         \have  {2} {\exists Y \in P \quad (x \in Y \land x \in Y  )  }
         \have  {2} {x \sim_P x  }
         \close
@@ -2927,24 +3264,29 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
 
     \begin{fitchproof}[arrayenv=tabular]
         \open
-        \have  {2} { x , y \in A }
-        \have  {2} { x \sim_P y  }
-        \have  {2} {\exists Y \in P \quad ( x \in Y \land y \in Y  )  }
+        \have  {2} { x , y \in A }      \by{$acp$}{}
         \open
-        \have  {2} { Y \in P \land  x \in Y \land y \in Y    }
+        \have  {2} { x \sim_P y  }            \by{$acp$}{}
+        \have  {2} {\exists Y \in P \quad ( x \in Y \land y \in Y  )  }   \by{$Def$}{}
+        \open
+        \have  {2} { Y \in P \land  x \in Y \land y \in Y    }      \by{$acp$}{}
+        \have  {2} { Y \in P \land  y \in Y \land x \in Y    }      \by{$commutative \land$}{}
         \have  {2} {\exists Y \in P \quad ( y \in Y \land x \in Y  )  }
         \have  {2} { y \sim_P x  }
         \close
         \have  {2} { y \sim_P x  }
+        \close
+        \have  {2} {x \sim_P y \to  y \sim_P x  }
         \close
         \have  {2} {\forall x,y \in A \quad x \sim_P y \to  y \sim_P x }
     \end{fitchproof}
 
     \begin{fitchproof}[arrayenv=tabular]
         \open
-        \have  {2} { x , y ,z \in A }
-        \have  {2} { x \sim_P y  }
-        \have  {2} { y \sim_P z  }
+        \have  {2} { x , y ,z \in A }         \by{$acp$}{}
+        \open
+        \have  {2} { x \sim_P y  }             \by{$acp$}{}
+        \have  {2} { y \sim_P z  }               \by{$acp$}{}
         \have  {2} {\exists Y \in P \quad ( x \in Y \land y \in Y  )  }
         \have  {2} {\exists Y \in P \quad ( y \in Y \land z \in Y  )  }
         \open
@@ -2960,6 +3302,8 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
         \have  {2} { x \sim_P z  }
         \close
         \have  {2} { x \sim_P z  }
+        \close
+        \have  {2} { x \sim_P y \land y \sim_p z \to  x \sim_P z  }
 
         \close
         \have  {2} {\forall x,y,z \in A \quad x \sim_P y \land y \sim_p z \to  x \sim_P z }
@@ -3000,39 +3344,41 @@ now we will show you relation between ``(partial) Order relation'' and
 
               \begin{fitchproof}[arrayenv=tabular]
                   \open
-                  \have  {2} { x \in A }
+                  \have  {2} { x \in A }    \by{$acp$}{}
                   \open
-                  \have  {2} { x \prec x }
-                  \have  {2} { x \not= x }
-                  \have  {2} { \bot  }
+                  \have  {2} { x \prec x }     \by{$acp$}{}
+                  \have  {2} { x \not= x }     \by{$\land E$}{}
+                  \have  {2} { x = x }     \by{$= I$}{}
+                  \have  {2} { \bot  }           \by{$\bot I$}{}
                   \close
-                  \have  {2} { x \nprec x }
+                  \have  {2} { x \nprec x }             \by{$\neg I$}{}
                   \close
-                  \have  {2} {\forall x \in A \quad x \nprec x }
+                  \have  {2} {\forall x \in A \quad x \nprec x }  \by{$\to I , \forall I $}{}
               \end{fitchproof}
 
               \begin{fitchproof}[arrayenv=tabular]
                   \open
-                  \have  {2} { x,y,z \in A }
+                  \have  {2} { x,y,z \in A }      \by{$acp$}{}
                   \open
-                  \have  {2} { x \prec y }
-                  \have  {2} { y \prec z }
-                  \have  {2} { x \preceq y }
-                  \have  {2} { y \preceq z }
-                  \have  {2} { x \preceq z }
-                  \have  {2} { x \not= y }
-                  \have  {2} { y \not= z }
+                  \have  {2} { x \prec y }       \by{$acp$}{}
+                  \have  {2} { y \prec z }        \by{$acp$}{}
+                  \have  {2} { x \preceq y }   \by{$ \land E$}{}
+                  \have  {2} { y \preceq z }    \by{$\land E$}{}
+                  \have  {2} { x \preceq z } \by{$trans$}{}
+                  \have  {2} { x \not= y }    \by{$\land E$}{}
+                  \have  {2} { y \not= z }     \by{$\land E$}{}
                   \open
-                  \have  {2} { x = z }
-                  \have  {2} { y \preceq x }
-                  \have  {2} { x = y }
-                  \have  {2} { \bot  }
+                  \have  {2} { x = z }     \by{$acp$}{}
+                  \have  {2} { y \preceq x }  \by{$= E$}{}
+                  \have  {2} { x = y }        \by{$antisym$}{}
+                  \have  {2} { \bot  }       \by{$\bot I$}{}
                   \close
-                  \have  {2} { x \not= z }
-                  \have  {2} { x \prec z }
+                  \have  {2} { x \not= z }       \by{$\neg I$}{}
+                  \have  {2} { x \prec z }        \by{$\land I$}{}
                   \close
+                  \have  {2} { x \prec y \land y \prec z \to x \prec z }        \by{$\to I$}{}
                   \close
-                  \have  {2} {\forall x,y,z \in A \quad x \prec z }
+                  \have  {2} {\forall x,y,z \in A \quad x \prec y \land y \prec z \to x \prec z }   \by{$\to I, \forall I $}{}
 
               \end{fitchproof}
 
@@ -3042,70 +3388,72 @@ now we will show you relation between ``(partial) Order relation'' and
 
               \begin{fitchproof}[arrayenv=tabular]
                   \open
-                  \have  {2} { x \in A }
-                  \have  {2} { x = x }
-                  \have  {2} { x \preceq x }
+                  \have  {2} { x \in A }   \by{$acp$}{}
+                  \have  {2} { x = x }          \by{$= I$}{}
+                  \have  {2} { x \preceq x }     \by{$\lor I$}{}
                   \close
-                  \have  {2} {\forall x \in A \quad x \preceq x }
+                  \have  {2} {\forall x \in A \quad x \preceq x }      \by{$\to I, \forall I $}{}
               \end{fitchproof}
 
               \begin{fitchproof}[arrayenv=tabular]
                   \open
-                  \have  {2} { x,y \in A }
+                  \have  {2} { x,y \in A }      \by{$acp$}{}
                   \open
-                  \have  {2} { x \preceq y \land y \preceq x }
+                  \have  {2} { x \preceq y \land y \preceq x }     \by{$acp$}{}
                   \open
-                  \have  {2} { x \prec y \land y \prec x }
-                  \have  {2} { \bot  }
+                  \have  {2} { x \prec y \land y \prec x }     \by{$acp$}{}
+                  \have  {2} { \bot  }                          \by{$asym$}{}
                   \have  {2} { x = y  }
                   \close
                   \open
-                  \have  {2} { x \prec y \land y = x }
+                  \have  {2} { x \prec y \land y = x }         \by{$acp$}{}
                   \have  {2} { x = y  }
                   \close
                   \open
-                  \have  {2} { x = y \land y \prec x }
+                  \have  {2} { x = y \land y \prec x }          \by{$acp$}{}
                   \have  {2} { x = y  }
                   \close
                   \open
-                  \have  {2} { x = y \land y = x }
+                  \have  {2} { x = y \land y = x }           \by{$acp$}{}
                   \have  {2} { x = y  }
                   \close
-                  \have  {2} { x = y  }
+                  \have  {2} { x = y  }                      \by{$\lor E$}{}
                   \close
+                  \have  {2} { x \preceq y \land y \preceq x \to x=y }      \by{$\to I$}{}
                   \close
-                  \have  {2} {\forall x,y \in A \quad x \preceq y \land y \preceq x \to x=y }
+                  \have  {2} {\forall x,y \in A \quad x \preceq y \land y \preceq x \to x=y }      \by{$\to I, \forall I $}{}
               \end{fitchproof}
 
               \begin{fitchproof}[arrayenv=tabular]
                   \open
-                  \have  {2} { x,y,z \in A }
+                  \have  {2} { x,y,z \in A }     \by{$acp$}{}
                   \open
-                  \have  {2} { x \preceq y \land y \preceq z }
+                  \have  {2} { x \preceq y \land y \preceq z }      \by{$acp$}{}
                   \open
-                  \have  {2} { x \prec y \land y \prec z }
-                  \have  {2} { x \prec z }
-                  \have  {2} { x \preceq z }
-                  \close
-                  \open
-                  \have  {2} { z \prec y \land y = z }
-                  \have  {2} { x \prec z }
-                  \have  {2} { x \preceq z }
+                  \have  {2} { x \prec y \land y \prec z }          \by{$acp$}{}
+                  \have  {2} { x \prec z }                           \by{$trans$}{}
+                  \have  {2} { x \preceq z }                         \by{$\lor I$}{}
                   \close
                   \open
-                  \have  {2} { z = y \land y \prec z }
-                  \have  {2} { x \prec z }
-                  \have  {2} { x \preceq z }
+                  \have  {2} { x \prec y \land y = z }        \by{$acp$}{}
+                  \have  {2} { x \prec z }                     \by{$= E$}{}
+                  \have  {2} { x \preceq z }                   \by{$\lor I$}{}
                   \close
                   \open
-                  \have  {2} { z = y \land y = z }
-                  \have  {2} { x = z }
-                  \have  {2} { x \preceq z }
+                  \have  {2} { x = y \land y \prec z }             \by{$acp$}{}
+                  \have  {2} { x \prec z }                           \by{$= E$}{}
+                  \have  {2} { x \preceq z }                           \by{$\lor I$}{}
                   \close
-                  \have  {2} {x \preceq z  }
+                  \open
+                  \have  {2} { x = y \land y = z }          \by{$acp$}{}
+                  \have  {2} { x = z }                        \by{$= E$}{}
+                  \have  {2} { x \preceq z }                   \by{$\lor I$}{}
                   \close
+                  \have  {2} {x \preceq z  }                   \by{$\lor E$}{}
                   \close
-                  \have  {2} {\forall x,y \in A \quad x \preceq y \land y \preceq x \to x=y }
+                  \have  {2} { x \preceq y \land y \prec z \to x \preceq z }           \by{$\to I$}{}
+                  \close
+                  \have  {2} {\forall x,y,z \in A \quad x \preceq y \land y \prec z \to x \preceq z } \by{$\to I, \forall I $}{}
               \end{fitchproof}
 
     \end{enumerate}
@@ -3165,13 +3513,13 @@ now we will show you relation between ``(partial) Order relation'' and
 
 \begin{theorem}
     \textbf{Minimum and Maximum} assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
-    and $\mathcal{B} := \{ B \subseteq A \mid \text{$B$  has  least element}  \}$ and
-    $ \mathcal{C} := \{ C \subseteq A \mid  \text{$C$ has  greatest element}  \}$
+    and $\mathcal{B} := \{ B \subseteq A \mid  HaveLeast(B) \}$ and
+    $ \mathcal{C} := \{ C \subseteq A \mid  HaveGreatest(C)  \}$
     we define  like this
     \[ min_\mathfrak{A} :=  \{ (B,b) \in \mathcal{B} \times V \mid \forall x \in B \quad b \preceq x \}  \]
     \[ max_\mathfrak{A} := \{ (C,c) \in \mathcal{C} \times V \mid \forall x \in C \quad x \preceq c \}  \]
     prove these two relations are two functions ``$min_\mathfrak{A} : \mathcal{B}
-        \to V$'' and ``$max_\mathfrak{A} : \mathcal{C} \to V$''.
+        \to V$'' and ``$max_\mathfrak{A} : \mathcal{C} \to V$''.\twemoji{1f600}
 \end{theorem}
 
 \begin{definition}
@@ -3201,33 +3549,16 @@ now we will show you relation between ``(partial) Order relation'' and
 if the stucture clear to us we don't write stucture index ``$min(\_),
     Minimal(\_) , Lowerb(\_,\_)$''. and we don't mension it.
 
-\begin{lemma}
-    assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
-    and $ B,C \subseteq A $ prove
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\exists b \in A \quad (\forall x \in B \quad b \preceq x \land \forall x \in A \quad Lowerb_\mathfrak{A}(x,B) \to x \preceq b )
-                  / \therefore \exists ! b \in A \quad (\forall x \in B \quad b \preceq x \land \forall x \in A \quad Lowerb_\mathfrak{A}(x,B) \to x \preceq b ) $.
-              \\ Proof Is Left As An Exercise To
-              The Reader.\twemoji{1f600}
-        \item       $\exists c \in A \quad (\forall x \in C \quad x \preceq c \land \forall x \in A \quad Upperb_\mathfrak{A}(x,C) \to c \preceq x )
-                  / \therefore \exists ! c \in A \quad (\forall x \in C \quad x \preceq c \land \forall x \in A \quad Upperb_\mathfrak{A}(x,C) \to c \preceq x ) $.
-              \\ Proof Is Left As An Exercise To
-              The Reader.\twemoji{1f600}
 
-    \end{enumerate}
-
-\end{lemma}
 
 \begin{theorem}
     \textbf{Infimum and Supremum} assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
-    and $\mathcal{B} := \{ B \subseteq A \mid \exists b \in A \quad \forall x \in B \quad b \preceq x \}$ and
-    $ \mathcal{C} := \{ C \subseteq A \mid \exists c \in A \quad \forall x \in C \quad x \preceq c \}$
-    we define  like this
-    \[ inf_\mathfrak{A} :=  \{ (B,b) \in \mathcal{B} \times V \mid \forall x \in B \quad b \preceq x \land \forall x \in A \quad Lowerb_\mathfrak{A}(x,B) \to x \preceq b \}  \]
-    \[ sup_\mathfrak{A} := \{ (C,c) \in \mathcal{C} \times V \mid \forall x \in C \quad x \preceq c \land \forall x \in A \quad Upperb_\mathfrak{A}(x,C) \to c \preceq x \}  \]
-    prove these two relations are two functions ``$inf_\mathfrak{A} : \mathcal{B}
-        \to V$'' and ``$sup_\mathfrak{A} : \mathcal{C} \to V$''.
+    and $\mathcal{B} := \{ B \subseteq A \mid HaveGreatest \{ b \in A \mid Lowerb_\mathfrak{A}(b,B) \} \}$ and
+    $ \mathcal{C} := \{ C \subseteq A \mid HaveLeast \{ c \in A \mid Upperb_\mathfrak{A}(c,C) \}  \}$
+    we define ``$inf_\mathfrak{A} : \mathcal{B}
+        \to V$'' and ``$sup_\mathfrak{A} : \mathcal{C} \to V$'' like this
+    \[ inf_\mathfrak{A}(B) :=  max_\mathfrak{A}\{ b \in A \mid Lowerb_\mathfrak{A}(b,B) \}   \]
+    \[ sup_\mathfrak{A}(B) :=  min_\mathfrak{A}\{ c \in A \mid Upperb_\mathfrak{A}(c,C) \}  \]
 \end{theorem}
 
 \begin{theorem}
@@ -3263,8 +3594,8 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
               \textbf{monoid}. you can prove for every \textbf{monoid} $\mathfrak{G}$
               identity element is unique we denote it by ``$e$''(in $\times$ with ``$1$'' and
               in $+$ with $0$).
-        \item       If $\mathfrak{G}$ is a \textbf{semigroup} and $\forall x \in G \quad \exists y
-                  \in G \quad x y = y x = e$ (has inverse $\times$), $\mathfrak{G}$ is a group.
+        \item       If $\mathfrak{G}$ is a \textbf{monoid} and $\forall x \in G \quad \exists y \in
+                  G \quad x y = y x = e$ (has inverse $\times$), $\mathfrak{G}$ is a group.
         \item       If $\mathfrak{G}$ is a \textbf{semigroup/monoid} and $\forall x , y , z \in N
                   \quad x z = y z \to x = y $ (cancellative $\times$), $\mathfrak{G}$ is a
               \textbf{cancellative semigroup/monoid}. (you can prove every group is
@@ -3302,6 +3633,12 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
         \item       If $\mathfrak{R}$ is a \textbf{Semiring/Ring} and $\forall x ,y \in R \quad x y
                   = y x $ (commutative(abelian) $\times$), $\mathfrak{R}$ is a
               \textbf{commutative(abelian) Semiring/Ring}.
+        \item       If $\mathfrak{R}$ is a \textbf{zero divisor free Semiring/Ring} and
+              \textbf{commutative(abelian) Semiring/Ring}. $\mathfrak{R}$ is a \textbf{
+                  Semidomain/Domain }.
+        \item       If $\mathfrak{R}$ is a \textbf{division Semiring/Ring} and
+              \textbf{commutative(abelian) Semiring/Ring}. $\mathfrak{R}$ is a \textbf{
+                  SemiField/Field }.
 
     \end{enumerate}
 
@@ -3733,27 +4070,235 @@ can easily see that from the definition of ``$B^A$'', ``$A^n$'' is the set of
 all $n$-length finite sequences of $a \in A$ and ``$A^\mathbb{N}$'' is the set
 of all infinite sequences of $a \in A$.
 
-\begin{theorem}\textbf{Recurtion} for any set ``$A$'' and ``$a \in A$'' and any function ``$g : A \times \mathbb{N} \to A$''
-    there is a unique infinite sequence ``$f : \mathbb{N} \to A$'' s.t.
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $ f(0) = a$.
-        \item       $\forall n \in \mathbb{N} \quad f(s(n)) = g(f(n),n)  $.
-    \end{enumerate}
-    Claim 1 : Existing of ``$f$''
-    \begin{fitchproof}[arrayenv=tabular]
-        \have {1} { F := \{ t \mid \forall k,m \in \mathbb{N} \quad 0 < k < m \to
-            \Big( \big(t : s(m) \to A \big) \land t(0) = a \land t \big( s(k) \big) = g \big( t(k),k \big)\Big)  \}  }
-        \have {1} { f := \bigcup F  }
-    \end{fitchproof}
-    Claim 2 :  ``$f$'' is a function
-    \begin{fitchproof}[arrayenv=tabular]
-        \have {1} { Func(f)  }
-    \end{fitchproof}
-    Claim 3 :  ``$Dom(f) =  \mathbb{N}$'' and ``$Range(f) \subseteq A$''
-
-    Claim 4 : ``$f$'' satisfies conditions (1) and (2)
+\begin{theorem}[Recursion]
+For any set $A$, any $a \in A$, and any function $g : A \times \mathbb{N} \to A$,
+there is a unique function $f : \mathbb{N} \to A$ such that:
+\begin{enumerate}
+    \setlength{\itemsep}{0pt}
+    \item $f(0) = a$.
+    \item $\forall n \in \mathbb{N} \quad f(s(n)) = g(f(n),n)$.
+\end{enumerate}
 \end{theorem}
+
+\begin{proof}
+\textbf{Step 1: Construction of $F$ and $f$.}
+
+Define
+
+
+\[
+F := \Big\{ t \ \Big|\ \exists m \in \mathbb{N} \ \big( t : s(m) \to A
+\ \land\ t(0) = a \ \land\ \forall k < m \ \big( t(s(k)) = g(t(k),k) \big) \big) \Big\}.
+\]
+
+
+Define
+
+
+\[
+f := \bigcup F.
+\]
+
+
+
+\textbf{Claim 1: $F \neq \emptyset$.}
+
+We construct, by induction on $n \in \mathbb{N}$, a sequence of functions
+$t_n : s(n) \to A$ such that:
+
+
+\[
+t_n(0) = a, \quad \forall k < n \quad t_n(s(k)) = g(t_n(k),k).
+\]
+
+
+
+\begin{itemize}
+    \item \textbf{Base:} For $n=0$, $s(0)$ is the set whose only element is $0$.
+    Define $t_0 : s(0) \to A$ by $t_0(0) = a$. The condition on $k < 0$ is vacuous,
+    so $t_0$ satisfies the required property, hence $t_0 \in F$.
+    \item \textbf{Step:} Suppose $t_n : s(n) \to A$ is defined with the desired properties.
+    Define $t_{n+1} : s(n+1) \to A$ by:
+    
+
+\[
+    t_{n+1}(k) :=
+    \begin{cases}
+        t_n(k) & \text{if } k \in s(n),\\
+        g(t_n(n),n) & \text{if } k = s(n).
+    \end{cases}
+    \]
+
+
+    Then $t_{n+1}(0) = t_n(0) = a$, and for all $k < n+1$:
+    
+
+\[
+    t_{n+1}(s(k)) =
+    \begin{cases}
+        t_n(s(k)) = g(t_n(k),k) & \text{if } k < n,\\
+        g(t_n(n),n) & \text{if } k = n,
+    \end{cases}
+    \]
+
+
+    so $t_{n+1}$ also satisfies the recursion condition. Hence $t_{n+1} \in F$.
+\end{itemize}
+
+Thus, for every $n \in \mathbb{N}$, $t_n \in F$, so $F \neq \emptyset$ and $f = \bigcup F$ is well-defined.
+
+\medskip
+
+\textbf{Claim 2: $f$ is a function.}
+
+We must show $\text{Func}(f)$, i.e., for all $n$, if $(n,x) \in f$ and $(n,y) \in f$, then $x = y$.
+
+Let $(n,x) \in f$ and $(n,y) \in f$. Then there exist $t,u \in F$ such that
+$(n,x) \in t$ and $(n,y) \in u$. Let $\text{Dom}(t) = s(m)$ and $\text{Dom}(u) = s(\ell)$.
+Without loss of generality, assume $m \le \ell$.
+
+We show $t \subseteq u$ by induction on $k < m$.
+
+\begin{itemize}
+    \item \textbf{Base:} $k = 0$. Then $t(0) = a$ and $u(0) = a$ by definition of $F$,
+    so $t(0) = u(0)$.
+    \item \textbf{Step:} Assume $t(k) = u(k)$ for some $k < m$. Since $t,u \in F$,
+    both satisfy the recursion condition:
+    
+
+\[
+    t(s(k)) = g(t(k),k), \quad u(s(k)) = g(u(k),k).
+    \]
+
+
+    By the induction hypothesis, $t(k) = u(k)$, hence $t(s(k)) = u(s(k))$.
+\end{itemize}
+
+Thus $t$ and $u$ agree on all of $s(m)$, so in particular $t(n) = u(n)$ whenever $n \in s(m)$.
+Hence $x = t(n) = u(n) = y$. Therefore $f$ is a function:
+
+
+\[
+\text{Func}(f).
+\]
+
+
+
+\medskip
+
+\textbf{Claim 3: $\text{Dom}(f) = \mathbb{N}$ and $\text{Range}(f) \subseteq A$.}
+
+First, for each $n \in \mathbb{N}$, the function $t_n : s(n) \to A$ constructed above
+belongs to $F$, and $n \in \text{Dom}(t_n)$. Thus $(n,t_n(n)) \in f$, so
+$n \in \text{Dom}(f)$. Hence
+
+
+\[
+\mathbb{N} \subseteq \text{Dom}(f).
+\]
+
+
+
+Conversely, if $n \in \text{Dom}(f)$, then there exists $t \in F$ such that $n \in \text{Dom}(t)$.
+But $\text{Dom}(t) = s(m)$ for some $m \in \mathbb{N}$, so $n \in s(m) \subseteq \mathbb{N}$.
+Thus $\text{Dom}(f) \subseteq \mathbb{N}$, and therefore
+
+
+\[
+\text{Dom}(f) = \mathbb{N}.
+\]
+
+
+
+For the range, if $(n,x) \in f$, then $(n,x) \in t$ for some $t \in F$, and each such $t$
+has codomain $A$. Hence $x \in A$, so
+
+
+\[
+\text{Range}(f) \subseteq A.
+\]
+
+
+
+\medskip
+
+\textbf{Claim 4: $f$ satisfies the recursion equations.}
+
+\textbf{(1) $f(0) = a$.}
+
+For every $t \in F$, we have $t(0) = a$ by definition of $F$. Since $0 \in \text{Dom}(t)$
+for all $t \in F$, and all these values agree, the union $f = \bigcup F$ also satisfies
+
+
+\[
+f(0) = a.
+\]
+
+
+
+\textbf{(2) $\forall n \in \mathbb{N} \quad f(s(n)) = g(f(n),n)$.}
+
+Fix $n \in \mathbb{N}$. Consider the function $t_{n+1} \in F$ with domain $s(n+1)$.
+Then $n, s(n) \in \text{Dom}(t_{n+1})$, and by construction:
+
+
+\[
+t_{n+1}(s(n)) = g(t_{n+1}(n),n).
+\]
+
+
+Since $t_{n+1} \subseteq f$, we have
+
+
+\[
+f(n) = t_{n+1}(n), \quad f(s(n)) = t_{n+1}(s(n)).
+\]
+
+
+Therefore
+
+
+\[
+f(s(n)) = g(f(n),n).
+\]
+
+
+
+Thus $f$ satisfies both required conditions.
+
+\medskip
+
+\textbf{Uniqueness.}
+
+Suppose $h : \mathbb{N} \to A$ is another function such that:
+\begin{enumerate}
+    \setlength{\itemsep}{0pt}
+    \item $h(0) = a$,
+    \item $\forall n \in \mathbb{N} \quad h(s(n)) = g(h(n),n)$.
+\end{enumerate}
+
+We show $h = f$ by induction on $n$.
+
+\begin{itemize}
+    \item \textbf{Base:} $n = 0$. Then $h(0) = a = f(0)$.
+    \item \textbf{Step:} Assume $h(n) = f(n)$ for some $n \in \mathbb{N}$. Then
+    
+
+\[
+    h(s(n)) = g(h(n),n) = g(f(n),n) = f(s(n)).
+    \]
+
+
+\end{itemize}
+
+Thus, by induction, $h(n) = f(n)$ for all $n \in \mathbb{N}$, so $h = f$.
+
+\medskip
+
+Therefore, there exists a unique function $f : \mathbb{N} \to A$ such that
+$f(0) = a$ and $\forall n \in \mathbb{N} \ f(s(n)) = g(f(n),n)$.
+\end{proof}
+
 
 \begin{theorem}\textbf{(Parametric version) recurtion} for any set ``$A , P$'' and ``$a : P \to A$'' and any function ``$g :P \times A \times \mathbb{N} \to A$''
     there is a unique function ``$f :P \times \mathbb{N} \to A$'' s.t.
@@ -3825,7 +4370,7 @@ we call ``$\mathfrak{N}$'' a model of ``Peano arithmetic''.
         \item       $\forall x , y , z  \in N \quad (x + y )+ z  = x +( y + z )  $ (assosiative $+$)
         \item       $\forall x  \in N \quad x  + 0 = 0 + x  = x $ (identity  $+$)
         \item       $\forall x , y , z  \in N \quad x  +  z  =  y  +  z   \to x  =  y  $ (cancellative  $+$)
-        \item       $\forall x , y  \in N \quad x + y  =  y +x $  (commutative(abelian)  $+$)
+        \item       $\forall x , y  \in N \quad x + y  =  y + x $  (commutative(abelian)  $+$)
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
@@ -3833,7 +4378,7 @@ we call ``$\mathfrak{N}$'' a model of ``Peano arithmetic''.
 \begin{lemma}prove for ``$(N , + , \cdot)$''
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall x , y , z  \in N \quad (mn) z  = x (nk)  $ (assosiative $\times$)
+        \item       $\forall x , y , z  \in N \quad (x y) z  = x (y z)  $ (assosiative $\times$)
         \item       $\forall x  \in N \quad x  \cdot 1 = 1 \cdot x  = x $ (identity  $\times$)
         \item       $\forall x  , y    \in N \quad   x   y  = 0   \to  x  = 0  \lor   y  = 0 $ (zero divisor free $\times$)
         \item       $\forall x , y  \in N \quad mn = nm$ (commutative(abelian)  $\times$)
@@ -3914,7 +4459,7 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
 \begin{lemma}prove for  ``$ (\mathbb{Z} , +  )  $''
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall x ,y ,z  \in \mathbb{Z} \quad (x + y )+ z  = x + (y + z )  $ (assosiative $+ $)
+        \item       $\forall x ,y ,z  \in \mathbb{Z} \quad (x + y) + z  = x + (y + z )  $ (assosiative $+ $)
         \item       $\forall z \in \mathbb{Z} \quad z +  0 = 0 +  z = z$ (identity  $+ $)
         \item       $\forall z \in \mathbb{Z} \quad \exists y \in \mathbb{Z} \quad z +  y = y +  z = 0$  (inverse  $+ $)
         \item       $\forall x ,y  \in \mathbb{Z} \quad x + y  = y + x $   (commutative(abelian)  $+ $)
@@ -4571,23 +5116,21 @@ we show this unique ``$ \gamma $'' with ``$\beta -_c \alpha$''
         \item       $trunk(\alpha) := sup\{ \beta \in \alpha \mid \beta +_c \alpha = \alpha \} $
         \item       $branch(\alpha) := \alpha -_c trunk(\alpha) $
         \item     $  trunk(\alpha):=
-        \left\{
-            \begin{array}{l}
-                trunk(\alpha)  \quad \quad  \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad  branch(\alpha) < \beta \\
-                trunk(\alpha) +_c trunk(branch(\alpha , \beta))  \quad \quad   branch(\alpha) \geq  \beta
-            \end{array}
-            \right.$
-            \item       $branch(\alpha , \beta) := \alpha -_c trunk(\alpha , \beta) $
-            
+                  \left\{
+                  \begin{array}{l}
+                      trunk(\alpha)  \quad \quad  \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad  branch(\alpha) < \beta \\
+                      trunk(\alpha) +_c trunk(branch(\alpha , \beta))  \quad \quad   branch(\alpha) \geq  \beta
+                  \end{array}
+                  \right.$
+        \item       $branch(\alpha , \beta) := \alpha -_c trunk(\alpha , \beta) $
+
     \end{enumerate}
 \end{definition}
 
 \section{Arithmetic of Ordinals}
 
-
-
 \begin{theorem}\textbf{Summation} there is a unique function ``$+ :Ord \times Ord \to Ord$'' s.t.
-    
+
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       $\forall \alpha  \in Ord \quad \alpha +0 = \alpha $
@@ -4599,7 +5142,7 @@ we show this unique ``$ \gamma $'' with ``$\beta -_c \alpha$''
 \end{theorem}
 
 \begin{theorem}\textbf{Multiplication} there is a unique function ``$\times :Ord \times Ord \to Ord$'' s.t.
-    
+
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       $\forall \alpha  \in Ord \quad \alpha  \times 0 = 0$
@@ -4684,6 +5227,204 @@ arithmetic. so properties are true for them.
 \chapter{Axiom of chioce}
 
 \chapter{hyperreal numbers($*\mathbb{N}  , *\mathbb{Z},*\mathbb{Q}    ,*\mathbb{R} $) and surreal numbers }
+
+\section*{1. Starting Point: Sequences of Reals}
+
+Consider the set of all sequences of real numbers:
+\[
+    \mathbb{R}^{\mathbb{N}} = \{ (x_1, x_2, x_3, \dots) : x_n \in \mathbb{R} \}.
+\]
+Think of a sequence as a function from \(\mathbb{N}\) to \(\mathbb{R}\).
+
+\section*{2. Nonprincipal Ultrafilter on \(\mathbb{N}\)}
+
+An \emph{ultrafilter} \(\mathcal{U}\) on \(\mathbb{N}\) is a collection of
+subsets of \(\mathbb{N}\) satisfying:
+\begin{enumerate}
+    \item If \(A \in \mathcal{U}\) and \(A \subseteq B \subseteq \mathbb{N}\), then \(B
+          \in \mathcal{U}\).
+    \item If \(A,B \in \mathcal{U}\), then \(A \cap B \in \mathcal{U}\).
+    \item For every \(A \subseteq \mathbb{N}\), either \(A \in \mathcal{U}\) or
+          \(\mathbb{N}\setminus A \in \mathcal{U}\).
+\end{enumerate}
+An ultrafilter is \emph{nonprincipal} if it contains no finite sets.
+Existence of such ultrafilters follows from the Axiom of Choice.
+
+Intuitively, a nonprincipal ultrafilter determines what it means for something
+to happen ``for almost all'' \(n\).
+
+\section*{3. Equivalence Relation on Sequences}
+
+For two sequences \((x_n)\) and \((y_n)\) in \(\mathbb{R}^{\mathbb{N}}\),
+define
+\[
+    (x_n) \sim (y_n)
+    \quad \Longleftrightarrow \quad
+    \{\,n \in \mathbb{N} : x_n = y_n \,\} \in \mathcal{U}.
+\]
+That is, they are considered equivalent if they agree on a ``large'' set of
+indices belonging to the ultrafilter.
+
+\section*{4. The Ultrapower Construction}
+
+The set of equivalence classes under this relation is
+\[
+    {}^{\ast}\mathbb{R} = \mathbb{R}^{\mathbb{N}} / \sim.
+\]
+If \((x_n)\) is a sequence, its equivalence class is denoted \([x_n]\).
+
+\section*{5. Algebraic Operations}
+
+Addition and multiplication are defined coordinatewise:
+\[
+    [x_n] + [y_n] = [x_n + y_n], \qquad
+[x_n]\cdot [y_n] = [x_n y_n].
+\]
+These operations are well-defined on equivalence classes, and with them,
+\({}^{\ast}\mathbb{R}\) becomes a field.
+
+\section*{6. Embedding of \(\mathbb{R}\)}
+
+Each real number \(r \in \mathbb{R}\) defines a constant sequence
+\((r,r,r,\dots)\). Define the embedding
+\[
+    \iota: \mathbb{R} \to {}^{\ast}\mathbb{R}, \qquad r \mapsto [r,r,r,\dots].
+\]
+This is an injective field homomorphism, so we can view \(\mathbb{R} \subset
+{}^{\ast}\mathbb{R}\).
+
+\section*{7. Infinitesimal and Infinite Elements}
+
+\textbf{Infinitesimal:} Choose \(x_n = \frac{1}{n}\).
+Then for every standard \(k \in \mathbb{N}\),
+\[
+    \{\,n : \tfrac{1}{n} < \tfrac{1}{k}\,\}
+\]
+is cofinite, hence belongs to \(\mathcal{U}\). Therefore
+\[
+    0 < [1/n] < \tfrac{1}{k} \quad \forall k \in \mathbb{N}.
+\]
+Thus \( [1/n] \) is a positive infinitesimal.
+
+\medskip
+\noindent
+\textbf{Infinite element:} Choose \(y_n = n\).
+For any fixed \(M \in \mathbb{N}\),
+\[
+    \{\,n : n > M\,\}
+\]
+is cofinite, so \( [n] > M \) in \({}^{\ast}\mathbb{R}\). Hence \( [n] \) is an
+infinite hyperreal number.
+
+\section*{8. The Transfer Principle (Łoś's Theorem)}
+
+\emph{Łoś's theorem:} For any first-order formula \(\varphi(x_1,\dots,x_k)\),
+\[
+    {}^{\ast}\mathbb{R} \models \varphi([x^{(1)}_n],\dots,[x^{(k)}_n])
+    \quad \text{iff} \quad
+    \{\,n \in \mathbb{N} : \mathbb{R} \models \varphi(x^{(1)}_n,\dots,x^{(k)}_n)\,\} \in \mathcal{U}.
+\]
+This yields the \emph{Transfer Principle:} any first-order property true in
+\(\mathbb{R}\) is also true in \({}^{\ast}\mathbb{R}\).
+
+\section*{9. Summary}
+
+\begin{enumerate}
+    \item Start with all real sequences \(\mathbb{R}^{\mathbb{N}}\).
+    \item Pick a nonprincipal ultrafilter \(\mathcal{U}\) on \(\mathbb{N}\).
+    \item Define \((x_n)\sim(y_n)\) if they agree on a set in \(\mathcal{U}\).
+    \item The quotient \(\mathbb{R}^{\mathbb{N}}/\sim\) is the hyperreal field
+          \({}^{\ast}\mathbb{R}\).
+    \item Embed \(\mathbb{R}\) via constant sequences.
+    \item Sequences like \(1/n\) and \(n\) give infinitesimal and infinite elements.
+    \item Łoś’s theorem provides the logical foundation (Transfer Principle).
+\end{enumerate}
+
+\section*{10. Remarks}
+
+\({}^{\ast}\mathbb{R}\) depends on the choice of the nonprincipal ultrafilter,
+but all such constructions are \emph{elementarily equivalent} fields—they satisfy
+the same first-order properties of \(\mathbb{R}\).
+
+\section*{Common Symbols: \(\omega\), \(\epsilon\), \(\varepsilon\), and Others}
+
+\subsection*{1. The Symbol \(\omega\)}
+
+\[
+    \omega = \{0,1,2,3,\dots\}
+\]
+
+\[
+    |\omega| = \aleph_0
+\]
+
+Ultrafilter and nonstandard analysis context:
+\[
+    [n] > k \quad \text{for all standard } k \in \mathbb{N}
+\]
+
+LaTeX:
+\[
+    \texttt{\textbackslash omega}
+\]
+
+\subsection*{2. The Symbols \(\epsilon\) and \(\varepsilon\)}
+
+\[
+    \epsilon > 0, \qquad \varepsilon > 0
+\]
+
+Both denote an arbitrarily small positive real number.
+
+Limit definition example:
+\[
+    \forall \varepsilon > 0 \; \exists \delta > 0 : |x-a| < \delta \Rightarrow |f(x)-L| < \varepsilon .
+\]
+
+Infinitesimal in hyperreals:
+\[
+    0 < \varepsilon < \frac{1}{n} \quad \forall n \in \mathbb{N}.
+\]
+
+LaTeX:
+\[
+    \texttt{\textbackslash epsilon}, \qquad \texttt{\textbackslash varepsilon}
+\]
+
+\subsection*{3. Other Common Greek Symbols}
+
+\[
+    \alpha, \beta, \gamma, \delta, \eta, \theta, \lambda, \mu, \phi, \varphi
+\]
+
+LaTeX:
+\[
+    \texttt{\textbackslash alpha},\;
+    \texttt{\textbackslash beta},\;
+    \texttt{\textbackslash gamma},\;
+    \texttt{\textbackslash delta},\;
+    \texttt{\textbackslash eta},\;
+    \texttt{\textbackslash theta},\;
+    \texttt{\textbackslash lambda},\;
+    \texttt{\textbackslash mu},\;
+    \texttt{\textbackslash phi},\;
+    \texttt{\textbackslash varphi}.
+\]
+
+\subsection*{4. Summary Table (LaTeX Only)}
+
+\[
+    \begin{array}{c|c|c}
+        \text{Symbol} & \text{Meaning}                         & \text{LaTeX}                       \\ \hline
+        \omega        & \text{first infinite ordinal}          & \texttt{\textbackslash omega}      \\
+        \Omega        & \text{asymptotic lower bound}          & \texttt{\textbackslash Omega}      \\
+        \epsilon      & \text{small positive number}           & \texttt{\textbackslash epsilon}    \\
+        \varepsilon   & \text{alternative epsilon}             & \texttt{\textbackslash varepsilon} \\
+        \delta        & \text{small positive number in limits} & \texttt{\textbackslash delta}      \\
+        \theta        & \text{angle or parameter}              & \texttt{\textbackslash theta}      \\
+        \lambda       & \text{eigenvalue or parameter}         & \texttt{\textbackslash lambda}     \\
+    \end{array}
+\]
 
 \chapter{fantacy numbers($ \mathbb{Z} (Ord) , \mathbb{Q} (Ord) ,\mathbb{R} (Ord) ,\mathbb{C} (Ord)$) }
 
@@ -4889,9 +5630,9 @@ if you are not fimiliar to this notation it means ``$ |\_| := \{ (x,y) \in
     \to y = -x ) \} $''. learn this notation because we want to use later.
 
 we learned about ``$\mathbb{Q} (Ord)$'' before and we constructed structure
-``$(\mathbb{Q} (Ord) , + , \cdot , <)$''. now assume $\mathbb{Q} (Ord)^\omega$(we
-know what does it mean by the definition. it means all the sequences of
-$\mathbb{Q} (Ord)$). we don't want it all we just want a subset.
+``$(\mathbb{Q} (Ord) , + , \cdot , <)$''. now assume $\mathbb{Q}
+    (Ord)^\omega$(we know what does it mean by the definition. it means all the
+sequences of $\mathbb{Q} (Ord)$). we don't want it all we just want a subset.
 
 \begin{definition}\textbf{Cauchy sequence} is a sequence like ``$(a_i)_{i \in \omega} \in \mathbb{Q} (Ord)^\omega$'' s.t. elements of it get infinitly
     close to each other i.e.
@@ -4900,19 +5641,19 @@ $\mathbb{Q} (Ord)$). we don't want it all we just want a subset.
 
 we usually give ``$N$'' natural numbers but it's not necessary.
 
-we define an equivalence relation ``$ (a_i)_{i \in \omega} \sim (b_i)_{i \in \omega}
-    : \forall \epsilon > 0 \quad \exists N \quad \forall n > N \quad | a_n - b_n |
-    < \epsilon $''(check it's an equivalence relation).
+we define an equivalence relation ``$ (a_i)_{i \in \omega} \sim (b_i)_{i \in
+        \omega} : \forall \epsilon > 0 \quad \exists N \quad \forall n > N \quad | a_n
+    - b_n | < \epsilon $''(check it's an equivalence relation).
 
 \begin{definition}\textbf{Hyper Real numbers ``$\mathbb{R} (Ord)$''} is a set
     \[ \mathbb{R} (Ord) :=  Cauchy/ \sim  \]
     we denote it's members with ``$r_0 , r_1 ,...$''
 \end{definition}
 
-in this system ``$ 0 := [(0)_{i \in \omega}]$'' and ``$ 1 := [(1)_{i \in \omega}]$''
-and ``$ \forall q \in \mathbb{Q} (Ord) \quad q := [(q)_{i \in \omega}]$''. so we
-can say ``$ Ord \subseteq \mathbb{Z} (Ord) \subseteq \mathbb{Q} (Ord) \subseteq
-    \mathbb{R} (Ord)$''.
+in this system ``$ 0 := [(0)_{i \in \omega}]$'' and ``$ 1 := [(1)_{i \in
+            \omega}]$'' and ``$ \forall q \in \mathbb{Q} (Ord) \quad q := [(q)_{i \in
+            \omega}]$''. so we can say ``$ Ord \subseteq \mathbb{Z} (Ord) \subseteq
+    \mathbb{Q} (Ord) \subseteq \mathbb{R} (Ord)$''.
 
 \begin{theorem}\textbf{Summation} there is a unique function ``$+_{\mathbb{R} (Ord)} :\mathbb{R} (Ord) \times \mathbb{R} (Ord) \to \mathbb{R} (Ord)$'' s.t.
 
@@ -5140,15 +5881,15 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
 first we have to fix a ``Main variable'' it's almost all the time ``$x$''.
 (somtimes it's ``$t$'').
 \begin{definition} assume $f : \mathbb{R} (Ord) \to \mathbb{R} (Ord)$
-    we define \textbf{Difrential $(d_\alpha(f)$)}
-    \[ d_\alpha(f) := f[ x + \alpha / x] -  f(x) \]
+    we define \textbf{Difrential $(d_\alpha(f))$}
+    \[ d_\alpha(f) := f( x + \alpha ) -  f(x) \]
 \end{definition}
 
 Main reason we choose ``$x$'' in defintion becuase it's ``Main variable''. you
 can prove $\forall x \in \mathbb{R} (Ord) \quad d_\alpha(x) = \alpha(x)$.
 
 \begin{definition} we define \textbf{Derivative}
-    \[ \frac{d}{dx}  :=  \{  (f , \frac{d_\alpha(f)}{d_\alpha(x)}) \mid f : \mathbb{R} (Ord) \to \mathbb{R} (Ord) \} \]
+    \[ \frac{d}{dx}  :=  \{ \big(f , sh(\frac{d_\alpha(f)}{d_\alpha(x)}) \big) \mid f : \mathbb{R} (Ord) \to \mathbb{R} (Ord) \} \]
     there is a biggest set like $A$ s.t. $ \frac{d}{dx} A$ is a function (you can
     prove it as an exercise). we call that set ``Derivatible funsions'' and that
     function ``Derivative''.

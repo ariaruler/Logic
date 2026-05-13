@@ -10,47 +10,47 @@
 \contentsline {section}{\numberline {4.1}Axioms of set theory}{21}{section.4.1}%
 \contentsline {chapter}{\numberline {5}Relations and Functions}{31}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Orderd pair and Cartesian product}{31}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Relations}{32}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Functions}{34}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Family of sets}{37}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Structures and morphisms}{40}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Equivalences and Partitions}{41}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Orderings}{45}{section.5.7}%
-\contentsline {chapter}{\numberline {6} The beginning of Abstract Algebra }{51}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Group theory}{51}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Ring theory}{51}{section.6.2}%
-\contentsline {chapter}{\numberline {7} Natural numbers }{57}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Introduction to Natural numbers}{57}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Properties of Natural numbers}{58}{section.7.2}%
-\contentsline {section}{\numberline {7.3}The Recurtion theorem}{59}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Arithmetic of Natural numbers}{60}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Peano arithmetic}{60}{section.7.5}%
-\contentsline {chapter}{\numberline {8}From Natural numbers to Complex numbers }{63}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Integers``$\mathbb {Z}$''}{63}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Rational numbers ``$\mathbb {Q}$''}{64}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Real numbers ``$\mathbb {R}$''}{66}{section.8.3}%
-\contentsline {section}{\numberline {8.4}Complex numbers``$\mathbb {C}$''}{68}{section.8.4}%
-\contentsline {chapter}{\numberline {9}Finite and Infinite sets}{71}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Equipotent and Order in sets}{71}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Finite sets}{72}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Countable sets}{72}{section.9.3}%
-\contentsline {section}{\numberline {9.4}Uncountable sets}{73}{section.9.4}%
-\contentsline {chapter}{\numberline {10}Ordinals }{75}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Well ordered sets}{75}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Ordinal numbers}{76}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Transfinite Induction}{76}{section.10.3}%
-\contentsline {section}{\numberline {10.4}Transfinite Recurtion}{76}{section.10.4}%
-\contentsline {section}{\numberline {10.5}Arithmetic of Ordinals}{77}{section.10.5}%
-\contentsline {section}{\numberline {10.6}Hyper Peano arithmetic}{77}{section.10.6}%
-\contentsline {chapter}{\numberline {11}Cardinals }{81}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Axiom of chioce}{83}{chapter.12}%
-\contentsline {chapter}{\numberline {13}hyperreal numbers($*\mathbb {N} , *\mathbb {Z},*\mathbb {Q} ,*\mathbb {R} $) and surreal numbers }{85}{chapter.13}%
-\contentsline {chapter}{\numberline {14}fantacy numbers($ \mathbb {Z} (Ord) , \mathbb {Q} (Ord) ,\mathbb {R} (Ord) ,\mathbb {C} (Ord)$) }{87}{chapter.14}%
-\contentsline {section}{\numberline {14.1}Hyper Integers``$\mathbb {Z} (Ord)$''}{87}{section.14.1}%
-\contentsline {section}{\numberline {14.2}Hyper Rational numbers ``$\mathbb {Q} (Ord) $''}{88}{section.14.2}%
-\contentsline {section}{\numberline {14.3}Hyper Real numbers ``$\mathbb {R} (Ord)$''}{90}{section.14.3}%
-\contentsline {section}{\numberline {14.4}Hyper Complex numbers``$\mathbb {C} (Ord)$''}{92}{section.14.4}%
-\contentsline {chapter}{\numberline {15}New beginning for calculus }{95}{chapter.15}%
-\contentsline {section}{\numberline {15.1}Derivatives}{95}{section.15.1}%
-\contentsline {chapter}{\numberline {16}Lebesgue Intergral}{97}{chapter.16}%
-\contentsline {chapter}{\numberline {17}New beginning for Probability theory}{99}{chapter.17}%
+\contentsline {section}{\numberline {5.2}Relations}{33}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Functions}{36}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Family of sets}{40}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Structures and morphisms}{43}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Equivalences and Partitions}{44}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Orderings}{48}{section.5.7}%
+\contentsline {chapter}{\numberline {6} The beginning of Abstract Algebra }{55}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Group theory}{55}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Ring theory}{55}{section.6.2}%
+\contentsline {chapter}{\numberline {7} Natural numbers }{61}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Introduction to Natural numbers}{61}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Properties of Natural numbers}{62}{section.7.2}%
+\contentsline {section}{\numberline {7.3}The Recurtion theorem}{63}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Arithmetic of Natural numbers}{66}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Peano arithmetic}{67}{section.7.5}%
+\contentsline {chapter}{\numberline {8}From Natural numbers to Complex numbers }{69}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Integers``$\mathbb {Z}$''}{69}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Rational numbers ``$\mathbb {Q}$''}{70}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Real numbers ``$\mathbb {R}$''}{72}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Complex numbers``$\mathbb {C}$''}{74}{section.8.4}%
+\contentsline {chapter}{\numberline {9}Finite and Infinite sets}{77}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Equipotent and Order in sets}{77}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Finite sets}{78}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Countable sets}{78}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Uncountable sets}{79}{section.9.4}%
+\contentsline {chapter}{\numberline {10}Ordinals }{81}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Well ordered sets}{81}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Ordinal numbers}{82}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Transfinite Induction}{82}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Transfinite Recurtion}{82}{section.10.4}%
+\contentsline {section}{\numberline {10.5}Arithmetic of Ordinals}{83}{section.10.5}%
+\contentsline {section}{\numberline {10.6}Hyper Peano arithmetic}{83}{section.10.6}%
+\contentsline {chapter}{\numberline {11}Cardinals }{87}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Axiom of chioce}{89}{chapter.12}%
+\contentsline {chapter}{\numberline {13}hyperreal numbers($*\mathbb {N} , *\mathbb {Z},*\mathbb {Q} ,*\mathbb {R} $) and surreal numbers }{91}{chapter.13}%
+\contentsline {chapter}{\numberline {14}fantacy numbers($ \mathbb {Z} (Ord) , \mathbb {Q} (Ord) ,\mathbb {R} (Ord) ,\mathbb {C} (Ord)$) }{95}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Hyper Integers``$\mathbb {Z} (Ord)$''}{95}{section.14.1}%
+\contentsline {section}{\numberline {14.2}Hyper Rational numbers ``$\mathbb {Q} (Ord) $''}{96}{section.14.2}%
+\contentsline {section}{\numberline {14.3}Hyper Real numbers ``$\mathbb {R} (Ord)$''}{98}{section.14.3}%
+\contentsline {section}{\numberline {14.4}Hyper Complex numbers``$\mathbb {C} (Ord)$''}{100}{section.14.4}%
+\contentsline {chapter}{\numberline {15}New beginning for calculus }{103}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Derivatives}{103}{section.15.1}%
+\contentsline {chapter}{\numberline {16}Lebesgue Intergral}{105}{chapter.16}%
+\contentsline {chapter}{\numberline {17}New beginning for Probability theory}{107}{chapter.17}%
