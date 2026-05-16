@@ -102,8 +102,6 @@ to explain them for you to understand.but they don't have any definition.
 In this book, we will denote individual urelements using lowercase letters $u$,
 $v$, $w$,$...$
 
-
-
 \begin{undefined}
     \textbf{Type} parallel lines used to show that an object exists
     (you will undrestnd what is object soon.)
@@ -2560,16 +2558,16 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
 
-                \begin{fitchproof}[arrayenv=tabular]
+        \begin{fitchproof}[arrayenv=tabular]
             \have [ ] {2} {  Func(f) }
             \hypo   [ ]{2} {   (x,y) \in f }
             \have [ ] {2} {\therefore f(x)=y}    \by{$f() E$}{}
         \end{fitchproof}
-        
-        &
-        
+
+         &
+
         \begin{fitchproof}[arrayenv=tabular]
-            \have  [ ]  {2} {f(x)=y}                    
+            \have  [ ]  {2} {f(x)=y}
             \hypo [ ] {2} {  Func(f) }
 
             \have [ ] {2} {\therefore (x,y) \in f }    \by{$f() E$}{}
@@ -3549,8 +3547,6 @@ now we will show you relation between ``(partial) Order relation'' and
 if the stucture clear to us we don't write stucture index ``$min(\_),
     Minimal(\_) , Lowerb(\_,\_)$''. and we don't mension it.
 
-
-
 \begin{theorem}
     \textbf{Infimum and Supremum} assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
     and $\mathcal{B} := \{ B \subseteq A \mid HaveGreatest \{ b \in A \mid Lowerb_\mathfrak{A}(b,B) \} \}$ and
@@ -3670,7 +3666,7 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
     We divide the proof into two parts.
 
     %-----------------------------------------------------------
-    \subsection*{(1) Necessity of cancellativity and commutativity of $+$}
+    \subsection{(1) Necessity of cancellativity and commutativity of $+$}
 
     Suppose $\eta:S\to R$ is an embedding of $S$ as a subsemiring of a ring $R$.
     The additive structure of a ring is an abelian group. Thus the image $\eta(S)$
@@ -3687,7 +3683,7 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
     This proves necessity.
 
     %-----------------------------------------------------------
-    \subsection*{(2) Construction of the universal ring when $(S,+)$ is cancellative and commutative}
+    \subsection{(2) Construction of the universal ring when $(S,+)$ is cancellative and commutative}
 
     Assume now that $(S,+)$ is a cancellative commutative monoid. We form its
     Grothendieck group:
@@ -3702,7 +3698,7 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
     \]
 
     %-----------------------------------------------------------
-    \subsubsection*{Equivalence relation}
+    \subsubsection{Equivalence relation}
 
     Reflexivity and symmetry are immediate. For transitivity, assume
     \[
@@ -3718,7 +3714,7 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
     Thus $\sim$ is an equivalence relation.
 
     %-----------------------------------------------------------
-    \subsubsection*{Well-defined addition}
+    \subsubsection{Well-defined addition}
 
     Define
     \[
@@ -3740,7 +3736,7 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
     Thus $(a+c,b+d)\sim(a'+c',b'+d')$, so addition is well defined.
 
     %-----------------------------------------------------------
-    \subsubsection*{Well-defined multiplication}
+    \subsubsection{Well-defined multiplication}
 
     Define
     \[
@@ -3764,7 +3760,7 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
     Thus multiplication is well defined.
 
     %-----------------------------------------------------------
-    \subsubsection*{Ring structure}
+    \subsubsection{Ring structure}
 
     The additive structure is an abelian group by construction. Multiplication is
     associative and distributive because it is defined via bilinearity inherited
@@ -3773,7 +3769,7 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
     Thus $G(S)$ is a ring.
 
     %-----------------------------------------------------------
-    \subsection*{(3) Universality}
+    \subsection{(3) Universality}
 
     Given any semiring-to-ring homomorphism $f:S\to T$, define
     \[
@@ -3792,24 +3788,24 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
 
     This proves the universal property.
 
-    \section*{The Field of Fractions}
+    \section{The Field of Fractions}
 
     The field of fractions is a fundamental concept in abstract algebra that allows
     us to extend a given integral domain to a field. It is the smallest field
     containing the integral domain.
 
-    \subsection*{Integral Domain}
+    \subsection{Integral Domain}
     An integral domain is a commutative ring with a multiplicative identity ($1 \ne
         0$) and no zero divisors. That is, if $a \cdot b = 0$, then either $a = 0$ or
     $b = 0$. The set of integers, $\mathbb{Z}$, is a classic example.
 
-    \subsection*{Field}
+    \subsection{Field}
     A field is a commutative ring with a multiplicative identity where every
     non-zero element has a multiplicative inverse. For every $a \ne 0$, there
     exists $b$ such that $a \cdot b = 1$. The set of rational numbers,
     $\mathbb{Q}$, is a field.
 
-    \subsection*{Construction of the Field of Fractions}
+    \subsection{Construction of the Field of Fractions}
     Given an integral domain $D$, its field of fractions, denoted by $F(D)$, is
     constructed by formally creating fractions of elements from $D$. We consider
     pairs $(a, b)$ where $a, b \in D$ and $b \ne 0$. An equivalence relation $\sim$
@@ -3828,7 +3824,7 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
 
 \end{proof}
 
-\section*{Theorem: Existence and Uniqueness of the Field of Fractions}
+\section{Theorem: Existence and Uniqueness of the Field of Fractions}
 
 \begin{theorem}
     Let $D$ be an integral domain. Then there exists a field $F$ and an injective ring homomorphism $\phi: D \to F$ such that for every field $K$ and every ring homomorphism $\psi: D \to K$, there exists a unique field homomorphism $f: F \to K$ such that $\psi = f \circ \phi$.
@@ -4071,255 +4067,438 @@ all $n$-length finite sequences of $a \in A$ and ``$A^\mathbb{N}$'' is the set
 of all infinite sequences of $a \in A$.
 
 \begin{theorem}[Recursion]
-For any set $A$, any $a \in A$, and any function $g : A \times \mathbb{N} \to A$,
-there is a unique function $f : \mathbb{N} \to A$ such that:
-\begin{enumerate}
-    \setlength{\itemsep}{0pt}
-    \item $f(0) = a$.
-    \item $\forall n \in \mathbb{N} \quad f(s(n)) = g(f(n),n)$.
-\end{enumerate}
+    For any set $A$, any $a \in A$, and any function $g : A \times \mathbb{N} \to A$,
+    there is a unique function $f : \mathbb{N} \to A$ such that:
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt}
+        \item $f(0) = a$.
+        \item $\forall n \in \mathbb{N} \quad f(s(n)) = g(f(n),n)$.
+    \end{enumerate}
 \end{theorem}
 
-\begin{proof}
-\textbf{Step 1: Construction of $F$ and $f$.}
-
 Define
 
-
 \[
-F := \Big\{ t \ \Big|\ \exists m \in \mathbb{N} \ \big( t : s(m) \to A
-\ \land\ t(0) = a \ \land\ \forall k < m \ \big( t(s(k)) = g(t(k),k) \big) \big) \Big\}.
+    F := \Big\{ t \ \Big|\ \exists m \in \mathbb{N} \ \big( t : s(m) \to A
+    \ \land\ t(0) = a \ \land\ \forall k < m \ \big( t(s(k)) = g(t(k),k) \big) \big) \Big\}.
 \]
-
-
-Define
-
-
-\[
-f := \bigcup F.
-\]
-
-
 
 \textbf{Claim 1: $F \neq \emptyset$.}
 
-We construct, by induction on $n \in \mathbb{N}$, a sequence of functions
-$t_n : s(n) \to A$ such that:
+\begin{fitchproof}[arrayenv=tabular]
 
+    \have {12} { t_0 \in F}
+
+    \have {13} {F\neq\emptyset}
+
+\end{fitchproof}
+
+Define
 
 \[
-t_n(0) = a, \quad \forall k < n \quad t_n(s(k)) = g(t_n(k),k).
+    f := \bigcup F.
 \]
 
-
-
-\begin{itemize}
-    \item \textbf{Base:} For $n=0$, $s(0)$ is the set whose only element is $0$.
-    Define $t_0 : s(0) \to A$ by $t_0(0) = a$. The condition on $k < 0$ is vacuous,
-    so $t_0$ satisfies the required property, hence $t_0 \in F$.
-    \item \textbf{Step:} Suppose $t_n : s(n) \to A$ is defined with the desired properties.
-    Define $t_{n+1} : s(n+1) \to A$ by:
-    
-
-\[
-    t_{n+1}(k) :=
-    \begin{cases}
-        t_n(k) & \text{if } k \in s(n),\\
-        g(t_n(n),n) & \text{if } k = s(n).
-    \end{cases}
-    \]
-
-
-    Then $t_{n+1}(0) = t_n(0) = a$, and for all $k < n+1$:
-    
-
-\[
-    t_{n+1}(s(k)) =
-    \begin{cases}
-        t_n(s(k)) = g(t_n(k),k) & \text{if } k < n,\\
-        g(t_n(n),n) & \text{if } k = n,
-    \end{cases}
-    \]
-
-
-    so $t_{n+1}$ also satisfies the recursion condition. Hence $t_{n+1} \in F$.
-\end{itemize}
-
-Thus, for every $n \in \mathbb{N}$, $t_n \in F$, so $F \neq \emptyset$ and $f = \bigcup F$ is well-defined.
-
-\medskip
-
-\textbf{Claim 2: $f$ is a function.}
-
-We must show $\text{Func}(f)$, i.e., for all $n$, if $(n,x) \in f$ and $(n,y) \in f$, then $x = y$.
-
-Let $(n,x) \in f$ and $(n,y) \in f$. Then there exist $t,u \in F$ such that
-$(n,x) \in t$ and $(n,y) \in u$. Let $\text{Dom}(t) = s(m)$ and $\text{Dom}(u) = s(\ell)$.
-Without loss of generality, assume $m \le \ell$.
-
-We show $t \subseteq u$ by induction on $k < m$.
-
-\begin{itemize}
-    \item \textbf{Base:} $k = 0$. Then $t(0) = a$ and $u(0) = a$ by definition of $F$,
-    so $t(0) = u(0)$.
-    \item \textbf{Step:} Assume $t(k) = u(k)$ for some $k < m$. Since $t,u \in F$,
-    both satisfy the recursion condition:
-    
-
-\[
-    t(s(k)) = g(t(k),k), \quad u(s(k)) = g(u(k),k).
-    \]
-
-
-    By the induction hypothesis, $t(k) = u(k)$, hence $t(s(k)) = u(s(k))$.
-\end{itemize}
-
-Thus $t$ and $u$ agree on all of $s(m)$, so in particular $t(n) = u(n)$ whenever $n \in s(m)$.
-Hence $x = t(n) = u(n) = y$. Therefore $f$ is a function:
-
-
-\[
-\text{Func}(f).
-\]
-
-
-
-\medskip
-
-\textbf{Claim 3: $\text{Dom}(f) = \mathbb{N}$ and $\text{Range}(f) \subseteq A$.}
-
-First, for each $n \in \mathbb{N}$, the function $t_n : s(n) \to A$ constructed above
-belongs to $F$, and $n \in \text{Dom}(t_n)$. Thus $(n,t_n(n)) \in f$, so
-$n \in \text{Dom}(f)$. Hence
-
-
-\[
-\mathbb{N} \subseteq \text{Dom}(f).
-\]
-
-
-
-Conversely, if $n \in \text{Dom}(f)$, then there exists $t \in F$ such that $n \in \text{Dom}(t)$.
-But $\text{Dom}(t) = s(m)$ for some $m \in \mathbb{N}$, so $n \in s(m) \subseteq \mathbb{N}$.
-Thus $\text{Dom}(f) \subseteq \mathbb{N}$, and therefore
-
-
-\[
-\text{Dom}(f) = \mathbb{N}.
-\]
-
-
-
-For the range, if $(n,x) \in f$, then $(n,x) \in t$ for some $t \in F$, and each such $t$
-has codomain $A$. Hence $x \in A$, so
-
-
-\[
-\text{Range}(f) \subseteq A.
-\]
-
-
-
-\medskip
-
-\textbf{Claim 4: $f$ satisfies the recursion equations.}
-
-\textbf{(1) $f(0) = a$.}
-
-For every $t \in F$, we have $t(0) = a$ by definition of $F$. Since $0 \in \text{Dom}(t)$
-for all $t \in F$, and all these values agree, the union $f = \bigcup F$ also satisfies
-
-
-\[
-f(0) = a.
-\]
-
-
-
-\textbf{(2) $\forall n \in \mathbb{N} \quad f(s(n)) = g(f(n),n)$.}
-
-Fix $n \in \mathbb{N}$. Consider the function $t_{n+1} \in F$ with domain $s(n+1)$.
-Then $n, s(n) \in \text{Dom}(t_{n+1})$, and by construction:
-
-
-\[
-t_{n+1}(s(n)) = g(t_{n+1}(n),n).
-\]
-
-
-Since $t_{n+1} \subseteq f$, we have
-
-
-\[
-f(n) = t_{n+1}(n), \quad f(s(n)) = t_{n+1}(s(n)).
-\]
-
-
-Therefore
-
-
-\[
-f(s(n)) = g(f(n),n).
-\]
-
-
-
-Thus $f$ satisfies both required conditions.
-
-\medskip
-
-\textbf{Uniqueness.}
-
-Suppose $h : \mathbb{N} \to A$ is another function such that:
-\begin{enumerate}
-    \setlength{\itemsep}{0pt}
-    \item $h(0) = a$,
-    \item $\forall n \in \mathbb{N} \quad h(s(n)) = g(h(n),n)$.
-\end{enumerate}
-
-We show $h = f$ by induction on $n$.
-
-\begin{itemize}
-    \item \textbf{Base:} $n = 0$. Then $h(0) = a = f(0)$.
-    \item \textbf{Step:} Assume $h(n) = f(n)$ for some $n \in \mathbb{N}$. Then
-    
-
-\[
-    h(s(n)) = g(h(n),n) = g(f(n),n) = f(s(n)).
-    \]
-
-
-\end{itemize}
-
-Thus, by induction, $h(n) = f(n)$ for all $n \in \mathbb{N}$, so $h = f$.
-
-\medskip
-
-Therefore, there exists a unique function $f : \mathbb{N} \to A$ such that
-$f(0) = a$ and $\forall n \in \mathbb{N} \ f(s(n)) = g(f(n),n)$.
+\begin{proof}
+
+    \textbf{Claim 2: $f$ is a function.}
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \open
+        \have {1} {t,u\in F}
+        \open
+        \have {2} {Dom(t)=s(m)}
+        \have {3} {Dom(u)=s(n)}
+        \open
+        \have {4} {m \le n}
+
+        \have {5} {t(0)=a}
+        \have {6} {u(0)=a}
+        \have {7} {t(0)=u(0)}
+
+        \open
+        \have {8} {t(k)=u(k)}
+        \have {9} {t(s(k))=g(t(k),k)}
+        \have {10} {u(s(k))=g(u(k),k)}
+        \have {11} {t(s(k))=u(s(k))}
+        \close
+
+        \have {12} {\forall k<m \quad t(k)=u(k)}
+        \close
+        \close
+        \have {13} {t\subseteq u}
+        \close
+
+        \have {14} {\forall t,u\in F
+            \quad
+            (t\subseteq u \lor u\subseteq t)}
+
+        \have {15} {Compatible(F)}
+        \have {20} {Func(f)}
+    \end{fitchproof}
+
+    \medskip
+
+    \textbf{Claim 3: $\text{Dom}(f) = \mathbb{N}$ and $\text{Range}(f) \subseteq A$.}
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \open
+        \have {21} {n\in\mathbb{N}}
+        \have {22} {\exists t_n\in F}
+        \have {23} {n\in Dom(t_n)}
+        \have {24} {(n,t_n(n))\in f}
+        \have {25} {n\in Dom(f)}
+        \close
+
+        \open
+        \have {27} {n\in Dom(f)}
+        \have {28} {\exists t\in F \quad n\in Dom(t)}
+        \have {29} {Dom(t)=s(m)}
+        \have {30} {n\in s(m)}
+        \have {31} {n\in\mathbb{N}}
+        \close
+
+        \have {33} {Dom(f)=\mathbb{N}}
+
+        \open
+        \have {37} {x\in Range(f)}
+        \have {34} {(n,x)\in f}
+        \have {35} {\exists t\in F \quad (n,x)\in t}
+        \have {36} {t:s(m)\to A}
+        \have {37} {x\in A}
+        \close
+
+        \have {38} {Range(f) \subseteq A}
+
+    \end{fitchproof}
+
+    \medskip
+
+    \textbf{Claim 4: $f$ satisfies the recursion equations.}
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \open
+        \have {21} {n\in\mathbb{N}}
+        \have {22} {\exists t_{n+1}\in F}
+        \have {23} {t_{n+1}(s(n))
+            =
+            g(t_{n+1}(n),n)}
+        \have {24} {t_{n+1}\subseteq f}
+        \have {25} {f(s(n))
+            =
+            g(f(n),n)}
+        \close
+
+        \have {26} {\forall n\in\mathbb{N}
+            \quad
+            f(s(n))
+            =
+            g(f(n),n)}
+
+        \have {27} {f(0)=a}
+
+    \end{fitchproof}
+
+    \medskip
+
+    \textbf{Claim 5 : Uniqueness.}
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \open
+        \have {28} {h:\mathbb{N}\to A}
+        \have {29} {h(0)=a}
+        \have {30} {\forall n\in\mathbb{N}
+            \quad
+            h(s(n))
+            =
+            g(h(n),n)}
+
+        \have {31} {f(0)=h(0)}
+
+        \open
+        \have {32} {f(n)=h(n)}
+        \have {33} {f(s(n))
+            =
+            g(f(n),n)}
+        \have {34} {h(s(n))
+            =
+            g(h(n),n)}
+        \have {35} {f(s(n))=h(s(n))}
+        \close
+
+        \have {36} {\forall n\in\mathbb{N}
+            \quad
+            f(n)=h(n)}
+
+        \have {37} {f=h}
+        \close
+
+        \have {38} {\exists !f:\mathbb{N}\to A
+            \quad
+            \Big(
+            f(0)=a
+            \land
+            \forall n\in\mathbb{N}
+            \quad
+            f(s(n))
+            =
+            g(f(n),n)
+            \Big)}
+
+    \end{fitchproof}
+
+    \medskip
+
+    Therefore, there exists a unique function $f : \mathbb{N} \to A$ such that
+    $f(0) = a$ and $\forall n \in \mathbb{N} \ f(s(n)) = g(f(n),n)$.
 \end{proof}
 
-
-\begin{theorem}\textbf{(Parametric version) recurtion} for any set ``$A , P$'' and ``$a : P \to A$'' and any function ``$g :P \times A \times \mathbb{N} \to A$''
-    there is a unique function ``$f :P \times \mathbb{N} \to A$'' s.t.
+\begin{theorem}[Parametric Recursion Theorem]
+    For any sets ``$A,P$'', any function ``$a:P\to A$'', and any function
+    ``$g:P\times A\times \mathbb{N}\to A$'', there is a unique function
+    ``$f:P\times\mathbb{N}\to A$'' such that
     \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $ f(p,0) = a(p)$
-        \item       $\forall n \in \mathbb{N} \quad f(p,s(n)) = g(p,f(n),n)  $
-    \end{enumerate}
-    Claim 1 : Existing of ``$f$''\\
-    % \begin{fitchproof}[arrayenv=tabular]
-    %     \have {1} { F := \{ t \mid \forall k,m \in \mathbb{N} \quad 0 < k < m \to
-    %         \Big( \big(t : s(m) \to A \big) \land t(0) = a \land t \big( s(k) \big) = g \big( t(k),k \big)\Big)  \}  }
-    %     \have {1} { f := \bigcup F  }
-    % \end{fitchproof}
-    Claim 2 : ``$f$'' is a function\\
-    % \begin{fitchproof}[arrayenv=tabular]
-    %     \have {1} { Func(f)  }
-    % \end{fitchproof}
-    Claim 3 : ``$Dom(f) = \mathbb{N}$'' and ``$Range(f) \subseteq A$''\\
+        \setlength{\itemsep}{0pt}
 
-    Claim 4 : ``$f$'' satisfies conditions (1) and (2)
+        \item
+              \[
+                  \forall p\in P \quad f(p,0)=a(p)
+              \]
+
+        \item
+              \[
+                  \forall p\in P \ \forall n\in\mathbb{N}
+                  \quad
+                  f\big(p,s(n)\big)=g\big(p,f(p,n),n\big)
+              \]
+    \end{enumerate}
+
+    \begin{proof}
+
+        Fix $p\in P$.
+
+        Define
+
+        \[
+            G_p(x,n):=g(p,x,n).
+        \]
+
+        \textbf{Claim 1 :}
+        $G_p:A\times\mathbb{N}\to A$.
+
+        \begin{fitchproof}[arrayenv=tabular]
+
+            \open
+            \have {1} {p\in P}
+            \open
+            \have {2} {(x,n)\in A\times\mathbb{N}}
+            \have {3} {g(p,x,n)\in A}
+            \have {4} {G(p)(x,n)\in A}
+            \close
+            \have {5} {G(p):A\times\mathbb{N}\to A}
+            \close
+
+            \have {6} {\forall p\in P
+                \quad
+                G(p):A\times\mathbb{N}\to A}
+
+        \end{fitchproof}
+
+        \medskip
+
+        For every $p\in P$, by the ordinary Recursion Theorem applied to $a(p)\in A$
+        and $G(p):A\times\mathbb{N}\to A$, there exists a unique function
+
+        \[
+            F_p:\mathbb{N}\to A
+        \]
+
+        such that
+
+        \[
+            F_p(0)=a(p)
+        \]
+
+        and
+
+        \[
+            \forall n\in\mathbb{N}
+            \quad
+            F_p(s(n))
+            =
+            G(p)(F_p(n),n).
+        \]
+
+        Define
+
+        \[
+            f(p,n):=F_p(n).
+        \]
+
+        \medskip
+
+        \textbf{Claim 2 :}
+        $f:P\times\mathbb{N}\to A$.
+
+        \begin{fitchproof}[arrayenv=tabular]
+
+            \open
+            \have {10} {(p,n)\in P\times\mathbb{N}}
+            \have {11} {F_p:\mathbb{N}\to A}
+            \have {12} {F_p(n)\in A}
+            \have {13} {f(p,n)\in A}
+            \close
+
+            \have {14} {f:P\times\mathbb{N}\to A}
+
+        \end{fitchproof}
+
+        \medskip
+
+        \textbf{Claim 3 :}
+        $f$ satisfies the recursion equations.
+
+        \begin{fitchproof}[arrayenv=tabular]
+
+            \open
+            \have {20} {p\in P}
+            \have {21} {F_p(0)=a(p)}
+            \have {22} {f(p,0)=a(p)}
+            \close
+
+            \have {23} {\forall p\in P
+                \quad
+                f(p,0)=a(p)}
+
+            \open
+            \have {24} {p\in P}
+            \have {25} {n\in\mathbb{N}}
+
+            \have {26} {F_p(s(n))
+                =
+                G(p)(F_p(n),n)}
+
+            \have {27} {G(p)(F_p(n),n)
+                =
+                g(p,F_p(n),n)}
+
+            \have {28} {f(p,s(n))
+                =
+                g(p,f(p,n),n)}
+            \close
+
+            \have {29} {\forall p\in P
+                \ \forall n\in\mathbb{N}
+                \quad
+                f(p,s(n))
+                =
+                g(p,f(p,n),n)}
+
+        \end{fitchproof}
+
+        \medskip
+
+        Define
+
+        \[
+            H_p(n):=h(p,n).
+        \]
+
+        \textbf{Claim 4 : Uniqueness.}
+
+        \begin{fitchproof}[arrayenv=tabular]
+            \open
+            \have {30} {h:P\times\mathbb{N}\to A}
+
+            \have {31} {\forall p\in P
+                \quad
+                h(p,0)=a(p)}
+
+            \have {32} {\forall p\in P
+                \ \forall n\in\mathbb{N}
+                \quad
+                h(p,s(n))
+                =
+                g(p,h(p,n),n)}
+
+            \open
+            \have {33} {p\in P}
+            \have {34} {H_p(0)=a(p)}
+
+            \have {35} {\forall n\in\mathbb{N}
+                \quad
+                H_p(s(n))
+                =
+                g(p,H_p(n),n)}
+
+            \have {36} {F_p=H_p}
+
+            \open
+            \have {37} {n\in\mathbb{N}}
+            \have {38} {f(p,n)=F_p(n)}
+            \have {39} {H_p(n)=h(p,n)}
+            \have {40} {f(p,n)=h(p,n)}
+            \close
+
+            \have {41} {\forall n\in\mathbb{N}
+                \quad
+                f(p,n)=h(p,n)}
+
+            \close
+
+            \have {42} {\forall p\in P
+                \ \forall n\in\mathbb{N}
+                \quad
+                f(p,n)=h(p,n)}
+
+            \have {43} {f=h}
+
+            \close
+
+            \have {44} {\exists !f:P\times\mathbb{N}\to A
+                \quad
+                \Big(
+                \forall p\in P
+                \quad
+                f(p,0) = a(p)
+                \land
+                \forall p\in P
+                \forall n \in \mathbb{N}
+                \quad
+                f(p,s(n))
+                =
+                g(p,f(p,n),n)
+                \Big)}
+
+        \end{fitchproof}
+
+        \medskip
+
+        Therefore, there exists a unique function $f:P\times\mathbb{N}\to A$ such that
+
+        \[
+            \forall p\in P
+            \quad
+            f(p,0)=a(p)
+        \]
+
+        and
+
+        \[
+            \forall p\in P
+            \ \forall n\in\mathbb{N}
+            \quad
+            f(p,s(n))
+            =
+            g(p,f(p,n),n).
+        \]
+
+    \end{proof}
+
 \end{theorem}
 
 \section{Arithmetic of Natural numbers}
@@ -5110,7 +5289,7 @@ renaming.
 
 we show this unique ``$ \gamma $'' with ``$\beta -_c \alpha$''
 
-\begin{definition} \textbf{Trunk and Branch}
+\begin{definition} \textbf{Trunk , Branch , Roof}
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       $trunk(\alpha) := sup\{ \beta \in \alpha \mid \beta +_c \alpha = \alpha \} $
@@ -5123,6 +5302,7 @@ we show this unique ``$ \gamma $'' with ``$\beta -_c \alpha$''
                   \end{array}
                   \right.$
         \item       $branch(\alpha , \beta) := \alpha -_c trunk(\alpha , \beta) $
+        \item       $roof(\alpha ) :=  \alpha +_c \omega$
 
     \end{enumerate}
 \end{definition}
@@ -5228,7 +5408,7 @@ arithmetic. so properties are true for them.
 
 \chapter{hyperreal numbers($*\mathbb{N}  , *\mathbb{Z},*\mathbb{Q}    ,*\mathbb{R} $) and surreal numbers }
 
-\section*{1. Starting Point: Sequences of Reals}
+\section{1. Starting Point: Sequences of Reals}
 
 Consider the set of all sequences of real numbers:
 \[
@@ -5236,7 +5416,7 @@ Consider the set of all sequences of real numbers:
 \]
 Think of a sequence as a function from \(\mathbb{N}\) to \(\mathbb{R}\).
 
-\section*{2. Nonprincipal Ultrafilter on \(\mathbb{N}\)}
+\section{2. Nonprincipal Ultrafilter on \(\mathbb{N}\)}
 
 An \emph{ultrafilter} \(\mathcal{U}\) on \(\mathbb{N}\) is a collection of
 subsets of \(\mathbb{N}\) satisfying:
@@ -5253,7 +5433,7 @@ Existence of such ultrafilters follows from the Axiom of Choice.
 Intuitively, a nonprincipal ultrafilter determines what it means for something
 to happen ``for almost all'' \(n\).
 
-\section*{3. Equivalence Relation on Sequences}
+\section{3. Equivalence Relation on Sequences}
 
 For two sequences \((x_n)\) and \((y_n)\) in \(\mathbb{R}^{\mathbb{N}}\),
 define
@@ -5265,7 +5445,7 @@ define
 That is, they are considered equivalent if they agree on a ``large'' set of
 indices belonging to the ultrafilter.
 
-\section*{4. The Ultrapower Construction}
+\section{4. The Ultrapower Construction}
 
 The set of equivalence classes under this relation is
 \[
@@ -5273,7 +5453,7 @@ The set of equivalence classes under this relation is
 \]
 If \((x_n)\) is a sequence, its equivalence class is denoted \([x_n]\).
 
-\section*{5. Algebraic Operations}
+\section{5. Algebraic Operations}
 
 Addition and multiplication are defined coordinatewise:
 \[
@@ -5283,7 +5463,7 @@ Addition and multiplication are defined coordinatewise:
 These operations are well-defined on equivalence classes, and with them,
 \({}^{\ast}\mathbb{R}\) becomes a field.
 
-\section*{6. Embedding of \(\mathbb{R}\)}
+\section{6. Embedding of \(\mathbb{R}\)}
 
 Each real number \(r \in \mathbb{R}\) defines a constant sequence
 \((r,r,r,\dots)\). Define the embedding
@@ -5293,7 +5473,7 @@ Each real number \(r \in \mathbb{R}\) defines a constant sequence
 This is an injective field homomorphism, so we can view \(\mathbb{R} \subset
 {}^{\ast}\mathbb{R}\).
 
-\section*{7. Infinitesimal and Infinite Elements}
+\section{7. Infinitesimal and Infinite Elements}
 
 \textbf{Infinitesimal:} Choose \(x_n = \frac{1}{n}\).
 Then for every standard \(k \in \mathbb{N}\),
@@ -5316,7 +5496,7 @@ For any fixed \(M \in \mathbb{N}\),
 is cofinite, so \( [n] > M \) in \({}^{\ast}\mathbb{R}\). Hence \( [n] \) is an
 infinite hyperreal number.
 
-\section*{8. The Transfer Principle (Łoś's Theorem)}
+\section{8. The Transfer Principle (Łoś's Theorem)}
 
 \emph{Łoś's theorem:} For any first-order formula \(\varphi(x_1,\dots,x_k)\),
 \[
@@ -5327,7 +5507,7 @@ infinite hyperreal number.
 This yields the \emph{Transfer Principle:} any first-order property true in
 \(\mathbb{R}\) is also true in \({}^{\ast}\mathbb{R}\).
 
-\section*{9. Summary}
+\section{9. Summary}
 
 \begin{enumerate}
     \item Start with all real sequences \(\mathbb{R}^{\mathbb{N}}\).
@@ -5340,15 +5520,15 @@ This yields the \emph{Transfer Principle:} any first-order property true in
     \item Łoś’s theorem provides the logical foundation (Transfer Principle).
 \end{enumerate}
 
-\section*{10. Remarks}
+\section{10. Remarks}
 
 \({}^{\ast}\mathbb{R}\) depends on the choice of the nonprincipal ultrafilter,
 but all such constructions are \emph{elementarily equivalent} fields—they satisfy
 the same first-order properties of \(\mathbb{R}\).
 
-\section*{Common Symbols: \(\omega\), \(\epsilon\), \(\varepsilon\), and Others}
+\section{Common Symbols: \(\omega\), \(\epsilon\), \(\varepsilon\), and Others}
 
-\subsection*{1. The Symbol \(\omega\)}
+\subsection{1. The Symbol \(\omega\)}
 
 \[
     \omega = \{0,1,2,3,\dots\}
@@ -5368,7 +5548,7 @@ LaTeX:
     \texttt{\textbackslash omega}
 \]
 
-\subsection*{2. The Symbols \(\epsilon\) and \(\varepsilon\)}
+\subsection{2. The Symbols \(\epsilon\) and \(\varepsilon\)}
 
 \[
     \epsilon > 0, \qquad \varepsilon > 0
@@ -5391,7 +5571,7 @@ LaTeX:
     \texttt{\textbackslash epsilon}, \qquad \texttt{\textbackslash varepsilon}
 \]
 
-\subsection*{3. Other Common Greek Symbols}
+\subsection{3. Other Common Greek Symbols}
 
 \[
     \alpha, \beta, \gamma, \delta, \eta, \theta, \lambda, \mu, \phi, \varphi
@@ -5411,7 +5591,7 @@ LaTeX:
     \texttt{\textbackslash varphi}.
 \]
 
-\subsection*{4. Summary Table (LaTeX Only)}
+\subsection{4. Summary Table (LaTeX Only)}
 
 \[
     \begin{array}{c|c|c}
@@ -5631,29 +5811,29 @@ if you are not fimiliar to this notation it means ``$ |\_| := \{ (x,y) \in
 
 we learned about ``$\mathbb{Q} (Ord)$'' before and we constructed structure
 ``$(\mathbb{Q} (Ord) , + , \cdot , <)$''. now assume $\mathbb{Q}
-    (Ord)^\omega$(we know what does it mean by the definition. it means all the
+    (Ord)^{Ord}$(we know what does it mean by the definition. it means all the
 sequences of $\mathbb{Q} (Ord)$). we don't want it all we just want a subset.
 
-\begin{definition}\textbf{Cauchy sequence} is a sequence like ``$(a_i)_{i \in \omega} \in \mathbb{Q} (Ord)^\omega$'' s.t. elements of it get infinitly
+\begin{definition}\textbf{Cauchy sequence} is a sequence like ``$(a_i)_{i \in Ord} \in \mathbb{Q} (Ord)^{Ord}$'' s.t. elements of it get infinitly
     close to each other i.e.
-    \[  Cauchy(a_i)_{i \in \omega} : \forall \epsilon > 0 \quad \exists N  \quad \forall n,m > N  \quad | a_n - a_m | < \epsilon   \]
+    \[  Cauchy(a_i)_{i \in Ord} : \forall \epsilon > 0 \quad \exists N  \quad \forall n,m   \quad  N < n , m < roof(N) \to | a_n - a_m | < \epsilon   \]
 \end{definition}
 
 we usually give ``$N$'' natural numbers but it's not necessary.
 
-we define an equivalence relation ``$ (a_i)_{i \in \omega} \sim (b_i)_{i \in
-        \omega} : \forall \epsilon > 0 \quad \exists N \quad \forall n > N \quad | a_n
-    - b_n | < \epsilon $''(check it's an equivalence relation).
+we define an equivalence relation ``$ (a_i)_{i \in Ord} \sim (b_i)_{i \in Ord}
+    : \forall \epsilon > 0 \quad \exists N \quad \forall n \quad N < n < roof(N)
+    \to | a_n - b_n | < \epsilon $''(check it's an equivalence relation).
 
 \begin{definition}\textbf{Hyper Real numbers ``$\mathbb{R} (Ord)$''} is a set
     \[ \mathbb{R} (Ord) :=  Cauchy/ \sim  \]
     we denote it's members with ``$r_0 , r_1 ,...$''
 \end{definition}
 
-in this system ``$ 0 := [(0)_{i \in \omega}]$'' and ``$ 1 := [(1)_{i \in
-            \omega}]$'' and ``$ \forall q \in \mathbb{Q} (Ord) \quad q := [(q)_{i \in
-            \omega}]$''. so we can say ``$ Ord \subseteq \mathbb{Z} (Ord) \subseteq
-    \mathbb{Q} (Ord) \subseteq \mathbb{R} (Ord)$''.
+in this system ``$ 0 := [(0)_{i \in Ord}]$'' and ``$ 1 := [(1)_{i \in Ord}]$''
+and ``$ \forall q \in \mathbb{Q} (Ord) \quad q := [(q)_{i \in Ord}]$''. so we
+can say ``$ Ord \subseteq \mathbb{Z} (Ord) \subseteq \mathbb{Q} (Ord) \subseteq
+    \mathbb{R} (Ord)$''.
 
 \begin{theorem}\textbf{Summation} there is a unique function ``$+_{\mathbb{R} (Ord)} :\mathbb{R} (Ord) \times \mathbb{R} (Ord) \to \mathbb{R} (Ord)$'' s.t.
 
