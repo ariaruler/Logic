@@ -3042,9 +3042,9 @@ we denote it by ``$Hom(h,\mathfrak{M} , \mathfrak{N} )$''. if exists function
 call it ``Epimorphism''.we say ``$\mathfrak{M}$'' and ``$\mathfrak{N}$'' are
 Eomomorphic.\\ if ``$h : M \xrightarrow[surj]{inj} N$'' we call it
 ``Isomorphism''.we say ``$\mathfrak{M}$'' and ``$\mathfrak{N}$'' are
-Iomomorphic. and denote it by ``$ \mathfrak{M} \cong \mathfrak{N}$''.\\ if ``$k
-    : M \to M$'' is a function and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call
-``$k$'' ``Indomorphism''.\\ if ``$k : M \xrightarrow[surj]{inj} M$'' is a
+Isomomorphic. and denote it by ``$ \mathfrak{M} \cong \mathfrak{N}$''.\\ if
+``$k : M \to M$'' is a function and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we
+call ``$k$'' ``Indomorphism''.\\ if ``$k : M \xrightarrow[surj]{inj} M$'' is a
 bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
 ``Automorphism''.\\
 
@@ -3982,19 +3982,26 @@ notice that now ``$\phi(x)$'' is a proposition. so ``$\{ x \mid \forall Y \Big(
     proof.
 
     \begin{fitchproof}[arrayenv=tabular]
-        \have {1} { P(0)  }
-        \have  {2} {\forall n \in \mathbb{N} \quad \Big( P(n) \to P(s(n)) \Big)}
+        \have {1} { S := \{ x \in \mathbb{N} \mid P(x) \}  }              \by{$ def $}{}
+        \have {1} { P(0)  }     \by{$ass$}{}
+        \have  {2} {\forall n \in \mathbb{N} \quad \Big( P(n) \to P(s(n)) \Big)}      \by{$ass $}{}
         \open
-        \have  {2} {n\in \mathbb{N} }
-        \have  {2} {\forall n  \Big( P(n) \to P(s(n)) \Big)}
-        \have  {2} {Ind(P) }
-        \have  {2} {n\in \bigcap Ind }
-        \have  {2} {\forall X ( Ind(X) \to n\in X )}
-        \have  {2} { Ind(P) \to P(n) }
-        \have  {2} {P(n) }
+        \have  {2} {n\in \mathbb{N} }                                   \by{$acp $}{}
+        \have  {2} { 0 \in S }                                             \by{$ 1 , 2 $}{}
+        \open
+        \have  {2} {n \in S  }      \by{$ acp $}{}
+        \have  {2} { P(n) }                       \by{$ comprhension $}{}
+        \have  {2} { P(n) \to P(s(n)) }      \by{$ \forall E , \to E , 3 , 4 $}{}
+        \have  {2} { P(s(n)) }                              \by{$  \to E , 7 ,8  $}{}
+        \have  {2} { s(n) \in S  }      \by{$ 4 , 9 $}{}
         \close
-        \have  {2} {n\in \mathbb{N} \to P(n) }
-        \have  {2} {\forall n\in \mathbb{N} \quad P(n) }
+        \have  {2} {\forall n  \Big( n \in S  \to s(n) \in S  \Big)}      \by{$ 1 , 3 $}{}
+        \have  {2} {Ind(S) }                                                 \by{$ 5 , 6 $}{}
+        \have  {2} {n\in \bigcap Ind }                                        \by{$ def $}{}
+        \have  {2} { n \in S }                                                \by{$ \bigcap E $}{}
+        \have  {2} { P(n) }                                                   \by{$ comprhension $}{}
+        \close
+        \have  {2} {\forall n\in \mathbb{N} \quad P(n) }     \by{$\to I , \forall I $}{}
 
         \close
 
@@ -4015,6 +4022,41 @@ notice that now ``$\phi(x)$'' is a proposition. so ``$\{ x \mid \forall Y \Big(
         \item       $\forall n \in \mathbb{N} \quad  Transitive(n)  $
         \item       $Transitive( \mathbb{N})$
     \end{enumerate}
+
+    proof.
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \have  {2} { \forall v \quad  v \notin 0    }                           \by{$ $}{}
+        \have  {2} { \forall u,v \quad u \in v \in 0  \to u \in 0  }                           \by{$ $}{}
+        \have  {2} {  Transitive(0) }                           \by{$ $}{}
+        \open
+        \have  {2} {n\in \mathbb{N} }                                   \by{$acp $}{}
+        \open
+        \have  {2} {  Transitive(n) }                          \by{$acp $}{}
+        \open
+        \have  {2} { u \in v \land v \in s(n)    }                            \by{$acp $}{}
+        \have  {2} {  v \in n \cup \{ n \}    }                           \by{$ \land E $}{}
+        \open
+        \have  {2} {  v \in n    }                           \by{$ \land E $}{}
+        \have  {2} { u \in n   }                            \by{$5 , 6 ,8 $}{}
+        \have  {2} {  u \in s(n)  }                           \by{$ \cup I $}{}
+        \close
+        \open
+        \have  {2} {  v \in \{ n \}    }                           \by{$ \land E $}{}
+        \have  {2} {  v = n    }                           \by{$  $}{}
+        \have  {2} { u \in n   }                            \by{$ = E $}{}
+        \have  {2} {  u \in s(n)  }                           \by{$ \cup I $}{}
+        \close
+        \have  {2} {  u \in s(n)  }                           \by{$ $}{}
+        \close
+        \have  {2} { \forall u,v \quad u \in v \in s(n)  \to u \in s(n)  }                           \by{$ $}{}
+        \have  {2} {  Transitive(s(n)) }                           \by{$ $}{}
+        \close
+        \close
+        \have  {2} {\forall n \in \mathbb{N} \quad  Transitive(n) \to Transitive(s(n)) }
+        \have  {2} {\forall n \in \mathbb{N} \quad  Transitive(n) }                                   \by{ Induction theorem }{}
+
+    \end{fitchproof}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
@@ -4030,16 +4072,55 @@ notice that now ``$\phi(x)$'' is a proposition. so ``$\{ x \mid \forall Y \Big(
     \textbf{Order of Natural numbers($\mathbb{N}$)} prove
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item        $ \forall n \in \mathbb{N} \quad (n , <  )  $ is Well ordered.
         \item        $ (\mathbb{N} , <  )  $ is lineary ordered.
+        \item        $ \forall n \in \mathbb{N} \quad (n , <  )  $ is Well ordered.
         \item        $ (\mathbb{N} , <  )  $ is Well ordered.
         \item       $ \Big( \forall x \in \mathbb{N} \quad   \exists y \in \mathbb{N} \quad  x < y \Big)  $ (doesn't have right endpoint)
     \end{enumerate}
+
+    proof.
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \have  {2} { 0 \not< 0 }         \by{$def \emptyset $}{}
+        \open
+        \have  {2} {n\in \mathbb{N} }                                   \by{$acp $}{}
+        \open
+        \have  {2} { n \not< n }                                   \by{$acp $}{}
+        \open
+        \have  {2} { s(n) < s(n) }                                 \by{$acp $}{}
+        \open
+        \have  {2} { s(n) \in n }                                    \by{$acp $}{}
+        \have  {2} {  n \in s(n)  }                                 \by{$ \cup I $}{}
+        \have  {2} {  n \in n  }                                       \by{$ Transitive(\mathbb{N}) $}{}
+        \have  {2} {\bot}                                              \by{$ 3 ,7 $}{}
+        \close
+        \open
+        \have  {2} { s(n) \in \{ n \} }                              \by{$acp $}{}
+        \have  {2} { s(n) = n  }
+        \have  {2} { s(n) \not< s(n) }                               \by{$= E $}{}
+        \have  {2} {\bot}                                              \by{$ 4 ,11 $}{}
+        \close
+        \have  {2} {\bot}                                             \by{$ \cup E $}{}
+        \close
+        \have  {2} { s(n) \not< s(n) }                                 \by{$ \neg I $}{}
+        \close
+        \close
+        \have  {2} {\forall n \in \mathbb{N} \quad  n \not< n }         \by{ Induction theorem }{}
+
+    \end{fitchproof}
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \have  {2} {\forall n , m ,k  \in \mathbb{N} \quad  n < m < k  \to n < k }         \by{ Induction theorem }{}
+
+    \end{fitchproof}
+
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
 \begin{theorem}\textbf{Induction ,second vrsion}
-    $ \forall k < n \Big( P(k) \to P(n) \Big) /\therefore \forall n\in \mathbb{N} \quad P(n)$
+    $ \Big( \forall  k < n \quad  P(k) \Big) \to P(n)  /\therefore \forall n\in \mathbb{N} \quad P(n)$
     \\
     proof.
 
@@ -4076,63 +4157,72 @@ of all infinite sequences of $a \in A$.
     \end{enumerate}
 \end{theorem}
 
-Define
-
-\[
-    F := \Big\{ t \ \Big|\ \exists m \in \mathbb{N} \ \big( t : s(m) \to A
-    \ \land\ t(0) = a \ \land\ \forall k < m \ \big( t(s(k)) = g(t(k),k) \big) \big) \Big\}.
-\]
-
-\textbf{Claim 1: $F \neq \emptyset$.}
-
-\begin{fitchproof}[arrayenv=tabular]
-
-    \have {12} { t_0 \in F}
-
-    \have {13} {F\neq\emptyset}
-
-\end{fitchproof}
-
-Define
-
-\[
-    f := \bigcup F.
-\]
-
 \begin{proof}
+
+    Define
+
+    \[
+        Compute_n(t_n) :  t_n  : s(n) \to A
+        \ \land\ t_n(0) = a \ \land\ \forall k < n \ \big( t(s(k)) = g(t(k),k) \big) .
+    \]
+
+    \[
+        F := \Big\{ t_n \ \Big|\ Compute_n(t_n) \Big\}.
+    \]
+    \textbf{Claim 0: $ \forall n \in \mathbb{N} \quad \exists t_{n}\in F$.}
+
+    \textbf{Claim 1: $F \neq \emptyset$.}
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \have {12} { t_0 \in F}
+
+        \have {13} {F\neq\emptyset}
+
+    \end{fitchproof}
+
+    Define
+
+    \[
+        f := \bigcup F.
+    \]
 
     \textbf{Claim 2: $f$ is a function.}
 
     \begin{fitchproof}[arrayenv=tabular]
 
         \open
-        \have {1} {t,u\in F}
+        \have {1} {t_m,t_n\in F}
         \open
-        \have {2} {Dom(t)=s(m)}
-        \have {3} {Dom(u)=s(n)}
+        \have {2} {Dom(t_m)=s(m)}
+        \have {3} {Dom(t_n)=s(n)}
         \open
         \have {4} {m \le n}
 
-        \have {5} {t(0)=a}
-        \have {6} {u(0)=a}
-        \have {7} {t(0)=u(0)}
+        \have {5} {t_m(0)=a}
+        \have {6} {t_n(0)=a}
+        \have {7} {t_m(0)=t_n(0)}
 
         \open
-        \have {8} {t(k)=u(k)}
-        \have {9} {t(s(k))=g(t(k),k)}
-        \have {10} {u(s(k))=g(u(k),k)}
-        \have {11} {t(s(k))=u(s(k))}
+        \have {12} { k < m }
+        \open
+        \have {8} {t_m(k)=t_n(k)}
+        \have {9} {g(t_m(k),k)=g(t_n(k),k)}
+        \have {9} {t_m(s(k))=g(t_m(k),k)}
+        \have {10} {t_n(s(k))=g(t_n(k),k)}
+        \have {11} {t_m(s(k))=t_n(s(k))}
         \close
 
-        \have {12} {\forall k<m \quad t(k)=u(k)}
+        \have {12} {\forall k \leq m \quad t_m (k) = t_n (k)}
         \close
         \close
-        \have {13} {t\subseteq u}
+        \have {13} {t_m \subseteq t_n \lor t_n \subseteq t_m}
         \close
 
-        \have {14} {\forall t,u\in F
+        \close
+        \have {14} {\forall t_m , t_n \in F
             \quad
-            (t\subseteq u \lor u\subseteq t)}
+            (t_m\subseteq t_n \lor t_n\subseteq t_m)}
 
         \have {15} {Compatible(F)}
         \have {20} {Func(f)}
@@ -4148,15 +4238,18 @@ Define
         \have {21} {n\in\mathbb{N}}
         \have {22} {\exists t_n\in F}
         \have {23} {n\in Dom(t_n)}
-        \have {24} {(n,t_n(n))\in f}
         \have {25} {n\in Dom(f)}
         \close
 
         \open
         \have {27} {n\in Dom(f)}
-        \have {28} {\exists t\in F \quad n\in Dom(t)}
-        \have {29} {Dom(t)=s(m)}
+        \open
+        \have {28} { t_m \in F }
+        \have {28} { n \in Dom(t_m)}
+        \have {29} {Dom(t_m)=s(m)}
         \have {30} {n\in s(m)}
+        \have {31} {n\in\mathbb{N}}
+        \close
         \have {31} {n\in\mathbb{N}}
         \close
 
@@ -4165,8 +4258,12 @@ Define
         \open
         \have {37} {x\in Range(f)}
         \have {34} {(n,x)\in f}
-        \have {35} {\exists t\in F \quad (n,x)\in t}
-        \have {36} {t:s(m)\to A}
+        \open
+        \have {35} { t_m \in F }
+        \have {35} { (n,x)\in t}
+        \have {36} {t_m : s(m)\to A}
+        \have {37} {x\in A}
+        \close
         \have {37} {x\in A}
         \close
 
@@ -4180,6 +4277,7 @@ Define
 
     \begin{fitchproof}[arrayenv=tabular]
 
+        \have {27} {f(0)=a}
         \open
         \have {21} {n\in\mathbb{N}}
         \have {22} {\exists t_{n+1}\in F}
@@ -4197,8 +4295,6 @@ Define
             f(s(n))
             =
             g(f(n),n)}
-
-        \have {27} {f(0)=a}
 
     \end{fitchproof}
 
@@ -4221,12 +4317,9 @@ Define
 
         \open
         \have {32} {f(n)=h(n)}
-        \have {33} {f(s(n))
-            =
-            g(f(n),n)}
-        \have {34} {h(s(n))
-            =
-            g(h(n),n)}
+        \have {33} {g(f(n),n) = g(h(n),n) }
+        \have {33} {f(s(n)) = g(f(n),n)}
+        \have {34} {h(s(n)) = g(h(n),n)}
         \have {35} {f(s(n))=h(s(n))}
         \close
 
@@ -4547,11 +4640,76 @@ we call ``$\mathfrak{N}$'' a model of ``Peano arithmetic''.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       $\forall x , y , z  \in N \quad (x + y )+ z  = x +( y + z )  $ (assosiative $+$)
-        \item       $\forall x  \in N \quad x  + 0 = 0 + x  = x $ (identity  $+$)
+        \item       $\forall x  \in N \quad  x + 0 = x = 0 + x   $ (identity  $+$)
         \item       $\forall x , y , z  \in N \quad x  +  z  =  y  +  z   \to x  =  y  $ (cancellative  $+$)
         \item       $\forall x , y  \in N \quad x + y  =  y + x $  (commutative(abelian)  $+$)
     \end{enumerate}
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \open
+        \have {14} { x , y , z  \in N }   \by{$acp $}{}
+        \have {14} { (x + y )+ 0 = x + y  = x +( y + 0 )}    \by{Ax. 3}{}
+        \open
+        \have {14} { (x + y )+ z  = x +( y + z )}                 \by{$acp $}{}
+        \have {14} { (x + y )+ s(z) =  s \big((x + y )+ z \big) =  s \big(x + ( y + z ) \big) = x + s( y + z ) = x +( y + s(z) )}     \by{Ax. 4 , $3$}{}
+        \close
+        \have {14} { (x + y )+ z  = x +( y + z )}   \by{Ax. Ind}{}
+
+        \close
+        \have {14} {\forall x , y , z  \in N \quad (x + y )+ z  = x +( y + z )}     \by{$ \to I , \forall I$}{}
+
+    \end{fitchproof}
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \open
+        \have {14} { x   \in N }   \by{$acp $}{}
+        \have {14} {  0 + 0  = 0 }                 \by{Ax. 3}{}
+        \open
+        \have {14} {  0 + x  = x }     \by{$acp $}{}
+        \have {14} {  0 + s(x)  = s(0 + x)  = s(x) }     \by{Ax. 3 , $4$}{}
+        \close
+        \have {14} { 0 + x  = x }     \by{Ax. Ind}{}
+        \close
+        \have {14} {\forall x  \in N \quad x  + 0 = 0 + x  = x}     \by{$ \to I , \forall I$}{}
+
+    \end{fitchproof}
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \open
+        \have {14} { x , y   \in N }   \by{$acp $}{}
+        % \have {14} {  0 + x  = x }     \by{$acp $}{}
+        \have {14} {  y  + s(0) = s(y + 0) =  s(y)  = s(y) + 0 }                 \by{Ax. 3}{}
+        \open
+        \have {14} { y + s( x ) = s(y) + x }     \by{$acp $}{}
+        \have {14} { y + s( s(x) ) = s( y + s(x)) = s( s(y) + x )    = s(y) + s(x) }     \by{Ax. 4 , $3$}{}
+        \close
+        \have {14} { x  + y = y + x }     \by{Ax. Ind}{}
+        \close
+        \have {14} {\forall x , y \in N \quad  y + s( x ) = s(y) + x }     \by{$ \to I , \forall I$}{}
+
+    \end{fitchproof}
+
+        \begin{fitchproof}[arrayenv=tabular]
+
+        \open
+        \have {14} { x , y   \in N }   \by{$acp $}{}
+        % \have {14} {  0 + x  = x }     \by{$acp $}{}
+        \have {14} {  x  + 0  = 0 + x }                 \by{ Lemma 7.5.1.2}{}
+        \open
+        \have {14} { x  + y = y + x }     \by{$acp $}{}
+        \have {14} { x  + s(y) = s(x + y) = s( y + x ) =  y + s( x ) = s(y) + x }     \by{Ax. Ind}{}
+        \close
+        \have {14} { x  + y = y + x }     \by{Ax. Ind}{}
+        \close
+        \have {14} {\forall x , y \in N \quad x  + y = y + x  }     \by{$ \to I , \forall I$}{}
+
+    \end{fitchproof}
+
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+
 \end{lemma}
 
 \begin{lemma}prove for ``$(N , + , \cdot)$''
@@ -4560,11 +4718,62 @@ we call ``$\mathfrak{N}$'' a model of ``Peano arithmetic''.
         \item       $\forall x , y , z  \in N \quad (x y) z  = x (y z)  $ (assosiative $\times$)
         \item       $\forall x  \in N \quad x  \cdot 1 = 1 \cdot x  = x $ (identity  $\times$)
         \item       $\forall x  , y    \in N \quad   x   y  = 0   \to  x  = 0  \lor   y  = 0 $ (zero divisor free $\times$)
-        \item       $\forall x , y  \in N \quad mn = nm$ (commutative(abelian)  $\times$)
+        \item       $\forall x , y  \in N \quad x y = y x$ (commutative(abelian)  $\times$)
         \item       $\forall x  , y  , z   \in N \quad \Big(x    ( y   +  z  ) = x     y   +  x     z   \Big)
                   \land     \Big((x   +  y  )   z   = x     z   +   y     z   \Big)  $ (distributive $\times$)
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+
+
+            \begin{fitchproof}[arrayenv=tabular]
+
+        \open
+        \have {14} { x   \in N }   \by{$acp $}{}
+        \have {14} {  0  \cdot  0 = 0  }                 \by{Ax. 5}{}
+        \open
+        \have {14} { 0 \cdot  x =  0 }     \by{$acp $}{}   
+        \have {14} { 0 \cdot  s(x) = 0 \cdot x + 0 =  0 }    
+        \close
+        \have {14} { 0 \cdot  x =  0 }     \by{Ax. Ind}{}
+        \close
+        \have {14} {\forall x , y \in N \quad  0 \cdot  x =  0  }     \by{$ \to I , \forall I$}{}
+
+    \end{fitchproof}
+
+                \begin{fitchproof}[arrayenv=tabular]
+
+        \open
+        \have {14} { x , y   \in N }   \by{$acp $}{}
+        % \have {14} {  0 + x  = x }     \by{$acp $}{}
+        \have {14} {  0 + y 0 = s(y) \cdot 0  }                 \by{Ax. 5}{}
+        \open
+        \have {14} { x + y x = s(y) \cdot x }     \by{$acp $}{}  
+        \have {14} { s(x) + y x = x + s( y x ) = s( x +  y x ) = s( s(y) \cdot x)  = s(y) \cdot s(x) }    
+        \close
+        \have {14} { x + y x = s(y) \cdot x }     \by{Ax. Ind}{}
+        \close
+        \have {14} {\forall x , y \in N \quad x + y x = s(y) \cdot x  }     \by{$ \to I , \forall I$}{}
+
+    \end{fitchproof}
+
+
+            \begin{fitchproof}[arrayenv=tabular]
+
+        \open
+        \have {14} { x , y   \in N }   \by{$acp $}{}
+        % \have {14} {  0 + x  = x }     \by{$acp $}{}
+        \have {14} {  x  \cdot  0 = 0  }                 \by{Ax. 5}{}
+        \have {14} {  x  \cdot  0  = 0 \cdot  x }                 \by{ Lemma }{}
+        \open
+        \have {14} { x   y = y  x }     \by{$acp $}{}  
+        \have {14} { x  \cdot s(y) = x y + x =  y x + x = x + y x   = s(y) \cdot x }    
+        \close
+        \have {14} { x   y = y  x }     \by{Ax. Ind}{}
+        \close
+        \have {14} {\forall x , y \in N \quad x   y = y  x  }     \by{$ \to I , \forall I$}{}
+
+    \end{fitchproof}
+   
 \end{lemma}
 
 Now define ``$ x < y : \exists z \not=0 \quad x + z = y $''. You can prove for
@@ -4798,34 +5007,35 @@ we usually give ``$N$'' natural numbers but it's not necessary.
 
 we define an equivalence relation ``$ (a_i)_{i \in \mathbb{N}} \sim (b_i)_{i
     \in \mathbb{N}} : \forall \epsilon > 0 \quad \exists N \quad \forall n > N
-    \quad | a_n - b_n | < \epsilon $''(check it's an equivalence relation).
+    \quad | a_n - b_n | < \epsilon $''(check it's an equivalence relation). we
+denote every $[(a_i)_{i \in \mathbb{N}}]$ with $[a_i]_{i \in \mathbb{N}}$.
 
 \begin{definition}\textbf{Real numbers ``$\mathbb{R}$''} is a set
     \[ \mathbb{R} :=  Cauchy/ \sim  \]
     we denote it's members with ``$r_0 , r_1 ,...$''
 \end{definition}
 
-in this system ``$ 0 := [(0)_{i \in \mathbb{N}}]$'' and ``$ 1 := [(1)_{i \in
-            \mathbb{N}}]$'' and ``$ \forall q \in \mathbb{Q} \quad q := [(q)_{i \in
-            \mathbb{N}}]$''. so we can say ``$ \mathbb{N} \subseteq \mathbb{Z} \subseteq
+in this system ``$ 0 := [0]_{i \in \mathbb{N}}$'' and ``$ 1 := [1]_{i \in
+    \mathbb{N}}$'' and ``$ \forall q \in \mathbb{Q} \quad q := [q]_{i \in
+    \mathbb{N}}$''. so we can say ``$ \mathbb{N} \subseteq \mathbb{Z} \subseteq
     \mathbb{Q} \subseteq \mathbb{R}$''.
 
 \begin{theorem}\textbf{Summation} there is a unique function ``$+_\mathbb{R} :\mathbb{R} \times \mathbb{R} \to \mathbb{R}$'' s.t.
 
-    \[  [(a_i)_{i \in \mathbb{N}}] +_\mathbb{R} [(b_i)_{i \in \mathbb{N}}]  = [(a_i + b_i)_{i \in \mathbb{N}}] \]
+    \[  [a_i]_{i \in \mathbb{N}} +_\mathbb{R} [b_i]_{i \in \mathbb{N}}  = [a_i + b_i]_{i \in \mathbb{N}} \]
 
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
 \begin{theorem}\textbf{Multiplication} there is a unique function ``$\times_\mathbb{R} :\mathbb{R} \times \mathbb{R} \to \mathbb{R}$'' s.t.
 
-    \[  [(a_i)_{i \in \mathbb{N}}] \times_\mathbb{R} [(b_i)_{i \in \mathbb{N}}]  = [(a_i  b_i)_{i \in \mathbb{N}}] \]
+    \[  [a_i]_{i \in \mathbb{N}} \times_\mathbb{R} [b_i]_{i \in \mathbb{N}}  = [a_i  b_i]_{i \in \mathbb{N}} \]
 
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
 \begin{definition}\textbf{Order in $\mathbb{R}$} .\\
-    \[  [(a_i)_{i \in \mathbb{N}}] <_\mathbb{R} [(b_i)_{i \in \mathbb{N}}]  :
+    \[  [a_i]_{i \in \mathbb{N}} <_\mathbb{R} [b_i]_{i \in \mathbb{N}}  :
         \exists \epsilon > 0 \quad \exists N  \quad \forall n > N  \quad  b_n - a_n  > \epsilon  \]
 \end{definition}
 
@@ -5334,7 +5544,7 @@ we show this unique ``$ \gamma $'' with ``$\beta -_c \alpha$''
 \end{theorem}
 we denote also ``Multiplication'' with ``$\alpha  \cdot  \beta $'' and ``$\alpha  \beta$'' too.
 
-\section{Hyper Peano arithmetic}
+\section{Transfinite Peano arithmetic}
 
 assume a structure ``$\mathfrak{N} := (N , + , \cdot , s , 0)$''(here ``$+ ,
     \cdot , s , 0 $'' are arbitary functions and constants and doesn't have meaning
@@ -5608,14 +5818,14 @@ LaTeX:
 
 \chapter{fantacy numbers($ \mathbb{Z} (Ord) , \mathbb{Q} (Ord) ,\mathbb{R} (Ord) ,\mathbb{C} (Ord)$) }
 
-\section{Hyper Integers``$\mathbb{Z} (Ord)$''}
+\section{fantacy Integers``$\mathbb{Z} (Ord)$''}
 
 we learned about ``$Ord$'' before and we constructed structure ``$(Ord , + ,
     \cdot , <)$''. if you assume ``$Ord \times Ord$'' we can define an equivalence
 relation ``$ (\alpha_1 , \beta_1) \sim (\alpha_2 , \beta_2) : \alpha_1 +
     \beta_2 = \alpha_2 + m_1 $''(check it's an equivalence relation).
 
-\begin{definition}\textbf{Hyper Integers``$\mathbb{Z} (Ord)$''} is a set
+\begin{definition}\textbf{fantacy Integers``$\mathbb{Z} (Ord)$''} is a set
     \[ \mathbb{Z} (Ord) := Ord \times Ord / \sim\]
     we denote it's members with ``$z_0 , z_1 ,...$''
 \end{definition}
@@ -5684,7 +5894,7 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
 \end{lemma}
 
 \begin{theorem}
-    \textbf{Order of Hyper Integers($\mathbb{Z} (Ord)$)} prove for  ``$ (\mathbb{Z} (Ord) ,+ , \times , <_{\mathbb{Z} (Ord)}  )  $ ''
+    \textbf{Order of fantacy Integers($\mathbb{Z} (Ord)$)} prove for  ``$ (\mathbb{Z} (Ord) ,+ , \times , <_{\mathbb{Z} (Ord)}  )  $ ''
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       is lineary ordered.
@@ -5696,7 +5906,7 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-\section{Hyper Rational numbers ``$\mathbb{Q} (Ord) $''}
+\section{fantacy Rational numbers ``$\mathbb{Q} (Ord) $''}
 
 we learned about ``$\mathbb{Z} (Ord)$'' before and we constructed structure
 ``$(\mathbb{Z} (Ord) , + , \cdot , <)$''. if you assume ``$\mathbb{Z} (Ord)
@@ -5704,7 +5914,7 @@ we learned about ``$\mathbb{Z} (Ord)$'' before and we constructed structure
     (y_1 , x_1 ) \sim (y_2 , x_2 ) : y_1 \cdot x_2 = y_2 \cdot x_1 $''(check it's
 an equivalence relation).
 
-\begin{definition}\textbf{Hyper Rational numbers``$\mathbb{Q} (Ord)$''} is a set
+\begin{definition}\textbf{fantacy Rational numbers``$\mathbb{Q} (Ord)$''} is a set
     \[ \mathbb{Q} (Ord) := \mathbb{Z} (Ord) \times (\mathbb{Z} (Ord) - \{0\}) / \sim\]
     we denote it's members with ``$q_0 , q_1 ,...$''
 \end{definition}
@@ -5778,7 +5988,7 @@ we denote ``Multiplication'' with ``$x \cdot y$'' and ``$x y$'' too.
 \end{lemma}
 
 \begin{theorem}
-    \textbf{Order of Hyper Rational numbers($\mathbb{Q} (Ord)$)} prove for  ``$ (\mathbb{Q} (Ord) , <_{\mathbb{Q} (Ord)}  )  $''
+    \textbf{Order of fantacy Rational numbers($\mathbb{Q} (Ord)$)} prove for  ``$ (\mathbb{Q} (Ord) , <_{\mathbb{Q} (Ord)}  )  $''
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item        is lineary ordered.
@@ -5792,7 +6002,7 @@ we denote ``Multiplication'' with ``$x \cdot y$'' and ``$x y$'' too.
 
 \end{theorem}
 
-\section{Hyper Real numbers ``$\mathbb{R} (Ord)$''}
+\section{fantacy Real numbers ``$\mathbb{R} (Ord)$''}
 
 before we we get to lesson define function ``$|\_| : \mathbb{Q} (Ord) \times
     \mathbb{Q} (Ord) \to \mathbb{Q} (Ord)$'' like this.
@@ -5823,35 +6033,37 @@ we usually give ``$N$'' natural numbers but it's not necessary.
 
 we define an equivalence relation ``$ (a_i)_{i \in Ord} \sim (b_i)_{i \in Ord}
     : \forall \epsilon > 0 \quad \exists N \quad \forall n \quad N < n < roof(N)
-    \to | a_n - b_n | < \epsilon $''(check it's an equivalence relation).
+    \to | a_n - b_n | < \epsilon $''(check it's an equivalence relation). we denote
+every $[(a_i)_{i \in Ord}]$ with $[a_i]_{i \in Ord}$.
 
-\begin{definition}\textbf{Hyper Real numbers ``$\mathbb{R} (Ord)$''} is a set
+\begin{definition}\textbf{fantacy Real numbers ``$\mathbb{R} (Ord)$''} is a set
     \[ \mathbb{R} (Ord) :=  Cauchy/ \sim  \]
     we denote it's members with ``$r_0 , r_1 ,...$''
 \end{definition}
 
-in this system ``$ 0 := [(0)_{i \in Ord}]$'' and ``$ 1 := [(1)_{i \in Ord}]$''
-and ``$ \forall q \in \mathbb{Q} (Ord) \quad q := [(q)_{i \in Ord}]$''. so we
-can say ``$ Ord \subseteq \mathbb{Z} (Ord) \subseteq \mathbb{Q} (Ord) \subseteq
+in this system ``$ 0 := [0]_{i \in Ord}$'' and ``$ 1 := [1]_{i \in Ord}$'' and
+``$ \forall q \in \mathbb{Q} (Ord) \quad q := [q]_{i \in Ord}$''. so we can say
+``$ Ord \subseteq \mathbb{Z} (Ord) \subseteq \mathbb{Q} (Ord) \subseteq
     \mathbb{R} (Ord)$''.
 
 \begin{theorem}\textbf{Summation} there is a unique function ``$+_{\mathbb{R} (Ord)} :\mathbb{R} (Ord) \times \mathbb{R} (Ord) \to \mathbb{R} (Ord)$'' s.t.
 
-    \[  [(a_i)_{i \in Ord}] +_{\mathbb{R} (Ord)} [(b_i)_{i \in Ord}]  = [(a_i + b_i)_{i \in Ord}] \]
+    \[  [a_i]_{i \in Ord} +_{\mathbb{R} (Ord)} [b_i]_{i \in Ord}  = [a_i + b_i]_{i \in Ord} \]
 
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
 \begin{theorem}\textbf{Multiplication} there is a unique function ``$\times_{\mathbb{R} (Ord)} :\mathbb{R} (Ord) \times \mathbb{R} (Ord) \to \mathbb{R} (Ord)$'' s.t.
 
-    \[  [(a_i)_{i \in Ord}] \times_{\mathbb{R} (Ord)} [(b_i)_{i \in Ord}]  = [(a_i  b_i)_{i \in Ord}] \]
+    \[  [a_i]_{i \in Ord} \times_{\mathbb{R} (Ord)} [b_i]_{i \in Ord}  = [a_i  b_i]_{i \in Ord} \]
 
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
 \begin{definition}\textbf{Order in $\mathbb{R} (Ord)$} .\\
-    \[  [(a_i)_{i \in Ord}] <_{\mathbb{R} (Ord)} [(b_i)_{i \in Ord}]  :
-        \exists \epsilon > 0 \quad \exists N  \quad \forall n > N  \quad  b_n - a_n  > \epsilon  \]
+    \[  [a_i]_{i \in Ord} <_{\mathbb{R} (Ord)} [b_i]_{i \in Ord}  :
+        \exists \epsilon > 0 \quad \exists N  \quad \forall n \quad N < n < roof(N)
+        \to    b_n - a_n  > \epsilon  \]
 \end{definition}
 
 this lemma let us use ``$<$'' instead of ``$<_{\mathbb{R} (Ord)}$'', ``$+$''
@@ -5896,7 +6108,7 @@ we denote ``Multiplication'' with ``$x \cdot y$'' and ``$x y$'' too.
 \end{lemma}
 
 \begin{theorem}
-    \textbf{Linear order of Hyper Real numbers($\mathbb{R} (Ord)$)} prove   ``$ (\mathbb{R} (Ord) , <_{\mathbb{R} (Ord)}  )  $
+    \textbf{Linear order of fantacy Real numbers($\mathbb{R} (Ord)$)} prove   ``$ (\mathbb{R} (Ord) , <_{\mathbb{R} (Ord)}  )  $
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item        is lineary ordered.
@@ -5911,12 +6123,12 @@ we denote ``Multiplication'' with ``$x \cdot y$'' and ``$x y$'' too.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-\section{Hyper Complex numbers``$\mathbb{C} (Ord)$''}
+\section{fantacy Complex numbers``$\mathbb{C} (Ord)$''}
 
 we learned about ``$\mathbb{R} (Ord)$'' before and we constructed structure
 ``$(\mathbb{R} (Ord) , + , \cdot , <)$''.
 
-\begin{definition}\textbf{Hyper Complex numbers``$\mathbb{C} (Ord)$''} is a set
+\begin{definition}\textbf{fantacy Complex numbers``$\mathbb{C} (Ord)$''} is a set
     \[ \mathbb{C} (Ord) := \mathbb{R} (Ord) \times \mathbb{R} (Ord) \]
     we denote it's members with ``$z_0 , x ,...$''
 \end{definition}
