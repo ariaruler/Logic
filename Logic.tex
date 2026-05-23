@@ -3481,13 +3481,76 @@ now we will show you relation between ``(partial) Order relation'' and
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       if ``$\preceq $'' is a ``(Total-Linear) Order relation'' in ``$\mathfrak{A}$''
               define ``$a \prec b : a \preceq b \land a \not= b $'' prove that ``$\prec $''
-              is ``(Total-Linear) Strict order relation''. \\ Proof Is Left As An Exercise To
-              The Reader.\twemoji{1f600}
+              is ``(Total-Linear) Strict order relation''. 
         \item       if ``$\prec $'' is a ``(Total-Linear) Strict Order relation'' in
               ``$\mathfrak{A}$'' define ``$a \preceq b : a \prec b \lor a = b $'' prove that
-              ``$\preceq $'' is ``(Total-Linear) order relation''. \\ Proof Is Left As An
-              Exercise To The Reader.\twemoji{1f600}
+              ``$\preceq $'' is ``(Total-Linear) order relation''. 
     \end{enumerate}
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \open
+        \have{1} {x, y \in A} \by{acp}{}
+        \have{2} {x \preceq y \lor y \preceq x} \by{linearity of $\preceq$ (1)}{}
+
+        \open
+        \have{3} {x = y} \by{acp}{}
+        \have{4} {x \prec y \lor x = y \lor y \prec x} \by{$\lor I$ (3)}{}
+        \close
+
+        \open
+        \have{6} {x \neq y} \by{acp}{}
+
+        \open
+        \have{7} {x \preceq y} \by{acp}{}
+        \have{8} {x \preceq y \land x \neq y} \by{$\land I$ (7, 6)}{}
+        \have{9} {x \prec y} \by{def $\prec$ (8)}{}
+        \have{10} {x \prec y \lor x = y \lor y \prec x} \by{$\lor I$ (9)}{}
+        \close
+
+        \open
+        \have{12} {y \preceq x} \by{acp}{}
+        \have{13} {y \neq x} \by{symmetry of $\neq$ (6)}{}
+        \have{14} {y \preceq x \land y \neq x} \by{$\land I$ (12, 13)}{}
+        \have{15} {y \prec x} \by{def $\prec$ (14)}{}
+        \have{16} {x \prec y \lor x = y \lor y \prec x} \by{$\lor I$ (15)}{}
+        \close
+
+        \have{18} {x \prec y \lor x = y \lor y \prec x} \by{$\lor E$ (2, 11, 17)}{}
+        \close
+        \have{21} {x \prec y \lor x = y \lor y \prec x} \by{$\lor E$ (20, 5, 19)}{}
+        \close
+
+        \have{22} {\forall x, y \in A \quad x \prec y \lor x = y \lor y \prec x} \by{$\forall I$ (1-21)}{}
+
+    \end{fitchproof}
+    \vspace{1cm}
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \open
+        \have{1} {x, y \in A} \by{acp}{}
+        \have{2} {x \prec y \lor x = y \lor y \prec x} \by{linearity of $\prec$}{}
+
+        \open
+        \have{3} {x \prec y \lor x = y} \by{acp (Case 1 from 2)}{}
+        \have{4} {x \preceq y} \by{def $\preceq$ (3)}{}
+        \have{5} {x \preceq y \lor y \preceq x} \by{$\lor I$ (4)}{}
+        \close
+
+        \open
+        \have{6} {y \prec x} \by{acp (Case 2 from 2)}{}
+        \have{7} {y \prec x \lor y = x} \by{$\lor I$ (6)}{}
+        \have{8} {y \preceq x} \by{def $\preceq$ (7)}{}
+        \have{9} {x \preceq y \lor y \preceq x} \by{$\lor I$ (8)}{}
+        \close
+
+        \have{10} {x \preceq y \lor y \preceq x} \by{$\lor E$ (2, 3-5, 6-9)}{}
+        \close
+
+        \have{11} {\forall x, y \in A \quad x \preceq y \lor y \preceq x} \by{$\forall I$ (1-10)}{}
+
+    \end{fitchproof}
 
 \end{theorem}
 
@@ -3498,14 +3561,61 @@ now we will show you relation between ``(partial) Order relation'' and
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       $\exists b \in B \quad \forall x \in B \quad b \preceq x /
                   \therefore \exists ! b \in B \quad \forall x \in B \quad b \preceq x $
-              \\ Proof Is Left As An Exercise To The Reader.\twemoji{1f600}.
               in this case we say ``$B$'' has  least element or Minimum or ``$HaveLeast(B)$''
         \item       $\exists c \in C \quad \forall x \in C \quad x \preceq c /
                   \therefore \exists ! c \in C \quad \forall x \in C \quad x \preceq c $
-              \\ Proof Is Left As An Exercise To The Reader.\twemoji{1f600}.
               in this case we say ``$C$'' has  greatest element or has Maximum  or ``$HaveGreatest(C)$''
 
     \end{enumerate}
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \have{1} {\exists b \in B \ \forall x \in B (b \preceq x)} \by{$ass$}{}
+
+        \open
+        \have{2} {b_1, b_2 \in B} \by{acp (assumption for uniqueness)}{}
+
+        \open
+        \have{3} {(\forall x \in B \quad b_1 \preceq x) \land (\forall x \in B \ b_2 \preceq x)} \by{acp}{}
+        \have{4} {\forall x \in B \quad b_1 \preceq x} \by{$\land E$ (3)}{}
+        \have{5} {\forall x \in B \quad b_2 \preceq x} \by{$\land E$ (3)}{}
+        \have{6} {b_1 \preceq b_2} \by{$\forall E$ (4, $x \to b_2$)}{}
+        \have{7} {b_2 \preceq b_1} \by{$\forall E$ (5, $x \to b_1$)}{}
+        \have{8} {b_1 \preceq b_2 \land b_2 \preceq b_1} \by{$\land I$ (6, 7)}{}
+        \have{9} {b_1 = b_2} \by{antisym of $\preceq$ (8)}{}
+        \close
+
+        \have{10} {((\forall x \in B \quad b_1 \preceq x) \land (\forall x \in B \ b_2 \preceq x)) \to b_1 = b_2} \by{$\to I$ (3-9)}{}
+        \close
+
+        \have{11} {\exists! b \in B \quad \forall x \in B (b \preceq x)} \by{$\exists!$ def (1, 10)}{}
+
+    \end{fitchproof}
+    \vspace{1cm}
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \have{1} {\exists c \in C \ \forall x \in C (x \preceq c)} \by{$ass$}{}
+
+        \open
+        \have{2} {c_1, c_2 \in C} \by{acp (assumption for uniqueness)}{}
+
+        \open
+        \have{3} {(\forall x \in C \ x \preceq c_1) \land (\forall x \in C \ x \preceq c_2)} \by{acp}{}
+        \have{4} {\forall x \in C \ x \preceq c_1} \by{$\land E$ (3)}{}
+        \have{5} {\forall x \in C \ x \preceq c_2} \by{$\land E$ (3)}{}
+        \have{6} {c_2 \preceq c_1} \by{$\forall E$ (4, $x \to c_2$)}{}
+        \have{7} {c_1 \preceq c_2} \by{$\forall E$ (5, $x \to c_1$)}{}
+        \have{8} {c_1 \preceq c_2 \land c_2 \preceq c_1} \by{$\land I$ (7, 6)}{}
+        \have{9} {c_1 = c_2} \by{antisym of $\preceq$ (8)}{}
+        \close
+
+        \have{10} {((\forall x \in C \ x \preceq c_1) \land (\forall x \in C \ x \preceq c_2)) \to c_1 = c_2} \by{$\to I$ (3-9)}{}
+        \close
+
+        \have{11} {\exists! c \in C \ \forall x \in C (x \preceq c)} \by{$\exists!$ def (1, 10)}{}
+
+    \end{fitchproof}
 
 \end{lemma}
 
@@ -3516,8 +3626,75 @@ now we will show you relation between ``(partial) Order relation'' and
     we define  like this
     \[ min_\mathfrak{A} :=  \{ (B,b) \in \mathcal{B} \times V \mid \forall x \in B \quad b \preceq x \}  \]
     \[ max_\mathfrak{A} := \{ (C,c) \in \mathcal{C} \times V \mid \forall x \in C \quad x \preceq c \}  \]
-    prove these two relations are two functions ``$min_\mathfrak{A} : \mathcal{B}
-        \to V$'' and ``$max_\mathfrak{A} : \mathcal{C} \to V$''.\twemoji{1f600}
+    we must prove these two relations are two functions ``$min_\mathfrak{A} : \mathcal{B}
+        \to V$'' and ``$max_\mathfrak{A} : \mathcal{C} \to V$''.
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \open
+        \have{1} {B \in \mathcal{B}} \by{acp}{}
+        \have{2} {\exists b \in B \quad \forall x \in B (b \preceq x)} \by{def $\mathcal{B}$ (1)}{}
+
+        \open
+        \have{3} {b_0 \in B \land \forall x \in B (b_0 \preceq x)} \by{acp (assumption for $\exists E$)}{}
+        \have{4} {(B, b_0) \in min_A} \by{def $min_A$ (3)}{}
+        \have{5} {\exists b \in V ((B, b) \in min_A)} \by{$\exists I$ (4)}{}
+        \close
+
+        \have{6} {\exists b \in V ((B, b) \in min_A)} \by{$\exists E$ (2, 3-5)}{}
+
+        \open
+        \have{7} {b_1, b_2 \in V} \by{acp}{}
+
+        \open
+        \have{8} {(B, b_1) \in min_A \land (B, b_2) \in min_A} \by{acp}{}
+        \have{9} {(\forall x \in B \quad b_1 \preceq x) \land (\forall x \in B \ b_2 \preceq x)} \by{def $min_A$, $\land E$ (8)}{}
+        \have{10} {b_1 = b_2} \by{Lemma 5.7.1 (uniqueness)}{}
+        \close
+
+        \have{11} {((B, b_1) \in min_A \land (B, b_2) \in min_A) \to b_1 = b_2} \by{$\to I$ (8-10)}{}
+        \close
+
+        \have{12} {\exists! b \in V ((B, b) \in min_A)} \by{def $\exists!$ (6, 11)}{}
+        \close
+
+        \have{13} {\forall B \in \mathcal{B} \quad \exists! b \in V ((B, b) \in min_A)} \by{$\forall I$ (1-12)}{}
+
+    \end{fitchproof}
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \open
+        \have{1} {C \in \mathcal{C}} \by{acp}{}
+        \have{2} {\exists c \in C \ \forall x \in C (x \preceq c)} \by{def $\mathcal{C}$ (1)}{}
+
+        \open
+        \have{3} {c_0 \in C \land \forall x \in C (x \preceq c_0)} \by{acp (assumption for $\exists E$)}{}
+        \have{4} {(C, c_0) \in max_A} \by{def $max_A$ (3)}{}
+        \have{5} {\exists c \in V ((C, c) \in max_A)} \by{$\exists I$ (4)}{}
+        \close
+
+        \have{6} {\exists c \in V ((C, c) \in max_A)} \by{$\exists E$ (2, 3-5)}{}
+
+        \open
+        \have{7} {c_1, c_2 \in V} \by{acp}{}
+
+        \open
+        \have{8} {(C, c_1) \in max_A \land (C, c_2) \in max_A} \by{acp}{}
+        \have{9} {(\forall x \in C \quad x \preceq c_1) \land (\forall x \in C \ x \preceq c_2)} \by{def $max_A$, $\land E$ (8)}{}
+        \have{10} {c_1 = c_2} \by{Lemma 5.7.1 (uniqueness)}{}
+        \close
+
+        \have{11} {((C, c_1) \in max_A \land (C, c_2) \in max_A) \to c_1 = c_2} \by{$\to I$ (8-10)}{}
+        \close
+
+        \have{12} {\exists! c \in V ((C, c) \in max_A)} \by{def $\exists!$ (6, 11)}{}
+        \close
+
+        \have{13} {\forall C \in \mathcal{C} \quad \exists! c \in V ((C, c) \in max_A)} \by{$\forall I$ (1-12)}{}
+
+    \end{fitchproof}
+
 \end{theorem}
 
 \begin{definition}
@@ -3555,6 +3732,7 @@ if the stucture clear to us we don't write stucture index ``$min(\_),
         \to V$'' and ``$sup_\mathfrak{A} : \mathcal{C} \to V$'' like this
     \[ inf_\mathfrak{A}(B) :=  max_\mathfrak{A}\{ b \in A \mid Lowerb_\mathfrak{A}(b,B) \}   \]
     \[ sup_\mathfrak{A}(B) :=  min_\mathfrak{A}\{ c \in A \mid Upperb_\mathfrak{A}(c,C) \}  \]
+
 \end{theorem}
 
 \begin{theorem}
@@ -3564,11 +3742,58 @@ if the stucture clear to us we don't write stucture index ``$min(\_),
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       $ min_\mathfrak{A}(B) = b /
                   \therefore inf_\mathfrak{A}(B) = b $.
-              \\ Proof Is Left As An Exercise ToThe Reader.\twemoji{1f600}
-        \item       $  inf_\mathfrak{A}(B) = b , b \in B /
+              
+
+             
+
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+
+        \have{1} {min_{\mathfrak{A}}(B) = b} \by{$ass$}{}
+        \have{2} {b \in B \land \forall y \in B (b \preceq y)} \by{def $min_{\mathfrak{A}}$ (1)}{}
+        \have{3} {b \in B} \by{$\land E$ (2)}{}
+        \have{4} {\forall y \in B (b \preceq y)} \by{$\land E$ (2)}{}
+        \have{5} {Lowerb_{\mathfrak{A}}(b, B)} \by{def $Lowerb_{\mathfrak{A}}$ (4)}{}
+        \have{6} {b \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\}} \by{set construction (5)}{}
+
+        \open
+        \have{7} {z \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\}} \by{acp}{}
+        \have{8} {Lowerb_{\mathfrak{A}}(z, B)} \by{set membership (7)}{}
+        \have{9} {\forall y \in B (z \preceq y)} \by{def $Lowerb_{\mathfrak{A}}$ (8)}{}
+        \have{10} {z \preceq b} \by{$\forall E$ (9, $y \to b$ using 3)}{}
+        \close
+
+        \have{11} {\forall z \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\} (z \preceq b)} \by{$\forall I$ (7-10)}{}
+        \have{12} {b \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\} \land \forall z \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\} (z \preceq b)} \by{$\land I$ (6, 11)}{}
+        \have{13} {max_{\mathfrak{A}}(\{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\}) = b} \by{def $max_{\mathfrak{A}}$ (12)}{}
+        \have{14} {inf_{\mathfrak{A}}(B) = b} \by{def $inf_{\mathfrak{A}}$ (13)}{}
+
+
+    \end{fitchproof}
+
+            \item       $  inf_\mathfrak{A}(B) = b , b \in B /
                   \therefore  min_\mathfrak{A}(B) = b $.
-              \\ Proof Is Left As An Exercise ToThe Reader.\twemoji{1f600}
-    \end{enumerate}
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+
+
+        \have{2} {inf_{\mathfrak{A}}(B) = b}         \by{$ass$ }{}
+        \have{3} {b \in B}                        \by{$ass$ }{}
+        \have{4} {max_{\mathfrak{A}}(\{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\}) = b} \by{def $inf_{\mathfrak{A}}$ (2)}{}
+        \have{5} {b \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\} \land \forall z \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\} (z \preceq b)} \by{def $max_{\mathfrak{A}}$ (4)}{}
+        \have{6} {b \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\}} \by{$\land E$ (5)}{}
+        \have{7} {Lowerb_{\mathfrak{A}}(b, B)} \by{set membership (6)}{}
+        \have{8} {\forall y \in B (b \preceq y)} \by{def $Lowerb_{\mathfrak{A}}$ (7)}{}
+        \have{9} {b \in B \land \forall y \in B (b \preceq y)} \by{$\land I$ (3, 8)}{}
+        \have{10} {min_{\mathfrak{A}}(B) = b} \by{def $min_{\mathfrak{A}}$ (9)}{}
+
+
+    \end{fitchproof}
+
+        \end{enumerate}
+
     this theorem holds for ``$max , sup$'' too.
 \end{theorem}
 
@@ -4020,7 +4245,7 @@ notice that now ``$\phi(x)$'' is a proposition. so ``$\{ x \mid \forall Y \Big(
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       $\forall n \in \mathbb{N} \quad  Transitive(n)  $
-        \item       $Transitive( \mathbb{N})$
+        \item       $Transitive( \mathbb{N})$  \twemoji{1f600}
     \end{enumerate}
 
     proof.
@@ -4057,7 +4282,7 @@ notice that now ``$\phi(x)$'' is a proposition. so ``$\{ x \mid \forall Y \Big(
         \have  {2} {\forall n \in \mathbb{N} \quad  Transitive(n) }                                   \by{ Induction theorem }{}
 
     \end{fitchproof}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.
 \end{lemma}
 
 \begin{definition}
@@ -4072,7 +4297,7 @@ notice that now ``$\phi(x)$'' is a proposition. so ``$\{ x \mid \forall Y \Big(
     \textbf{Order of Natural numbers($\mathbb{N}$)} prove
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item        $ (\mathbb{N} , <  )  $ is lineary ordered.
+        \item        $ (\mathbb{N} , <  )  $ is lineary ordered. \twemoji{1f600}
         \item        $ \forall n \in \mathbb{N} \quad (n , <  )  $ is Well ordered.
         \item        $ (\mathbb{N} , <  )  $ is Well ordered.
         \item       $ \Big( \forall x \in \mathbb{N} \quad   \exists y \in \mathbb{N} \quad  x < y \Big)  $ (doesn't have right endpoint)
@@ -4116,7 +4341,7 @@ notice that now ``$\phi(x)$'' is a proposition. so ``$\{ x \mid \forall Y \Big(
 
     \end{fitchproof}
 
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
 \begin{theorem}\textbf{Induction ,second vrsion}
@@ -4603,7 +4828,7 @@ of all infinite sequences of $a \in A$.
         \item       $\forall m \in \mathbb{N} \quad m+0 = m$
         \item       $\forall m,n \in \mathbb{N} \quad m+s(n) = s(m +n)  $
     \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
 \begin{theorem}\textbf{Multiplication} there is a unique function ``$\times :\mathbb{N} \times \mathbb{N} \to \mathbb{N}$'' s.t.
@@ -4613,7 +4838,7 @@ of all infinite sequences of $a \in A$.
         \item       $\forall m \in \mathbb{N} \quad m \times 0 = 0$
         \item       $\forall m,n \in \mathbb{N} \quad m \times s(n) = m \times n+ m   $
     \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 we denote also ``Multiplication'' with ``$m \cdot n$'' and ``$mn$'' too.
 
@@ -4692,7 +4917,7 @@ we call ``$\mathfrak{N}$'' a model of ``Peano arithmetic''.
 
     \end{fitchproof}
 
-        \begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
         \open
         \have {14} { x , y   \in N }   \by{$acp $}{}
@@ -4724,15 +4949,14 @@ we call ``$\mathfrak{N}$'' a model of ``Peano arithmetic''.
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 
-
-            \begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
         \open
         \have {14} { x   \in N }   \by{$acp $}{}
         \have {14} {  0  \cdot  0 = 0  }                 \by{Ax. 5}{}
         \open
-        \have {14} { 0 \cdot  x =  0 }     \by{$acp $}{}   
-        \have {14} { 0 \cdot  s(x) = 0 \cdot x + 0 =  0 }    
+        \have {14} { 0 \cdot  x =  0 }     \by{$acp $}{}
+        \have {14} { 0 \cdot  s(x) = 0 \cdot x + 0 =  0 }
         \close
         \have {14} { 0 \cdot  x =  0 }     \by{Ax. Ind}{}
         \close
@@ -4740,15 +4964,15 @@ we call ``$\mathfrak{N}$'' a model of ``Peano arithmetic''.
 
     \end{fitchproof}
 
-                \begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
         \open
         \have {14} { x , y   \in N }   \by{$acp $}{}
         % \have {14} {  0 + x  = x }     \by{$acp $}{}
         \have {14} {  0 + y 0 = s(y) \cdot 0  }                 \by{Ax. 5}{}
         \open
-        \have {14} { x + y x = s(y) \cdot x }     \by{$acp $}{}  
-        \have {14} { s(x) + y x = x + s( y x ) = s( x +  y x ) = s( s(y) \cdot x)  = s(y) \cdot s(x) }    
+        \have {14} { x + y x = s(y) \cdot x }     \by{$acp $}{}
+        \have {14} { s(x) + y x = x + s( y x ) = s( x +  y x ) = s( s(y) \cdot x)  = s(y) \cdot s(x) }
         \close
         \have {14} { x + y x = s(y) \cdot x }     \by{Ax. Ind}{}
         \close
@@ -4756,8 +4980,7 @@ we call ``$\mathfrak{N}$'' a model of ``Peano arithmetic''.
 
     \end{fitchproof}
 
-
-            \begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
         \open
         \have {14} { x , y   \in N }   \by{$acp $}{}
@@ -4765,15 +4988,15 @@ we call ``$\mathfrak{N}$'' a model of ``Peano arithmetic''.
         \have {14} {  x  \cdot  0 = 0  }                 \by{Ax. 5}{}
         \have {14} {  x  \cdot  0  = 0 \cdot  x }                 \by{ Lemma }{}
         \open
-        \have {14} { x   y = y  x }     \by{$acp $}{}  
-        \have {14} { x  \cdot s(y) = x y + x =  y x + x = x + y x   = s(y) \cdot x }    
+        \have {14} { x   y = y  x }     \by{$acp $}{}
+        \have {14} { x  \cdot s(y) = x y + x =  y x + x = x + y x   = s(y) \cdot x }
         \close
         \have {14} { x   y = y  x }     \by{Ax. Ind}{}
         \close
         \have {14} {\forall x , y \in N \quad x   y = y  x  }     \by{$ \to I , \forall I$}{}
 
     \end{fitchproof}
-   
+
 \end{lemma}
 
 Now define ``$ x < y : \exists z \not=0 \quad x + z = y $''. You can prove for
@@ -5616,205 +5839,1275 @@ arithmetic. so properties are true for them.
 
 \chapter{Axiom of chioce}
 
-\chapter{hyperreal numbers($*\mathbb{N}  , *\mathbb{Z},*\mathbb{Q}    ,*\mathbb{R} $) and surreal numbers }
+\chapter{hyperreal numbers($*\mathbb{N}  , *\mathbb{Z},*\mathbb{Q}    ,*\mathbb{R} $)  }
 
-\section{1. Starting Point: Sequences of Reals}
 
-Consider the set of all sequences of real numbers:
-\[
-    \mathbb{R}^{\mathbb{N}} = \{ (x_1, x_2, x_3, \dots) : x_n \in \mathbb{R} \}.
-\]
-Think of a sequence as a function from \(\mathbb{N}\) to \(\mathbb{R}\).
+\section{Filters}
 
-\section{2. Nonprincipal Ultrafilter on \(\mathbb{N}\)}
+Filters are mathematical objects used to formalize the idea of
+``large subsets'' of a set.
 
-An \emph{ultrafilter} \(\mathcal{U}\) on \(\mathbb{N}\) is a collection of
-subsets of \(\mathbb{N}\) satisfying:
+\begin{definition}[Filter]
+Let $X$ be a nonempty set.
+
+A \emph{filter} $\mathcal{F}$ on $X$ is a collection
+of subsets of $X$ such that:
+
 \begin{enumerate}
-    \item If \(A \in \mathcal{U}\) and \(A \subseteq B \subseteq \mathbb{N}\), then \(B
-          \in \mathcal{U}\).
-    \item If \(A,B \in \mathcal{U}\), then \(A \cap B \in \mathcal{U}\).
-    \item For every \(A \subseteq \mathbb{N}\), either \(A \in \mathcal{U}\) or
-          \(\mathbb{N}\setminus A \in \mathcal{U}\).
+    \item $\emptyset \notin \mathcal{F}$.
+    
+    \item $X \in \mathcal{F}$.
+    
+    \item If $A,B \in \mathcal{F}$, then
+    \[
+        A \cap B \in \mathcal{F}.
+    \]
+    
+    \item If $A \in \mathcal{F}$ and
+    $A \subseteq B \subseteq X$, then
+    \[
+        B \in \mathcal{F}.
+    \]
 \end{enumerate}
-An ultrafilter is \emph{nonprincipal} if it contains no finite sets.
-Existence of such ultrafilters follows from the Axiom of Choice.
+\end{definition}
 
-Intuitively, a nonprincipal ultrafilter determines what it means for something
-to happen ``for almost all'' \(n\).
+Intuitively:
 
-\section{3. Equivalence Relation on Sequences}
+\begin{itemize}
+    \item Sets in $\mathcal{F}$ are considered ``large''.
+    \item The intersection of two large sets is still large.
+    \item Any superset of a large set is also large.
+\end{itemize}
 
-For two sequences \((x_n)\) and \((y_n)\) in \(\mathbb{R}^{\mathbb{N}}\),
-define
+
+
+\begin{example}[Trivial Filter]
+For any set $X$,
 \[
-    (x_n) \sim (y_n)
-    \quad \Longleftrightarrow \quad
-    \{\,n \in \mathbb{N} : x_n = y_n \,\} \in \mathcal{U}.
+    \mathcal{F}=\{X\}
 \]
-That is, they are considered equivalent if they agree on a ``large'' set of
-indices belonging to the ultrafilter.
+is a filter.
+\end{example}
 
-\section{4. The Ultrapower Construction}
+\begin{example}[Principal Filter]
+Fix $A \subseteq X$ with $A \neq \emptyset$.
 
-The set of equivalence classes under this relation is
+Define
 \[
-    {}^{\ast}\mathbb{R} = \mathbb{R}^{\mathbb{N}} / \sim.
+    \mathcal{F}_A
+    =
+    \{B \subseteq X : A \subseteq B\}.
 \]
-If \((x_n)\) is a sequence, its equivalence class is denoted \([x_n]\).
 
-\section{5. Algebraic Operations}
+Then $\mathcal{F}_A$ is a filter on $X$.
 
-Addition and multiplication are defined coordinatewise:
+This is called the \emph{principal filter generated by $A$}.
+\end{example}
+
+\begin{example}[Fr\'echet Filter]
+Let $X=\mathbb{N}$.
+
+Define
 \[
-    [x_n] + [y_n] = [x_n + y_n], \qquad
-[x_n]\cdot [y_n] = [x_n y_n].
+    \mathcal{F}
+    =
+    \{A \subseteq \mathbb{N}
+    :
+    \mathbb{N}\setminus A
+    \text{ is finite}\}.
 \]
-These operations are well-defined on equivalence classes, and with them,
-\({}^{\ast}\mathbb{R}\) becomes a field.
 
-\section{6. Embedding of \(\mathbb{R}\)}
+Then $\mathcal{F}$ is a filter.
 
-Each real number \(r \in \mathbb{R}\) defines a constant sequence
-\((r,r,r,\dots)\). Define the embedding
+Its elements are the cofinite subsets of $\mathbb{N}$.
+
+This is called the \emph{Fr\'echet filter}.
+\end{example}
+
+\section{Ultrafilters}
+
+Ultrafilters are maximal filters.
+
+\begin{definition}[Ultrafilter]
+A filter $\mathcal{U}$ on $X$ is called an
+\emph{ultrafilter} if it is maximal among filters,
+that is:
+
+Whenever $\mathcal{F}$ is a filter on $X$ and
 \[
-    \iota: \mathbb{R} \to {}^{\ast}\mathbb{R}, \qquad r \mapsto [r,r,r,\dots].
+    \mathcal{U}\subseteq \mathcal{F},
 \]
-This is an injective field homomorphism, so we can view \(\mathbb{R} \subset
-{}^{\ast}\mathbb{R}\).
-
-\section{7. Infinitesimal and Infinite Elements}
-
-\textbf{Infinitesimal:} Choose \(x_n = \frac{1}{n}\).
-Then for every standard \(k \in \mathbb{N}\),
+then
 \[
-    \{\,n : \tfrac{1}{n} < \tfrac{1}{k}\,\}
+    \mathcal{F}=\mathcal{U}.
 \]
-is cofinite, hence belongs to \(\mathcal{U}\). Therefore
+\end{definition}
+
+There is a very important characterization of ultrafilters.
+
+\begin{theorem}[Ultrafilter Characterization]
+Let $\mathcal{U}$ be a filter on $X$.
+
+Then $\mathcal{U}$ is an ultrafilter if and only if
+for every subset $A \subseteq X$,
+exactly one of the following holds:
 \[
-    0 < [1/n] < \tfrac{1}{k} \quad \forall k \in \mathbb{N}.
+    A \in \mathcal{U},
 \]
-Thus \( [1/n] \) is a positive infinitesimal.
+or
+\[
+    X\setminus A \in \mathcal{U}.
+\]
+\end{theorem}
+
+So an ultrafilter makes a complete decision about every subset.
+
+
+\begin{example}
+Fix $x\in X$.
+
+Define
+\[
+    \mathcal{U}_x
+    =
+    \{A\subseteq X : x\in A\}.
+\]
+
+Then $\mathcal{U}_x$ is an ultrafilter.
+
+It is called the \emph{principal ultrafilter at $x$}.
+\end{example}
+
+Proof:
+
+\begin{itemize}
+    \item If $A,B\in\mathcal{U}_x$, then $x\in A\cap B$,
+    so $A\cap B\in\mathcal{U}_x$.
+    
+    \item If $A\in\mathcal{U}_x$ and $A\subseteq B$,
+    then $x\in B$, so $B\in\mathcal{U}_x$.
+    
+    \item For every subset $A\subseteq X$,
+    either $x\in A$ or $x\notin A$.
+    
+    Hence either
+    \[
+        A\in\mathcal{U}_x
+    \]
+    or
+    \[
+        X\setminus A\in\mathcal{U}_x.
+    \]
+\end{itemize}
+
+Therefore $\mathcal{U}_x$ is an ultrafilter.
+
+\section{Nonprincipal Ultrafilters}
+
+An ultrafilter on $\mathbb{N}$ is called
+\emph{nonprincipal} if it contains no finite set.
+
+Equivalently, it extends the Fr\'echet filter.
+
+Nonprincipal ultrafilters cannot be explicitly constructed
+in ordinary mathematics; their existence usually requires
+the Axiom of Choice.
+
+
+
+
+  
+\begin{definition}[Extension of a Filter]
+Let $\mathcal{F}$ and $\mathcal{G}$ be filters on a set $X$.
+
+We say that $\mathcal{G}$ extends $\mathcal{F}$ if
+\[
+    \mathcal{F}\subseteq \mathcal{G}.
+\]
+
+This means every set considered ``large'' by $\mathcal{F}$
+is also considered ``large'' by $\mathcal{G}$.
+\end{definition}
+
+\begin{theorem}[Ultrafilter Lemma]
+Every filter on a set $X$ can be extended to an ultrafilter.
+\end{theorem}
+
+In other words, if $\mathcal{F}$ is a filter on $X$,
+then there exists an ultrafilter $\mathcal{U}$ such that
+\[
+    \mathcal{F}\subseteq \mathcal{U}.
+\]
+
+So every filter can be enlarged until it becomes maximal.
+
+\begin{example}
+Let
+\[
+    \mathcal{F}
+    =
+    \{A\subseteq\mathbb{N}:
+    \mathbb{N}\setminus A
+    \text{ is finite}\}.
+\]
+
+This is the Fr\'echet filter.
+
+It is not an ultrafilter, because for example neither
+the set of even numbers
+\[
+    E=\{0,2,4,6,\dots\}
+\]
+nor its complement
+\[
+    \mathbb{N}\setminus E
+\]
+belongs to $\mathcal{F}$.
+
+By the Ultrafilter Lemma, there exists an ultrafilter
+$\mathcal{U}$ such that
+\[
+    \mathcal{F}\subseteq\mathcal{U}.
+\]
+
+Since $\mathcal{U}$ is an ultrafilter, exactly one of
+\[
+    E\in\mathcal{U}
+\]
+or
+\[
+    \mathbb{N}\setminus E\in\mathcal{U}
+\]
+must hold.
+\end{example}
+
+The theorem is usually proved using Zorn's Lemma.
+
+Consider the set
+\[
+    \mathcal{P}
+    =
+    \{\mathcal{G} :
+    \mathcal{G}\text{ is a filter on }X
+    \text{ and }
+    \mathcal{F}\subseteq\mathcal{G}\}.
+\]
+
+We order $\mathcal{P}$ by inclusion.
+
+The idea is:
+
+
+
+\begin{theorem}[Ultrafilter Lemma]
+Let $\mathcal{F}$ be a filter on a set $X$.
+
+Then there exists an ultrafilter $\mathcal{U}$ on $X$
+such that
+\[
+    \mathcal{F}\subseteq\mathcal{U}.
+\]
+\end{theorem}
+
+\begin{proof}
+Let
+\[
+    \mathcal{P}
+    =
+    \{
+        \mathcal{G}
+        :
+        \mathcal{G}
+        \text{ is a filter on }X
+        \text{ and }
+        \mathcal{F}\subseteq\mathcal{G}
+    \}.
+\]
+
+We partially order $\mathcal{P}$ by inclusion.
+
+We will apply Zorn's Lemma.
+
+So let
+\[
+    \mathcal{C}\subseteq\mathcal{P}
+\]
+be a chain.
+
+Define
+\[
+    \mathcal{H}
+    =
+    \bigcup_{\mathcal{G}\in\mathcal{C}}
+    \mathcal{G}.
+\]
+
+We show that $\mathcal{H}$ is a filter.
+
+First,
+\[
+    \emptyset\notin\mathcal{H},
+\]
+because no filter in $\mathcal{C}$ contains $\emptyset$.
+
+Also,
+\[
+    X\in\mathcal{H},
+\]
+since every filter contains $X$.
+
+Now let
+\[
+    A,B\in\mathcal{H}.
+\]
+
+Then there exist
+\[
+    \mathcal{G}_1,\mathcal{G}_2\in\mathcal{C}
+\]
+such that
+\[
+    A\in\mathcal{G}_1,
+    \qquad
+    B\in\mathcal{G}_2.
+\]
+
+Because $\mathcal{C}$ is a chain, either
+\[
+    \mathcal{G}_1\subseteq\mathcal{G}_2
+\]
+or
+\[
+    \mathcal{G}_2\subseteq\mathcal{G}_1.
+\]
+
+Without loss of generality, suppose
+\[
+    \mathcal{G}_1\subseteq\mathcal{G}_2.
+\]
+
+Then
+\[
+    A,B\in\mathcal{G}_2.
+\]
+
+Since $\mathcal{G}_2$ is a filter,
+\[
+    A\cap B\in\mathcal{G}_2\subseteq\mathcal{H}.
+\]
+
+Thus $\mathcal{H}$ is closed under finite intersections.
+
+Next, suppose
+\[
+    A\in\mathcal{H}
+\]
+and
+\[
+    A\subseteq B\subseteq X.
+\]
+
+Then
+\[
+    A\in\mathcal{G}
+\]
+for some
+\[
+    \mathcal{G}\in\mathcal{C}.
+\]
+
+Since $\mathcal{G}$ is a filter,
+\[
+    B\in\mathcal{G}\subseteq\mathcal{H}.
+\]
+
+Therefore $\mathcal{H}$ is a filter.
+
+Also, every element of $\mathcal{C}$ contains $\mathcal{F}$,
+so
+\[
+    \mathcal{F}\subseteq\mathcal{H}.
+\]
+
+Hence
+\[
+    \mathcal{H}\in\mathcal{P}.
+\]
+
+Thus every chain in $\mathcal{P}$ has an upper bound.
+
+By Zorn's Lemma, $\mathcal{P}$ has a maximal element,
+say $\mathcal{U}$.
+
+We claim that $\mathcal{U}$ is an ultrafilter.
+
+Suppose $\mathcal{U}\subseteq\mathcal{V}$,
+where $\mathcal{V}$ is a filter on $X$.
+
+Since
+\[
+    \mathcal{F}\subseteq\mathcal{U}\subseteq\mathcal{V},
+\]
+we have
+\[
+    \mathcal{V}\in\mathcal{P}.
+\]
+
+But $\mathcal{U}$ is maximal in $\mathcal{P}$, so
+\[
+    \mathcal{V}=\mathcal{U}.
+\]
+
+Therefore $\mathcal{U}$ is an ultrafilter extending
+$\mathcal{F}$.
+\end{proof}
+
+
+
+
+\begin{theorem}
+Let $\mathcal{U}$ be a nonprincipal ultrafilter on
+$\mathbb{N}$.
+
+Then
+\[
+    \mathcal{F}_{\mathrm{Fr}}
+    \subseteq
+    \mathcal{U}.
+\]
+
+That is, every cofinite subset of $\mathbb{N}$
+belongs to $\mathcal{U}$.
+\end{theorem}
+
+\begin{proof}
+Let
+\[
+    A\in\mathcal{F}_{\mathrm{Fr}}.
+\]
+
+Then
+\[
+    \mathbb{N}\setminus A
+\]
+is finite.
+
+Suppose, toward a contradiction, that
+\[
+    A\notin\mathcal{U}.
+\]
+
+Since $\mathcal{U}$ is an ultrafilter,
+exactly one of
+\[
+    A\in\mathcal{U}
+\]
+or
+\[
+    \mathbb{N}\setminus A\in\mathcal{U}
+\]
+holds.
+
+Therefore
+\[
+    \mathbb{N}\setminus A\in\mathcal{U}.
+\]
+
+But
+\[
+    \mathbb{N}\setminus A
+\]
+is finite.
+
+Hence $\mathcal{U}$ contains a finite set.
+
+We show this implies that $\mathcal{U}$ is principal.
+
+Let
+\[
+    F=\{n_1,\dots,n_k\}\in\mathcal{U}.
+\]
+
+Since
+\[
+    F=n_1\cup\cdots\cup n_k,
+\]
+if no singleton $\{n_i\}$ belonged to $\mathcal{U}$,
+then for every $i$ we would have
+\[
+    \mathbb{N}\setminus\{n_i\}\in\mathcal{U},
+\]
+because $\mathcal{U}$ is an ultrafilter.
+
+Since filters are closed under finite intersections,
+\[
+    \bigcap_{i=1}^k
+    \left(
+        \mathbb{N}\setminus\{n_i\}
+    \right)
+    \in\mathcal{U}.
+\]
+
+But
+\[
+    \bigcap_{i=1}^k
+    \left(
+        \mathbb{N}\setminus\{n_i\}
+    \right)
+    =
+    \mathbb{N}\setminus F.
+\]
+
+Thus
+\[
+    \mathbb{N}\setminus F\in\mathcal{U}.
+\]
+
+Since also
+\[
+    F\in\mathcal{U},
+\]
+we obtain
+\[
+    F\cap
+    (\mathbb{N}\setminus F)
+    =
+    \emptyset
+    \in\mathcal{U},
+\]
+contradicting the definition of a filter.
+
+Therefore
+\[
+    \{n_i\}\in\mathcal{U}
+\]
+for some $i$.
+
+Hence $\mathcal{U}$ is principal, contradiction.
+
+Therefore
+\[
+    A\in\mathcal{U}.
+\]
+
+Since $A$ was arbitrary,
+\[
+    \mathcal{F}_{\mathrm{Fr}}
+    \subseteq
+    \mathcal{U}.
+\]
+\end{proof}
+
+\section{Definition of ($*\mathbb{N}  , *\mathbb{Z},*\mathbb{Q}    ,*\mathbb{R} $)  }
+
+\begin{definition}[Ultrapower Construction]
+Let $X$ be a set and let $\mathcal{U}$ be an ultrafilter
+on $\mathbb{N}$.
+
+Consider the set
+\[
+    X^{\mathbb{N}}
+\]
+of all sequences
+\[
+    (x_n)_{n\in\mathbb{N}}
+\]
+with terms in $X$.
+
+Define a relation $\sim$ on $X^{\mathbb{N}}$ by
+\[
+    (x_n)\sim(y_n)
+\]
+if
+\[
+    \{n\in\mathbb{N}:x_n=y_n\}\in\mathcal{U}.
+\]
+\end{definition}
+
+\begin{theorem}
+The relation $\sim$ is an equivalence relation on
+$X^{\mathbb{N}}$.
+\end{theorem}
+
+\begin{proof}
+We verify the three properties.
 
 \medskip
+
 \noindent
-\textbf{Infinite element:} Choose \(y_n = n\).
-For any fixed \(M \in \mathbb{N}\),
+\textbf{Reflexivity.}
+For every sequence $(x_n)$,
 \[
-    \{\,n : n > M\,\}
-\]
-is cofinite, so \( [n] > M \) in \({}^{\ast}\mathbb{R}\). Hence \( [n] \) is an
-infinite hyperreal number.
-
-\section{8. The Transfer Principle (Łoś's Theorem)}
-
-\emph{Łoś's theorem:} For any first-order formula \(\varphi(x_1,\dots,x_k)\),
-\[
-    {}^{\ast}\mathbb{R} \models \varphi([x^{(1)}_n],\dots,[x^{(k)}_n])
-    \quad \text{iff} \quad
-    \{\,n \in \mathbb{N} : \mathbb{R} \models \varphi(x^{(1)}_n,\dots,x^{(k)}_n)\,\} \in \mathcal{U}.
-\]
-This yields the \emph{Transfer Principle:} any first-order property true in
-\(\mathbb{R}\) is also true in \({}^{\ast}\mathbb{R}\).
-
-\section{9. Summary}
-
-\begin{enumerate}
-    \item Start with all real sequences \(\mathbb{R}^{\mathbb{N}}\).
-    \item Pick a nonprincipal ultrafilter \(\mathcal{U}\) on \(\mathbb{N}\).
-    \item Define \((x_n)\sim(y_n)\) if they agree on a set in \(\mathcal{U}\).
-    \item The quotient \(\mathbb{R}^{\mathbb{N}}/\sim\) is the hyperreal field
-          \({}^{\ast}\mathbb{R}\).
-    \item Embed \(\mathbb{R}\) via constant sequences.
-    \item Sequences like \(1/n\) and \(n\) give infinitesimal and infinite elements.
-    \item Łoś’s theorem provides the logical foundation (Transfer Principle).
-\end{enumerate}
-
-\section{10. Remarks}
-
-\({}^{\ast}\mathbb{R}\) depends on the choice of the nonprincipal ultrafilter,
-but all such constructions are \emph{elementarily equivalent} fields—they satisfy
-the same first-order properties of \(\mathbb{R}\).
-
-\section{Common Symbols: \(\omega\), \(\epsilon\), \(\varepsilon\), and Others}
-
-\subsection{1. The Symbol \(\omega\)}
-
-\[
-    \omega = \{0,1,2,3,\dots\}
+    \{n:x_n=x_n\}=\mathbb{N}.
 \]
 
+Since every ultrafilter contains $\mathbb{N}$,
 \[
-    |\omega| = \aleph_0
+    (x_n)\sim(x_n).
 \]
 
-Ultrafilter and nonstandard analysis context:
+\medskip
+
+\noindent
+\textbf{Symmetry.}
+Suppose
 \[
-    [n] > k \quad \text{for all standard } k \in \mathbb{N}
+    (x_n)\sim(y_n).
 \]
 
-LaTeX:
+Then
 \[
-    \texttt{\textbackslash omega}
+    \{n:x_n=y_n\}\in\mathcal{U}.
 \]
 
-\subsection{2. The Symbols \(\epsilon\) and \(\varepsilon\)}
-
+But
 \[
-    \epsilon > 0, \qquad \varepsilon > 0
+    \{n:x_n=y_n\}
+    =
+    \{n:y_n=x_n\},
+\]
+so
+\[
+    (y_n)\sim(x_n).
 \]
 
-Both denote an arbitrarily small positive real number.
+\medskip
 
-Limit definition example:
+\noindent
+\textbf{Transitivity.}
+Suppose
 \[
-    \forall \varepsilon > 0 \; \exists \delta > 0 : |x-a| < \delta \Rightarrow |f(x)-L| < \varepsilon .
+    (x_n)\sim(y_n)
+\]
+and
+\[
+    (y_n)\sim(z_n).
 \]
 
-Infinitesimal in hyperreals:
+Then
 \[
-    0 < \varepsilon < \frac{1}{n} \quad \forall n \in \mathbb{N}.
+    A=\{n:x_n=y_n\}\in\mathcal{U},
+\]
+and
+\[
+    B=\{n:y_n=z_n\}\in\mathcal{U}.
 \]
 
-LaTeX:
+Since $\mathcal{U}$ is a filter,
 \[
-    \texttt{\textbackslash epsilon}, \qquad \texttt{\textbackslash varepsilon}
+    A\cap B\in\mathcal{U}.
 \]
 
-\subsection{3. Other Common Greek Symbols}
-
+For every
 \[
-    \alpha, \beta, \gamma, \delta, \eta, \theta, \lambda, \mu, \phi, \varphi
+    n\in A\cap B,
+\]
+we have
+\[
+    x_n=y_n
+    \quad\text{and}\quad
+    y_n=z_n,
+\]
+hence
+\[
+    x_n=z_n.
 \]
 
-LaTeX:
+Therefore
 \[
-    \texttt{\textbackslash alpha},\;
-    \texttt{\textbackslash beta},\;
-    \texttt{\textbackslash gamma},\;
-    \texttt{\textbackslash delta},\;
-    \texttt{\textbackslash eta},\;
-    \texttt{\textbackslash theta},\;
-    \texttt{\textbackslash lambda},\;
-    \texttt{\textbackslash mu},\;
-    \texttt{\textbackslash phi},\;
-    \texttt{\textbackslash varphi}.
+    A\cap B
+    \subseteq
+    \{n:x_n=z_n\}.
 \]
 
-\subsection{4. Summary Table (LaTeX Only)}
-
+Since ultrafilters are closed upward,
 \[
-    \begin{array}{c|c|c}
-        \text{Symbol} & \text{Meaning}                         & \text{LaTeX}                       \\ \hline
-        \omega        & \text{first infinite ordinal}          & \texttt{\textbackslash omega}      \\
-        \Omega        & \text{asymptotic lower bound}          & \texttt{\textbackslash Omega}      \\
-        \epsilon      & \text{small positive number}           & \texttt{\textbackslash epsilon}    \\
-        \varepsilon   & \text{alternative epsilon}             & \texttt{\textbackslash varepsilon} \\
-        \delta        & \text{small positive number in limits} & \texttt{\textbackslash delta}      \\
-        \theta        & \text{angle or parameter}              & \texttt{\textbackslash theta}      \\
-        \lambda       & \text{eigenvalue or parameter}         & \texttt{\textbackslash lambda}     \\
-    \end{array}
+    \{n:x_n=z_n\}\in\mathcal{U}.
 \]
+
+Thus
+\[
+    (x_n)\sim(z_n).
+\]
+\end{proof}
+
+\begin{definition}
+The quotient set
+\[
+    X^{\mathbb{N}}/\sim
+\]
+is called the \emph{ultrapower} of $X$ by $\mathcal{U}$.
+
+Its elements are equivalence classes
+\[
+    [(x_n)].
+\]
+\end{definition}
+
+When $X$ has algebraic operations or an order relation,
+they are defined componentwise on the ultrapower.
+
+For example,
+\[
+    [(x_n)]+[(y_n)]
+    =
+    [(x_n+y_n)].
+\]
+
+Similarly,
+\[
+    [(x_n)]<[(y_n)]
+\]
+means
+\[
+    \{n:x_n<y_n\}\in\mathcal{U}.
+\]
+
+\begin{definition}[Ultrapower Construction]
+Let $X$ be a set and let $\mathcal{U}$ be a nonprincipal
+ultrafilter on $\omega$.
+
+Consider the set
+\[
+    X^\omega
+\]
+of all functions
+\[
+    a:\omega\to X.
+\]
+
+We usually write such a function as
+\[
+    a=(a_i)_{i\in\omega},
+\]
+where
+\[
+    a_i\in X
+\]
+for every
+\[
+    i\in\omega.
+\]
+\end{definition}
+
+\begin{definition}
+Define a relation $\sim$ on $X^\omega$ by
+\[
+    a\sim b
+\]
+if
+\[
+    \{i\in\omega:a_i=b_i\}\in\mathcal{U}.
+\]
+
+In words, two sequences are equivalent if they agree
+on a set of indices belonging to the ultrafilter.
+\end{definition}
+
+\begin{theorem}
+The relation $\sim$ is an equivalence relation on
+$X^\omega$.
+\end{theorem}
+
+\begin{proof}
+We verify reflexivity, symmetry, and transitivity.
+
+\medskip
+
+\noindent
+\textbf{Reflexivity.}
+Let
+\[
+    a\in X^\omega.
+\]
+
+Then
+\[
+    \{i\in\omega:a_i=a_i\}=\omega.
+\]
+
+Since every ultrafilter contains $\omega$,
+\[
+    a\sim a.
+\]
+
+\medskip
+
+\noindent
+\textbf{Symmetry.}
+Suppose
+\[
+    a\sim b.
+\]
+
+Then
+\[
+    \{i\in\omega:a_i=b_i\}\in\mathcal{U}.
+\]
+
+But
+\[
+    \{i\in\omega:a_i=b_i\}
+    =
+    \{i\in\omega:b_i=a_i\},
+\]
+hence
+\[
+    b\sim a.
+\]
+
+\medskip
+
+\noindent
+\textbf{Transitivity.}
+Suppose
+\[
+    a\sim b
+\]
+and
+\[
+    b\sim c.
+\]
+
+Then
+\[
+    A=\{i\in\omega:a_i=b_i\}\in\mathcal{U},
+\]
+and
+\[
+    B=\{i\in\omega:b_i=c_i\}\in\mathcal{U}.
+\]
+
+Since $\mathcal{U}$ is a filter,
+\[
+    A\cap B\in\mathcal{U}.
+\]
+
+If
+\[
+    i\in A\cap B,
+\]
+then
+\[
+    a_i=b_i
+    \quad\text{and}\quad
+    b_i=c_i,
+\]
+so
+\[
+    a_i=c_i.
+\]
+
+Thus
+\[
+    A\cap B
+    \subseteq
+    \{i\in\omega:a_i=c_i\}.
+\]
+
+Since ultrafilters are closed upward,
+\[
+    \{i\in\omega:a_i=c_i\}\in\mathcal{U}.
+\]
+
+Therefore
+\[
+    a\sim c.
+\]
+\end{proof}
+
+\begin{definition}
+The quotient
+\[
+    X^\omega/\sim
+\]
+is called the \emph{ultrapower} of $X$ modulo
+$\mathcal{U}$.
+
+The equivalence class of
+\[
+    a\in X^\omega
+\]
+is denoted by
+\[
+    [a].
+\]
+\end{definition}
+
+We now apply this construction to the standard number
+systems.
+
+\begin{definition}
+The set of hypernatural numbers is
+\[
+    {}^\ast\mathbb{N}
+    =
+    \mathbb{N}^\omega/\sim.
+\]
+\end{definition}
+
+\begin{definition}
+The set of hyperintegers is
+\[
+    {}^\ast\mathbb{Z}
+    =
+    \mathbb{Z}^\omega/\sim.
+\]
+\end{definition}
+
+\begin{definition}
+The set of hyperrational numbers is
+\[
+    {}^\ast\mathbb{Q}
+    =
+    \mathbb{Q}^\omega/\sim.
+\]
+\end{definition}
+
+\begin{definition}
+The set of hyperreal numbers is
+\[
+    {}^\ast\mathbb{R}
+    =
+    \mathbb{R}^\omega/\sim.
+\]
+\end{definition}
+
+The algebraic operations are defined componentwise.
+
+For example, if
+\[
+    [a],[b]\in{}^\ast\mathbb{R},
+\]
+then
+\[
+    [a]+[b]
+    =
+    [(a_i+b_i)_{i\in\omega}],
+\]
+and
+\[
+    [a]\cdot[b]
+    =
+    [(a_ib_i)_{i\in\omega}].
+\]
+
+Similarly, the order relation is defined by
+\[
+    [a]<[b]
+\]
+if
+\[
+    \{i\in\omega:a_i<b_i\}\in\mathcal{U}.
+\]
+
+\begin{theorem}
+The standard structures
+\[
+    \mathbb{N},
+    \quad
+    \mathbb{Z},
+    \quad
+    \mathbb{Q},
+    \quad
+    \mathbb{R}
+\]
+embed into
+\[
+    {}^\ast\mathbb{N},
+    \quad
+    {}^\ast\mathbb{Z},
+    \quad
+    {}^\ast\mathbb{Q},
+    \quad
+    {}^\ast\mathbb{R},
+\]
+respectively.
+\end{theorem}
+
+\begin{proof}
+We prove the statement for $\mathbb{R}$.
+
+Define
+\[
+    \iota:\mathbb{R}\to{}^\ast\mathbb{R}
+\]
+by
+\[
+    \iota(r)=[(r,r,r,\dots)].
+\]
+
+Suppose
+\[
+    \iota(r)=\iota(s).
+\]
+
+Then
+\[
+    \{i\in\omega:r=s\}\in\mathcal{U}.
+\]
+
+If
+\[
+    r\neq s,
+\]
+then
+\[
+    \{i\in\omega:r=s\}=\emptyset,
+\]
+which cannot belong to a filter.
+
+Hence
+\[
+    r=s.
+\]
+
+Therefore $\iota$ is injective.
+\end{proof}
+
+\begin{example}
+Define
+\[
+    a_i=i
+\]
+for every
+\[
+    i\in\omega.
+\]
+
+Then
+\[
+    [a]\in{}^\ast\mathbb{N}
+\]
+is larger than every standard natural number.
+
+Indeed, if
+\[
+    n\in\mathbb{N},
+\]
+then
+\[
+    \{i\in\omega:n<a_i\}
+    =
+    \{i\in\omega:n<i\}
+\]
+is cofinite, hence belongs to $\mathcal{U}$.
+
+Therefore
+\[
+    n<[a].
+\]
+\end{example}
+\begin{definition}
+Let $\mathcal{U}$ be a nonprincipal ultrafilter on
+$\mathbb{N}$.
+
+For sequences
+\[
+    (a_n),(b_n)\in\mathbb{N}^{\mathbb{N}},
+\]
+define
+\[
+    (a_n)\sim(b_n)
+\]
+if
+\[
+    \{n\in\mathbb{N}:a_n=b_n\}\in\mathcal{U}.
+\]
+
+This is an equivalence relation on
+$\mathbb{N}^{\mathbb{N}}$.
+\end{definition}
+
+\begin{definition}
+The set of \emph{hypernatural numbers} is
+\[
+    {}^\ast\mathbb{N}
+    =
+    \mathbb{N}^{\mathbb{N}}/\sim.
+\]
+
+An element of ${}^\ast\mathbb{N}$ is an equivalence class
+\[
+    [(a_n)].
+\]
+\end{definition}
+
+Addition and multiplication are defined pointwise:
+\[
+    [(a_n)] + [(b_n)]
+    =
+    [(a_n+b_n)],
+\]
+and
+\[
+    [(a_n)]\cdot[(b_n)]
+    =
+    [(a_nb_n)].
+\]
+
+The order relation is defined by
+\[
+    [(a_n)]<[(b_n)]
+\]
+if
+\[
+    \{n\in\mathbb{N}:a_n<b_n\}\in\mathcal{U}.
+\]
+
+\begin{example}
+Let
+\[
+    \omega=[(1,2,3,4,\dots)].
+\]
+
+Then for every standard
+\[
+    k\in\mathbb{N},
+\]
+we have
+\[
+    k<\omega.
+\]
+
+Indeed,
+\[
+    \{n:k<n\}
+\]
+is cofinite, hence belongs to $\mathcal{U}$.
+\end{example}
+
+The same construction works for $\mathbb{Z}$,
+$\mathbb{Q}$, and $\mathbb{R}$.
+
+\begin{definition}
+Define
+\[
+    {}^\ast\mathbb{Z}
+    =
+    \mathbb{Z}^{\mathbb{N}}/\sim,
+\]
+where
+\[
+    (a_n)\sim(b_n)
+\]
+means
+\[
+    \{n:a_n=b_n\}\in\mathcal{U}.
+\]
+\end{definition}
+
+\begin{definition}
+Define
+\[
+    {}^\ast\mathbb{Q}
+    =
+    \mathbb{Q}^{\mathbb{N}}/\sim.
+\]
+\end{definition}
+
+\begin{definition}
+Define
+\[
+    {}^\ast\mathbb{R}
+    =
+    \mathbb{R}^{\mathbb{N}}/\sim.
+\]
+\end{definition}
+
+Operations and order are again defined componentwise:
+\[
+    [(a_n)] + [(b_n)]
+    =
+    [(a_n+b_n)],
+\]
+\[
+    [(a_n)]\cdot[(b_n)]
+    =
+    [(a_nb_n)],
+\]
+and
+\[
+    [(a_n)]<[(b_n)]
+\]
+if
+\[
+    \{n:a_n<b_n\}\in\mathcal{U}.
+\]
+
+\begin{theorem}
+The maps
+\[
+    n\mapsto[(n,n,n,\dots)],
+\]
+\[
+    z\mapsto[(z,z,z,\dots)],
+\]
+\[
+    q\mapsto[(q,q,q,\dots)],
+\]
+and
+\[
+    r\mapsto[(r,r,r,\dots)]
+\]
+embed
+\[
+    \mathbb{N},
+    \quad
+    \mathbb{Z},
+    \quad
+    \mathbb{Q},
+    \quad
+    \mathbb{R}
+\]
+into
+\[
+    {}^\ast\mathbb{N},
+    \quad
+    {}^\ast\mathbb{Z},
+    \quad
+    {}^\ast\mathbb{Q},
+    \quad
+    {}^\ast\mathbb{R},
+\]
+respectively.
+\end{theorem}
+
+\begin{proof}
+We prove the statement for $\mathbb{R}$.
+
+Define
+\[
+    \iota:\mathbb{R}\to{}^\ast\mathbb{R}
+\]
+by
+\[
+    \iota(r)=[(r,r,r,\dots)].
+\]
+
+Suppose
+\[
+    \iota(r)=\iota(s).
+\]
+
+Then
+\[
+    \{n:r=s\}\in\mathcal{U}.
+\]
+
+If $r\neq s$, then
+\[
+    \{n:r=s\}=\emptyset,
+\]
+which cannot belong to a filter.
+
+Hence
+\[
+    r=s.
+\]
+
+Therefore $\iota$ is injective.
+\end{proof}
 
 \chapter{fantacy numbers($ \mathbb{Z} (Ord) , \mathbb{Q} (Ord) ,\mathbb{R} (Ord) ,\mathbb{C} (Ord)$) }
 
