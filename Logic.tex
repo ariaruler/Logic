@@ -3481,10 +3481,10 @@ now we will show you relation between ``(partial) Order relation'' and
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       if ``$\preceq $'' is a ``(Total-Linear) Order relation'' in ``$\mathfrak{A}$''
               define ``$a \prec b : a \preceq b \land a \not= b $'' prove that ``$\prec $''
-              is ``(Total-Linear) Strict order relation''. 
+              is ``(Total-Linear) Strict order relation''.
         \item       if ``$\prec $'' is a ``(Total-Linear) Strict Order relation'' in
               ``$\mathfrak{A}$'' define ``$a \preceq b : a \prec b \lor a = b $'' prove that
-              ``$\preceq $'' is ``(Total-Linear) order relation''. 
+              ``$\preceq $'' is ``(Total-Linear) order relation''.
     \end{enumerate}
 
     \begin{fitchproof}[arrayenv=tabular]
@@ -3626,8 +3626,8 @@ now we will show you relation between ``(partial) Order relation'' and
     we define  like this
     \[ min_\mathfrak{A} :=  \{ (B,b) \in \mathcal{B} \times V \mid \forall x \in B \quad b \preceq x \}  \]
     \[ max_\mathfrak{A} := \{ (C,c) \in \mathcal{C} \times V \mid \forall x \in C \quad x \preceq c \}  \]
-    we must prove these two relations are two functions ``$min_\mathfrak{A} : \mathcal{B}
-        \to V$'' and ``$max_\mathfrak{A} : \mathcal{C} \to V$''.
+    we must prove these two relations are two functions ``$min_\mathfrak{A} :
+        \mathcal{B} \to V$'' and ``$max_\mathfrak{A} : \mathcal{C} \to V$''.
 
     \begin{fitchproof}[arrayenv=tabular]
 
@@ -3742,57 +3742,48 @@ if the stucture clear to us we don't write stucture index ``$min(\_),
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       $ min_\mathfrak{A}(B) = b /
                   \therefore inf_\mathfrak{A}(B) = b $.
-              
 
-             
+              \begin{fitchproof}[arrayenv=tabular]
 
+                  \have{1} {min_{\mathfrak{A}}(B) = b} \by{$ass$}{}
+                  \have{2} {b \in B \land \forall y \in B (b \preceq y)} \by{def $min_{\mathfrak{A}}$ (1)}{}
+                  \have{3} {b \in B} \by{$\land E$ (2)}{}
+                  \have{4} {\forall y \in B (b \preceq y)} \by{$\land E$ (2)}{}
+                  \have{5} {Lowerb_{\mathfrak{A}}(b, B)} \by{def $Lowerb_{\mathfrak{A}}$ (4)}{}
+                  \have{6} {b \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\}} \by{set construction (5)}{}
 
-    \begin{fitchproof}[arrayenv=tabular]
+                  \open
+                  \have{7} {z \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\}} \by{acp}{}
+                  \have{8} {Lowerb_{\mathfrak{A}}(z, B)} \by{set membership (7)}{}
+                  \have{9} {\forall y \in B (z \preceq y)} \by{def $Lowerb_{\mathfrak{A}}$ (8)}{}
+                  \have{10} {z \preceq b} \by{$\forall E$ (9, $y \to b$ using 3)}{}
+                  \close
 
+                  \have{11} {\forall z \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\} (z \preceq b)} \by{$\forall I$ (7-10)}{}
+                  \have{12} {b \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\} \land \forall z \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\} (z \preceq b)} \by{$\land I$ (6, 11)}{}
+                  \have{13} {max_{\mathfrak{A}}(\{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\}) = b} \by{def $max_{\mathfrak{A}}$ (12)}{}
+                  \have{14} {inf_{\mathfrak{A}}(B) = b} \by{def $inf_{\mathfrak{A}}$ (13)}{}
 
-        \have{1} {min_{\mathfrak{A}}(B) = b} \by{$ass$}{}
-        \have{2} {b \in B \land \forall y \in B (b \preceq y)} \by{def $min_{\mathfrak{A}}$ (1)}{}
-        \have{3} {b \in B} \by{$\land E$ (2)}{}
-        \have{4} {\forall y \in B (b \preceq y)} \by{$\land E$ (2)}{}
-        \have{5} {Lowerb_{\mathfrak{A}}(b, B)} \by{def $Lowerb_{\mathfrak{A}}$ (4)}{}
-        \have{6} {b \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\}} \by{set construction (5)}{}
+              \end{fitchproof}
 
-        \open
-        \have{7} {z \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\}} \by{acp}{}
-        \have{8} {Lowerb_{\mathfrak{A}}(z, B)} \by{set membership (7)}{}
-        \have{9} {\forall y \in B (z \preceq y)} \by{def $Lowerb_{\mathfrak{A}}$ (8)}{}
-        \have{10} {z \preceq b} \by{$\forall E$ (9, $y \to b$ using 3)}{}
-        \close
-
-        \have{11} {\forall z \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\} (z \preceq b)} \by{$\forall I$ (7-10)}{}
-        \have{12} {b \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\} \land \forall z \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\} (z \preceq b)} \by{$\land I$ (6, 11)}{}
-        \have{13} {max_{\mathfrak{A}}(\{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\}) = b} \by{def $max_{\mathfrak{A}}$ (12)}{}
-        \have{14} {inf_{\mathfrak{A}}(B) = b} \by{def $inf_{\mathfrak{A}}$ (13)}{}
-
-
-    \end{fitchproof}
-
-            \item       $  inf_\mathfrak{A}(B) = b , b \in B /
+        \item       $  inf_\mathfrak{A}(B) = b , b \in B /
                   \therefore  min_\mathfrak{A}(B) = b $.
 
-    \begin{fitchproof}[arrayenv=tabular]
+              \begin{fitchproof}[arrayenv=tabular]
 
+                  \have{2} {inf_{\mathfrak{A}}(B) = b}         \by{$ass$ }{}
+                  \have{3} {b \in B}                        \by{$ass$ }{}
+                  \have{4} {max_{\mathfrak{A}}(\{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\}) = b} \by{def $inf_{\mathfrak{A}}$ (2)}{}
+                  \have{5} {b \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\} \land \forall z \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\} (z \preceq b)} \by{def $max_{\mathfrak{A}}$ (4)}{}
+                  \have{6} {b \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\}} \by{$\land E$ (5)}{}
+                  \have{7} {Lowerb_{\mathfrak{A}}(b, B)} \by{set membership (6)}{}
+                  \have{8} {\forall y \in B (b \preceq y)} \by{def $Lowerb_{\mathfrak{A}}$ (7)}{}
+                  \have{9} {b \in B \land \forall y \in B (b \preceq y)} \by{$\land I$ (3, 8)}{}
+                  \have{10} {min_{\mathfrak{A}}(B) = b} \by{def $min_{\mathfrak{A}}$ (9)}{}
 
+              \end{fitchproof}
 
-        \have{2} {inf_{\mathfrak{A}}(B) = b}         \by{$ass$ }{}
-        \have{3} {b \in B}                        \by{$ass$ }{}
-        \have{4} {max_{\mathfrak{A}}(\{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\}) = b} \by{def $inf_{\mathfrak{A}}$ (2)}{}
-        \have{5} {b \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\} \land \forall z \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\} (z \preceq b)} \by{def $max_{\mathfrak{A}}$ (4)}{}
-        \have{6} {b \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\}} \by{$\land E$ (5)}{}
-        \have{7} {Lowerb_{\mathfrak{A}}(b, B)} \by{set membership (6)}{}
-        \have{8} {\forall y \in B (b \preceq y)} \by{def $Lowerb_{\mathfrak{A}}$ (7)}{}
-        \have{9} {b \in B \land \forall y \in B (b \preceq y)} \by{$\land I$ (3, 8)}{}
-        \have{10} {min_{\mathfrak{A}}(B) = b} \by{def $min_{\mathfrak{A}}$ (9)}{}
-
-
-    \end{fitchproof}
-
-        \end{enumerate}
+    \end{enumerate}
 
     this theorem holds for ``$max , sup$'' too.
 \end{theorem}
@@ -3811,13 +3802,13 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
         \item       If $\forall x ,y ,z \in G \quad (x y ) z = x (y z ) $ (assosiative $\times$),
               $\mathfrak{G}$ is a \textbf{semigroup}.
         \item       If $\mathfrak{G}$ is a \textbf{semigroup} and $\forall x \in G \quad \exists y
-                  \in G \quad x y = y x = x$ (has identity $\times$), $\mathfrak{G}$ is a
+                  \in G \quad \forall x \in G \quad x y = y x = x$ (has identity $\times$), $\mathfrak{G}$ is a
               \textbf{monoid}. you can prove for every \textbf{monoid} $\mathfrak{G}$
               identity element is unique we denote it by ``$e$''(in $\times$ with ``$1$'' and
-              in $+$ with $0$).
+              in $+$ with $0$). 
         \item       If $\mathfrak{G}$ is a \textbf{monoid} and $\forall x \in G \quad \exists y \in
                   G \quad x y = y x = e$ (has inverse $\times$), $\mathfrak{G}$ is a group.
-        \item       If $\mathfrak{G}$ is a \textbf{semigroup/monoid} and $\forall x , y , z \in N
+        \item       If $\mathfrak{G}$ is a \textbf{semigroup/monoid} and $\forall x , y , z \in G
                   \quad x z = y z \to x = y $ (cancellative $\times$), $\mathfrak{G}$ is a
               \textbf{cancellative semigroup/monoid}. (you can prove every group is
               cancellative as an exercise.\twemoji{1f600})
@@ -3829,6 +3820,183 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
 
 \end{definition}
 
+
+\begin{theorem}[Grothendieck Group Construction]
+Let $(S,+,0)$ be a cancellative commutative monoid.
+
+Then there exists an abelian group $G(S)$ together with a monoid mbedding
+\[
+\eta : S \longrightarrow G(S)
+\]
+such that for every abelian group $A$ and every monoid mbedding
+\[
+f : S \to A,
+\]
+there exists a unique group mbedding
+\[
+\tilde{f} : G(S) \to A
+\]
+satisfying
+\[
+\tilde{f} \circ \eta = f.
+\]
+
+The canonical map is
+\[
+\eta(a) = [(a,0)].
+\]
+\end{theorem}
+
+\begin{proof}
+
+\textbf{Step 0: Define relation.}
+
+Define a relation $\sim$ on $S \times S$ by
+\[
+(a,b) \sim (c,d) \iff a + d = b + c.
+\]
+
+\textbf{Claim 0: $\sim$ is an equivalence relation.}
+
+
+
+\textbf{Reflexivity}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\open
+\have{1}{(a,b)\in S\times S}
+\have{2}{a + b = b + a}
+\have{3}{(a,b)\sim(a,b)}
+\close
+
+\end{fitchproof}
+
+
+
+\textbf{Symmetry}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\open
+\have{1}{ (a,b)\sim(c,d)}
+\have{2}{ a + d = b + c}
+\have{3}{ c + b = d + a}
+\have{4}{ (c,d)\sim(a,b)}
+\close
+
+\end{fitchproof}
+
+
+
+\textbf{Transitivity}
+\begin{fitchproof}[arrayenv=tabular]
+
+\open
+\have{1}{(a,b)\sim(c,d)}
+\have{2}{(c,d)\sim(e,f)}
+\have{1}{a + d = b + c}
+\have{2}{c + f = d + e}
+
+\have{3}{a + d + c + f = b + c + d + e} \by{add and combine}{1,2}
+\have{4}{a + f + (c+d) = b + e + (c+d)} \by{rearrange}{3}
+
+
+\have{6}{a + f = b + e} \by{cancel $+(c+d)$}{4}
+
+\have{7}{(a,b)\sim(e,f)}
+\close
+
+\end{fitchproof}
+
+
+
+\textbf{Step 1: Define Grothendieck group}
+
+\[
+G(S) := (S \times S)/\sim,
+\quad [(a,b)] \in G(S).
+\]
+
+% ---
+
+\textbf{Step 2: Define operation}
+
+\[
+[(a,b)] + [(c,d)] := [(a+c, b+d)]
+\]
+
+\[
+-[(a,b)] := [(b,a)]
+\]
+
+---
+
+\textbf{Step 3: Well-definedness}
+
+(Addition and inverse are well-defined by compatibility of $\sim$ with $+$.)
+
+---
+
+\textbf{Step 4: Group structure}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{[(a,b)] + [(b,a)] = [(a+b, a+b)]}
+\have{2}{[(a+b,a+b)] = 0}
+\have{3}{\text{every element has inverse}}
+\have{4}{G(S)\ \text{is an abelian group}}
+
+\end{fitchproof}
+
+---
+
+\textbf{Step 5: Define extension}
+
+Let $f:S\to A$ be a monoid mbedding into an abelian group $A$.
+
+\[
+\tilde{f}([(a,b)]) := f(a) - f(b).
+\]
+
+---
+
+\textbf{Step 6: Well-definedness}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{(a,b)\sim(c,d)}
+\have{2}{a + d = b + c}
+\have{3}{f(a) + f(d) = f(b) + f(c)}
+\have{4}{f(a) - f(b) = f(c) - f(d)}
+
+\end{fitchproof}
+
+---
+
+\textbf{Step 7: Homomorphism property}
+
+(Straightforward from group operations in $A$.)
+
+---
+
+\textbf{Step 8: Factorization}
+
+\[
+\tilde{f}([(a,0)]) = f(a)
+\]
+
+---
+
+\textbf{Step 9: Uniqueness}
+
+Any mbedding is forced by:
+\[
+[(a,b)] = [(a,0)] - [(b,0)].
+\]
+
+\end{proof}
+
 \section{Ring theory}
 
 \begin{definition}
@@ -3839,8 +4007,8 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
                   \quad (x y ) z = x (y z ) $ (assosiative $\times$), $\forall x ,y ,z \in R
                   \quad \Big(x (y + z ) = x y + x z \Big) \land \Big((x + y ) z = x z + y z \Big)
               $ (distributive $\times$), $\mathfrak{R}$ is a \textbf{Semiring/Ring}.
-        \item       If $\mathfrak{R}$ is a \textbf{Semiring/Ring} and $\forall x \in R \quad
-                  \exists y \in R \quad x y = y x = x$ (has identity $\times$), $\mathfrak{R}$ is
+        \item       If $\mathfrak{R}$ is a \textbf{Semiring/Ring} and $ \exists y \in R \quad 
+                   \forall x \in R \quad x y = y x = x$ (has identity $\times$), $\mathfrak{R}$ is
               a \textbf{Semiring/Ring with identity}. you can prove for every
               \textbf{Semiring/Ring with identity} $\mathfrak{R}$ identity element is unique
               we denote it by ``$1$''.
@@ -3849,7 +4017,7 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
               \textbf{zero divisor free Semiring/Ring}. (you can prove every \textbf{division
                   Semiring/Ring} is zero divisor free as an exercise.\twemoji{1f600})
         \item       If $\mathfrak{R}$ is a \textbf{Semiring/Ring with identity} and $\forall x \in
-                  R \quad \exists y \in R \quad x y = y x = 1$ (has inverse $\times$),
+                  R, \not= 0 \quad \exists y \in R \quad x y = y x = 1$ (has inverse $\times$),
               $\mathfrak{R}$ is a \textbf{division Semiring/Ring} with.
         \item       If $\mathfrak{R}$ is a \textbf{Semiring/Ring} and $\forall x ,y \in R \quad x y
                   = y x $ (commutative(abelian) $\times$), $\mathfrak{R}$ is a
@@ -3865,264 +4033,432 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
 
 \end{definition}
 
-\begin{theorem}[Universal Ring Completion of a Semiring]
-    (Standard name: “Grothendieck Ring Completion Theorem for Commutative Semirings”)
-    Let $S$ be a (not necessarily commutative) semiring.
-    There exists a ring $R$ together with a semiring homomorphism
-    \[
-        \eta : S \longrightarrow R
-    \]
-    which is universal among semiring-to-ring homomorphisms (i.e.\ every
-    homomorphism $f:S\to T$ into a ring $T$ factors uniquely through $\eta$) if and
-    only if the additive monoid $(S,+,0)$ is a \emph{cancellative commutative
-        monoid}.
 
-    In this case, $R$ is the Grothendieck group $G(S)$ of the additive monoid of
-    $S$, with multiplication extending that of $S$ by
-    \[
-        [(a,b)] \cdot [(c,d)]
-        =
-        [(ac+bd,\; ad+bc)].
-    \]
-\end{theorem}
+
+\begin{theorem}[Grothendieck Construction for Semirings]
+Let $(S,+, \cdot )$ be a semiring whose additive structure $(S,+,0)$ is a cancellative commutative monoid.
+
+Then there exists a ring $G(S)$ together with a semiring mbedding
+\[
+\eta : S \longrightarrow G(S)
+\]
+such that for every ring $T$ and every semiring mbedding
+\[
+f : S \to T,
+\]
+there exists a unique ring mbedding
+\[
+\tilde{f} : G(S) \to T
+\]
+satisfying
+\[
+\tilde{f} \circ \eta = f.
+\]
+
+
+The canonical map is
+\[
+\eta(a) = [(a,0)].
+\]
+
+
+
 
 \begin{proof}
 
-    We divide the proof into two parts.
+    
 
-    %-----------------------------------------------------------
-    \subsection{(1) Necessity of cancellativity and commutativity of $+$}
+\textbf{Step 0: Define the underlying relation.}
 
-    Suppose $\eta:S\to R$ is an embedding of $S$ as a subsemiring of a ring $R$.
-    The additive structure of a ring is an abelian group. Thus the image $\eta(S)$
-    must be closed under an abelian addition. Therefore $(S,+)$ must already be a
-    commutative monoid.
+Define a relation $\sim$ on $S \times S$ by
+\[
+(a,b) \sim (c,d) \iff a + d = b + c.
+\]
+\textbf{Claim 0: $\sim$ is an equivalence relation.}
 
-    If $a+c=b+c$ in $S$, then in $R$ we have
-    \[
-        \eta(a)+\eta(c) = \eta(b)+\eta(c).
-    \]
-    Cancelling $\eta(c)$ in the ring gives $\eta(a)=\eta(b)$, hence $a=b$ since
-    $\eta$ is injective. Thus $(S,+)$ must be cancellative.
+\textbf{Reflexivity}
+\begin{fitchproof}[arrayenv=tabular]
 
-    This proves necessity.
+\open
+\have{1}{(a,b)\in S\times S}
+\have{2}{a + b = b + a}
+\have{3}{(a,b)\sim(a,b)}
+\close
 
-    %-----------------------------------------------------------
-    \subsection{(2) Construction of the universal ring when $(S,+)$ is cancellative and commutative}
+\end{fitchproof}
 
-    Assume now that $(S,+)$ is a cancellative commutative monoid. We form its
-    Grothendieck group:
-    \[
-        G(S) = (S\times S)/\!\sim,
-    \]
-    where the relation is
-    \[
-        (a,b)\sim(a',b')
-        \quad\Longleftrightarrow\quad
-        a + b' = a' + b.
-    \]
+\textbf{Symmetry}
+\begin{fitchproof}[arrayenv=tabular]
 
-    %-----------------------------------------------------------
-    \subsubsection{Equivalence relation}
 
-    Reflexivity and symmetry are immediate. For transitivity, assume
-    \[
-        a+b' = a'+b,
-        \qquad
-        a'+b'' = a''+b'.
-    \]
-    Add $b$ to the second equation and $b''$ to the first, and use commutativity
-    and cancellativity to deduce
-    \[
-        a+b'' = a''+b.
-    \]
-    Thus $\sim$ is an equivalence relation.
+\open
+\have{4}{(a,b)\sim(c,d)}
+\have{5}{a + d = b + c}
+\have{6}{c + b = d + a}
+\have{7}{(c,d)\sim(a,b)}
+\close
 
-    %-----------------------------------------------------------
-    \subsubsection{Well-defined addition}
+\end{fitchproof}
 
-    Define
-    \[
-        [(a,b)] + [(c,d)] := [(a+c,\; b+d)].
-    \]
-    If $(a,b)\sim(a',b')$ and $(c,d)\sim(c',d')$, then
-    \[
-        a+b' = a'+b,
-        \qquad
-        c+d' = c'+d.
-    \]
-    Compute:
-    \[
-        (a+c) + (b'+d')
-        = (a+b') + (c+d')
-        = (a'+b) + (c'+d)
-        = (a'+c') + (b+d).
-    \]
-    Thus $(a+c,b+d)\sim(a'+c',b'+d')$, so addition is well defined.
+\textbf{Transitivity}
+\begin{fitchproof}[arrayenv=tabular]
 
-    %-----------------------------------------------------------
-    \subsubsection{Well-defined multiplication}
+\open
+\have{1}{(a,b)\sim(c,d)}
+\have{2}{(c,d)\sim(e,f)}
+\have{1}{a + d = b + c}
+\have{2}{c + f = d + e}
 
-    Define
-    \[
-        [(a,b)]\cdot[(c,d)]
-        := [(ac+bd,\; ad+bc)].
-    \]
+\have{3}{a + d + c + f = b + c + d + e} \by{add and combine}{1,2}
+\have{4}{a + f + (c+d) = b + e + (c+d)} \by{rearrange}{3}
 
-    Assume $(a,b)\sim(a',b')$ and $(c,d)\sim(c',d')$, so
-    \[
-        a+b' = a'+b,
-        \qquad
-        c+d' = c'+d.
-    \]
-    Expanding distributively:
-    \[
-        (ac+bd) + (a'd' + b'c')
-        = (a+b')(c+d')
-        = (a'+b)(c'+d)
-        = (a'c'+b'd') + (ad+bc).
-    \]
-    Thus multiplication is well defined.
 
-    %-----------------------------------------------------------
-    \subsubsection{Ring structure}
+\have{6}{a + f = b + e} \by{cancel $+(c+d)$}{4}
 
-    The additive structure is an abelian group by construction. Multiplication is
-    associative and distributive because it is defined via bilinearity inherited
-    from $S$. The multiplicative identity is $[(1,0)]$.
+\have{7}{(a,b)\sim(e,f)}
+\close
 
-    Thus $G(S)$ is a ring.
+\end{fitchproof}
 
-    %-----------------------------------------------------------
-    \subsection{(3) Universality}
+(additive commutative monoid cancellation NOT required; we instead justify via rearrangement in monoid equality)
 
-    Given any semiring-to-ring homomorphism $f:S\to T$, define
-    \[
-        \overline{f}:\; G(S)\to T,
-        \qquad
-        \overline{f}([(a,b)]) := f(a)-f(b).
-    \]
 
-    If $(a,b)\sim(a',b')$, then $a+b'=a'+b$, so applying $f$ gives
-    \[
-        f(a)+f(b') = f(a')+f(b),
-    \]
-    hence $f(a)-f(b)=f(a')-f(b')$. Thus $\overline{f}$ is well defined. It is
-    easily checked to be a ring homomorphism, and satisfies $\overline{f}\circ\eta
-        = f$. Uniqueness follows since $[(a,b)]=[(a,0)]-[(b,0)]$.
 
-    This proves the universal property.
+\textbf{Step 1: Define the carrier set.}
 
-    \section{The Field of Fractions}
+Define
+\[
+G(S) := (S \times S)/\sim,
+\quad [(a,b)] \in G(S).
+\]
 
-    The field of fractions is a fundamental concept in abstract algebra that allows
-    us to extend a given integral domain to a field. It is the smallest field
-    containing the integral domain.
 
-    \subsection{Integral Domain}
-    An integral domain is a commutative ring with a multiplicative identity ($1 \ne
-        0$) and no zero divisors. That is, if $a \cdot b = 0$, then either $a = 0$ or
-    $b = 0$. The set of integers, $\mathbb{Z}$, is a classic example.
 
-    \subsection{Field}
-    A field is a commutative ring with a multiplicative identity where every
-    non-zero element has a multiplicative inverse. For every $a \ne 0$, there
-    exists $b$ such that $a \cdot b = 1$. The set of rational numbers,
-    $\mathbb{Q}$, is a field.
+\textbf{Step 2: Define operations.}
 
-    \subsection{Construction of the Field of Fractions}
-    Given an integral domain $D$, its field of fractions, denoted by $F(D)$, is
-    constructed by formally creating fractions of elements from $D$. We consider
-    pairs $(a, b)$ where $a, b \in D$ and $b \ne 0$. An equivalence relation $\sim$
-    is defined on these pairs: $$ (a, b) \sim (c, d) \iff ad - bc = 0 $$ The
-    elements of $F(D)$ are the equivalence classes of these pairs, denoted by
-    $\frac{a}{b}$.
+Define
+\[
+[(a,b)] + [(c,d)] := [(a+c,\, b+d)],
+\]
+\[
+[(a,b)] \cdot [(c,d)] := [(ac+bd,\, ad+bc)].
+\]
 
-    \textbf{Operations in $F(D)$:} For $\frac{a}{b}, \frac{c}{d} \in F(D)$:
-    \begin{itemize}
-        \item Addition: $\frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}$
-        \item Multiplication: $\frac{a}{b} \cdot \frac{c}{d} = \frac{ac}{bd}$
-    \end{itemize}
+Define
+\[
+\eta(a) := [(a,0)].
+\]
 
-    The original integral domain $D$ is embedded into $F(D)$ via the map $\phi: D
-        \to F(D)$ defined by $\phi(a) = \frac{a}{1}$.
+
+
+\textbf{Step 3: Well-definedness of addition.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{ (a,b)\sim(a',b'),\ (c,d)\sim(c',d')}
+\have{2}{ a+b'=a'+b,\ c+d'=c'+d}
+\have{3}{ (a+c)+(b'+d') = (a'+c')+(b+d)}
+\have{4}{ [(a+c,b+d)] = [(a'+c',b'+d')]}
+\have{5}{ + \text{ is well-defined}}
+
+\end{fitchproof}
+
+
+
+\textbf{Step 4: Well-definedness of multiplication.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{ (a,b)\sim(a',b'),\ (c,d)\sim(c',d')}
+\have{2}{ a+b'=a'+b,\ c+d'=c'+d}
+\have{3}{ ac+bd + (a'd'+b'c') = a'c' + b d + a c' + b' d }
+\have{4}{ [(ac+bd,ad+bc)] = [(a'c'+b'd',a'd'+b'c')]}
+\have{5}{ \cdot \text{ is well-defined}}
+
+\end{fitchproof}
+
+
+
+\textbf{Step 5: Ring structure.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{ [(a,b)] + [(c,d)] = [(a+c,b+d)]}
+\have{2}{ \text{associativity inherited from } S}
+\have{3}{ [(a,b)]\cdot[(c,d)] \text{ associative}}
+\have{4}{ distributivity follows from semiring laws}
+\have{5}{ (0,0) \text{ is additive identity}}
+\have{6}{ [(a,a)] = 0 \text{ in } G(S)}
+\have{7}{ G(S) \text{ is a ring}}
+
+\end{fitchproof}
+
+
+
+\textbf{Step 6: Define extension of a mbedding.}
+
+Let
+\[
+f : S \to T
+\]
+be a semiring mbedding into a ring $T$.
+
+Define
+\[
+\tilde{f}([(a,b)]) := f(a) - f(b).
+\]
+
+
+
+\textbf{Claim 6: $\tilde{f}$ is well-defined.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{(a,b)\sim(c,d)}
+\have{2}{a+d=b+c}
+\have{3}{f(a)+f(d)=f(b)+f(c)}
+\have{4}{f(a)-f(b)=f(c)-f(d)}
+\have{5}{\tilde{f}([(a,b)])=\tilde{f}([(c,d)])}
+
+\end{fitchproof}
+
+
+
+\textbf{Step 7: $\tilde{f}$ is a ring mbedding.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{\tilde{f}([(a,b)] + [(c,d)]) = f(a+c)-f(b+d)}
+\have{2}{= (f(a)-f(b)) + (f(c)-f(d))}
+\have{3}{= \tilde{f}([(a,b)]) + \tilde{f}([(c,d)])}
+
+\have{4}{\tilde{f}([(a,b)]\cdot[(c,d)]) = f(ac+bd)-f(ad+bc)}
+\have{5}{= (f(a)-f(b))(f(c)-f(d))}
+\have{6}{= \tilde{f}([(a,b)])\tilde{f}([(c,d)])}
+
+\end{fitchproof}
+
+
+
+\textbf{Step 8: Factorization property.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{\tilde{f}(\eta(a)) = \tilde{f}([(a,0)])}
+\have{2}{= f(a)}
+
+\have{3}{\tilde{f} \circ \eta = f}
+
+\end{fitchproof}
+
+
+
+\textbf{Step 9: Uniqueness.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{g : G(S)\to T \text{ ring mbedding}}
+\have{2}{g\circ \eta = f}
+
+\have{3}{g([(a,b)]) = g([(a,0)]) - g([(b,0)])}
+\have{4}{= f(a) - f(b)}
+\have{5}{= \tilde{f}([(a,b)])}
+
+\have{6}{g = \tilde{f}}
+
+\end{fitchproof}
+
+
+
+Therefore $G(S)$ satisfies the universal property of the Grothendieck construction.
 
 \end{proof}
 
-\section{Theorem: Existence and Uniqueness of the Field of Fractions}
-
-\begin{theorem}
-    Let $D$ be an integral domain. Then there exists a field $F$ and an injective ring homomorphism $\phi: D \to F$ such that for every field $K$ and every ring homomorphism $\psi: D \to K$, there exists a unique field homomorphism $f: F \to K$ such that $\psi = f \circ \phi$.
 \end{theorem}
 
+
+\begin{theorem}[Field of Fractions]
+Let $R$ be a  integral domain.
+
+Then there exists a field $\operatorname{Frac}(R)$ together with a ring embedding
+\[
+\eta : R \longrightarrow \operatorname{Frac}(R)
+\]
+such that for every field $K$ and every ring embedding
+\[
+f : R \to K,
+\]
+there exists a unique field embedding
+\[
+\tilde{f} : \operatorname{Frac}(R) \to K
+\]
+satisfying
+\[
+\tilde{f} \circ \eta = f.
+\]
+
+The canonical map is
+\[
+\eta(a) = \frac{a}{1}.
+\]
+\end{theorem}
+
+
 \begin{proof}
-    Let $D$ be an integral domain.
 
-    \subsection*{Part 1: Existence}
-    Consider the set $S = \{(a, b) \mid a, b \in D, b \ne 0\}$. Define an
-    equivalence relation $\sim$ on $S$: $$ (a, b) \sim (c, d) \iff ad - bc = 0 $$
-    The relation is reflexive, symmetric, and transitive because $D$ is an integral
-    domain. Let $F(D)$ be the set of equivalence classes of $S$ under $\sim$. We
-    denote the equivalence class of $(a, b)$ by $\frac{a}{b}$.
+\textbf{Step 0: Define relation.}
 
-    \textbf{Operations:}
-    \begin{itemize}
-        \item Addition: $\frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}$
-        \item Multiplication: $\frac{a}{b} \cdot \frac{c}{d} = \frac{ac}{bd}$
-    \end{itemize}
-    These operations are well-defined. For example, for addition, if $\frac{a}{b} = \frac{a'}{b'}$ and $\frac{c}{d} = \frac{c'}{d'}$, then $ab' = ba'$ and $cd' = dc'$. We must show $\frac{ad+bc}{bd} = \frac{a'd'+b'c'}{b'd'}$, which means showing $(ad+bc)b'd' = (a'd'+b'c')bd$. This can be verified algebraically using the properties of $D$. Similarly for multiplication.
+Define a relation $\sim$ on $R \times (R \setminus \{0\})$ by
+\[
+(a,b) \sim (c,d) \iff ad = bc.
+\]
 
-    \textbf{Field Axioms:}
-    \begin{itemize}
-        \item $F(D)$ is closed under addition and multiplication.
-        \item Addition and multiplication are associative, commutative, and distributive
-              because these properties hold in $D$.
-        \item The additive identity is $\frac{0}{1}$: $\frac{a}{b} + \frac{0}{1} = \frac{a
-                      \cdot 1 + b \cdot 0}{b \cdot 1} = \frac{a}{b}$.
-        \item The multiplicative identity is $\frac{1}{1}$: $\frac{a}{b} \cdot \frac{1}{1} =
-                  \frac{a \cdot 1}{b \cdot 1} = \frac{a}{b}$.
-        \item The additive inverse of $\frac{a}{b}$ is $\frac{-a}{b}$: $\frac{a}{b} +
-                  \frac{-a}{b} = \frac{0}{b} = \frac{0}{1}$.
-        \item The multiplicative inverse of a non-zero element $\frac{a}{b}$ (where $a \ne
-                  0$) is $\frac{b}{a}$: $\frac{a}{b} \cdot \frac{b}{a} = \frac{ab}{ba} =
-                  \frac{1}{1}$.
-    \end{itemize}
-    Thus, $F(D)$ is a field.
+\textbf{Claim 0: $\sim$ is an equivalence relation.}
 
-    \textbf{Injective Ring Homomorphism $\phi: D \to F(D)$:}
-    Define $\phi(a) = \frac{a}{1}$.
-    \begin{itemize}
-        \item $\phi(a+b) = \frac{a+b}{1} = \frac{a}{1} + \frac{b}{1} = \phi(a) + \phi(b)$.
-        \item $\phi(ab) = \frac{ab}{1} = \frac{a}{1} \cdot \frac{b}{1} = \phi(a) \cdot \phi(b)$.
-        \item $\phi$ is injective: If $\phi(a) = \phi(b)$, then $\frac{a}{1} = \frac{b}{1}$, which implies $a \cdot 1 = b \cdot 1$, so $a=b$.
-    \end{itemize}
-    This establishes the existence of $F(D)$ and $\phi$.
+% ---
 
-    \subsection*{Part 2: Uniqueness}
-    Suppose $K$ is another field and $\psi: D \to K$ is an injective ring
-    homomorphism satisfying the universal property. We need to define a unique
-    field homomorphism $f: F(D) \to K$ such that $\psi = f \circ \phi$.
+\textbf{Reflexivity}
 
-    \textbf{Define $f$:} For any $\frac{a}{b} \in F(D)$, define
-    $$ f\left(\frac{a}{b}\right) = \psi(a) (\psi(b))^{-1} $$
-    Since $\psi$ is injective and $b \ne 0$, $\psi(b) \ne 0$, so $(\psi(b))^{-1}$ exists in $K$. This map $f$ is well-defined, as shown in the detailed explanation (if $\frac{a}{b} = \frac{c}{d}$, then $ad=bc$, and applying $\psi$ gives $\psi(a)\psi(d)=\psi(b)\psi(c)$, leading to $\psi(a)(\psi(b))^{-1} = \psi(c)(\psi(d))^{-1}$).
+\begin{fitchproof}[arrayenv=tabular]
 
-    \textbf{$f$ is a Field Homomorphism:}
-    \begin{itemize}
-        \item $f\left(\frac{a}{b} + \frac{c}{d}\right) = f\left(\frac{ad+bc}{bd}\right) = \psi(ad+bc)(\psi(bd))^{-1} = (\psi(a)\psi(d)+\psi(b)\psi(c))(\psi(b)\psi(d))^{-1} = \psi(a)(\psi(b))^{-1} + \psi(c)(\psi(d))^{-1} = f\left(\frac{a}{b}\right) + f\left(\frac{c}{d}\right)$.
-        \item $f\left(\frac{a}{b} \cdot \frac{c}{d}\right) = f\left(\frac{ac}{bd}\right) = \psi(ac)(\psi(bd))^{-1} = (\psi(a)\psi(c))(\psi(b)\psi(d))^{-1} = (\psi(a)(\psi(b))^{-1}) (\psi(c)(\psi(d))^{-1}) = f\left(\frac{a}{b}\right)f\left(\frac{c}{d}\right)$.
-    \end{itemize}
+\have{1}{ (a,b)\in R \times (R\setminus\{0\})}
+\have{2}{ ab = ba}
+\have{3}{ (a,b)\sim(a,b)}
 
-    \textbf{Check Composition:}
-    For $a \in D$, $(f \circ \phi)(a) = f(\phi(a)) = f(\frac{a}{1}) = \psi(a)(\psi(1))^{-1} = \psi(a) \cdot 1_K^{-1} = \psi(a)$. So $\psi = f \circ \phi$.
+\end{fitchproof}
 
-    \textbf{Uniqueness of $f$:}
-    Suppose $g: F(D) \to K$ is another field homomorphism such that $\psi = g \circ \phi$.
-    For any $\frac{a}{b} \in F(D)$, we have $\frac{a}{b} = \frac{a}{1} \cdot (\frac{b}{1})^{-1}$ in $F(D)$.
-    Then $g(\frac{a}{b}) = g(\frac{a}{1} \cdot (\frac{b}{1})^{-1}) = g(\frac{a}{1}) \cdot g((\frac{b}{1})^{-1}) = g(\frac{a}{1}) \cdot (g(\frac{b}{1}))^{-1}$.
-    Since $\psi = g \circ \phi$, we have $g(\frac{a}{1}) = \psi(a)$ and $g(\frac{b}{1}) = \psi(b)$.
-    So, $g(\frac{a}{b}) = \psi(a) (\psi(b))^{-1}$, which is precisely $f(\frac{a}{b})$.
-    Thus, $f = g$, and $f$ is unique.
+% ---
+
+\textbf{Symmetry}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\open
+\have{1}{ (a,b)\sim(c,d)}
+\have{2}{ ad = bc}
+\have{3}{ cb = da}
+\have{4}{ (c,d)\sim(a,b)}
+\close
+
+\end{fitchproof}
+
+% ---
+
+\textbf{Transitivity}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\open
+\have{1}{ ad = bc}
+\have{2}{ cf = de}
+
+\have{3}{ adf = bcf} \by{multiply by $f$}{1}
+\have{4}{ bcf = bde} \by{substitute}{2}
+\have{5}{ adf = bde}
+
+\have{6}{ (af)d = (be)d} \by{rearrange}{}
+
+\have{7}{ R \text{ is an integral domain}}
+\have{8}{ d \neq 0}
+\have{9}{ af = be} \by{cancellation (no zero divisors)}{}
+
+\have{10}{ (a,b)\sim(e,f)}
+
+\close
+
+\end{fitchproof}
+
+---
+
+\textbf{Step 1: Define field of fractions}
+
+\[
+\operatorname{Frac}(R) := (R \times (R\setminus\{0\}))/\sim
+\]
+
+\[
+[(a,b)] := \frac{a}{b}
+\]
+
+---
+
+\textbf{Step 2: Define operations}
+
+\[
+[(a,b)] + [(c,d)] := [(ad + bc, bd)]
+\]
+
+\[
+[(a,b)] \cdot [(c,d)] := [(ac, bd)]
+\]
+
+---
+
+\textbf{Step 3: Define embedding}
+
+\[
+\eta(a) := [(a,1)]
+\]
+
+---
+
+\textbf{Step 4: Well-definedness}
+
+(Follows from cross-multiplication and compatibility of $\sim$.)
+
+---
+
+\textbf{Step 5: Field structure}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{ [(a,b)] \cdot [(b,a)] = [(ab,ab)]}
+\have{2}{ [(ab,ab)] = 1}
+\have{3}{ \text{every nonzero element has inverse}}
+\have{4}{ \operatorname{Frac}(R)\ \text{is a field}}
+
+\end{fitchproof}
+
+---
+
+\textbf{Step 6: Extension map}
+
+Let $f : R \to K$ be a ring embedding into a field $K$.
+
+\[
+\tilde{f}([(a,b)]) := \frac{f(a)}{f(b)}
+\]
+
+---
+
+\textbf{Step 7: Well-definedness}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{ (a,b)\sim(c,d)}
+\have{2}{ ad = bc}
+\have{3}{ f(a)f(d) = f(b)f(c)}
+\have{4}{ \frac{f(a)}{f(b)} = \frac{f(c)}{f(d)}}
+
+\end{fitchproof}
+
+---
+
+\textbf{Step 8: Homomorphism and factorization}
+
+\[
+\tilde{f}(\eta(a)) = \tilde{f}([(a,1)]) = f(a)
+\]
+
+---
+
+\textbf{Step 9: Uniqueness}
+
+\[
+[(a,b)] = \frac{[(a,1)]}{[(b,1)]}
+\Rightarrow \tilde{f} \text{ is forced}
+\]
+
 \end{proof}
 
 \chapter{ Natural numbers  }
@@ -4351,7 +4687,7 @@ notice that now ``$\phi(x)$'' is a proposition. so ``$\{ x \mid \forall Y \Big(
 
 \end{theorem}
 
-\section{The Recurtion theorem}
+\section{The Recursion theorem}
 
 \begin{definition}
     \textbf{Tuple (new definition)-Finite sequence} is a function ``$a : n \to V$'' s.t. $n \in  \mathbb{N}$ we know we can show this
@@ -5038,14 +5374,14 @@ general``$\forall m,n \in \mathbb{N} \quad m-n := [(m,n)]$''. so we can say ``$
 
     \[ \forall m_1 , m_2 , n_1 , n_2 \in \mathbb{N} \quad [(m_1 , n_1)] +_\mathbb{Z}  [(m_2 , n_2)]  = [(m_1 + m_2, n_1 + n_2)] \]
 
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
 \begin{theorem}\textbf{Multiplication} there is a unique function ``$\times_\mathbb{Z} :\mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$'' s.t.
 
     \[ \forall m_1 , m_2 , n_1 , n_2 \in \mathbb{N} \quad [(m_1 , n_1)] \times_\mathbb{Z} [(m_2 , n_2)]  = [(m_1 m_2  + n_1 n_2 , m_1 n_2 + m_2 n_1)] \]
 
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
 \begin{definition}\textbf{Order in $\mathbb{Z}$}
@@ -5062,7 +5398,7 @@ this lemma let us use ``$<$'' instead of ``$<_\mathbb{Z}$'', ``$+$'' instead of
         \item       $/ \therefore   \forall m,n \in \mathbb{N} \quad m +_\mathbb{Z} n  = m  + n$
         \item       $/ \therefore   \forall m,n \in \mathbb{N} \quad m \times_\mathbb{Z} n  = m  \times n$
     \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.
 \end{lemma}
 
 we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
@@ -5127,14 +5463,14 @@ in this system ``$ 0 := [(0,1)]$'' and ``$ 1 := [(1,1)]$'' and ``$ \forall x
 
     \[ \forall x  , y  , z , u  \in \mathbb{Z} \quad [(x  , z)] +_\mathbb{Q} [(y  , u)]  = [(x u  + z y ,  z  u)] \]
 
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
 \begin{theorem}\textbf{Multiplication} there is a unique function ``$\times_\mathbb{Q} :\mathbb{Q} \times \mathbb{Q} \to \mathbb{Q}$'' s.t.
 
     \[ \forall x  , y  , z , u  \in \mathbb{Z} \quad [(x  , z)] \times_\mathbb{Q} [(y  , u)]  = [(x  y , z u)] \]
 
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
 \begin{definition}\textbf{Order in $\mathbb{Q}$} .\\
@@ -5154,7 +5490,7 @@ this lemma let us use ``$<$'' instead of ``$<_\mathbb{Q}$'', ``$+$'' instead of
         \item       $/ \therefore   \forall z,y \in \mathbb{Z} \quad z +_\mathbb{Q} y  = z  + y$
         \item       $/ \therefore   \forall z,y \in \mathbb{Z} \quad z \times_\mathbb{Q} y  = z  \times y$
     \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.
 \end{lemma}
 
 we denote ``Multiplication'' with ``$x \cdot y$'' and ``$x y$'' too.
@@ -5233,6 +5569,64 @@ we define an equivalence relation ``$ (a_i)_{i \in \mathbb{N}} \sim (b_i)_{i
     \quad | a_n - b_n | < \epsilon $''(check it's an equivalence relation). we
 denote every $[(a_i)_{i \in \mathbb{N}}]$ with $[a_i]_{i \in \mathbb{N}}$.
 
+\begin{fitchproof}[arrayenv=tabular]
+
+    \have {14} {  a_n - a_n = 0}
+    \have {14} { | a_n - a_n | < \epsilon }
+    \have {14} { n > N\to | a_n - a_n | < \epsilon }
+    \have {14} { \forall \epsilon > 0 \quad \exists N \quad \forall n > N \quad | a_n - a_n | < \epsilon}    \by{$\forall I , \exists I , \forall I $}{}
+    % \have {14} { \vdots}     
+
+    \have {14} {(a_i)_{i \in \mathbb{N}} \sim (a_i)_{i\in \mathbb{N}} }      \by{$def. \sim $}{}
+
+\end{fitchproof}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+    \have {14} {(a_i)_{i \in \mathbb{N}} \sim (b_i)_{i\in \mathbb{N}} }        \by{$ass$}{}
+    \have {14} {\forall \epsilon > 0 \quad \exists N \quad \forall n > N \quad | a_n - b_n | < \epsilon}      \by{$def. \sim $}{}
+    \have {14} {\forall \epsilon > 0 \quad \exists N \quad \forall n > N \quad | b_n - a_n | < \epsilon}
+
+    % \have {14} { \vdots}     
+
+    \have {14} {  (b_i)_{i \in \mathbb{N}} \sim (a_i)_{i\in \mathbb{N}} }       \by{$def. \sim $}{}
+
+\end{fitchproof}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+    \have {14} {(a_i)_{i \in \mathbb{N}} \sim (b_i)_{i\in \mathbb{N}} }       \by{$ass$}{}
+    \have {14} {  (b_i)_{i \in \mathbb{N}} \sim (c_i)_{i\in \mathbb{N}} }        \by{$ass$}{}
+    \have {14} {\forall \epsilon > 0 \quad \exists N \quad \forall n > N \quad | a_n - b_n | < \epsilon}      \by{$def. \sim $}{}
+    \have {14} {\forall \epsilon > 0 \quad \exists N \quad \forall n > N \quad | b_n - c_n | < \epsilon}      \by{$def. \sim $}{}
+    \have {14} {  \exists N \quad \forall n > N \quad | a_n - b_n | < \frac{\epsilon}{2} }      \by{$def. \sim $}{}
+    \have {14} {  \exists N \quad \forall n > N \quad | b_n - c_n | < \frac{\epsilon}{2} }      \by{$def. \sim $}{}
+
+    \open
+    \have {14} {  \forall n > N \quad | a_n - b_n | < \frac{\epsilon}{2} }      \by{$acp $}{}
+    \open
+    \have {14} {  \forall n > N' \quad | b_n - c_n | < \frac{\epsilon}{2} }      \by{$acp $}{}
+    \open
+    \have {14} {  n > max\{ N , N' \}  }      \by{$acp $}{}
+    \have {14} {   n > N \to | a_n - b_n | < \frac{\epsilon}{2} }      \by{$ \forall E $}{}
+    \have {14} {   n > N' \to | b_n - c_n | < \frac{\epsilon}{2} }      \by{$ \forall E $}{}
+    \have {14} {   | a_n - b_n | < \frac{\epsilon}{2} }      \by{$ \to E $}{}
+    \have {14} {    | b_n - c_n | < \frac{\epsilon}{2} }      \by{$ \to E $}{}
+    \have {14} {     | a_n - b_n | + | b_n - c_n | < \epsilon }
+    \have {14} {    | a_n - c_n | < | a_n - b_n | + | b_n - c_n | }
+    \have {14} {    | a_n - c_n | < \epsilon }
+    \close
+    \have {14} {   n > max\{ N , N' \} \to | a_n - c_n | < \epsilon }      \by{$\to I $}{}
+    \have {14} {  \forall n > max\{ N , N' \} \quad  | a_n - c_n | < \epsilon }      \by{$\forall I $}{}
+    \have {14} {  \exists N \quad \forall n > N \quad | a_n - c_n | < \epsilon }      \by{$\exists I$}{}
+    \close
+    \close
+    \have {14} {  \exists N \quad \forall n > N \quad | a_n - c_n | < \epsilon }      \by{$\exists E$}{}
+    \have {14} {\forall \epsilon > 0 \quad \exists N \quad \forall n > N \quad | a_n - c_n | < \epsilon}      \by{$\forall I$}{}
+    \have {14} {  (a_i)_{i \in \mathbb{N}} \sim (c_i)_{i\in \mathbb{N}} }          \by{$def. \sim $}{}
+
+\end{fitchproof}
+
 \begin{definition}\textbf{Real numbers ``$\mathbb{R}$''} is a set
     \[ \mathbb{R} :=  Cauchy/ \sim  \]
     we denote it's members with ``$r_0 , r_1 ,...$''
@@ -5247,14 +5641,14 @@ in this system ``$ 0 := [0]_{i \in \mathbb{N}}$'' and ``$ 1 := [1]_{i \in
 
     \[  [a_i]_{i \in \mathbb{N}} +_\mathbb{R} [b_i]_{i \in \mathbb{N}}  = [a_i + b_i]_{i \in \mathbb{N}} \]
 
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
 \begin{theorem}\textbf{Multiplication} there is a unique function ``$\times_\mathbb{R} :\mathbb{R} \times \mathbb{R} \to \mathbb{R}$'' s.t.
 
     \[  [a_i]_{i \in \mathbb{N}} \times_\mathbb{R} [b_i]_{i \in \mathbb{N}}  = [a_i  b_i]_{i \in \mathbb{N}} \]
 
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
 \begin{definition}\textbf{Order in $\mathbb{R}$} .\\
@@ -5272,7 +5666,7 @@ this lemma let us use ``$<$'' instead of ``$<_\mathbb{R}$'', ``$+$'' instead of
         \item       $/ \therefore   \forall x,y \in \mathbb{Q} \quad x +_\mathbb{R} y  = x  + y$
         \item       $/ \therefore   \forall x,y \in \mathbb{Q} \quad x \times_\mathbb{R} y  = x  \times y$
     \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.
 \end{lemma}
 
 we denote ``Multiplication'' with ``$x \cdot y$'' and ``$x y$'' too.
@@ -5328,7 +5722,7 @@ we learned about ``$\mathbb{R}$'' before and we constructed structure
     we denote it's members with ``$z_0 , x ,...$''
 \end{definition}
 
-in this system ``$ 0 := (0,0)$'' and ``$ \forall n \in \mathbb{R} \quad r :=
+in this system ``$ 0 := (0,0)$'' and ``$ \forall r \in \mathbb{R} \quad r :=
     (r,0)$'' . in general ``$\forall x,y \in \mathbb{R} \quad x + iy := (x,y)$''.
 so we can say ``$\mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq
     \mathbb{R} \subseteq \mathbb{C}$''.
@@ -5337,14 +5731,14 @@ so we can say ``$\mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq
 
     \[ \forall x , y , z , u \in \mathbb{R} \quad (x , z) +_\mathbb{C}  (y , u)  = (x + y, z + u) \]
 
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
 \begin{theorem}\textbf{Multiplication} there is a unique function ``$\times_\mathbb{C} :\mathbb{C} \times \mathbb{C} \to \mathbb{C}$'' s.t.
 
     \[ \forall x , y , z , u \in \mathbb{R} \quad (x , z) \times_\mathbb{C} (y , u)  = (x y  - z u , x u + y z) \]
 
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
 this lemma let us use ``$+$'' instead of ``$+_\mathbb{C}$'' and ``$\times$''
@@ -5356,7 +5750,7 @@ instead of ``$\times_\mathbb{C}$''.
         \item       $/ \therefore   \forall x,y \in \mathbb{R} \quad x +_\mathbb{C} y  = x  + y$
         \item       $/ \therefore   \forall x,y \in \mathbb{R} \quad x \times_\mathbb{C} y  = x  \times y$
     \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.
 \end{lemma}
 
 we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
@@ -5369,7 +5763,7 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
         \item       $\forall z \in \mathbb{C} \quad \exists y \in \mathbb{C} \quad z +  y = y +  z = 0$  (inverse  $+ $)
         \item       $\forall x ,y  \in \mathbb{C} \quad x + y  = y + x $   (commutative(abelian)  $+ $)
     \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.
 \end{lemma}
 
 \begin{lemma}prove for  ``$ (\mathbb{C} , + , \times )  $''
@@ -5382,7 +5776,7 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
                   \land     \Big((x  + y )  z  = x   z  +  y   z  \Big)  $ (distributive $\times$)
               % \item       $\forall x ,y   \in \mathbb{C} \quad   x y = 0   \to  x = 0  \lor  y = 0 $ (zero divisor free $\times$)
     \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.
 \end{lemma}
 
 \begin{theorem}\textbf{Exponents} there is a unique function ``$(\_)^{(\_)} :\mathbb{C} \times \mathbb{N} \to \mathbb{C}$'' s.t.
@@ -5392,7 +5786,7 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
         \item       $\forall x \in \mathbb{C} \quad x ^ 0 = 1$
         \item       $\forall x \in \mathbb{C} \quad \forall n \in \mathbb{N} \quad  x ^ {s(n)} = x ^ n \cdot x   $
     \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
 \begin{lemma}prove for ``$(\mathbb{C} , + , \cdot , (\_)^{(\_)} )$''
@@ -5401,7 +5795,7 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
         \item       $\forall x   \in \mathbb{Z} \quad \forall m ,n  \in \mathbb{N} \quad  x^m  \cdot  x^n = x^{m  + n}  $
         \item       $\forall x   \in \mathbb{Z} \quad \forall m ,n  \in \mathbb{N} \quad (x^m)^n = x^{m n}  $
     \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.
 \end{lemma}
 
 \begin{theorem}\textbf{Exponents} there is a unique function ``$(\_)^{(\_)} :\mathbb{C} \times \mathbb{Z} \to \mathbb{C}$'' s.t.
@@ -5411,7 +5805,7 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
         \item       $\forall x \in \mathbb{C} \quad x ^ 0 = 1$
         \item       $\forall x \in \mathbb{C} \quad \forall m ,n  \in \mathbb{N} \quad  x ^ {m-n} = \frac{x ^ m}{x^n}    $
     \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
 \begin{lemma}prove for ``$(\mathbb{C} , + , \cdot  )$''
@@ -5420,7 +5814,7 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
         \item       $\forall x   \in \mathbb{C} \quad \forall y ,z  \in \mathbb{Z} \quad  x^y  \cdot  x^z = x^{y  + z}  $
         \item       $\forall x   \in \mathbb{C} \quad \forall y ,z  \in \mathbb{Z} \quad (x^y)^z = x^{y z}  $
     \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.
 \end{lemma}
 
 \begin{theorem}\textbf{Big Sum} if ``$a : \mathbb{N} \to \mathbb{C}$'' there is a unique function ``$\sum_{i = 0}^{(\_)} (\_)  :\mathbb{C} \times \mathbb{N} \to \mathbb{C}$'' s.t.
@@ -5430,7 +5824,7 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
         \item       $\forall a \quad  \sum_{i = 0}^{0} (a_0)  = a_0$
         \item       $\forall a \quad \forall n \in \mathbb{N} \quad  \sum_{i = 0}^{s(n)} a_{s(n)} = \sum_{i = 0}^{n} a_n + a_{s(n)}  $
     \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
 \begin{lemma}prove for ``$(\mathbb{C} , + , \cdot  )$''
@@ -5439,7 +5833,7 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
         \item       $\forall n   \in \mathbb{N} \quad \forall a , b   \quad  \sum_{i = 0}^n a_n + \sum_{i = 0}^n b_n = \sum_{i = 0}^n (a_n + b_n )  $
         \item       $\forall n   \in \mathbb{N} \quad \forall a   \quad k \sum_{i = 0}^n a_n = \sum_{i = 0}^n ka_n $
     \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.
 \end{lemma}
 
 \begin{theorem}\textbf{Big Product} if ``$a : \mathbb{N} \to \mathbb{C}$'' there is a unique function ``$\prod_{i = 0}^{(\_)} (\_)  :\mathbb{C} \times \mathbb{N} \to \mathbb{C}$'' s.t.
@@ -5449,7 +5843,7 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
         \item       $\forall a \quad  \prod_{i = 0}^0 (a_0)  = a_0$
         \item       $\forall a \quad \forall n \in \mathbb{N} \quad  \prod_{i = 0}^{s(n)} a_{s(n)} = \prod_{i = 0}^n a_n \cdot a_{s(n)}  $
     \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
 \begin{lemma}prove for ``$(\mathbb{C} , + , \cdot  )$''
@@ -5458,7 +5852,7 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
         \item       $\forall n   \in \mathbb{N} \quad \forall a , b   \quad  \prod_{i = 0}^n a_n  \prod_{i = 0}^n b_n = \prod_{i = 0}^n (a_n  b_n )  $
         \item       $\forall n   \in \mathbb{N} \quad \forall a   \quad  (\prod_{i = 0}^n a_n)^k = \prod_{i = 0}^n (a_n)^k $
     \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.
 \end{lemma}
 
 \chapter{Finite and Infinite sets}
@@ -5478,13 +5872,53 @@ we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
 
 \begin{lemma} ``$\cong$'' is a equivalence relation in ``$(V , \cong)$''\\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+
+    \begin{fitchproof}[arrayenv=tabular]
+        \have {14} {  id : X \xrightarrow[surj]{inj} X }
+        \have {14} {  \exists f \quad f : X \xrightarrow[surj]{inj} X }   \by{$ \exists I$}{}
+        \have {14} {  X \cong X }                                              \by{$ def. 2$}{}
+    \end{fitchproof}
+
+    \begin{fitchproof}[arrayenv=tabular]
+        \have {14} {  X \cong Y }                     \by{$ ass $}{}
+        \have {14} {  \exists f \quad f : X \xrightarrow[surj]{inj} Y }   \by{$ def. 1$}{}
+
+        \open
+        \have {14} {  f : X \xrightarrow[surj]{inj} Y }        \by{$ acp $}{}
+        \have {14} {  f^{-1} : Y \xrightarrow[surj]{inj} X }           \by{$ lemma$}{}
+        \have {14} {  \exists f \quad f : Y \xrightarrow[surj]{inj} X }           \by{$ \exists I$}{}
+        \have {14} {  Y \cong X }                                \by{$ def. 5$}{}
+        \close
+        \have {14} {  Y \cong X }                               \by{$ \exists E$}{}
+
+    \end{fitchproof}
+
+    \begin{fitchproof}[arrayenv=tabular]
+        \have {14} {  X \cong Y }               \by{$ ass $}{}
+        \have {14} {  Y \cong Z }                  \by{$ ass $}{}
+
+        \have {14} {  \exists f \quad f : X \xrightarrow[surj]{inj} Y }         \by{$ def. 1$}{}
+        \have {14} {  \exists f \quad f : Y \xrightarrow[surj]{inj} Z }           \by{$ def. 2$}{}
+        \open
+        \have {14} {  f : X \xrightarrow[surj]{inj} Y }                      \by{$ acp $}{}
+        \open
+        \have {14} {  g : Y \xrightarrow[surj]{inj} Z }                        \by{$ acp $}{}
+        \have {14} {  g \circ f : X \xrightarrow[surj]{inj} Z }                     \by{$ lemma$}{}
+        \have {14} {  \exists f \quad f : X \xrightarrow[surj]{inj} Z }
+        \have {14} {  X \cong Z }
+        \close
+        \close
+        \have {14} {  X \cong Z }
+
+    \end{fitchproof}
+
 \end{lemma}
 
 so ``$ V / \cong $'' is a partision for ``$V$'' and every partition equals to a
 $[A]_{\cong}$ we denote it by $[A]$.
 
 \begin{definition}
-    \textbf{Equipotent} if there is a  function $f:A \xrightarrow[]{inj} B $.
+    \textbf{Embedding} if there is a  function $f:A \xrightarrow[]{inj} B $.
     in  situation above we say ``$A$'' is less than or equipotent ``$B$''.   we denote it with ``$A \precsim  B$'' i.e.
     \[ A \precsim  B : \exists f  (f:A \xrightarrow[]{inj} B) \]
 \end{definition}
@@ -5496,9 +5930,195 @@ similarly we define ``$[A] \preceq [B] : \forall X \in [A] , Y \in [B] \quad X
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-\begin{theorem} \textbf{Schroeder-Bernstein} $A \precsim  B , B \precsim  A / \therefore A \cong  B$\\
+\begin{fitchproof}[arrayenv=tabular]
+    \have {14} {  A \precsim  B   }
+    \open
+    \have {14} {  X \in [A]}
+    \have {14} {  Y \in [B]}
+    \have {14} {  X \cong A }
+    \have {14} {  Y \cong B }
+    \have {14} {  \exists f \quad f : X \xrightarrow[surj]{inj} A }         \by{$ def. 4$}{}
+    \have {14} {  \exists f \quad f : A \xrightarrow[]{inj} B }         \by{$ def. 1$}{}
+    \have {14} {  \exists f \quad f : B \xrightarrow[surj]{inj} Y }         \by{$ def. 5$}{}
+    \open
+    \have {14} {  f : X \xrightarrow[surj]{inj} A }         \by{$ acp $}{}
+    \open
+    \have {14} {   h : A \xrightarrow[]{inj} B }         \by{$ acp $}{}
+    \open
+    \have {14} {  g : B \xrightarrow[surj]{inj} Y }         \by{$ acp $}{}
+    \have {14} {  g \circ h \circ f : X \xrightarrow[]{inj} Y }         \by{$ lemma $}{}
+    \have {14} {  \exists f \quad f : X \xrightarrow[]{inj} Y }         \by{$ \exists I$}{}
+    \have {14} {  X \precsim  Y   }                                \by{$ def. 13$}{}
+    \close
+    \close
+    \close
+    \have {14} {  X \precsim  Y   }                                    \by{$ \exists E$}{}
+    \close
+    \have {14} {  [A] \preceq  [B] }
+\end{fitchproof}
+
+\begin{theorem} \textbf{Schroeder-Bernstein} $ X \precsim  Y , Y \precsim  X / \therefore X \cong  Y$\\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
+
+\[
+    h(x) :=
+    \begin{cases}
+        f(g(y)) &
+        \exists i \quad y \in A_i
+        \\
+        y       &
+        \exists i \quad y \in B_i
+    \end{cases}
+\]
+
+\[
+    C_0 := Y
+\]
+\[
+    C_{s(n)} := f \circ g [C_n]
+\]
+
+\[
+    D_0 := f[X]
+\]
+\[
+    D_{s(n)} := f \circ g [D_n]
+\]
+
+\[
+    A_n := C_n - D_n
+\]
+\[
+    B_n := D_n - C_s(n)
+\]
+
+\textbf{Claim 1: $ \bigcup_{i \in \mathbb{N}} A_i \cap  \bigcup_{i \in \mathbb{N}} B_i \not= \emptyset$}
+
+\textbf{Claim 2: $ Func(h)$}
+
+\textbf{Claim 3: $ injective(h)$}
+
+\textbf{Claim 4: $ h : Y \xrightarrow[surj]{inj} f[X]$}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+    % \open
+    \have {14} {  h : Y \xrightarrow[surj]{inj} f[X] }
+    \have {14} {  Y \cong f[X] }
+    \have {14} {  X \cong f[X] }
+    \have {14} {  X \cong Y }
+    % \close
+
+\end{fitchproof}
+
+\begin{center}
+
+    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+        %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+        %Shape: Ellipse [id:dp574967985623664] 
+        \draw   (199.61,146.59) .. controls (199.61,101.78) and (223.03,65.46) .. (251.91,65.46) .. controls (280.8,65.46) and (304.22,101.78) .. (304.22,146.59) .. controls (304.22,191.39) and (280.8,227.71) .. (251.91,227.71) .. controls (223.03,227.71) and (199.61,191.39) .. (199.61,146.59) -- cycle ;
+        %Shape: Ellipse [id:dp24489093597175748] 
+        \draw  [fill={rgb, 255:red, 200; green, 0; blue, 255 }  ,fill opacity=1 ] (338.39,144.33) .. controls (338.39,93.83) and (361.81,52.89) .. (390.7,52.89) .. controls (419.58,52.89) and (443,93.83) .. (443,144.33) .. controls (443,194.83) and (419.58,235.76) .. (390.7,235.76) .. controls (361.81,235.76) and (338.39,194.83) .. (338.39,144.33) -- cycle ;
+        %Shape: Rectangle [id:dp8327849118932591] 
+        \draw   (196.62,53.2) -- (308.45,53.2) -- (308.45,236) -- (196.62,236) -- cycle ;
+        %Shape: Rectangle [id:dp040390641169423036] 
+        \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (354.48,85.96) -- (427.26,85.96) -- (427.26,205.8) -- (354.48,205.8) -- cycle ;
+        %Straight Lines [id:da1396387883759902] 
+        \draw    (311.87,114.71) -- (337,115.37) ;
+        \draw [shift={(339,115.42)}, rotate = 181.49] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+        %Straight Lines [id:da8508047891957193] 
+        \draw    (340.04,185.49) -- (313.35,185.42) ;
+        \draw [shift={(311.35,185.41)}, rotate = 360.15999999999997] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+
+        % Text Node
+        \draw (321.18,91.54) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle f$};
+        % Text Node
+        \draw (323.53,161.29) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle g$};
+        % Text Node
+        \draw (176.84,52.89) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle X$};
+        % Text Node
+        \draw (348.24,53.08) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle Y$};
+        % Text Node
+        \draw (197.82,66.95) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize] [align=left] {$\displaystyle g[ Y]$};
+        % Text Node
+        \draw (358.48,70.09) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize] [align=left] {$\displaystyle f[ X]$};
+
+    \end{tikzpicture}
+
+    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+        %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+        %Shape: Ellipse [id:dp0027798291652789686] 
+        \draw   (170.5,135.39) .. controls (170.5,116.09) and (179.23,100.44) .. (190,100.44) .. controls (200.77,100.44) and (209.5,116.09) .. (209.5,135.39) .. controls (209.5,154.69) and (200.77,170.33) .. (190,170.33) .. controls (179.23,170.33) and (170.5,154.69) .. (170.5,135.39) -- cycle ;
+        %Shape: Rectangle [id:dp5334380176461437] 
+        \draw   (161,90.83) -- (219.17,90.83) -- (219.17,179.83) -- (161,179.83) -- cycle ;
+        %Shape: Ellipse [id:dp3235528885618102] 
+        \draw   (144.17,135.58) .. controls (144.17,101.76) and (164.76,74.33) .. (190.17,74.33) .. controls (215.57,74.33) and (236.17,101.76) .. (236.17,135.58) .. controls (236.17,169.41) and (215.57,196.83) .. (190.17,196.83) .. controls (164.76,196.83) and (144.17,169.41) .. (144.17,135.58) -- cycle ;
+        %Shape: Rectangle [id:dp19269953423924546] 
+        \draw   (131.17,60.83) -- (251.17,60.83) -- (251.17,210.33) -- (131.17,210.33) -- cycle ;
+        %Shape: Ellipse [id:dp574967985623664] 
+        \draw   (95.17,135.42) .. controls (95.17,72.04) and (140.05,20.67) .. (195.42,20.67) .. controls (250.78,20.67) and (295.67,72.04) .. (295.67,135.42) .. controls (295.67,198.79) and (250.78,250.17) .. (195.42,250.17) .. controls (140.05,250.17) and (95.17,198.79) .. (95.17,135.42) -- cycle ;
+        %Shape: Ellipse [id:dp24489093597175748] 
+        \draw  [fill={rgb, 255:red, 200; green, 0; blue, 255 }  ,fill opacity=1 ] (361.17,132.22) .. controls (361.17,60.79) and (406.05,2.89) .. (461.42,2.89) .. controls (516.78,2.89) and (561.67,60.79) .. (561.67,132.22) .. controls (561.67,203.65) and (516.78,261.56) .. (461.42,261.56) .. controls (406.05,261.56) and (361.17,203.65) .. (361.17,132.22) -- cycle ;
+        %Shape: Rectangle [id:dp8327849118932591] 
+        \draw   (89.44,3.33) -- (303.78,3.33) -- (303.78,261.89) -- (89.44,261.89) -- cycle ;
+        %Shape: Rectangle [id:dp040390641169423036] 
+        \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (392,49.67) -- (531.5,49.67) -- (531.5,219.17) -- (392,219.17) -- cycle ;
+        %Shape: Ellipse [id:dp2158354309446524] 
+        \draw  [fill={rgb, 255:red, 200; green, 0; blue, 255 }  ,fill opacity=1 ] (396,135.42) .. controls (396,94.13) and (425.33,60.67) .. (461.5,60.67) .. controls (497.67,60.67) and (527,94.13) .. (527,135.42) .. controls (527,176.7) and (497.67,210.17) .. (461.5,210.17) .. controls (425.33,210.17) and (396,176.7) .. (396,135.42) -- cycle ;
+        %Shape: Rectangle [id:dp37261216738684166] 
+        \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (421.17,80.5) -- (501.17,80.5) -- (501.17,191) -- (421.17,191) -- cycle ;
+        %Shape: Ellipse [id:dp7146110077564878] 
+        \draw  [fill={rgb, 255:red, 200; green, 0; blue, 255 }  ,fill opacity=1 ] (426.83,137.33) .. controls (426.83,111.65) and (442.28,90.83) .. (461.33,90.83) .. controls (480.39,90.83) and (495.83,111.65) .. (495.83,137.33) .. controls (495.83,163.01) and (480.39,183.83) .. (461.33,183.83) .. controls (442.28,183.83) and (426.83,163.01) .. (426.83,137.33) -- cycle ;
+        %Shape: Rectangle [id:dp18723982539069084] 
+        \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (441.5,103.33) -- (481.17,103.33) -- (481.17,173.33) -- (441.5,173.33) -- cycle ;
+        %Straight Lines [id:da1396387883759902] 
+        \draw    (310.33,90.33) -- (360.33,91.29) ;
+        \draw [shift={(362.33,91.33)}, rotate = 181.1] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+        %Straight Lines [id:da8508047891957193] 
+        \draw    (364.33,190.44) -- (311.33,190.34) ;
+        \draw [shift={(309.33,190.33)}, rotate = 360.12] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+
+        % Text Node
+        \draw (453.89,128.67) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \vdots $};
+        % Text Node
+        \draw (182.56,127.67) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \vdots $};
+        % Text Node
+        \draw (330.67,66) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle f$};
+        % Text Node
+        \draw (331.33,164.67) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle g$};
+        % Text Node
+        \draw (72,11.33) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle X$};
+        % Text Node
+        \draw (386,10.67) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle Y$};
+        % Text Node
+        \draw (106.67,31.33) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize] [align=left] {$\displaystyle g[ Y]$};
+        % Text Node
+        \draw (408.67,32) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize] [align=left] {$\displaystyle f[ X]$};
+        % Text Node
+        \draw (142.67,46) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {$\displaystyle g[ f[ X]]$};
+        % Text Node
+        \draw (401.33,54) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {$\displaystyle f[ g[ Y]]$};
+        % Text Node
+        \draw (138,69.33) node [anchor=north west][inner sep=0.75pt]  [font=\tiny] [align=left] {$\displaystyle g[ f[ g[ Y]]]$};
+        % Text Node
+        \draw (440.67,69.33) node [anchor=north west][inner sep=0.75pt]  [font=\tiny] [align=left] {$\displaystyle f[ g[ f[ X]]]$};
+        % Text Node
+        \draw (455.33,228.67) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle A_{0}$};
+        % Text Node
+        \draw (452,192.67) node [anchor=north west][inner sep=0.75pt]  [font=\small] [align=left] {$\displaystyle A_{1}$};
+        % Text Node
+        \draw (454,172.67) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {$\displaystyle A_{2}$};
+        % Text Node
+        \draw (502.67,199.33) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle B_{0}$};
+        % Text Node
+        \draw (483.17,176.33) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize] [align=left] {$\displaystyle B_{1}$};
+
+    \end{tikzpicture}
+
+\end{center}
 
 \begin{lemma} ``$\preceq$'' is a order relation in ``$(V / \cong , \preceq)$''\\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
@@ -5510,8 +6130,60 @@ similarly we define ``$[A] \preceq [B] : \forall X \in [A] , Y \in [B] \quad X
     if a set is not finite we call it \textbf{``Infinite''}($Infinite(A)$).
 \end{definition}
 
-\begin{lemma} $ / \therefore \forall  n \in \mathbb{N} \quad  X \subseteq n \to X \ncong n   $\\
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\begin{lemma} $ / \therefore \forall  n \in \mathbb{N} \quad  X \subset n \to X \ncong n   $
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \have {14} { \forall X \quad X \subset 0 \to X \ncong 0  }          \by{ vacuous truth}{}
+        \open
+        \have {14} { \forall X \quad X \subset n \to X \ncong n }
+        \open
+        \have {14} {  X \subset s(n) }
+        \open
+        \have {14} {  X \cong s(n) }
+        \have {14} {  \exists f \quad f : s(n)  \xrightarrow[surj]{inj}  X  }
+        \open
+        \have {14} {  f : s(n)  \xrightarrow[surj]{inj}  X  }
+        \open
+        \have {14} {  n \notin  X  }
+        \have {14} {   X \subset n \cup \{ n \} }
+        \have {14} {  X \subseteq n }
+        \have {14} {  X - \{ f(n) \} \subset n }
+        \have {14} { X - \{ f(n) \} \subset n \to X - \{ f(n) \} \ncong n }
+        \have {14} {  X - \{ f(n) \} \ncong n }
+        \have {14} {   f \upharpoonright n : n  \xrightarrow[surj]{inj}  X - \{ f(n) \} }
+        \have {14} {  X - \{ f(n) \} \cong n }
+        \have {14} {   \bot }
+        \close
+        % \have {14} {  X \cong f[X] }
+        % \have {14} {  X \cong Y }
+        \open
+        \have {14} {  n \in  X  }
+        \have {14} {  n \in  Dom(f)  }
+        \have {14} {  n \in  Range(f)  }
+        \open
+        \have {14} {  (k,n) \in  f  }
+        \have {14} {  (n,m) \in  f  }
+        \have {14} {  g := f \cup \{ (k,m) \} - \{ (k,n) , (n,m) \}  }
+        \have {14} {  g : n  \xrightarrow[surj]{inj}  X - \{ n \}  }
+        \have {14} {   X \subset n \cup \{ n \} }
+        \have {14} {   X - \{ n \} \subset n  }
+        \have {14} {   X - \{ n \} \subset n \to  X - \{ n \} \ncong n  }
+        \have {14} {   X - \{ n \} \ncong n  }
+        \have {14} {   X - \{ n \} \cong n  }
+        \have {14} {  \bot  }
+        \close
+        \close
+        \close
+        \have {14} {  \bot  }
+        \close
+        \have {14} {  X \ncong s(n) }
+        \close
+        \have {14} { \forall X \quad  X \subset s(n) \to X \ncong s(n) }
+        \close
+
+    \end{fitchproof}
+
 \end{lemma}
 
 \begin{corollary}.\\
@@ -5528,7 +6200,57 @@ similarly we define ``$[A] \preceq [B] : \forall X \in [A] , Y \in [B] \quad X
 corollary (4) let us use ``$<$'' instead of ``$\prec$''
 
 \begin{lemma} $ Finite(X) , Y \subseteq X / \therefore  Finite(Y)    $\\
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    \begin{fitchproof}[arrayenv=tabular]
+
+        % \have {14} { \forall X \quad X \subset 0 \to X \ncong 0  }          \by{ vacuous truth}{}
+        % \open
+        % \have {14} { \forall X \quad X \subset n \to X \ncong n }
+        \have {14} {  X \cong 0  \land Y \subseteq X \to \exists m \in \mathbb{N} \quad Y \cong m  }
+        \open
+        \have {14} {  X \cong n  \land Y \subseteq X \to \exists m \in \mathbb{N} \quad Y \cong m  }
+        \open
+        \have {14} {  X \cong s(n)   }
+        \have {14} { \exists f \quad  f : s(n) \xrightarrow[surj]{inj}  X  }
+        \open
+        \have {14} {  f : s(n) \xrightarrow[surj]{inj}  X  }
+        \have {14} {   Y \subseteq X  }
+        \have {14} {   g := f - \{ (n , f(n))  \} }
+        \have {14} {  g : n \xrightarrow[surj]{inj}  X - \{ f(n) \}  }
+        \have {14} {    X - \{ f(n) \} \cong n  }
+        \have {14} {   Y - \{ f(n) \}  \subseteq X  - \{ f(n) \}  }
+        \have {14} {  X  - \{ f(n) \} \cong n  \land Y - \{ f(n) \} \subseteq X - \{ f(n) \} \to \exists m \in \mathbb{N} \quad Y - \{ f(n) \} \cong m  }
+        \have {14} {  \exists m \in \mathbb{N} \quad Y - \{ f(n) \} \cong m  }
+        \open
+        \have {14} {   Y - \{ f(n) \} \cong m  }
+        \open
+        \have {14} { h :    m \xrightarrow[surj]{inj} Y - \{ f(n) \}  }
+        \open
+        \have {14} {    f(n) \in Y  }
+        \have {14} {     Y = (Y - \{ f(n) \}) \cup \{ f(n) \}   }
+        \have {14} {     h' := h \cup \{ (m,f(n)) \}    }
+        \have {14} {     h' : s(m) \xrightarrow[surj]{inj} Y   }
+        \have {14} {      s(m) \cong Y   }
+        \have {14} {   \exists m \in \mathbb{N} \quad Y \cong m  }
+        \close
+        \open
+        \have {14} {   f(n) \notin Y  }
+        \have {14} {     Y = Y - \{ f(n) \}   }
+        \have {14} {     h : m \xrightarrow[surj]{inj} Y   }
+        \have {14} {      m \cong Y   }
+        \have {14} {   \exists m \in \mathbb{N} \quad Y \cong m  }
+        \close
+        \close
+        \close
+        \have {14} {   \exists m \in \mathbb{N} \quad Y \cong m  }
+        \close
+        \close
+        \have {14} {  X \cong s(n)  \land Y \subseteq X \to \exists m \in \mathbb{N} \quad Y \cong m  }
+        \close
+        \have {14} { \forall n \in \mathbb{N} ( X \cong n  \land Y \subseteq X \to \exists m \in \mathbb{N} \quad Y \cong m ) }
+        \have {14} { \exists n \in \mathbb{N} \quad X \cong n  \land Y \subseteq X \to \exists m \in \mathbb{N} \quad Y \cong m }
+        \have {14} { Finite(X) \land Y \subseteq X \to Finite(Y) }
+
+    \end{fitchproof}
 \end{lemma}
 
 \section{Countable sets}
@@ -5540,6 +6262,60 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
 \begin{lemma} $ Countable(X) ,Infinite(Y) , Y \subseteq X / \therefore  Countable(Y)   $\\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
+\begin{theorem}
+An infinite subset of a countable set is countable.
+\end{theorem}
+
+\begin{proof}
+
+Let $A$ be countable and let $B\subseteq A$ be infinite.
+
+Then there exists a bijective enumeration
+\[
+f:\mathbb N \twoheadrightarrow A.
+\]
+
+Define recursively a sequence $(k_n)_{n\in\mathbb N}$ in $\mathbb N$:
+
+\[
+k_0 := \min\{k\in\mathbb N : f(k)\in B\},
+\]
+\[
+k_{n+1} := \min\{k\in\mathbb N : f(k)\in B \land f(k)\neq f(k_i)\ \forall i\le n\}.
+\]
+
+Define
+\[
+b_n := f(k_n).
+\]
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{b_n\in B}
+
+\open
+\have{2}{x\in B}
+\have{3}{\exists k\in\mathbb N\ f(k)=x}
+\have{4}{\exists n\in\mathbb N\ b_n=x}
+\close
+
+\have{5}{B\subseteq \{b_n:n\in\mathbb N\}}
+
+\have{6}{\{b_n:n\in\mathbb N\}\subseteq B}
+
+\have{7}{B=\{b_n:n\in\mathbb N\}}
+
+\have{8}{\forall m<n\ (b_m\neq b_n)}
+
+\have{9}{(b_n)_{n\in\mathbb N}\ \text{injective}}
+
+\have{10}{\mathbb N\twoheadrightarrow B}
+
+\have{11}{Countable(B)}
+
+\end{fitchproof}
+
+\end{proof}
 
 \begin{corollary} a set is at most countable iff it's finite or countable.
 \end{corollary}
@@ -5548,33 +6324,446 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
+\begin{theorem}
+The range of an infinite sequence $(a_n)_{n\in\mathbb N}$ is at most countable.
+\end{theorem}
+
+\begin{proof}
+
+Let $(a_n)_{n\in\mathbb N}$ be a sequence in $X$.
+
+We construct recursively a sequence $(b_n)$ such that
+$\mathrm{Range}(b_n)=\mathrm{Range}(a_n)$ and $(b_n)$ is injective.
+
+Define
+\[
+b_0 := a_0.
+\]
+
+Having defined $b_0,\dots,b_n$, define $k_{n+1}$ as the least $k\in\mathbb N$ such that
+\[
+a_k \neq b_i \quad \forall i\le n.
+\]
+
+If such $k_{n+1}$ exists, set
+\[
+b_{n+1} := a_{k_{n+1}}.
+\]
+Otherwise stop the construction.
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{b_n \in \mathrm{Range}(a_n)}
+
+\open
+\have{2}{x \in \mathrm{Range}(a_n)}
+\have{3}{\exists k\in\mathbb N\ (a_k=x)}
+\have{4}{\exists i\ (b_i=x)}
+\close
+
+\have{5}{\mathrm{Range}(a_n)\subseteq \{b_i\}}
+\have{6}{\{b_i\}\subseteq \mathrm{Range}(a_n)}
+
+\have{7}{\mathrm{Range}(b_n)=\mathrm{Range}(a_n)}
+
+\have{8}{\forall i<j\ (b_i\neq b_j)}
+
+\have{9}{(b_n)\ \text{injective}}
+
+\have{10}{\mathrm{Range}(a_n)\ \text{is image of an injective sequence}}
+
+\have{11}{\mathrm{Range}(a_n)\ \text{is at most countable}}
+
+\end{fitchproof}
+
+\end{proof}
+
 \begin{lemma} union of two countable set is  countable.\\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-\begin{corollary} finite union of countable sets is countable.
+
+\begin{theorem}
+The union of two countable sets is countable.
+\end{theorem}
+
+\begin{proof}
+
+Let $A=\{a_n:n\in\mathbb N\}$ and $B=\{b_n:n\in\mathbb N\}$.
+
+Define a sequence $(c_n)_{n\in\mathbb N}$ by
+\[
+c_{2k}:=a_k,
+\qquad
+c_{2k+1}:=b_k.
+\]
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{x\in A\cup B}
+
+\open
+\have{2}{x\in A}
+\have{3}{\exists k\in\mathbb N\ (a_k=x)}
+\have{4}{\exists k\in\mathbb N\ (c_{2k}=x)}
+\have{4}{\exists n\in\mathbb N\ (c_{n}=x)}
+\close
+
+\open
+\have{5}{x\in B}
+\have{6}{\exists k\in\mathbb N\ (b_k=x)}
+\have{7}{\exists k\in\mathbb N\ (c_{2k+1}=x)}
+\have{7}{\exists n\in\mathbb N\ (c_{n}=x)}
+\close
+
+\have{8}{\forall x\in A\cup B\ \exists n\in\mathbb N\ (c_n=x)}
+
+\have{9}{\{c_n:n\in\mathbb N\}=A\cup B}
+
+\have{9}{c :  \mathbb{N} \xrightarrow[surj]{}  A\cup B}
+\have{10}{AtMostCountable(A\cup B)}
+
+\have{10}{Infinite(A)}
+\have{10}{ A \precsim  A\cup B}
+\have{10}{Infinite(A\cup B)}
+\have{10}{Countable(A\cup B)}
+
+\end{fitchproof}
+
+\end{proof}
+
+
+
+\begin{corollary}
+Finite union of countable sets is countable.
 \end{corollary}
+
+\begin{proof}
+
+Let $A_1,\dots,A_n$ be countable.
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{Countable (A_1  )}
+
+\open
+\have{2}{ \forall k < n \quad Countable(A_k) \to Countable(\bigcup_{i \in n} A_i)}
+\open
+\have{2}{ \forall k < s(n) \quad Countable(A_k) }
+\have{3}{Countable(A_{n} )}
+\have{4}{Countable(\bigcup_{i \in s(n)} A_i) }
+\close
+\close
+
+
+\have{6}{(A_1\cup\cdots\cup A_n) }
+
+\end{fitchproof}
+
+\end{proof}
 
 \begin{lemma} if ``$A$'' and ``$B$'' are countable sets then ``$A \times B$'' is  countable.\\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
+
+
+\begin{theorem}
+If $A$ and $B$ are countable, then $A\times B$ is countable.
+\end{theorem}
+
+\begin{proof}
+
+It suffices to show $\mathbb N\times\mathbb N$ is countable.
+
+Define
+\[
+f:\mathbb N\times\mathbb N\to\mathbb N
+\]
+by
+\[
+f(m,n):=
+\begin{cases}
+n^2+m & \text{if } m\le n,\\
+m^2+2m-n & \text{if } n<m.
+\end{cases}
+\]
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{(m_1,n_1),(m_2,n_2)\in\mathbb N\times\mathbb N}
+\have{2}{f(m_1,n_1)=f(m_2,n_2)}  
+\have{2}{ m\leq n \to n^2 = f(0,n) \leq f(m,n) \leq f(n,n)  \leq f(n,m)  < f(0,n+1) = (n+1)^2 }  
+\have{2}{ k = max\{m,n \} \to  k^2 \leq f(m,n) < (k+1)^2 }  
+\have{2}{ k' = max\{m',n' \} \to  k'^2 \leq f(m',n') < (k'+1)^2 }  
+\have{2}{ f(m , n ) = f(m',n')  }  
+
+\have{2}{   k = k' }  
+
+\open
+\have{4}{m\le n = k \land m' \le n' = k'}
+\have{4}{n = n'} 
+\have{5}{n^2+m = n'^2+m'}
+\have{5}{n^2+m = n^2+m'}
+\have{5}{m = m'}
+
+\close
+
+\open
+\have{7}{n < m =k \land n'   < m' = k'}
+\have{5}{m = m'}
+\have{8}{m^2+2m-n=m'^2+2m'-n'}
+\have{8}{m^2+2m-n=m^2+2m-n'}
+\have{4}{n = n'} 
+\close
+
+\open
+\have{7}{n < m =k \land n' = k' > m' }
+\have{5}{m = n'}
+\have{8}{f(m,n) > f(m,m)}
+\have{8}{f(n',n') > f(m',n')}
+\have{8}{f(n',n') = f(m,m)}
+\have{8}{f(m,n) > f(m',n')}
+
+\have{4}{\bot} 
+\close
+
+\have{10}{(m_1,n_1)=(m_2,n_2)}
+
+\have{11}{$f$ is injective}
+
+\open
+\have{12}{(m,n)\in\mathbb N\times\mathbb N}
+\have{13}{\exists k\in\mathbb N\ (f(k)= (m,n))}
+
+\have{14}{\mathbb N\times\mathbb N \cong \mathbb N}
+\close
+
+\have{15}{Countable(\mathbb N\times\mathbb N)}
+
+\end{fitchproof}
+
+\end{proof}
+
+\begin{lemma}
+If $A$ and $B$ are countable sets, then $A\times B$ is countable.
+\end{lemma}
+
+\begin{proof}
+
+Let $f:\mathbb N\twoheadrightarrow A$ and $g:\mathbb N\twoheadrightarrow B$.
+
+Define
+\[
+h:\mathbb N\to A\times B
+\quad\text{by}\quad
+h(\langle m,n\rangle)=(f(m),g(n)),
+\]
+where $\langle\cdot,\cdot\rangle:\mathbb N\times\mathbb N\to\mathbb N$ is a pairing function.
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{(a,b)\in A\times B}
+
+\open
+\have{2}{a\in A}
+\have{3}{b\in B}
+\have{4}{\exists m\in\mathbb N\ f(m)=a}
+\have{5}{\exists n\in\mathbb N\ g(n)=b}
+\have{6}{h(\langle m,n\rangle)=(a,b)}
+\close
+
+\have{7}{h:\mathbb N\twoheadrightarrow A\times B}
+
+\have{8}{Countable(A\times B)}
+
+\end{fitchproof}
+
+\end{proof}
+
 \begin{corollary} finite cartesian product of countable sets is countable. and ``$A^n$''
     is countable for any ``$A$'' countable and ``$n > 0$''.
 \end{corollary}
+
+\begin{corollary}
+Finite Cartesian product of countable sets is countable, and $A^n$ is countable for any countable $A$ and $n>0$.
+\end{corollary}
+
+\begin{proof}
+
+Let $A_1,\dots,A_n$ be countable.
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{A_1\times A_2 \text{ is countable}}
+
+\open
+\have{2}{(A_1\times\cdots\times A_k)\text{ is countable}}
+\have{3}{A_{k+1}\text{ is countable}}
+\have{4}{(A_1\times\cdots\times A_k)\times A_{k+1}\text{ is countable}}
+\close
+
+\have{5}{\forall k\le n\ (A_1\times\cdots\times A_k)\text{ is countable}}
+
+\have{6}{A_1\times\cdots\times A_n \text{ is countable}}
+
+\end{fitchproof}
+
+Now let $A$ be countable and $n>0$.
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{7}{A^1 \text{ is countable}}
+
+\open
+\have{8}{A^k \text{ is countable}}
+\have{9}{A \text{ is countable}}
+\have{10}{A^{k+1}=A^k\times A \text{ is countable}}
+\close
+
+\have{11}{\forall k\le n\ A^k \text{ is countable}}
+
+\have{12}{A^n \text{ is countable}}
+
+\end{fitchproof}
+
+\end{proof}
 
 \begin{lemma} if ``$(A_i)_{i \in \mathbb{N}}$'' is family of countable sets with a family of sequences ``$(a_i)_{i \in \mathbb{N}}$''
     s.t. ``$ \forall n \in \mathbb{N} \quad a_n : \mathbb{N} \xrightarrow[surj]{inj} A_n $'' then ``$\bigcup_{i \in \mathbb{N}} A_i$'' is  countable.\\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
+
+\begin{lemma}
+If $(A_i)_{i\in\mathbb N}$ is a family of countable sets and there exist
+$(a_i)_{i\in\mathbb N}$ such that $\forall n\in\mathbb N\ a_n:\mathbb N\twoheadrightarrow A_n$,
+then $\bigcup_{i\in\mathbb N}A_i$ is countable.
+\end{lemma}
+
+\begin{proof}
+
+Define
+\[
+h:\mathbb N\times\mathbb N \to \bigcup_{i\in\mathbb N}A_i
+\quad\text{by}\quad
+h(i,n)=a_i(n).
+\]
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{x\in \bigcup_{i\in\mathbb N}A_i}
+
+\open
+\have{2}{\exists i\in\mathbb N\ (x\in A_i)}
+\have{3}{\exists n\in\mathbb N\ a_i(n)=x}
+\have{4}{h(i,n)=x}
+\close
+
+\have{5}{h:\mathbb N\times\mathbb N\twoheadrightarrow \bigcup_{i\in\mathbb N}A_i}
+
+\have{6}{Countable(\mathbb N\times\mathbb N)}
+\have{7}{Countable(\bigcup_{i\in\mathbb N}A_i)}
+
+\end{fitchproof}
+
+\end{proof}
+
 \begin{lemma} if ``$A$'' is countable set then ``$\bigcup_{n \in \mathbb{N}} A^n$'' is  countable.\\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
+\begin{lemma}
+If $A$ is countable, then $\bigcup_{n\in\mathbb N}A^n$ is countable.
+\end{lemma}
+
+\begin{proof}
+
+For each $n>0$ define $A^n=A\times\cdots\times A$ ($n$-times).
+
+Since $A$ is countable, we have $\forall n>0\ A^n$ is countable.
+
+Define
+\[
+B_n := A^n.
+\]
+
+Then $(B_n)_{n\in\mathbb N}$ is a family of countable sets.
+
+For each $n$ choose a surjection
+\[
+a_n:\mathbb N\twoheadrightarrow B_n.
+\]
+
+Define
+\[
+h:\mathbb N\times\mathbb N \to \bigcup_{n\in\mathbb N}A^n
+\quad\text{by}\quad
+h(n,k)=a_n(k).
+\]
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{x\in \bigcup_{n\in\mathbb N}A^n}
+
+\open
+\have{2}{\exists n\in\mathbb N\ (x\in A^n)}
+\have{3}{\exists k\in\mathbb N\ a_n(k)=x}
+\have{4}{h(n,k)=x}
+\close
+
+\have{5}{h:\mathbb N\times\mathbb N\twoheadrightarrow \bigcup_{n\in\mathbb N}A^n}
+
+\have{6}{Countable(\mathbb N\times\mathbb N)}
+\have{7}{Countable\Big(\bigcup_{n\in\mathbb N}A^n\Big)}
+
+\end{fitchproof}
+
+\end{proof}
+
 \begin{corollary} set of all finite subsets of countable set is countable.\\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{corollary}
+
+\begin{corollary}
+The set of all finite subsets of a countable set is countable.
+\end{corollary}
+
+\begin{proof}
+
+Let $A$ be countable and define
+\[
+\mathcal{F}(A):=\{F\subseteq A : F \text{ finite}\}.
+\]
+
+For each $n\in\mathbb N$ define
+\[
+\mathcal{F}_n(A):=\{F\subseteq A : |F|=n\}.
+\]
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{A^n \text{ is countable}}
+\have{2}{\{(a_1,\dots,a_n)\in A^n : a_i \text{ distinct}\} \text{ is countable}}
+
+\have{3}{\mathcal{F}_n(A) \text{ is countable}}
+
+\open
+\have{4}{F\in \mathcal{F}(A)}
+\have{5}{\exists n\in\mathbb N\ (F\in \mathcal{F}_n(A))}
+\close
+
+\have{6}{\mathcal{F}(A)=\bigcup_{n\in\mathbb N}\mathcal{F}_n(A)}
+
+\have{7}{\forall n\ \mathcal{F}_n(A)\text{ is countable}}
+
+\have{8}{\bigcup_{n\in\mathbb N}\mathcal{F}_n(A)\text{ is countable}}
+
+\have{9}{\mathcal{F}(A)\text{ is countable}}
+
+\end{fitchproof}
+
+\end{proof}
 
 \begin{corollary} $\mathbb{Z}$ and $\mathbb{Q}$ are countable.\\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
@@ -5841,34 +7030,32 @@ arithmetic. so properties are true for them.
 
 \chapter{hyperreal numbers($*\mathbb{N}  , *\mathbb{Z},*\mathbb{Q}    ,*\mathbb{R} $)  }
 
-
 \section{Filters}
 
-Filters are mathematical objects used to formalize the idea of
-``large subsets'' of a set.
+Filters are mathematical objects used to formalize the idea of ``large
+subsets'' of a set.
 
 \begin{definition}[Filter]
-Let $X$ be a nonempty set.
+    Let $X$ be a nonempty set.
 
-A \emph{filter} $\mathcal{F}$ on $X$ is a collection
-of subsets of $X$ such that:
+    A \emph{filter} $\mathcal{F}$ on $X$ is a collection of subsets of $X$ such
+    that:
 
-\begin{enumerate}
-    \item $\emptyset \notin \mathcal{F}$.
-    
-    \item $X \in \mathcal{F}$.
-    
-    \item If $A,B \in \mathcal{F}$, then
-    \[
-        A \cap B \in \mathcal{F}.
-    \]
-    
-    \item If $A \in \mathcal{F}$ and
-    $A \subseteq B \subseteq X$, then
-    \[
-        B \in \mathcal{F}.
-    \]
-\end{enumerate}
+    \begin{enumerate}
+        \item $\emptyset \notin \mathcal{F}$.
+
+        \item $X \in \mathcal{F}$.
+
+        \item If $A,B \in \mathcal{F}$, then
+              \[
+                  A \cap B \in \mathcal{F}.
+              \]
+
+        \item If $A \in \mathcal{F}$ and $A \subseteq B \subseteq X$, then
+              \[
+                  B \in \mathcal{F}.
+              \]
+    \end{enumerate}
 \end{definition}
 
 Intuitively:
@@ -5879,49 +7066,47 @@ Intuitively:
     \item Any superset of a large set is also large.
 \end{itemize}
 
-
-
 \begin{example}[Trivial Filter]
-For any set $X$,
-\[
-    \mathcal{F}=\{X\}
-\]
-is a filter.
+    For any set $X$,
+    \[
+        \mathcal{F}=\{X\}
+    \]
+    is a filter.
 \end{example}
 
 \begin{example}[Principal Filter]
-Fix $A \subseteq X$ with $A \neq \emptyset$.
+    Fix $A \subseteq X$ with $A \neq \emptyset$.
 
-Define
-\[
-    \mathcal{F}_A
-    =
-    \{B \subseteq X : A \subseteq B\}.
-\]
+    Define
+    \[
+        \mathcal{F}_A
+        =
+        \{B \subseteq X : A \subseteq B\}.
+    \]
 
-Then $\mathcal{F}_A$ is a filter on $X$.
+    Then $\mathcal{F}_A$ is a filter on $X$.
 
-This is called the \emph{principal filter generated by $A$}.
+    This is called the \emph{principal filter generated by $A$}.
 \end{example}
 
 \begin{example}[Fr\'echet Filter]
-Let $X=\mathbb{N}$.
+    Let $X=\mathbb{N}$.
 
-Define
-\[
-    \mathcal{F}
-    =
-    \{A \subseteq \mathbb{N}
-    :
-    \mathbb{N}\setminus A
-    \text{ is finite}\}.
-\]
+    Define
+    \[
+        \mathcal{F}
+        =
+        \{A \subseteq \mathbb{N}
+        :
+        \mathbb{N}\setminus A
+        \text{ is finite}\}.
+    \]
 
-Then $\mathcal{F}$ is a filter.
+    Then $\mathcal{F}$ is a filter.
 
-Its elements are the cofinite subsets of $\mathbb{N}$.
+    Its elements are the cofinite subsets of $\mathbb{N}$.
 
-This is called the \emph{Fr\'echet filter}.
+    This is called the \emph{Fr\'echet filter}.
 \end{example}
 
 \section{Ultrafilters}
@@ -5929,112 +7114,103 @@ This is called the \emph{Fr\'echet filter}.
 Ultrafilters are maximal filters.
 
 \begin{definition}[Ultrafilter]
-A filter $\mathcal{U}$ on $X$ is called an
-\emph{ultrafilter} if it is maximal among filters,
-that is:
+    A filter $\mathcal{U}$ on $X$ is called an
+    \emph{ultrafilter} if it is maximal among filters,
+    that is:
 
-Whenever $\mathcal{F}$ is a filter on $X$ and
-\[
-    \mathcal{U}\subseteq \mathcal{F},
-\]
-then
-\[
-    \mathcal{F}=\mathcal{U}.
-\]
+    Whenever $\mathcal{F}$ is a filter on $X$ and
+    \[
+        \mathcal{U}\subseteq \mathcal{F},
+    \]
+    then
+    \[
+        \mathcal{F}=\mathcal{U}.
+    \]
 \end{definition}
 
 There is a very important characterization of ultrafilters.
 
 \begin{theorem}[Ultrafilter Characterization]
-Let $\mathcal{U}$ be a filter on $X$.
+    Let $\mathcal{U}$ be a filter on $X$.
 
-Then $\mathcal{U}$ is an ultrafilter if and only if
-for every subset $A \subseteq X$,
-exactly one of the following holds:
-\[
-    A \in \mathcal{U},
-\]
-or
-\[
-    X\setminus A \in \mathcal{U}.
-\]
+    Then $\mathcal{U}$ is an ultrafilter if and only if for every subset $A
+        \subseteq X$, exactly one of the following holds:
+    \[
+        A \in \mathcal{U},
+    \]
+    or
+    \[
+        X\setminus A \in \mathcal{U}.
+    \]
 \end{theorem}
 
 So an ultrafilter makes a complete decision about every subset.
 
-
 \begin{example}
-Fix $x\in X$.
+    Fix $x\in X$.
 
-Define
-\[
-    \mathcal{U}_x
-    =
-    \{A\subseteq X : x\in A\}.
-\]
+    Define
+    \[
+        \mathcal{U}_x
+        =
+        \{A\subseteq X : x\in A\}.
+    \]
 
-Then $\mathcal{U}_x$ is an ultrafilter.
+    Then $\mathcal{U}_x$ is an ultrafilter.
 
-It is called the \emph{principal ultrafilter at $x$}.
+    It is called the \emph{principal ultrafilter at $x$}.
 \end{example}
 
 Proof:
 
 \begin{itemize}
-    \item If $A,B\in\mathcal{U}_x$, then $x\in A\cap B$,
-    so $A\cap B\in\mathcal{U}_x$.
-    
-    \item If $A\in\mathcal{U}_x$ and $A\subseteq B$,
-    then $x\in B$, so $B\in\mathcal{U}_x$.
-    
-    \item For every subset $A\subseteq X$,
-    either $x\in A$ or $x\notin A$.
-    
-    Hence either
-    \[
-        A\in\mathcal{U}_x
-    \]
-    or
-    \[
-        X\setminus A\in\mathcal{U}_x.
-    \]
+    \item If $A,B\in\mathcal{U}_x$, then $x\in A\cap B$, so $A\cap B\in\mathcal{U}_x$.
+
+    \item If $A\in\mathcal{U}_x$ and $A\subseteq B$, then $x\in B$, so
+          $B\in\mathcal{U}_x$.
+
+    \item For every subset $A\subseteq X$, either $x\in A$ or $x\notin A$.
+
+          Hence either
+          \[
+              A\in\mathcal{U}_x
+          \]
+          or
+          \[
+              X\setminus A\in\mathcal{U}_x.
+          \]
 \end{itemize}
 
 Therefore $\mathcal{U}_x$ is an ultrafilter.
 
 \section{Nonprincipal Ultrafilters}
 
-An ultrafilter on $\mathbb{N}$ is called
-\emph{nonprincipal} if it contains no finite set.
+An ultrafilter on $\mathbb{N}$ is called \emph{nonprincipal} if it contains no
+finite set.
 
 Equivalently, it extends the Fr\'echet filter.
 
-Nonprincipal ultrafilters cannot be explicitly constructed
-in ordinary mathematics; their existence usually requires
-the Axiom of Choice.
+Nonprincipal ultrafilters cannot be explicitly constructed in ordinary
+mathematics; their existence usually requires the Axiom of Choice.
 
-
-
-
-  
 \begin{definition}[Extension of a Filter]
-Let $\mathcal{F}$ and $\mathcal{G}$ be filters on a set $X$.
+    Let $\mathcal{F}$ and $\mathcal{G}$ be filters on a set $X$.
 
-We say that $\mathcal{G}$ extends $\mathcal{F}$ if
-\[
-    \mathcal{F}\subseteq \mathcal{G}.
-\]
+    We say that $\mathcal{G}$ extends $\mathcal{F}$ if
+    \[
+        \mathcal{F}\subseteq \mathcal{G}.
+    \]
 
-This means every set considered ``large'' by $\mathcal{F}$
-is also considered ``large'' by $\mathcal{G}$.
+    This means every set considered ``large'' by $\mathcal{F}$ is also considered
+    ``large'' by $\mathcal{G}$.
 \end{definition}
 
 \begin{theorem}[Ultrafilter Lemma]
-Every filter on a set $X$ can be extended to an ultrafilter.
+    Every filter on a set $X$ can be extended to an ultrafilter.
 \end{theorem}
 
-In other words, if $\mathcal{F}$ is a filter on $X$,
-then there exists an ultrafilter $\mathcal{U}$ such that
+In other words, if $\mathcal{F}$ is a filter on $X$, then there exists an
+ultrafilter $\mathcal{U}$ such that
 \[
     \mathcal{F}\subseteq \mathcal{U}.
 \]
@@ -6042,43 +7218,41 @@ then there exists an ultrafilter $\mathcal{U}$ such that
 So every filter can be enlarged until it becomes maximal.
 
 \begin{example}
-Let
-\[
-    \mathcal{F}
-    =
-    \{A\subseteq\mathbb{N}:
-    \mathbb{N}\setminus A
-    \text{ is finite}\}.
-\]
+    Let
+    \[
+        \mathcal{F}
+        =
+        \{A\subseteq\mathbb{N}:
+        \mathbb{N}\setminus A
+        \text{ is finite}\}.
+    \]
 
-This is the Fr\'echet filter.
+    This is the Fr\'echet filter.
 
-It is not an ultrafilter, because for example neither
-the set of even numbers
-\[
-    E=\{0,2,4,6,\dots\}
-\]
-nor its complement
-\[
-    \mathbb{N}\setminus E
-\]
-belongs to $\mathcal{F}$.
+    It is not an ultrafilter, because for example neither the set of even numbers
+    \[
+        E=\{0,2,4,6,\dots\}
+    \]
+    nor its complement
+    \[
+        \mathbb{N}\setminus E
+    \]
+    belongs to $\mathcal{F}$.
 
-By the Ultrafilter Lemma, there exists an ultrafilter
-$\mathcal{U}$ such that
-\[
-    \mathcal{F}\subseteq\mathcal{U}.
-\]
+    By the Ultrafilter Lemma, there exists an ultrafilter $\mathcal{U}$ such that
+    \[
+        \mathcal{F}\subseteq\mathcal{U}.
+    \]
 
-Since $\mathcal{U}$ is an ultrafilter, exactly one of
-\[
-    E\in\mathcal{U}
-\]
-or
-\[
-    \mathbb{N}\setminus E\in\mathcal{U}
-\]
-must hold.
+    Since $\mathcal{U}$ is an ultrafilter, exactly one of
+    \[
+        E\in\mathcal{U}
+    \]
+    or
+    \[
+        \mathbb{N}\setminus E\in\mathcal{U}
+    \]
+    must hold.
 \end{example}
 
 The theorem is usually proved using Zorn's Lemma.
@@ -6097,680 +7271,504 @@ We order $\mathcal{P}$ by inclusion.
 
 The idea is:
 
-
-
 \begin{theorem}[Ultrafilter Lemma]
-Let $\mathcal{F}$ be a filter on a set $X$.
+    Let $\mathcal{F}$ be a filter on a set $X$.
 
-Then there exists an ultrafilter $\mathcal{U}$ on $X$
-such that
-\[
-    \mathcal{F}\subseteq\mathcal{U}.
-\]
+    Then there exists an ultrafilter $\mathcal{U}$ on $X$ such that
+    \[
+        \mathcal{F}\subseteq\mathcal{U}.
+    \]
 \end{theorem}
 
 \begin{proof}
-Let
-\[
-    \mathcal{P}
-    =
-    \{
+    Let
+    \[
+        \mathcal{P}
+        =
+        \{
         \mathcal{G}
         :
         \mathcal{G}
         \text{ is a filter on }X
         \text{ and }
         \mathcal{F}\subseteq\mathcal{G}
-    \}.
-\]
+        \}.
+    \]
 
-We partially order $\mathcal{P}$ by inclusion.
+    We partially order $\mathcal{P}$ by inclusion.
 
-We will apply Zorn's Lemma.
+    We will apply Zorn's Lemma.
 
-So let
-\[
-    \mathcal{C}\subseteq\mathcal{P}
-\]
-be a chain.
+    So let
+    \[
+        \mathcal{C}\subseteq\mathcal{P}
+    \]
+    be a chain.
 
-Define
-\[
-    \mathcal{H}
-    =
-    \bigcup_{\mathcal{G}\in\mathcal{C}}
-    \mathcal{G}.
-\]
+    Define
+    \[
+        \mathcal{H}
+        =
+        \bigcup_{\mathcal{G}\in\mathcal{C}}
+        \mathcal{G}.
+    \]
 
-We show that $\mathcal{H}$ is a filter.
+    We show that $\mathcal{H}$ is a filter.
 
-First,
-\[
-    \emptyset\notin\mathcal{H},
-\]
-because no filter in $\mathcal{C}$ contains $\emptyset$.
+    First,
+    \[
+        \emptyset\notin\mathcal{H},
+    \]
+    because no filter in $\mathcal{C}$ contains $\emptyset$.
 
-Also,
-\[
-    X\in\mathcal{H},
-\]
-since every filter contains $X$.
+    Also,
+    \[
+        X\in\mathcal{H},
+    \]
+    since every filter contains $X$.
 
-Now let
-\[
-    A,B\in\mathcal{H}.
-\]
+    Now let
+    \[
+        A,B\in\mathcal{H}.
+    \]
 
-Then there exist
-\[
-    \mathcal{G}_1,\mathcal{G}_2\in\mathcal{C}
-\]
-such that
-\[
-    A\in\mathcal{G}_1,
-    \qquad
-    B\in\mathcal{G}_2.
-\]
+    Then there exist
+    \[
+        \mathcal{G}_1,\mathcal{G}_2\in\mathcal{C}
+    \]
+    such that
+    \[
+        A\in\mathcal{G}_1,
+        \qquad
+        B\in\mathcal{G}_2.
+    \]
 
-Because $\mathcal{C}$ is a chain, either
-\[
-    \mathcal{G}_1\subseteq\mathcal{G}_2
-\]
-or
-\[
-    \mathcal{G}_2\subseteq\mathcal{G}_1.
-\]
+    Because $\mathcal{C}$ is a chain, either
+    \[
+        \mathcal{G}_1\subseteq\mathcal{G}_2
+    \]
+    or
+    \[
+        \mathcal{G}_2\subseteq\mathcal{G}_1.
+    \]
 
-Without loss of generality, suppose
-\[
-    \mathcal{G}_1\subseteq\mathcal{G}_2.
-\]
+    Without loss of generality, suppose
+    \[
+        \mathcal{G}_1\subseteq\mathcal{G}_2.
+    \]
 
-Then
-\[
-    A,B\in\mathcal{G}_2.
-\]
+    Then
+    \[
+        A,B\in\mathcal{G}_2.
+    \]
 
-Since $\mathcal{G}_2$ is a filter,
-\[
-    A\cap B\in\mathcal{G}_2\subseteq\mathcal{H}.
-\]
+    Since $\mathcal{G}_2$ is a filter,
+    \[
+        A\cap B\in\mathcal{G}_2\subseteq\mathcal{H}.
+    \]
 
-Thus $\mathcal{H}$ is closed under finite intersections.
+    Thus $\mathcal{H}$ is closed under finite intersections.
 
-Next, suppose
-\[
-    A\in\mathcal{H}
-\]
-and
-\[
-    A\subseteq B\subseteq X.
-\]
+    Next, suppose
+    \[
+        A\in\mathcal{H}
+    \]
+    and
+    \[
+        A\subseteq B\subseteq X.
+    \]
 
-Then
-\[
-    A\in\mathcal{G}
-\]
-for some
-\[
-    \mathcal{G}\in\mathcal{C}.
-\]
+    Then
+    \[
+        A\in\mathcal{G}
+    \]
+    for some
+    \[
+        \mathcal{G}\in\mathcal{C}.
+    \]
 
-Since $\mathcal{G}$ is a filter,
-\[
-    B\in\mathcal{G}\subseteq\mathcal{H}.
-\]
+    Since $\mathcal{G}$ is a filter,
+    \[
+        B\in\mathcal{G}\subseteq\mathcal{H}.
+    \]
 
-Therefore $\mathcal{H}$ is a filter.
+    Therefore $\mathcal{H}$ is a filter.
 
-Also, every element of $\mathcal{C}$ contains $\mathcal{F}$,
-so
-\[
-    \mathcal{F}\subseteq\mathcal{H}.
-\]
+    Also, every element of $\mathcal{C}$ contains $\mathcal{F}$, so
+    \[
+        \mathcal{F}\subseteq\mathcal{H}.
+    \]
 
-Hence
-\[
-    \mathcal{H}\in\mathcal{P}.
-\]
+    Hence
+    \[
+        \mathcal{H}\in\mathcal{P}.
+    \]
 
-Thus every chain in $\mathcal{P}$ has an upper bound.
+    Thus every chain in $\mathcal{P}$ has an upper bound.
 
-By Zorn's Lemma, $\mathcal{P}$ has a maximal element,
-say $\mathcal{U}$.
+    By Zorn's Lemma, $\mathcal{P}$ has a maximal element, say $\mathcal{U}$.
 
-We claim that $\mathcal{U}$ is an ultrafilter.
+    We claim that $\mathcal{U}$ is an ultrafilter.
 
-Suppose $\mathcal{U}\subseteq\mathcal{V}$,
-where $\mathcal{V}$ is a filter on $X$.
+    Suppose $\mathcal{U}\subseteq\mathcal{V}$, where $\mathcal{V}$ is a filter on
+    $X$.
 
-Since
-\[
-    \mathcal{F}\subseteq\mathcal{U}\subseteq\mathcal{V},
-\]
-we have
-\[
-    \mathcal{V}\in\mathcal{P}.
-\]
+    Since
+    \[
+        \mathcal{F}\subseteq\mathcal{U}\subseteq\mathcal{V},
+    \]
+    we have
+    \[
+        \mathcal{V}\in\mathcal{P}.
+    \]
 
-But $\mathcal{U}$ is maximal in $\mathcal{P}$, so
-\[
-    \mathcal{V}=\mathcal{U}.
-\]
+    But $\mathcal{U}$ is maximal in $\mathcal{P}$, so
+    \[
+        \mathcal{V}=\mathcal{U}.
+    \]
 
-Therefore $\mathcal{U}$ is an ultrafilter extending
-$\mathcal{F}$.
+    Therefore $\mathcal{U}$ is an ultrafilter extending $\mathcal{F}$.
 \end{proof}
 
-
-
-
 \begin{theorem}
-Let $\mathcal{U}$ be a nonprincipal ultrafilter on
-$\mathbb{N}$.
+    Let $\mathcal{U}$ be a nonprincipal ultrafilter on
+    $\mathbb{N}$.
 
-Then
-\[
-    \mathcal{F}_{\mathrm{Fr}}
-    \subseteq
-    \mathcal{U}.
-\]
+    Then
+    \[
+        \mathcal{F}_{\mathrm{Fr}}
+        \subseteq
+        \mathcal{U}.
+    \]
 
-That is, every cofinite subset of $\mathbb{N}$
-belongs to $\mathcal{U}$.
+    That is, every cofinite subset of $\mathbb{N}$ belongs to $\mathcal{U}$.
 \end{theorem}
 
 \begin{proof}
-Let
-\[
-    A\in\mathcal{F}_{\mathrm{Fr}}.
-\]
+    Let
+    \[
+        A\in\mathcal{F}_{\mathrm{Fr}}.
+    \]
 
-Then
-\[
-    \mathbb{N}\setminus A
-\]
-is finite.
+    Then
+    \[
+        \mathbb{N}\setminus A
+    \]
+    is finite.
 
-Suppose, toward a contradiction, that
-\[
-    A\notin\mathcal{U}.
-\]
+    Suppose, toward a contradiction, that
+    \[
+        A\notin\mathcal{U}.
+    \]
 
-Since $\mathcal{U}$ is an ultrafilter,
-exactly one of
-\[
-    A\in\mathcal{U}
-\]
-or
-\[
-    \mathbb{N}\setminus A\in\mathcal{U}
-\]
-holds.
+    Since $\mathcal{U}$ is an ultrafilter, exactly one of
+    \[
+        A\in\mathcal{U}
+    \]
+    or
+    \[
+        \mathbb{N}\setminus A\in\mathcal{U}
+    \]
+    holds.
 
-Therefore
-\[
-    \mathbb{N}\setminus A\in\mathcal{U}.
-\]
+    Therefore
+    \[
+        \mathbb{N}\setminus A\in\mathcal{U}.
+    \]
 
-But
-\[
-    \mathbb{N}\setminus A
-\]
-is finite.
+    But
+    \[
+        \mathbb{N}\setminus A
+    \]
+    is finite.
 
-Hence $\mathcal{U}$ contains a finite set.
+    Hence $\mathcal{U}$ contains a finite set.
 
-We show this implies that $\mathcal{U}$ is principal.
+    We show this implies that $\mathcal{U}$ is principal.
 
-Let
-\[
-    F=\{n_1,\dots,n_k\}\in\mathcal{U}.
-\]
+    Let
+    \[
+        F=\{n_1,\dots,n_k\}\in\mathcal{U}.
+    \]
 
-Since
-\[
-    F=n_1\cup\cdots\cup n_k,
-\]
-if no singleton $\{n_i\}$ belonged to $\mathcal{U}$,
-then for every $i$ we would have
-\[
-    \mathbb{N}\setminus\{n_i\}\in\mathcal{U},
-\]
-because $\mathcal{U}$ is an ultrafilter.
+    Since
+    \[
+        F=n_1\cup\cdots\cup n_k,
+    \]
+    if no singleton $\{n_i\}$ belonged to $\mathcal{U}$, then for every $i$ we
+    would have
+    \[
+        \mathbb{N}\setminus\{n_i\}\in\mathcal{U},
+    \]
+    because $\mathcal{U}$ is an ultrafilter.
 
-Since filters are closed under finite intersections,
-\[
-    \bigcap_{i=1}^k
-    \left(
+    Since filters are closed under finite intersections,
+    \[
+        \bigcap_{i=1}^k
+        \left(
         \mathbb{N}\setminus\{n_i\}
-    \right)
-    \in\mathcal{U}.
-\]
+        \right)
+        \in\mathcal{U}.
+    \]
 
-But
-\[
-    \bigcap_{i=1}^k
-    \left(
+    But
+    \[
+        \bigcap_{i=1}^k
+        \left(
         \mathbb{N}\setminus\{n_i\}
-    \right)
-    =
-    \mathbb{N}\setminus F.
-\]
+        \right)
+        =
+        \mathbb{N}\setminus F.
+    \]
 
-Thus
-\[
-    \mathbb{N}\setminus F\in\mathcal{U}.
-\]
+    Thus
+    \[
+        \mathbb{N}\setminus F\in\mathcal{U}.
+    \]
 
-Since also
-\[
-    F\in\mathcal{U},
-\]
-we obtain
-\[
-    F\cap
-    (\mathbb{N}\setminus F)
-    =
-    \emptyset
-    \in\mathcal{U},
-\]
-contradicting the definition of a filter.
+    Since also
+    \[
+        F\in\mathcal{U},
+    \]
+    we obtain
+    \[
+        F\cap
+        (\mathbb{N}\setminus F)
+        =
+        \emptyset
+        \in\mathcal{U},
+    \]
+    contradicting the definition of a filter.
 
-Therefore
-\[
-    \{n_i\}\in\mathcal{U}
-\]
-for some $i$.
+    Therefore
+    \[
+        \{n_i\}\in\mathcal{U}
+    \]
+    for some $i$.
 
-Hence $\mathcal{U}$ is principal, contradiction.
+    Hence $\mathcal{U}$ is principal, contradiction.
 
-Therefore
-\[
-    A\in\mathcal{U}.
-\]
+    Therefore
+    \[
+        A\in\mathcal{U}.
+    \]
 
-Since $A$ was arbitrary,
-\[
-    \mathcal{F}_{\mathrm{Fr}}
-    \subseteq
-    \mathcal{U}.
-\]
+    Since $A$ was arbitrary,
+    \[
+        \mathcal{F}_{\mathrm{Fr}}
+        \subseteq
+        \mathcal{U}.
+    \]
 \end{proof}
 
 \section{Definition of ($*\mathbb{N}  , *\mathbb{Z},*\mathbb{Q}    ,*\mathbb{R} $)  }
 
 \begin{definition}[Ultrapower Construction]
-Let $X$ be a set and let $\mathcal{U}$ be an ultrafilter
-on $\mathbb{N}$.
+    Let $X$ be a set and let $\mathcal{U}$ be a nonprincipal
+    ultrafilter on $\omega$.
 
-Consider the set
-\[
-    X^{\mathbb{N}}
-\]
-of all sequences
-\[
-    (x_n)_{n\in\mathbb{N}}
-\]
-with terms in $X$.
+    Consider the set
+    \[
+        X^\omega
+    \]
+    of all functions
+    \[
+        a:\omega\to X.
+    \]
 
-Define a relation $\sim$ on $X^{\mathbb{N}}$ by
-\[
-    (x_n)\sim(y_n)
-\]
-if
-\[
-    \{n\in\mathbb{N}:x_n=y_n\}\in\mathcal{U}.
-\]
+    We usually write such a function as
+    \[
+        a=(a_i)_{i\in\omega},
+    \]
+    where
+    \[
+        a_i\in X
+    \]
+    for every
+    \[
+        i\in\omega.
+    \]
+\end{definition}
+
+\begin{definition}
+    Define a relation $\sim$ on $X^\omega$ by
+    \[
+        a\sim b
+    \]
+    if
+    \[
+        \{i\in\omega:a_i=b_i\}\in\mathcal{U}.
+    \]
+
+    In words, two sequences are equivalent if they agree on a set of indices
+    belonging to the ultrafilter.
 \end{definition}
 
 \begin{theorem}
-The relation $\sim$ is an equivalence relation on
-$X^{\mathbb{N}}$.
+    The relation $\sim$ is an equivalence relation on
+    $X^\omega$.
 \end{theorem}
 
 \begin{proof}
-We verify the three properties.
+    We verify reflexivity, symmetry, and transitivity.
 
-\medskip
+    \medskip
 
-\noindent
-\textbf{Reflexivity.}
-For every sequence $(x_n)$,
-\[
-    \{n:x_n=x_n\}=\mathbb{N}.
-\]
+    \noindent
+    \textbf{Reflexivity.}
+    Let
+    \[
+        a\in X^\omega.
+    \]
 
-Since every ultrafilter contains $\mathbb{N}$,
-\[
-    (x_n)\sim(x_n).
-\]
+    Then
+    \[
+        \{i\in\omega:a_i=a_i\}=\omega.
+    \]
 
-\medskip
+    Since every ultrafilter contains $\omega$,
+    \[
+        a\sim a.
+    \]
 
-\noindent
-\textbf{Symmetry.}
-Suppose
-\[
-    (x_n)\sim(y_n).
-\]
+    \medskip
 
-Then
-\[
-    \{n:x_n=y_n\}\in\mathcal{U}.
-\]
+    \noindent
+    \textbf{Symmetry.}
+    Suppose
+    \[
+        a\sim b.
+    \]
 
-But
-\[
-    \{n:x_n=y_n\}
-    =
-    \{n:y_n=x_n\},
-\]
-so
-\[
-    (y_n)\sim(x_n).
-\]
+    Then
+    \[
+        \{i\in\omega:a_i=b_i\}\in\mathcal{U}.
+    \]
 
-\medskip
+    But
+    \[
+        \{i\in\omega:a_i=b_i\}
+        =
+        \{i\in\omega:b_i=a_i\},
+    \]
+    hence
+    \[
+        b\sim a.
+    \]
 
-\noindent
-\textbf{Transitivity.}
-Suppose
-\[
-    (x_n)\sim(y_n)
-\]
-and
-\[
-    (y_n)\sim(z_n).
-\]
+    \medskip
 
-Then
-\[
-    A=\{n:x_n=y_n\}\in\mathcal{U},
-\]
-and
-\[
-    B=\{n:y_n=z_n\}\in\mathcal{U}.
-\]
+    \noindent
+    \textbf{Transitivity.}
+    Suppose
+    \[
+        a\sim b
+    \]
+    and
+    \[
+        b\sim c.
+    \]
 
-Since $\mathcal{U}$ is a filter,
-\[
-    A\cap B\in\mathcal{U}.
-\]
+    Then
+    \[
+        A=\{i\in\omega:a_i=b_i\}\in\mathcal{U},
+    \]
+    and
+    \[
+        B=\{i\in\omega:b_i=c_i\}\in\mathcal{U}.
+    \]
 
-For every
-\[
-    n\in A\cap B,
-\]
-we have
-\[
-    x_n=y_n
-    \quad\text{and}\quad
-    y_n=z_n,
-\]
-hence
-\[
-    x_n=z_n.
-\]
+    Since $\mathcal{U}$ is a filter,
+    \[
+        A\cap B\in\mathcal{U}.
+    \]
 
-Therefore
-\[
-    A\cap B
-    \subseteq
-    \{n:x_n=z_n\}.
-\]
+    If
+    \[
+        i\in A\cap B,
+    \]
+    then
+    \[
+        a_i=b_i
+        \quad\text{and}\quad
+        b_i=c_i,
+    \]
+    so
+    \[
+        a_i=c_i.
+    \]
 
-Since ultrafilters are closed upward,
-\[
-    \{n:x_n=z_n\}\in\mathcal{U}.
-\]
+    Thus
+    \[
+        A\cap B
+        \subseteq
+        \{i\in\omega:a_i=c_i\}.
+    \]
 
-Thus
-\[
-    (x_n)\sim(z_n).
-\]
+    Since ultrafilters are closed upward,
+    \[
+        \{i\in\omega:a_i=c_i\}\in\mathcal{U}.
+    \]
+
+    Therefore
+    \[
+        a\sim c.
+    \]
 \end{proof}
 
 \begin{definition}
-The quotient set
-\[
-    X^{\mathbb{N}}/\sim
-\]
-is called the \emph{ultrapower} of $X$ by $\mathcal{U}$.
+    The quotient
+    \[
+        X^\omega/\sim
+    \]
+    is called the \emph{ultrapower} of $X$ modulo $\mathcal{U}$.
 
-Its elements are equivalence classes
-\[
-    [(x_n)].
-\]
+    The equivalence class of
+    \[
+        a\in X^\omega
+    \]
+    is denoted by
+    \[
+        [a].
+    \]
 \end{definition}
 
-When $X$ has algebraic operations or an order relation,
-they are defined componentwise on the ultrapower.
+We now apply this construction to the standard number systems.
 
-For example,
-\[
-    [(x_n)]+[(y_n)]
-    =
-    [(x_n+y_n)].
-\]
-
-Similarly,
-\[
-    [(x_n)]<[(y_n)]
-\]
-means
-\[
-    \{n:x_n<y_n\}\in\mathcal{U}.
-\]
-
-\begin{definition}[Ultrapower Construction]
-Let $X$ be a set and let $\mathcal{U}$ be a nonprincipal
-ultrafilter on $\omega$.
-
-Consider the set
-\[
-    X^\omega
-\]
-of all functions
-\[
-    a:\omega\to X.
-\]
-
-We usually write such a function as
-\[
-    a=(a_i)_{i\in\omega},
-\]
-where
-\[
-    a_i\in X
-\]
-for every
-\[
-    i\in\omega.
-\]
+\begin{definition}
+    The set of hypernatural numbers is
+    \[
+        {}^\ast\mathbb{N}
+        =
+        \mathbb{N}^\omega/\sim.
+    \]
 \end{definition}
 
 \begin{definition}
-Define a relation $\sim$ on $X^\omega$ by
-\[
-    a\sim b
-\]
-if
-\[
-    \{i\in\omega:a_i=b_i\}\in\mathcal{U}.
-\]
-
-In words, two sequences are equivalent if they agree
-on a set of indices belonging to the ultrafilter.
-\end{definition}
-
-\begin{theorem}
-The relation $\sim$ is an equivalence relation on
-$X^\omega$.
-\end{theorem}
-
-\begin{proof}
-We verify reflexivity, symmetry, and transitivity.
-
-\medskip
-
-\noindent
-\textbf{Reflexivity.}
-Let
-\[
-    a\in X^\omega.
-\]
-
-Then
-\[
-    \{i\in\omega:a_i=a_i\}=\omega.
-\]
-
-Since every ultrafilter contains $\omega$,
-\[
-    a\sim a.
-\]
-
-\medskip
-
-\noindent
-\textbf{Symmetry.}
-Suppose
-\[
-    a\sim b.
-\]
-
-Then
-\[
-    \{i\in\omega:a_i=b_i\}\in\mathcal{U}.
-\]
-
-But
-\[
-    \{i\in\omega:a_i=b_i\}
-    =
-    \{i\in\omega:b_i=a_i\},
-\]
-hence
-\[
-    b\sim a.
-\]
-
-\medskip
-
-\noindent
-\textbf{Transitivity.}
-Suppose
-\[
-    a\sim b
-\]
-and
-\[
-    b\sim c.
-\]
-
-Then
-\[
-    A=\{i\in\omega:a_i=b_i\}\in\mathcal{U},
-\]
-and
-\[
-    B=\{i\in\omega:b_i=c_i\}\in\mathcal{U}.
-\]
-
-Since $\mathcal{U}$ is a filter,
-\[
-    A\cap B\in\mathcal{U}.
-\]
-
-If
-\[
-    i\in A\cap B,
-\]
-then
-\[
-    a_i=b_i
-    \quad\text{and}\quad
-    b_i=c_i,
-\]
-so
-\[
-    a_i=c_i.
-\]
-
-Thus
-\[
-    A\cap B
-    \subseteq
-    \{i\in\omega:a_i=c_i\}.
-\]
-
-Since ultrafilters are closed upward,
-\[
-    \{i\in\omega:a_i=c_i\}\in\mathcal{U}.
-\]
-
-Therefore
-\[
-    a\sim c.
-\]
-\end{proof}
-
-\begin{definition}
-The quotient
-\[
-    X^\omega/\sim
-\]
-is called the \emph{ultrapower} of $X$ modulo
-$\mathcal{U}$.
-
-The equivalence class of
-\[
-    a\in X^\omega
-\]
-is denoted by
-\[
-    [a].
-\]
-\end{definition}
-
-We now apply this construction to the standard number
-systems.
-
-\begin{definition}
-The set of hypernatural numbers is
-\[
-    {}^\ast\mathbb{N}
-    =
-    \mathbb{N}^\omega/\sim.
-\]
+    The set of hyperintegers is
+    \[
+        {}^\ast\mathbb{Z}
+        =
+        \mathbb{Z}^\omega/\sim.
+    \]
 \end{definition}
 
 \begin{definition}
-The set of hyperintegers is
-\[
-    {}^\ast\mathbb{Z}
-    =
-    \mathbb{Z}^\omega/\sim.
-\]
+    The set of hyperrational numbers is
+    \[
+        {}^\ast\mathbb{Q}
+        =
+        \mathbb{Q}^\omega/\sim.
+    \]
 \end{definition}
 
 \begin{definition}
-The set of hyperrational numbers is
-\[
-    {}^\ast\mathbb{Q}
-    =
-    \mathbb{Q}^\omega/\sim.
-\]
-\end{definition}
-
-\begin{definition}
-The set of hyperreal numbers is
-\[
-    {}^\ast\mathbb{R}
-    =
-    \mathbb{R}^\omega/\sim.
-\]
+    The set of hyperreal numbers is
+    \[
+        {}^\ast\mathbb{R}
+        =
+        \mathbb{R}^\omega/\sim.
+    \]
 \end{definition}
 
 The algebraic operations are defined componentwise.
@@ -6802,312 +7800,312 @@ if
 \]
 
 \begin{theorem}
-The standard structures
-\[
-    \mathbb{N},
-    \quad
-    \mathbb{Z},
-    \quad
-    \mathbb{Q},
-    \quad
-    \mathbb{R}
-\]
-embed into
-\[
-    {}^\ast\mathbb{N},
-    \quad
-    {}^\ast\mathbb{Z},
-    \quad
-    {}^\ast\mathbb{Q},
-    \quad
-    {}^\ast\mathbb{R},
-\]
-respectively.
+    The standard structures
+    \[
+        \mathbb{N},
+        \quad
+        \mathbb{Z},
+        \quad
+        \mathbb{Q},
+        \quad
+        \mathbb{R}
+    \]
+    embed into
+    \[
+        {}^\ast\mathbb{N},
+        \quad
+        {}^\ast\mathbb{Z},
+        \quad
+        {}^\ast\mathbb{Q},
+        \quad
+        {}^\ast\mathbb{R},
+    \]
+    respectively.
 \end{theorem}
 
 \begin{proof}
-We prove the statement for $\mathbb{R}$.
+    We prove the statement for $\mathbb{R}$.
 
-Define
-\[
-    \iota:\mathbb{R}\to{}^\ast\mathbb{R}
-\]
-by
-\[
-    \iota(r)=[(r,r,r,\dots)].
-\]
+    Define
+    \[
+        \iota:\mathbb{R}\to{}^\ast\mathbb{R}
+    \]
+    by
+    \[
+        \iota(r)=[(r,r,r,\dots)].
+    \]
 
-Suppose
-\[
-    \iota(r)=\iota(s).
-\]
+    Suppose
+    \[
+        \iota(r)=\iota(s).
+    \]
 
-Then
-\[
-    \{i\in\omega:r=s\}\in\mathcal{U}.
-\]
+    Then
+    \[
+        \{i\in\omega:r=s\}\in\mathcal{U}.
+    \]
 
-If
-\[
-    r\neq s,
-\]
-then
-\[
-    \{i\in\omega:r=s\}=\emptyset,
-\]
-which cannot belong to a filter.
+    If
+    \[
+        r\neq s,
+    \]
+    then
+    \[
+        \{i\in\omega:r=s\}=\emptyset,
+    \]
+    which cannot belong to a filter.
 
-Hence
-\[
-    r=s.
-\]
+    Hence
+    \[
+        r=s.
+    \]
 
-Therefore $\iota$ is injective.
+    Therefore $\iota$ is injective.
 \end{proof}
 
 \begin{example}
-Define
-\[
-    a_i=i
-\]
-for every
-\[
-    i\in\omega.
-\]
+    Define
+    \[
+        a_i=i
+    \]
+    for every
+    \[
+        i\in\omega.
+    \]
 
-Then
-\[
-    [a]\in{}^\ast\mathbb{N}
-\]
-is larger than every standard natural number.
+    Then
+    \[
+        [a]\in{}^\ast\mathbb{N}
+    \]
+    is larger than every standard natural number.
 
-Indeed, if
-\[
-    n\in\mathbb{N},
-\]
-then
-\[
-    \{i\in\omega:n<a_i\}
-    =
-    \{i\in\omega:n<i\}
-\]
-is cofinite, hence belongs to $\mathcal{U}$.
+    Indeed, if
+    \[
+        n\in\mathbb{N},
+    \]
+    then
+    \[
+        \{i\in\omega:n<a_i\}
+        =
+        \{i\in\omega:n<i\}
+    \]
+    is cofinite, hence belongs to $\mathcal{U}$.
 
-Therefore
-\[
-    n<[a].
-\]
+    Therefore
+    \[
+        n<[a].
+    \]
 \end{example}
-\begin{definition}
-Let $\mathcal{U}$ be a nonprincipal ultrafilter on
-$\mathbb{N}$.
 
-For sequences
+\section{Hyperreals: Great and Small}
+
+Throughout this chapter we work inside the hyperreal field ${}^\ast\mathbb{R}$
+constructed as an ultrapower of $\mathbb{R}$ with respect to a nonprincipal
+ultrafilter on $\omega$.
+
+Elements of ${}^\ast\mathbb{R}$ are written as
 \[
-    (a_n),(b_n)\in\mathbb{N}^{\mathbb{N}},
-\]
-define
-\[
-    (a_n)\sim(b_n)
-\]
-if
-\[
-    \{n\in\mathbb{N}:a_n=b_n\}\in\mathcal{U}.
+    [a], \quad a=(a_i)_{i\in\omega}, \quad a_i\in\mathbb{R}.
 \]
 
-This is an equivalence relation on
-$\mathbb{N}^{\mathbb{N}}$.
+\section{(Un)limited, Infinitesimal, and Appreciable Numbers}
+
+\begin{definition}[Limited and Unlimited]
+    Let $x\in{}^\ast\mathbb{R}$.
+
+    \begin{itemize}
+        \item $x$ is \emph{limited} if there exists $r\in\mathbb{R}$ such that
+              \[
+                  |x| < r.
+              \]
+
+        \item $x$ is \emph{unlimited} if it is not limited.
+    \end{itemize}
 \end{definition}
 
-\begin{definition}
-The set of \emph{hypernatural numbers} is
-\[
-    {}^\ast\mathbb{N}
-    =
-    \mathbb{N}^{\mathbb{N}}/\sim.
-\]
-
-An element of ${}^\ast\mathbb{N}$ is an equivalence class
-\[
-    [(a_n)].
-\]
+\begin{definition}[Infinitesimal]
+    An element $x\in{}^\ast\mathbb{R}$ is infinitesimal if
+    for every $r>0$ in $\mathbb{R}$,
+    \[
+        |x| < r.
+    \]
 \end{definition}
 
-Addition and multiplication are defined pointwise:
-\[
-    [(a_n)] + [(b_n)]
-    =
-    [(a_n+b_n)],
-\]
-and
-\[
-    [(a_n)]\cdot[(b_n)]
-    =
-    [(a_nb_n)].
-\]
-
-The order relation is defined by
-\[
-    [(a_n)]<[(b_n)]
-\]
-if
-\[
-    \{n\in\mathbb{N}:a_n<b_n\}\in\mathcal{U}.
-\]
+\begin{definition}[Appreciable]
+    An element $x\in{}^\ast\mathbb{R}$ is appreciable if it is
+    limited and not infinitesimal.
+\end{definition}
 
 \begin{example}
-Let
-\[
-    \omega=[(1,2,3,4,\dots)].
-\]
-
-Then for every standard
-\[
-    k\in\mathbb{N},
-\]
-we have
-\[
-    k<\omega.
-\]
-
-Indeed,
-\[
-    \{n:k<n\}
-\]
-is cofinite, hence belongs to $\mathcal{U}$.
+    Let
+    \[
+        \varepsilon = \left[\left(\frac{1}{i+1}\right)_{i\in\omega}\right].
+    \]
+    Then $\varepsilon$ is infinitesimal.
 \end{example}
 
-The same construction works for $\mathbb{Z}$,
-$\mathbb{Q}$, and $\mathbb{R}$.
+\section{Arithmetic of Hyperreals}
 
-\begin{definition}
-Define
-\[
-    {}^\ast\mathbb{Z}
-    =
-    \mathbb{Z}^{\mathbb{N}}/\sim,
-\]
-where
-\[
-    (a_n)\sim(b_n)
-\]
-means
-\[
-    \{n:a_n=b_n\}\in\mathcal{U}.
-\]
-\end{definition}
+Let $x=[a]$ and $y=[b]$ in ${}^\ast\mathbb{R}$.
 
-\begin{definition}
-Define
+Operations are defined componentwise:
 \[
-    {}^\ast\mathbb{Q}
-    =
-    \mathbb{Q}^{\mathbb{N}}/\sim.
-\]
-\end{definition}
-
-\begin{definition}
-Define
-\[
-    {}^\ast\mathbb{R}
-    =
-    \mathbb{R}^{\mathbb{N}}/\sim.
-\]
-\end{definition}
-
-Operations and order are again defined componentwise:
-\[
-    [(a_n)] + [(b_n)]
-    =
-    [(a_n+b_n)],
-\]
-\[
-    [(a_n)]\cdot[(b_n)]
-    =
-    [(a_nb_n)],
-\]
-and
-\[
-    [(a_n)]<[(b_n)]
-\]
-if
-\[
-    \{n:a_n<b_n\}\in\mathcal{U}.
+    x+y = [a_i+b_i]_{i\in\omega}, \qquad
+    x\cdot y = [a_i b_i]_{i\in\omega}.
 \]
 
-\begin{theorem}
-The maps
-\[
-    n\mapsto[(n,n,n,\dots)],
-\]
-\[
-    z\mapsto[(z,z,z,\dots)],
-\]
-\[
-    q\mapsto[(q,q,q,\dots)],
-\]
-and
-\[
-    r\mapsto[(r,r,r,\dots)]
-\]
-embed
-\[
-    \mathbb{N},
-    \quad
-    \mathbb{Z},
-    \quad
-    \mathbb{Q},
-    \quad
-    \mathbb{R}
-\]
-into
-\[
-    {}^\ast\mathbb{N},
-    \quad
-    {}^\ast\mathbb{Z},
-    \quad
-    {}^\ast\mathbb{Q},
-    \quad
-    {}^\ast\mathbb{R},
-\]
-respectively.
-\end{theorem}
+\begin{lemma}
+    The sum of two infinitesimals is infinitesimal.
+\end{lemma}
 
 \begin{proof}
-We prove the statement for $\mathbb{R}$.
-
-Define
-\[
-    \iota:\mathbb{R}\to{}^\ast\mathbb{R}
-\]
-by
-\[
-    \iota(r)=[(r,r,r,\dots)].
-\]
-
-Suppose
-\[
-    \iota(r)=\iota(s).
-\]
-
-Then
-\[
-    \{n:r=s\}\in\mathcal{U}.
-\]
-
-If $r\neq s$, then
-\[
-    \{n:r=s\}=\emptyset,
-\]
-which cannot belong to a filter.
-
-Hence
-\[
-    r=s.
-\]
-
-Therefore $\iota$ is injective.
+    Let $x,y$ be infinitesimal and $r>0$.
+    Then choose $r/2>0$. We have
+    \[
+        |x|<\frac{r}{2}, \quad |y|<\frac{r}{2}.
+    \]
+    Hence
+    \[
+        |x+y|\le |x|+|y|<r.
+    \]
+    So $x+y$ is infinitesimal.
 \end{proof}
+
+\begin{lemma}
+    The product of a limited number and an infinitesimal is infinitesimal.
+\end{lemma}
+
+\begin{proof}
+    Let $x$ be infinitesimal and $y$ limited.
+    Then $|y|<M$ for some $M\in\mathbb{R}$.
+
+    For any $r>0$, choose $\delta=\frac{r}{M+1}$. Since $x$ is infinitesimal,
+    $|x|<\delta$, hence
+    \[
+        |xy|<r.
+    \]
+    So $xy$ is infinitesimal.
+\end{proof}
+
+\section{On the Use of ``Finite'' and ``Infinite''}
+
+In ${}^\ast\mathbb{R}$ the terminology is interpreted as follows:
+
+\begin{itemize}
+    \item \textbf{Finite} means limited (bounded by a real number).
+    \item \textbf{Infinite} means unlimited (larger in magnitude than any real).
+\end{itemize}
+
+This distinction is relative to $\mathbb{R}$ inside ${}^\ast\mathbb{R}$: a
+number may be “finite” in this sense while still being nonstandard.
+
+\section{Halos, Galaxies, and Real Comparisons}
+
+Let $x,y\in{}^\ast\mathbb{R}$.
+
+\begin{definition}[Infinitesimal Closeness]
+    We say that $x$ is \emph{infinitely close} to $y$, and write
+    \[
+        x \approx y,
+    \]
+    if $x-y$ is infinitesimal.
+\end{definition}
+
+\begin{definition}[Halo]
+    The \emph{halo} of $x\in{}^\ast\mathbb{R}$ is the set
+    \[
+        \operatorname{hal}(x)=\{y\in{}^\ast\mathbb{R}: y\approx x\}.
+    \]
+\end{definition}
+
+\begin{definition}[Galaxy]
+    The \emph{galaxy} of $x\in{}^\ast\mathbb{R}$ is the set
+    \[
+        \operatorname{gal}(x)=\{y\in{}^\ast\mathbb{R}: x-y \text{ is limited}\}.
+    \]
+\end{definition}
+
+\begin{lemma}
+    Every halo is contained in a galaxy.
+\end{lemma}
+
+\begin{proof}
+    If $y\in\operatorname{hal}(x)$, then $x-y$ is infinitesimal,
+    hence limited. Therefore $y\in\operatorname{gal}(x)$.
+\end{proof}
+
+\begin{lemma}
+    For standard $r,s\in\mathbb{R}$,
+    \[
+        r \approx s \quad \Longleftrightarrow \quad r=s.
+    \]
+\end{lemma}
+
+\begin{proof}
+    If $r\approx s$, then $r-s$ is a real infinitesimal, hence $0$.
+    So $r=s$.
+\end{proof}
+
+\section{Exercises on Halos and Galaxies}
+
+\begin{enumerate}
+    \item Show that $x\approx y$ defines an equivalence relation.
+    \item Prove that halos partition ${}^\ast\mathbb{R}$.
+    \item Show that each galaxy is a union of halos.
+\end{enumerate}
+
+\section{Shadows}
+
+\begin{definition}[Standard Part]
+    If $x\in{}^\ast\mathbb{R}$ is limited, then there exists a unique
+    real number $r\in\mathbb{R}$ such that
+    \[
+        x \approx r.
+    \]
+    This $r$ is called the \emph{standard part} of $x$, denoted
+    \[
+        \operatorname{st}(x)=r.
+    \]
+\end{definition}
+
+\begin{lemma}
+    The standard part map is well-defined on limited hyperreals.
+\end{lemma}
+
+\begin{proof}
+    If $x\approx r$ and $x\approx s$ with $r,s\in\mathbb{R}$,
+    then $r-s$ is infinitesimal, hence $r=s$.
+\end{proof}
+
+\section{Exercises on Infinite Closeness}
+
+\begin{enumerate}
+    \item Show that if $x\approx y$ and $y\approx z$, then $x\approx z$.
+    \item Prove that $x\approx y$ implies $x+z\approx y+z$.
+    \item If $x\approx y$ and $z$ is limited, show $xz\approx yz$.
+\end{enumerate}
+
+\section{Shadows and Completeness}
+
+\begin{lemma}
+    Every limited $x\in{}^\ast\mathbb{R}$ is infinitely close to a unique real number.
+\end{lemma}
+
+\begin{proof}
+    This follows from the construction of ${}^\ast\mathbb{R}$
+    as an ultrapower and the fact that bounded sequences in $\mathbb{R}$
+    have a well-defined ultralimit modulo a nonprincipal ultrafilter.
+\end{proof}
+
+\section{Exercise on Dedekind Completeness}
+
+\begin{enumerate}
+    \item Show that $\mathbb{R}$ is Dedekind complete.
+    \item Use the standard part map to explain why every limited hyperreal has a shadow
+          in $\mathbb{R}$.
+    \item Compare this with completeness of ${}^\ast\mathbb{R}$ (is it Dedekind
+          complete?).
+\end{enumerate}
 
 \chapter{fantacy numbers($ \mathbb{Z} (Ord) , \mathbb{Q} (Ord) ,\mathbb{R} (Ord) ,\mathbb{C} (Ord)$) }
 

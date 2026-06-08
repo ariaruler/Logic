@@ -1,20 +1,21 @@
 # Fdb version 4
-["makeindex Logic.idx"] 1773506142.83854 "Logic.idx" "Logic.ind" "Logic" 1779535921.42137 0
-  "Logic.idx" 1779535916 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+["makeindex Logic.idx"] 1773506142.83854 "Logic.idx" "Logic.ind" "Logic" 1780927910.72826 0
+  "Logic.idx" 1780927905 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
   (generated)
   "Logic.ilg"
   "Logic.ind"
   (rewritten before read)
-["xdvipdfmx"] 1779535921.01972 "Logic.xdv" "Logic.pdf" "Logic" 1779535921.42562 0
-  "Logic.xdv" 1779535920 1093596 bf8682067f04d2171109ddd37f8b4b25 "xelatex"
+["xdvipdfmx"] 1780927910.30005 "Logic.xdv" "Logic.pdf" "Logic" 1780927910.73351 0
+  "Logic.xdv" 1780927910 1171028 d267457705906fc5364c0b15112b340e "xelatex"
   (generated)
   "Logic.pdf"
   (rewritten before read)
-["xelatex"] 1779535915.67056 "d:/pdf/Logic/Logic.tex" "Logic.xdv" "Logic" 1779535921.42148 0
+["xelatex"] 1780927905.25309 "d:/pdf/Logic/Logic.tex" "Logic.xdv" "Logic" 1780927910.72837 0
   "C:/Users/RayanPouya/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1726690372 37536304 2cb9bea4a9620edb01bdcfe51d65eb2e ""
   "D:/pdf/RStudio/latex/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136759654 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "D:/pdf/RStudio/latex/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "D:/pdf/RStudio/latex/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
+  "D:/pdf/RStudio/latex/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm" 1234365220 996 a18840b13b499c08ac2de96a99eda4bc ""
   "D:/pdf/RStudio/latex/fonts/tfm/public/amsfonts/euler/eufm10.tfm" 1233951852 1040 b84415f97d114011685943ade933dc71 ""
   "D:/pdf/RStudio/latex/fonts/tfm/public/amsfonts/euler/eufm5.tfm" 1233951852 1040 a9d2074f3fa062d4d9046b92e2334d8c ""
   "D:/pdf/RStudio/latex/fonts/tfm/public/amsfonts/euler/eufm7.tfm" 1233951852 1040 82eb6630b094bff824fccca83ff507f9 ""
@@ -28,13 +29,16 @@
   "D:/pdf/RStudio/latex/fonts/tfm/public/cm/cmmi12.tfm" 1136765053 1524 4414a8315f39513458b80dfc63bff03a ""
   "D:/pdf/RStudio/latex/fonts/tfm/public/cm/cmmi6.tfm" 1136765053 1512 f21f83efb36853c0b70002322c1ab3ad ""
   "D:/pdf/RStudio/latex/fonts/tfm/public/cm/cmmi8.tfm" 1136765053 1520 eccf95517727cb11801f4f1aee3a21b4 ""
+  "D:/pdf/RStudio/latex/fonts/tfm/public/cm/cmmi9.tfm" 1136765053 1524 d89e2d087a9828407a196f428428ef4a ""
   "D:/pdf/RStudio/latex/fonts/tfm/public/cm/cmr12.tfm" 1136765053 1288 655e228510b4c2a1abe905c368440826 ""
   "D:/pdf/RStudio/latex/fonts/tfm/public/cm/cmr17.tfm" 1136765053 1292 296a67155bdbfc32aa9c636f21e91433 ""
   "D:/pdf/RStudio/latex/fonts/tfm/public/cm/cmr6.tfm" 1136765053 1300 b62933e007d01cfd073f79b963c01526 ""
   "D:/pdf/RStudio/latex/fonts/tfm/public/cm/cmr8.tfm" 1136765053 1292 21c1c5bfeaebccffdb478fd231a0997d ""
+  "D:/pdf/RStudio/latex/fonts/tfm/public/cm/cmr9.tfm" 1136765053 1292 6b21b9c2c7bebb38aa2273f7ca0fb3af ""
   "D:/pdf/RStudio/latex/fonts/tfm/public/cm/cmsy10.tfm" 1136765053 1124 6c73e740cf17375f03eec0ee63599741 ""
   "D:/pdf/RStudio/latex/fonts/tfm/public/cm/cmsy6.tfm" 1136765053 1116 933a60c408fc0a863a92debe84b2d294 ""
   "D:/pdf/RStudio/latex/fonts/tfm/public/cm/cmsy8.tfm" 1136765053 1120 8b7d695260f3cff42e636090a8002094 ""
+  "D:/pdf/RStudio/latex/fonts/tfm/public/cm/cmsy9.tfm" 1136765053 1116 25a7bf822c58caf309a702ef79f4afbb ""
   "D:/pdf/RStudio/latex/tex/generic/atbegshi/atbegshi.sty" 1575571100 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "D:/pdf/RStudio/latex/tex/generic/bigintcalc/bigintcalc.sty" 1576433602 40635 c40361e206be584d448876bba8a64a3b ""
   "D:/pdf/RStudio/latex/tex/generic/bitset/bitset.sty" 1575926576 33961 6b5c75130e435b2bfdb9f480a09a39f9 ""
@@ -191,13 +195,13 @@
   "D:/pdf/RStudio/latex/tex/latex/twemojis/twemojis.sty" 1649148999 365308 f83b238af2ba6ee3863a4efa272f41c8 ""
   "D:/pdf/RStudio/latex/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "D:/pdf/RStudio/latex/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "Logic.aux" 1779535920 10710 d2fb3c3f3bb30066b3951a4d3469ba4f "xelatex"
+  "Logic.aux" 1780927910 10476 6af0c46f86cf5b8ea81e45d8c3f71453 "xelatex"
   "Logic.ind" 1773506143 0 d41d8cd98f00b204e9800998ecf8427e "makeindex Logic.idx"
-  "Logic.out" 1779535920 12225 4e23fc387ef23709280aa45463c0d917 "xelatex"
-  "Logic.tex" 1779535909 290020 a881c399e90cdae763115c1f069e4b48 ""
-  "Logic.toc" 1779535920 6293 192621bd112b3c5647a9da377bb7844f "xelatex"
+  "Logic.out" 1780927910 12365 b5610c5faedf11f49d2f8d77b0a953fe "xelatex"
+  "Logic.tex" 1780927899 323096 c57fba05aa5302b975e63bccc06d6b66 ""
+  "Logic.toc" 1780927910 6141 a6c8228929a2d612eff243ea3852c232 "xelatex"
   "R-Im-Dom (1).pdf" 1771233638 7419 c1582c39d92191940df593f07f25b211 ""
-  "d:/pdf/Logic/Logic.tex" 1779535909 290020 a881c399e90cdae763115c1f069e4b48 ""
+  "d:/pdf/Logic/Logic.tex" 1780927899 323096 c57fba05aa5302b975e63bccc06d6b66 ""
   "fitch.sty" 1702824496 10414 bb855575fc376ae11afeb3d4c92c18eb ""
   (generated)
   "Logic.aux"
