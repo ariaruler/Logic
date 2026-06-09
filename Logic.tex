@@ -3802,10 +3802,10 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
         \item       If $\forall x ,y ,z \in G \quad (x y ) z = x (y z ) $ (assosiative $\times$),
               $\mathfrak{G}$ is a \textbf{semigroup}.
         \item       If $\mathfrak{G}$ is a \textbf{semigroup} and $\forall x \in G \quad \exists y
-                  \in G \quad \forall x \in G \quad x y = y x = x$ (has identity $\times$), $\mathfrak{G}$ is a
-              \textbf{monoid}. you can prove for every \textbf{monoid} $\mathfrak{G}$
-              identity element is unique we denote it by ``$e$''(in $\times$ with ``$1$'' and
-              in $+$ with $0$). 
+                  \in G \quad \forall x \in G \quad x y = y x = x$ (has identity $\times$),
+              $\mathfrak{G}$ is a \textbf{monoid}. you can prove for every \textbf{monoid}
+              $\mathfrak{G}$ identity element is unique we denote it by ``$e$''(in $\times$
+              with ``$1$'' and in $+$ with $0$).
         \item       If $\mathfrak{G}$ is a \textbf{monoid} and $\forall x \in G \quad \exists y \in
                   G \quad x y = y x = e$ (has inverse $\times$), $\mathfrak{G}$ is a group.
         \item       If $\mathfrak{G}$ is a \textbf{semigroup/monoid} and $\forall x , y , z \in G
@@ -3820,180 +3820,170 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
 
 \end{definition}
 
-
 \begin{theorem}[Grothendieck Group Construction]
-Let $(S,+,0)$ be a cancellative commutative monoid.
+    Let $(S,+,0)$ be a cancellative commutative monoid.
 
-Then there exists an abelian group $G(S)$ together with a monoid mbedding
-\[
-\eta : S \longrightarrow G(S)
-\]
-such that for every abelian group $A$ and every monoid mbedding
-\[
-f : S \to A,
-\]
-there exists a unique group mbedding
-\[
-\tilde{f} : G(S) \to A
-\]
-satisfying
-\[
-\tilde{f} \circ \eta = f.
-\]
+    Then there exists an abelian group $G(S)$ together with a monoid mbedding
+    \[
+        \eta : S \longrightarrow G(S)
+    \]
+    such that for every abelian group $A$ and every monoid mbedding
+    \[
+        f : S \to A,
+    \]
+    there exists a unique group mbedding
+    \[
+        \tilde{f} : G(S) \to A
+    \]
+    satisfying
+    \[
+        \tilde{f} \circ \eta = f.
+    \]
 
-The canonical map is
-\[
-\eta(a) = [(a,0)].
-\]
+    The canonical map is
+    \[
+        \eta(a) = [(a,0)].
+    \]
 \end{theorem}
 
 \begin{proof}
 
-\textbf{Step 0: Define relation.}
+    \textbf{Step 0: Define relation.}
 
-Define a relation $\sim$ on $S \times S$ by
-\[
-(a,b) \sim (c,d) \iff a + d = b + c.
-\]
+    Define a relation $\sim$ on $S \times S$ by
+    \[
+        (a,b) \sim (c,d) \iff a + d = b + c.
+    \]
 
-\textbf{Claim 0: $\sim$ is an equivalence relation.}
+    \textbf{Claim 0: $\sim$ is an equivalence relation.}
 
+    \textbf{Reflexivity}
 
+    \begin{fitchproof}[arrayenv=tabular]
 
-\textbf{Reflexivity}
+        \open
+        \have{1}{(a,b)\in S\times S}
+        \have{2}{a + b = b + a}
+        \have{3}{(a,b)\sim(a,b)}
+        \close
 
-\begin{fitchproof}[arrayenv=tabular]
+    \end{fitchproof}
 
-\open
-\have{1}{(a,b)\in S\times S}
-\have{2}{a + b = b + a}
-\have{3}{(a,b)\sim(a,b)}
-\close
+    \textbf{Symmetry}
 
-\end{fitchproof}
+    \begin{fitchproof}[arrayenv=tabular]
 
+        \open
+        \have{1}{ (a,b)\sim(c,d)}
+        \have{2}{ a + d = b + c}
+        \have{3}{ c + b = d + a}
+        \have{4}{ (c,d)\sim(a,b)}
+        \close
 
+    \end{fitchproof}
 
-\textbf{Symmetry}
+    \textbf{Transitivity}
+    \begin{fitchproof}[arrayenv=tabular]
 
-\begin{fitchproof}[arrayenv=tabular]
+        \open
+        \have{1}{(a,b)\sim(c,d)}
+        \have{2}{(c,d)\sim(e,f)}
+        \have{1}{a + d = b + c}
+        \have{2}{c + f = d + e}
 
-\open
-\have{1}{ (a,b)\sim(c,d)}
-\have{2}{ a + d = b + c}
-\have{3}{ c + b = d + a}
-\have{4}{ (c,d)\sim(a,b)}
-\close
+        \have{3}{a + d + c + f = b + c + d + e} \by{add and combine}{1,2}
+        \have{4}{a + f + (c+d) = b + e + (c+d)} \by{rearrange}{3}
 
-\end{fitchproof}
+        \have{6}{a + f = b + e} \by{cancel $+(c+d)$}{4}
 
+        \have{7}{(a,b)\sim(e,f)}
+        \close
 
+    \end{fitchproof}
 
-\textbf{Transitivity}
-\begin{fitchproof}[arrayenv=tabular]
+    \textbf{Step 1: Define Grothendieck group}
 
-\open
-\have{1}{(a,b)\sim(c,d)}
-\have{2}{(c,d)\sim(e,f)}
-\have{1}{a + d = b + c}
-\have{2}{c + f = d + e}
+    \[
+        G(S) := (S \times S)/\sim,
+        \quad [(a,b)] \in G(S).
+    \]
 
-\have{3}{a + d + c + f = b + c + d + e} \by{add and combine}{1,2}
-\have{4}{a + f + (c+d) = b + e + (c+d)} \by{rearrange}{3}
+    % ---
 
+    \textbf{Step 2: Define operation}
 
-\have{6}{a + f = b + e} \by{cancel $+(c+d)$}{4}
+    \[
+        [(a,b)] + [(c,d)] := [(a+c, b+d)]
+    \]
 
-\have{7}{(a,b)\sim(e,f)}
-\close
+    \[
+        -[(a,b)] := [(b,a)]
+    \]
 
-\end{fitchproof}
+    ---
 
+    \textbf{Step 3: Well-definedness}
 
+    (Addition and inverse are well-defined by compatibility of $\sim$ with $+$.)
 
-\textbf{Step 1: Define Grothendieck group}
+    ---
 
-\[
-G(S) := (S \times S)/\sim,
-\quad [(a,b)] \in G(S).
-\]
+    \textbf{Step 4: Group structure}
 
-% ---
+    \begin{fitchproof}[arrayenv=tabular]
 
-\textbf{Step 2: Define operation}
+        \have{1}{[(a,b)] + [(b,a)] = [(a+b, a+b)]}
+        \have{2}{[(a+b,a+b)] = 0}
+        \have{3}{\text{every element has inverse}}
+        \have{4}{G(S)\ \text{is an abelian group}}
 
-\[
-[(a,b)] + [(c,d)] := [(a+c, b+d)]
-\]
+    \end{fitchproof}
 
-\[
--[(a,b)] := [(b,a)]
-\]
+    ---
 
----
+    \textbf{Step 5: Define extension}
 
-\textbf{Step 3: Well-definedness}
+    Let $f:S\to A$ be a monoid mbedding into an abelian group $A$.
 
-(Addition and inverse are well-defined by compatibility of $\sim$ with $+$.)
+    \[
+        \tilde{f}([(a,b)]) := f(a) - f(b).
+    \]
 
----
+    ---
 
-\textbf{Step 4: Group structure}
+    \textbf{Step 6: Well-definedness}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{1}{[(a,b)] + [(b,a)] = [(a+b, a+b)]}
-\have{2}{[(a+b,a+b)] = 0}
-\have{3}{\text{every element has inverse}}
-\have{4}{G(S)\ \text{is an abelian group}}
+        \have{1}{(a,b)\sim(c,d)}
+        \have{2}{a + d = b + c}
+        \have{3}{f(a) + f(d) = f(b) + f(c)}
+        \have{4}{f(a) - f(b) = f(c) - f(d)}
 
-\end{fitchproof}
+    \end{fitchproof}
 
----
+    ---
 
-\textbf{Step 5: Define extension}
+    \textbf{Step 7: Homomorphism property}
 
-Let $f:S\to A$ be a monoid mbedding into an abelian group $A$.
+    (Straightforward from group operations in $A$.)
 
-\[
-\tilde{f}([(a,b)]) := f(a) - f(b).
-\]
+    ---
 
----
+    \textbf{Step 8: Factorization}
 
-\textbf{Step 6: Well-definedness}
+    \[
+        \tilde{f}([(a,0)]) = f(a)
+    \]
 
-\begin{fitchproof}[arrayenv=tabular]
+    ---
 
-\have{1}{(a,b)\sim(c,d)}
-\have{2}{a + d = b + c}
-\have{3}{f(a) + f(d) = f(b) + f(c)}
-\have{4}{f(a) - f(b) = f(c) - f(d)}
+    \textbf{Step 9: Uniqueness}
 
-\end{fitchproof}
-
----
-
-\textbf{Step 7: Homomorphism property}
-
-(Straightforward from group operations in $A$.)
-
----
-
-\textbf{Step 8: Factorization}
-
-\[
-\tilde{f}([(a,0)]) = f(a)
-\]
-
----
-
-\textbf{Step 9: Uniqueness}
-
-Any mbedding is forced by:
-\[
-[(a,b)] = [(a,0)] - [(b,0)].
-\]
+    Any mbedding is forced by:
+    \[
+        [(a,b)] = [(a,0)] - [(b,0)].
+    \]
 
 \end{proof}
 
@@ -4007,8 +3997,8 @@ Any mbedding is forced by:
                   \quad (x y ) z = x (y z ) $ (assosiative $\times$), $\forall x ,y ,z \in R
                   \quad \Big(x (y + z ) = x y + x z \Big) \land \Big((x + y ) z = x z + y z \Big)
               $ (distributive $\times$), $\mathfrak{R}$ is a \textbf{Semiring/Ring}.
-        \item       If $\mathfrak{R}$ is a \textbf{Semiring/Ring} and $ \exists y \in R \quad 
-                   \forall x \in R \quad x y = y x = x$ (has identity $\times$), $\mathfrak{R}$ is
+        \item       If $\mathfrak{R}$ is a \textbf{Semiring/Ring} and $ \exists y \in R \quad
+                  \forall x \in R \quad x y = y x = x$ (has identity $\times$), $\mathfrak{R}$ is
               a \textbf{Semiring/Ring with identity}. you can prove for every
               \textbf{Semiring/Ring with identity} $\mathfrak{R}$ identity element is unique
               we denote it by ``$1$''.
@@ -4033,431 +4023,399 @@ Any mbedding is forced by:
 
 \end{definition}
 
-
-
 \begin{theorem}[Grothendieck Construction for Semirings]
-Let $(S,+, \cdot )$ be a semiring whose additive structure $(S,+,0)$ is a cancellative commutative monoid.
+    Let $(S,+, \cdot )$ be a semiring whose additive structure $(S,+,0)$ is a cancellative commutative monoid.
+
+    Then there exists a ring $G(S)$ together with a semiring mbedding
+    \[
+        \eta : S \longrightarrow G(S)
+    \]
+    such that for every ring $T$ and every semiring mbedding
+    \[
+        f : S \to T,
+    \]
+    there exists a unique ring mbedding
+    \[
+        \tilde{f} : G(S) \to T
+    \]
+    satisfying
+    \[
+        \tilde{f} \circ \eta = f.
+    \]
 
-Then there exists a ring $G(S)$ together with a semiring mbedding
-\[
-\eta : S \longrightarrow G(S)
-\]
-such that for every ring $T$ and every semiring mbedding
-\[
-f : S \to T,
-\]
-there exists a unique ring mbedding
-\[
-\tilde{f} : G(S) \to T
-\]
-satisfying
-\[
-\tilde{f} \circ \eta = f.
-\]
+    The canonical map is
+    \[
+        \eta(a) = [(a,0)].
+    \]
 
+    \begin{proof}
 
-The canonical map is
-\[
-\eta(a) = [(a,0)].
-\]
+        \textbf{Step 0: Define the underlying relation.}
 
+        Define a relation $\sim$ on $S \times S$ by
+        \[
+            (a,b) \sim (c,d) \iff a + d = b + c.
+        \]
+        \textbf{Claim 0: $\sim$ is an equivalence relation.}
 
+        \textbf{Reflexivity}
+        \begin{fitchproof}[arrayenv=tabular]
 
+            \open
+            \have{1}{(a,b)\in S\times S}
+            \have{2}{a + b = b + a}
+            \have{3}{(a,b)\sim(a,b)}
+            \close
 
-\begin{proof}
+        \end{fitchproof}
 
-    
+        \textbf{Symmetry}
+        \begin{fitchproof}[arrayenv=tabular]
 
-\textbf{Step 0: Define the underlying relation.}
+            \open
+            \have{4}{(a,b)\sim(c,d)}
+            \have{5}{a + d = b + c}
+            \have{6}{c + b = d + a}
+            \have{7}{(c,d)\sim(a,b)}
+            \close
 
-Define a relation $\sim$ on $S \times S$ by
-\[
-(a,b) \sim (c,d) \iff a + d = b + c.
-\]
-\textbf{Claim 0: $\sim$ is an equivalence relation.}
+        \end{fitchproof}
 
-\textbf{Reflexivity}
-\begin{fitchproof}[arrayenv=tabular]
+        \textbf{Transitivity}
+        \begin{fitchproof}[arrayenv=tabular]
 
-\open
-\have{1}{(a,b)\in S\times S}
-\have{2}{a + b = b + a}
-\have{3}{(a,b)\sim(a,b)}
-\close
+            \open
+            \have{1}{(a,b)\sim(c,d)}
+            \have{2}{(c,d)\sim(e,f)}
+            \have{1}{a + d = b + c}
+            \have{2}{c + f = d + e}
 
-\end{fitchproof}
+            \have{3}{a + d + c + f = b + c + d + e} \by{add and combine}{1,2}
+            \have{4}{a + f + (c+d) = b + e + (c+d)} \by{rearrange}{3}
 
-\textbf{Symmetry}
-\begin{fitchproof}[arrayenv=tabular]
+            \have{6}{a + f = b + e} \by{cancel $+(c+d)$}{4}
 
+            \have{7}{(a,b)\sim(e,f)}
+            \close
 
-\open
-\have{4}{(a,b)\sim(c,d)}
-\have{5}{a + d = b + c}
-\have{6}{c + b = d + a}
-\have{7}{(c,d)\sim(a,b)}
-\close
+        \end{fitchproof}
 
-\end{fitchproof}
+        (additive commutative monoid cancellation NOT required; we instead justify via rearrangement in monoid equality)
 
-\textbf{Transitivity}
-\begin{fitchproof}[arrayenv=tabular]
+        \textbf{Step 1: Define the carrier set.}
 
-\open
-\have{1}{(a,b)\sim(c,d)}
-\have{2}{(c,d)\sim(e,f)}
-\have{1}{a + d = b + c}
-\have{2}{c + f = d + e}
+        Define
+        \[
+            G(S) := (S \times S)/\sim,
+            \quad [(a,b)] \in G(S).
+        \]
 
-\have{3}{a + d + c + f = b + c + d + e} \by{add and combine}{1,2}
-\have{4}{a + f + (c+d) = b + e + (c+d)} \by{rearrange}{3}
+        \textbf{Step 2: Define operations.}
 
+        Define
+        \[
+            [(a,b)] + [(c,d)] := [(a+c,\, b+d)],
+        \]
+        \[
+            [(a,b)] \cdot [(c,d)] := [(ac+bd,\, ad+bc)].
+        \]
 
-\have{6}{a + f = b + e} \by{cancel $+(c+d)$}{4}
+        Define
+        \[
+            \eta(a) := [(a,0)].
+        \]
 
-\have{7}{(a,b)\sim(e,f)}
-\close
+        \textbf{Step 3: Well-definedness of addition.}
 
-\end{fitchproof}
+        \begin{fitchproof}[arrayenv=tabular]
 
-(additive commutative monoid cancellation NOT required; we instead justify via rearrangement in monoid equality)
+            \have{1}{ (a,b)\sim(a',b'),\ (c,d)\sim(c',d')}
+            \have{2}{ a+b'=a'+b,\ c+d'=c'+d}
+            \have{3}{ (a+c)+(b'+d') = (a'+c')+(b+d)}
+            \have{4}{ [(a+c,b+d)] = [(a'+c',b'+d')]}
+            \have{5}{ + \text{ is well-defined}}
 
+        \end{fitchproof}
 
+        \textbf{Step 4: Well-definedness of multiplication.}
 
-\textbf{Step 1: Define the carrier set.}
+        \begin{fitchproof}[arrayenv=tabular]
 
-Define
-\[
-G(S) := (S \times S)/\sim,
-\quad [(a,b)] \in G(S).
-\]
+            \have{1}{ (a,b)\sim(a',b'),\ (c,d)\sim(c',d')}
+            \have{2}{ a+b'=a'+b,\ c+d'=c'+d}
+            \have{3}{ ac+bd + (a'd'+b'c') = a'c' + b d + a c' + b' d }
+            \have{4}{ [(ac+bd,ad+bc)] = [(a'c'+b'd',a'd'+b'c')]}
+            \have{5}{ \cdot \text{ is well-defined}}
 
+        \end{fitchproof}
 
+        \textbf{Step 5: Ring structure.}
 
-\textbf{Step 2: Define operations.}
+        \begin{fitchproof}[arrayenv=tabular]
 
-Define
-\[
-[(a,b)] + [(c,d)] := [(a+c,\, b+d)],
-\]
-\[
-[(a,b)] \cdot [(c,d)] := [(ac+bd,\, ad+bc)].
-\]
+            \have{1}{ [(a,b)] + [(c,d)] = [(a+c,b+d)]}
+            \have{2}{ \text{associativity inherited from } S}
+            \have{3}{ [(a,b)]\cdot[(c,d)] \text{ associative}}
+            \have{4}{ distributivity follows from semiring laws}
+            \have{5}{ (0,0) \text{ is additive identity}}
+            \have{6}{ [(a,a)] = 0 \text{ in } G(S)}
+            \have{7}{ G(S) \text{ is a ring}}
 
-Define
-\[
-\eta(a) := [(a,0)].
-\]
+        \end{fitchproof}
 
+        \textbf{Step 6: Define extension of a mbedding.}
 
+        Let
+        \[
+            f : S \to T
+        \]
+        be a semiring mbedding into a ring $T$.
 
-\textbf{Step 3: Well-definedness of addition.}
+        Define
+        \[
+            \tilde{f}([(a,b)]) := f(a) - f(b).
+        \]
 
-\begin{fitchproof}[arrayenv=tabular]
+        \textbf{Claim 6: $\tilde{f}$ is well-defined.}
 
-\have{1}{ (a,b)\sim(a',b'),\ (c,d)\sim(c',d')}
-\have{2}{ a+b'=a'+b,\ c+d'=c'+d}
-\have{3}{ (a+c)+(b'+d') = (a'+c')+(b+d)}
-\have{4}{ [(a+c,b+d)] = [(a'+c',b'+d')]}
-\have{5}{ + \text{ is well-defined}}
+        \begin{fitchproof}[arrayenv=tabular]
 
-\end{fitchproof}
+            \have{1}{(a,b)\sim(c,d)}
+            \have{2}{a+d=b+c}
+            \have{3}{f(a)+f(d)=f(b)+f(c)}
+            \have{4}{f(a)-f(b)=f(c)-f(d)}
+            \have{5}{\tilde{f}([(a,b)])=\tilde{f}([(c,d)])}
 
+        \end{fitchproof}
 
+        \textbf{Step 7: $\tilde{f}$ is a ring mbedding.}
 
-\textbf{Step 4: Well-definedness of multiplication.}
+        \begin{fitchproof}[arrayenv=tabular]
 
-\begin{fitchproof}[arrayenv=tabular]
+            \have{1}{\tilde{f}([(a,b)] + [(c,d)]) = f(a+c)-f(b+d)}
+            \have{2}{= (f(a)-f(b)) + (f(c)-f(d))}
+            \have{3}{= \tilde{f}([(a,b)]) + \tilde{f}([(c,d)])}
 
-\have{1}{ (a,b)\sim(a',b'),\ (c,d)\sim(c',d')}
-\have{2}{ a+b'=a'+b,\ c+d'=c'+d}
-\have{3}{ ac+bd + (a'd'+b'c') = a'c' + b d + a c' + b' d }
-\have{4}{ [(ac+bd,ad+bc)] = [(a'c'+b'd',a'd'+b'c')]}
-\have{5}{ \cdot \text{ is well-defined}}
+            \have{4}{\tilde{f}([(a,b)]\cdot[(c,d)]) = f(ac+bd)-f(ad+bc)}
+            \have{5}{= (f(a)-f(b))(f(c)-f(d))}
+            \have{6}{= \tilde{f}([(a,b)])\tilde{f}([(c,d)])}
 
-\end{fitchproof}
+        \end{fitchproof}
 
+        \textbf{Step 8: Factorization property.}
 
+        \begin{fitchproof}[arrayenv=tabular]
 
-\textbf{Step 5: Ring structure.}
+            \have{1}{\tilde{f}(\eta(a)) = \tilde{f}([(a,0)])}
+            \have{2}{= f(a)}
 
-\begin{fitchproof}[arrayenv=tabular]
+            \have{3}{\tilde{f} \circ \eta = f}
 
-\have{1}{ [(a,b)] + [(c,d)] = [(a+c,b+d)]}
-\have{2}{ \text{associativity inherited from } S}
-\have{3}{ [(a,b)]\cdot[(c,d)] \text{ associative}}
-\have{4}{ distributivity follows from semiring laws}
-\have{5}{ (0,0) \text{ is additive identity}}
-\have{6}{ [(a,a)] = 0 \text{ in } G(S)}
-\have{7}{ G(S) \text{ is a ring}}
+        \end{fitchproof}
 
-\end{fitchproof}
+        \textbf{Step 9: Uniqueness.}
 
+        \begin{fitchproof}[arrayenv=tabular]
 
+            \have{1}{g : G(S)\to T \text{ ring mbedding}}
+            \have{2}{g\circ \eta = f}
 
-\textbf{Step 6: Define extension of a mbedding.}
+            \have{3}{g([(a,b)]) = g([(a,0)]) - g([(b,0)])}
+            \have{4}{= f(a) - f(b)}
+            \have{5}{= \tilde{f}([(a,b)])}
 
-Let
-\[
-f : S \to T
-\]
-be a semiring mbedding into a ring $T$.
+            \have{6}{g = \tilde{f}}
 
-Define
-\[
-\tilde{f}([(a,b)]) := f(a) - f(b).
-\]
+        \end{fitchproof}
 
+        Therefore $G(S)$ satisfies the universal property of the Grothendieck
+        construction.
 
-
-\textbf{Claim 6: $\tilde{f}$ is well-defined.}
-
-\begin{fitchproof}[arrayenv=tabular]
-
-\have{1}{(a,b)\sim(c,d)}
-\have{2}{a+d=b+c}
-\have{3}{f(a)+f(d)=f(b)+f(c)}
-\have{4}{f(a)-f(b)=f(c)-f(d)}
-\have{5}{\tilde{f}([(a,b)])=\tilde{f}([(c,d)])}
-
-\end{fitchproof}
-
-
-
-\textbf{Step 7: $\tilde{f}$ is a ring mbedding.}
-
-\begin{fitchproof}[arrayenv=tabular]
-
-\have{1}{\tilde{f}([(a,b)] + [(c,d)]) = f(a+c)-f(b+d)}
-\have{2}{= (f(a)-f(b)) + (f(c)-f(d))}
-\have{3}{= \tilde{f}([(a,b)]) + \tilde{f}([(c,d)])}
-
-\have{4}{\tilde{f}([(a,b)]\cdot[(c,d)]) = f(ac+bd)-f(ad+bc)}
-\have{5}{= (f(a)-f(b))(f(c)-f(d))}
-\have{6}{= \tilde{f}([(a,b)])\tilde{f}([(c,d)])}
-
-\end{fitchproof}
-
-
-
-\textbf{Step 8: Factorization property.}
-
-\begin{fitchproof}[arrayenv=tabular]
-
-\have{1}{\tilde{f}(\eta(a)) = \tilde{f}([(a,0)])}
-\have{2}{= f(a)}
-
-\have{3}{\tilde{f} \circ \eta = f}
-
-\end{fitchproof}
-
-
-
-\textbf{Step 9: Uniqueness.}
-
-\begin{fitchproof}[arrayenv=tabular]
-
-\have{1}{g : G(S)\to T \text{ ring mbedding}}
-\have{2}{g\circ \eta = f}
-
-\have{3}{g([(a,b)]) = g([(a,0)]) - g([(b,0)])}
-\have{4}{= f(a) - f(b)}
-\have{5}{= \tilde{f}([(a,b)])}
-
-\have{6}{g = \tilde{f}}
-
-\end{fitchproof}
-
-
-
-Therefore $G(S)$ satisfies the universal property of the Grothendieck construction.
-
-\end{proof}
+    \end{proof}
 
 \end{theorem}
-
 
 \begin{theorem}[Field of Fractions]
-Let $R$ be a  integral domain.
+    Let $R$ be a  integral domain.
 
-Then there exists a field $\operatorname{Frac}(R)$ together with a ring embedding
-\[
-\eta : R \longrightarrow \operatorname{Frac}(R)
-\]
-such that for every field $K$ and every ring embedding
-\[
-f : R \to K,
-\]
-there exists a unique field embedding
-\[
-\tilde{f} : \operatorname{Frac}(R) \to K
-\]
-satisfying
-\[
-\tilde{f} \circ \eta = f.
-\]
+    Then there exists a field $\operatorname{Frac}(R)$ together with a ring
+    embedding
+    \[
+        \eta : R \longrightarrow \operatorname{Frac}(R)
+    \]
+    such that for every field $K$ and every ring embedding
+    \[
+        f : R \to K,
+    \]
+    there exists a unique field embedding
+    \[
+        \tilde{f} : \operatorname{Frac}(R) \to K
+    \]
+    satisfying
+    \[
+        \tilde{f} \circ \eta = f.
+    \]
 
-The canonical map is
-\[
-\eta(a) = \frac{a}{1}.
-\]
+    The canonical map is
+    \[
+        \eta(a) = \frac{a}{1}.
+    \]
 \end{theorem}
-
 
 \begin{proof}
 
-\textbf{Step 0: Define relation.}
+    \textbf{Step 0: Define relation.}
 
-Define a relation $\sim$ on $R \times (R \setminus \{0\})$ by
-\[
-(a,b) \sim (c,d) \iff ad = bc.
-\]
+    Define a relation $\sim$ on $R \times (R \setminus \{0\})$ by
+    \[
+        (a,b) \sim (c,d) \iff ad = bc.
+    \]
 
-\textbf{Claim 0: $\sim$ is an equivalence relation.}
+    \textbf{Claim 0: $\sim$ is an equivalence relation.}
 
-% ---
+    % ---
 
-\textbf{Reflexivity}
+    \textbf{Reflexivity}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{1}{ (a,b)\in R \times (R\setminus\{0\})}
-\have{2}{ ab = ba}
-\have{3}{ (a,b)\sim(a,b)}
+        \have{1}{ (a,b)\in R \times (R\setminus\{0\})}
+        \have{2}{ ab = ba}
+        \have{3}{ (a,b)\sim(a,b)}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-% ---
+    % ---
 
-\textbf{Symmetry}
+    \textbf{Symmetry}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\open
-\have{1}{ (a,b)\sim(c,d)}
-\have{2}{ ad = bc}
-\have{3}{ cb = da}
-\have{4}{ (c,d)\sim(a,b)}
-\close
+        \open
+        \have{1}{ (a,b)\sim(c,d)}
+        \have{2}{ ad = bc}
+        \have{3}{ cb = da}
+        \have{4}{ (c,d)\sim(a,b)}
+        \close
 
-\end{fitchproof}
+    \end{fitchproof}
 
-% ---
+    % ---
 
-\textbf{Transitivity}
+    \textbf{Transitivity}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\open
-\have{1}{ ad = bc}
-\have{2}{ cf = de}
+        \open
+        \have{1}{ ad = bc}
+        \have{2}{ cf = de}
 
-\have{3}{ adf = bcf} \by{multiply by $f$}{1}
-\have{4}{ bcf = bde} \by{substitute}{2}
-\have{5}{ adf = bde}
+        \have{3}{ adf = bcf} \by{multiply by $f$}{1}
+        \have{4}{ bcf = bde} \by{substitute}{2}
+        \have{5}{ adf = bde}
 
-\have{6}{ (af)d = (be)d} \by{rearrange}{}
+        \have{6}{ (af)d = (be)d} \by{rearrange}{}
 
-\have{7}{ R \text{ is an integral domain}}
-\have{8}{ d \neq 0}
-\have{9}{ af = be} \by{cancellation (no zero divisors)}{}
+        \have{7}{ R \text{ is an integral domain}}
+        \have{8}{ d \neq 0}
+        \have{9}{ af = be} \by{cancellation (no zero divisors)}{}
 
-\have{10}{ (a,b)\sim(e,f)}
+        \have{10}{ (a,b)\sim(e,f)}
 
-\close
+        \close
 
-\end{fitchproof}
+    \end{fitchproof}
 
----
+    ---
 
-\textbf{Step 1: Define field of fractions}
+    \textbf{Step 1: Define field of fractions}
 
-\[
-\operatorname{Frac}(R) := (R \times (R\setminus\{0\}))/\sim
-\]
+    \[
+        \operatorname{Frac}(R) := (R \times (R\setminus\{0\}))/\sim
+    \]
 
-\[
-[(a,b)] := \frac{a}{b}
-\]
+    \[
+        [(a,b)] := \frac{a}{b}
+    \]
 
----
+    ---
 
-\textbf{Step 2: Define operations}
+    \textbf{Step 2: Define operations}
 
-\[
-[(a,b)] + [(c,d)] := [(ad + bc, bd)]
-\]
+    \[
+        [(a,b)] + [(c,d)] := [(ad + bc, bd)]
+    \]
 
-\[
-[(a,b)] \cdot [(c,d)] := [(ac, bd)]
-\]
+    \[
+        [(a,b)] \cdot [(c,d)] := [(ac, bd)]
+    \]
 
----
+    ---
 
-\textbf{Step 3: Define embedding}
+    \textbf{Step 3: Define embedding}
 
-\[
-\eta(a) := [(a,1)]
-\]
+    \[
+        \eta(a) := [(a,1)]
+    \]
 
----
+    ---
 
-\textbf{Step 4: Well-definedness}
+    \textbf{Step 4: Well-definedness}
 
-(Follows from cross-multiplication and compatibility of $\sim$.)
+    (Follows from cross-multiplication and compatibility of $\sim$.)
 
----
+    ---
 
-\textbf{Step 5: Field structure}
+    \textbf{Step 5: Field structure}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{1}{ [(a,b)] \cdot [(b,a)] = [(ab,ab)]}
-\have{2}{ [(ab,ab)] = 1}
-\have{3}{ \text{every nonzero element has inverse}}
-\have{4}{ \operatorname{Frac}(R)\ \text{is a field}}
+        \have{1}{ [(a,b)] \cdot [(b,a)] = [(ab,ab)]}
+        \have{2}{ [(ab,ab)] = 1}
+        \have{3}{ \text{every nonzero element has inverse}}
+        \have{4}{ \operatorname{Frac}(R)\ \text{is a field}}
 
-\end{fitchproof}
+    \end{fitchproof}
 
----
+    ---
 
-\textbf{Step 6: Extension map}
+    \textbf{Step 6: Extension map}
 
-Let $f : R \to K$ be a ring embedding into a field $K$.
+    Let $f : R \to K$ be a ring embedding into a field $K$.
 
-\[
-\tilde{f}([(a,b)]) := \frac{f(a)}{f(b)}
-\]
+    \[
+        \tilde{f}([(a,b)]) := \frac{f(a)}{f(b)}
+    \]
 
----
+    ---
 
-\textbf{Step 7: Well-definedness}
+    \textbf{Step 7: Well-definedness}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{1}{ (a,b)\sim(c,d)}
-\have{2}{ ad = bc}
-\have{3}{ f(a)f(d) = f(b)f(c)}
-\have{4}{ \frac{f(a)}{f(b)} = \frac{f(c)}{f(d)}}
+        \have{1}{ (a,b)\sim(c,d)}
+        \have{2}{ ad = bc}
+        \have{3}{ f(a)f(d) = f(b)f(c)}
+        \have{4}{ \frac{f(a)}{f(b)} = \frac{f(c)}{f(d)}}
 
-\end{fitchproof}
+    \end{fitchproof}
 
----
+    ---
 
-\textbf{Step 8: Homomorphism and factorization}
+    \textbf{Step 8: Homomorphism and factorization}
 
-\[
-\tilde{f}(\eta(a)) = \tilde{f}([(a,1)]) = f(a)
-\]
+    \[
+        \tilde{f}(\eta(a)) = \tilde{f}([(a,1)]) = f(a)
+    \]
 
----
+    ---
 
-\textbf{Step 9: Uniqueness}
+    \textbf{Step 9: Uniqueness}
 
-\[
-[(a,b)] = \frac{[(a,1)]}{[(b,1)]}
-\Rightarrow \tilde{f} \text{ is forced}
-\]
+    \[
+        [(a,b)] = \frac{[(a,1)]}{[(b,1)]}
+        \Rightarrow \tilde{f} \text{ is forced}
+    \]
 
 \end{proof}
 
@@ -6263,57 +6221,57 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 \begin{theorem}
-An infinite subset of a countable set is countable.
+    An infinite subset of a countable set is countable.
 \end{theorem}
 
 \begin{proof}
 
-Let $A$ be countable and let $B\subseteq A$ be infinite.
+    Let $A$ be countable and let $B\subseteq A$ be infinite.
 
-Then there exists a bijective enumeration
-\[
-f:\mathbb N \twoheadrightarrow A.
-\]
+    Then there exists a bijective enumeration
+    \[
+        f:\mathbb N \xrightarrow[surj]{inj} A.
+    \]
 
-Define recursively a sequence $(k_n)_{n\in\mathbb N}$ in $\mathbb N$:
+    Define recursively a sequence $(k_n)_{n\in\mathbb N}$ in $\mathbb N$:
 
-\[
-k_0 := \min\{k\in\mathbb N : f(k)\in B\},
-\]
-\[
-k_{n+1} := \min\{k\in\mathbb N : f(k)\in B \land f(k)\neq f(k_i)\ \forall i\le n\}.
-\]
+    \[
+        k_0 := \min\{k\in\mathbb N : f(k)\in B\},
+    \]
+    \[
+        k_{n+1} := \min\{k\in\mathbb N : f(k)\in B \land f(k)\neq f(k_i)\ \forall i\le n\}.
+    \]
 
-Define
-\[
-b_n := f(k_n).
-\]
+    Define
+    \[
+        b_n := f(k_n).
+    \]
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{1}{b_n\in B}
+        \have{1}{b_n\in B}
 
-\open
-\have{2}{x\in B}
-\have{3}{\exists k\in\mathbb N\ f(k)=x}
-\have{4}{\exists n\in\mathbb N\ b_n=x}
-\close
+        \open
+        \have{2}{x\in B}
+        \have{3}{\exists k\in\mathbb N\ f(k)=x}
+        \have{4}{\exists n\in\mathbb N\ b_n=x}
+        \close
 
-\have{5}{B\subseteq \{b_n:n\in\mathbb N\}}
+        \have{5}{B\subseteq \{b_n:n\in\mathbb N\}}
 
-\have{6}{\{b_n:n\in\mathbb N\}\subseteq B}
+        \have{6}{\{b_n:n\in\mathbb N\}\subseteq B}
 
-\have{7}{B=\{b_n:n\in\mathbb N\}}
+        \have{7}{B=\{b_n:n\in\mathbb N\}}
 
-\have{8}{\forall m<n\ (b_m\neq b_n)}
+        \have{8}{\forall m<n\ (b_m\neq b_n)}
 
-\have{9}{(b_n)_{n\in\mathbb N}\ \text{injective}}
+        \have{9}{(b_n)_{n\in\mathbb N}\ \text{injective}}
 
-\have{10}{\mathbb N\twoheadrightarrow B}
+        \have{10}{\mathbb N\xrightarrow[surj]{inj} B}
 
-\have{11}{Countable(B)}
+        \have{11}{Countable(B)}
 
-\end{fitchproof}
+    \end{fitchproof}
 
 \end{proof}
 
@@ -6325,56 +6283,57 @@ b_n := f(k_n).
 \end{lemma}
 
 \begin{theorem}
-The range of an infinite sequence $(a_n)_{n\in\mathbb N}$ is at most countable.
+    The range of an infinite sequence $(a_n)_{n\in\mathbb N}$ is at most countable.
 \end{theorem}
 
 \begin{proof}
 
-Let $(a_n)_{n\in\mathbb N}$ be a sequence in $X$.
+    Let $(a_n)_{n\in\mathbb N}$ be a sequence in $X$.
 
-We construct recursively a sequence $(b_n)$ such that
-$\mathrm{Range}(b_n)=\mathrm{Range}(a_n)$ and $(b_n)$ is injective.
+    We construct recursively a sequence $(b_n)$ such that
+    $\mathrm{Range}(b_n)=\mathrm{Range}(a_n)$ and $(b_n)$ is injective.
 
-Define
-\[
-b_0 := a_0.
-\]
+    Define
+    \[
+        b_0 := a_0.
+    \]
 
-Having defined $b_0,\dots,b_n$, define $k_{n+1}$ as the least $k\in\mathbb N$ such that
-\[
-a_k \neq b_i \quad \forall i\le n.
-\]
+    Having defined $b_0,\dots,b_n$, define $k_{n+1}$ as the least $k\in\mathbb N$
+    such that
+    \[
+        a_k \neq b_i \quad \forall i\le n.
+    \]
 
-If such $k_{n+1}$ exists, set
-\[
-b_{n+1} := a_{k_{n+1}}.
-\]
-Otherwise stop the construction.
+    If such $k_{n+1}$ exists, set
+    \[
+        b_{n+1} := a_{k_{n+1}}.
+    \]
+    Otherwise stop the construction.
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{1}{b_n \in \mathrm{Range}(a_n)}
+        \have{1}{b_n \in \mathrm{Range}(a_n)}
 
-\open
-\have{2}{x \in \mathrm{Range}(a_n)}
-\have{3}{\exists k\in\mathbb N\ (a_k=x)}
-\have{4}{\exists i\ (b_i=x)}
-\close
+        \open
+        \have{2}{x \in \mathrm{Range}(a_n)}
+        \have{3}{\exists k\in\mathbb N\ (a_k=x)}
+        \have{4}{\exists i\ (b_i=x)}
+        \close
 
-\have{5}{\mathrm{Range}(a_n)\subseteq \{b_i\}}
-\have{6}{\{b_i\}\subseteq \mathrm{Range}(a_n)}
+        \have{5}{\mathrm{Range}(a_n)\subseteq \{b_i\}}
+        \have{6}{\{b_i\}\subseteq \mathrm{Range}(a_n)}
 
-\have{7}{\mathrm{Range}(b_n)=\mathrm{Range}(a_n)}
+        \have{7}{\mathrm{Range}(b_n)=\mathrm{Range}(a_n)}
 
-\have{8}{\forall i<j\ (b_i\neq b_j)}
+        \have{8}{\forall i<j\ (b_i\neq b_j)}
 
-\have{9}{(b_n)\ \text{injective}}
+        \have{9}{(b_n)\ \text{injective}}
 
-\have{10}{\mathrm{Range}(a_n)\ \text{is image of an injective sequence}}
+        \have{10}{\mathrm{Range}(a_n)\ \text{is image of an injective sequence}}
 
-\have{11}{\mathrm{Range}(a_n)\ \text{is at most countable}}
+        \have{11}{\mathrm{Range}(a_n)\ \text{is at most countable}}
 
-\end{fitchproof}
+    \end{fitchproof}
 
 \end{proof}
 
@@ -6382,83 +6341,79 @@ Otherwise stop the construction.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-
 \begin{theorem}
-The union of two countable sets is countable.
+    The union of two countable sets is countable.
 \end{theorem}
 
 \begin{proof}
 
-Let $A=\{a_n:n\in\mathbb N\}$ and $B=\{b_n:n\in\mathbb N\}$.
+    Let $A=\{a_n:n\in\mathbb N\}$ and $B=\{b_n:n\in\mathbb N\}$.
 
-Define a sequence $(c_n)_{n\in\mathbb N}$ by
-\[
-c_{2k}:=a_k,
-\qquad
-c_{2k+1}:=b_k.
-\]
+    Define a sequence $(c_n)_{n\in\mathbb N}$ by
+    \[
+        c_{2k}:=a_k,
+        \qquad
+        c_{2k+1}:=b_k.
+    \]
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{1}{x\in A\cup B}
+        \have{1}{x\in A\cup B}
 
-\open
-\have{2}{x\in A}
-\have{3}{\exists k\in\mathbb N\ (a_k=x)}
-\have{4}{\exists k\in\mathbb N\ (c_{2k}=x)}
-\have{4}{\exists n\in\mathbb N\ (c_{n}=x)}
-\close
+        \open
+        \have{2}{x\in A}
+        \have{3}{\exists k\in\mathbb N\ (a_k=x)}
+        \have{4}{\exists k\in\mathbb N\ (c_{2k}=x)}
+        \have{4}{\exists n\in\mathbb N\ (c_{n}=x)}
+        \close
 
-\open
-\have{5}{x\in B}
-\have{6}{\exists k\in\mathbb N\ (b_k=x)}
-\have{7}{\exists k\in\mathbb N\ (c_{2k+1}=x)}
-\have{7}{\exists n\in\mathbb N\ (c_{n}=x)}
-\close
+        \open
+        \have{5}{x\in B}
+        \have{6}{\exists k\in\mathbb N\ (b_k=x)}
+        \have{7}{\exists k\in\mathbb N\ (c_{2k+1}=x)}
+        \have{7}{\exists n\in\mathbb N\ (c_{n}=x)}
+        \close
 
-\have{8}{\forall x\in A\cup B\ \exists n\in\mathbb N\ (c_n=x)}
+        \have{8}{\forall x\in A\cup B\ \exists n\in\mathbb N\ (c_n=x)}
 
-\have{9}{\{c_n:n\in\mathbb N\}=A\cup B}
+        \have{9}{\{c_n:n\in\mathbb N\}=A\cup B}
 
-\have{9}{c :  \mathbb{N} \xrightarrow[surj]{}  A\cup B}
-\have{10}{AtMostCountable(A\cup B)}
+        \have{9}{c :  \mathbb{N} \xrightarrow[surj]{}  A\cup B}
+        \have{10}{AtMostCountable(A\cup B)}
 
-\have{10}{Infinite(A)}
-\have{10}{ A \precsim  A\cup B}
-\have{10}{Infinite(A\cup B)}
-\have{10}{Countable(A\cup B)}
+        \have{10}{Infinite(A)}
+        \have{10}{ A \precsim  A\cup B}
+        \have{10}{Infinite(A\cup B)}
+        \have{10}{Countable(A\cup B)}
 
-\end{fitchproof}
+    \end{fitchproof}
 
 \end{proof}
 
-
-
 \begin{corollary}
-Finite union of countable sets is countable.
+    Finite union of countable sets is countable.
 \end{corollary}
 
 \begin{proof}
 
-Let $A_1,\dots,A_n$ be countable.
+    Let $A_1,\dots,A_n$ be countable.
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{1}{Countable (A_1  )}
+        \have{1}{Countable (A_1  )}
 
-\open
-\have{2}{ \forall k < n \quad Countable(A_k) \to Countable(\bigcup_{i \in n} A_i)}
-\open
-\have{2}{ \forall k < s(n) \quad Countable(A_k) }
-\have{3}{Countable(A_{n} )}
-\have{4}{Countable(\bigcup_{i \in s(n)} A_i) }
-\close
-\close
+        \open
+        \have{2}{ \forall k < n \quad Countable(A_k) \to Countable(\bigcup_{i \in n} A_i)}
+        \open
+        \have{2}{ \forall k < s(n) \quad Countable(A_k) }
+        \have{3}{Countable(A_{n} )}
+        \have{4}{Countable(\bigcup_{i \in s(n)} A_i) }
+        \close
+        \close
 
+        \have{6}{(A_1\cup\cdots\cup A_n) }
 
-\have{6}{(A_1\cup\cdots\cup A_n) }
-
-\end{fitchproof}
+    \end{fitchproof}
 
 \end{proof}
 
@@ -6466,118 +6421,118 @@ Let $A_1,\dots,A_n$ be countable.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-
-
 \begin{theorem}
-If $A$ and $B$ are countable, then $A\times B$ is countable.
+    If $A$ and $B$ are countable, then $A\times B$ is countable.
 \end{theorem}
 
 \begin{proof}
 
-It suffices to show $\mathbb N\times\mathbb N$ is countable.
+    It suffices to show $\mathbb N\times\mathbb N$ is countable.
 
-Define
-\[
-f:\mathbb N\times\mathbb N\to\mathbb N
-\]
-by
-\[
-f(m,n):=
-\begin{cases}
-n^2+m & \text{if } m\le n,\\
-m^2+2m-n & \text{if } n<m.
-\end{cases}
-\]
+    Define
+    \[
+        f:\mathbb N\times\mathbb N\to\mathbb N
+    \]
+    by
+    \[
+        f(m,n):=
+        \begin{cases}
+            n^2+m    & \text{if } m\le n, \\
+            m^2+2m-n & \text{if } n<m.
+        \end{cases}
+    \]
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{1}{(m_1,n_1),(m_2,n_2)\in\mathbb N\times\mathbb N}
-\have{2}{f(m_1,n_1)=f(m_2,n_2)}  
-\have{2}{ m\leq n \to n^2 = f(0,n) \leq f(m,n) \leq f(n,n)  \leq f(n,m)  < f(0,n+1) = (n+1)^2 }  
-\have{2}{ k = max\{m,n \} \to  k^2 \leq f(m,n) < (k+1)^2 }  
-\have{2}{ k' = max\{m',n' \} \to  k'^2 \leq f(m',n') < (k'+1)^2 }  
-\have{2}{ f(m , n ) = f(m',n')  }  
+        \have{1}{(m_1,n_1),(m_2,n_2)\in\mathbb N\times\mathbb N}
+        \have{2}{f(m_1,n_1)=f(m_2,n_2)}
+        \have{2}{ m\leq n \to n^2 = f(0,n) \leq f(m,n) \leq f(n,n)  \leq f(n,m)  < f(0,n+1) = (n+1)^2 }
+        \have{2}{ k = max\{m,n \} \to  k^2 \leq f(m,n) < (k+1)^2 }
+        \have{2}{ k' = max\{m',n' \} \to  k'^2 \leq f(m',n') < (k'+1)^2 }
+        \have{2}{ f(m , n ) = f(m',n')  }
 
-\have{2}{   k = k' }  
+        \have{2}{   k = k' }
 
-\open
-\have{4}{m\le n = k \land m' \le n' = k'}
-\have{4}{n = n'} 
-\have{5}{n^2+m = n'^2+m'}
-\have{5}{n^2+m = n^2+m'}
-\have{5}{m = m'}
+        \open
+        \have{4}{m\le n = k \land m' \le n' = k'}
+        \have{4}{n = n'}
+        \have{5}{n^2+m = n'^2+m'}
+        \have{5}{n^2+m = n^2+m'}
+        \have{5}{m = m'}
 
-\close
+        \close
 
-\open
-\have{7}{n < m =k \land n'   < m' = k'}
-\have{5}{m = m'}
-\have{8}{m^2+2m-n=m'^2+2m'-n'}
-\have{8}{m^2+2m-n=m^2+2m-n'}
-\have{4}{n = n'} 
-\close
+        \open
+        \have{7}{n < m =k \land n'   < m' = k'}
+        \have{5}{m = m'}
+        \have{8}{m^2+2m-n=m'^2+2m'-n'}
+        \have{8}{m^2+2m-n=m^2+2m-n'}
+        \have{4}{n = n'}
+        \close
 
-\open
-\have{7}{n < m =k \land n' = k' > m' }
-\have{5}{m = n'}
-\have{8}{f(m,n) > f(m,m)}
-\have{8}{f(n',n') > f(m',n')}
-\have{8}{f(n',n') = f(m,m)}
-\have{8}{f(m,n) > f(m',n')}
+        \open
+        \have{7}{n < m =k \land n' = k' > m' }
+        \have{5}{m = n'}
+        \have{8}{f(m,n) > f(m,m)}
+        \have{8}{f(n',n') > f(m',n')}
+        \have{8}{f(n',n') = f(m,m)}
+        \have{8}{f(m,n) > f(m',n')}
 
-\have{4}{\bot} 
-\close
+        \have{4}{\bot}
+        \close
 
-\have{10}{(m_1,n_1)=(m_2,n_2)}
+        \have{10}{(m_1,n_1)=(m_2,n_2)}
 
-\have{11}{$f$ is injective}
+        \have{11}{$f$ is injective}
 
-\open
-\have{12}{(m,n)\in\mathbb N\times\mathbb N}
-\have{13}{\exists k\in\mathbb N\ (f(k)= (m,n))}
+        \open
+        \have{12}{(m,n)\in\mathbb N\times\mathbb N}
+        \have{13}{\exists k\in\mathbb N\ (f(k)= (m,n))}
 
-\have{14}{\mathbb N\times\mathbb N \cong \mathbb N}
-\close
+        \have{14}{\mathbb N\times\mathbb N \cong \mathbb N}
+        \close
 
-\have{15}{Countable(\mathbb N\times\mathbb N)}
+        \have{15}{Countable(\mathbb N\times\mathbb N)}
 
-\end{fitchproof}
+    \end{fitchproof}
 
 \end{proof}
 
 \begin{lemma}
-If $A$ and $B$ are countable sets, then $A\times B$ is countable.
+    If $A$ and $B$ are countable sets, then $A\times B$ is countable.
 \end{lemma}
 
 \begin{proof}
 
-Let $f:\mathbb N\twoheadrightarrow A$ and $g:\mathbb N\twoheadrightarrow B$.
+    Let $f:\mathbb N\xrightarrow[surj]{inj} A$ and $g:\mathbb
+        N\xrightarrow[surj]{inj} B$.
 
-Define
-\[
-h:\mathbb N\to A\times B
-\quad\text{by}\quad
-h(\langle m,n\rangle)=(f(m),g(n)),
-\]
-where $\langle\cdot,\cdot\rangle:\mathbb N\times\mathbb N\to\mathbb N$ is a pairing function.
+    Define
+    \[
+        h:\mathbb N\to A\times B
+        \quad\text{by}\quad
+        h(\langle m,n\rangle)=(f(m),g(n)),
+    \]
+    where $\langle\cdot,\cdot\rangle:\mathbb N\times\mathbb N\to\mathbb N$ is a
+    pairing function.
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{1}{(a,b)\in A\times B}
+        \have{1}{(a,b)\in A\times B}
 
-\open
-\have{2}{a\in A}
-\have{3}{b\in B}
-\have{4}{\exists m\in\mathbb N\ f(m)=a}
-\have{5}{\exists n\in\mathbb N\ g(n)=b}
-\have{6}{h(\langle m,n\rangle)=(a,b)}
-\close
+        \open
+        \have{2}{a\in A}
+        \have{3}{b\in B}
+        \have{4}{\exists m\in\mathbb N\ f(m)=a}
+        \have{5}{\exists n\in\mathbb N\ g(n)=b}
+        \have{6}{h(\langle m,n\rangle)=(a,b)}
+        \close
 
-\have{7}{h:\mathbb N\twoheadrightarrow A\times B}
+        \have{7}{h:\mathbb N\xrightarrow[surj]{inj} A\times B}
 
-\have{8}{Countable(A\times B)}
+        \have{8}{Countable(A\times B)}
 
-\end{fitchproof}
+    \end{fitchproof}
 
 \end{proof}
 
@@ -6586,192 +6541,353 @@ where $\langle\cdot,\cdot\rangle:\mathbb N\times\mathbb N\to\mathbb N$ is a pair
 \end{corollary}
 
 \begin{corollary}
-Finite Cartesian product of countable sets is countable, and $A^n$ is countable for any countable $A$ and $n>0$.
+    Finite Cartesian product of countable sets is countable, and $A^n$ is countable for any countable $A$ and $n>0$.
 \end{corollary}
 
 \begin{proof}
 
-Let $A_1,\dots,A_n$ be countable.
+    Let $A_1,\dots,A_n$ be countable.
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{1}{A_1\times A_2 \text{ is countable}}
+        \have{1}{A_1\times A_2 \text{ is countable}}
 
-\open
-\have{2}{(A_1\times\cdots\times A_k)\text{ is countable}}
-\have{3}{A_{k+1}\text{ is countable}}
-\have{4}{(A_1\times\cdots\times A_k)\times A_{k+1}\text{ is countable}}
-\close
+        \open
+        \have{2}{(A_1\times\cdots\times A_k)\text{ is countable}}
+        \have{3}{A_{k+1}\text{ is countable}}
+        \have{4}{(A_1\times\cdots\times A_k)\times A_{k+1}\text{ is countable}}
+        \close
 
-\have{5}{\forall k\le n\ (A_1\times\cdots\times A_k)\text{ is countable}}
+        \have{5}{\forall k\le n\ (A_1\times\cdots\times A_k)\text{ is countable}}
 
-\have{6}{A_1\times\cdots\times A_n \text{ is countable}}
+        \have{6}{A_1\times\cdots\times A_n \text{ is countable}}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-Now let $A$ be countable and $n>0$.
+    Now let $A$ be countable and $n>0$.
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{7}{A^1 \text{ is countable}}
+        \have{7}{A^1 \text{ is countable}}
 
-\open
-\have{8}{A^k \text{ is countable}}
-\have{9}{A \text{ is countable}}
-\have{10}{A^{k+1}=A^k\times A \text{ is countable}}
-\close
+        \open
+        \have{8}{A^k \text{ is countable}}
+        \have{9}{A \text{ is countable}}
+        \have{10}{A^{k+1}=A^k\times A \text{ is countable}}
+        \close
 
-\have{11}{\forall k\le n\ A^k \text{ is countable}}
+        \have{11}{\forall k\le n\ A^k \text{ is countable}}
 
-\have{12}{A^n \text{ is countable}}
+        \have{12}{A^n \text{ is countable}}
 
-\end{fitchproof}
+    \end{fitchproof}
 
 \end{proof}
 
-\begin{lemma} if ``$(A_i)_{i \in \mathbb{N}}$'' is family of countable sets with a family of sequences ``$(a_i)_{i \in \mathbb{N}}$''
+\begin{lemma} If ``$(A_i)_{i \in \mathbb{N}}$'' is family of countable sets with a family of sequences ``$(a_i)_{i \in \mathbb{N}}$''
     s.t. ``$ \forall n \in \mathbb{N} \quad a_n : \mathbb{N} \xrightarrow[surj]{inj} A_n $'' then ``$\bigcup_{i \in \mathbb{N}} A_i$'' is  countable.\\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-
-\begin{lemma}
-If $(A_i)_{i\in\mathbb N}$ is a family of countable sets and there exist
-$(a_i)_{i\in\mathbb N}$ such that $\forall n\in\mathbb N\ a_n:\mathbb N\twoheadrightarrow A_n$,
-then $\bigcup_{i\in\mathbb N}A_i$ is countable.
-\end{lemma}
-
 \begin{proof}
 
-Define
-\[
-h:\mathbb N\times\mathbb N \to \bigcup_{i\in\mathbb N}A_i
-\quad\text{by}\quad
-h(i,n)=a_i(n).
-\]
+    Define
+    \[
+        h:\mathbb N\times\mathbb N \to \bigcup_{i\in\mathbb N}A_i
+        \quad\text{by}\quad
+        h(i,n)=a_i(n).
+    \]
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{1}{x\in \bigcup_{i\in\mathbb N}A_i}
+        \have{1}{x\in \bigcup_{i\in\mathbb N}A_i}
 
-\open
-\have{2}{\exists i\in\mathbb N\ (x\in A_i)}
-\have{3}{\exists n\in\mathbb N\ a_i(n)=x}
-\have{4}{h(i,n)=x}
-\close
+        \open
+        \have{2}{\exists i\in\mathbb N\ (x\in A_i)}
+        \have{3}{\exists n\in\mathbb N\ a_i(n)=x}
+        \have{4}{h(i,n)=x}
+        \close
 
-\have{5}{h:\mathbb N\times\mathbb N\twoheadrightarrow \bigcup_{i\in\mathbb N}A_i}
+        \have{5}{h:\mathbb N\times\mathbb N \xrightarrow[surj]{inj} \bigcup_{i\in\mathbb N}A_i}
 
-\have{6}{Countable(\mathbb N\times\mathbb N)}
-\have{7}{Countable(\bigcup_{i\in\mathbb N}A_i)}
+        \have{6}{Countable(\mathbb N\times\mathbb N)}
+        \have{7}{Countable(\bigcup_{i\in\mathbb N}A_i)}
 
-\end{fitchproof}
+    \end{fitchproof}
 
 \end{proof}
 
-\begin{lemma} if ``$A$'' is countable set then ``$\bigcup_{n \in \mathbb{N}} A^n$'' is  countable.\\
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{lemma}
-
-\begin{lemma}
-If $A$ is countable, then $\bigcup_{n\in\mathbb N}A^n$ is countable.
-\end{lemma}
+\begin{theorem}
+    If $A$ is countable, then $Seq(A)$, the set of all finite sequences of elements of $A$,
+    is countable.
+\end{theorem}
 
 \begin{proof}
 
-For each $n>0$ define $A^n=A\times\cdots\times A$ ($n$-times).
+    It suffices to prove the theorem for $A=\mathbb N$.
 
-Since $A$ is countable, we have $\forall n>0\ A^n$ is countable.
+    Since
 
-Define
-\[
-B_n := A^n.
-\]
+    \[
+        Seq(\mathbb N)
+        =
+        \bigcup_{n\in\mathbb N}\mathbb N^n,
+    \]
 
-Then $(B_n)_{n\in\mathbb N}$ is a family of countable sets.
+    it is enough to construct, for each $n\ge 1$, an enumeration
 
-For each $n$ choose a surjection
-\[
-a_n:\mathbb N\twoheadrightarrow B_n.
-\]
+    \[
+        a_n:\mathbb N\xrightarrow[surj]{inj}\mathbb N^n.
+    \]
 
-Define
-\[
-h:\mathbb N\times\mathbb N \to \bigcup_{n\in\mathbb N}A^n
-\quad\text{by}\quad
-h(n,k)=a_n(k).
-\]
+    Let
 
-\begin{fitchproof}[arrayenv=tabular]
+    \[
+        g:\mathbb N\xrightarrow[surj]{inj}\mathbb N\times\mathbb N.
+    \]
 
-\have{1}{x\in \bigcup_{n\in\mathbb N}A^n}
+    Define recursively:
 
-\open
-\have{2}{\exists n\in\mathbb N\ (x\in A^n)}
-\have{3}{\exists k\in\mathbb N\ a_n(k)=x}
-\have{4}{h(n,k)=x}
-\close
+    \[
+        a_1(i):=(i),
+    \]
 
-\have{5}{h:\mathbb N\times\mathbb N\twoheadrightarrow \bigcup_{n\in\mathbb N}A^n}
+    and
 
-\have{6}{Countable(\mathbb N\times\mathbb N)}
-\have{7}{Countable\Big(\bigcup_{n\in\mathbb N}A^n\Big)}
+    \[
+        a_{n+1}(i)
+        :=
+        (b_0,\ldots,b_{n-1},i_2),
+    \]
 
-\end{fitchproof}
+    where
+
+    \[
+        g(i)=(i_1,i_2)
+    \]
+
+    and
+
+    \[
+        a_n(i_1)=(b_0,\ldots,b_{n-1}).
+    \]
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \have{1}{a_1:\mathbb N \xrightarrow[surj]{inj} \mathbb N}
+
+        \open
+        \have{2}{a_n:\mathbb N \xrightarrow[surj]{inj}\mathbb N^n}
+
+        \open
+        \have{3}{(b_0,\ldots,b_n)\in\mathbb N^{n+1}}
+        \have{4}{\exists i_1\in\mathbb N\quad a_n(i_1)=(b_0,\ldots,b_{n-1})}
+        \have{5}{\exists i\in\mathbb N\quad g(i)=(i_1,b_n)}
+        \have{6}{a_{n+1}(i)=(b_0,\ldots,b_n)}
+        \close
+
+        \have{7}{a_{n+1}:\mathbb N \xrightarrow[surj]{inj}\mathbb N^{n+1}}
+
+        \close
+
+        \have{8}{\forall n\ge 1\quad a_n:\mathbb N \xrightarrow[surj]{inj}\mathbb N^n}
+
+        \have{9}{\forall n\in\mathbb N\quad \mathbb N^n\text{ is countable}}
+
+        \have{10}{\bigcup_{n\in\mathbb N}\mathbb N^n\text{ is countable}}
+
+        \have{11}{Seq(\mathbb N)\text{ is countable}}
+
+    \end{fitchproof}
+
+    Since every countable set is equipotent to a subset of $\mathbb N$,
+
+    \[
+        Seq(A)
+    \]
+
+    is countable.
 
 \end{proof}
-
-\begin{corollary} set of all finite subsets of countable set is countable.\\
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{corollary}
 
 \begin{corollary}
-The set of all finite subsets of a countable set is countable.
+    The set of all finite subsets of a countable set is countable.
 \end{corollary}
 
 \begin{proof}
 
-Let $A$ be countable and define
-\[
-\mathcal{F}(A):=\{F\subseteq A : F \text{ finite}\}.
-\]
+    Let $A$ be countable and define
+    \[
+        \mathcal{F}(A):=\{F\subseteq A : F \text{ finite}\}.
+    \]
 
-For each $n\in\mathbb N$ define
-\[
-\mathcal{F}_n(A):=\{F\subseteq A : |F|=n\}.
-\]
+    For each $n\in\mathbb N$ define
+    \[
+        \mathcal{F}_n(A):=\{F\subseteq A : |F|=n\}.
+    \]
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{1}{A^n \text{ is countable}}
-\have{2}{\{(a_1,\dots,a_n)\in A^n : a_i \text{ distinct}\} \text{ is countable}}
+        \have{1}{A^n \text{ is countable}}
+        \have{2}{\{(a_1,\dots,a_n)\in A^n : a_i \text{ distinct}\} \text{ is countable}}
 
-\have{3}{\mathcal{F}_n(A) \text{ is countable}}
+        \have{3}{\mathcal{F}_n(A) \text{ is countable}}
 
-\open
-\have{4}{F\in \mathcal{F}(A)}
-\have{5}{\exists n\in\mathbb N\ (F\in \mathcal{F}_n(A))}
-\close
+        \open
+        \have{4}{F\in \mathcal{F}(A)}
+        \have{5}{\exists n\in\mathbb N\ (F\in \mathcal{F}_n(A))}
+        \close
 
-\have{6}{\mathcal{F}(A)=\bigcup_{n\in\mathbb N}\mathcal{F}_n(A)}
+        \have{6}{\mathcal{F}(A)=\bigcup_{n\in\mathbb N}\mathcal{F}_n(A)}
 
-\have{7}{\forall n\ \mathcal{F}_n(A)\text{ is countable}}
+        \have{7}{\forall n\ \mathcal{F}_n(A)\text{ is countable}}
 
-\have{8}{\bigcup_{n\in\mathbb N}\mathcal{F}_n(A)\text{ is countable}}
+        \have{8}{\bigcup_{n\in\mathbb N}\mathcal{F}_n(A)\text{ is countable}}
 
-\have{9}{\mathcal{F}(A)\text{ is countable}}
+        \have{9}{\mathcal{F}(A)\text{ is countable}}
 
-\end{fitchproof}
+    \end{fitchproof}
 
 \end{proof}
 
-\begin{corollary} $\mathbb{Z}$ and $\mathbb{Q}$ are countable.\\
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\begin{corollary}
+    The set of all finite subsets of a countable set is countable.
 \end{corollary}
 
-\begin{corollary} a partition of countable set is countable.\\
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\begin{proof}
+
+    Let
+
+    \[
+        \mathcal F(A)
+        :=
+        \{X\subseteq A : X \text{ is finite}\}.
+    \]
+
+    Define
+
+    \[
+        F:Seq(A)\to\mathcal F(A)
+    \]
+
+    by
+
+    \[
+        F((a_0,\ldots,a_{n-1}))
+        =
+        \{a_0,\ldots,a_{n-1}\}.
+    \]
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \have{1}{Seq(A)\text{ is countable}}
+
+        \open
+        \have{2}{X\in\mathcal F(A)}
+        \have{3}{X=\{a_0,\ldots,a_{n-1}\}}
+        \have{4}{F((a_0,\ldots,a_{n-1}))=X}
+        \close
+
+        \have{5}{F:Seq(A)\xrightarrow[surj]{}\mathcal F(A)}
+
+        \have{6}{\mathcal F(A)\text{ is at most countable}}
+
+        \have{7}{\mathcal F(A)\text{ is countable}}
+
+    \end{fitchproof}
+
+\end{proof}
+
+\begin{theorem}
+    An equivalence relation on a countable set has at most countably many equivalence classes.
+\end{theorem}
+
+\begin{proof}
+
+    Let $ \sim $ be an equivalence relation on a countable set $A$.
+
+    Define
+
+    \[
+        F:A\to A/ \sim
+    \]
+
+    by
+
+    \[
+        F(a):=[a]_\sim
+    \]
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \have{1}{A\text{ is countable}}
+
+        \open
+        \have{2}{C\in A/ \sim }
+        \have{3}{\exists a\in A\quad C=[a]_E}
+        \have{4}{F(a)=C}
+        \close
+
+        \have{5}{F:A\xrightarrow[surj]{}A/ \sim }
+
+        \have{6}{A/ \sim \text{ is at most countable}}
+
+    \end{fitchproof}
+
+\end{proof}
+
+\begin{corollary} The set of all integers $\mathbb Z$ and the set of all rational numbers $\mathbb Q$
+    are countable.
 \end{corollary}
+
+\begin{proof}
+
+    \textbf{$\mathbb Z$ is countable.}
+
+    By definition
+
+    \[
+        \mathbb Z
+        =
+        \mathbb N\times\mathbb N/\sim.
+    \]
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \have{2}{\mathbb N\times\mathbb N\text{ is countable}}
+        \have{3}{\mathbb Z := (\mathbb N\times\mathbb N)/\sim}
+        \have{4}{\mathbb Z\text{ is at most countable}}
+        \have{5}{\mathbb Z\text{ is infinite}}
+        \have{6}{\mathbb Z\text{ is countable}}
+
+    \end{fitchproof}
+
+    \medskip
+
+    \textbf{$\mathbb Q$ is countable.}
+
+    By definition
+
+    \[
+        \mathbb Q
+        =
+        \mathbb Z\times(\mathbb Z-\{0\})/\sim.
+    \]
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \have{7}{\mathbb Z\text{ is countable}}
+        \have{8}{\mathbb Z-\{0\}\text{ is countable}}
+        \have{9}{\mathbb Z\times(\mathbb Z-\{0\})\text{ is countable}}
+        \have{2}{F: \mathbb  Z\times(\mathbb Z-\{0\})\to \mathbb  Z\times(\mathbb Z-\{0\})/\sim }
+        \have{10}{\mathbb Q=(\mathbb Z\times(\mathbb Z-\{0\}))/\sim}
+        \have{11}{\mathbb Q\text{ is at most countable}}
+        \have{12}{\mathbb Q\text{ is infinite}}
+        \have{13}{\mathbb Q\text{ is countable}}
+
+    \end{fitchproof}
+
+\end{proof}
 
 \section{Uncountable sets}
 
@@ -6779,9 +6895,153 @@ For each $n\in\mathbb N$ define
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
+\begin{lemma}
+
+    \[
+        \mathbb N \prec 2^{\mathbb N}.
+    \]
+
+\end{lemma}
+
+\begin{proof}
+
+    \textbf{Claim 0: $ \mathbb N\precsim 2^{\mathbb N}$}
+
+    Define
+
+    \[
+        f:\mathbb N\to 2^{\mathbb N}
+    \]
+
+    by
+
+    \[
+        f(n)(k)
+        =
+        \begin{cases}
+            1 & k=n,     \\
+            0 & k\neq n.
+        \end{cases}
+    \]
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \open
+        \have{1}{f(m)=f(n)}
+        \open
+        \have{3}{m \not= n}
+        \have{2}{f(m)(m) = 1 \not= 0 =f(n)(m)}
+        \have{3}{\bot}
+        \close
+        \have{3}{m=n}
+        \close
+        
+        \have{4}{f:\mathbb N\xrightarrow{inj}2^{\mathbb N}}
+        \have{5}{\mathbb N\precsim 2^{\mathbb N}}
+    \end{fitchproof}
+
+\textbf{Claim 1: $ \mathbb N\prec 2^{\mathbb N}$}
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+
+        \open
+        \have{6}{g:\mathbb N\xrightarrow[surj]{}2^{\mathbb N}}
+
+        \have{7}{d(n):=1-g(n)(n)}
+
+        \have{7}{d\in 2^{\mathbb N}}
+        \have{8}{\exists k\in\mathbb N\quad g(k)=d}
+
+        \have{9}{d(k)=g(k)(k)}
+        \have{10}{d(k)=1-g(k)(k)}
+
+        \have{11}{g(k)(k)=1-g(k)(k)}
+
+        \have{12}{\bot}
+
+        \close
+
+        \have{13}{\nexists g:\mathbb N\xrightarrow[surj]{}2^{\mathbb N}}
+
+        \have{14}{\mathbb N\not\cong 2^{\mathbb N}}
+
+        \have{15}{\mathbb N\prec 2^{\mathbb N}}
+
+    \end{fitchproof}
+
+\end{proof}
+
 \begin{lemma} $/ \therefore  2^\mathbb{N} \cong \mathcal{P}(\mathbb{N})$ \\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
+
+\begin{theorem}
+
+    \[
+        \mathcal P(\mathbb N) \cong 2^{\mathbb N}
+    \]
+
+\end{theorem}
+
+\begin{proof}
+
+    For each
+
+    \[
+        S\subseteq\mathbb N
+    \]
+
+    define its characteristic function
+
+    \[
+        \chi_S:\mathbb N\to 2
+    \]
+
+    by
+
+    \[
+        \chi_S(n):=
+        \begin{cases}
+            1 & n\in S,    \\
+            0 & n\notin S.
+        \end{cases}
+    \]
+
+    Define
+
+    \[
+        \chi_{()} :\mathcal P(\mathbb N)\to 2^{\mathbb N}
+    \]
+
+
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \open
+        \have{2}{\chi_S=\chi_T}
+        \have{3}{\forall n\in\mathbb N\quad (n\in S\leftrightarrow n\in T)}
+        \have{4}{S=T}
+        \close
+
+        \have{5}{\chi_{()} \text{ is injective}}
+
+        \open
+        \have{6}{f\in 2^{\mathbb N}}
+
+        \have{7}{S:=\{n\in\mathbb N:f(n)=1\}}
+
+        \have{8}{\chi_{(S)} =f}
+
+        \close
+
+        \have{10}{\chi_{()} :\mathcal P(\mathbb N)\xrightarrow[surj]{inj}2^{\mathbb N}}
+
+        \have{11}{\mathcal P(\mathbb N)\cong 2^{\mathbb N}}
+
+    \end{fitchproof}
+
+\end{proof}
 
 \begin{lemma} $/ \therefore  2^\mathbb{N} \cong \mathbb{R}$ \\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
