@@ -7095,6 +7095,105 @@ when ``$f : W_1 \to W_2$'' is a (weak) homomorphism.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
+\begin{proof}
+
+Let $(W_1,<_{1})$ and $(W_2,<_{2})$ be well ordered sets.
+
+Define
+\[
+f\subseteq W_1\times W_2
+\quad\text{by}\quad
+(x,y)\in f \iff W_1[x]\cong W_2[y].
+\]
+
+\textbf{Claim 1: $f$ is a function.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{(x,y)\in f \land (x,y')\in f} \by{assumption}{}
+\have{2}{W_2[y]\cong W_2[y']} \by{definition of $f$}{}
+\have{3}{y=y'} \by{uniqueness of isomorphism of well orders}{}
+
+\end{fitchproof}
+
+\textbf{Claim 2: $f$ is injective.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{4}{(x,y)\in f \land (x',y)\in f} \by{assumption}{}
+\have{5}{W_1[x]\cong W_1[x']} \by{definition of $f$}{}
+\have{6}{x=x'} \by{uniqueness of isomorphism of well orders}{}
+
+\end{fitchproof}
+
+\textbf{Claim 3: $f$ is increasing.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{7}{x<_{1}x'} \by{assumption}{}
+\have{8}{W_1[x']\cong W_2[f(x')]} \by{definition of $f$}{}
+\have{9}{W_1[x]\cong W_2[f(x)]} \by{definition of $f$}{}
+\have{10}{f(x)<_{2}f(x')} \by{comparison of initial segments}{}
+
+\end{fitchproof}
+
+\textbf{Claim 4: $f$ is isomorphism between $S=\mathrm{dom}(f)$ and $T=\mathrm{ran}(f)$.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{11}{f:S\to T \text{ bijective}} \by{Claims 1,2}{}
+\have{12}{x<_{1}x' \Rightarrow f(x)<_{2}f(x')} \by{Claim 3}{}
+\have{13}{f \text{ order isomorphism}} \by{definition}{}
+
+\end{fitchproof}
+
+\textbf{Claim 5: $S$ initial segment of $W_1$.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{14}{x\in S \land z<_{1}x} \by{assumption}{}
+\have{15}{W_1[x]\cong W_2[f(x)]} \by{definition of $S$}{}
+\have{16}{z\in S} \by{restriction of initial segments}{}
+
+\end{fitchproof}
+
+\textbf{Claim 6: $T$ initial segment of $W_2$ or $T=W_2$.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{17}{y\in T} \by{definition of $T$}{}
+\have{18}{T\neq W_2} \by{assumption of case split}{}
+\have{19}{T=W_2[b] \ \lor\ T=W_2} \by{well-order trichotomy}{}
+
+\end{fitchproof}
+
+\textbf{Claim 7: exclusion of mixed case.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{20}{S=W_1[a] \land T=W_2[b]} \by{assumption}{}
+\have{21}{f:W_1[a]\cong W_2[b]} \by{restriction of $f$}{}
+\have{22}{(a,b)\in f} \by{definition of domain/range}{}
+\have{23}{a\in W_1[a]} \by{initial segment property}{}
+\have{24}{a<a} \by{element characterization}{}
+\have{25}{\bot} \by{irreflexivity}{}
+
+\end{fitchproof}
+
+\textbf{Conclusion:}
+
+\[
+(W_1\cong W_2)\ \lor\ (W_1[a]\cong W_2)\ \lor\ (W_1\cong W_2[a]).
+\]
+
+\end{proof}
+
+\begin{lemma}
+Every element of an ordinal number is an ordinal number.
+\end{lemma}
+
+
+
 \section{Ordinal numbers}
 
 \begin{definition}
@@ -7113,11 +7212,33 @@ when ``$f : W_1 \to W_2$'' is a (weak) homomorphism.
     \end{enumerate}
 \end{definition}
 
-we denote it by $Ord(\aleph)$ so we have the set of ordinals($Ord$).
+we denote it by $Ord$ so we have the set of ordinals($Ord$).
 
-\begin{lemma} Every natural number is an ordinal.\\
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+
+
+\begin{lemma}
+Every natural number is an ordinal.
 \end{lemma}
+
+\begin{proof}
+
+Let $\mathbb N$ be the set of natural numbers.
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{\forall n\in\mathbb N\ (n\subseteq \mathbb N)} \by{von Neumann construction}{}
+\have{2}{Transitive(\mathbb N)} \by{definition of transitive set}{}
+
+\have{3}{<_\mathbb N \;=\; \in \cap (\mathbb N\times \mathbb N)} \by{definition}{}
+\have{4}{(\mathbb N,<_\mathbb N)\ \text{is well ordered}} \by{standard well-order of $\mathbb N$}{}
+
+\have{5}{Ordinal(\mathbb N)} \by{definition of ordinal}{}
+
+\end{fitchproof}
+
+Hence $\mathbb N$ is an ordinal.
+
+\end{proof}
 
 In ordinal numbers we show ``$\mathbb{N}$'' with ``$\omega$''. so it's just a
 renaming.
@@ -7126,14 +7247,144 @@ renaming.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-\begin{lemma}prove
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $Transitive( Ord )$.
-        \item       $ \forall \alpha , \beta \in Ord \quad \alpha \subset \beta \to \alpha \in \beta $.
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+
+
+
+
+\begin{proof}
+
+\[
+s(\alpha)=\alpha\cup\{\alpha\}.
+\]
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{\alpha \text{ transitive}} \by{ordinal assumption}{}
+\have{2}{s(\alpha)=\alpha\cup\{\alpha\}} \by{definition}{}
+
+\have{3}{x\in y \land y\in s(\alpha)\Rightarrow x\in s(\alpha)} \by{case split on $y\in\alpha\cup\{\alpha\}$}{}
+\have{4}{Transitive(s(\alpha))} \by{definition of transitive set}{}
+
+\have{5}{<_\alpha = \in \cap (\alpha\times \alpha)} \by{definition}{}
+\have{6}{\alpha \text{ is greatest element of } s(\alpha)} \by{construction}{}
+\have{7}{<_ {s(\alpha)} \text{ extends } <_\alpha} \by{restriction}{}
+\have{8}{(s(\alpha),<_ {s(\alpha)}) \text{ is well ordered}} \by{extension by maximum element}{}
+
+\have{9}{Ordinal(s(\alpha))} \by{definition of ordinal}{}
+
+\end{fitchproof}
+
+Hence $s(\alpha)$ is an ordinal number.
+
+\end{proof}
+
+
+
+\begin{lemma}
+prove
+\begin{enumerate}
+    \setlength{\itemsep}{0pt}
+    \item $Transitive(Ord)$.
+    \item $\forall \alpha,\beta \in Ord \quad \alpha \subset \beta \to \alpha \in \beta$.
+\end{enumerate}
 \end{lemma}
+
+
+
+
+\begin{proof}
+
+    \textbf{ (1): $Transitive(Ord)$.}
+
+
+
+
+
+
+\textbf{Claim 1: $x$ is transitive.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{u \in v \land v \in x}
+\have{2}{x \in \alpha} \by{assumption}{}
+\have{3}{v \in \alpha} \by{transitivity of $\alpha$}{}
+\have{4}{u \in \alpha} \by{transitivity of $\alpha$}{}
+\have{5}{u,v,x \in \alpha} \by{closure}{}
+\have{6}{u <_\alpha v <_\alpha x} \by{definition}{}
+\have{7}{u <_\alpha x} \by{linearity of $<_\alpha$}{}
+
+\end{fitchproof}
+
+Hence $Transitive(x)$.
+
+\medskip
+
+\textbf{Claim 2: $(x,<_x)$ is well ordered.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{8}{x \subseteq \alpha} \by{transitivity of $\alpha$}{}
+\have{9}{<_x = <_\alpha \upharpoonright x} \by{definition}{}
+\have{10}{<_\alpha \text{ well order on } \alpha} \by{ordinal assumption}{}
+\have{11}{<_x \text{ well order on } x} \by{restriction of well-order}{}
+
+\end{fitchproof}
+
+Thus $x$ is transitive and well ordered, hence
+\[
+x \in Ord.
+\]
+
+
+
+
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{\alpha \in Ord}
+\have{2}{x \in y \land y \in \alpha}
+\have{3}{\alpha \text{ transitive}}
+\have{4}{x \in \alpha}
+
+\end{fitchproof}
+
+Hence $Transitive(\alpha)$ for all $\alpha \in Ord$, so $Transitive(Ord)$.
+
+\medskip
+
+\textbf{(2): $\alpha \subset \beta \Rightarrow \alpha \in \beta$.}
+
+Let $\alpha,\beta \in Ord$ and $\alpha \subset \beta$.
+
+
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{5}{\alpha \subset \beta} \by{assumption}{}
+\have{6}{\beta - \alpha \neq \emptyset} \by{set difference}{}
+
+\have{7}{\exists \gamma \in \beta-\alpha\ \forall \delta \in \beta-\alpha\ (\gamma \le \delta)} \by{well-order of $\beta$}{}
+
+\have{8}{\gamma \in \beta \land \gamma \notin \alpha} \by{definition of set difference}{}
+
+\have{9}{\forall \delta \in \alpha\ (\delta < \gamma)} \by{minimality of $\gamma$}{}
+
+\have{10}{\alpha \subseteq \gamma} \by{transitivity of $<$}{}
+
+\have{11}{\gamma \in \beta} \by{step 8}{}
+
+\have{12}{\alpha = \gamma} \by{ordinal comparison lemma ($\alpha,\gamma \in Ord$)}{}
+
+\have{13}{\alpha \in \beta} \by{since $\gamma \in \beta$ and $\alpha=\gamma$}{}
+
+\end{fitchproof}
+
+Hence
+\[
+\alpha \subset \beta \Rightarrow \alpha \in \beta.
+\]
+
+\end{proof}
 
 \begin{theorem}
     \textbf{Order of Ordinals} prove
@@ -7146,59 +7397,670 @@ renaming.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-\begin{theorem} The natural numbers are exactly finite ordinals.\\
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\begin{theorem}
+\textbf{Order of Ordinals.} prove
+\begin{enumerate}
+\setlength{\itemsep}{0pt}
+\item $(Ord,<)$ is linearly ordered.
+\item $(Ord,<)$ is well ordered.
+\end{enumerate}
 \end{theorem}
+
+\begin{proof}
+
+\textbf{Claim 1: $(Ord,<)$ is linear.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{\alpha \in \beta} \by{assumption}{}
+\have{2}{\beta \in \gamma} \by{assumption}{}
+\have{3}{\gamma \text{ transitive}} \by{$\gamma \in Ord$}{}
+\have{4}{\alpha \in \gamma} \by{transitivity of $\gamma$}{}
+
+\end{fitchproof}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\open
+\have{1}{\alpha \in \alpha} \by{assumption}{}
+\have{2}{(\alpha,<_\alpha)\text{ is linearly ordered}} \by{$\alpha$ is an ordinal}{}
+\have{3}{x:=\alpha} \by{definition}{}
+\have{4}{x\in x} \by{1,3}{}
+\have{5}{\bot} \by{asymmetry of $<_\alpha$}{}
+\close
+
+\have{6}{\alpha\notin\alpha}
+
+\end{fitchproof}
+
+Let $\alpha,\beta,\gamma \in Ord$.
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{\alpha \subseteq \beta \land \beta \subseteq \gamma} \by{assumption}{}
+\have{2}{\alpha \subseteq \gamma} \by{transitivity of $\subseteq$}{}
+\have{3}{\alpha < \gamma} \by{Lemma 2.6(a)}{}
+
+\have{4}{\alpha \not< \beta \land \beta \not< \alpha \Rightarrow \alpha=\beta} \by{Lemma 2.6(b),(c)}{}
+\have{5}{\alpha<\beta \ \lor\ \alpha=\beta \ \lor\ \beta<\alpha} \by{Lemma 2.6(c)}{}
+
+\end{fitchproof}
+
+Hence $(Ord,<)$ is linearly ordered.
+
+\medskip
+
+\textbf{Claim 2: $(Ord,<)$ is well ordered.}
+
+Let $X \subseteq Ord$, $X \neq \emptyset$.
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{6}{X \neq \emptyset} \by{assumption}{}
+\have{7}{\exists \alpha \in X} \by{nonempty}{}
+
+\have{8}{\exists \beta \in X \ \forall \gamma \in X\ (\beta \le \gamma)} \by{Lemma 2.6(d)}{}
+\have{9}{\beta \text{ is $<$-least element of } X} \by{definition}{}
+
+\end{fitchproof}
+
+Hence every nonempty set of ordinals has a least element.
+
+\medskip
+
+\textbf{Conclusion:}
+
+\[
+(Ord,<)\ \text{is linearly ordered and well ordered.}
+\]
+
+\end{proof}
+
+
+\begin{theorem}
+The natural numbers are exactly the finite ordinal numbers.
+\end{theorem}
+
+\begin{proof}
+
+\textbf{Claim 1: Every natural number is a finite ordinal.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{n\in\mathbb N}
+\have{2}{Ordinal(n)} \by{Theorem 2.3}{}
+\have{3}{Finite(n)} \by{definition of $\mathbb N$}{}
+
+\end{fitchproof}
+
+\medskip
+
+\textbf{Claim 2: Every ordinal that is not a natural number is infinite.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{4}{Ordinal(\alpha)\land \alpha\notin\mathbb N} \by{assumption}{}
+\have{5}{\alpha\neq\omega} \by{$\alpha\notin\mathbb N$}{}
+\have{6}{\alpha<\omega \ \lor\ \alpha=\omega \ \lor\ \omega<\alpha} \by{Theorem 2.6(c)}{}
+\have{7}{\omega<\alpha} \by{Theorem 2.6(b),5,6}{}
+\have{8}{\omega\in\alpha} \by{definition of $<$}{}
+\have{9}{\omega\subseteq\alpha} \by{transitivity of $\alpha$}{}
+\have{10}{Infinite(\omega)} \by{definition}{}
+\have{11}{Infinite(\alpha)} \by{$\omega\subseteq\alpha$}{}
+
+\end{fitchproof}
+
+Hence every finite ordinal is a natural number.
+
+\end{proof}
+
+
+\begin{theorem}
+Every well ordered structure is isomorphic to a unique ordinal.
+\end{theorem}
+
+\begin{proof}
+
+Let $(W,<)$ be a well ordered structure.
+
+Define
+
+\[
+A:=\{a\in W\mid \exists \alpha\in Ord\ ((W[a],<)\cong (\alpha,<))\}.
+\]
+
+For each $a\in A$, let $\alpha_a$ be the unique ordinal such that
+
+\[
+(W[a],<)\cong (\alpha_a,<).
+\]
+
+Define
+
+\[
+S:=\{\alpha_a\mid a\in A\}.
+\]
+
+\textbf{Claim 1: $Transitive(S)$.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{\alpha_a\in S}
+\have{2}{\gamma\in\alpha_a}
+\have{3}{h:(W[a],<)\cong(\alpha_a,<)} \by{definition of $\alpha_a$}{}
+\have{4}{c:=h^{-1}(\gamma)}
+\have{5}{(W[c],<)\cong(\gamma,<)} \by{restriction of $h$}{}
+\have{6}{c\in A} \by{definition of $A$}{}
+\have{7}{\gamma=\alpha_c}
+\have{8}{\gamma\in S}
+
+\end{fitchproof}
+
+Hence $Transitive(S)$.
+
+\medskip
+
+\textbf{Claim 2: $S$ is an ordinal.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{9}{S\subseteq Ord} \by{definition of $S$}{}
+\have{10}{(S,\in)\text{ is well ordered}} \by{Order of Ordinals}{}
+\have{11}{Transitive(S)} \by{Claim 1}{}
+\have{12}{Ordinal(S)} \by{definition of ordinal}{}
+
+\end{fitchproof}
+
+Let
+
+\[
+S=\alpha.
+\]
+
+\medskip
+
+\textbf{Claim 3: $b<a\land a\in A \Rightarrow b\in A$.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{13}{a\in A\land b<a}
+\have{14}{h:(W[a],<)\cong(\alpha_a,<)} \by{definition of $A$}{}
+\have{15}{h[W[b]]\text{ is an initial segment of }\alpha_a}
+\have{16}{\exists\beta\in\alpha_a\quad h[W[b]]=\beta} \by{initial segments of ordinals}{}
+\have{17}{(W[b],<)\cong(\beta,<)}
+\have{18}{b\in A} \by{definition of $A$}{}
+\have{19}{\alpha_b=\beta}
+\have{20}{\alpha_b\in\alpha_a}
+
+\end{fitchproof}
+
+\medskip
+
+\textbf{Claim 4: $A=W$ or $A=W[c]$ for some $c\in W$.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{21}{A\subseteq W}
+\have{22}{\forall a\in A\ \forall b<a\ (b\in A)} \by{Claim 3}{}
+\have{23}{A\text{ is an initial segment of }W}
+\have{24}{A=W\ \lor\ \exists c\in W\ (A=W[c])} \by{Lemma 1.2}{}
+
+\end{fitchproof}
+
+\medskip
+
+Define
+
+\[
+f:A\to\alpha
+\]
+
+by
+
+\[
+f(a):=\alpha_a.
+\]
+
+\medskip
+
+\textbf{Claim 5: $f$ is an isomorphism.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{25}{a,b\in A}
+\have{26}{a<b \Rightarrow \alpha_a\in\alpha_b} \by{Claim 3}{}
+\have{27}{a<b \Rightarrow f(a)<f(b)}
+\have{28}{f\text{ injective}} \by{uniqueness of ordinals}{}
+\have{29}{Range(f)=\alpha} \by{definition of $\alpha=S$}{}
+\have{30}{f:(A,<)\cong(\alpha,<)}
+
+\end{fitchproof}
+
+\medskip
+
+\textbf{Claim 6: $A=W$.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\open
+\have{31}{A=W[c]}
+\have{32}{f:(W[c],<)\cong(\alpha,<)} \by{Claim 5}{}
+\have{33}{c\in A} \by{definition of $A$}{}
+\have{34}{c\in W[c]} \by{31}{}
+\have{35}{\bot} \by{definition of initial segment}{}
+\close
+
+\have{36}{A=W}
+
+\end{fitchproof}
+
+Since $A=W$, Claim 5 yields
+
+\[
+f:(W,<)\cong(\alpha,<).
+\]
+
+The ordinal $\alpha$ is unique since isomorphic ordinals are equal.
+
+\end{proof}
 
 \section{Transfinite Induction}
 
-\section{Transfinite Recurtion}
+\begin{theorem}[Second Version of Transfinite Induction]
 
-\begin{theorem}\textbf{Classic Summation} there is a unique function ``$ +_c :Ord \times Ord \to Ord$'' s.t.
+Let $P(\alpha)$ be a property. Assume
 
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall \alpha  \in Ord \quad \alpha +_c 0 = \alpha $
-        \item       $\forall \alpha , \beta  \in Ord \quad \alpha +_c s( \beta ) = s(\alpha  +_c \beta )  $
-        \item       $\forall \alpha , \beta  \in Ord \quad limit(\beta) \to \alpha +_c \beta = \bigcup_{\beta' \in \beta} (\alpha +_c \beta') $
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\begin{enumerate}
+    \setlength{\itemsep}{0pt}
+    \item $P(0)$.
+    \item $\forall \alpha\in Ord\quad P(\alpha)\to P(s(\alpha))$.
+    \item $\forall \alpha\in Ord\quad
+          \big(
+          Limit(\alpha)\land \alpha\neq 0
+          \land
+          \forall \beta<\alpha\ P(\beta)
+          \big)
+          \to P(\alpha)$.
+\end{enumerate}
+
+Then
+
+\[
+\forall \alpha\in Ord\quad P(\alpha).
+\]
+
 \end{theorem}
 
-\begin{lemma} $ \forall \alpha , \beta \in Ord ( \alpha \leq \beta \to \exists \gamma \in Ord \quad \alpha +_c \gamma = \beta)$\\
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{lemma}
+\begin{proof}
 
-we show this unique ``$ \gamma $'' with ``$\beta -_c \alpha$''
+We prove the hypothesis of Transfinite Induction.
 
-\begin{definition} \textbf{Trunk , Branch , Roof}
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $trunk(\alpha) := sup\{ \beta \in \alpha \mid \beta +_c \alpha = \alpha \} $
-        \item       $branch(\alpha) := \alpha -_c trunk(\alpha) $
-        \item     $  trunk(\alpha):=
-                  \left\{
-                  \begin{array}{l}
-                      trunk(\alpha)  \quad \quad  \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad  branch(\alpha) < \beta \\
-                      trunk(\alpha) +_c trunk(branch(\alpha , \beta))  \quad \quad   branch(\alpha) \geq  \beta
-                  \end{array}
-                  \right.$
-        \item       $branch(\alpha , \beta) := \alpha -_c trunk(\alpha , \beta) $
-        \item       $roof(\alpha ) :=  \alpha +_c \omega$
+\begin{fitchproof}[arrayenv=tabular]
 
-    \end{enumerate}
-\end{definition}
+\open
+\have{1}{\alpha\in Ord}
+\have{2}{\forall \beta<\alpha\quad P(\beta)}
+
+\open
+\have{3}{\alpha=0}
+\have{4}{P(\alpha)} \by{assumption (a)}{}
+\close
+
+\open
+\have{5}{\exists \beta<\alpha\quad \alpha=s(\beta)}
+\have{6}{P(\beta)} \by{2}{}
+\have{7}{P(\alpha)} \by{assumption (b)}{}
+\close
+
+\open
+\have{8}{Limit(\alpha)\land \alpha\neq 0}
+\have{9}{P(\alpha)} \by{assumption (c),2}{}
+\close
+
+\have{10}{P(\alpha)} \by{trichotomy of ordinals}{}
+
+\close
+
+\have{11}{\forall \alpha\in Ord
+\Big(
+\forall \beta<\alpha\ P(\beta)
+\to
+P(\alpha)
+\Big)}
+
+\have{12}{\forall \alpha\in Ord\quad P(\alpha)}
+\by{Transfinite Induction}{}
+
+\end{fitchproof}
+
+\end{proof}
+
+\begin{theorem}[Transfinite Induction Principle]
+
+Let $P(\alpha)$ be a property.
+
+Assume
+
+\[
+\forall \alpha\in Ord
+\quad
+\Big(
+\forall \beta<\alpha \quad P(\beta)
+\to
+P(\alpha)
+\Big).
+\]
+
+Then
+
+\[
+\forall \alpha\in Ord \quad P(\alpha).
+\]
+
+\end{theorem}
+
+\begin{proof}
+
+
+
+Define
+
+\[
+S:=\{\beta\le\gamma\mid \neg P(\beta)\}.
+\]
+
+\begin{fitchproof}[arrayenv=tabular]
+    
+    
+\open
+\have{1}{\exists \gamma\in Ord \quad \neg P(\gamma)} \by{assumption}{}
+\have{2}{\gamma\in S} \by{definition of $S$}{}
+\have{3}{S\neq\emptyset} \by{2}{}
+\have{4}{\exists \alpha\in S \quad \forall \delta\in S \ (\alpha\le\delta)} \by{well ordering of $Ord$}{}
+\have{5}{\alpha\in S} \by{4}{}
+\have{6}{\neg P(\alpha)} \by{definition of $S$}{}
+\have{7}{\forall \beta<\alpha \quad P(\beta)} \by{minimality of $\alpha$}{}
+\have{8}{P(\alpha)} \by{hypothesis}{}
+\have{9}{\bot} \by{6,8}{}
+\close
+\have{10}{\forall \alpha\in Ord \quad P(\alpha)} \by{contradiction}{}
+
+\end{fitchproof}
+
+\end{proof}
+
+\section{Transfinite Recurtion}
+
+
+\begin{theorem}[Transfinite Recursion Theorem]
+Let $G$ be an operation. Then there exists a unique operation $F$ such that
+\[
+F(\alpha)=G(F\upharpoonright \alpha)
+\quad \text{for all ordinals } \alpha.
+\]
+\end{theorem}
+
+\begin{proof}
+
+We say $t$ is a \textbf{computation of length $\alpha$ based on $G$} if:
+\[
+dom(t)=\alpha+1
+\quad\text{and}\quad
+\forall \beta\le \alpha\; t(\beta)=G(t\upharpoonright \beta).
+\]
+
+Define the property:
+\[
+P(x,y)\;:\;
+\begin{cases}
+x\in Ord \ \land\ y=t(x) \text{ for some computation } t \text{ of length } x,\\
+\text{or } x\notin Ord \ \land\ y=\emptyset.
+\end{cases}
+\]
+
+We show $P$ defines a function.
+
+\textbf{Claim 1: For every ordinal $\alpha$ there exists a unique computation of length $\alpha$.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{\forall \beta<\alpha\ \exists ! t_\beta \text{ computation of length }\beta}
+\by{induction hypothesis}{}
+
+\have{2}{T:=\{t_\beta \mid \beta<\alpha\}} \by{Replacement}{}
+\have{3}{T \text{ is a compatible system of functions}} \by{uniqueness}{}
+
+\have{4}{t:=\bigcup T} \by{definition}{}
+
+\have{5}{dom(t)=\alpha} \by{union of domains}{}
+\have{6}{t \text{ is a function}} \by{compatibility of }T{}
+
+\have{7}{\forall \beta<\alpha\; t(\beta)=G(t\upharpoonright \beta)} \by{compatibility}{}
+
+\have{8}{t(\alpha)=G(t\upharpoonright \alpha)} \by{definition extension step}{}
+
+\have{9}{t \text{ computation of length }\alpha} \by{definition}{}
+
+\end{fitchproof}
+
+\textbf{Claim 2: Uniqueness of computation of length $\alpha$.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{10}{t,s \text{ computations of length }\alpha}
+\have{11}{\forall \beta<\alpha\; t(\beta)=s(\beta)} \by{induction on $\beta$}{}
+\have{12}{t=s} \by{extensionality}{}
+
+\end{fitchproof}
+
+Hence $P$ defines a function $F$.
+
+\medskip
+
+Define
+\[
+F(\alpha):=t(\alpha)
+\]
+where $t$ is the unique computation of length $\alpha$.
+
+\textbf{Claim 3: Recursion equation.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{13}{\alpha \in Ord}
+\have{14}{t \text{ computation of length }\alpha}
+\have{15}{F(\alpha)=t(\alpha)} \by{definition}{}
+\have{16}{t(\alpha)=G(t\upharpoonright \alpha)} \by{computation rule}{}
+\have{17}{F(\alpha)=G(F\upharpoonright \alpha)} \by{definition of }F{}
+
+\end{fitchproof}
+
+\textbf{Claim 4: Uniqueness of $F$.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{18}{F,S \text{ satisfy recursion equation}}
+\have{19}{\forall \beta<\alpha\; F(\beta)=S(\beta)} \by{induction}{}
+\have{20}{F=S} \by{extensionality}{}
+
+\end{fitchproof}
+
+\end{proof}
+
+\begin{theorem}[Parametric Transfinite Recursion]
+Let $G$ be an operation. Then there exists a unique operation $F$ such that
+\[
+F(z,\alpha)=G\bigl(z, F(z)\upharpoonright \alpha\bigr)
+\quad \text{for all sets } z \text{ and ordinals } \alpha.
+\]
+\end{theorem}
+
+\begin{proof}
+
+Fix a set $z$.
+
+We say $t$ is a \textbf{computation of length $\alpha$ based on $G$ and $z$} if:
+\[
+dom(t)=\alpha+1
+\quad\land\quad
+\forall \beta\le \alpha\; t(\beta)=G\bigl(z, t\upharpoonright \beta\bigr).
+\]
+
+Define the property
+\[
+Q(z,x,y):
+\begin{cases}
+x\in Ord \ \land\ y=t(x)\ \text{for some computation } t \text{ of length } x \text{ based on } G,z,\\
+\text{or } x\notin Ord \ \land\ y=\emptyset.
+\end{cases}
+\]
+
+\textbf{Claim 1: For every ordinal $\alpha$ there exists a unique computation of length $\alpha$ based on $G$ and $z$.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{\forall \beta<\alpha\ \exists ! t_\beta}
+\by{induction hypothesis}{}
+
+\have{2}{T:=\{t_\beta \mid \beta<\alpha\}}
+\have{3}{T \text{ is compatible}} \by{uniqueness}{}
+
+\have{4}{t:=\bigcup T}
+
+\have{5}{dom(t)=\alpha}
+\have{6}{t \text{ is a function}} \by{compatibility}{}
+
+\have{7}{\forall \beta<\alpha\; t(\beta)=G(z,t\upharpoonright \beta)}
+\have{8}{t(\alpha)=G(z,t\upharpoonright \alpha)}
+
+\have{9}{t \text{ computation of length }\alpha}
+
+\end{fitchproof}
+
+\textbf{Claim 2: Uniqueness.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{10}{t,s \text{ computations of length }\alpha}
+\have{11}{\forall \beta<\alpha\; t(\beta)=s(\beta)}
+\have{12}{t=s}
+
+\end{fitchproof}
+
+Hence $Q$ defines a function $F$.
+
+Define
+\[
+F(z,\alpha):=t(\alpha)
+\]
+where $t$ is the unique computation of length $\alpha$ based on $G$ and $z$.
+
+\textbf{Claim 3: Recursion equation.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{13}{\alpha\in Ord}
+\have{14}{t \text{ computation of length }\alpha}
+\have{15}{F(z,\alpha)=t(\alpha)}
+\have{16}{t(\alpha)=G(z,t\upharpoonright \alpha)}
+\have{17}{F(z,\alpha)=G(z,F(z)\upharpoonright \alpha)}
+
+\end{fitchproof}
+
+\textbf{Claim 4: Uniqueness of $F$.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{18}{F,S \text{ satisfy recursion}}
+\have{19}{\forall \beta<\alpha\; F(z,\beta)=S(z,\beta)}
+\have{20}{F=S}
+
+\end{fitchproof}
+
+\end{proof}
+
+
 
 \section{Arithmetic of Ordinals}
+
+\begin{theorem}[Conway]
+For ordinals $\alpha,\beta$,
+\[
+\alpha \oplus \beta
+=
+\sup'\Big(\{\alpha \oplus \beta' : \beta'<\beta\}\ \cup\ \{\alpha' \oplus \beta : \alpha'<\alpha\}\Big).
+\]
+\end{theorem}
+
+\begin{proof}
+
+Let
+\[
+S_{\alpha,\beta}:=
+\{\alpha \oplus \beta' : \beta'<\beta\}
+\ \cup\
+\{\alpha' \oplus \beta : \alpha'<\alpha\}.
+\]
+
+\textbf{Claim 1: $S_{\alpha,\beta}$ is a set of ordinals.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{1}{\beta'<\beta \Rightarrow \alpha\oplus \beta' \in Ord}
+\have{2}{\alpha'<\alpha \Rightarrow \alpha'\oplus \beta \in Ord}
+\have{3}{S_{\alpha,\beta}\subseteq Ord}
+
+\end{fitchproof}
+
+\textbf{Claim 2: $S_{\alpha,\beta}$ is bounded above in $Ord$.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{4}{\forall \gamma\in S_{\alpha,\beta}\ \exists \delta\in Ord\ (\gamma<\delta)}
+\have{5}{\exists \sup S_{\alpha,\beta}}
+
+\end{fitchproof}
+
+\textbf{Claim 3: $\sup' S_{\alpha,\beta}$ exists and is an ordinal.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{6}{\sup S_{\alpha,\beta} \in Ord}
+\have{7}{\sup' S_{\alpha,\beta}\in Ord}
+
+\end{fitchproof}
+
+\textbf{Claim 4: recursion characterization.}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+\have{8}{\forall \beta'<\beta\quad \alpha\oplus \beta' < \alpha\oplus \beta}
+\have{9}{\forall \alpha'<\alpha\quad \alpha'\oplus \beta < \alpha\oplus \beta}
+\have{10}{S_{\alpha,\beta} \subseteq \alpha\oplus \beta}
+
+\have{11}{\alpha\oplus \beta \text{ is upper bound of } S_{\alpha,\beta}}
+
+\have{12}{\sup' S_{\alpha,\beta} \le \alpha\oplus \beta}
+
+\have{13}{\forall \gamma<\alpha\oplus \beta\ \exists s\in S_{\alpha,\beta}\ (\gamma\le s)}
+\have{14}{\alpha\oplus \beta \le \sup' S_{\alpha,\beta}}
+
+\end{fitchproof}
+
+Hence
+\[
+\alpha \oplus \beta = \sup' S_{\alpha,\beta}.
+\]
+
+\end{proof}
 
 \begin{theorem}\textbf{Summation} there is a unique function ``$+ :Ord \times Ord \to Ord$'' s.t.
 
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall \alpha  \in Ord \quad \alpha +0 = \alpha $
-        \item       $\forall \alpha , \beta  \in Ord \quad \alpha +s( \beta ) = s(\alpha  + \beta )  $
-        \item       $\forall \alpha , \beta  \in Ord \quad limit(\beta) \land \alpha < \beta \to \alpha + \beta = \beta + \alpha  $
-        \item       $\forall \alpha , \beta  \in Ord \quad limit(\beta) \land  \beta \leq \alpha  \to \alpha + \beta = (trunk( \alpha , \beta) +_c \beta )+ branch(\alpha ,\beta) $
+        \item       $\forall \alpha  \in Ord \quad  0 + \alpha = \alpha =  \alpha +0  $
+        \item       $\forall \alpha , \beta  \in Ord \quad \alpha +s( \beta ) = s(\alpha  + \beta ) = s(\alpha) + \beta  $
+        \item       $\forall \alpha , \beta  \in Ord \quad limit(\alpha) \land limit(\beta) \to \alpha + \beta = (\bigcup_{\beta' \in \beta} \alpha + \beta') \cup (\bigcup_{\beta' \in \beta} \beta' + \alpha  ) $
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
