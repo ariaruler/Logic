@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.9.18)  10 JUN 2026 19:47
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.9.18)  13 JUN 2026 15:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1878,20 +1878,22 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 [88] [89] [90]
 Chapter 9.
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
+
+Underfull \hbox (badness 10000) in paragraph at lines 5831--5832
+
+ []
+
 [91
 
 ]
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
+Underfull \hbox (badness 10000) in paragraph at lines 5887--5888
+
+ []
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [92]
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
- [93]
+ [92] [93]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
  [94]
@@ -1920,60 +1922,54 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [96]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [97]
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
- [98]
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
- [99]
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
- [100]
+ [97] [98]
+Underfull \vbox (badness 3375) has occurred while \output is active []
+
+ [99] [100]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [101]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [102] [103]
+ [102]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
- [104] [105] [106] [107]
+ [103] [104] [105] [106]
+Underfull \hbox (badness 10000) in paragraph at lines 6830--6831
+
+ []
+
+[107]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
  [108]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
- [109]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
- [110]
+ [109] [110
+
+]
 Chapter 10.
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Underfull \hbox (badness 10000) in paragraph at lines 7077--7079
+Underfull \hbox (badness 10000) in paragraph at lines 7007--7009
 
  []
 
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Underfull \hbox (badness 10000) in paragraph at lines 7088--7090
+Underfull \hbox (badness 10000) in paragraph at lines 7018--7020
 
  []
 
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
-[111
-
-] [112]
+[111] [112]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
  [113] [114]
@@ -1981,14 +1977,14 @@ File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
  [115] [116] [117] [118] [119] [120]
 
-Package fitch Warning: Undefined line reference: T on input line 7838.
+Package fitch Warning: Undefined line reference: T on input line 7768.
 
 
 Underfull \vbox (badness 1845) has occurred while \output is active []
 
  [121]
 
-Package fitch Warning: Undefined line reference: F on input line 7876.
+Package fitch Warning: Undefined line reference: F on input line 7806.
 
 [122] [123] [124]
 File: all-twemojis.pdf Graphic file (type pdf)
@@ -2016,43 +2012,43 @@ Chapter 12.
 Chapter 13.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8153.
+(hyperref)                removing `math shift' on input line 8083.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8153.
+(hyperref)                removing `math shift' on input line 8083.
 
 [131] [132] [133] [134] [135] [136]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8686.
+(hyperref)                removing `math shift' on input line 8616.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8686.
+(hyperref)                removing `math shift' on input line 8616.
 
 [137] [138] [139] [140] [141] [142] [143] [144]
 Chapter 14.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9232.
+(hyperref)                removing `math shift' on input line 9162.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9232.
+(hyperref)                removing `math shift' on input line 9162.
 
 
-Overfull \hbox (57.54887pt too wide) in paragraph at lines 9232--9232
+Overfull \hbox (57.54887pt too wide) in paragraph at lines 9162--9162
 \TU/lmr/bx/n/24.88 numbers($\U/msb/m/n/24.88 Z\OT1/cmr/m/n/24.88 (\OML/cmm/m/it/24.88 Ord\OT1/cmr/m/n/24.88 )\OML/cmm/m/it/24.88 ; \U/msb/m/n/24.88 Q\OT1/cmr/m/n/24.88 (\OML/cmm/m/it/24.88 Ord\OT1/cmr/m/n/24.88 )\OML/cmm/m/it/24.88 ; \U/msb/m/n/24.88 R\OT1/cmr/m/n/24.88 (\OML/cmm/m/it/24.88 Ord\OT1/cmr/m/n/24.88 )\OML/cmm/m/it/24.88 ; \U/msb/m/n/24.88 C\OT1/cmr/m/n/24.88 (\OML/cmm/m/it/24.88 Ord\OT1/cmr/m/n/24.88 )$\TU/lmr/bx/n/24.88 )  
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9234.
+(hyperref)                removing `math shift' on input line 9164.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9234.
+(hyperref)                removing `math shift' on input line 9164.
 
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
@@ -2072,11 +2068,11 @@ File: all-twemojis.pdf Graphic file (type pdf)
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9322.
+(hyperref)                removing `math shift' on input line 9252.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9322.
+(hyperref)                removing `math shift' on input line 9252.
 
 [146]
 File: all-twemojis.pdf Graphic file (type pdf)
@@ -2091,7 +2087,7 @@ File: all-twemojis.pdf Graphic file (type pdf)
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Overfull \hbox (4.51492pt too wide) in paragraph at lines 9404--9406
+Overfull \hbox (4.51492pt too wide) in paragraph at lines 9334--9336
 [][]\TU/lmr/bx/n/10 Theorem 14.2.3. []\TU/lmr/bx/it/10 Order of fantacy Rational numbers($\U/msb/m/n/10 Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Ord\OT1/cmr/m/n/10 )$\TU/lmr/bx/it/10 ) \TU/lmr/m/it/10 prove for “$\OT1/cmr/m/n/10 (\U/msb/m/n/10 Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Ord\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; <[]
  []
 
@@ -2099,14 +2095,14 @@ File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9418.
+(hyperref)                removing `math shift' on input line 9348.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9418.
+(hyperref)                removing `math shift' on input line 9348.
 
 
-Overfull \hbox (3.66527pt too wide) in paragraph at lines 9447--9451
+Overfull \hbox (3.66527pt too wide) in paragraph at lines 9377--9381
 []\TU/lmr/m/n/10 we define an equivalence relation “$\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 )[] \OMS/cmsy/m/n/10 ^^X \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 b[]\OT1/cmr/m/n/10 )[] : \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 ^^O > \OT1/cmr/m/n/10 0 \OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 N \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 n N < n < roof\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 N\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 !
  []
 
@@ -2116,7 +2112,7 @@ File: all-twemojis.pdf Graphic file (type pdf)
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Underfull \hbox (badness 10000) in paragraph at lines 9476--9477
+Underfull \hbox (badness 10000) in paragraph at lines 9406--9407
 
  []
 
@@ -2132,11 +2128,11 @@ File: all-twemojis.pdf Graphic file (type pdf)
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9539.
+(hyperref)                removing `math shift' on input line 9469.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9539.
+(hyperref)                removing `math shift' on input line 9469.
 
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
@@ -2195,4 +2191,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  84i,27n,93p,555b,708s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Logic.xdv (163 pages, 1263392 bytes).
+Output written on Logic.xdv (163 pages, 1250148 bytes).

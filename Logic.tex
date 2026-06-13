@@ -5829,7 +5829,7 @@ we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
 \end{definition}
 
 \begin{lemma} ``$\cong$'' is a equivalence relation in ``$(V , \cong)$''\\
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+
 
     \begin{fitchproof}[arrayenv=tabular]
         \have {14} {  id : X \xrightarrow[surj]{inj} X }
@@ -5885,7 +5885,7 @@ similarly we define ``$[A] \preceq [B] : \forall X \in [A] , Y \in [B] \quad X
     \precsim Y$''
 
 \begin{lemma} $A \precsim  B \therefore / \therefore [A] \preceq  [B] $\\
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+
 \end{lemma}
 
 \begin{fitchproof}[arrayenv=tabular]
@@ -5916,7 +5916,7 @@ similarly we define ``$[A] \preceq [B] : \forall X \in [A] , Y \in [B] \quad X
 \end{fitchproof}
 
 \begin{theorem} \textbf{Schroeder-Bernstein} $ X \precsim  Y , Y \precsim  X / \therefore X \cong  Y$\\
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+    Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
 \[
@@ -6217,12 +6217,10 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
     set ``$A$'' is \textbf{``Countable''} if  ``$ A \cong \mathbb{N}$''. set ``$A$'' is\textbf{``At most countable''}  if  ``$ A \precsim \mathbb{N}$''
 \end{definition}
 
-\begin{lemma} $ Countable(X) ,Infinite(Y) , Y \subseteq X / \therefore  Countable(Y)   $\\
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\begin{lemma} $ Countable(A) ,Infinite(B) , B \subseteq A / \therefore  Countable(B)   $\\
+    Proof Is Left As An Exercise To The Reade.
 \end{lemma}
-\begin{theorem}
-    An infinite subset of a countable set is countable.
-\end{theorem}
+
 
 \begin{proof}
 
@@ -6278,9 +6276,7 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
 \begin{corollary} a set is at most countable iff it's finite or countable.
 \end{corollary}
 
-\begin{lemma} range of infinite sequence is atmost countable.\\
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{lemma}
+
 
 \begin{theorem}
     The range of an infinite sequence $(a_n)_{n\in\mathbb N}$ is at most countable.
@@ -6337,9 +6333,7 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
 
 \end{proof}
 
-\begin{lemma} union of two countable set is  countable.\\
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{lemma}
+
 
 \begin{theorem}
     The union of two countable sets is countable.
@@ -6410,16 +6404,13 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
         \have{4}{Countable(\bigcup_{i \in s(n)} A_i) }
         \close
         \close
-
-        \have{6}{(A_1\cup\cdots\cup A_n) }
+        \have{4}{Countable(\bigcup_{i \in s(n)} A_i) }
 
     \end{fitchproof}
 
 \end{proof}
 
-\begin{lemma} if ``$A$'' and ``$B$'' are countable sets then ``$A \times B$'' is  countable.\\
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{lemma}
+
 
 \begin{theorem}
     If $A$ and $B$ are countable, then $A\times B$ is countable.
@@ -6498,47 +6489,9 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
 
 \end{proof}
 
-\begin{lemma}
-    If $A$ and $B$ are countable sets, then $A\times B$ is countable.
-\end{lemma}
 
-\begin{proof}
 
-    Let $f:\mathbb N\xrightarrow[surj]{inj} A$ and $g:\mathbb
-        N\xrightarrow[surj]{inj} B$.
 
-    Define
-    \[
-        h:\mathbb N\to A\times B
-        \quad\text{by}\quad
-        h(\langle m,n\rangle)=(f(m),g(n)),
-    \]
-    where $\langle\cdot,\cdot\rangle:\mathbb N\times\mathbb N\to\mathbb N$ is a
-    pairing function.
-
-    \begin{fitchproof}[arrayenv=tabular]
-
-        \have{1}{(a,b)\in A\times B}
-
-        \open
-        \have{2}{a\in A}
-        \have{3}{b\in B}
-        \have{4}{\exists m\in\mathbb N\ f(m)=a}
-        \have{5}{\exists n\in\mathbb N\ g(n)=b}
-        \have{6}{h(\langle m,n\rangle)=(a,b)}
-        \close
-
-        \have{7}{h:\mathbb N\xrightarrow[surj]{inj} A\times B}
-
-        \have{8}{Countable(A\times B)}
-
-    \end{fitchproof}
-
-\end{proof}
-
-\begin{corollary} finite cartesian product of countable sets is countable. and ``$A^n$''
-    is countable for any ``$A$'' countable and ``$n > 0$''.
-\end{corollary}
 
 \begin{corollary}
     Finite Cartesian product of countable sets is countable, and $A^n$ is countable for any countable $A$ and $n>0$.
@@ -6548,37 +6501,20 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
 
     Let $A_1,\dots,A_n$ be countable.
 
-    \begin{fitchproof}[arrayenv=tabular]
 
-        \have{1}{A_1\times A_2 \text{ is countable}}
+        \begin{fitchproof}[arrayenv=tabular]
 
-        \open
-        \have{2}{(A_1\times\cdots\times A_k)\text{ is countable}}
-        \have{3}{A_{k+1}\text{ is countable}}
-        \have{4}{(A_1\times\cdots\times A_k)\times A_{k+1}\text{ is countable}}
-        \close
-
-        \have{5}{\forall k\le n\ (A_1\times\cdots\times A_k)\text{ is countable}}
-
-        \have{6}{A_1\times\cdots\times A_n \text{ is countable}}
-
-    \end{fitchproof}
-
-    Now let $A$ be countable and $n>0$.
-
-    \begin{fitchproof}[arrayenv=tabular]
-
-        \have{7}{A^1 \text{ is countable}}
+        \have{1}{Countable (A_1  )}
 
         \open
-        \have{8}{A^k \text{ is countable}}
-        \have{9}{A \text{ is countable}}
-        \have{10}{A^{k+1}=A^k\times A \text{ is countable}}
+        \have{2}{ \forall k < n \quad Countable(A_k) \to Countable(\prod_{i \in n} A_i)}
+        \open
+        \have{2}{ \forall k < s(n) \quad Countable(A_k) }
+        \have{3}{Countable(A_{n} )}
+        \have{4}{Countable(\prod_{i \in s(n)} A_i) }
         \close
-
-        \have{11}{\forall k\le n\ A^k \text{ is countable}}
-
-        \have{12}{A^n \text{ is countable}}
+        \close
+        \have{4}{Countable(\prod_{i \in s(n)} A_i) }
 
     \end{fitchproof}
 
@@ -6892,16 +6828,10 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
 \section{Uncountable sets}
 
 \begin{lemma} $/ \therefore \mathbb{N} \prec  2^\mathbb{N} $ \\
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+   
 \end{lemma}
 
-\begin{lemma}
 
-    \[
-        \mathbb N \prec 2^{\mathbb N}.
-    \]
-
-\end{lemma}
 
 \begin{proof}
 
