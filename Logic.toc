@@ -5,17 +5,17 @@
 \contentsline {section}{\numberline {2.2}Rules of propositions.}{6}{section.2.2}%
 \contentsline {chapter}{\numberline {3}first-order logic}{13}{chapter.3}%
 \contentsline {section}{\numberline {3.1}what is formula?}{13}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Rules of first order logic.}{16}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Rules of first order logic.}{15}{section.3.2}%
 \contentsline {chapter}{\numberline {4}The beginning of set theory}{21}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Axioms of set theory}{21}{section.4.1}%
 \contentsline {chapter}{\numberline {5}Relations and Functions}{31}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Orderd pair and Cartesian product}{31}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Relations}{33}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Functions}{36}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Family of sets}{40}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Structures and morphisms}{43}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Equivalences and Partitions}{44}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Orderings}{48}{section.5.7}%
+\contentsline {section}{\numberline {5.2}Relations}{32}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Functions}{35}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Family of sets}{39}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Structures and morphisms}{42}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Equivalences and Partitions}{43}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Orderings}{47}{section.5.7}%
 \contentsline {chapter}{\numberline {6} The beginning of Abstract Algebra }{57}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Group theory}{57}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Ring theory}{60}{section.6.2}%
@@ -23,13 +23,13 @@
 \contentsline {section}{\numberline {7.1}Introduction to Natural numbers}{67}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Properties of Natural numbers}{68}{section.7.2}%
 \contentsline {section}{\numberline {7.3}The Recursion theorem}{70}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Arithmetic of Natural numbers}{77}{section.7.4}%
+\contentsline {section}{\numberline {7.4}Arithmetic of Natural numbers}{76}{section.7.4}%
 \contentsline {section}{\numberline {7.5}Peano arithmetic}{77}{section.7.5}%
 \contentsline {chapter}{\numberline {8}From Natural numbers to Complex numbers }{81}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Integers``$\mathbb {Z}$''}{81}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Rational numbers ``$\mathbb {Q}$''}{82}{section.8.2}%
 \contentsline {section}{\numberline {8.3}Real numbers ``$\mathbb {R}$''}{84}{section.8.3}%
-\contentsline {section}{\numberline {8.4}Complex numbers``$\mathbb {C}$''}{88}{section.8.4}%
+\contentsline {section}{\numberline {8.4}Complex numbers``$\mathbb {C}$''}{87}{section.8.4}%
 \contentsline {chapter}{\numberline {9}Finite and Infinite sets}{91}{chapter.9}%
 \contentsline {section}{\numberline {9.1}Equipotent and Order in sets}{91}{section.9.1}%
 \contentsline {section}{\numberline {9.2}Finite sets}{94}{section.9.2}%
