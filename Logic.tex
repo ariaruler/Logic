@@ -342,13 +342,13 @@ we denote propositions with ``$p ,q ,r ,...$''.
             \close
             \have  [ ]{2} {\therefore \varphi \to  \psi} \by{$\to I$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ]{1} {\varphi \to \psi}
             \hypo [ ] {2} {\varphi}
             \have  [ ]{2} {\therefore \psi} \by{$\to E$}{}
         \end{fitchproof}
-        \\
+        \rule[0pt]{0pt}{0pt}   \\
         \hline
     \end{tabular}
     \begin{example}
@@ -374,7 +374,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
             \have {} {p \to r} \by  {$\to I$} {}
 
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \have {} {q } \by {$ass$} {}
             \open
@@ -384,7 +384,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
             \have {} {p \to q} \by {$\to I $} {}
 
         \end{fitchproof}
-        \\
+        \rule[0pt]{0pt}{0pt}   \\
 
     \end{tabular}
 
@@ -395,7 +395,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
             \hypo [ ] {2} {\psi}
             \have  [ ]{2} {\therefore \varphi \land \psi} \by{$\land I$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{minipage}[t]{\linewidth}
             \centering
             \begin{minipage}[t]{0.48\linewidth}
@@ -412,7 +412,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
                 \end{fitchproof}
             \end{minipage}
         \end{minipage}
-        \\
+        \rule[0pt]{0pt}{0pt}   \\
         \hline
     \end{tabular}
 
@@ -436,7 +436,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
             \have {} {q} \by {$\land E,1$} {}
             \have {} {q \land p} \by {$\land I,2,3$} {}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \have{1}{(p \land q) \land r}      \by{$ass$}{}
             \have{2}{p \land q}               \by{$\land E,1$}{}
@@ -446,7 +446,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
             \have{6}{q \land r}               \by{$\land I,3,5$}{}
             \have{7}{p \land (q \land r)}     \by{$\land I,4,6$}{}
         \end{fitchproof}
-        \\
+        \rule[0pt]{0pt}{0pt}   \\
     \end{tabular}
 
     \begin{tabular}{>{\centering\arraybackslash}m{5cm}|>{\centering\arraybackslash}m{5cm}|>{\centering\arraybackslash}m{5cm}}
@@ -460,7 +460,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
             \close
             \have {} {(p \land r) \to q} \by {$\to I$} {}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \have {} {(p \land q) \to r} \by {$ass$} {}
             \open
@@ -474,7 +474,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
             \close
             \have {} {p \to (q \to r)} \by  {$\to I$} {}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
 
             \have{1}{p \rightarrow (q \rightarrow r)} \by{$ass$}{}
@@ -489,6 +489,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
             \have{7}{(p \land q) \rightarrow r} \by{$\to I $}{}
 
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
 
     \end{tabular}
@@ -512,7 +513,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
             \end{minipage}
         \end{minipage}
 
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \have [ ] {1} {\varphi \lor \psi}
             \open
@@ -527,6 +528,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
             \close
             \have  [ ]{2} {\therefore \theta} \by{$\lor E$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
         \hline
     \end{tabular}
@@ -558,7 +560,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
             \close
             \have{8}{q \lor p } \by{$\lor E,1$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \have{1}{(p \lor q) \lor r} \by{ass}{}
             \open
@@ -581,6 +583,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
             \close
             \have{12}{p \lor (q \lor r)} \by{ $\lor E,1$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
 
     \end{tabular}
@@ -606,7 +609,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
             \close
             \have{10} {(p \land q) \lor (p \land r)} \by {$\lor E 3$} {}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \have{1} {(p \to q) \land (r \to s)} \by {ass} {}
             \have{1} {(p \to q) } \by {$\land E 1$} {}
@@ -627,6 +630,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
             \close
             \have{10} {(p \lor r) \to (q \lor s)} \by {$\to I $} {}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
     \end{tabular}
 
@@ -645,7 +649,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
             \have  [ ]{2} {\therefore \neg\varphi } \by{$\neg I$ }{}
         \end{fitchproof}
 
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \open
             \have [ ] {1} {\neg\varphi}
@@ -654,6 +658,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
             \close
             \have  [ ]{2} {\therefore \varphi } \by{$\neg E$ }{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
         \hline
     \end{tabular}
@@ -675,7 +680,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
                 \hypo [ ] {2} {\neg\varphi}
                 \have  [ ]{2} {\therefore \bot} \by{$\bot I$}{}
             \end{fitchproof}
-             &
+            \rule[0pt]{0pt}{0pt} &
             \begin{fitchproof}[arrayenv=tabular]
                 \hypo [ ] {2} {\bot}
                 \have  [ ]{2} {\therefore \varphi} \by{$\bot E$}{}
@@ -691,7 +696,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
                 \have {1} {\varphi \land \neg\varphi } \by{$\land I$}{}
                 \have  {2} { \bot}              \by{$def.3$}{}
             \end{fitchproof}
-             &
+            \rule[0pt]{0pt}{0pt} &
             \begin{fitchproof}[arrayenv=tabular]
                 \have {2} {\bot} \by{$ass$}{}
                 \open
@@ -731,7 +736,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
             \close
             \have {} {\neg p} \by  {$\neg I$} {}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \have{1}{p \to q} \by{$ass$}{}
             \open
@@ -748,6 +753,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
             \close
             \have{10}{\neg p \lor q} \by{$\neg I$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
     \end{tabular}
 
@@ -775,7 +781,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
             \close
             \have  [ ]{2} {\therefore \varphi \leftrightarrow \psi} \by{$\leftrightarrow I$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
 
         \begin{minipage}[t]{\linewidth}
             \centering
@@ -817,7 +823,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
             \have  {2} {(\varphi \to \psi)\land (\psi \to \varphi)}     \by{$\land I$}{}
             \have  {2} {\varphi \leftrightarrow \psi}                     \by{$def.,m+3$ }{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \have {1} {\varphi \leftrightarrow \psi }                   \by{ass}{}
             \have {2} {\varphi }                                        \by{ass}{}
@@ -825,6 +831,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
             \have  {2} {\varphi \to \psi }                              \by{$\land E 3$}{}
             \have  {2} {\psi}                                           \by{$\to E 1,4$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
     \end{tabular}
 
@@ -1054,7 +1061,7 @@ sentences.
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         Rules
-         &
+        \rule[0pt]{0pt}{0pt} &
         Terms and Conditions
         \\
         \hline
@@ -1062,7 +1069,7 @@ sentences.
             \hypo [ ] {2} {\phi (x)}
             \have  [ ]{2} {\therefore \forall x \phi (x)} \by{$\forall I$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
             \item  $x$ is a variable.
@@ -1075,7 +1082,7 @@ sentences.
             \hypo [ ] {2} {\forall x \phi (x)}
             \have  [ ]{2} {\therefore \phi [a/x]} \by{$\forall E$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
             \item  $a$ is an obj in universe of discourse.(it can be constant or variable.)
@@ -1088,7 +1095,7 @@ sentences.
             \have  [ ]{2} {\therefore \exists x \phi (x)} \by{$\exists I$}{}
         \end{fitchproof}
 
-         &
+        \rule[0pt]{0pt}{0pt} &
 
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
@@ -1106,7 +1113,7 @@ sentences.
             \close
             \have  [ ]{2} {\therefore\theta } \by{$\exists E$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
             \item  $x$ is a variable.
@@ -1127,7 +1134,7 @@ sentences.
             \have {2} {\bigwedge\limits_{i=0}^n \phi [a_{i}/x] }          \by{$\land I,2,3,...,n+2$}{}
             \have  {2} { \forall x \phi (x)}                  \by{$def. n+3$ }{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \have  {2} {\forall x \phi (x)}                         \by{$ass$ }{}
             \have  {2} {\bigwedge\limits_{i=0}^n \phi [a_{i}/x]}      \by{$def.1$}{}
@@ -1142,7 +1149,7 @@ sentences.
             \have  {2} { \exists x \phi (x)}         \by{$def 2$}{}
         \end{fitchproof}
 
-         &
+        \rule[0pt]{0pt}{0pt} &
 
         \begin{fitchproof}[arrayenv=tabular]
             \have  {1} {\exists x \phi (x)}
@@ -1178,7 +1185,7 @@ sentences.
         \begin{fitchproof}[arrayenv=tabular]
             \have  [ ]{2} {\therefore a = a } \by{$ = I $}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{minipage}[t]{\linewidth}
             \centering
             \begin{minipage}[t]{0.48\linewidth}
@@ -1239,7 +1246,7 @@ sentences.
             \have {} {\forall x P(x) \land \forall x  Q(x) } \by {$\land I$} {}
 
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
 
             \have {} {\forall x P(x) \land \forall x  Q(x) } \by {$ass$} {}
@@ -1251,6 +1258,7 @@ sentences.
             \have {} {\forall x (P(x) \land Q(x))} \by {$\forall I$} {}
 
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
 
     \end{tabular}
@@ -1277,7 +1285,7 @@ sentences.
             \have {} {\exists x P(x) \lor \exists x  Q(x) } \by {$\exists E$} {}
 
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
 
             \have {} {\exists x P(x) \lor \exists x  Q(x) } \by {$ass$} {}
@@ -1302,6 +1310,7 @@ sentences.
             \have {} {\exists x (P(x) \lor Q(x))} \by {$\lor E$} {}
 
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
     \end{tabular}
 
@@ -1325,7 +1334,7 @@ sentences.
             \have {} {\forall x (P(x) \lor Q(x))} \by {$\lor E$} {}
 
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
 
             \have {} {\exists x (P(x) \land Q(x))} \by {$ass$} {}
@@ -1362,7 +1371,7 @@ sentences.
             \have {} {\forall x P(x) \to \forall x  Q(x) } \by {$\to I$} {}
 
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
 
             \have {} {\exists x P(x) \to \exists x  Q(x) } \by {$\to I$} {}
@@ -1387,6 +1396,7 @@ sentences.
             \have {} {\exists x (P(x) \to Q(x))} \by {$\lor E$} {}
 
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
     \end{tabular}
 
@@ -1469,12 +1479,13 @@ with rules and axioms.
             \have  [ ]{2} {\therefore A \subseteq B  } \by{$\subseteq I$}{}
         \end{fitchproof}
 
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ]{1} {A \subseteq B}
             \hypo [ ] {2} {a \in A}
             \have  [ ]{2} {\therefore  a \in B} \by{$\subseteq E$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
         \hline
     \end{tabular}
@@ -1490,7 +1501,7 @@ with rules and axioms.
             \have  {2} {\forall x(x \in A \rightarrow x \in B )}   \by{$\forall I,n+1$ }{}
             \have  {2} {A \subseteq B  }                           \by{$def.n+2$ }{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \have {1} {A \subseteq B}                               \by{ass }{}
             \have  {2} {a \in A}                                   \by{ass }{}
@@ -1498,6 +1509,7 @@ with rules and axioms.
             \have  {2} {a \in A \rightarrow a \in B }             \by{$\forall E,4$ }{}
             \have  {2} {  a \in B}                                   \by{$E\rightarrow 3,5$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
     \end{tabular}
 
@@ -1545,7 +1557,7 @@ so we can rewrite axiom of Extensionality like this.
             \close
             \have  [ ]{2} {\therefore A = B } \by{$ = I$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{minipage}[t]{\linewidth}
             \centering
             \begin{minipage}[t]{0.48\linewidth}
@@ -1693,7 +1705,7 @@ later.
             \hypo [ ] {2} {a \in A}
             \have  [ ]{2} {\therefore A \not= \emptyset} \by{$\emptyset\not=  I$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \have [ ] {1} {A \not= \emptyset }
             \open
@@ -1703,6 +1715,7 @@ later.
             \close
             \have  [ ]{2} {\therefore\theta } \by{$\emptyset \not= E $}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
         % \hline
         % \end{tabular}
@@ -1716,11 +1729,12 @@ later.
             \close
             \have  [ ]{2} {\therefore A = \emptyset } \by{$\emptyset= I$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {A = \emptyset }
             \have  [ ]{2} {\therefore a \notin A} \by{$\emptyset= E$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
         \hline
     \end{tabular}
@@ -1733,7 +1747,7 @@ later.
             \have  {2} { A \not= \emptyset}             \by{lemma $4.4.1 , 3$}{}
         \end{fitchproof}
 
-         &
+        \rule[0pt]{0pt}{0pt} &
         \\
         \begin{fitchproof}[arrayenv=tabular]
             \open
@@ -1746,12 +1760,13 @@ later.
             \have  {2} {A = \emptyset }             \by{lemma $4.4.1 , 1$}{}
         \end{fitchproof}
 
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \have  {2} { A = \emptyset}             \by{ass}{}
             \have  {2} {\forall x(x \notin A)}   \by{lemma $4.4.1 , 1$}{}
             \have  {2} {a \notin A}               \by{$\forall E 2$  }{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
 
     \end{tabular}
@@ -1778,7 +1793,7 @@ later.
             \hypo [ ] {2} {a = a_{i} }
             \have  [ ]{2} {\therefore  a \in  \{a_{0}, a_{1}, a_{2}, ... ,a_{n} \}} \by{$\{\} I$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \have [ ] {1} {a \in  \{a_{0}, a_{1}, a_{2}, ... ,a_{n} \} }
             \open
@@ -1794,6 +1809,7 @@ later.
             \close
             \have  [ ]{2} {\therefore\theta } \by{$\{\} E$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
         \hline
     \end{tabular}
@@ -1830,7 +1846,7 @@ later.
             \hypo [ ] {2} {a \in B  }
             \have  [ ]{2} {\therefore  a \in  A \cap B } \by{$\cap I$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
 
         \begin{minipage}[t]{\linewidth}
             \centering
@@ -1861,7 +1877,7 @@ later.
             \have  [ ]{2} { \therefore  a \in  B \cup A } \by{$\cup I$}{}
         \end{fitchproof}
 
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \have [ ] {1} { a \in  A \cup B  }
             \open
@@ -1876,6 +1892,7 @@ later.
             \close
             \have  [ ]{2} {\therefore\theta } \by{$\cup E$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
         \hline
     \end{tabular}
@@ -1917,12 +1934,13 @@ somtimes all members of a set is also set we call it ``set of sets''.
             \close
             \have  [ ]{2} {\therefore a \in \bigcap A } \by{$\bigcap I$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt}                       &
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {a \in \bigcap A }
             \hypo [ ] {2} {B \in  A  }
             \have  [ ]{2} {\therefore  a \in  B} \by{$\bigcap E$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
         \hline
         \begin{fitchproof}[arrayenv=tabular]
@@ -1930,7 +1948,7 @@ somtimes all members of a set is also set we call it ``set of sets''.
             \hypo [ ] {2} {B \in A  }
             \have  [ ]{2} {\therefore  a \in \bigcup A } \by{$\bigcup I$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt}  \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \have [ ] {1} { a \in \bigcup A  }
             \open
@@ -1941,6 +1959,7 @@ somtimes all members of a set is also set we call it ``set of sets''.
             \close
             \have  [ ]{2} {\therefore\theta } \by{$\bigcup E$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
         \hline
     \end{tabular}
@@ -1970,7 +1989,7 @@ somtimes all members of a set is also set we call it ``set of sets''.
             \close
             \have  [ ]{2} {\therefore a \notin  A} \by{$()^c I$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt}  \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \open
             \have [ ] {1} {a \notin  A }
@@ -1979,6 +1998,7 @@ somtimes all members of a set is also set we call it ``set of sets''.
             \close
             \have  [ ]{2} {\therefore a \in  A} \by{$()^c E$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
         \hline
     \end{tabular}
@@ -2014,7 +2034,7 @@ somtimes all members of a set is also set we call it ``set of sets''.
             \hypo [ ] {2} {a \notin B  }
             \have  [ ]{2} {\therefore  a \in A - B } \by{$- I$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt}  \rule[0pt]{0pt}{0pt} &
         \begin{minipage}[t]{\linewidth}
             \centering
             \begin{minipage}[t]{0.48\linewidth}
@@ -2082,11 +2102,12 @@ somtimes all members of a set is also set we call it ``set of sets''.
             \hypo [ ] {2} { A \subseteq B }
             \have  [ ]{2} {\therefore   A \in  \mathcal{P}(B) } \by{$\mathcal{P} I$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt}  \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {A \in  \mathcal{P}(B) }
             \have  [ ]{2} {\therefore  A \subseteq B } \by{$\mathcal{P} E$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
         \hline
     \end{tabular}
@@ -2212,7 +2233,7 @@ so $ \forall X,Y \quad Type_0(X) \land Type_0(Y) \to Type_0( X \times Y )$
             \hypo [ ] {2} {s \in B }
             \have  [ ]{2} {\therefore   (t,s) \in A \times B } \by{$\times I$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt}  \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \have  [ ]{2} {\therefore   t \in A \times B }
             \open
@@ -2224,6 +2245,7 @@ so $ \forall X,Y \quad Type_0(X) \land Type_0(Y) \to Type_0( X \times Y )$
             \close
             \have [ ] {2} { \theta }     \by{$\times E$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
         \hline
     \end{tabular}
@@ -2242,11 +2264,12 @@ so $ \forall X,Y \quad Type_0(X) \land Type_0(Y) \to Type_0( X \times Y )$
             \hypo   [ ]{2} {  (t,s) \in A \times B }
             \have [ ] {2} { \therefore  t \in A }
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \hypo  [ ]{2} {  (t,s) \in A \times B }
             \have  [ ] {2}  {\therefore  s \in B }
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
         \hline
     \end{tabular}
@@ -2316,7 +2339,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \hypo   [ ]{2} {   t R s }
             \have [ ] {2} {\therefore t \in Dom(R) }  \by{$Dom I$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \have  [ ]{2} {  t \in Dom(R) }
             \open
@@ -2326,6 +2349,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \close
             \have [ ] {2} { \therefore  \theta }     \by{$Dom E$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
         \hline
     \end{tabular}
@@ -2344,7 +2368,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \hypo   [ ]{2} {   t R s }
             \have [ ] {2} {\therefore s \in Range(R) }  \by{$Range I$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \have  [ ]{2} {  s \in Range(R) }
             \open
@@ -2354,6 +2378,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \close
             \have [ ] {2} { \therefore  \theta }     \by{$Range E$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
         \hline
     \end{tabular}
@@ -2383,7 +2408,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \hypo   [ ]{2} {   t R s }
             \have [ ] {2} {\therefore s R^{-1} t  }  \by{$()^{-1} I$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \have  [ ]{2} {  t \in R^{-1} }
             \open
@@ -2394,6 +2419,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \close
             \have [ ] {2} { \therefore  \theta }     \by{$ ()^{-1} E $}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
         \hline
     \end{tabular}
@@ -2424,7 +2450,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \hypo   [ ]{2} {  s R r }
             \have [ ] {2} {\therefore s R \circ S r  }  \by{$\circ I$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \have  [ ]{2} {  t \in R \circ S }
             \open
@@ -2436,6 +2462,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \close
             \have [ ] {2} { \therefore  \theta }     \by{$ \circ E $}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
         \hline
     \end{tabular}
@@ -2465,7 +2492,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \hypo   [ ]{2} {   t R s }
             \have [ ] {2} {\therefore s \in R[A] }  \by{$R[] I$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \have  [ ]{2} {  s \in R[A] }
             \open
@@ -2476,6 +2503,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \close
             \have [ ] {2} { \therefore  \theta }     \by{$R[] E$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
         \hline
         \begin{fitchproof}[arrayenv=tabular]
@@ -2483,7 +2511,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \hypo   [ ]{2} {   t R s }
             \have [ ] {2} {\therefore t \in R^{-1}[B] }  \by{$R^{-1}[] I$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \have  [ ]{2} {  t \in R^{-1}[B] }
             \open
@@ -2494,6 +2522,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \close
             \have [ ] {2} { \therefore  \theta }     \by{$R^{-1}[] E$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
         \hline
     \end{tabular}
@@ -2526,13 +2555,14 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \have [ ] {2} { \therefore  Func(f) }      \by{$Func I$}{}
         \end{fitchproof}
 
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \have [ ] {2} {  Func(f) }
             \hypo   [ ]{2} {   t f s }
             \hypo   [ ]{2} {   t f r }
             \have [ ] {2} {\therefore s = r }    \by{$Func E$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
         \hline
     \end{tabular}
@@ -2568,6 +2598,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \have [ ] {2} {\therefore f(x)=y}    \by{$f() E$}{}
         \end{fitchproof}
 
+        \rule[0pt]{0pt}{0pt}
          &
 
         \begin{fitchproof}[arrayenv=tabular]
@@ -2576,6 +2607,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
 
             \have [ ] {2} {\therefore (x,y) \in f }    \by{$f() E$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
         \hline
     \end{tabular}
@@ -2635,7 +2667,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         Rules
-         &
+        \rule[0pt]{0pt}{0pt} &
         Terms and Conditions
         \\
         \hline
@@ -2643,7 +2675,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \hypo [ ] {2} {\phi (x)}
             \have  [ ]{2} {\therefore \forall x \phi (x)} \by{$\forall I$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
             \item  $x$ is a variable.
@@ -2656,7 +2688,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \hypo [ ] {2} {\forall x \phi (x)}
             \have  [ ]{2} {\therefore \phi [t/x]} \by{$\forall E$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
             \item  $t$ is a term.
@@ -2669,7 +2701,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \have  [ ]{2} {\therefore \exists x \phi (x)} \by{$\exists I$}{}
         \end{fitchproof}
 
-         &
+        \rule[0pt]{0pt}{0pt} &
 
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
@@ -2687,7 +2719,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \close
             \have  [ ]{2} {\therefore\theta } \by{$\exists E$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
             \item  $x$ is a variable.
@@ -2717,7 +2749,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \close
             \have  {2} {\phi(f(x))}                    \by{$\exists E$}{}
         \end{fitchproof}
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \have  {2} {\phi(f(x))}                    \by{$ass$}{}
             \have  {1} {Func(f)}                          \by{$ass$}{}
@@ -2730,6 +2762,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \close
             \have  {1} {\exists x \phi (x)}           \by{$\exists E$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
 
     \end{tabular}
@@ -2805,13 +2838,14 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \have [ ] {2} { \therefore  Injective(f) }     \by{$Injective I$}{}
         \end{fitchproof}
 
-         &
+        \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \have [ ] {2} {  Injective(f) }
             \hypo   [ ]{2} {   t f r }
             \hypo   [ ]{2} {   s f r }
             \have [ ] {2} {\therefore s = r }  \by{$Injective E$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
         \hline
     \end{tabular}
@@ -2869,6 +2903,9 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
 
 \begin{lemma}
     \[ /\therefore  \bigcap_{i \in I} A_i =  \{x \mid \forall i \in I \quad x \in A_i\} \]
+
+
+    
     \begin{fitchproof}[arrayenv=tabular]
         \open
         \have {1} { x \in \bigcap_{i \in I} A_i  }                                 \by{$acp$}{}
@@ -2888,6 +2925,8 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
         \have {1} { \forall i \in I \quad x \in A_i  }                                    \by{$\forall I$}{}
         \have {1} { x \in \{x \mid \forall i \in I \quad x \in A_i\}  }                 \by{$def$}{}
         \close
+    \end{fitchproof}
+    \begin{fitchproof}[arrayenv=tabular]
         \open
         \have {1} { x \in \{x \mid \forall i \in I \quad x \in A_i\}  }                \by{$acp$}{}
         \have {1} { \forall i \in I \quad x \in A_i  }                                 \by{$def$}{}
@@ -2935,6 +2974,9 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
         \have  {2} {\exists i \in I \quad x \in A_i }                                      \by{$\exists E$}{}
         \have {1} { x \in \{x \mid \exists i \in I \quad x \in A_i\}  }                 \by{$def$}{}
         \close
+
+    \end{fitchproof}
+    \begin{fitchproof}[arrayenv=tabular]
         \open
         \have {1} { x \in \{x \mid \exists i \in I \quad x \in A_i\}  }                \by{$acp$}{}
         \have {1} { \exists i \in I \quad x \in A_i  }                                 \by{$def$}{}
@@ -2945,9 +2987,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
         \have  {2} {\exists i \in I \quad  A_i=A_{i'} }                                       \by{$\exists I$}{}
         \have  {2} {(\exists i \in I \quad  A_i=A_{i'})\land x \in A_{i'} }                    \by{$\land I$}{}
         \have  {2} {\exists Y ((\exists i \in I \quad A_i=Y) \land x \in Y) }              \by{$\exists I$}{}
-
         \close
-
         \have  {2} {\exists Y ((\exists i \in I \quad A_i=Y) \land x \in Y) }              \by{$\exists E$}{}
         \have  {2} {\exists Y  \in  A[I] \quad x \in Y }                                  \by{$def$}{}
         \have  {2} {x \in \bigcup A[I]}                                                   \by{$def$}{}
@@ -2973,12 +3013,14 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \close
             \have  [ ]{2} {\therefore t \in \bigcap_{i \in I} A_i } \by{$\bigcap_{I} I$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
          &
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {t \in \bigcap_{i \in I} A_i }
             \hypo [ ] {2} {n \in  I  }
             \have  [ ]{2} {\therefore  t \in  A_n} \by{$\bigcap_{I} E$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
         \hline
         \begin{fitchproof}[arrayenv=tabular]
@@ -2986,6 +3028,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \hypo [ ] {2} {n \in I  }
             \have  [ ]{2} {\therefore  t \in \bigcup_{i \in I} A_i } \by{$\bigcup_{I} I$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
          &
         \begin{fitchproof}[arrayenv=tabular]
             \have [ ] {1} { t \in \bigcup_{i \in I} A_i  }
@@ -2997,6 +3040,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \close
             \have  [ ]{2} {\therefore\theta } \by{$\bigcup_{I} E$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
         \hline
     \end{tabular}
@@ -3085,11 +3129,13 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
             \hypo [ ] {2} { t \sim s }
             \have  [ ]{2} {\therefore   t \in  [s]_{\sim}  } \by{$[]_{\sim} I$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
          &
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} { t \in  [s]_{\sim} }
             \have  [ ]{2} {\therefore  t \sim s  } \by{$[]_{\sim} E$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
         \hline
     \end{tabular}
@@ -3128,6 +3174,7 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
             \close
             \have  {2} { [a]_{\sim} = [b]_{\sim} }
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
          &
         $ \therefore /$
         \begin{fitchproof}[arrayenv=tabular]
@@ -3137,6 +3184,7 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
             \have  {2} {a \in [b]_{\sim} }                  \by{$= E$}{}
             \have  {2} {a \sim b  }                     \by{$[]_{\sim} E$}{}
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
 
     \end{tabular}
@@ -3162,6 +3210,7 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
             \close
             \have  {2} { [a]_{\sim} \cap [b]_{\sim}  = \emptyset }
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
          &
         $ \therefore /$
         \begin{fitchproof}[arrayenv=tabular]
@@ -3176,6 +3225,7 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
             \close
             \have  {2} {a \nsim b  }
         \end{fitchproof}
+        \rule[0pt]{0pt}{0pt}
         \\
 
     \end{tabular}
@@ -4664,7 +4714,7 @@ notice that now ``$\phi(x)$'' is a proposition. so ``$\{ x \mid \forall Y \Big(
 now we can redefine ``Cartesian product''. we define finite Cartesian product
 ``$\prod_{i \in n} A_i := \{ (a_i)_{i \in n} \mid a_i \in A_i \}$'' and define
 infinite Cartesian product ``$\prod_{i \in \mathbb{N}} A_i := \{ (a_i)_{i \in
-            \mathbb{N}} \mid a_i \in A_i \}$'' and define Cartesian product in general way
+        \mathbb{N}} \mid a_i \in A_i \}$'' and define Cartesian product in general way
 ``$\prod_{i \in I} A_i := \{ (a_i)_{i \in I} \mid a_i \in A_i \}$''. and you
 can easily see that from the definition of ``$B^A$'', ``$A^n$'' is the set of
 all $n$-length finite sequences of $a \in A$ and ``$A^\mathbb{N}$'' is the set
@@ -5328,7 +5378,7 @@ we learned about ``$\mathbb{N}$'' before and we constructed structure
 \end{definition}
 
 in this system ``$ 0 := [(0,0)]$'' and ``$ \forall n \in \mathbb{N} \quad n :=
-    [(n,0)]$'' and ``$\forall n \in \mathbb{N} \quad -n := [(0,n)]$''. in
+        [(n,0)]$'' and ``$\forall n \in \mathbb{N} \quad -n := [(0,n)]$''. in
 general``$\forall m,n \in \mathbb{N} \quad m-n := [(m,n)]$''. so we can say ``$
     \mathbb{N} \subseteq \mathbb{Z}$''.
 
@@ -5527,7 +5577,7 @@ $\mathbb{Q}$). we don't want it all we just want a subset.
 we usually give ``$N$'' natural numbers but it's not necessary.
 
 we define an equivalence relation ``$ (a_i)_{i \in \mathbb{N}} \sim (b_i)_{i
-    \in \mathbb{N}} : \forall \epsilon > 0 \quad \exists N \quad \forall n > N
+        \in \mathbb{N}} : \forall \epsilon > 0 \quad \exists N \quad \forall n > N
     \quad | a_n - b_n | < \epsilon $''(check it's an equivalence relation). we
 denote every $[(a_i)_{i \in \mathbb{N}}]$ with $[a_i]_{i \in \mathbb{N}}$.
 
@@ -5595,8 +5645,8 @@ denote every $[(a_i)_{i \in \mathbb{N}}]$ with $[a_i]_{i \in \mathbb{N}}$.
 \end{definition}
 
 in this system ``$ 0 := [0]_{i \in \mathbb{N}}$'' and ``$ 1 := [1]_{i \in
-    \mathbb{N}}$'' and ``$ \forall q \in \mathbb{Q} \quad q := [q]_{i \in
-    \mathbb{N}}$''. so we can say ``$ \mathbb{N} \subseteq \mathbb{Z} \subseteq
+            \mathbb{N}}$'' and ``$ \forall q \in \mathbb{Q} \quad q := [q]_{i \in
+            \mathbb{N}}$''. so we can say ``$ \mathbb{N} \subseteq \mathbb{Z} \subseteq
     \mathbb{Q} \subseteq \mathbb{R}$''.
 
 \begin{theorem}\textbf{Summation} there is a unique function ``$+_\mathbb{R} :\mathbb{R} \times \mathbb{R} \to \mathbb{R}$'' s.t.
@@ -5833,7 +5883,6 @@ we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
 \end{definition}
 
 \begin{lemma} ``$\cong$'' is a equivalence relation in ``$(V , \cong)$''\\
-
 
     \begin{fitchproof}[arrayenv=tabular]
         \have {14} {  id : X \xrightarrow[surj]{inj} X }
@@ -6225,7 +6274,6 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
     Proof Is Left As An Exercise To The Reade.
 \end{lemma}
 
-
 \begin{proof}
 
     Let $A$ be countable and let $B\subseteq A$ be infinite.
@@ -6279,8 +6327,6 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
 
 \begin{corollary} a set is at most countable iff it's finite or countable.
 \end{corollary}
-
-
 
 \begin{theorem}
     The range of an infinite sequence $(a_n)_{n\in\mathbb N}$ is at most countable.
@@ -6336,8 +6382,6 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
     \end{fitchproof}
 
 \end{proof}
-
-
 
 \begin{theorem}
     The union of two countable sets is countable.
@@ -6413,8 +6457,6 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
     \end{fitchproof}
 
 \end{proof}
-
-
 
 \begin{theorem}
     If $A$ and $B$ are countable, then $A\times B$ is countable.
@@ -6493,10 +6535,6 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
 
 \end{proof}
 
-
-
-
-
 \begin{corollary}
     Finite Cartesian product of countable sets is countable, and $A^n$ is countable for any countable $A$ and $n>0$.
 \end{corollary}
@@ -6505,8 +6543,7 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
 
     Let $A_1,\dots,A_n$ be countable.
 
-
-        \begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
         \have{1}{Countable (A_1  )}
 
@@ -6832,10 +6869,8 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
 \section{Uncountable sets}
 
 \begin{lemma} $/ \therefore \mathbb{N} \prec  2^\mathbb{N} $ \\
-   
+
 \end{lemma}
-
-
 
 \begin{proof}
 
@@ -6869,15 +6904,14 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
         \close
         \have{3}{m=n}
         \close
-        
+
         \have{4}{f:\mathbb N\xrightarrow{inj}2^{\mathbb N}}
         \have{5}{\mathbb N\precsim 2^{\mathbb N}}
     \end{fitchproof}
 
-\textbf{Claim 1: $ \mathbb N\prec 2^{\mathbb N}$}
+    \textbf{Claim 1: $ \mathbb N\prec 2^{\mathbb N}$}
 
     \begin{fitchproof}[arrayenv=tabular]
-
 
         \open
         \have{6}{g:\mathbb N\xrightarrow[surj]{}2^{\mathbb N}}
@@ -6947,8 +6981,6 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
     \[
         \chi_{()} :\mathcal P(\mathbb N)\to 2^{\mathbb N}
     \]
-
-
 
     \begin{fitchproof}[arrayenv=tabular]
 
@@ -7031,102 +7063,100 @@ when ``$f : W_1 \to W_2$'' is a (weak) homomorphism.
 
 \begin{proof}
 
-Let $(W_1,<_{1})$ and $(W_2,<_{2})$ be well ordered sets.
+    Let $(W_1,<_{1})$ and $(W_2,<_{2})$ be well ordered sets.
 
-Define
-\[
-f\subseteq W_1\times W_2
-\quad\text{by}\quad
-(x,y)\in f \iff W_1[x]\cong W_2[y].
-\]
+    Define
+    \[
+        f\subseteq W_1\times W_2
+        \quad\text{by}\quad
+        (x,y)\in f \iff W_1[x]\cong W_2[y].
+    \]
 
-\textbf{Claim 1: $f$ is a function.}
+    \textbf{Claim 1: $f$ is a function.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{1}{(x,y)\in f \land (x,y')\in f} \by{assumption}{}
-\have{2}{W_2[y]\cong W_2[y']} \by{definition of $f$}{}
-\have{3}{y=y'} \by{uniqueness of isomorphism of well orders}{}
+        \have{1}{(x,y)\in f \land (x,y')\in f} \by{assumption}{}
+        \have{2}{W_2[y]\cong W_2[y']} \by{definition of $f$}{}
+        \have{3}{y=y'} \by{uniqueness of isomorphism of well orders}{}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-\textbf{Claim 2: $f$ is injective.}
+    \textbf{Claim 2: $f$ is injective.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{4}{(x,y)\in f \land (x',y)\in f} \by{assumption}{}
-\have{5}{W_1[x]\cong W_1[x']} \by{definition of $f$}{}
-\have{6}{x=x'} \by{uniqueness of isomorphism of well orders}{}
+        \have{4}{(x,y)\in f \land (x',y)\in f} \by{assumption}{}
+        \have{5}{W_1[x]\cong W_1[x']} \by{definition of $f$}{}
+        \have{6}{x=x'} \by{uniqueness of isomorphism of well orders}{}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-\textbf{Claim 3: $f$ is increasing.}
+    \textbf{Claim 3: $f$ is increasing.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{7}{x<_{1}x'} \by{assumption}{}
-\have{8}{W_1[x']\cong W_2[f(x')]} \by{definition of $f$}{}
-\have{9}{W_1[x]\cong W_2[f(x)]} \by{definition of $f$}{}
-\have{10}{f(x)<_{2}f(x')} \by{comparison of initial segments}{}
+        \have{7}{x<_{1}x'} \by{assumption}{}
+        \have{8}{W_1[x']\cong W_2[f(x')]} \by{definition of $f$}{}
+        \have{9}{W_1[x]\cong W_2[f(x)]} \by{definition of $f$}{}
+        \have{10}{f(x)<_{2}f(x')} \by{comparison of initial segments}{}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-\textbf{Claim 4: $f$ is isomorphism between $S=\mathrm{dom}(f)$ and $T=\mathrm{ran}(f)$.}
+    \textbf{Claim 4: $f$ is isomorphism between $S=\mathrm{dom}(f)$ and $T=\mathrm{ran}(f)$.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{11}{f:S\to T \text{ bijective}} \by{Claims 1,2}{}
-\have{12}{x<_{1}x' \Rightarrow f(x)<_{2}f(x')} \by{Claim 3}{}
-\have{13}{f \text{ order isomorphism}} \by{definition}{}
+        \have{11}{f:S\to T \text{ bijective}} \by{Claims 1,2}{}
+        \have{12}{x<_{1}x' \Rightarrow f(x)<_{2}f(x')} \by{Claim 3}{}
+        \have{13}{f \text{ order isomorphism}} \by{definition}{}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-\textbf{Claim 5: $S$ initial segment of $W_1$.}
+    \textbf{Claim 5: $S$ initial segment of $W_1$.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{14}{x\in S \land z<_{1}x} \by{assumption}{}
-\have{15}{W_1[x]\cong W_2[f(x)]} \by{definition of $S$}{}
-\have{16}{z\in S} \by{restriction of initial segments}{}
+        \have{14}{x\in S \land z<_{1}x} \by{assumption}{}
+        \have{15}{W_1[x]\cong W_2[f(x)]} \by{definition of $S$}{}
+        \have{16}{z\in S} \by{restriction of initial segments}{}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-\textbf{Claim 6: $T$ initial segment of $W_2$ or $T=W_2$.}
+    \textbf{Claim 6: $T$ initial segment of $W_2$ or $T=W_2$.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{17}{y\in T} \by{definition of $T$}{}
-\have{18}{T\neq W_2} \by{assumption of case split}{}
-\have{19}{T=W_2[b] \ \lor\ T=W_2} \by{well-order trichotomy}{}
+        \have{17}{y\in T} \by{definition of $T$}{}
+        \have{18}{T\neq W_2} \by{assumption of case split}{}
+        \have{19}{T=W_2[b] \ \lor\ T=W_2} \by{well-order trichotomy}{}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-\textbf{Claim 7: exclusion of mixed case.}
+    \textbf{Claim 7: exclusion of mixed case.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{20}{S=W_1[a] \land T=W_2[b]} \by{assumption}{}
-\have{21}{f:W_1[a]\cong W_2[b]} \by{restriction of $f$}{}
-\have{22}{(a,b)\in f} \by{definition of domain/range}{}
-\have{23}{a\in W_1[a]} \by{initial segment property}{}
-\have{24}{a<a} \by{element characterization}{}
-\have{25}{\bot} \by{irreflexivity}{}
+        \have{20}{S=W_1[a] \land T=W_2[b]} \by{assumption}{}
+        \have{21}{f:W_1[a]\cong W_2[b]} \by{restriction of $f$}{}
+        \have{22}{(a,b)\in f} \by{definition of domain/range}{}
+        \have{23}{a\in W_1[a]} \by{initial segment property}{}
+        \have{24}{a<a} \by{element characterization}{}
+        \have{25}{\bot} \by{irreflexivity}{}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-\textbf{Conclusion:}
+    \textbf{Conclusion:}
 
-\[
-(W_1\cong W_2)\ \lor\ (W_1[a]\cong W_2)\ \lor\ (W_1\cong W_2[a]).
-\]
+    \[
+        (W_1\cong W_2)\ \lor\ (W_1[a]\cong W_2)\ \lor\ (W_1\cong W_2[a]).
+    \]
 
 \end{proof}
 
 \begin{lemma}
-Every element of an ordinal number is an ordinal number.
+    Every element of an ordinal number is an ordinal number.
 \end{lemma}
-
-
 
 \section{Ordinal numbers}
 
@@ -7148,29 +7178,27 @@ Every element of an ordinal number is an ordinal number.
 
 we denote it by $Ord$ so we have the set of ordinals($Ord$).
 
-
-
 \begin{lemma}
-Every natural number is an ordinal.
+    Every natural number is an ordinal.
 \end{lemma}
 
 \begin{proof}
 
-Let $\mathbb N$ be the set of natural numbers.
+    Let $\mathbb N$ be the set of natural numbers.
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{1}{\forall n\in\mathbb N\ (n\subseteq \mathbb N)} \by{von Neumann construction}{}
-\have{2}{Transitive(\mathbb N)} \by{definition of transitive set}{}
+        \have{1}{\forall n\in\mathbb N\ (n\subseteq \mathbb N)} \by{von Neumann construction}{}
+        \have{2}{Transitive(\mathbb N)} \by{definition of transitive set}{}
 
-\have{3}{<_\mathbb N \;=\; \in \cap (\mathbb N\times \mathbb N)} \by{definition}{}
-\have{4}{(\mathbb N,<_\mathbb N)\ \text{is well ordered}} \by{standard well-order of $\mathbb N$}{}
+        \have{3}{<_\mathbb N \;=\; \in \cap (\mathbb N\times \mathbb N)} \by{definition}{}
+        \have{4}{(\mathbb N,<_\mathbb N)\ \text{is well ordered}} \by{standard well-order of $\mathbb N$}{}
 
-\have{5}{Ordinal(\mathbb N)} \by{definition of ordinal}{}
+        \have{5}{Ordinal(\mathbb N)} \by{definition of ordinal}{}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-Hence $\mathbb N$ is an ordinal.
+    Hence $\mathbb N$ is an ordinal.
 
 \end{proof}
 
@@ -7181,142 +7209,122 @@ renaming.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-
-
-
-
 \begin{proof}
 
-\[
-s(\alpha)=\alpha\cup\{\alpha\}.
-\]
+    \[
+        s(\alpha)=\alpha\cup\{\alpha\}.
+    \]
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{1}{\alpha \text{ transitive}} \by{ordinal assumption}{}
-\have{2}{s(\alpha)=\alpha\cup\{\alpha\}} \by{definition}{}
+        \have{1}{\alpha \text{ transitive}} \by{ordinal assumption}{}
+        \have{2}{s(\alpha)=\alpha\cup\{\alpha\}} \by{definition}{}
 
-\have{3}{x\in y \land y\in s(\alpha)\Rightarrow x\in s(\alpha)} \by{case split on $y\in\alpha\cup\{\alpha\}$}{}
-\have{4}{Transitive(s(\alpha))} \by{definition of transitive set}{}
+        \have{3}{x\in y \land y\in s(\alpha)\Rightarrow x\in s(\alpha)} \by{case split on $y\in\alpha\cup\{\alpha\}$}{}
+        \have{4}{Transitive(s(\alpha))} \by{definition of transitive set}{}
 
-\have{5}{<_\alpha = \in \cap (\alpha\times \alpha)} \by{definition}{}
-\have{6}{\alpha \text{ is greatest element of } s(\alpha)} \by{construction}{}
-\have{7}{<_ {s(\alpha)} \text{ extends } <_\alpha} \by{restriction}{}
-\have{8}{(s(\alpha),<_ {s(\alpha)}) \text{ is well ordered}} \by{extension by maximum element}{}
+        \have{5}{<_\alpha = \in \cap (\alpha\times \alpha)} \by{definition}{}
+        \have{6}{\alpha \text{ is greatest element of } s(\alpha)} \by{construction}{}
+        \have{7}{<_ {s(\alpha)} \text{ extends } <_\alpha} \by{restriction}{}
+        \have{8}{(s(\alpha),<_ {s(\alpha)}) \text{ is well ordered}} \by{extension by maximum element}{}
 
-\have{9}{Ordinal(s(\alpha))} \by{definition of ordinal}{}
+        \have{9}{Ordinal(s(\alpha))} \by{definition of ordinal}{}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-Hence $s(\alpha)$ is an ordinal number.
+    Hence $s(\alpha)$ is an ordinal number.
 
 \end{proof}
 
-
-
 \begin{lemma}
-prove
-\begin{enumerate}
-    \setlength{\itemsep}{0pt}
-    \item $Transitive(Ord)$.
-    \item $\forall \alpha,\beta \in Ord \quad \alpha \subset \beta \to \alpha \in \beta$.
-\end{enumerate}
+    prove
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt}
+        \item $Transitive(Ord)$.
+        \item $\forall \alpha,\beta \in Ord \quad \alpha \subset \beta \to \alpha \in \beta$.
+    \end{enumerate}
 \end{lemma}
-
-
-
 
 \begin{proof}
 
     \textbf{ (1): $Transitive(Ord)$.}
 
+    \textbf{Claim 1: $x$ is transitive.}
 
+    \begin{fitchproof}[arrayenv=tabular]
 
+        \have{1}{u \in v \land v \in x}
+        \have{2}{x \in \alpha} \by{assumption}{}
+        \have{3}{v \in \alpha} \by{transitivity of $\alpha$}{}
+        \have{4}{u \in \alpha} \by{transitivity of $\alpha$}{}
+        \have{5}{u,v,x \in \alpha} \by{closure}{}
+        \have{6}{u <_\alpha v <_\alpha x} \by{definition}{}
+        \have{7}{u <_\alpha x} \by{linearity of $<_\alpha$}{}
 
+    \end{fitchproof}
 
+    Hence $Transitive(x)$.
 
-\textbf{Claim 1: $x$ is transitive.}
+    \medskip
 
-\begin{fitchproof}[arrayenv=tabular]
+    \textbf{Claim 2: $(x,<_x)$ is well ordered.}
 
-\have{1}{u \in v \land v \in x}
-\have{2}{x \in \alpha} \by{assumption}{}
-\have{3}{v \in \alpha} \by{transitivity of $\alpha$}{}
-\have{4}{u \in \alpha} \by{transitivity of $\alpha$}{}
-\have{5}{u,v,x \in \alpha} \by{closure}{}
-\have{6}{u <_\alpha v <_\alpha x} \by{definition}{}
-\have{7}{u <_\alpha x} \by{linearity of $<_\alpha$}{}
+    \begin{fitchproof}[arrayenv=tabular]
 
-\end{fitchproof}
+        \have{8}{x \subseteq \alpha} \by{transitivity of $\alpha$}{}
+        \have{9}{<_x = <_\alpha \upharpoonright x} \by{definition}{}
+        \have{10}{<_\alpha \text{ well order on } \alpha} \by{ordinal assumption}{}
+        \have{11}{<_x \text{ well order on } x} \by{restriction of well-order}{}
 
-Hence $Transitive(x)$.
+    \end{fitchproof}
 
-\medskip
+    Thus $x$ is transitive and well ordered, hence
+    \[
+        x \in Ord.
+    \]
 
-\textbf{Claim 2: $(x,<_x)$ is well ordered.}
+    \begin{fitchproof}[arrayenv=tabular]
 
-\begin{fitchproof}[arrayenv=tabular]
+        \have{1}{\alpha \in Ord}
+        \have{2}{x \in y \land y \in \alpha}
+        \have{3}{\alpha \text{ transitive}}
+        \have{4}{x \in \alpha}
 
-\have{8}{x \subseteq \alpha} \by{transitivity of $\alpha$}{}
-\have{9}{<_x = <_\alpha \upharpoonright x} \by{definition}{}
-\have{10}{<_\alpha \text{ well order on } \alpha} \by{ordinal assumption}{}
-\have{11}{<_x \text{ well order on } x} \by{restriction of well-order}{}
+    \end{fitchproof}
 
-\end{fitchproof}
+    Hence $Transitive(\alpha)$ for all $\alpha \in Ord$, so $Transitive(Ord)$.
 
-Thus $x$ is transitive and well ordered, hence
-\[
-x \in Ord.
-\]
+    \medskip
 
+    \textbf{(2): $\alpha \subset \beta \Rightarrow \alpha \in \beta$.}
 
+    Let $\alpha,\beta \in Ord$ and $\alpha \subset \beta$.
 
+    \begin{fitchproof}[arrayenv=tabular]
 
+        \have{5}{\alpha \subset \beta} \by{assumption}{}
+        \have{6}{\beta - \alpha \neq \emptyset} \by{set difference}{}
 
-\begin{fitchproof}[arrayenv=tabular]
+        \have{7}{\exists \gamma \in \beta-\alpha\ \forall \delta \in \beta-\alpha\ (\gamma \le \delta)} \by{well-order of $\beta$}{}
 
-\have{1}{\alpha \in Ord}
-\have{2}{x \in y \land y \in \alpha}
-\have{3}{\alpha \text{ transitive}}
-\have{4}{x \in \alpha}
+        \have{8}{\gamma \in \beta \land \gamma \notin \alpha} \by{definition of set difference}{}
 
-\end{fitchproof}
+        \have{9}{\forall \delta \in \alpha\ (\delta < \gamma)} \by{minimality of $\gamma$}{}
 
-Hence $Transitive(\alpha)$ for all $\alpha \in Ord$, so $Transitive(Ord)$.
+        \have{10}{\alpha \subseteq \gamma} \by{transitivity of $<$}{}
 
-\medskip
+        \have{11}{\gamma \in \beta} \by{step 8}{}
 
-\textbf{(2): $\alpha \subset \beta \Rightarrow \alpha \in \beta$.}
+        \have{12}{\alpha = \gamma} \by{ordinal comparison lemma ($\alpha,\gamma \in Ord$)}{}
 
-Let $\alpha,\beta \in Ord$ and $\alpha \subset \beta$.
+        \have{13}{\alpha \in \beta} \by{since $\gamma \in \beta$ and $\alpha=\gamma$}{}
 
+    \end{fitchproof}
 
-
-\begin{fitchproof}[arrayenv=tabular]
-
-\have{5}{\alpha \subset \beta} \by{assumption}{}
-\have{6}{\beta - \alpha \neq \emptyset} \by{set difference}{}
-
-\have{7}{\exists \gamma \in \beta-\alpha\ \forall \delta \in \beta-\alpha\ (\gamma \le \delta)} \by{well-order of $\beta$}{}
-
-\have{8}{\gamma \in \beta \land \gamma \notin \alpha} \by{definition of set difference}{}
-
-\have{9}{\forall \delta \in \alpha\ (\delta < \gamma)} \by{minimality of $\gamma$}{}
-
-\have{10}{\alpha \subseteq \gamma} \by{transitivity of $<$}{}
-
-\have{11}{\gamma \in \beta} \by{step 8}{}
-
-\have{12}{\alpha = \gamma} \by{ordinal comparison lemma ($\alpha,\gamma \in Ord$)}{}
-
-\have{13}{\alpha \in \beta} \by{since $\gamma \in \beta$ and $\alpha=\gamma$}{}
-
-\end{fitchproof}
-
-Hence
-\[
-\alpha \subset \beta \Rightarrow \alpha \in \beta.
-\]
+    Hence
+    \[
+        \alpha \subset \beta \Rightarrow \alpha \in \beta.
+    \]
 
 \end{proof}
 
@@ -7332,269 +7340,267 @@ Hence
 \end{theorem}
 
 \begin{theorem}
-\textbf{Order of Ordinals.} prove
-\begin{enumerate}
-\setlength{\itemsep}{0pt}
-\item $(Ord,<)$ is linearly ordered.
-\item $(Ord,<)$ is well ordered.
-\end{enumerate}
+    \textbf{Order of Ordinals.} prove
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt}
+        \item $(Ord,<)$ is linearly ordered.
+        \item $(Ord,<)$ is well ordered.
+    \end{enumerate}
 \end{theorem}
 
 \begin{proof}
 
-\textbf{Claim 1: $(Ord,<)$ is linear.}
+    \textbf{Claim 1: $(Ord,<)$ is linear.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{1}{\alpha \in \beta} \by{assumption}{}
-\have{2}{\beta \in \gamma} \by{assumption}{}
-\have{3}{\gamma \text{ transitive}} \by{$\gamma \in Ord$}{}
-\have{4}{\alpha \in \gamma} \by{transitivity of $\gamma$}{}
+        \have{1}{\alpha \in \beta} \by{assumption}{}
+        \have{2}{\beta \in \gamma} \by{assumption}{}
+        \have{3}{\gamma \text{ transitive}} \by{$\gamma \in Ord$}{}
+        \have{4}{\alpha \in \gamma} \by{transitivity of $\gamma$}{}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\open
-\have{1}{\alpha \in \alpha} \by{assumption}{}
-\have{2}{(\alpha,<_\alpha)\text{ is linearly ordered}} \by{$\alpha$ is an ordinal}{}
-\have{3}{x:=\alpha} \by{definition}{}
-\have{4}{x\in x} \by{1,3}{}
-\have{5}{\bot} \by{asymmetry of $<_\alpha$}{}
-\close
+        \open
+        \have{1}{\alpha \in \alpha} \by{assumption}{}
+        \have{2}{(\alpha,<_\alpha)\text{ is linearly ordered}} \by{$\alpha$ is an ordinal}{}
+        \have{3}{x:=\alpha} \by{definition}{}
+        \have{4}{x\in x} \by{1,3}{}
+        \have{5}{\bot} \by{asymmetry of $<_\alpha$}{}
+        \close
 
-\have{6}{\alpha\notin\alpha}
+        \have{6}{\alpha\notin\alpha}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-Let $\alpha,\beta,\gamma \in Ord$.
+    Let $\alpha,\beta,\gamma \in Ord$.
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{1}{\alpha \subseteq \beta \land \beta \subseteq \gamma} \by{assumption}{}
-\have{2}{\alpha \subseteq \gamma} \by{transitivity of $\subseteq$}{}
-\have{3}{\alpha < \gamma} \by{Lemma 2.6(a)}{}
+        \have{1}{\alpha \subseteq \beta \land \beta \subseteq \gamma} \by{assumption}{}
+        \have{2}{\alpha \subseteq \gamma} \by{transitivity of $\subseteq$}{}
+        \have{3}{\alpha < \gamma} \by{Lemma 2.6(a)}{}
 
-\have{4}{\alpha \not< \beta \land \beta \not< \alpha \Rightarrow \alpha=\beta} \by{Lemma 2.6(b),(c)}{}
-\have{5}{\alpha<\beta \ \lor\ \alpha=\beta \ \lor\ \beta<\alpha} \by{Lemma 2.6(c)}{}
+        \have{4}{\alpha \not< \beta \land \beta \not< \alpha \Rightarrow \alpha=\beta} \by{Lemma 2.6(b),(c)}{}
+        \have{5}{\alpha<\beta \ \lor\ \alpha=\beta \ \lor\ \beta<\alpha} \by{Lemma 2.6(c)}{}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-Hence $(Ord,<)$ is linearly ordered.
+    Hence $(Ord,<)$ is linearly ordered.
 
-\medskip
+    \medskip
 
-\textbf{Claim 2: $(Ord,<)$ is well ordered.}
+    \textbf{Claim 2: $(Ord,<)$ is well ordered.}
 
-Let $X \subseteq Ord$, $X \neq \emptyset$.
+    Let $X \subseteq Ord$, $X \neq \emptyset$.
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{6}{X \neq \emptyset} \by{assumption}{}
-\have{7}{\exists \alpha \in X} \by{nonempty}{}
+        \have{6}{X \neq \emptyset} \by{assumption}{}
+        \have{7}{\exists \alpha \in X} \by{nonempty}{}
 
-\have{8}{\exists \beta \in X \ \forall \gamma \in X\ (\beta \le \gamma)} \by{Lemma 2.6(d)}{}
-\have{9}{\beta \text{ is $<$-least element of } X} \by{definition}{}
+        \have{8}{\exists \beta \in X \ \forall \gamma \in X\ (\beta \le \gamma)} \by{Lemma 2.6(d)}{}
+        \have{9}{\beta \text{ is $<$-least element of } X} \by{definition}{}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-Hence every nonempty set of ordinals has a least element.
+    Hence every nonempty set of ordinals has a least element.
 
-\medskip
+    \medskip
 
-\textbf{Conclusion:}
+    \textbf{Conclusion:}
 
-\[
-(Ord,<)\ \text{is linearly ordered and well ordered.}
-\]
+    \[
+        (Ord,<)\ \text{is linearly ordered and well ordered.}
+    \]
 
 \end{proof}
 
-
 \begin{theorem}
-The natural numbers are exactly the finite ordinal numbers.
+    The natural numbers are exactly the finite ordinal numbers.
 \end{theorem}
 
 \begin{proof}
 
-\textbf{Claim 1: Every natural number is a finite ordinal.}
+    \textbf{Claim 1: Every natural number is a finite ordinal.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{1}{n\in\mathbb N}
-\have{2}{Ordinal(n)} \by{Theorem 2.3}{}
-\have{3}{Finite(n)} \by{definition of $\mathbb N$}{}
+        \have{1}{n\in\mathbb N}
+        \have{2}{Ordinal(n)} \by{Theorem 2.3}{}
+        \have{3}{Finite(n)} \by{definition of $\mathbb N$}{}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-\medskip
+    \medskip
 
-\textbf{Claim 2: Every ordinal that is not a natural number is infinite.}
+    \textbf{Claim 2: Every ordinal that is not a natural number is infinite.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{4}{Ordinal(\alpha)\land \alpha\notin\mathbb N} \by{assumption}{}
-\have{5}{\alpha\neq\omega} \by{$\alpha\notin\mathbb N$}{}
-\have{6}{\alpha<\omega \ \lor\ \alpha=\omega \ \lor\ \omega<\alpha} \by{Theorem 2.6(c)}{}
-\have{7}{\omega<\alpha} \by{Theorem 2.6(b),5,6}{}
-\have{8}{\omega\in\alpha} \by{definition of $<$}{}
-\have{9}{\omega\subseteq\alpha} \by{transitivity of $\alpha$}{}
-\have{10}{Infinite(\omega)} \by{definition}{}
-\have{11}{Infinite(\alpha)} \by{$\omega\subseteq\alpha$}{}
+        \have{4}{Ordinal(\alpha)\land \alpha\notin\mathbb N} \by{assumption}{}
+        \have{5}{\alpha\neq\omega} \by{$\alpha\notin\mathbb N$}{}
+        \have{6}{\alpha<\omega \ \lor\ \alpha=\omega \ \lor\ \omega<\alpha} \by{Theorem 2.6(c)}{}
+        \have{7}{\omega<\alpha} \by{Theorem 2.6(b),5,6}{}
+        \have{8}{\omega\in\alpha} \by{definition of $<$}{}
+        \have{9}{\omega\subseteq\alpha} \by{transitivity of $\alpha$}{}
+        \have{10}{Infinite(\omega)} \by{definition}{}
+        \have{11}{Infinite(\alpha)} \by{$\omega\subseteq\alpha$}{}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-Hence every finite ordinal is a natural number.
+    Hence every finite ordinal is a natural number.
 
 \end{proof}
 
-
 \begin{theorem}
-Every well ordered structure is isomorphic to a unique ordinal.
+    Every well ordered structure is isomorphic to a unique ordinal.
 \end{theorem}
 
 \begin{proof}
 
-Let $(W,<)$ be a well ordered structure.
+    Let $(W,<)$ be a well ordered structure.
 
-Define
+    Define
 
-\[
-A:=\{a\in W\mid \exists \alpha\in Ord\ ((W[a],<)\cong (\alpha,<))\}.
-\]
+    \[
+        A:=\{a\in W\mid \exists \alpha\in Ord\ ((W[a],<)\cong (\alpha,<))\}.
+    \]
 
-For each $a\in A$, let $\alpha_a$ be the unique ordinal such that
+    For each $a\in A$, let $\alpha_a$ be the unique ordinal such that
 
-\[
-(W[a],<)\cong (\alpha_a,<).
-\]
+    \[
+        (W[a],<)\cong (\alpha_a,<).
+    \]
 
-Define
+    Define
 
-\[
-S:=\{\alpha_a\mid a\in A\}.
-\]
+    \[
+        S:=\{\alpha_a\mid a\in A\}.
+    \]
 
-\textbf{Claim 1: $Transitive(S)$.}
+    \textbf{Claim 1: $Transitive(S)$.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{1}{\alpha_a\in S}
-\have{2}{\gamma\in\alpha_a}
-\have{3}{h:(W[a],<)\cong(\alpha_a,<)} \by{definition of $\alpha_a$}{}
-\have{4}{c:=h^{-1}(\gamma)}
-\have{5}{(W[c],<)\cong(\gamma,<)} \by{restriction of $h$}{}
-\have{6}{c\in A} \by{definition of $A$}{}
-\have{7}{\gamma=\alpha_c}
-\have{8}{\gamma\in S}
+        \have{1}{\alpha_a\in S}
+        \have{2}{\gamma\in\alpha_a}
+        \have{3}{h:(W[a],<)\cong(\alpha_a,<)} \by{definition of $\alpha_a$}{}
+        \have{4}{c:=h^{-1}(\gamma)}
+        \have{5}{(W[c],<)\cong(\gamma,<)} \by{restriction of $h$}{}
+        \have{6}{c\in A} \by{definition of $A$}{}
+        \have{7}{\gamma=\alpha_c}
+        \have{8}{\gamma\in S}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-Hence $Transitive(S)$.
+    Hence $Transitive(S)$.
 
-\medskip
+    \medskip
 
-\textbf{Claim 2: $S$ is an ordinal.}
+    \textbf{Claim 2: $S$ is an ordinal.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{9}{S\subseteq Ord} \by{definition of $S$}{}
-\have{10}{(S,\in)\text{ is well ordered}} \by{Order of Ordinals}{}
-\have{11}{Transitive(S)} \by{Claim 1}{}
-\have{12}{Ordinal(S)} \by{definition of ordinal}{}
+        \have{9}{S\subseteq Ord} \by{definition of $S$}{}
+        \have{10}{(S,\in)\text{ is well ordered}} \by{Order of Ordinals}{}
+        \have{11}{Transitive(S)} \by{Claim 1}{}
+        \have{12}{Ordinal(S)} \by{definition of ordinal}{}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-Let
+    Let
 
-\[
-S=\alpha.
-\]
+    \[
+        S=\alpha.
+    \]
 
-\medskip
+    \medskip
 
-\textbf{Claim 3: $b<a\land a\in A \Rightarrow b\in A$.}
+    \textbf{Claim 3: $b<a\land a\in A \Rightarrow b\in A$.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{13}{a\in A\land b<a}
-\have{14}{h:(W[a],<)\cong(\alpha_a,<)} \by{definition of $A$}{}
-\have{15}{h[W[b]]\text{ is an initial segment of }\alpha_a}
-\have{16}{\exists\beta\in\alpha_a\quad h[W[b]]=\beta} \by{initial segments of ordinals}{}
-\have{17}{(W[b],<)\cong(\beta,<)}
-\have{18}{b\in A} \by{definition of $A$}{}
-\have{19}{\alpha_b=\beta}
-\have{20}{\alpha_b\in\alpha_a}
+        \have{13}{a\in A\land b<a}
+        \have{14}{h:(W[a],<)\cong(\alpha_a,<)} \by{definition of $A$}{}
+        \have{15}{h[W[b]]\text{ is an initial segment of }\alpha_a}
+        \have{16}{\exists\beta\in\alpha_a\quad h[W[b]]=\beta} \by{initial segments of ordinals}{}
+        \have{17}{(W[b],<)\cong(\beta,<)}
+        \have{18}{b\in A} \by{definition of $A$}{}
+        \have{19}{\alpha_b=\beta}
+        \have{20}{\alpha_b\in\alpha_a}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-\medskip
+    \medskip
 
-\textbf{Claim 4: $A=W$ or $A=W[c]$ for some $c\in W$.}
+    \textbf{Claim 4: $A=W$ or $A=W[c]$ for some $c\in W$.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{21}{A\subseteq W}
-\have{22}{\forall a\in A\ \forall b<a\ (b\in A)} \by{Claim 3}{}
-\have{23}{A\text{ is an initial segment of }W}
-\have{24}{A=W\ \lor\ \exists c\in W\ (A=W[c])} \by{Lemma 1.2}{}
+        \have{21}{A\subseteq W}
+        \have{22}{\forall a\in A\ \forall b<a\ (b\in A)} \by{Claim 3}{}
+        \have{23}{A\text{ is an initial segment of }W}
+        \have{24}{A=W\ \lor\ \exists c\in W\ (A=W[c])} \by{Lemma 1.2}{}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-\medskip
+    \medskip
 
-Define
+    Define
 
-\[
-f:A\to\alpha
-\]
+    \[
+        f:A\to\alpha
+    \]
 
-by
+    by
 
-\[
-f(a):=\alpha_a.
-\]
+    \[
+        f(a):=\alpha_a.
+    \]
 
-\medskip
+    \medskip
 
-\textbf{Claim 5: $f$ is an isomorphism.}
+    \textbf{Claim 5: $f$ is an isomorphism.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{25}{a,b\in A}
-\have{26}{a<b \Rightarrow \alpha_a\in\alpha_b} \by{Claim 3}{}
-\have{27}{a<b \Rightarrow f(a)<f(b)}
-\have{28}{f\text{ injective}} \by{uniqueness of ordinals}{}
-\have{29}{Range(f)=\alpha} \by{definition of $\alpha=S$}{}
-\have{30}{f:(A,<)\cong(\alpha,<)}
+        \have{25}{a,b\in A}
+        \have{26}{a<b \Rightarrow \alpha_a\in\alpha_b} \by{Claim 3}{}
+        \have{27}{a<b \Rightarrow f(a)<f(b)}
+        \have{28}{f\text{ injective}} \by{uniqueness of ordinals}{}
+        \have{29}{Range(f)=\alpha} \by{definition of $\alpha=S$}{}
+        \have{30}{f:(A,<)\cong(\alpha,<)}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-\medskip
+    \medskip
 
-\textbf{Claim 6: $A=W$.}
+    \textbf{Claim 6: $A=W$.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\open
-\have{31}{A=W[c]}
-\have{32}{f:(W[c],<)\cong(\alpha,<)} \by{Claim 5}{}
-\have{33}{c\in A} \by{definition of $A$}{}
-\have{34}{c\in W[c]} \by{31}{}
-\have{35}{\bot} \by{definition of initial segment}{}
-\close
+        \open
+        \have{31}{A=W[c]}
+        \have{32}{f:(W[c],<)\cong(\alpha,<)} \by{Claim 5}{}
+        \have{33}{c\in A} \by{definition of $A$}{}
+        \have{34}{c\in W[c]} \by{31}{}
+        \have{35}{\bot} \by{definition of initial segment}{}
+        \close
 
-\have{36}{A=W}
+        \have{36}{A=W}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-Since $A=W$, Claim 5 yields
+    Since $A=W$, Claim 5 yields
 
-\[
-f:(W,<)\cong(\alpha,<).
-\]
+    \[
+        f:(W,<)\cong(\alpha,<).
+    \]
 
-The ordinal $\alpha$ is unique since isomorphic ordinals are equal.
+    The ordinal $\alpha$ is unique since isomorphic ordinals are equal.
 
 \end{proof}
 
@@ -7602,389 +7608,384 @@ The ordinal $\alpha$ is unique since isomorphic ordinals are equal.
 
 \begin{theorem}[Second Version of Transfinite Induction]
 
-Let $P(\alpha)$ be a property. Assume
+    Let $P(\alpha)$ be a property. Assume
 
-\begin{enumerate}
-    \setlength{\itemsep}{0pt}
-    \item $P(0)$.
-    \item $\forall \alpha\in Ord\quad P(\alpha)\to P(s(\alpha))$.
-    \item $\forall \alpha\in Ord\quad
-          \big(
-          Limit(\alpha)\land \alpha\neq 0
-          \land
-          \forall \beta<\alpha\ P(\beta)
-          \big)
-          \to P(\alpha)$.
-\end{enumerate}
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt}
+        \item $P(0)$.
+        \item $\forall \alpha\in Ord\quad P(\alpha)\to P(s(\alpha))$.
+        \item $\forall \alpha\in Ord\quad
+                  \big(
+                  Limit(\alpha)\land \alpha\neq 0
+                  \land
+                  \forall \beta<\alpha\ P(\beta)
+                  \big)
+                  \to P(\alpha)$.
+    \end{enumerate}
 
-Then
+    Then
 
-\[
-\forall \alpha\in Ord\quad P(\alpha).
-\]
+    \[
+        \forall \alpha\in Ord\quad P(\alpha).
+    \]
 
 \end{theorem}
 
 \begin{proof}
 
-We prove the hypothesis of Transfinite Induction.
+    We prove the hypothesis of Transfinite Induction.
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\open
-\have{1}{\alpha\in Ord}
-\have{2}{\forall \beta<\alpha\quad P(\beta)}
+        \open
+        \have{1}{\alpha\in Ord}
+        \have{2}{\forall \beta<\alpha\quad P(\beta)}
 
-\open
-\have{3}{\alpha=0}
-\have{4}{P(\alpha)} \by{assumption (a)}{}
-\close
+        \open
+        \have{3}{\alpha=0}
+        \have{4}{P(\alpha)} \by{assumption (a)}{}
+        \close
 
-\open
-\have{5}{\exists \beta<\alpha\quad \alpha=s(\beta)}
-\have{6}{P(\beta)} \by{2}{}
-\have{7}{P(\alpha)} \by{assumption (b)}{}
-\close
+        \open
+        \have{5}{\exists \beta<\alpha\quad \alpha=s(\beta)}
+        \have{6}{P(\beta)} \by{2}{}
+        \have{7}{P(\alpha)} \by{assumption (b)}{}
+        \close
 
-\open
-\have{8}{Limit(\alpha)\land \alpha\neq 0}
-\have{9}{P(\alpha)} \by{assumption (c),2}{}
-\close
+        \open
+        \have{8}{Limit(\alpha)\land \alpha\neq 0}
+        \have{9}{P(\alpha)} \by{assumption (c),2}{}
+        \close
 
-\have{10}{P(\alpha)} \by{trichotomy of ordinals}{}
+        \have{10}{P(\alpha)} \by{trichotomy of ordinals}{}
 
-\close
+        \close
 
-\have{11}{\forall \alpha\in Ord
-\Big(
-\forall \beta<\alpha\ P(\beta)
-\to
-P(\alpha)
-\Big)}
+        \have{11}{\forall \alpha\in Ord
+            \Big(
+            \forall \beta<\alpha\ P(\beta)
+            \to
+            P(\alpha)
+            \Big)}
 
-\have{12}{\forall \alpha\in Ord\quad P(\alpha)}
-\by{Transfinite Induction}{}
+        \have{12}{\forall \alpha\in Ord\quad P(\alpha)}
+        \by{Transfinite Induction}{}
 
-\end{fitchproof}
+    \end{fitchproof}
 
 \end{proof}
 
 \begin{theorem}[Transfinite Induction Principle]
 
-Let $P(\alpha)$ be a property.
+    Let $P(\alpha)$ be a property.
 
-Assume
+    Assume
 
-\[
-\forall \alpha\in Ord
-\quad
-\Big(
-\forall \beta<\alpha \quad P(\beta)
-\to
-P(\alpha)
-\Big).
-\]
+    \[
+        \forall \alpha\in Ord
+        \quad
+        \Big(
+        \forall \beta<\alpha \quad P(\beta)
+        \to
+        P(\alpha)
+        \Big).
+    \]
 
-Then
+    Then
 
-\[
-\forall \alpha\in Ord \quad P(\alpha).
-\]
+    \[
+        \forall \alpha\in Ord \quad P(\alpha).
+    \]
 
 \end{theorem}
 
 \begin{proof}
 
+    Define
 
+    \[
+        S:=\{\beta\le\gamma\mid \neg P(\beta)\}.
+    \]
 
-Define
+    \begin{fitchproof}[arrayenv=tabular]
 
-\[
-S:=\{\beta\le\gamma\mid \neg P(\beta)\}.
-\]
+        \open
+        \have{1}{\exists \gamma\in Ord \quad \neg P(\gamma)} \by{assumption}{}
+        \have{2}{\gamma\in S} \by{definition of $S$}{}
+        \have{3}{S\neq\emptyset} \by{2}{}
+        \have{4}{\exists \alpha\in S \quad \forall \delta\in S \ (\alpha\le\delta)} \by{well ordering of $Ord$}{}
+        \have{5}{\alpha\in S} \by{4}{}
+        \have{6}{\neg P(\alpha)} \by{definition of $S$}{}
+        \have{7}{\forall \beta<\alpha \quad P(\beta)} \by{minimality of $\alpha$}{}
+        \have{8}{P(\alpha)} \by{hypothesis}{}
+        \have{9}{\bot} \by{6,8}{}
+        \close
+        \have{10}{\forall \alpha\in Ord \quad P(\alpha)} \by{contradiction}{}
 
-\begin{fitchproof}[arrayenv=tabular]
-    
-    
-\open
-\have{1}{\exists \gamma\in Ord \quad \neg P(\gamma)} \by{assumption}{}
-\have{2}{\gamma\in S} \by{definition of $S$}{}
-\have{3}{S\neq\emptyset} \by{2}{}
-\have{4}{\exists \alpha\in S \quad \forall \delta\in S \ (\alpha\le\delta)} \by{well ordering of $Ord$}{}
-\have{5}{\alpha\in S} \by{4}{}
-\have{6}{\neg P(\alpha)} \by{definition of $S$}{}
-\have{7}{\forall \beta<\alpha \quad P(\beta)} \by{minimality of $\alpha$}{}
-\have{8}{P(\alpha)} \by{hypothesis}{}
-\have{9}{\bot} \by{6,8}{}
-\close
-\have{10}{\forall \alpha\in Ord \quad P(\alpha)} \by{contradiction}{}
-
-\end{fitchproof}
+    \end{fitchproof}
 
 \end{proof}
 
 \section{Transfinite Recurtion}
 
-
 \begin{theorem}[Transfinite Recursion Theorem]
-Let $G$ be an operation. Then there exists a unique operation $F$ such that
-\[
-F(\alpha)=G(F\upharpoonright \alpha)
-\quad \text{for all ordinals } \alpha.
-\]
+    Let $G$ be an operation. Then there exists a unique operation $F$ such that
+    \[
+        F(\alpha)=G(F\upharpoonright \alpha)
+        \quad \text{for all ordinals } \alpha.
+    \]
 \end{theorem}
 
 \begin{proof}
 
-We say $t$ is a \textbf{computation of length $\alpha$ based on $G$} if:
-\[
-dom(t)=\alpha+1
-\quad\text{and}\quad
-\forall \beta\le \alpha\; t(\beta)=G(t\upharpoonright \beta).
-\]
+    We say $t$ is a \textbf{computation of length $\alpha$ based on $G$} if:
+    \[
+        dom(t)=\alpha+1
+        \quad\text{and}\quad
+        \forall \beta\le \alpha\; t(\beta)=G(t\upharpoonright \beta).
+    \]
 
-Define the property:
-\[
-P(x,y)\;:\;
-\begin{cases}
-x\in Ord \ \land\ y=t(x) \text{ for some computation } t \text{ of length } x,\\
-\text{or } x\notin Ord \ \land\ y=\emptyset.
-\end{cases}
-\]
+    Define the property:
+    \[
+        P(x,y)\;:\;
+        \begin{cases}
+            x\in Ord \ \land\ y=t(x) \text{ for some computation } t \text{ of length } x, \\
+            \text{or } x\notin Ord \ \land\ y=\emptyset.
+        \end{cases}
+    \]
 
-We show $P$ defines a function.
+    We show $P$ defines a function.
 
-\textbf{Claim 1: For every ordinal $\alpha$ there exists a unique computation of length $\alpha$.}
+    \textbf{Claim 1: For every ordinal $\alpha$ there exists a unique computation of length $\alpha$.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{1}{\forall \beta<\alpha\ \exists ! t_\beta \text{ computation of length }\beta}
-\by{induction hypothesis}{}
+        \have{1}{\forall \beta<\alpha\ \exists ! t_\beta \text{ computation of length }\beta}
+        \by{induction hypothesis}{}
 
-\have{2}{T:=\{t_\beta \mid \beta<\alpha\}} \by{Replacement}{}
-\have{3}{T \text{ is a compatible system of functions}} \by{uniqueness}{}
+        \have{2}{T:=\{t_\beta \mid \beta<\alpha\}} \by{Replacement}{}
+        \have{3}{T \text{ is a compatible system of functions}} \by{uniqueness}{}
 
-\have{4}{t:=\bigcup T} \by{definition}{}
+        \have{4}{t:=\bigcup T} \by{definition}{}
 
-\have{5}{dom(t)=\alpha} \by{union of domains}{}
-\have{6}{t \text{ is a function}} \by{compatibility of }T{}
+        \have{5}{dom(t)=\alpha} \by{union of domains}{}
+        \have{6}{t \text{ is a function}} \by{compatibility of }T{}
 
-\have{7}{\forall \beta<\alpha\; t(\beta)=G(t\upharpoonright \beta)} \by{compatibility}{}
+        \have{7}{\forall \beta<\alpha\; t(\beta)=G(t\upharpoonright \beta)} \by{compatibility}{}
 
-\have{8}{t(\alpha)=G(t\upharpoonright \alpha)} \by{definition extension step}{}
+        \have{8}{t(\alpha)=G(t\upharpoonright \alpha)} \by{definition extension step}{}
 
-\have{9}{t \text{ computation of length }\alpha} \by{definition}{}
+        \have{9}{t \text{ computation of length }\alpha} \by{definition}{}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-\textbf{Claim 2: Uniqueness of computation of length $\alpha$.}
+    \textbf{Claim 2: Uniqueness of computation of length $\alpha$.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{10}{t,s \text{ computations of length }\alpha}
-\have{11}{\forall \beta<\alpha\; t(\beta)=s(\beta)} \by{induction on $\beta$}{}
-\have{12}{t=s} \by{extensionality}{}
+        \have{10}{t,s \text{ computations of length }\alpha}
+        \have{11}{\forall \beta<\alpha\; t(\beta)=s(\beta)} \by{induction on $\beta$}{}
+        \have{12}{t=s} \by{extensionality}{}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-Hence $P$ defines a function $F$.
+    Hence $P$ defines a function $F$.
 
-\medskip
+    \medskip
 
-Define
-\[
-F(\alpha):=t(\alpha)
-\]
-where $t$ is the unique computation of length $\alpha$.
+    Define
+    \[
+        F(\alpha):=t(\alpha)
+    \]
+    where $t$ is the unique computation of length $\alpha$.
 
-\textbf{Claim 3: Recursion equation.}
+    \textbf{Claim 3: Recursion equation.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{13}{\alpha \in Ord}
-\have{14}{t \text{ computation of length }\alpha}
-\have{15}{F(\alpha)=t(\alpha)} \by{definition}{}
-\have{16}{t(\alpha)=G(t\upharpoonright \alpha)} \by{computation rule}{}
-\have{17}{F(\alpha)=G(F\upharpoonright \alpha)} \by{definition of }F{}
+        \have{13}{\alpha \in Ord}
+        \have{14}{t \text{ computation of length }\alpha}
+        \have{15}{F(\alpha)=t(\alpha)} \by{definition}{}
+        \have{16}{t(\alpha)=G(t\upharpoonright \alpha)} \by{computation rule}{}
+        \have{17}{F(\alpha)=G(F\upharpoonright \alpha)} \by{definition of }F{}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-\textbf{Claim 4: Uniqueness of $F$.}
+    \textbf{Claim 4: Uniqueness of $F$.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{18}{F,S \text{ satisfy recursion equation}}
-\have{19}{\forall \beta<\alpha\; F(\beta)=S(\beta)} \by{induction}{}
-\have{20}{F=S} \by{extensionality}{}
+        \have{18}{F,S \text{ satisfy recursion equation}}
+        \have{19}{\forall \beta<\alpha\; F(\beta)=S(\beta)} \by{induction}{}
+        \have{20}{F=S} \by{extensionality}{}
 
-\end{fitchproof}
+    \end{fitchproof}
 
 \end{proof}
 
 \begin{theorem}[Parametric Transfinite Recursion]
-Let $G$ be an operation. Then there exists a unique operation $F$ such that
-\[
-F(z,\alpha)=G\bigl(z, F(z)\upharpoonright \alpha\bigr)
-\quad \text{for all sets } z \text{ and ordinals } \alpha.
-\]
+    Let $G$ be an operation. Then there exists a unique operation $F$ such that
+    \[
+        F(z,\alpha)=G\bigl(z, F(z)\upharpoonright \alpha\bigr)
+        \quad \text{for all sets } z \text{ and ordinals } \alpha.
+    \]
 \end{theorem}
 
 \begin{proof}
 
-Fix a set $z$.
+    Fix a set $z$.
 
-We say $t$ is a \textbf{computation of length $\alpha$ based on $G$ and $z$} if:
-\[
-dom(t)=\alpha+1
-\quad\land\quad
-\forall \beta\le \alpha\; t(\beta)=G\bigl(z, t\upharpoonright \beta\bigr).
-\]
+    We say $t$ is a \textbf{computation of length $\alpha$ based on $G$ and $z$}
+    if:
+    \[
+        dom(t)=\alpha+1
+        \quad\land\quad
+        \forall \beta\le \alpha\; t(\beta)=G\bigl(z, t\upharpoonright \beta\bigr).
+    \]
 
-Define the property
-\[
-Q(z,x,y):
-\begin{cases}
-x\in Ord \ \land\ y=t(x)\ \text{for some computation } t \text{ of length } x \text{ based on } G,z,\\
-\text{or } x\notin Ord \ \land\ y=\emptyset.
-\end{cases}
-\]
+    Define the property
+    \[
+        Q(z,x,y):
+        \begin{cases}
+            x\in Ord \ \land\ y=t(x)\ \text{for some computation } t \text{ of length } x \text{ based on } G,z, \\
+            \text{or } x\notin Ord \ \land\ y=\emptyset.
+        \end{cases}
+    \]
 
-\textbf{Claim 1: For every ordinal $\alpha$ there exists a unique computation of length $\alpha$ based on $G$ and $z$.}
+    \textbf{Claim 1: For every ordinal $\alpha$ there exists a unique computation of length $\alpha$ based on $G$ and $z$.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{1}{\forall \beta<\alpha\ \exists ! t_\beta}
-\by{induction hypothesis}{}
+        \have{1}{\forall \beta<\alpha\ \exists ! t_\beta}
+        \by{induction hypothesis}{}
 
-\have{2}{T:=\{t_\beta \mid \beta<\alpha\}}
-\have{3}{T \text{ is compatible}} \by{uniqueness}{}
+        \have{2}{T:=\{t_\beta \mid \beta<\alpha\}}
+        \have{3}{T \text{ is compatible}} \by{uniqueness}{}
 
-\have{4}{t:=\bigcup T}
+        \have{4}{t:=\bigcup T}
 
-\have{5}{dom(t)=\alpha}
-\have{6}{t \text{ is a function}} \by{compatibility}{}
+        \have{5}{dom(t)=\alpha}
+        \have{6}{t \text{ is a function}} \by{compatibility}{}
 
-\have{7}{\forall \beta<\alpha\; t(\beta)=G(z,t\upharpoonright \beta)}
-\have{8}{t(\alpha)=G(z,t\upharpoonright \alpha)}
+        \have{7}{\forall \beta<\alpha\; t(\beta)=G(z,t\upharpoonright \beta)}
+        \have{8}{t(\alpha)=G(z,t\upharpoonright \alpha)}
 
-\have{9}{t \text{ computation of length }\alpha}
+        \have{9}{t \text{ computation of length }\alpha}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-\textbf{Claim 2: Uniqueness.}
+    \textbf{Claim 2: Uniqueness.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{10}{t,s \text{ computations of length }\alpha}
-\have{11}{\forall \beta<\alpha\; t(\beta)=s(\beta)}
-\have{12}{t=s}
+        \have{10}{t,s \text{ computations of length }\alpha}
+        \have{11}{\forall \beta<\alpha\; t(\beta)=s(\beta)}
+        \have{12}{t=s}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-Hence $Q$ defines a function $F$.
+    Hence $Q$ defines a function $F$.
 
-Define
-\[
-F(z,\alpha):=t(\alpha)
-\]
-where $t$ is the unique computation of length $\alpha$ based on $G$ and $z$.
+    Define
+    \[
+        F(z,\alpha):=t(\alpha)
+    \]
+    where $t$ is the unique computation of length $\alpha$ based on $G$ and $z$.
 
-\textbf{Claim 3: Recursion equation.}
+    \textbf{Claim 3: Recursion equation.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{13}{\alpha\in Ord}
-\have{14}{t \text{ computation of length }\alpha}
-\have{15}{F(z,\alpha)=t(\alpha)}
-\have{16}{t(\alpha)=G(z,t\upharpoonright \alpha)}
-\have{17}{F(z,\alpha)=G(z,F(z)\upharpoonright \alpha)}
+        \have{13}{\alpha\in Ord}
+        \have{14}{t \text{ computation of length }\alpha}
+        \have{15}{F(z,\alpha)=t(\alpha)}
+        \have{16}{t(\alpha)=G(z,t\upharpoonright \alpha)}
+        \have{17}{F(z,\alpha)=G(z,F(z)\upharpoonright \alpha)}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-\textbf{Claim 4: Uniqueness of $F$.}
+    \textbf{Claim 4: Uniqueness of $F$.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{18}{F,S \text{ satisfy recursion}}
-\have{19}{\forall \beta<\alpha\; F(z,\beta)=S(z,\beta)}
-\have{20}{F=S}
+        \have{18}{F,S \text{ satisfy recursion}}
+        \have{19}{\forall \beta<\alpha\; F(z,\beta)=S(z,\beta)}
+        \have{20}{F=S}
 
-\end{fitchproof}
+    \end{fitchproof}
 
 \end{proof}
-
-
 
 \section{Arithmetic of Ordinals}
 
 \begin{theorem}[Conway]
-For ordinals $\alpha,\beta$,
-\[
-\alpha \oplus \beta
-=
-\sup'\Big(\{\alpha \oplus \beta' : \beta'<\beta\}\ \cup\ \{\alpha' \oplus \beta : \alpha'<\alpha\}\Big).
-\]
+    For ordinals $\alpha,\beta$,
+    \[
+        \alpha \oplus \beta
+        =
+        \sup'\Big(\{\alpha \oplus \beta' : \beta'<\beta\}\ \cup\ \{\alpha' \oplus \beta : \alpha'<\alpha\}\Big).
+    \]
 \end{theorem}
 
 \begin{proof}
 
-Let
-\[
-S_{\alpha,\beta}:=
-\{\alpha \oplus \beta' : \beta'<\beta\}
-\ \cup\
-\{\alpha' \oplus \beta : \alpha'<\alpha\}.
-\]
+    Let
+    \[
+        S_{\alpha,\beta}:=
+        \{\alpha \oplus \beta' : \beta'<\beta\}
+        \ \cup\
+        \{\alpha' \oplus \beta : \alpha'<\alpha\}.
+    \]
 
-\textbf{Claim 1: $S_{\alpha,\beta}$ is a set of ordinals.}
+    \textbf{Claim 1: $S_{\alpha,\beta}$ is a set of ordinals.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{1}{\beta'<\beta \Rightarrow \alpha\oplus \beta' \in Ord}
-\have{2}{\alpha'<\alpha \Rightarrow \alpha'\oplus \beta \in Ord}
-\have{3}{S_{\alpha,\beta}\subseteq Ord}
+        \have{1}{\beta'<\beta \Rightarrow \alpha\oplus \beta' \in Ord}
+        \have{2}{\alpha'<\alpha \Rightarrow \alpha'\oplus \beta \in Ord}
+        \have{3}{S_{\alpha,\beta}\subseteq Ord}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-\textbf{Claim 2: $S_{\alpha,\beta}$ is bounded above in $Ord$.}
+    \textbf{Claim 2: $S_{\alpha,\beta}$ is bounded above in $Ord$.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{4}{\forall \gamma\in S_{\alpha,\beta}\ \exists \delta\in Ord\ (\gamma<\delta)}
-\have{5}{\exists \sup S_{\alpha,\beta}}
+        \have{4}{\forall \gamma\in S_{\alpha,\beta}\ \exists \delta\in Ord\ (\gamma<\delta)}
+        \have{5}{\exists \sup S_{\alpha,\beta}}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-\textbf{Claim 3: $\sup' S_{\alpha,\beta}$ exists and is an ordinal.}
+    \textbf{Claim 3: $\sup' S_{\alpha,\beta}$ exists and is an ordinal.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{6}{\sup S_{\alpha,\beta} \in Ord}
-\have{7}{\sup' S_{\alpha,\beta}\in Ord}
+        \have{6}{\sup S_{\alpha,\beta} \in Ord}
+        \have{7}{\sup' S_{\alpha,\beta}\in Ord}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-\textbf{Claim 4: recursion characterization.}
+    \textbf{Claim 4: recursion characterization.}
 
-\begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
-\have{8}{\forall \beta'<\beta\quad \alpha\oplus \beta' < \alpha\oplus \beta}
-\have{9}{\forall \alpha'<\alpha\quad \alpha'\oplus \beta < \alpha\oplus \beta}
-\have{10}{S_{\alpha,\beta} \subseteq \alpha\oplus \beta}
+        \have{8}{\forall \beta'<\beta\quad \alpha\oplus \beta' < \alpha\oplus \beta}
+        \have{9}{\forall \alpha'<\alpha\quad \alpha'\oplus \beta < \alpha\oplus \beta}
+        \have{10}{S_{\alpha,\beta} \subseteq \alpha\oplus \beta}
 
-\have{11}{\alpha\oplus \beta \text{ is upper bound of } S_{\alpha,\beta}}
+        \have{11}{\alpha\oplus \beta \text{ is upper bound of } S_{\alpha,\beta}}
 
-\have{12}{\sup' S_{\alpha,\beta} \le \alpha\oplus \beta}
+        \have{12}{\sup' S_{\alpha,\beta} \le \alpha\oplus \beta}
 
-\have{13}{\forall \gamma<\alpha\oplus \beta\ \exists s\in S_{\alpha,\beta}\ (\gamma\le s)}
-\have{14}{\alpha\oplus \beta \le \sup' S_{\alpha,\beta}}
+        \have{13}{\forall \gamma<\alpha\oplus \beta\ \exists s\in S_{\alpha,\beta}\ (\gamma\le s)}
+        \have{14}{\alpha\oplus \beta \le \sup' S_{\alpha,\beta}}
 
-\end{fitchproof}
+    \end{fitchproof}
 
-Hence
-\[
-\alpha \oplus \beta = \sup' S_{\alpha,\beta}.
-\]
+    Hence
+    \[
+        \alpha \oplus \beta = \sup' S_{\alpha,\beta}.
+    \]
 
 \end{proof}
 
@@ -9178,9 +9179,9 @@ relation ``$ (\alpha_1 , \beta_1) \sim (\alpha_2 , \beta_2) : \alpha_1 +
 \end{definition}
 
 in this system ``$ 0 := [(0,0)]$'' and ``$ \forall \beta \in Ord \quad \beta :=
-    [( \beta ,0)]$'' and ``$\forall \beta \in Ord \quad - \beta := [(0, \beta
-    )]$''. in general``$\forall \alpha , \beta \in Ord \quad \alpha - \beta :=
-    [(\alpha , \beta )]$''. so we can say ``$ Ord \subseteq \mathbb{Z} (Ord)$''.
+        [( \beta ,0)]$'' and ``$\forall \beta \in Ord \quad - \beta := [(0, \beta
+            )]$''. in general``$\forall \alpha , \beta \in Ord \quad \alpha - \beta :=
+        [(\alpha , \beta )]$''. so we can say ``$ Ord \subseteq \mathbb{Z} (Ord)$''.
 
 \begin{theorem}\textbf{Summation} there is a unique function ``$+_\mathbb{Z} (Ord) :\mathbb{Z} (Ord) \times \mathbb{Z} (Ord) \to \mathbb{Z} (Ord)$'' s.t.
 
@@ -9626,8 +9627,6 @@ first we have to fix a ``Main variable'' it's almost all the time ``$x$''.
 
 Main reason we choose ``$x$'' in defintion becuase it's ``Main variable''. you
 can prove $\forall x \in \mathbb{R} (Ord) \quad d_\alpha(x) = \alpha(x)$.
-
-
 
 \begin{definition} we define \textbf{Derivative}
     \[ \frac{d}{dx}  :=  \{ \big(f , sh(\frac{d_\alpha(f)}{d_\alpha(x)}) \big) \mid f : \mathbb{R} (Ord) \to \mathbb{R} (Ord) \} \]
