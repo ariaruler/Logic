@@ -1056,72 +1056,102 @@ sentences.
 \section{Rules of first order logic.}
 
 \begin{theorem}
-    \textbf{$(schema)$} $(\forall I ,\forall E ,\exists I , \exists E)$ assume universe of discourse is ``$ \{a_{0},a_{1},a_{2},...,a_{n}\}$''
+     \textbf{**$(schema)$**} $(\forall I,\forall E,\exists I,\exists E)$
+
+    Assume that the universe of discourse is
+    \[
+        D=\{a_0,a_1,a_2,\ldots,a_n\}.
+    \]
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
+
         \hline
+
         Rules
         \rule[0pt]{0pt}{0pt} &
         Terms and Conditions
         \\
-        \hline
-        \begin{fitchproof}[arrayenv=tabular]
-            \hypo [ ] {2} {\phi (x)}
-            \have  [ ]{2} {\therefore \forall x \phi (x)} \by{$\forall I$}{}
-        \end{fitchproof}
-        \rule[0pt]{0pt}{0pt} &
-        \begin{enumerate}
-            \setlength{\itemsep}{0pt} % No extra space between items
-            \item  $x$ is a variable.
-            \item  $\phi (x)$ must not be assumed.
-        \end{enumerate}
 
-        \\
         \hline
-        \begin{fitchproof}[arrayenv=tabular]
-            \hypo [ ] {2} {\forall x \phi (x)}
-            \have  [ ]{2} {\therefore \phi [a/x]} \by{$\forall E$}{}
-        \end{fitchproof}
-        \rule[0pt]{0pt}{0pt} &
-        \begin{enumerate}
-            \setlength{\itemsep}{0pt} % No extra space between items
-            \item  $a$ is an obj in universe of discourse.(it can be constant or variable.)
-        \end{enumerate}
 
-        \\
-        \hline
         \begin{fitchproof}[arrayenv=tabular]
-            \hypo [ ] {2} {\phi [a/x]}
-            \have  [ ]{2} {\therefore \exists x \phi (x)} \by{$\exists I$}{}
+            \hypo [ ] {2} {\phi(x)}
+            \have [ ] {2} {\therefore \forall x\,\phi(x)}
+                \by{$\forall I$}{}
         \end{fitchproof}
-
         \rule[0pt]{0pt}{0pt} &
 
         \begin{enumerate}
-            \setlength{\itemsep}{0pt} % No extra space between items
-            \item  $a$ is an obj in universe of discourse.(it can be conatant or variable.)
+            \setlength{\itemsep}{0pt}
+            \item $x$ is a variable.
+            \item $x$ is arbitrary.
+            \item $x$ does not occur free in any 
+            assumption on which $\phi(x)$ depends.
         \end{enumerate}
 
         \\
+
         \hline
+
         \begin{fitchproof}[arrayenv=tabular]
-            \have [ ] {1} {\exists x \phi (x)}
+            \hypo [ ] {2} {\forall x\,\phi(x)}
+            \have [ ] {2} {\therefore \phi[a/x]}
+                \by{$\forall E$}{}
+        \end{fitchproof}
+        \rule[0pt]{0pt}{0pt} &
+
+        \begin{enumerate}
+            \setlength{\itemsep}{0pt}
+            \item $a$ is an object in the universe of discourse.
+            \item $a$ is free for $x$ in $\phi(x)$.
+        \end{enumerate}
+
+        \\
+
+        \hline
+
+        \begin{fitchproof}[arrayenv=tabular]
+            \hypo [ ] {2} {\phi[a/x]}
+            \have [ ] {2} {\therefore \exists x\,\phi(x)}
+                \by{$\exists I$}{}
+        \end{fitchproof}
+        \rule[0pt]{0pt}{0pt} &
+
+        \begin{enumerate}
+            \setlength{\itemsep}{0pt}
+            \item $a$ is an object in the universe of discourse.
+            \item $a$ is free for $x$ in $\phi(x)$.
+        \end{enumerate}
+
+        \\
+
+        \hline
+
+        \begin{fitchproof}[arrayenv=tabular]
+            \have [ ] {1} {\exists x\,\phi(x)}
             \open
-            \have [ ] {1} {\phi (x)}
+            \have [ ] {1} {\phi(a)}
             \have [ ] {2} {\vdots}
-            \have  [ ] {2} {\theta}
+            \have [ ] {2} {\theta}
             \close
-            \have  [ ]{2} {\therefore\theta } \by{$\exists E$}{}
+            \have [ ] {2} {\therefore\theta}
+                \by{$\exists E$}{}
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt} &
+
         \begin{enumerate}
-            \setlength{\itemsep}{0pt} % No extra space between items
-            \item  $x$ is a variable.
-            \item  $\phi (x)$ must not be assumed in previous lines.(except ones that are closed)
-            \item $x$ is not free in $\theta$
+            \setlength{\itemsep}{0pt}
+            \item $a$ is a fresh variable.
+            \item $a$ does not occur free in any 
+                  assumption on which $\theta$ depends.
+            \item $a$ does not occur free in $\theta$.
+            \item $\phi(a)$ is assumed only inside the subproof.
         \end{enumerate}
+
         \\
+
         \hline
+
     \end{tabular}
     % \printindex
 
@@ -2587,7 +2617,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
 \end{definition}
 
 \begin{theorem}
-    \textbf{$(schema)$} $(\forall I ,\forall E ,\exists I , \exists E)$
+    \textbf{$(schema)$} 
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
@@ -2602,10 +2632,9 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
          &
 
         \begin{fitchproof}[arrayenv=tabular]
-            \have  [ ]  {2} {f(x)=y}
-            \hypo [ ] {2} {  Func(f) }
-
-            \have [ ] {2} {\therefore (x,y) \in f }    \by{$f() E$}{}
+            \hypo  [ ]  {2} {f(x)=y}
+            \have [ ] {2} { \therefore  Func(f) }    \by{$f() E$}{} 
+            \have [ ] {2} { \therefore (x,y) \in f }    \by{$f() E$}{} 
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt}
         \\
@@ -2660,76 +2689,96 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
               \[ (\neg B)[t/x] := (\neg B[t/x]) \]
     \end{enumerate}
 \end{definition}
-
 \begin{theorem}
-    \textbf{$(schema)$} $(\forall I ,\forall E ,\exists I , \exists E)$
+
+    \textbf{**$(schema)$**} $(\forall I ,\forall E ,\exists I , \exists E)$
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
+
         \hline
+
         Rules
         \rule[0pt]{0pt}{0pt} &
         Terms and Conditions
         \\
+
         \hline
+
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {\phi (x)}
-            \have  [ ]{2} {\therefore \forall x \phi (x)} \by{$\forall I$}{}
+            \have [ ] {2} {\therefore \forall x \phi (x)} \by{$\forall I$}{}
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt} &
+
         \begin{enumerate}
-            \setlength{\itemsep}{0pt} % No extra space between items
-            \item  $x$ is a variable.
-            \item  ``$\phi (x)$'' must not be assumed.
+            \setlength{\itemsep}{0pt}
+            \item $x$ is a variable.
+            \item ``$\phi(x)$'' must not be an assumption.
+            \item $x$ must not occur free in any  assumption
+                  on which $\phi(x)$ depends.
         \end{enumerate}
 
         \\
+
         \hline
+
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {\forall x \phi (x)}
-            \have  [ ]{2} {\therefore \phi [t/x]} \by{$\forall E$}{}
+            \have [ ] {2} {\therefore \phi [t/x]} \by{$\forall E$}{}
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt} &
+
         \begin{enumerate}
-            \setlength{\itemsep}{0pt} % No extra space between items
-            \item  $t$ is a term.
+            \setlength{\itemsep}{0pt}
+            \item $t$ is a term.
+            \item $t$ is free for $x$ in $\phi(x)$.
         \end{enumerate}
 
         \\
+
         \hline
+
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {\phi [t/x]}
-            \have  [ ]{2} {\therefore \exists x \phi (x)} \by{$\exists I$}{}
+            \have [ ] {2} {\therefore \exists x \phi (x)} \by{$\exists I$}{}
         \end{fitchproof}
-
         \rule[0pt]{0pt}{0pt} &
 
         \begin{enumerate}
-            \setlength{\itemsep}{0pt} % No extra space between items
-            \item  $t$ is a term.
+            \setlength{\itemsep}{0pt}
+            \item $t$ is a term.
+            \item $t$ is free for $x$ in $\phi(x)$.
         \end{enumerate}
 
         \\
+
         \hline
+
         \begin{fitchproof}[arrayenv=tabular]
             \have [ ] {1} {\exists x \phi (x)}
             \open
             \have [ ] {1} {\phi (x)}
             \have [ ] {2} {\vdots}
-            \have  [ ] {2} {\theta}
+            \have [ ] {2} {\theta}
             \close
-            \have  [ ]{2} {\therefore\theta } \by{$\exists E$}{}
+            \have [ ] {2} {\therefore\theta } \by{$\exists E$}{}
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt} &
+
         \begin{enumerate}
-            \setlength{\itemsep}{0pt} % No extra space between items
-            \item  $x$ is a variable.
-            \item  ``$\phi (x)$'' must not be assumed in previous lines.(except ones that are closed)
-            \item $x$ is not free in $\theta$
+            \setlength{\itemsep}{0pt}
+            \item $x$ is a variable.
+            \item ``$\phi(x)$'' is assumed only within the subproof.
+            \item $x$ does not occur free in $\theta$.
+            \item $x$ does not occur free in any  assumption
+                  on which $\theta$ depends.
         \end{enumerate}
+
         \\
+
         \hline
-    \end{tabular}
-    % \printindex
+
+    \end{tabular}    % \printindex
     \\
     \\
     $(\forall I , \exists E)$ is the same as $(\forall I , \exists E)$ in chapter three so we have
