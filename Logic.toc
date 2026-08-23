@@ -41,7 +41,7 @@
 \contentsline {section}{\numberline {10.3}Transfinite Induction}{120}{section.10.3}%
 \contentsline {section}{\numberline {10.4}Transfinite Recurtion}{121}{section.10.4}%
 \contentsline {section}{\numberline {10.5}Arithmetic of Ordinals}{124}{section.10.5}%
-\contentsline {section}{\numberline {10.6}Transfinite Peano arithmetic}{125}{section.10.6}%
+\contentsline {section}{\numberline {10.6}Transfinite Peano arithmetic}{124}{section.10.6}%
 \contentsline {chapter}{\numberline {11}Cardinals }{127}{chapter.11}%
 \contentsline {chapter}{\numberline {12}Axiom of choice}{129}{chapter.12}%
 \contentsline {chapter}{\numberline {13}hyperreal numbers($*\mathbb {N} , *\mathbb {Z},*\mathbb {Q} ,*\mathbb {R} $) }{131}{chapter.13}%
@@ -66,5 +66,6 @@
 \contentsline {section}{\numberline {14.4}fantacy Complex numbers``$\mathbb {C} (Ord)$''}{150}{section.14.4}%
 \contentsline {chapter}{\numberline {15}New beginning for calculus }{153}{chapter.15}%
 \contentsline {section}{\numberline {15.1}Derivatives}{153}{section.15.1}%
+\contentsline {section}{\numberline {15.2}Partial Derivatives}{153}{section.15.2}%
 \contentsline {chapter}{\numberline {16}Lebesgue Integral}{155}{chapter.16}%
 \contentsline {chapter}{\numberline {17}New beginning for Probability theory}{157}{chapter.17}%

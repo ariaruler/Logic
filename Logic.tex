@@ -1130,7 +1130,7 @@ sentences.
         \begin{fitchproof}[arrayenv=tabular]
             \have [ ] {1} {\exists x\,\phi(x)}
             \open
-            \have [ ] {1} {\phi(a)}
+            \have [ ] {1} {\phi(x)}
             \have [ ] {2} {\vdots}
             \have [ ] {2} {\theta}
             \close
@@ -1141,11 +1141,9 @@ sentences.
 
         \begin{enumerate}
             \setlength{\itemsep}{0pt}
-            \item $a$ is a fresh variable.
-            \item $a$ does not occur free in any 
-                  assumption on which $\theta$ depends.
-            \item $a$ does not occur free in $\theta$.
-            \item $\phi(a)$ is assumed only inside the subproof.
+            \item $x$ does not occur free in any assumption on which $\theta$ depends.
+            \item $x$ does not occur free in $\theta$.
+            \item $\phi(x)$ is assumed only inside the subproof.
         \end{enumerate}
 
         \\
@@ -7967,76 +7965,7 @@ renaming.
 
 \section{Arithmetic of Ordinals}
 
-\begin{theorem}[Conway]
-    For ordinals $\alpha,\beta$,
-    \[
-        \alpha \oplus \beta
-        =
-        \sup'\Big(\{\alpha \oplus \beta' : \beta'<\beta\}\ \cup\ \{\alpha' \oplus \beta : \alpha'<\alpha\}\Big).
-    \]
-\end{theorem}
 
-\begin{proof}
-
-    Let
-    \[
-        S_{\alpha,\beta}:=
-        \{\alpha \oplus \beta' : \beta'<\beta\}
-        \ \cup\
-        \{\alpha' \oplus \beta : \alpha'<\alpha\}.
-    \]
-
-    \textbf{Claim 1: $S_{\alpha,\beta}$ is a set of ordinals.}
-
-    \begin{fitchproof}[arrayenv=tabular]
-
-        \have{1}{\beta'<\beta \Rightarrow \alpha\oplus \beta' \in Ord}
-        \have{2}{\alpha'<\alpha \Rightarrow \alpha'\oplus \beta \in Ord}
-        \have{3}{S_{\alpha,\beta}\subseteq Ord}
-
-    \end{fitchproof}
-
-    \textbf{Claim 2: $S_{\alpha,\beta}$ is bounded above in $Ord$.}
-
-    \begin{fitchproof}[arrayenv=tabular]
-
-        \have{4}{\forall \gamma\in S_{\alpha,\beta}\ \exists \delta\in Ord\ (\gamma<\delta)}
-        \have{5}{\exists \sup S_{\alpha,\beta}}
-
-    \end{fitchproof}
-
-    \textbf{Claim 3: $\sup' S_{\alpha,\beta}$ exists and is an ordinal.}
-
-    \begin{fitchproof}[arrayenv=tabular]
-
-        \have{6}{\sup S_{\alpha,\beta} \in Ord}
-        \have{7}{\sup' S_{\alpha,\beta}\in Ord}
-
-    \end{fitchproof}
-
-    \textbf{Claim 4: recursion characterization.}
-
-    \begin{fitchproof}[arrayenv=tabular]
-
-        \have{8}{\forall \beta'<\beta\quad \alpha\oplus \beta' < \alpha\oplus \beta}
-        \have{9}{\forall \alpha'<\alpha\quad \alpha'\oplus \beta < \alpha\oplus \beta}
-        \have{10}{S_{\alpha,\beta} \subseteq \alpha\oplus \beta}
-
-        \have{11}{\alpha\oplus \beta \text{ is upper bound of } S_{\alpha,\beta}}
-
-        \have{12}{\sup' S_{\alpha,\beta} \le \alpha\oplus \beta}
-
-        \have{13}{\forall \gamma<\alpha\oplus \beta\ \exists s\in S_{\alpha,\beta}\ (\gamma\le s)}
-        \have{14}{\alpha\oplus \beta \le \sup' S_{\alpha,\beta}}
-
-    \end{fitchproof}
-
-    Hence
-    \[
-        \alpha \oplus \beta = \sup' S_{\alpha,\beta}.
-    \]
-
-\end{proof}
 
 \begin{theorem}\textbf{Summation} there is a unique function ``$+ :Ord \times Ord \to Ord$'' s.t.
 
@@ -8096,7 +8025,7 @@ we call ``$\mathfrak{N}$'' a model of ``Hyper Peano arithmetic''.
         \item       $\forall x , y , z  \in N \quad (x + y )+ z  = x +( y + z )  $ (associative $+$)
         \item       $\forall x  \in N \quad x  + 0 = 0 + x  = x $ (identity  $+$)
         \item       $\forall x , y , z  \in N \quad x  +  z  =  y  +  z   \to x  =  y  $ (cancellative  $+$)
-        \item       $\forall x , y  \in N \quad x + y  =  y +x $  (commutative(abelian)  $+$)
+        \item       $\forall x , y  \in N \quad x + y  =  y + x $  (commutative(abelian)  $+$)
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
@@ -8104,11 +8033,11 @@ we call ``$\mathfrak{N}$'' a model of ``Hyper Peano arithmetic''.
 \begin{lemma}prove for ``$(N , + , \cdot)$''
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall x , y , z  \in N \quad (mn) z  = x (nk)  $ (associative $\times$)
+        \item       $\forall x , y , z  \in N \quad (x y) z  = x (y z)  $ (associative $\times$)
         \item       $\forall x  \in N \quad x  \cdot 1 = 1 \cdot x  = x $ (identity  $\times$)
         \item       $\forall x  , y    \in N \quad   x   y  = 0   \to  x  = 0  \lor   y  = 0 $ (zero divisor free $\times$)
         \item       $\forall x , y  \in N \quad x y = y x$ (commutative(abelian)  $\times$)
-        \item       $\forall x  , y  , z   \in N \quad \Big(x    ( y   +  z  ) = x     y   +  x     z   \Big)
+        \item       $\forall x  , y  , z   \in N \quad \Big(x  ( y   +  z  ) = x   y   +  x   z   \Big)
                   \land     \Big((x   +  y  )   z   = x     z   +   y     z   \Big)  $ (distributive $\times$)
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
@@ -9512,8 +9441,6 @@ we denote ``Multiplication'' with ``$x \cdot y$'' and ``$x y$'' too.
         \item       $ \Big( \forall x \in \mathbb{R} (Ord) \quad   \exists y \in \mathbb{R} (Ord) \quad  x < y \Big)
                   \land \Big( \forall x \in \mathbb{R} (Ord) \quad   \exists y \in \mathbb{R} (Ord) \quad   y < x \Big)  $ (doesn't have endpoints)
         \item       $  \forall x,y  \in \mathbb{R} (Ord) \quad \exists z \in \mathbb{R} (Ord) \quad  x \not= y \to   x < z < y  $ (dense)
-        \item       $  \forall X  \subseteq \mathbb{R} (Ord) \quad  (X \not= \emptyset \land \exists y \in \mathbb{R} (Ord) \quad Uppreb(X,y))
-                  \to (\exists y \in \mathbb{R} (Ord) \quad  sup(X)=y)  $ (complete)
         \item       $\forall x ,y ,z \in \mathbb{R} (Ord) \quad x  < y  \to x  + z < y  + z  $
         \item       $\forall x ,y ,z \in \mathbb{R} (Ord) \quad x  < y  \land 0 < z \to x  z < y  k  $
     \end{enumerate}
@@ -9675,7 +9602,7 @@ first we have to fix a ``Main variable'' it's almost all the time ``$x$''.
 \end{definition}
 
 Main reason we choose ``$x$'' in definition because it's ``Main variable''. you
-can prove $\forall x \in \mathbb{R} (Ord) \quad d_\alpha(x) = \alpha(x)$.
+can prove $\forall x \in \mathbb{R} (Ord) \quad d_\alpha(x) = \alpha$.
 
 \begin{definition} we define \textbf{Derivative}
     \[ \frac{d}{dx}  :=  \{ \big(f , sh(\frac{d_\alpha(f)}{d_\alpha(x)}) \big) \mid f : \mathbb{R} (Ord) \to \mathbb{R} (Ord) \} \]
@@ -9683,6 +9610,25 @@ can prove $\forall x \in \mathbb{R} (Ord) \quad d_\alpha(x) = \alpha(x)$.
     prove it as an exercise). we call that set ``Derivatible funsions'' and that
     function ``Derivative''.
 \end{definition}
+
+
+\section{Partial Derivatives}
+
+first we have to fix a ``Main variable'' it's almost all the time ``$x$''.
+(sometimes it's ``$t$'').
+\begin{definition} assume $f : \mathbb{R} (Ord) \times \mathbb{R} (Ord)  \to \mathbb{R} (Ord)$
+    we define \textbf{Partial Difrential $(d_\alpha(f))$}
+    \[ \partial_{\alpha , x } (f) := f( x + \alpha , y ) -  f(x , y) \]
+\end{definition}
+
+Main reason we choose ``$x$'' in definition because it's ``Main variable''. you
+can prove $\forall x \in \mathbb{R} (Ord) \quad \partial_{\alpha , x }(x) = \alpha$.
+
+\begin{definition} we define \textbf{Partial Derivative}
+    \[ \frac{ \partial }{\partial x}  :=  \{ \big(f , sh(\frac{\partial_{\alpha , x }(f)}{\partial_{\alpha , x }(x)}) \big) \mid f : \mathbb{R} (Ord) \to \mathbb{R} (Ord) \} \]
+\end{definition}
+
+
 \chapter{Lebesgue Integral}
 
 \chapter{New beginning for Probability theory}
