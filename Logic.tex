@@ -9601,11 +9601,50 @@ first we have to fix a ``Main variable'' it's almost all the time ``$x$''.
     \[ d_\alpha(f) := f( x + \alpha ) -  f(x) \]
 \end{definition}
 
+
+
+
+
 Main reason we choose ``$x$'' in definition because it's ``Main variable''. you
 can prove $\forall x \in \mathbb{R} (Ord) \quad d_\alpha(x) = \alpha$.
 
 \begin{definition} we define \textbf{Derivative}
-    \[ \frac{d}{dx}  :=  \{ \big(f , sh(\frac{d_\alpha(f)}{d_\alpha(x)}) \big) \mid f : \mathbb{R} (Ord) \to \mathbb{R} (Ord) \} \]
+
+    
+Let $ f:\mathbb{R}\to\mathbb{R}$
+and let \(  \alpha  \in\mathbb{R} (Ord)\) be a nonzero infinitesimal:
+\[
+ \alpha \neq 0,
+\qquad
+| \alpha |<\frac{1}{n}
+\quad\forall n\in\mathbb{N}.
+\]
+
+Define
+
+
+\[
+\frac{df}{dx} = f'(x) =
+\operatorname{st}
+\left(
+\frac{d_\alpha(f)}{d_\alpha(x)}
+\right)
+\]
+
+Equivalently,
+\[
+\frac{df}{dx}
+=
+\operatorname{st}
+\left(
+\frac{f(x + \alpha )-f(x)}{ \alpha }.
+\right)
+\]
+
+
+More generally,
+
+    \[ \frac{d}{dx}  :=  \{ \big(f , st(\frac{d_\alpha(f)}{d_\alpha(x)}) \big) \mid f : \mathbb{R} (Ord) \to \mathbb{R} (Ord) \} \]
     there is a biggest set like $A$ s.t. $ \frac{d}{dx} A$ is a function (you can
     prove it as an exercise). we call that set ``Derivatible funsions'' and that
     function ``Derivative''.
@@ -9616,20 +9655,330 @@ can prove $\forall x \in \mathbb{R} (Ord) \quad d_\alpha(x) = \alpha$.
 
 first we have to fix a ``Main variable'' it's almost all the time ``$x$''.
 (sometimes it's ``$t$'').
-\begin{definition} assume $f : \mathbb{R} (Ord) \times \mathbb{R} (Ord)  \to \mathbb{R} (Ord)$
+\begin{definition} assume $f : \mathbb{R} (Ord)^n  \to \mathbb{R} (Ord)$
     we define \textbf{Partial Difrential $(d_\alpha(f))$}
-    \[ \partial_{\alpha , x } (f) := f( x + \alpha , y ) -  f(x , y) \]
+    \[ \partial_{\alpha , x_i } (f) := f(x_1,\ldots,x_i+ \alpha ,\ldots,x_n) - f(x_1,\ldots,x_i,\ldots,x_n) \]
 \end{definition}
 
 Main reason we choose ``$x$'' in definition because it's ``Main variable''. you
 can prove $\forall x \in \mathbb{R} (Ord) \quad \partial_{\alpha , x }(x) = \alpha$.
 
 \begin{definition} we define \textbf{Partial Derivative}
-    \[ \frac{ \partial }{\partial x}  :=  \{ \big(f , sh(\frac{\partial_{\alpha , x }(f)}{\partial_{\alpha , x }(x)}) \big) \mid f : \mathbb{R} (Ord) \to \mathbb{R} (Ord) \} \]
+
+    
+Let$f:\mathbb{R}^n\to\mathbb{R},
+\qquad
+f=f(x_1,\ldots,x_n).$
+and let \(  \alpha  \in\mathbb{R} (Ord)\) be a nonzero infinitesimal:
+\[
+ \alpha \neq 0,
+\qquad
+| \alpha |<\frac{1}{n}
+\quad\forall n\in\mathbb{N}.
+\]
+
+ define
+
+\[
+\frac{\partial f}{\partial x_i}
+=
+\operatorname{st}
+\left(
+\frac{\partial_{\alpha , x_i }(f)}{\partial_{\alpha , x_i }(x_i)}
+\right)
+\]
+
+Equivalently,
+\[
+\frac{\partial f}{\partial x_i}
+=
+\operatorname{st}
+\left(
+\frac{
+f(x_1,\ldots,x_i+ \alpha ,\ldots,x_n)
+-
+f(x_1,\ldots,x_i,\ldots,x_n)
+}{ \alpha }
+\right)
+\]
+
+More generally,
+    \[ \frac{ \partial }{\partial x_i }  :=  \{ \big(f , st(\frac{\partial_{\alpha , x_i }(f)}{\partial_{\alpha , x_i }(x_i)}) \big) \mid f : \mathbb{R} (Ord) \to \mathbb{R} (Ord) \} \]
 \end{definition}
 
 
+
+
+
+\section{Riemann integral}
+
+
+Let
+\[
+f:[a,b]\to\mathbb{R}.
+\]
+
+Choose an infinite positive surreal integer
+\[
+N \in \mathbb{R} (Ord),
+\qquad
+N>\mathbb{N}.
+\]
+
+Define
+\[
+\boxed{
+dx=\frac{b-a}{N}
+}.
+\]
+
+Then \(dx\) is a positive infinitesimal.
+
+Define the partition
+\[
+x_i=a+i\,dx,
+\qquad
+i=0,\ldots,N.
+\]
+
+Then
+\[
+N\,dx=b-a.
+\]
+
+The Riemann integral can be represented by
+\[
+\boxed{
+\int_a^b f(x)\,dx
+=
+\operatorname{st}
+\left(
+\sum_{i=0}^{N-1}f(x_i)\,dx
+\right)
+}.
+\]
+
+Equivalently,
+\[
+\boxed{
+\int_a^b f(x)\,dx
+=
+\operatorname{st}
+\left(
+dx\sum_{i=0}^{N-1}f(a+i\,dx)
+\right)
+}.
+\]
+
+This corresponds to the usual Riemann definition
+\[
+\int_a^b f(x)\,dx
+=
+\lim_{\|P\|\to0}
+\sum_i f(\xi_i)\Delta x_i.
+\]
+
+For example, for
+\[
+f(x)=x^2
+\]
+on \([0,1]\), take
+\[
+dx=\frac1N.
+\]
+
+Then
+\[
+\int_0^1x^2\,dx
+=
+\operatorname{st}
+\left(
+\sum_{i=0}^{N-1}
+\left(\frac{i}{N}\right)^2\frac1N
+\right).
+\]
+
+Using
+\[
+\sum_{i=0}^{N-1}i^2
+=
+\frac{(N-1)N(2N-1)}6,
+\]
+we obtain
+\[
+\sum_{i=0}^{N-1}
+\left(\frac{i}{N}\right)^2\frac1N
+=
+\frac{(N-1)(2N-1)}{6N^2}.
+\]
+
+Therefore
+\[
+\int_0^1x^2\,dx
+=
+\operatorname{st}
+\left(
+\frac{(N-1)(2N-1)}{6N^2}
+\right)
+=
+\frac13.
+\]
+
+Hence
+\[
+\boxed{
+\int_0^1x^2\,dx=\frac13
+}.
+\]
+
+
 \chapter{Lebesgue Integral}
+
+
+\[
+\lim_{n\to\alpha} f(n)
+:=
+\left[f(n)\right]_{n\in\alpha}
+\]
+
+\[
+\lim_{n\to\alpha+m} f(n)
+:=
+\left[f(n+m)\right]_{n\in\alpha}
+\]
+
+\[
+f:\mathbb{N}\to\mathbb{N}
+\]
+
+\[
+\text{Extended } f\longrightarrow f^*
+\]
+
+\[
+f(\alpha)
+=
+\lim_{n\to\alpha}f(n)
+\]
+
+\[
+\text{Trivial Extension}
+\]
+
+\[
+\sum_{i=0}^{2^{\aleph_0}}i
+=
+\lim_{n\to 2^{\aleph_0}}
+\sum_{i=0}^{n}i
+=
+\left[
+\sum_{i=0}^{n}i
+\right]_{n\in 2^{\aleph_0}}
+=
+\left[
+\frac{n(n+1)}{2}
+\right]_{n\in 2^{\aleph_0}}
+=
+\frac{2^{\aleph_0}(2^{\aleph_0}+1)}{2}
+\]
+
+\[
+\sum_{i=1}^{\aleph_1+5}i^2
+=
+\lim_{n\to\aleph_1+5}
+\sum_{i=0}^{n}i^2
+=
+\left[
+\sum_{i=0}^{n}i^2
+\right]_{n\in\aleph_1+5}
+=
+\left[
+\frac{n(n+1)(2n+1)}{6}
+\right]_{n\in\aleph_1+5}
+\]
+
+\[
+=
+\frac{(\aleph_1+5)(\aleph_1+6)(2\aleph_1+11)}{6}
+\]
+
+\[
+D:[0,1]\to\{0,1\}
+\]
+
+\[
+D(x)=
+\begin{cases}
+1,&x\in\mathbb{Q}^{c},\\
+0,&x\in\mathbb{Q}.
+\end{cases}
+\]
+
+\[
+\int_0^1D(x)\,dx\;?
+\]
+
+\[
+\exists (y_i)_{i\in\omega}
+\qquad
+\{y_i\}_{i\in\omega}
+=
+\mathbb{Q}\cap[0,1]
+\]
+
+\[
+\exists (x_i)_{i\in 2^{\aleph_0}}
+\qquad
+\{x_i\}_{i\in 2^{\aleph_0}}
+=
+\mathbb{Q}^{c}\cap[0,1]
+\]
+
+\[
+f:2^{\aleph_0}+\omega\to[0,1]
+\]
+
+\[
+f(i)=
+\begin{cases}
+D(y_i),&i\in\omega,\\
+D(x_i),&i\in 2^{\aleph_0}.
+\end{cases}
+\]
+
+\[
+\int_0^1D(x)\,dx
+=
+\operatorname{st}
+\left(
+\frac{\displaystyle\sum_{i=0}^{2^{\aleph_0}+\omega}f(i)}
+{2^{\aleph_0}+\omega}
+\right)
+=
+\operatorname{st}
+\left(
+\frac{2^{\aleph_0}}
+{2^{\aleph_0}+\omega}
+\right)
+=
+1
+\]
+
+\[
+\int_a^b f(x)\,dx
+=
+\operatorname{st}
+\left(
+\frac{\displaystyle\sum_{i=0}^{\alpha}y(i)}
+{\alpha}
+\right)
+\]
+
+\[
+y(i)=f(x_i),
+\qquad
+\{x_i\}_{i\in\alpha}=[a,b].
+\]
 
 \chapter{New beginning for Probability theory}
 

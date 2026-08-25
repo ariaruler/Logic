@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.8.18)  23 AUG 2026 19:45
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.8.18)  25 AUG 2026 19:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2160,29 +2160,29 @@ File: all-twemojis.pdf Graphic file (type pdf)
 Chapter 15.
 [153
 
-] [154
+] [154] [155] [156
 
 ]
 Chapter 16.
-[155] [156
-
-]
+[157] [158]
 Chapter 17.
-[157] (Logic.aux)
+[159
+
+] (Logic.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `Logic.out' has not changed.
-(rerunfilecheck)             Checksum: DA314EE4C4E6446EEF9601FA8DD37448;12515.
+(rerunfilecheck)             Checksum: 85C62E6E256A204E4DBE9532F512E41F;12655.
  ) 
 Here is how much of TeX's memory you used:
  37555 strings out of 402987
  862238 string characters out of 5449145
- 1419370 words of memory out of 5000000
+ 1419520 words of memory out of 5000000
  65822 multiletter control sequences out of 15000+600000
  644697 words of font info for 130 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  84i,27n,104p,555b,704s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Logic.xdv (163 pages, 1256156 bytes).
+Output written on Logic.xdv (165 pages, 1271744 bytes).
