@@ -67,6 +67,6 @@
 \contentsline {chapter}{\numberline {15}New beginning for calculus }{153}{chapter.15}%
 \contentsline {section}{\numberline {15.1}Derivatives}{153}{section.15.1}%
 \contentsline {section}{\numberline {15.2}Partial Derivatives}{154}{section.15.2}%
-\contentsline {section}{\numberline {15.3}Riemann integral}{154}{section.15.3}%
-\contentsline {chapter}{\numberline {16}Lebesgue Integral}{157}{chapter.16}%
-\contentsline {chapter}{\numberline {17}New beginning for Probability theory}{159}{chapter.17}%
+\contentsline {section}{\numberline {15.3}Riemann Integral}{154}{section.15.3}%
+\contentsline {chapter}{\numberline {16}Lebesgue Integral}{165}{chapter.16}%
+\contentsline {chapter}{\numberline {17}New beginning for Probability theory}{167}{chapter.17}%

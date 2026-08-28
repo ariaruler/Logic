@@ -9597,8 +9597,8 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
 first we have to fix a ``Main variable'' it's almost all the time ``$x$''.
 (sometimes it's ``$t$'').
 \begin{definition} assume $f : \mathbb{R} (Ord) \to \mathbb{R} (Ord)$
-    we define \textbf{Difrential $(d_\alpha(f))$}
-    \[ d_\alpha(f) := f( x + \alpha ) -  f(x) \]
+    we define \textbf{Difrential $(d_\epsilon(f))$}
+    \[ d_\epsilon(f) := f( x + \epsilon ) -  f(x) \]
 \end{definition}
 
 
@@ -9606,17 +9606,17 @@ first we have to fix a ``Main variable'' it's almost all the time ``$x$''.
 
 
 Main reason we choose ``$x$'' in definition because it's ``Main variable''. you
-can prove $\forall x \in \mathbb{R} (Ord) \quad d_\alpha(x) = \alpha$.
+can prove $\forall x \in \mathbb{R} (Ord) \quad d_\epsilon(x) = \epsilon$.
 
 \begin{definition} we define \textbf{Derivative}
 
     
 Let $ f:\mathbb{R}\to\mathbb{R}$
-and let \(  \alpha  \in\mathbb{R} (Ord)\) be a nonzero infinitesimal:
+and let \(  \epsilon  \in\mathbb{R} (Ord)\) be a nonzero infinitesimal:
 \[
- \alpha \neq 0,
+ \epsilon \neq 0,
 \qquad
-| \alpha |<\frac{1}{n}
+| \epsilon |<\frac{1}{n}
 \quad\forall n\in\mathbb{N}.
 \]
 
@@ -9627,7 +9627,7 @@ Define
 \frac{df}{dx} = f'(x) =
 \operatorname{st}
 \left(
-\frac{d_\alpha(f)}{d_\alpha(x)}
+\frac{d_\epsilon(f)}{d_\epsilon(x)}
 \right)
 \]
 
@@ -9637,14 +9637,14 @@ Equivalently,
 =
 \operatorname{st}
 \left(
-\frac{f(x + \alpha )-f(x)}{ \alpha }.
+\frac{f(x + \epsilon )-f(x)}{ \epsilon }.
 \right)
 \]
 
 
 More generally,
 
-    \[ \frac{d}{dx}  :=  \{ \big(f , st(\frac{d_\alpha(f)}{d_\alpha(x)}) \big) \mid f : \mathbb{R} (Ord) \to \mathbb{R} (Ord) \} \]
+    \[ \frac{d}{dx}  :=  \{ \big(f , st(\frac{d_\epsilon(f)}{d_\epsilon(x)}) \big) \mid f : \mathbb{R} (Ord) \to \mathbb{R} (Ord) \} \]
     there is a biggest set like $A$ s.t. $ \frac{d}{dx} A$ is a function (you can
     prove it as an exercise). we call that set ``Derivatible funsions'' and that
     function ``Derivative''.
@@ -9656,12 +9656,12 @@ More generally,
 first we have to fix a ``Main variable'' it's almost all the time ``$x$''.
 (sometimes it's ``$t$'').
 \begin{definition} assume $f : \mathbb{R} (Ord)^n  \to \mathbb{R} (Ord)$
-    we define \textbf{Partial Difrential $(d_\alpha(f))$}
-    \[ \partial_{\alpha , x_i } (f) := f(x_1,\ldots,x_i+ \alpha ,\ldots,x_n) - f(x_1,\ldots,x_i,\ldots,x_n) \]
+    we define \textbf{Partial Difrential $(d_\epsilon(f))$}
+    \[ \partial_{\epsilon , x_i } (f) := f(x_1,\ldots,x_i+ \epsilon ,\ldots,x_n) - f(x_1,\ldots,x_i,\ldots,x_n) \]
 \end{definition}
 
 Main reason we choose ``$x$'' in definition because it's ``Main variable''. you
-can prove $\forall x \in \mathbb{R} (Ord) \quad \partial_{\alpha , x }(x) = \alpha$.
+can prove $\forall x \in \mathbb{R} (Ord) \quad \partial_{\epsilon , x }(x) = \epsilon$.
 
 \begin{definition} we define \textbf{Partial Derivative}
 
@@ -9669,11 +9669,11 @@ can prove $\forall x \in \mathbb{R} (Ord) \quad \partial_{\alpha , x }(x) = \alp
 Let$f:\mathbb{R}^n\to\mathbb{R},
 \qquad
 f=f(x_1,\ldots,x_n).$
-and let \(  \alpha  \in\mathbb{R} (Ord)\) be a nonzero infinitesimal:
+and let \(  \epsilon  \in\mathbb{R} (Ord)\) be a nonzero infinitesimal:
 \[
- \alpha \neq 0,
+ \epsilon \neq 0,
 \qquad
-| \alpha |<\frac{1}{n}
+| \epsilon |<\frac{1}{n}
 \quad\forall n\in\mathbb{N}.
 \]
 
@@ -9684,7 +9684,7 @@ and let \(  \alpha  \in\mathbb{R} (Ord)\) be a nonzero infinitesimal:
 =
 \operatorname{st}
 \left(
-\frac{\partial_{\alpha , x_i }(f)}{\partial_{\alpha , x_i }(x_i)}
+\frac{\partial_{\epsilon , x_i }(f)}{\partial_{\epsilon , x_i }(x_i)}
 \right)
 \]
 
@@ -9695,156 +9695,725 @@ Equivalently,
 \operatorname{st}
 \left(
 \frac{
-f(x_1,\ldots,x_i+ \alpha ,\ldots,x_n)
+f(x_1,\ldots,x_i+ \epsilon ,\ldots,x_n)
 -
 f(x_1,\ldots,x_i,\ldots,x_n)
-}{ \alpha }
+}{ \epsilon }
 \right)
 \]
 
 More generally,
-    \[ \frac{ \partial }{\partial x_i }  :=  \{ \big(f , st(\frac{\partial_{\alpha , x_i }(f)}{\partial_{\alpha , x_i }(x_i)}) \big) \mid f : \mathbb{R} (Ord) \to \mathbb{R} (Ord) \} \]
+    \[ \frac{ \partial }{\partial x_i }  :=  \{ \big(f , st(\frac{\partial_{\epsilon , x_i }(f)}{\partial_{\epsilon , x_i }(x_i)}) \big) \mid f : \mathbb{R} (Ord) \to \mathbb{R} (Ord) \} \]
 \end{definition}
 
 
 
+\section{Riemann Integral}
 
+First we have to fix a ``Main interval''. It is almost all the time
+\[
+[a,b]\subseteq\mathbb{R}.
+\]
 
-\section{Riemann integral}
+\begin{definition}
+Assume
+\[
+f:\mathbb{R}(\mathrm{Ord})\to\mathbb{R}(\mathrm{Ord}).
+\]
 
+Let
+\[
+N\in\mathbb{R}(\mathrm{Ord})
+\]
+be an infinite positive integer. We define
+\[
+\varepsilon:=\frac{b-a}{N}.
+\]
 
+Then $\varepsilon$ is a positive infinitesimal:
+\[
+\varepsilon>0,
+\qquad
+\varepsilon<\frac{1}{n}
+\quad\forall n\in\mathbb{N}.
+\]
+
+We define the infinitesimal partition of $[a,b]$ by
+\[
+x_i:=a+i\varepsilon,
+\qquad
+i=0,1,\ldots,N.
+\]
+
+Then
+\[
+x_0=a,
+\qquad
+x_N=b,
+\qquad
+d_\varepsilon(x_i)=\varepsilon.
+\]
+
+\end{definition}
+
+\begin{definition}
+We define the \textbf{Riemann Sum} of $f$ on $[a,b]$ by
+\[
+S_\varepsilon(f)
+:=
+\sum_{i=0}^{N-1}
+f(\xi_i)\varepsilon
+\]
+where
+\[
+\xi_i\in[x_i,x_{i+1}]
+\qquad
+(i=0,\ldots,N-1).
+\]
+
+Equivalently, since
+\[
+d_\varepsilon(x_i)=\varepsilon,
+\]
+we may write
+\[
+S_\varepsilon(f)
+=
+\sum_{i=0}^{N-1}
+f(\xi_i)d_\varepsilon(x_i).
+\]
+
+\end{definition}
+
+\begin{definition}
 Let
 \[
 f:[a,b]\to\mathbb{R}.
 \]
 
-Choose an infinite positive surreal integer
+We say that $f$ is \textbf{Riemann Integrable} on $[a,b]$ if there exists
 \[
-N \in \mathbb{R} (Ord),
-\qquad
-N>\mathbb{N}.
+I\in\mathbb{R}
 \]
-
-Define
+such that for every infinite positive integer $N$ and every choice of
+sample points
 \[
-\boxed{
-dx=\frac{b-a}{N}
-}.
+\xi_i\in[x_i,x_{i+1}],
 \]
-
-Then \(dx\) is a positive infinitesimal.
-
-Define the partition
+we have
 \[
-x_i=a+i\,dx,
-\qquad
-i=0,\ldots,N.
-\]
-
-Then
-\[
-N\,dx=b-a.
-\]
-
-The Riemann integral can be represented by
-\[
-\boxed{
-\int_a^b f(x)\,dx
-=
 \operatorname{st}
 \left(
-\sum_{i=0}^{N-1}f(x_i)\,dx
+S_\varepsilon(f)
 \right)
-}.
-\]
-
-Equivalently,
-\[
-\boxed{
-\int_a^b f(x)\,dx
 =
-\operatorname{st}
-\left(
-dx\sum_{i=0}^{N-1}f(a+i\,dx)
-\right)
-}.
+I,
+\]
+where
+\[
+\varepsilon=\frac{b-a}{N}.
 \]
 
-This corresponds to the usual Riemann definition
+We define the \textbf{Riemann Integral} by
 \[
 \int_a^b f(x)\,dx
-=
-\lim_{\|P\|\to0}
-\sum_i f(\xi_i)\Delta x_i.
-\]
-
-For example, for
-\[
-f(x)=x^2
-\]
-on \([0,1]\), take
-\[
-dx=\frac1N.
-\]
-
-Then
-\[
-\int_0^1x^2\,dx
-=
+:=
 \operatorname{st}
 \left(
 \sum_{i=0}^{N-1}
-\left(\frac{i}{N}\right)^2\frac1N
+f(\xi_i)\varepsilon
 \right).
 \]
 
-Using
+\end{definition}
+
+More generally,
 \[
-\sum_{i=0}^{N-1}i^2
-=
-\frac{(N-1)N(2N-1)}6,
-\]
-we obtain
-\[
+\int_a^b
+:=
+\left\{
+\left(
+f,\,
+\operatorname{st}
+\left(
 \sum_{i=0}^{N-1}
-\left(\frac{i}{N}\right)^2\frac1N
-=
-\frac{(N-1)(2N-1)}{6N^2}.
+f(\xi_i)\varepsilon
+\right)
+\right)
+\middle|
+f\text{ is Riemann integrable on }[a,b]
+\right\}.
 \]
+
+There is a biggest set $A$ such that $\int_a^b A$ is a function
+(you can prove it as an exercise). We call that set
+``Riemann Integrable Functions'' and that function
+``Riemann Integral''.
+
+\begin{definition}
+Let
+
+$$
+f:[a,b]\to\mathbb{R}.
+$$
+
+A \textbf{Partition} of $[a,b]$ is a finite ordered set
+
+$$
+P=\{x_0,x_1,\ldots,x_n\}
+$$
+
+such that
+
+$$
+a=x_0<x_1<\cdots<x_n=b.
+$$
+
+We define the \textbf{Mesh} of $P$ by
+
+$$
+\|P\|
+:=
+\max_{1\leq i\leq n}(x_i-x_{i-1}).
+$$
+
+For every partition $P$, define
+
+$$
+M_i:=\sup\{f(x):x\in[x_{i-1},x_i]\}
+$$
+
+and
+
+$$
+m_i:=\inf\{f(x):x\in[x_{i-1},x_i]\}.
+$$
+
+The \textbf{Upper Darboux Sum} of $f$ with respect to $P$ is
+
+$$
+U(f,P)
+:=
+\sum_{i=1}^{n}
+M_i(x_i-x_{i-1}),
+$$
+
+and the \textbf{Lower Darboux Sum} of $f$ with respect to $P$ is
+
+$$
+L(f,P)
+:=
+\sum_{i=1}^{n}
+m_i(x_i-x_{i-1}).
+$$
+
+We say that $f$ is \textbf{Riemann Integrable} on $[a,b]$ if $f$ is bounded and
+
+$$
+\inf_P U(f,P)
+=
+\sup_P L(f,P).
+$$
+
+In this case we define
+
+$$
+\int_a^b f(x)\,dx
+:=
+\inf_P U(f,P)
+=
+\sup_P L(f,P).
+$$
+
+\end{definition}
+
+\begin{lemma}
+Let
+
+$$
+f:[a,b]\to\mathbb{R}
+$$
+
+be bounded. Then $f$ is Riemann integrable if and only if for every
+$\delta>0$ there exists $\eta>0$ such that, for every partition $P$
+satisfying
+
+$$
+\|P\|<\eta,
+$$
+
+and every two choices of sample points
+
+$$
+\xi_i,\zeta_i\in[x_{i-1},x_i],
+\qquad
+i=1,\ldots,n,
+$$
+
+we have
+
+$$
+\left|
+\sum_{i=1}^{n}f(\xi_i)(x_i-x_{i-1})
+-
+\sum_{i=1}^{n}f(\zeta_i)(x_i-x_{i-1})
+\right|
+<\delta.
+$$
+
+\end{lemma}
+
+\begin{proof}
+Suppose first that $f$ is Riemann integrable. Let
+
+$$
+I:=\int_a^b f(x)\,dx.
+$$
+
+Let $\delta>0$. Since $f$ is Riemann integrable, there exists a partition
+$P_0$ such that
+
+$$
+U(f,P_0)-L(f,P_0)<\frac{\delta}{2}.
+$$
+
+Let
+
+$$
+M:=\sup_{x\in[a,b]}|f(x)|.
+$$
+
+Choose $\eta>0$ such that
+
+$$
+\eta<\min\left\{
+\|P_0\|,
+\frac{\delta}{4M n_0}
+\right\},
+$$
+
+where $n_0$ is the number of intervals of $P_0$.
+
+Now let
+
+$$
+P=\{x_0,\ldots,x_n\}
+$$
+
+be a partition with
+
+$$
+\|P\|<\eta.
+$$
+
+Consider its common refinement with $P_0$:
+
+$$
+P\cup P_0.
+$$
+
+Since refinement can only decrease the lower sum and increase the upper
+sum, we have
+
+$$
+L(f,P\cup P_0)\ge L(f,P_0)
+$$
+
+and
+
+$$
+U(f,P\cup P_0)\le U(f,P_0).
+$$
+
+Hence
+
+$$
+U(f,P\cup P_0)-L(f,P\cup P_0)
+<
+\frac{\delta}{2}.
+$$
+
+Now let
+
+$$
+S(f,P,\xi)
+:=
+\sum_{i=1}^{n}
+f(\xi_i)(x_i-x_{i-1})
+$$
+
+and
+
+$$
+S(f,P,\zeta)
+:=
+\sum_{i=1}^{n}
+f(\zeta_i)(x_i-x_{i-1}).
+$$
+
+For each interval,
+
+$$
+m_i\le f(\xi_i),f(\zeta_i)\le M_i,
+$$
+
+and therefore
+
+$$
+|f(\xi_i)-f(\zeta_i)|
+\le M_i-m_i.
+$$
+
+Thus
+
+$$
+\begin{aligned}
+|S(f,P,\xi)-S(f,P,\zeta)|
+&\le
+\sum_{i=1}^{n}
+|f(\xi_i)-f(\zeta_i)|
+(x_i-x_{i-1})\\
+&\le
+\sum_{i=1}^{n}
+(M_i-m_i)(x_i-x_{i-1})\\
+&=
+U(f,P)-L(f,P).
+\end{aligned}
+$$
+
+Since $P$ is sufficiently fine, we obtain
+
+$$
+|S(f,P,\xi)-S(f,P,\zeta)|<\delta.
+$$
+
+Therefore the required condition holds.
+
+Conversely, suppose that for every $\delta>0$ there exists $\eta>0$
+such that every partition $P$ satisfying
+
+$$
+\|P\|<\eta
+$$
+
+and every two choices of sample points satisfy
+
+$$
+|S(f,P,\xi)-S(f,P,\zeta)|<\delta.
+$$
+
+We prove that $f$ is Riemann integrable.
+
+Fix $\delta>0$ and choose $\eta>0$ according to the hypothesis.
+Let
+
+$$
+P=\{x_0,\ldots,x_n\}
+$$
+
+be any partition satisfying
+
+$$
+\|P\|<\eta.
+$$
+
+For each $i$, choose
+
+$$
+\xi_i,\zeta_i\in[x_{i-1},x_i]
+$$
+
+such that
+
+$$
+f(\xi_i)>M_i-\frac{\delta}{2(b-a)}
+$$
+
+and
+
+$$
+f(\zeta_i)<m_i+\frac{\delta}{2(b-a)}.
+$$
+
+Such points exist by the definition of supremum and infimum.
+
+Then
+
+$$
+\begin{aligned}
+S(f,P,\xi)-S(f,P,\zeta)
+&>
+\sum_{i=1}^{n}
+\left(
+M_i-m_i-\frac{\delta}{b-a}
+\right)
+(x_i-x_{i-1})\\
+&=
+U(f,P)-L(f,P)-\delta.
+\end{aligned}
+$$
+
+By the hypothesis,
+
+$$
+|S(f,P,\xi)-S(f,P,\zeta)|<\delta.
+$$
+
+Consequently,
+
+$$
+U(f,P)-L(f,P)<2\delta.
+$$
+
+Since $\delta>0$ was arbitrary, for every $\varepsilon>0$ there exists a
+partition $P$ such that
+
+$$
+U(f,P)-L(f,P)<\varepsilon.
+$$
+
+Therefore
+
+$$
+\inf_P U(f,P)
+=
+\sup_P L(f,P).
+$$
+
+Hence $f$ is Riemann integrable.
+\end{proof}
+
+\begin{theorem}
+Let
+
+$$
+f:[a,b]\to\mathbb{R}.
+$$
+
+Then $f$ is Riemann integrable if and only if for every $\delta>0$ there
+exists $\eta>0$ such that every partition $P$ satisfying
+
+$$
+\|P\|<\eta
+$$
+
+has the property that all of its Riemann sums differ from one another
+by less than $\delta$.
+\end{theorem}
+
+\begin{proof}
+This is exactly the preceding lemma.
+\end{proof}
+
+
+\begin{theorem}
+Let
+\[
+f:[a,b]\to\mathbb{R}
+\]
+and suppose that $f$ is Riemann integrable in the usual sense. Then, for every
+infinite positive integer $N$ and
+\[
+\varepsilon=\frac{b-a}{N},
+\]
+and for every choice of sample points
+\[
+\xi_i\in[x_i,x_{i+1}],
+\qquad
+x_i=a+i\varepsilon,
+\]
+we have
+\[
+\operatorname{st}
+\left(
+\sum_{i=0}^{N-1}f(\xi_i)\varepsilon
+\right)
+=
+\int_a^b f(x)\,dx.
+\]
+
+Conversely, if there exists $I\in\mathbb{R}$ such that
+\[
+\operatorname{st}
+\left(
+\sum_{i=0}^{N-1}f(\xi_i)\varepsilon
+\right)
+=
+I
+\]
+for every infinite positive integer $N$ and every choice of sample points
+\[
+\xi_i\in[x_i,x_{i+1}],
+\]
+then $f$ is Riemann integrable and
+\[
+I=\int_a^b f(x)\,dx.
+\]
+
+Therefore, the definition above is equivalent to the usual definition of
+the Riemann integral.
+\end{theorem}
+
+\begin{proof}
+First suppose that $f$ is Riemann integrable in the usual sense, and let
+\[
+I=\int_a^b f(x)\,dx.
+\]
+
+Let
+\[
+P_N=\{x_0,x_1,\ldots,x_N\}
+\]
+be the partition given by
+\[
+x_i=a+i\varepsilon,
+\qquad
+\varepsilon=\frac{b-a}{N}.
+\]
+
+Its mesh is
+\[
+\|P_N\|=\varepsilon.
+\]
+
+Since $N$ is infinite,
+\[
+\varepsilon=\frac{b-a}{N}
+\]
+is infinitesimal. Hence
+\[
+\|P_N\|\approx0.
+\]
+
+Since $f$ is Riemann integrable, for every $\delta>0$ there exists
+$\eta>0$ such that whenever a partition $P$ satisfies
+\[
+\|P\|<\eta,
+\]
+every Riemann sum associated with $P$ differs from $I$ by less than
+$\delta$.
+
+Applying this to the infinitesimal partition $P_N$, we obtain
+\[
+\left|
+\sum_{i=0}^{N-1}f(\xi_i)\varepsilon-I
+\right|
+\]
+is infinitesimal.
 
 Therefore
 \[
-\int_0^1x^2\,dx
-=
-\operatorname{st}
-\left(
-\frac{(N-1)(2N-1)}{6N^2}
-\right)
-=
-\frac13.
+\sum_{i=0}^{N-1}f(\xi_i)\varepsilon
+\approx I.
 \]
 
-Hence
+Taking standard parts gives
 \[
-\boxed{
-\int_0^1x^2\,dx=\frac13
-}.
+\operatorname{st}
+\left(
+\sum_{i=0}^{N-1}f(\xi_i)\varepsilon
+\right)
+=
+I.
 \]
+
+Thus
+\[
+\operatorname{st}
+\left(
+\sum_{i=0}^{N-1}f(\xi_i)\varepsilon
+\right)
+=
+\int_a^b f(x)\,dx.
+\]
+
+Conversely, suppose that there exists $I\in\mathbb{R}$ such that
+\[
+\operatorname{st}
+\left(
+\sum_{i=0}^{N-1}f(\xi_i)\varepsilon
+\right)
+=
+I
+\]
+for every infinite positive integer $N$ and every choice of sample
+points $\xi_i$.
+
+Suppose, toward a contradiction, that $f$ is not Riemann integrable.
+Then there exists $\delta>0$ such that for every sufficiently fine
+partition $P$ there are Riemann sums whose values differ by at least
+$\delta$.
+
+In particular, for arbitrarily fine partitions, one can choose two
+sets of sample points
+\[
+\{\xi_i\}
+\qquad\text{and}\qquad
+\{\eta_i\}
+\]
+such that
+\[
+\left|
+\sum_{i=0}^{N-1}f(\xi_i)\varepsilon
+-
+\sum_{i=0}^{N-1}f(\eta_i)\varepsilon
+\right|
+\geq\delta.
+\]
+
+Passing to an infinite $N$ gives
+\[
+\left|
+\sum_{i=0}^{N-1}f(\xi_i)\varepsilon
+-
+\sum_{i=0}^{N-1}f(\eta_i)\varepsilon
+\right|
+\geq\delta.
+\]
+
+Hence their standard parts cannot be equal. But by assumption,
+\[
+\operatorname{st}
+\left(
+\sum_{i=0}^{N-1}f(\xi_i)\varepsilon
+\right)
+=
+I
+\]
+and
+\[
+\operatorname{st}
+\left(
+\sum_{i=0}^{N-1}f(\eta_i)\varepsilon
+\right)
+=
+I,
+\]
+which is a contradiction.
+
+Therefore $f$ is Riemann integrable and
+\[
+I=\int_a^b f(x)\,dx.
+\]
+
+Hence the infinitesimal definition is equivalent to the usual Riemann
+integral.
+\end{proof}
 
 
 \chapter{Lebesgue Integral}
 
 
 \[
-\lim_{n\to\alpha} f(n)
+\lim_{n\to\epsilon} f(n)
 :=
-\left[f(n)\right]_{n\in\alpha}
+\left[f(n)\right]_{n\in\epsilon}
 \]
 
 \[
-\lim_{n\to\alpha+m} f(n)
+\lim_{n\to\epsilon+m} f(n)
 :=
-\left[f(n+m)\right]_{n\in\alpha}
+\left[f(n+m)\right]_{n\in\epsilon}
 \]
 
 \[
@@ -9856,9 +10425,9 @@ f:\mathbb{N}\to\mathbb{N}
 \]
 
 \[
-f(\alpha)
+f(\epsilon)
 =
-\lim_{n\to\alpha}f(n)
+\lim_{n\to\epsilon}f(n)
 \]
 
 \[
@@ -9969,15 +10538,15 @@ D(x_i),&i\in 2^{\aleph_0}.
 =
 \operatorname{st}
 \left(
-\frac{\displaystyle\sum_{i=0}^{\alpha}y(i)}
-{\alpha}
+\frac{\displaystyle\sum_{i=0}^{\epsilon}y(i)}
+{\epsilon}
 \right)
 \]
 
 \[
 y(i)=f(x_i),
 \qquad
-\{x_i\}_{i\in\alpha}=[a,b].
+\{x_i\}_{i\in\epsilon}=[a,b].
 \]
 
 \chapter{New beginning for Probability theory}
