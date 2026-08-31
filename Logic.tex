@@ -19,6 +19,7 @@
 \usepackage{fontspec}
 \usepackage{parskip}
 \usepackage{amssymb}
+\usepackage{stmaryrd}
 \usepackage{emptypage}
 
 
@@ -2157,7 +2158,7 @@ what happened there.\twemoji{1f600}
 
 \chapter{Relations and Functions}
 
-\section{Orderd pair and Cartesian product}
+\section{Ordered pair and Cartesian product}
 
 \begin{definition}
     \textbf{Ordered pair}
@@ -5618,22 +5619,22 @@ $\mathbb{Q}$). we don't want it all we just want a subset.
 
 \begin{definition}\textbf{Cauchy sequence} is a sequence like ``$(a_i)_{i \in \mathbb{N}} \in \mathbb{Q}^\mathbb{N}$'' s.t. elements of it get infinitely
     close to each other i.e.
-    \[  Cauchy(a_i)_{i \in \mathbb{N}} : \forall \epsilon > 0 \quad \exists N  \quad \forall n,m > N  \quad | a_n - a_m | < \epsilon   \]
+    \[  Cauchy(a_i)_{i \in \mathbb{N}} : \forall \varepsilon > 0 \quad \exists N  \quad \forall n,m > N  \quad | a_n - a_m | < \varepsilon   \]
 \end{definition}
 
 we usually give ``$N$'' natural numbers but it's not necessary.
 
 we define an equivalence relation ``$ (a_i)_{i \in \mathbb{N}} \sim (b_i)_{i
-        \in \mathbb{N}} : \forall \epsilon > 0 \quad \exists N \quad \forall n > N
-    \quad | a_n - b_n | < \epsilon $''(check it's an equivalence relation). we
+        \in \mathbb{N}} : \forall \varepsilon > 0 \quad \exists N \quad \forall n > N
+    \quad | a_n - b_n | < \varepsilon $''(check it's an equivalence relation). we
 denote every $[(a_i)_{i \in \mathbb{N}}]$ with $[a_i]_{i \in \mathbb{N}}$.
 
 \begin{fitchproof}[arrayenv=tabular]
 
     \have {14} {  a_n - a_n = 0}
-    \have {14} { | a_n - a_n | < \epsilon }
-    \have {14} { n > N\to | a_n - a_n | < \epsilon }
-    \have {14} { \forall \epsilon > 0 \quad \exists N \quad \forall n > N \quad | a_n - a_n | < \epsilon}    \by{$\forall I , \exists I , \forall I $}{}
+    \have {14} { | a_n - a_n | < \varepsilon }
+    \have {14} { n > N\to | a_n - a_n | < \varepsilon }
+    \have {14} { \forall \varepsilon > 0 \quad \exists N \quad \forall n > N \quad | a_n - a_n | < \varepsilon}    \by{$\forall I , \exists I , \forall I $}{}
     % \have {14} { \vdots}     
 
     \have {14} {(a_i)_{i \in \mathbb{N}} \sim (a_i)_{i\in \mathbb{N}} }      \by{$def. \sim $}{}
@@ -5643,8 +5644,8 @@ denote every $[(a_i)_{i \in \mathbb{N}}]$ with $[a_i]_{i \in \mathbb{N}}$.
 \begin{fitchproof}[arrayenv=tabular]
 
     \have {14} {(a_i)_{i \in \mathbb{N}} \sim (b_i)_{i\in \mathbb{N}} }        \by{$ass$}{}
-    \have {14} {\forall \epsilon > 0 \quad \exists N \quad \forall n > N \quad | a_n - b_n | < \epsilon}      \by{$def. \sim $}{}
-    \have {14} {\forall \epsilon > 0 \quad \exists N \quad \forall n > N \quad | b_n - a_n | < \epsilon}
+    \have {14} {\forall \varepsilon > 0 \quad \exists N \quad \forall n > N \quad | a_n - b_n | < \varepsilon}      \by{$def. \sim $}{}
+    \have {14} {\forall \varepsilon > 0 \quad \exists N \quad \forall n > N \quad | b_n - a_n | < \varepsilon}
 
     % \have {14} { \vdots}     
 
@@ -5656,32 +5657,32 @@ denote every $[(a_i)_{i \in \mathbb{N}}]$ with $[a_i]_{i \in \mathbb{N}}$.
 
     \have {14} {(a_i)_{i \in \mathbb{N}} \sim (b_i)_{i\in \mathbb{N}} }       \by{$ass$}{}
     \have {14} {  (b_i)_{i \in \mathbb{N}} \sim (c_i)_{i\in \mathbb{N}} }        \by{$ass$}{}
-    \have {14} {\forall \epsilon > 0 \quad \exists N \quad \forall n > N \quad | a_n - b_n | < \epsilon}      \by{$def. \sim $}{}
-    \have {14} {\forall \epsilon > 0 \quad \exists N \quad \forall n > N \quad | b_n - c_n | < \epsilon}      \by{$def. \sim $}{}
-    \have {14} {  \exists N \quad \forall n > N \quad | a_n - b_n | < \frac{\epsilon}{2} }      \by{$def. \sim $}{}
-    \have {14} {  \exists N \quad \forall n > N \quad | b_n - c_n | < \frac{\epsilon}{2} }      \by{$def. \sim $}{}
+    \have {14} {\forall \varepsilon > 0 \quad \exists N \quad \forall n > N \quad | a_n - b_n | < \varepsilon}      \by{$def. \sim $}{}
+    \have {14} {\forall \varepsilon > 0 \quad \exists N \quad \forall n > N \quad | b_n - c_n | < \varepsilon}      \by{$def. \sim $}{}
+    \have {14} {  \exists N \quad \forall n > N \quad | a_n - b_n | < \frac{\varepsilon}{2} }      \by{$def. \sim $}{}
+    \have {14} {  \exists N \quad \forall n > N \quad | b_n - c_n | < \frac{\varepsilon}{2} }      \by{$def. \sim $}{}
 
     \open
-    \have {14} {  \forall n > N \quad | a_n - b_n | < \frac{\epsilon}{2} }      \by{$acp $}{}
+    \have {14} {  \forall n > N \quad | a_n - b_n | < \frac{\varepsilon}{2} }      \by{$acp $}{}
     \open
-    \have {14} {  \forall n > N' \quad | b_n - c_n | < \frac{\epsilon}{2} }      \by{$acp $}{}
+    \have {14} {  \forall n > N' \quad | b_n - c_n | < \frac{\varepsilon}{2} }      \by{$acp $}{}
     \open
     \have {14} {  n > max\{ N , N' \}  }      \by{$acp $}{}
-    \have {14} {   n > N \to | a_n - b_n | < \frac{\epsilon}{2} }      \by{$ \forall E $}{}
-    \have {14} {   n > N' \to | b_n - c_n | < \frac{\epsilon}{2} }      \by{$ \forall E $}{}
-    \have {14} {   | a_n - b_n | < \frac{\epsilon}{2} }      \by{$ \to E $}{}
-    \have {14} {    | b_n - c_n | < \frac{\epsilon}{2} }      \by{$ \to E $}{}
-    \have {14} {     | a_n - b_n | + | b_n - c_n | < \epsilon }
+    \have {14} {   n > N \to | a_n - b_n | < \frac{\varepsilon}{2} }      \by{$ \forall E $}{}
+    \have {14} {   n > N' \to | b_n - c_n | < \frac{\varepsilon}{2} }      \by{$ \forall E $}{}
+    \have {14} {   | a_n - b_n | < \frac{\varepsilon}{2} }      \by{$ \to E $}{}
+    \have {14} {    | b_n - c_n | < \frac{\varepsilon}{2} }      \by{$ \to E $}{}
+    \have {14} {     | a_n - b_n | + | b_n - c_n | < \varepsilon }
     \have {14} {    | a_n - c_n | < | a_n - b_n | + | b_n - c_n | }
-    \have {14} {    | a_n - c_n | < \epsilon }
+    \have {14} {    | a_n - c_n | < \varepsilon }
     \close
-    \have {14} {   n > max\{ N , N' \} \to | a_n - c_n | < \epsilon }      \by{$\to I $}{}
-    \have {14} {  \forall n > max\{ N , N' \} \quad  | a_n - c_n | < \epsilon }      \by{$\forall I $}{}
-    \have {14} {  \exists N \quad \forall n > N \quad | a_n - c_n | < \epsilon }      \by{$\exists I$}{}
+    \have {14} {   n > max\{ N , N' \} \to | a_n - c_n | < \varepsilon }      \by{$\to I $}{}
+    \have {14} {  \forall n > max\{ N , N' \} \quad  | a_n - c_n | < \varepsilon }      \by{$\forall I $}{}
+    \have {14} {  \exists N \quad \forall n > N \quad | a_n - c_n | < \varepsilon }      \by{$\exists I$}{}
     \close
     \close
-    \have {14} {  \exists N \quad \forall n > N \quad | a_n - c_n | < \epsilon }      \by{$\exists E$}{}
-    \have {14} {\forall \epsilon > 0 \quad \exists N \quad \forall n > N \quad | a_n - c_n | < \epsilon}      \by{$\forall I$}{}
+    \have {14} {  \exists N \quad \forall n > N \quad | a_n - c_n | < \varepsilon }      \by{$\exists E$}{}
+    \have {14} {\forall \varepsilon > 0 \quad \exists N \quad \forall n > N \quad | a_n - c_n | < \varepsilon}      \by{$\forall I$}{}
     \have {14} {  (a_i)_{i \in \mathbb{N}} \sim (c_i)_{i\in \mathbb{N}} }          \by{$def. \sim $}{}
 
 \end{fitchproof}
@@ -5712,7 +5713,7 @@ in this system ``$ 0 := [0]_{i \in \mathbb{N}}$'' and ``$ 1 := [1]_{i \in
 
 \begin{definition}\textbf{Order in $\mathbb{R}$} .\\
     \[  [a_i]_{i \in \mathbb{N}} <_\mathbb{R} [b_i]_{i \in \mathbb{N}}  :
-        \exists \epsilon > 0 \quad \exists N  \quad \forall n > N  \quad  b_n - a_n  > \epsilon  \]
+        \exists \varepsilon > 0 \quad \exists N  \quad \forall n > N  \quad  b_n - a_n  > \varepsilon  \]
 \end{definition}
 
 this lemma let us use ``$<$'' instead of ``$<_\mathbb{R}$'', ``$+$'' instead of
@@ -8063,6 +8064,455 @@ arithmetic. so properties are true for them.
 
 \chapter{Axiom of choice}
 
+
+\chapter{fantacy numbers($ \mathbb{Z} (Ord) , \mathbb{Q} (Ord) ,\mathbb{R} (Ord) ,\mathbb{C} (Ord)$) }
+
+\section{fantacy Integers``$\mathbb{Z} (Ord)$''}
+
+we learned about ``$Ord$'' before and we constructed structure ``$(Ord , + ,
+    \cdot , <)$''. if you assume ``$Ord \times Ord$'' we can define an equivalence
+relation ``$ (\alpha_1 , \beta_1) \sim (\alpha_2 , \beta_2) : \alpha_1 +
+    \beta_2 = \alpha_2 + m_1 $''(check it's an equivalence relation).
+
+\begin{definition}\textbf{fantacy Integers``$\mathbb{Z} (Ord)$''} is a set
+    \[ \mathbb{Z} (Ord) := Ord \times Ord / \sim\]
+    we denote it's members with ``$z_0 , z_1 ,...$''
+\end{definition}
+
+in this system ``$ 0 := [(0,0)]$'' and ``$ \forall \beta \in Ord \quad \beta :=
+        [( \beta ,0)]$'' and ``$\forall \beta \in Ord \quad - \beta := [(0, \beta
+            )]$''. in general``$\forall \alpha , \beta \in Ord \quad \alpha - \beta :=
+        [(\alpha , \beta )]$''. so we can say ``$ Ord \subseteq \mathbb{Z} (Ord)$''.
+
+\begin{theorem}\textbf{Summation} there is a unique function ``$+_\mathbb{Z} (Ord) :\mathbb{Z} (Ord) \times \mathbb{Z} (Ord) \to \mathbb{Z} (Ord)$'' s.t.
+
+    \[ \forall \alpha_1 , \alpha_2 , \beta_1 , \beta_2 \in Ord \quad [(\alpha_1 , \beta_1)] +_{\mathbb{Z} (Ord)}  [(\alpha_2 , \beta_2)]  = [(\alpha_1 + \alpha_2, \beta_1 + \beta_2)] \]
+
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\begin{theorem}\textbf{Multiplication} there is a unique function ``$\times_{\mathbb{Z} (Ord)} :\mathbb{Z} (Ord) \times \mathbb{Z} (Ord) \to \mathbb{Z} (Ord)$'' s.t.
+
+    \[ \forall \alpha_1 , \alpha_2 , \beta_1 , \beta_2 \in Ord \quad [(\alpha_1 , \beta_1)] \times_{\mathbb{Z} (Ord)} [(\alpha_2 , \beta_2)]  = [(\alpha_1 \alpha_2  + \beta_1 \beta_2 , \alpha_1 \beta_2 + \alpha_2 \beta_1)] \]
+
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\begin{definition}\textbf{Order in $\mathbb{Z} (Ord)$}
+    \[ [(\alpha_1 , \beta_1)] <_{{\mathbb{Z} (Ord)}} [(\alpha_2 , \beta_2)]  : \alpha_1 + \beta_2  < \alpha_2 + \beta_1 \]
+\end{definition}
+
+this lemma let us use ``$<$'' instead of ``$<_{\mathbb{Z} (Ord)}$'', ``$+$''
+instead of ``$+_{\mathbb{Z} (Ord)}$'' and ``$\times$'' instead of
+``$\times_{\mathbb{Z} (Ord)}$''.
+
+\begin{lemma}prove.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $/ \therefore   \forall \alpha , \beta  \in Ord \quad \alpha  <_{\mathbb{Z} (Ord)}  \beta   \leftrightarrow \alpha   <  \beta $
+        \item       $/ \therefore   \forall \alpha , \beta  \in Ord \quad \alpha  +_{\mathbb{Z} (Ord)}  \beta   = \alpha   +  \beta $
+        \item       $/ \therefore   \forall \alpha , \beta  \in Ord \quad \alpha  \times_{\mathbb{Z} (Ord)}  \beta   = \alpha   \times  \beta $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
+
+\begin{lemma}prove for  ``$ (\mathbb{Z} (Ord) , +  )  $''
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall x ,y ,z  \in \mathbb{Z} (Ord) \quad (x + y )+ z  = x + (y + z )  $ (associative $+ $)
+        \item       $\forall z \in \mathbb{Z} (Ord) \quad z +  0 = 0 +  z = z$ (identity  $+ $)
+        \item       $\forall z \in \mathbb{Z} (Ord) \quad \exists y \in \mathbb{Z} (Ord) \quad z +  y = y +  z = 0$  (inverse  $+ $)
+        \item       $\forall x ,y  \in \mathbb{Z} (Ord) \quad x + y  = y + x $   (commutative(abelian)  $+ $)
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{lemma}prove for  ``$ (\mathbb{Z} (Ord) , + , \times )  $''
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall x ,y ,z  \in \mathbb{Z} (Ord) \quad (x   y )  z  = x  (y   z )  $ (associative $\times$)
+        \item       $\forall z \in \mathbb{Z} (Ord) \quad z \cdot 1 = 1 \cdot  z = z$ (identity  $\times$)
+        \item       $\forall x ,y   \in \mathbb{Z} (Ord) \quad   x y = 0   \to  x = 0  \lor  y = 0 $ (zero divisor free $\times$)
+        \item       $\forall x ,y  \in \mathbb{Z} (Ord) \quad x   y  = y   x $  (commutative(abelian)  $\times$)
+        \item       $\forall x ,y ,z  \in \mathbb{Z} (Ord) \quad \Big(x   (y  + z ) = x   y  +  x   z  \Big)
+                  \land     \Big((x  + y )  z  = x   z  +  y   z  \Big)  $ (distributive $\times$)
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{theorem}
+    \textbf{Order of fantacy Integers($\mathbb{Z} (Ord)$)} prove for  ``$ (\mathbb{Z} (Ord) ,+ , \times , <_{\mathbb{Z} (Ord)}  )  $ ''
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       is linearly ordered.
+        \item       $ \Big( \forall x \in \mathbb{Z} (Ord) \quad   \exists y \in \mathbb{Z} (Ord) \quad  x < y \Big)
+                  \land \Big( \forall x \in \mathbb{Z} (Ord) \quad   \exists y \in \mathbb{Z} (Ord) \quad   y < x \Big)  $ (doesn't have endpoints)
+        \item       $\forall x ,y ,z \in \mathbb{Z} (Ord) \quad x  < y  \to x  + z < y  + z  $
+        \item       $\forall x ,y ,z \in \mathbb{Z} (Ord) \quad x  < y  \land 0 < z \to x  z < y  \gamma   $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\section{fantacy Rational numbers ``$\mathbb{Q} (Ord) $''}
+
+we learned about ``$\mathbb{Z} (Ord)$'' before and we constructed structure
+``$(\mathbb{Z} (Ord) , + , \cdot , <)$''. if you assume ``$\mathbb{Z} (Ord)
+    \times (\mathbb{Z} (Ord) - \{0\})$'' we can define an equivalence relation ``$
+    (y_1 , x_1 ) \sim (y_2 , x_2 ) : y_1 \cdot x_2 = y_2 \cdot x_1 $''(check it's
+an equivalence relation).
+
+\begin{definition}\textbf{fantacy Rational numbers``$\mathbb{Q} (Ord)$''} is a set
+    \[ \mathbb{Q} (Ord) := \mathbb{Z} (Ord) \times (\mathbb{Z} (Ord) - \{0\}) / \sim\]
+    we denote it's members with ``$q_0 , q_1 ,...$''
+\end{definition}
+
+in this system ``$ 0 := [(0,1)]$'' and ``$ 1 := [(1,1)]$'' and ``$ \forall x
+    \in \mathbb{Z} (Ord) \quad x := [(x,1)]$'' and ``$\forall x \in \mathbb{Z}
+    (Ord) \quad \frac{1}{x} := [(1,x)]$''. in general ``$\forall x,y \in \mathbb{Z}
+    (Ord) \quad \frac{x}{y} := [(x,y)]$''. so we can say ``$ Ord \subseteq
+    \mathbb{Z} (Ord) \subseteq \mathbb{Q} (Ord) $''.
+
+\begin{theorem}\textbf{Summation} there is a unique function ``$+_{\mathbb{Q} (Ord)} :\mathbb{Q} (Ord) \times \mathbb{Q} (Ord) \to \mathbb{Q} (Ord)$'' s.t.
+
+    \[ \forall x  , y  , z , u  \in \mathbb{Z} (Ord) \quad [(x  , z)] +_{\mathbb{Q} (Ord)} [(y  , u)]  = [(x u  + z y ,  z  u)] \]
+
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\begin{theorem}\textbf{Multiplication} there is a unique function ``$\times_{\mathbb{Q} (Ord)} :\mathbb{Q} (Ord) \times \mathbb{Q} (Ord) \to \mathbb{Q} (Ord)$'' s.t.
+
+    \[ \forall x  , y  , z , u  \in \mathbb{Z} (Ord) \quad [(x  , z)] \times_{\mathbb{Q} (Ord)} [(y  , u)]  = [(x  y , z u)] \]
+
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\begin{definition}\textbf{Order in $\mathbb{Q} (Ord)$} .\\
+    if ($z > 0 , u > 0$) or ($z < 0 , u < 0$)
+    \[ [(x  , z)] <_{\mathbb{Q} (Ord)} [(y  , u)]  : x  \cdot u  < y  \cdot z \]
+    if ($z > 0 , u < 0$) or ($z < 0 , u > 0$)
+    \[ [(x  , z)] <_{\mathbb{Q} (Ord)} [(y  , u)]  : x  \cdot u  > y  \cdot z \]
+\end{definition}
+
+this lemma let us use ``$<$'' instead of ``$<_{\mathbb{Q} (Ord)}$'', ``$+$''
+instead of ``$+_{\mathbb{Q} (Ord)}$'' and ``$\times$'' instead of
+``$\times_{\mathbb{Q} (Ord)}$''.
+
+\begin{lemma}prove.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $/ \therefore   \forall z,y \in \mathbb{Z} (Ord) \quad z <_{\mathbb{Q} (Ord)} y  \leftrightarrow z  < y$
+        \item       $/ \therefore   \forall z,y \in \mathbb{Z} (Ord) \quad z +_{\mathbb{Q} (Ord)} y  = z  + y$
+        \item       $/ \therefore   \forall z,y \in \mathbb{Z} (Ord) \quad z \times_{\mathbb{Q} (Ord)} y  = z  \times y$
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+we denote ``Multiplication'' with ``$x \cdot y$'' and ``$x y$'' too.
+
+\begin{lemma}prove for  ``$ (\mathbb{Q} (Ord) , +)  $''
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall x ,y ,z  \in \mathbb{Q} (Ord) \quad (x +y )+z  = x +(y +z )  $ (associative $+$)
+        \item       $\forall x \in \mathbb{Q} (Ord) \quad x + 0 = 0 + x = x$  (identity  $+$)
+        \item       $\forall x \in \mathbb{Q} (Ord) \quad \exists y \in \mathbb{Q} (Ord) \quad x + y = y + x = 0$  (inverse  $+$)
+        \item       $\forall x ,y  \in \mathbb{Q} (Ord) \quad x +y  = y +x $  (commutative(abelian)  $+$)
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{lemma}prove for  ``$ (\mathbb{Q} (Ord) , + , \times  )  $''
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall x ,y ,z  \in \mathbb{Q} (Ord) \quad (x   y )  z  = x  (y   z )  $  (associative $\times$)
+        \item       $\forall x \in \mathbb{Q} (Ord) \quad x \cdot 1 = 1 \cdot x = x$  (identity  $\times$)
+        \item       $\forall x  \in \mathbb{Q} (Ord) - \{0\} \quad \exists y \in \mathbb{Q} (Ord) \quad x  y = y  x = 1$  (inverse  $\times$)
+        \item       $\forall x ,y  \in \mathbb{Q} (Ord) \quad x   y  = y   x $  (commutative(abelian)  $\times$)
+        \item       $\forall x ,y ,z  \in \mathbb{Q} (Ord) \quad \Big(x   (y  + z ) = x   y  +  x   z  \Big)
+                  \land     \Big((x  + y )  z  = x   z  +  y   z  \Big)  $ (distributive $\times$)
+              % \item       $\forall x ,y   \in \mathbb{Q} (Ord) \quad   x y = 0   \to  x = 0  \lor  y = 0 $ (zero divisor free $\times$)
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{theorem}
+    \textbf{Order of fantacy Rational numbers($\mathbb{Q} (Ord)$)} prove for  ``$ (\mathbb{Q} (Ord) , <_{\mathbb{Q} (Ord)}  )  $''
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item        is linearly ordered.
+        \item       $ \Big( \forall x \in \mathbb{Q} (Ord) \quad   \exists y \in \mathbb{Q} (Ord) \quad  x < y \Big)
+                  \land \Big( \forall x \in \mathbb{Q} (Ord) \quad   \exists y \in \mathbb{Q} (Ord) \quad   y < x \Big)  $ (doesn't have endpoints)
+        \item       $  \forall x,y  \in \mathbb{Q} (Ord) \quad  \exists z \in \mathbb{Q} (Ord)  \quad  x \not= y \to  x < z < y  $ (dense)
+        \item       $\forall x ,y ,z \in \mathbb{Q} (Ord) \quad x  < y  \to x  + z < y  + z  $
+        \item       $\forall x ,y ,z \in \mathbb{Q} (Ord) \quad x  < y  \land 0 < z \to x  z < y  \gamma   $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+
+\end{theorem}
+
+\section{fantacy Real numbers ``$\mathbb{R} (Ord)$''}
+
+before we we get to lesson define function ``$|\_| : \mathbb{Q} (Ord) \times
+    \mathbb{Q} (Ord) \to \mathbb{Q} (Ord)$'' like this.
+\[  |x| :=
+    \left\{
+    \begin{array}{l}
+        x  \quad 0 \leq x \\
+        -x  \quad  x < 0
+    \end{array}
+    \right.
+\]
+
+if you are not familiar to this notation it means ``$ |\_| := \{ (x,y) \in
+    \mathbb{Q} (Ord) \times \mathbb{Q} (Ord) \mid (0 \leq x \to y=x ) \land ( x < 0
+    \to y = -x ) \} $''. learn this notation because we want to use later.
+
+we learned about ``$\mathbb{Q} (Ord)$'' before and we constructed structure
+``$(\mathbb{Q} (Ord) , + , \cdot , <)$''. now assume $\mathbb{Q}
+    (Ord)^{Ord}$(we know what does it mean by the definition. it means all the
+sequences of $\mathbb{Q} (Ord)$). we don't want it all we just want a subset.
+
+\begin{definition}\textbf{Cauchy sequence} is a sequence like ``$(a_i)_{i \in Ord} \in \mathbb{Q} (Ord)^{Ord}$'' s.t. elements of it get infinitely
+    close to each other i.e.
+    \[  Cauchy(a_i)_{i \in Ord} : \forall \varepsilon > 0 \quad \exists N  \quad \forall n,m   \quad  N < n , m < roof(N) \to | a_n - a_m | < \varepsilon   \]
+\end{definition}
+
+we usually give ``$N$'' natural numbers but it's not necessary.
+
+we define an equivalence relation ``$ (a_i)_{i \in Ord} \sim (b_i)_{i \in Ord}
+    : \forall \varepsilon > 0 \quad \exists N \quad \forall n \quad N < n < roof(N)
+    \to | a_n - b_n | < \varepsilon $''(check it's an equivalence relation). we denote
+every $[(a_i)_{i \in Ord}]$ with $[a_i]_{i \in Ord}$.
+
+\begin{definition}\textbf{fantacy Real numbers ``$\mathbb{R} (Ord)$''} is a set
+    \[ \mathbb{R} (Ord) :=  Cauchy/ \sim  \]
+    we denote it's members with ``$r_0 , r_1 ,...$''
+\end{definition}
+
+in this system ``$ 0 := [0]_{i \in Ord}$'' and ``$ 1 := [1]_{i \in Ord}$'' and
+``$ \forall q \in \mathbb{Q} (Ord) \quad q := [q]_{i \in Ord}$''. so we can say
+``$ Ord \subseteq \mathbb{Z} (Ord) \subseteq \mathbb{Q} (Ord) \subseteq
+    \mathbb{R} (Ord)$''.
+
+\begin{theorem}\textbf{Summation} there is a unique function ``$+_{\mathbb{R} (Ord)} :\mathbb{R} (Ord) \times \mathbb{R} (Ord) \to \mathbb{R} (Ord)$'' s.t.
+
+    \[  [a_i]_{i \in Ord} +_{\mathbb{R} (Ord)} [b_i]_{i \in Ord}  = [a_i + b_i]_{i \in Ord} \]
+
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\begin{theorem}\textbf{Multiplication} there is a unique function ``$\times_{\mathbb{R} (Ord)} :\mathbb{R} (Ord) \times \mathbb{R} (Ord) \to \mathbb{R} (Ord)$'' s.t.
+
+    \[  [a_i]_{i \in Ord} \times_{\mathbb{R} (Ord)} [b_i]_{i \in Ord}  = [a_i  b_i]_{i \in Ord} \]
+
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\begin{definition}\textbf{Order in $\mathbb{R} (Ord)$} .\\
+    \[  [a_i]_{i \in Ord} <_{\mathbb{R} (Ord)} [b_i]_{i \in Ord}  :
+        \exists \varepsilon > 0 \quad \exists N  \quad \forall n \quad N < n < roof(N)
+        \to    b_n - a_n  > \varepsilon  \]
+\end{definition}
+
+this lemma let us use ``$<$'' instead of ``$<_{\mathbb{R} (Ord)}$'', ``$+$''
+instead of ``$+_{\mathbb{R} (Ord)}$'' and ``$\times$'' instead of
+``$\times_{\mathbb{R} (Ord)}$''.
+
+\begin{lemma}prove.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $/ \therefore   \forall x,y \in \mathbb{Q} (Ord) \quad x <_{\mathbb{R} (Ord)} y  \leftrightarrow x  < y$
+        \item       $/ \therefore   \forall x,y \in \mathbb{Q} (Ord) \quad x +_{\mathbb{R} (Ord)} y  = x  + y$
+        \item       $/ \therefore   \forall x,y \in \mathbb{Q} (Ord) \quad x \times_{\mathbb{R} (Ord)} y  = x  \times y$
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+we denote ``Multiplication'' with ``$x \cdot y$'' and ``$x y$'' too.
+
+\begin{lemma}prove.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall x ,y ,z  \in \mathbb{R} (Ord) \quad (x +y )+z  = x +(y +z )  $  (associative $+$)
+        \item       $\forall x \in \mathbb{R} (Ord) \quad x + 0 = 0 + x = x$  (identity  $+$)
+        \item       $\forall x \in \mathbb{R} (Ord) \quad \exists y \in \mathbb{R} (Ord) \quad x + y = y + x = 0$ (inverse  $+$)
+        \item       $\forall x ,y  \in \mathbb{R} (Ord) \quad x +y  = y +x $  (commutative(abelian)  $+$)
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{lemma}prove.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall x ,y ,z  \in \mathbb{R} (Ord) \quad (x   y )  z  = x  (y   z )  $  (associative $\times$)
+        \item       $\forall x \in \mathbb{R} (Ord) \quad x \cdot 1 = 1 \cdot x = x$  (identity  $\times$)
+        \item       $\forall x  \in \mathbb{R} (Ord) - \{0\} \quad \exists y \in \mathbb{R} (Ord) \quad x  y = y  x = 1$  (inverse  $\times$)
+        \item       $\forall x ,y  \in \mathbb{R} (Ord) \quad x   y  = y   x $  (commutative(abelian)  $\times$)
+        \item       $\forall x ,y ,z  \in \mathbb{R} (Ord) \quad \Big(x   (y  + z ) = x   y  +  x   z  \Big)
+                  \land     \Big((x  + y )  z  = x   z  +  y   z  \Big)  $  (distributive $\times$)
+              % \item       $\forall x ,y   \in \mathbb{R} (Ord) \quad   x y = 0   \to  x = 0  \lor  y = 0 $ (zero divisor free $\times$)
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{theorem}
+    \textbf{Linear order of fantacy Real numbers($\mathbb{R} (Ord)$)} prove   ``$ (\mathbb{R} (Ord) , <_{\mathbb{R} (Ord)}  )  $
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item        is linearly ordered.
+        \item       $ \Big( \forall x \in \mathbb{R} (Ord) \quad   \exists y \in \mathbb{R} (Ord) \quad  x < y \Big)
+                  \land \Big( \forall x \in \mathbb{R} (Ord) \quad   \exists y \in \mathbb{R} (Ord) \quad   y < x \Big)  $ (doesn't have endpoints)
+        \item       $  \forall x,y  \in \mathbb{R} (Ord) \quad \exists z \in \mathbb{R} (Ord) \quad  x \not= y \to   x < z < y  $ (dense)
+        \item       $\forall x ,y ,z \in \mathbb{R} (Ord) \quad x  < y  \to x  + z < y  + z  $
+        \item       $\forall x ,y ,z \in \mathbb{R} (Ord) \quad x  < y  \land 0 < z \to x  z < y  k  $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\section{fantacy Complex numbers``$\mathbb{C} (Ord)$''}
+
+we learned about ``$\mathbb{R} (Ord)$'' before and we constructed structure
+``$(\mathbb{R} (Ord) , + , \cdot , <)$''.
+
+\begin{definition}\textbf{fantacy Complex numbers``$\mathbb{C} (Ord)$''} is a set
+    \[ \mathbb{C} (Ord) := \mathbb{R} (Ord) \times \mathbb{R} (Ord) \]
+    we denote it's members with ``$z_0 , x ,...$''
+\end{definition}
+
+in this system ``$ 0 := (0,0)$'' and ``$ \forall n \in \mathbb{R} (Ord) \quad r
+    := (r,0)$'' . in general ``$\forall x,y \in \mathbb{R} (Ord) \quad x + iy :=
+    (x,y)$''. so we can say ``$Ord \subseteq \mathbb{Z} (Ord) \subseteq \mathbb{Q}
+    (Ord) \subseteq \mathbb{R} (Ord) \subseteq \mathbb{C} (Ord)$''.
+
+\begin{theorem}\textbf{Summation} there is a unique function ``$+_{\mathbb{C} (Ord)} :\mathbb{C} (Ord) \times \mathbb{C} (Ord) \to \mathbb{C} (Ord)$'' s.t.
+
+    \[ \forall x , y , z , u \in \mathbb{R} (Ord) \quad (x , z) +_{\mathbb{C} (Ord)}  (y , u)  = (x + y, z + u) \]
+
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\begin{theorem}\textbf{Multiplication} there is a unique function ``$\times_{\mathbb{C} (Ord)} :\mathbb{C} (Ord) \times \mathbb{C} (Ord) \to \mathbb{C} (Ord)$'' s.t.
+
+    \[ \forall x , y , z , u \in \mathbb{R} (Ord) \quad (x , z) \times_{\mathbb{C} (Ord)} (y , u)  = (x y  - z u , x u + y z) \]
+
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+this lemma let us use ``$+$'' instead of ``$+_{\mathbb{C} (Ord)}$'' and
+``$\times$'' instead of ``$\times_{\mathbb{C} (Ord)}$''.
+
+\begin{lemma}prove.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $/ \therefore   \forall x,y \in \mathbb{R} (Ord) \quad x +_{\mathbb{C} (Ord)} y  = x  + y$
+        \item       $/ \therefore   \forall x,y \in \mathbb{R} (Ord) \quad x \times_{\mathbb{C} (Ord)} y  = x  \times y$
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
+
+\begin{lemma}prove for  ``$ (\mathbb{C} (Ord) , +  )  $''
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall x ,y ,z  \in \mathbb{C} (Ord) \quad (x + y )+ z  = x + (y + z )  $ (associative $+ $)
+        \item       $\forall z \in \mathbb{C} (Ord) \quad z +  0 = 0 +  z = z$ (identity  $+ $)
+        \item       $\forall z \in \mathbb{C} (Ord) \quad \exists y \in \mathbb{C} (Ord) \quad z +  y = y +  z = 0$  (inverse  $+ $)
+        \item       $\forall x ,y  \in \mathbb{C} (Ord) \quad x + y  = y + x $   (commutative(abelian)  $+ $)
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{lemma}prove for  ``$ (\mathbb{C} (Ord) , + , \times )  $''
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall x ,y ,z  \in \mathbb{C} (Ord) \quad (x   y )  z  = x  (y   z )  $ (associative $\times$)
+        \item       $\forall z \in \mathbb{C} (Ord) \quad z \cdot 1 = 1 \cdot  z = z$ (identity  $\times$)
+        \item       $\forall x ,y  \in \mathbb{C} (Ord) \quad x   y  = y   x $  (commutative(abelian)  $\times$)
+        \item       $\forall x ,y ,z  \in \mathbb{C} (Ord) \quad \Big(x   (y  + z ) = x   y  +  x   z  \Big)
+                  \land     \Big((x  + y )  z  = x   z  +  y   z  \Big)  $ (distributive $\times$)
+              % \item       $\forall x ,y   \in \mathbb{C} (Ord) \quad   x y = 0   \to  x = 0  \lor  y = 0 $ (zero divisor free $\times$)
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{theorem}\textbf{Exponents} there is a unique function ``$(\_)^{(\_)} :\mathbb{C} (Ord) \times Ord \to \mathbb{C} (Ord)$'' s.t.
+
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall x \in \mathbb{C} (Ord) \quad x ^ 0 = 1$
+        \item       $\forall x \in \mathbb{C} (Ord) \quad \forall n \in Ord \quad  x ^ {s(n)} = x ^ n \cdot x   $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\begin{lemma}prove for ``$(\mathbb{C} (Ord) , + , \cdot , (\_)^{(\_)} )$''
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall x   \in \mathbb{Z} (Ord) \quad \forall m ,n  \in Ord \quad  x^m  \cdot  x^n = x^{m  + n}  $
+        \item       $\forall x   \in \mathbb{Z} (Ord) \quad \forall m ,n  \in Ord \quad (x^m)^n = x^{m n}  $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{theorem}\textbf{Exponents} there is a unique function ``$(\_)^{(\_)} :\mathbb{C} (Ord) \times \mathbb{Z} (Ord) \to \mathbb{C} (Ord)$'' s.t.
+
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall x \in \mathbb{C} (Ord) \quad x ^ 0 = 1$
+        \item       $\forall x \in \mathbb{C} (Ord) \quad \forall m ,n  \in Ord \quad  x ^ {m-n} = \frac{x ^ m}{x^n}    $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\begin{lemma}prove for ``$(\mathbb{C} (Ord) , + , \cdot  )$''
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall x   \in \mathbb{C} (Ord) \quad \forall y ,z  \in \mathbb{Z} (Ord) \quad  x^y  \cdot  x^z = x^{y  + z}  $
+        \item       $\forall x   \in \mathbb{C} (Ord) \quad \forall y ,z  \in \mathbb{Z} (Ord) \quad (x^y)^z = x^{y z}  $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{theorem}\textbf{Big Sum} if ``$a : Ord \to \mathbb{C} (Ord)$'' there is a unique function ``$\sum_{i = 0}^{(\_)} (\_)  :\mathbb{C} (Ord) \times Ord \to \mathbb{C} (Ord)$'' s.t.
+
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall a \quad  \sum_{i = 0}^{0} (a_0)  = a_0$
+        \item       $\forall a \quad \forall n \in Ord \quad  \sum_{i = 0}^{s(n)} a_{s(n)} = \sum_{i = 0}^{n} a_n + a_{s(n)}  $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\begin{lemma}prove for ``$(\mathbb{C} (Ord) , + , \cdot  )$''
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall n   \in Ord \quad \forall a , b   \quad  \sum_{i = 0}^n a_n + \sum_{i = 0}^n b_n = \sum_{i = 0}^n (a_n + b_n )  $
+        \item       $\forall n   \in Ord \quad \forall a   \quad k \sum_{i = 0}^n a_n = \sum_{i = 0}^n ka_n $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+\begin{theorem}\textbf{Big Product} if ``$a : Ord \to \mathbb{C} (Ord)$'' there is a unique function ``$\prod_{i = 0}^{(\_)} (\_)  :\mathbb{C} (Ord) \times Ord \to \mathbb{C} (Ord)$'' s.t.
+
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall a \quad  \prod_{i = 0}^0 (a_0)  = a_0$
+        \item       $\forall a \quad \forall n \in Ord \quad  \prod_{i = 0}^{s(n)} a_{s(n)} = \prod_{i = 0}^n a_n \cdot a_{s(n)}  $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+\begin{lemma}prove for ``$(\mathbb{C} (Ord) , + , \cdot  )$''
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall n   \in Ord \quad \forall a , b   \quad  \prod_{i = 0}^n a_n  \prod_{i = 0}^n b_n = \prod_{i = 0}^n (a_n  b_n )  $
+        \item       $\forall n   \in Ord \quad \forall a   \quad  (\prod_{i = 0}^n a_n)^k = \prod_{i = 0}^n (a_n)^k $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
 \chapter{hyperreal numbers($*\mathbb{N}  , *\mathbb{Z},*\mathbb{Q}    ,*\mathbb{R} $)  }
 
 \section{Filters}
@@ -8932,97 +9382,935 @@ if
     \]
 \end{example}
 
-\section{Hyperreals: Great and Small}
+\section{The Ultrapower Construction of the Hyperreals}
 
-Throughout this chapter we work inside the hyperreal field ${}^\ast\mathbb{R}$
-constructed as an ultrapower of $\mathbb{R}$ with respect to a nonprincipal
-ultrafilter on $\omega$.
+Let
 
-Elements of ${}^\ast\mathbb{R}$ are written as
-\[
-    [a], \quad a=(a_i)_{i\in\omega}, \quad a_i\in\mathbb{R}.
-\]
+$$
+r=(r_n)_{n\in\mathbb N},
+\qquad
+s=(s_n)_{n\in\mathbb N}
+$$
+
+be two sequences of real numbers. It is useful to denote the set
+
+$$
+\{n\in\mathbb N:r_n=s_n\}
+$$
+
+by
+
+$$
+\llbracket r=s\rrbracket.
+$$
+
+Thus
+
+$$
+\llbracket r=s\rrbracket=\{n\in\mathbb N:r_n=s_n\}.
+$$
+
+The set $\llbracket r=s\rrbracket$ may be thought of as the interpretation, or value, of the statement ``$r=s$''. Normally we think of a statement as having one of two values: it is either true or false. Here, instead of assigning truth values, we assign to a statement a subset of $\mathbb N$ describing the set of indices at which the statement is true.
+
+Let $\mathcal F$ be a free ultrafilter on $\mathbb N$. We define
+
+$$
+r\sim s
+$$
+
+if and only if
+
+$$
+\llbracket r=s\rrbracket\in\mathcal F.
+$$
+
+In other words,
+
+$$
+r\sim s
+\iff
+\{n\in\mathbb N:r_n=s_n\}\in\mathcal F.
+$$
+
+When
+
+$$
+\llbracket r=s\rrbracket\in\mathcal F,
+$$
+
+we say that $r=s$ holds \textbf{almost everywhere modulo $\mathcal F$}.
+
+The same idea can be applied to other logical assertions. We define
+
+$$
+\llbracket r<s\rrbracket=\{n\in\mathbb N:r_n<s_n\},
+\qquad
+\llbracket r>s\rrbracket=\{n\in\mathbb N:r_n>s_n\},
+$$
+
+and
+
+$$
+\llbracket r\leq s \rrbracket =\{n\in\mathbb N:r_n\leq s_n\}.
+$$
+
+Thus, for example,
+
+$$
+\llbracket r<s\rrbracket\in\mathcal F
+$$
+
+means that
+
+$$
+r_n<s_n
+$$
+
+for $\mathcal F$-almost all $n$.
+
+We call $\llbracket r=s\rrbracket$, $\llbracket r<s\rrbracket$, $\llbracket r>s\rrbracket$, and the corresponding sets for other statements the \textbf{Statement Values} of those statements.
+
+\begin{theorem}
+The relation $\sim$ is an equivalence relation on
+
+$$
+\mathbb R^{\mathbb N}.
+$$
+
+\end{theorem}
+
+\begin{proof}
+For every $r\in\mathbb R^{\mathbb N}$,
+
+$$
+\llbracket r=r \rrbracket =\mathbb N\in\mathcal F,
+$$
+
+so
+
+$$
+r\sim r.
+$$
+
+If
+
+$$
+r\sim s,
+$$
+
+then
+
+$$
+\llbracket r=s\rrbracket= \llbracket s=r \rrbracket \in\mathcal F,
+$$
+
+so
+
+$$
+s\sim r.
+$$
+
+Finally, suppose
+
+$$
+r\sim s
+\qquad\text{and}\qquad
+s\sim t.
+$$
+
+Then
+
+$$
+\llbracket r=s\rrbracket\in\mathcal F
+\qquad\text{and}\qquad
+ \llbracket s=t \rrbracket \in\mathcal F.
+$$
+
+Therefore
+
+$$
+\llbracket r=s\rrbracket\cap \llbracket s=t \rrbracket \in\mathcal F.
+$$
+
+Since
+
+$$
+\llbracket r=s\rrbracket\cap \llbracket s=t \rrbracket \subseteq[r=t \rrbracket ,
+$$
+
+we obtain
+
+$$
+\llbracket  r=t \rrbracket \in\mathcal F.
+$$
+
+Hence
+
+$$
+r\sim t.
+$$
+
+\end{proof}
+
+\begin{definition}
+The equivalence class of
+
+$$
+r\in\mathbb R^{\mathbb N}
+$$
+
+under $\sim$ is denoted by
+
+$$
+[r].
+$$
+
+Thus
+
+$$
+[r]=\{s\in\mathbb R^{\mathbb N}:r\sim s\}.
+$$
+
+
+
+\end{definition}
+
+\begin{definition}
+For
+
+$$
+r,s\in\mathbb R^{\mathbb N},
+$$
+
+define addition and multiplication on ${}^*\mathbb R$ by
+
+$$
+[r]+[s]=[r+s],
+\qquad
+[r]\cdot[s]=[r\cdot s],
+$$
+
+where
+
+$$
+(r+s)_n=r_n+s_n,
+\qquad
+(r\cdot s)_n=r_ns_n.
+$$
+
+We define the order relation by
+
+$$
+[r]<[s]
+$$
+
+if and only if
+
+$$
+\llbracket r<s\rrbracket\in\mathcal F.
+$$
+
+That is,
+
+$$
+[r]<[s]
+\iff
+\{n\in\mathbb N:r_n<s_n\}\in\mathcal F.
+$$
+
+\end{definition}
+
+These definitions are well-defined, which means that they do not depend on the representatives chosen for the equivalence classes. In particular, if
+
+$$
+r\sim r'
+\qquad\text{and}\qquad
+s\sim s',
+$$
+
+then
+
+$$
+r+s\sim r'+s'
+$$
+
+and
+
+$$
+r\cdot s\sim r'\cdot s'.
+$$
+
+Similarly,
+
+$$
+[r]<[s]
+\iff
+[r']<[s'].
+$$
+
+\begin{theorem}[Almost-All Criterion]
+For sequences
+
+$$
+r=(r_n),\qquad s=(s_n),\qquad t=(t_n),
+$$
+
+we have
+
+$$
+[r]=[s]
+\iff
+r_n=s_n
+\quad\text{for $\mathcal F$-almost all }n,
+$$
+
+$$
+[r]<[s]
+\iff
+r_n<s_n
+\quad\text{for $\mathcal F$-almost all }n,
+$$
+
+$$
+[r]+[s]=[t]
+\iff
+r_n+s_n=t_n
+\quad\text{for $\mathcal F$-almost all }n,
+$$
+
+and
+
+$$
+[r]\cdot[s]=[t]
+\iff
+r_ns_n=t_n
+\quad\text{for $\mathcal F$-almost all }n.
+$$
+
+The same principle holds for many other mathematical statements. It is the
+basis of the \textbf{Transfer Principle}.
+\end{theorem}
+
+\begin{theorem}
+The structure
+
+$$
+({}^*\mathbb R,+,\cdot,<)
+$$
+
+is an ordered field with zero $[0]$ and unity $[1]$.
+\end{theorem}
+
+\begin{proof}
+The ring properties follow directly from the corresponding properties of
+$\mathbb R$. In particular, the additive inverse of $[r]$ is
+
+$$
+-[r]=[-r].
+$$
+
+It remains to show that every nonzero element has a multiplicative inverse.
+Suppose
+
+$$
+[r]\neq[0].
+$$
+
+Then
+
+$$
+\llbracket r=0 \rrbracket \notin\mathcal F.
+$$
+
+Since $\mathcal F$ is an ultrafilter,
+
+$$
+J=\{n\in\mathbb N:r_n\neq0\}\in\mathcal F.
+$$
+
+Define
+
+$$
+s_n=
+\begin{cases}
+\dfrac1{r_n},&n\in J,\\[6pt]
+0,&n\notin J.
+\end{cases}
+$$
+
+Then
+
+$$
+[r\cdot s=1]=J\in\mathcal F.
+$$
+
+Therefore
+
+$$
+[r]\cdot[s]=[1].
+$$
+
+Thus $[s]$ is the multiplicative inverse of $[r]$.
+
+Finally, $\mathcal F$ being an ultrafilter implies that for any $r,s$, exactly
+one of
+
+$$
+\llbracket r<s\rrbracket,\qquad\llbracket r=s\rrbracket,\qquad \llbracket s<r \rrbracket 
+$$
+
+belongs to $\mathcal F$. Hence the order on ${}^*\mathbb R$ is linear.
+
+Therefore
+
+$$
+({}^*\mathbb R,+,\cdot,<)
+$$
+
+is an ordered field.
+\end{proof}
+
+\begin{definition}
+We identify every real number $r\in\mathbb R$ with the equivalence class of
+the constant sequence
+
+$$
+(r,r,r,\ldots).
+$$
+
+Thus
+
+$$
+r=[(r,r,r,\ldots)].
+$$
+
+Under this identification,
+
+$$
+\mathbb R\subseteq{}^*\mathbb R.
+$$
+
+\end{definition}
+
+For example, consider
+
+$$
+\epsilon=
+\left[
+\left(
+1,\frac12,\frac13,\frac14,\ldots
+\right)
+\right].
+$$
+
+For every $n\in\mathbb N$,
+
+$$
+0<\epsilon<\frac1n,
+$$
+
+and therefore $\epsilon$ is a positive infinitesimal.
+
+Similarly,
+
+$$
+\omega =[(1,2,3,4,\ldots)]
+$$
+
+satisfies
+
+$$
+\omega >n
+\qquad\forall n\in\mathbb N.
+$$
+
+Therefore $\omega $ is a positive infinite hyperreal number.
+
+\begin{definition}
+Let
+
+$$
+f:A\to\mathbb R,
+\qquad
+A\subseteq\mathbb R.
+$$
+
+The \textbf{Nonstandard Extension} of $f$ is the function
+
+$$
+{}^*f:{}^*A\to{}^*\mathbb R
+$$
+
+defined by
+
+$$
+{}^*f([x_n])=[f(x_n)].
+$$
+
+Here
+
+$$
+{}^*A=\{[x_n]:x_n\in A\}.
+$$
+
+\end{definition}
+
+The definition is well-defined. If
+
+$$
+[x_n]=[y_n],
+$$
+
+then
+
+$$
+\{n\in\mathbb N:x_n=y_n\}\in\mathcal F.
+$$
+
+Therefore
+
+$$
+\{n\in\mathbb N:f(x_n)=f(y_n)\}\in\mathcal F,
+$$
+
+so
+
+$$
+[f(x_n)]=[f(y_n)].
+$$
+
+Thus the value of ${}^*f([x_n])$ does not depend on the representative
+chosen for $[x_n]$.
+
+Moreover, if $x\in A$ is a standard real number, then
+
+$$
+{}^*f(x)=f(x).
+$$
+
+Indeed,
+
+$$
+{}^*f([(x,x,x,\ldots)])
+=
+[(f(x),f(x),f(x),\ldots)]
+=
+f(x).
+$$
+
+Therefore ${}^*f$ is genuinely an extension of $f$.
+
+The Almost-All Criterion is the fundamental reason why this construction
+allows ordinary statements about real numbers to be extended to
+nonstandard numbers. In particular, if
+
+$$
+f(x)=x^2
+$$
+
+and
+
+$$
+\omega=[(1,2,3,\ldots)],
+$$
+
+then
+
+$$
+{}^*f(\omega)
+=
+[1,4,9,\ldots].
+$$
+
+Thus expressions such as
+
+$$
+{}^*f(a+\epsilon)
+$$
+
+are well-defined even when
+
+$$
+a+\epsilon\notin\mathbb R.
+$$
+
+This is the construction that will allow us to formulate limits,
+continuity, derivatives, and integrals using infinitesimals.
+
+Yes. This should fit naturally after your ultrapower construction. I would also correct the obvious OCR corruption in the original and keep your notation \(\omega\) and \(\varepsilon\).
+
 
 \section{(Un)limited, Infinitesimal, and Appreciable Numbers}
 
-\begin{definition}[Limited and Unlimited]
-    Let $x\in{}^\ast\mathbb{R}$.
+A hyperreal number $b\in{}^*\mathbb R$ is called:
 
-    \begin{itemize}
-        \item $x$ is \emph{limited} if there exists $r\in\mathbb{R}$ such that
-              \[
-                  |x| < r.
-              \]
+\begin{itemize}
+\item \textbf{limited} if
 
-        \item $x$ is \emph{unlimited} if it is not limited.
-    \end{itemize}
-\end{definition}
+$$
+r<b<s
+$$
 
-\begin{definition}[Infinitesimal]
-    An element $x\in{}^\ast\mathbb{R}$ is infinitesimal if
-    for every $r>0$ in $\mathbb{R}$,
-    \[
-        |x| < r.
-    \]
-\end{definition}
+for some $r,s\in\mathbb R$;
 
-\begin{definition}[Appreciable]
-    An element $x\in{}^\ast\mathbb{R}$ is appreciable if it is
-    limited and not infinitesimal.
-\end{definition}
+\item \textbf{positive unlimited} if
 
-\begin{example}
-    Let
-    \[
-        \varepsilon = \left[\left(\frac{1}{i+1}\right)_{i\in\omega}\right].
-    \]
-    Then $\varepsilon$ is infinitesimal.
-\end{example}
+$$
+r<b
+\qquad\forall r\in\mathbb R;
+$$
+
+\item \textbf{negative unlimited} if
+
+$$
+b<r
+\qquad\forall r\in\mathbb R;
+$$
+
+\item \textbf{unlimited} if it is positive unlimited or negative unlimited;
+
+\item \textbf{positive infinitesimal} if
+
+$$
+0<b<r
+\qquad\forall r\in\mathbb R_{>0};
+$$
+
+\item \textbf{negative infinitesimal} if
+
+$$
+r<b<0
+\qquad\forall r\in\mathbb R_{<0};
+$$
+
+\item \textbf{infinitesimal} if it is positive infinitesimal, negative
+infinitesimal, or $0$;
+
+\item \textbf{appreciable} if it is limited but not infinitesimal.
+\end{itemize}
+
+Thus all real numbers and all infinitesimals are limited. The only
+infinitesimal real number is $0$; every other real number is appreciable.
+
+An appreciable number is therefore a hyperreal number that is neither
+infinitely small nor infinitely large.
+
+The above definitions can also be expressed using the natural numbers. For
+$b\in{}^*\mathbb R$,
+
+$$
+b\text{ is limited}
+\iff
+|b|<n
+\quad\text{for some }n\in\mathbb N,
+$$
+
+$$
+b\text{ is unlimited}
+\iff
+|b|>n
+\quad\forall n\in\mathbb N,
+$$
+
+$$
+b\text{ is infinitesimal}
+\iff
+|b|<\frac1n
+\quad\forall n\in\mathbb N,
+$$
+
+and
+
+$$
+b\text{ is appreciable}
+\iff
+\frac1n<|b|<m
+\quad\text{for some }n,m\in\mathbb N.
+$$
+
+In particular, if
+
+$$
+\epsilon\neq0
+$$
+
+is an infinitesimal, then
+
+$$
+|\epsilon|<\frac1n
+\qquad\forall n\in\mathbb N.
+$$
+
+For example, the hyperreal number
+
+$$
+\epsilon=
+\left[
+\left(
+1,\frac12,\frac13,\ldots
+\right)
+\right]
+$$
+
+is a positive infinitesimal, while
+
+$$
+\omega=[(1,2,3,\ldots)]
+$$
+
+is a positive unlimited hyperreal number.
+
+We denote the set of unlimited hypernaturals by
+
+$$
+{}^*\mathbb N_\infty
+=
+{}^*\mathbb N-\mathbb N.
+$$
+
+Similarly, we denote the sets of positive and negative unlimited hyperreals by
+
+$$
+{}^*\mathbb R_\infty^+
+=
+\{x\in{}^*\mathbb R:x\text{ is positive unlimited}\}
+$$
+
+and
+
+$$
+{}^*\mathbb R_\infty^-
+=
+\{x\in{}^*\mathbb R:x\text{ is negative unlimited}\}.
+$$
+
+This notation may be adapted to an arbitrary subset $X\subseteq{}^*\mathbb R$.
+For example,
+
+$$
+X_\infty
+=
+\{x\in X:x\text{ is unlimited}\},
+$$
+
+$$
+X^+
+=
+\{x\in X:x>0\},
+\qquad
+X^-
+=
+\{x\in X:x<0\}.
+$$
+
+We will also use
+
+$$
+\mathcal L
+=
+\{x\in{}^*\mathbb R:x\text{ is limited}\}
+$$
+
+for the set of all limited hyperreal numbers, and
+
+$$
+\mathcal I
+=
+\{x\in{}^*\mathbb R:x\text{ is infinitesimal}\}
+$$
+
+for the set of all infinitesimals.
+
 
 \section{Arithmetic of Hyperreals}
 
-Let $x=[a]$ and $y=[b]$ in ${}^\ast\mathbb{R}$.
+Let $\varepsilon,\delta$ be infinitesimals, let $b,c$ be appreciable, and let
+$H,K$ be unlimited hyperreal numbers. Then the following properties hold.
 
-Operations are defined componentwise:
-\[
-    x+y = [a_i+b_i]_{i\in\omega}, \qquad
-    x\cdot y = [a_i b_i]_{i\in\omega}.
-\]
+\textbf{Sums:}
 
-\begin{lemma}
-    The sum of two infinitesimals is infinitesimal.
-\end{lemma}
+$$
+\varepsilon+\delta\text{ is infinitesimal},
+$$
 
-\begin{proof}
-    Let $x,y$ be infinitesimal and $r>0$.
-    Then choose $r/2>0$. We have
-    \[
-        |x|<\frac{r}{2}, \quad |y|<\frac{r}{2}.
-    \]
-    Hence
-    \[
-        |x+y|\le |x|+|y|<r.
-    \]
-    So $x+y$ is infinitesimal.
-\end{proof}
+$$
+b+\varepsilon\text{ is appreciable},
+$$
 
-\begin{lemma}
-    The product of a limited number and an infinitesimal is infinitesimal.
-\end{lemma}
+$$
+b+c\text{ is limited, possibly infinitesimal},
+$$
 
-\begin{proof}
-    Let $x$ be infinitesimal and $y$ limited.
-    Then $|y|<M$ for some $M\in\mathbb{R}$.
+$$
+H+\varepsilon\text{ and }H+b\text{ are unlimited}.
+$$
 
-    For any $r>0$, choose $\delta=\frac{r}{M+1}$. Since $x$ is infinitesimal,
-    $|x|<\delta$, hence
-    \[
-        |xy|<r.
-    \]
-    So $xy$ is infinitesimal.
-\end{proof}
+\textbf{Opposites:}
 
-\section{On the Use of ``Finite'' and ``Infinite''}
+$$
+-\varepsilon\text{ is infinitesimal},
+\qquad
+-b\text{ is appreciable},
+\qquad
+-H\text{ is unlimited}.
+$$
+
+\textbf{Products:}
+
+$$
+\varepsilon\delta\text{ and }\varepsilon b\text{ are infinitesimal},
+$$
+
+$$
+bc\text{ is appreciable},
+$$
+
+$$
+bH\text{ and }HK\text{ are unlimited}.
+$$
+
+\textbf{Reciprocals:}
+
+If $\varepsilon\neq0$, then
+
+$$
+\frac1{\varepsilon}\text{ is unlimited}.
+$$
+
+If $b\neq0$, then
+
+$$
+\frac1b\text{ is appreciable}.
+$$
+
+If $H\neq0$, then
+
+$$
+\frac1H\text{ is infinitesimal}.
+$$
+
+\textbf{Quotients:}
+
+If $\varepsilon,\delta$ are nonzero infinitesimals, then
+
+$$
+\frac{\varepsilon}{\delta}
+$$
+
+may be infinitesimal, appreciable, or unlimited.
+
+If $b\neq0$ is appreciable and $\varepsilon$ is infinitesimal, then
+
+$$
+\frac{\varepsilon}{b}
+$$
+
+is infinitesimal.
+
+If $b,c\neq0$ are appreciable, then
+
+$$
+\frac{b}{c}
+$$
+
+is appreciable.
+
+If $H$ is unlimited and $b\neq0$ is appreciable, then
+
+$$
+\frac{H}{b}
+$$
+
+is unlimited.
+
+If $H\neq0$ is unlimited and $b$ is appreciable, then
+
+$$
+\frac{b}{H}
+$$
+
+is infinitesimal.
+
+If $H,K\neq0$ are unlimited, then
+
+$$
+\frac{H}{K}
+$$
+
+may be infinitesimal, appreciable, or unlimited.
+
+\textbf{Roots:}
+
+If $\varepsilon>0$ is infinitesimal, then
+
+$$
+\sqrt{\varepsilon}
+$$
+
+is infinitesimal.
+
+If $b>0$ is appreciable, then
+
+$$
+\sqrt b
+$$
+
+is appreciable.
+
+If $H>0$ is unlimited, then
+
+$$
+\sqrt H
+$$
+
+is unlimited.
+
+\textbf{Indeterminate Forms:}
+
+The expressions
+
+$$
+\frac{\varepsilon}{\delta},
+\qquad
+\frac{H}{K},
+\qquad
+\varepsilon H,
+\qquad
+H+K
+$$
+
+do not have a determined classification from the information given alone.
+
+For example, if
+
+$$
+\varepsilon=\frac1{\omega},
+$$
+
+then
+
+$$
+\varepsilon\omega=1,
+$$
+
+which is appreciable. On the other hand, if
+
+$$
+\varepsilon=\frac1{\sqrt{\omega}},
+$$
+
+then
+
+$$
+\varepsilon\omega=\sqrt{\omega},
+$$
+
+which is unlimited.
+
+Thus arithmetic involving unlimited and infinitesimal numbers must be considered
+carefully.
+
+
 
 In ${}^\ast\mathbb{R}$ the terminology is interpreted as follows:
 
@@ -9081,44 +10369,247 @@ Let $x,y\in{}^\ast\mathbb{R}$.
     So $r=s$.
 \end{proof}
 
-\section{Exercises on Halos and Galaxies}
+\section{Standard Parts}
 
-\begin{enumerate}
-    \item Show that $x\approx y$ defines an equivalence relation.
-    \item Prove that halos partition ${}^\ast\mathbb{R}$.
-    \item Show that each galaxy is a union of halos.
-\end{enumerate}
+\begin{theorem}
+Every limited hyperreal $b$ is infinitely close to exactly one real number.
+This real number is called the \textbf{standard part} of $b$ and is denoted by
 
-\section{Shadows}
+$$
+\operatorname{st}(b).
+$$
 
-\begin{definition}[Standard Part]
-    If $x\in{}^\ast\mathbb{R}$ is limited, then there exists a unique
-    real number $r\in\mathbb{R}$ such that
-    \[
-        x \approx r.
-    \]
-    This $r$ is called the \emph{standard part} of $x$, denoted
-    \[
-        \operatorname{st}(x)=r.
-    \]
-\end{definition}
+Thus
 
-\begin{lemma}
-    The standard part map is well-defined on limited hyperreals.
-\end{lemma}
+$$
+b\approx\operatorname{st}(b).
+$$
+
+\end{theorem}
 
 \begin{proof}
-    If $x\approx r$ and $x\approx s$ with $r,s\in\mathbb{R}$,
-    then $r-s$ is infinitesimal, hence $r=s$.
+Let
+
+$$
+A=\{r\in\mathbb R:r<b\}.
+$$
+
+Since $b$ is limited, there exist real numbers $r,s$ such that
+
+$$
+r<b<s.
+$$
+
+Therefore $A$ is nonempty and bounded above by $s$. By the completeness of
+$\mathbb R$, $A$ has a least upper bound
+
+$$
+c=\sup A\in\mathbb R.
+$$
+
+We show that
+
+$$
+b\approx c.
+$$
+
+Let $\epsilon>0$ be any positive real number. Since $c$ is an upper bound of
+$A$, we cannot have
+
+$$
+c+\epsilon\in A.
+$$
+
+Therefore
+
+$$
+b\leq c+\epsilon.
+$$
+
+On the other hand, $c-\epsilon$ cannot be an upper bound of $A$, since $c$ is
+the least upper bound. Hence there exists some $a\in A$ such that
+
+$$
+c-\epsilon<a<b.
+$$
+
+Therefore
+
+$$
+c-\epsilon<b.
+$$
+
+Thus
+
+$$
+c-\epsilon<b\leq c+\epsilon,
+$$
+
+and consequently
+
+$$
+|b-c|\leq\epsilon.
+$$
+
+Since this holds for every positive real $\epsilon$, we have
+
+$$
+b\approx c.
+$$
+
+It remains to prove uniqueness. Suppose
+
+$$
+b\approx c'
+$$
+
+for some $c'\in\mathbb R$. Since also
+
+$$
+b\approx c,
+$$
+
+we obtain
+
+$$
+c\approx c'.
+$$
+
+But $c,c'\in\mathbb R$. The only real infinitesimal is $0$, so
+
+$$
+c=c'.
+$$
+
+Therefore there exists exactly one real number infinitely close to $b$. We
+define this number to be
+
+$$
+\operatorname{st}(b)=c.
+$$
+
 \end{proof}
 
-\section{Exercises on Infinite Closeness}
+\begin{theorem}
+Let $b,c$ be limited hyperreal numbers and let $n\in\mathbb N$. Then
 
-\begin{enumerate}
-    \item Show that if $x\approx y$ and $y\approx z$, then $x\approx z$.
-    \item Prove that $x\approx y$ implies $x+z\approx y+z$.
-    \item If $x\approx y$ and $z$ is limited, show $xz\approx yz$.
-\end{enumerate}
+$$
+\operatorname{st}(b\pm c)
+=
+\operatorname{st}(b)\pm\operatorname{st}(c),
+$$
+
+$$
+\operatorname{st}(bc)
+=
+\operatorname{st}(b)\operatorname{st}(c),
+$$
+
+$$
+\operatorname{st}\left(\frac bc\right)
+=
+\frac{\operatorname{st}(b)}{\operatorname{st}(c)}
+\qquad\text{if }\operatorname{st}(c)\neq0,
+$$
+
+$$
+\operatorname{st}(b^n)
+=
+\operatorname{st}(b)^n,
+$$
+
+$$
+\operatorname{st}(|b|)
+=
+|\operatorname{st}(b)|,
+$$
+
+and, if $b\geq0$,
+
+$$
+\operatorname{st}(\sqrt b)
+=
+\sqrt{\operatorname{st}(b)}.
+$$
+
+Furthermore,
+
+$$
+b\leq c
+\quad\Longrightarrow\quad
+\operatorname{st}(b)\leq\operatorname{st}(c).
+$$
+
+\end{theorem}
+
+\begin{proof}
+Exercise.
+\end{proof}
+
+These properties show that the standard-part map
+
+$$
+\operatorname{st}:\mathcal L\to\mathbb R,
+$$
+
+where $\mathcal L$ denotes the set of all limited hyperreal numbers, is an
+order-preserving ring homomorphism onto $\mathbb R$.
+
+Its kernel is precisely the set of infinitesimals:
+
+$$
+\ker(\operatorname{st})
+=
+\{b\in\mathcal L:\operatorname{st}(b)=0\}
+=
+\mathcal I.
+$$
+
+Thus two limited hyperreal numbers have the same standard part exactly when
+they are infinitely close:
+
+$$
+\operatorname{st}(b)=\operatorname{st}(c)
+\iff
+b\approx c.
+$$
+
+Equivalently, the equivalence classes of the relation $\approx$ on the
+limited hyperreals are precisely the sets
+
+$$
+\operatorname{hal}(b)
+=
+\{c\in\mathcal L:c\approx b\},
+$$
+
+called the \textbf{halos} of $b$.
+
+Therefore the quotient of the ring of limited hyperreals by the ideal of
+infinitesimals is isomorphic to the real number field.
+
+\begin{theorem}
+The quotient ring
+
+$$
+\mathcal L/\mathcal I
+$$
+
+is isomorphic to $\mathbb R$ by the correspondence
+
+$$
+\operatorname{hal}(b)\longmapsto\operatorname{st}(b).
+$$
+
+In particular,
+
+$$
+\mathcal I
+$$
+
+is a maximal ideal of the ring $\mathcal L$.
+\end{theorem}
+
 
 \section{Shadows and Completeness}
 
@@ -9132,473 +10623,1862 @@ Let $x,y\in{}^\ast\mathbb{R}$.
     have a well-defined ultralimit modulo a nonprincipal ultrafilter.
 \end{proof}
 
-\section{Exercise on Dedekind Completeness}
 
-\begin{enumerate}
-    \item Show that $\mathbb{R}$ is Dedekind complete.
-    \item Use the standard part map to explain why every limited hyperreal has a shadow
-          in $\mathbb{R}$.
-    \item Compare this with completeness of ${}^\ast\mathbb{R}$ (is it Dedekind
-          complete?).
-\end{enumerate}
-
-\chapter{fantacy numbers($ \mathbb{Z} (Ord) , \mathbb{Q} (Ord) ,\mathbb{R} (Ord) ,\mathbb{C} (Ord)$) }
-
-\section{fantacy Integers``$\mathbb{Z} (Ord)$''}
-
-we learned about ``$Ord$'' before and we constructed structure ``$(Ord , + ,
-    \cdot , <)$''. if you assume ``$Ord \times Ord$'' we can define an equivalence
-relation ``$ (\alpha_1 , \beta_1) \sim (\alpha_2 , \beta_2) : \alpha_1 +
-    \beta_2 = \alpha_2 + m_1 $''(check it's an equivalence relation).
-
-\begin{definition}\textbf{fantacy Integers``$\mathbb{Z} (Ord)$''} is a set
-    \[ \mathbb{Z} (Ord) := Ord \times Ord / \sim\]
-    we denote it's members with ``$z_0 , z_1 ,...$''
-\end{definition}
-
-in this system ``$ 0 := [(0,0)]$'' and ``$ \forall \beta \in Ord \quad \beta :=
-        [( \beta ,0)]$'' and ``$\forall \beta \in Ord \quad - \beta := [(0, \beta
-            )]$''. in general``$\forall \alpha , \beta \in Ord \quad \alpha - \beta :=
-        [(\alpha , \beta )]$''. so we can say ``$ Ord \subseteq \mathbb{Z} (Ord)$''.
-
-\begin{theorem}\textbf{Summation} there is a unique function ``$+_\mathbb{Z} (Ord) :\mathbb{Z} (Ord) \times \mathbb{Z} (Ord) \to \mathbb{Z} (Ord)$'' s.t.
-
-    \[ \forall \alpha_1 , \alpha_2 , \beta_1 , \beta_2 \in Ord \quad [(\alpha_1 , \beta_1)] +_{\mathbb{Z} (Ord)}  [(\alpha_2 , \beta_2)]  = [(\alpha_1 + \alpha_2, \beta_1 + \beta_2)] \]
-
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{theorem}
-
-\begin{theorem}\textbf{Multiplication} there is a unique function ``$\times_{\mathbb{Z} (Ord)} :\mathbb{Z} (Ord) \times \mathbb{Z} (Ord) \to \mathbb{Z} (Ord)$'' s.t.
-
-    \[ \forall \alpha_1 , \alpha_2 , \beta_1 , \beta_2 \in Ord \quad [(\alpha_1 , \beta_1)] \times_{\mathbb{Z} (Ord)} [(\alpha_2 , \beta_2)]  = [(\alpha_1 \alpha_2  + \beta_1 \beta_2 , \alpha_1 \beta_2 + \alpha_2 \beta_1)] \]
-
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{theorem}
-
-\begin{definition}\textbf{Order in $\mathbb{Z} (Ord)$}
-    \[ [(\alpha_1 , \beta_1)] <_{{\mathbb{Z} (Ord)}} [(\alpha_2 , \beta_2)]  : \alpha_1 + \beta_2  < \alpha_2 + \beta_1 \]
-\end{definition}
-
-this lemma let us use ``$<$'' instead of ``$<_{\mathbb{Z} (Ord)}$'', ``$+$''
-instead of ``$+_{\mathbb{Z} (Ord)}$'' and ``$\times$'' instead of
-``$\times_{\mathbb{Z} (Ord)}$''.
-
-\begin{lemma}prove.
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $/ \therefore   \forall \alpha , \beta  \in Ord \quad \alpha  <_{\mathbb{Z} (Ord)}  \beta   \leftrightarrow \alpha   <  \beta $
-        \item       $/ \therefore   \forall \alpha , \beta  \in Ord \quad \alpha  +_{\mathbb{Z} (Ord)}  \beta   = \alpha   +  \beta $
-        \item       $/ \therefore   \forall \alpha , \beta  \in Ord \quad \alpha  \times_{\mathbb{Z} (Ord)}  \beta   = \alpha   \times  \beta $
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{lemma}
-
-we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
-
-\begin{lemma}prove for  ``$ (\mathbb{Z} (Ord) , +  )  $''
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall x ,y ,z  \in \mathbb{Z} (Ord) \quad (x + y )+ z  = x + (y + z )  $ (associative $+ $)
-        \item       $\forall z \in \mathbb{Z} (Ord) \quad z +  0 = 0 +  z = z$ (identity  $+ $)
-        \item       $\forall z \in \mathbb{Z} (Ord) \quad \exists y \in \mathbb{Z} (Ord) \quad z +  y = y +  z = 0$  (inverse  $+ $)
-        \item       $\forall x ,y  \in \mathbb{Z} (Ord) \quad x + y  = y + x $   (commutative(abelian)  $+ $)
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{lemma}
-
-\begin{lemma}prove for  ``$ (\mathbb{Z} (Ord) , + , \times )  $''
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall x ,y ,z  \in \mathbb{Z} (Ord) \quad (x   y )  z  = x  (y   z )  $ (associative $\times$)
-        \item       $\forall z \in \mathbb{Z} (Ord) \quad z \cdot 1 = 1 \cdot  z = z$ (identity  $\times$)
-        \item       $\forall x ,y   \in \mathbb{Z} (Ord) \quad   x y = 0   \to  x = 0  \lor  y = 0 $ (zero divisor free $\times$)
-        \item       $\forall x ,y  \in \mathbb{Z} (Ord) \quad x   y  = y   x $  (commutative(abelian)  $\times$)
-        \item       $\forall x ,y ,z  \in \mathbb{Z} (Ord) \quad \Big(x   (y  + z ) = x   y  +  x   z  \Big)
-                  \land     \Big((x  + y )  z  = x   z  +  y   z  \Big)  $ (distributive $\times$)
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{lemma}
-
-\begin{theorem}
-    \textbf{Order of fantacy Integers($\mathbb{Z} (Ord)$)} prove for  ``$ (\mathbb{Z} (Ord) ,+ , \times , <_{\mathbb{Z} (Ord)}  )  $ ''
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       is linearly ordered.
-        \item       $ \Big( \forall x \in \mathbb{Z} (Ord) \quad   \exists y \in \mathbb{Z} (Ord) \quad  x < y \Big)
-                  \land \Big( \forall x \in \mathbb{Z} (Ord) \quad   \exists y \in \mathbb{Z} (Ord) \quad   y < x \Big)  $ (doesn't have endpoints)
-        \item       $\forall x ,y ,z \in \mathbb{Z} (Ord) \quad x  < y  \to x  + z < y  + z  $
-        \item       $\forall x ,y ,z \in \mathbb{Z} (Ord) \quad x  < y  \land 0 < z \to x  z < y  \gamma   $
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{theorem}
-
-\section{fantacy Rational numbers ``$\mathbb{Q} (Ord) $''}
-
-we learned about ``$\mathbb{Z} (Ord)$'' before and we constructed structure
-``$(\mathbb{Z} (Ord) , + , \cdot , <)$''. if you assume ``$\mathbb{Z} (Ord)
-    \times (\mathbb{Z} (Ord) - \{0\})$'' we can define an equivalence relation ``$
-    (y_1 , x_1 ) \sim (y_2 , x_2 ) : y_1 \cdot x_2 = y_2 \cdot x_1 $''(check it's
-an equivalence relation).
-
-\begin{definition}\textbf{fantacy Rational numbers``$\mathbb{Q} (Ord)$''} is a set
-    \[ \mathbb{Q} (Ord) := \mathbb{Z} (Ord) \times (\mathbb{Z} (Ord) - \{0\}) / \sim\]
-    we denote it's members with ``$q_0 , q_1 ,...$''
-\end{definition}
-
-in this system ``$ 0 := [(0,1)]$'' and ``$ 1 := [(1,1)]$'' and ``$ \forall x
-    \in \mathbb{Z} (Ord) \quad x := [(x,1)]$'' and ``$\forall x \in \mathbb{Z}
-    (Ord) \quad \frac{1}{x} := [(1,x)]$''. in general ``$\forall x,y \in \mathbb{Z}
-    (Ord) \quad \frac{x}{y} := [(x,y)]$''. so we can say ``$ Ord \subseteq
-    \mathbb{Z} (Ord) \subseteq \mathbb{Q} (Ord) $''.
-
-\begin{theorem}\textbf{Summation} there is a unique function ``$+_{\mathbb{Q} (Ord)} :\mathbb{Q} (Ord) \times \mathbb{Q} (Ord) \to \mathbb{Q} (Ord)$'' s.t.
-
-    \[ \forall x  , y  , z , u  \in \mathbb{Z} (Ord) \quad [(x  , z)] +_{\mathbb{Q} (Ord)} [(y  , u)]  = [(x u  + z y ,  z  u)] \]
-
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{theorem}
-
-\begin{theorem}\textbf{Multiplication} there is a unique function ``$\times_{\mathbb{Q} (Ord)} :\mathbb{Q} (Ord) \times \mathbb{Q} (Ord) \to \mathbb{Q} (Ord)$'' s.t.
-
-    \[ \forall x  , y  , z , u  \in \mathbb{Z} (Ord) \quad [(x  , z)] \times_{\mathbb{Q} (Ord)} [(y  , u)]  = [(x  y , z u)] \]
-
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{theorem}
-
-\begin{definition}\textbf{Order in $\mathbb{Q} (Ord)$} .\\
-    if ($z > 0 , u > 0$) or ($z < 0 , u < 0$)
-    \[ [(x  , z)] <_{\mathbb{Q} (Ord)} [(y  , u)]  : x  \cdot u  < y  \cdot z \]
-    if ($z > 0 , u < 0$) or ($z < 0 , u > 0$)
-    \[ [(x  , z)] <_{\mathbb{Q} (Ord)} [(y  , u)]  : x  \cdot u  > y  \cdot z \]
-\end{definition}
-
-this lemma let us use ``$<$'' instead of ``$<_{\mathbb{Q} (Ord)}$'', ``$+$''
-instead of ``$+_{\mathbb{Q} (Ord)}$'' and ``$\times$'' instead of
-``$\times_{\mathbb{Q} (Ord)}$''.
-
-\begin{lemma}prove.
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $/ \therefore   \forall z,y \in \mathbb{Z} (Ord) \quad z <_{\mathbb{Q} (Ord)} y  \leftrightarrow z  < y$
-        \item       $/ \therefore   \forall z,y \in \mathbb{Z} (Ord) \quad z +_{\mathbb{Q} (Ord)} y  = z  + y$
-        \item       $/ \therefore   \forall z,y \in \mathbb{Z} (Ord) \quad z \times_{\mathbb{Q} (Ord)} y  = z  \times y$
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{lemma}
-
-we denote ``Multiplication'' with ``$x \cdot y$'' and ``$x y$'' too.
-
-\begin{lemma}prove for  ``$ (\mathbb{Q} (Ord) , +)  $''
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall x ,y ,z  \in \mathbb{Q} (Ord) \quad (x +y )+z  = x +(y +z )  $ (associative $+$)
-        \item       $\forall x \in \mathbb{Q} (Ord) \quad x + 0 = 0 + x = x$  (identity  $+$)
-        \item       $\forall x \in \mathbb{Q} (Ord) \quad \exists y \in \mathbb{Q} (Ord) \quad x + y = y + x = 0$  (inverse  $+$)
-        \item       $\forall x ,y  \in \mathbb{Q} (Ord) \quad x +y  = y +x $  (commutative(abelian)  $+$)
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{lemma}
-
-\begin{lemma}prove for  ``$ (\mathbb{Q} (Ord) , + , \times  )  $''
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall x ,y ,z  \in \mathbb{Q} (Ord) \quad (x   y )  z  = x  (y   z )  $  (associative $\times$)
-        \item       $\forall x \in \mathbb{Q} (Ord) \quad x \cdot 1 = 1 \cdot x = x$  (identity  $\times$)
-        \item       $\forall x  \in \mathbb{Q} (Ord) - \{0\} \quad \exists y \in \mathbb{Q} (Ord) \quad x  y = y  x = 1$  (inverse  $\times$)
-        \item       $\forall x ,y  \in \mathbb{Q} (Ord) \quad x   y  = y   x $  (commutative(abelian)  $\times$)
-        \item       $\forall x ,y ,z  \in \mathbb{Q} (Ord) \quad \Big(x   (y  + z ) = x   y  +  x   z  \Big)
-                  \land     \Big((x  + y )  z  = x   z  +  y   z  \Big)  $ (distributive $\times$)
-              % \item       $\forall x ,y   \in \mathbb{Q} (Ord) \quad   x y = 0   \to  x = 0  \lor  y = 0 $ (zero divisor free $\times$)
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{lemma}
-
-\begin{theorem}
-    \textbf{Order of fantacy Rational numbers($\mathbb{Q} (Ord)$)} prove for  ``$ (\mathbb{Q} (Ord) , <_{\mathbb{Q} (Ord)}  )  $''
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item        is linearly ordered.
-        \item       $ \Big( \forall x \in \mathbb{Q} (Ord) \quad   \exists y \in \mathbb{Q} (Ord) \quad  x < y \Big)
-                  \land \Big( \forall x \in \mathbb{Q} (Ord) \quad   \exists y \in \mathbb{Q} (Ord) \quad   y < x \Big)  $ (doesn't have endpoints)
-        \item       $  \forall x,y  \in \mathbb{Q} (Ord) \quad  \exists z \in \mathbb{Q} (Ord)  \quad  x \not= y \to  x < z < y  $ (dense)
-        \item       $\forall x ,y ,z \in \mathbb{Q} (Ord) \quad x  < y  \to x  + z < y  + z  $
-        \item       $\forall x ,y ,z \in \mathbb{Q} (Ord) \quad x  < y  \land 0 < z \to x  z < y  \gamma   $
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-
-\end{theorem}
-
-\section{fantacy Real numbers ``$\mathbb{R} (Ord)$''}
-
-before we we get to lesson define function ``$|\_| : \mathbb{Q} (Ord) \times
-    \mathbb{Q} (Ord) \to \mathbb{Q} (Ord)$'' like this.
-\[  |x| :=
-    \left\{
-    \begin{array}{l}
-        x  \quad 0 \leq x \\
-        -x  \quad  x < 0
-    \end{array}
-    \right.
-\]
-
-if you are not familiar to this notation it means ``$ |\_| := \{ (x,y) \in
-    \mathbb{Q} (Ord) \times \mathbb{Q} (Ord) \mid (0 \leq x \to y=x ) \land ( x < 0
-    \to y = -x ) \} $''. learn this notation because we want to use later.
-
-we learned about ``$\mathbb{Q} (Ord)$'' before and we constructed structure
-``$(\mathbb{Q} (Ord) , + , \cdot , <)$''. now assume $\mathbb{Q}
-    (Ord)^{Ord}$(we know what does it mean by the definition. it means all the
-sequences of $\mathbb{Q} (Ord)$). we don't want it all we just want a subset.
-
-\begin{definition}\textbf{Cauchy sequence} is a sequence like ``$(a_i)_{i \in Ord} \in \mathbb{Q} (Ord)^{Ord}$'' s.t. elements of it get infinitely
-    close to each other i.e.
-    \[  Cauchy(a_i)_{i \in Ord} : \forall \epsilon > 0 \quad \exists N  \quad \forall n,m   \quad  N < n , m < roof(N) \to | a_n - a_m | < \epsilon   \]
-\end{definition}
-
-we usually give ``$N$'' natural numbers but it's not necessary.
-
-we define an equivalence relation ``$ (a_i)_{i \in Ord} \sim (b_i)_{i \in Ord}
-    : \forall \epsilon > 0 \quad \exists N \quad \forall n \quad N < n < roof(N)
-    \to | a_n - b_n | < \epsilon $''(check it's an equivalence relation). we denote
-every $[(a_i)_{i \in Ord}]$ with $[a_i]_{i \in Ord}$.
-
-\begin{definition}\textbf{fantacy Real numbers ``$\mathbb{R} (Ord)$''} is a set
-    \[ \mathbb{R} (Ord) :=  Cauchy/ \sim  \]
-    we denote it's members with ``$r_0 , r_1 ,...$''
-\end{definition}
-
-in this system ``$ 0 := [0]_{i \in Ord}$'' and ``$ 1 := [1]_{i \in Ord}$'' and
-``$ \forall q \in \mathbb{Q} (Ord) \quad q := [q]_{i \in Ord}$''. so we can say
-``$ Ord \subseteq \mathbb{Z} (Ord) \subseteq \mathbb{Q} (Ord) \subseteq
-    \mathbb{R} (Ord)$''.
-
-\begin{theorem}\textbf{Summation} there is a unique function ``$+_{\mathbb{R} (Ord)} :\mathbb{R} (Ord) \times \mathbb{R} (Ord) \to \mathbb{R} (Ord)$'' s.t.
-
-    \[  [a_i]_{i \in Ord} +_{\mathbb{R} (Ord)} [b_i]_{i \in Ord}  = [a_i + b_i]_{i \in Ord} \]
-
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{theorem}
-
-\begin{theorem}\textbf{Multiplication} there is a unique function ``$\times_{\mathbb{R} (Ord)} :\mathbb{R} (Ord) \times \mathbb{R} (Ord) \to \mathbb{R} (Ord)$'' s.t.
-
-    \[  [a_i]_{i \in Ord} \times_{\mathbb{R} (Ord)} [b_i]_{i \in Ord}  = [a_i  b_i]_{i \in Ord} \]
-
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{theorem}
-
-\begin{definition}\textbf{Order in $\mathbb{R} (Ord)$} .\\
-    \[  [a_i]_{i \in Ord} <_{\mathbb{R} (Ord)} [b_i]_{i \in Ord}  :
-        \exists \epsilon > 0 \quad \exists N  \quad \forall n \quad N < n < roof(N)
-        \to    b_n - a_n  > \epsilon  \]
-\end{definition}
-
-this lemma let us use ``$<$'' instead of ``$<_{\mathbb{R} (Ord)}$'', ``$+$''
-instead of ``$+_{\mathbb{R} (Ord)}$'' and ``$\times$'' instead of
-``$\times_{\mathbb{R} (Ord)}$''.
-
-\begin{lemma}prove.
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $/ \therefore   \forall x,y \in \mathbb{Q} (Ord) \quad x <_{\mathbb{R} (Ord)} y  \leftrightarrow x  < y$
-        \item       $/ \therefore   \forall x,y \in \mathbb{Q} (Ord) \quad x +_{\mathbb{R} (Ord)} y  = x  + y$
-        \item       $/ \therefore   \forall x,y \in \mathbb{Q} (Ord) \quad x \times_{\mathbb{R} (Ord)} y  = x  \times y$
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{lemma}
-
-we denote ``Multiplication'' with ``$x \cdot y$'' and ``$x y$'' too.
-
-\begin{lemma}prove.
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall x ,y ,z  \in \mathbb{R} (Ord) \quad (x +y )+z  = x +(y +z )  $  (associative $+$)
-        \item       $\forall x \in \mathbb{R} (Ord) \quad x + 0 = 0 + x = x$  (identity  $+$)
-        \item       $\forall x \in \mathbb{R} (Ord) \quad \exists y \in \mathbb{R} (Ord) \quad x + y = y + x = 0$ (inverse  $+$)
-        \item       $\forall x ,y  \in \mathbb{R} (Ord) \quad x +y  = y +x $  (commutative(abelian)  $+$)
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{lemma}
-
-\begin{lemma}prove.
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall x ,y ,z  \in \mathbb{R} (Ord) \quad (x   y )  z  = x  (y   z )  $  (associative $\times$)
-        \item       $\forall x \in \mathbb{R} (Ord) \quad x \cdot 1 = 1 \cdot x = x$  (identity  $\times$)
-        \item       $\forall x  \in \mathbb{R} (Ord) - \{0\} \quad \exists y \in \mathbb{R} (Ord) \quad x  y = y  x = 1$  (inverse  $\times$)
-        \item       $\forall x ,y  \in \mathbb{R} (Ord) \quad x   y  = y   x $  (commutative(abelian)  $\times$)
-        \item       $\forall x ,y ,z  \in \mathbb{R} (Ord) \quad \Big(x   (y  + z ) = x   y  +  x   z  \Big)
-                  \land     \Big((x  + y )  z  = x   z  +  y   z  \Big)  $  (distributive $\times$)
-              % \item       $\forall x ,y   \in \mathbb{R} (Ord) \quad   x y = 0   \to  x = 0  \lor  y = 0 $ (zero divisor free $\times$)
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{lemma}
-
-\begin{theorem}
-    \textbf{Linear order of fantacy Real numbers($\mathbb{R} (Ord)$)} prove   ``$ (\mathbb{R} (Ord) , <_{\mathbb{R} (Ord)}  )  $
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item        is linearly ordered.
-        \item       $ \Big( \forall x \in \mathbb{R} (Ord) \quad   \exists y \in \mathbb{R} (Ord) \quad  x < y \Big)
-                  \land \Big( \forall x \in \mathbb{R} (Ord) \quad   \exists y \in \mathbb{R} (Ord) \quad   y < x \Big)  $ (doesn't have endpoints)
-        \item       $  \forall x,y  \in \mathbb{R} (Ord) \quad \exists z \in \mathbb{R} (Ord) \quad  x \not= y \to   x < z < y  $ (dense)
-        \item       $\forall x ,y ,z \in \mathbb{R} (Ord) \quad x  < y  \to x  + z < y  + z  $
-        \item       $\forall x ,y ,z \in \mathbb{R} (Ord) \quad x  < y  \land 0 < z \to x  z < y  k  $
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{theorem}
-
-\section{fantacy Complex numbers``$\mathbb{C} (Ord)$''}
-
-we learned about ``$\mathbb{R} (Ord)$'' before and we constructed structure
-``$(\mathbb{R} (Ord) , + , \cdot , <)$''.
-
-\begin{definition}\textbf{fantacy Complex numbers``$\mathbb{C} (Ord)$''} is a set
-    \[ \mathbb{C} (Ord) := \mathbb{R} (Ord) \times \mathbb{R} (Ord) \]
-    we denote it's members with ``$z_0 , x ,...$''
-\end{definition}
-
-in this system ``$ 0 := (0,0)$'' and ``$ \forall n \in \mathbb{R} (Ord) \quad r
-    := (r,0)$'' . in general ``$\forall x,y \in \mathbb{R} (Ord) \quad x + iy :=
-    (x,y)$''. so we can say ``$Ord \subseteq \mathbb{Z} (Ord) \subseteq \mathbb{Q}
-    (Ord) \subseteq \mathbb{R} (Ord) \subseteq \mathbb{C} (Ord)$''.
-
-\begin{theorem}\textbf{Summation} there is a unique function ``$+_{\mathbb{C} (Ord)} :\mathbb{C} (Ord) \times \mathbb{C} (Ord) \to \mathbb{C} (Ord)$'' s.t.
-
-    \[ \forall x , y , z , u \in \mathbb{R} (Ord) \quad (x , z) +_{\mathbb{C} (Ord)}  (y , u)  = (x + y, z + u) \]
-
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{theorem}
-
-\begin{theorem}\textbf{Multiplication} there is a unique function ``$\times_{\mathbb{C} (Ord)} :\mathbb{C} (Ord) \times \mathbb{C} (Ord) \to \mathbb{C} (Ord)$'' s.t.
-
-    \[ \forall x , y , z , u \in \mathbb{R} (Ord) \quad (x , z) \times_{\mathbb{C} (Ord)} (y , u)  = (x y  - z u , x u + y z) \]
-
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{theorem}
-
-this lemma let us use ``$+$'' instead of ``$+_{\mathbb{C} (Ord)}$'' and
-``$\times$'' instead of ``$\times_{\mathbb{C} (Ord)}$''.
-
-\begin{lemma}prove.
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $/ \therefore   \forall x,y \in \mathbb{R} (Ord) \quad x +_{\mathbb{C} (Ord)} y  = x  + y$
-        \item       $/ \therefore   \forall x,y \in \mathbb{R} (Ord) \quad x \times_{\mathbb{C} (Ord)} y  = x  \times y$
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{lemma}
-
-we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
-
-\begin{lemma}prove for  ``$ (\mathbb{C} (Ord) , +  )  $''
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall x ,y ,z  \in \mathbb{C} (Ord) \quad (x + y )+ z  = x + (y + z )  $ (associative $+ $)
-        \item       $\forall z \in \mathbb{C} (Ord) \quad z +  0 = 0 +  z = z$ (identity  $+ $)
-        \item       $\forall z \in \mathbb{C} (Ord) \quad \exists y \in \mathbb{C} (Ord) \quad z +  y = y +  z = 0$  (inverse  $+ $)
-        \item       $\forall x ,y  \in \mathbb{C} (Ord) \quad x + y  = y + x $   (commutative(abelian)  $+ $)
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{lemma}
-
-\begin{lemma}prove for  ``$ (\mathbb{C} (Ord) , + , \times )  $''
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall x ,y ,z  \in \mathbb{C} (Ord) \quad (x   y )  z  = x  (y   z )  $ (associative $\times$)
-        \item       $\forall z \in \mathbb{C} (Ord) \quad z \cdot 1 = 1 \cdot  z = z$ (identity  $\times$)
-        \item       $\forall x ,y  \in \mathbb{C} (Ord) \quad x   y  = y   x $  (commutative(abelian)  $\times$)
-        \item       $\forall x ,y ,z  \in \mathbb{C} (Ord) \quad \Big(x   (y  + z ) = x   y  +  x   z  \Big)
-                  \land     \Big((x  + y )  z  = x   z  +  y   z  \Big)  $ (distributive $\times$)
-              % \item       $\forall x ,y   \in \mathbb{C} (Ord) \quad   x y = 0   \to  x = 0  \lor  y = 0 $ (zero divisor free $\times$)
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{lemma}
-
-\begin{theorem}\textbf{Exponents} there is a unique function ``$(\_)^{(\_)} :\mathbb{C} (Ord) \times Ord \to \mathbb{C} (Ord)$'' s.t.
-
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall x \in \mathbb{C} (Ord) \quad x ^ 0 = 1$
-        \item       $\forall x \in \mathbb{C} (Ord) \quad \forall n \in Ord \quad  x ^ {s(n)} = x ^ n \cdot x   $
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{theorem}
-
-\begin{lemma}prove for ``$(\mathbb{C} (Ord) , + , \cdot , (\_)^{(\_)} )$''
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall x   \in \mathbb{Z} (Ord) \quad \forall m ,n  \in Ord \quad  x^m  \cdot  x^n = x^{m  + n}  $
-        \item       $\forall x   \in \mathbb{Z} (Ord) \quad \forall m ,n  \in Ord \quad (x^m)^n = x^{m n}  $
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{lemma}
-
-\begin{theorem}\textbf{Exponents} there is a unique function ``$(\_)^{(\_)} :\mathbb{C} (Ord) \times \mathbb{Z} (Ord) \to \mathbb{C} (Ord)$'' s.t.
-
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall x \in \mathbb{C} (Ord) \quad x ^ 0 = 1$
-        \item       $\forall x \in \mathbb{C} (Ord) \quad \forall m ,n  \in Ord \quad  x ^ {m-n} = \frac{x ^ m}{x^n}    $
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{theorem}
-
-\begin{lemma}prove for ``$(\mathbb{C} (Ord) , + , \cdot  )$''
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall x   \in \mathbb{C} (Ord) \quad \forall y ,z  \in \mathbb{Z} (Ord) \quad  x^y  \cdot  x^z = x^{y  + z}  $
-        \item       $\forall x   \in \mathbb{C} (Ord) \quad \forall y ,z  \in \mathbb{Z} (Ord) \quad (x^y)^z = x^{y z}  $
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{lemma}
-
-\begin{theorem}\textbf{Big Sum} if ``$a : Ord \to \mathbb{C} (Ord)$'' there is a unique function ``$\sum_{i = 0}^{(\_)} (\_)  :\mathbb{C} (Ord) \times Ord \to \mathbb{C} (Ord)$'' s.t.
-
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall a \quad  \sum_{i = 0}^{0} (a_0)  = a_0$
-        \item       $\forall a \quad \forall n \in Ord \quad  \sum_{i = 0}^{s(n)} a_{s(n)} = \sum_{i = 0}^{n} a_n + a_{s(n)}  $
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{theorem}
-
-\begin{lemma}prove for ``$(\mathbb{C} (Ord) , + , \cdot  )$''
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall n   \in Ord \quad \forall a , b   \quad  \sum_{i = 0}^n a_n + \sum_{i = 0}^n b_n = \sum_{i = 0}^n (a_n + b_n )  $
-        \item       $\forall n   \in Ord \quad \forall a   \quad k \sum_{i = 0}^n a_n = \sum_{i = 0}^n ka_n $
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{lemma}
-
-\begin{theorem}\textbf{Big Product} if ``$a : Ord \to \mathbb{C} (Ord)$'' there is a unique function ``$\prod_{i = 0}^{(\_)} (\_)  :\mathbb{C} (Ord) \times Ord \to \mathbb{C} (Ord)$'' s.t.
-
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall a \quad  \prod_{i = 0}^0 (a_0)  = a_0$
-        \item       $\forall a \quad \forall n \in Ord \quad  \prod_{i = 0}^{s(n)} a_{s(n)} = \prod_{i = 0}^n a_n \cdot a_{s(n)}  $
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{theorem}
-
-\begin{lemma}prove for ``$(\mathbb{C} (Ord) , + , \cdot  )$''
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       $\forall n   \in Ord \quad \forall a , b   \quad  \prod_{i = 0}^n a_n  \prod_{i = 0}^n b_n = \prod_{i = 0}^n (a_n  b_n )  $
-        \item       $\forall n   \in Ord \quad \forall a   \quad  (\prod_{i = 0}^n a_n)^k = \prod_{i = 0}^n (a_n)^k $
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{lemma}
 
 \chapter{New beginning for calculus }
+\section{Limits}
+
+
+
+First we have to fix a ``Main variable''. It is almost all the time $x$.
+
+(sometimes it is ``$t$'').
+
+\begin{definition}
+Let $ f:A\to\mathbb{R} $
+where $A\subseteq\mathbb{R}$, and let $a$ be a limit point of $A$.
+We say that $L\in\mathbb{R}$ is the \textbf{Limit} of $f$ as $x$
+approaches $a$ if
+
+\[
+\forall\varepsilon>0\ \exists\delta>0\
+\forall x\in A
+\left(
+0<|x-a|<\delta
+\to
+|f(x)-L|<\varepsilon
+\right).
+\]
+
+We write
+\[
+\lim_{x\to a}f(x)=L.
+\]
+
+\end{definition}
+
+
+
+
+\begin{theorem}[Infinitesimal Characterization of Limits]
+Let$
+f:A\to\mathbb{R},
+\qquad
+A\subseteq\mathbb{R},
+$and let $a$ be a limit point of $A$.Then$\lim_{x\to a}f(x)=L$
+if and only if, for every nonzero infinitesimal$\varepsilon\in\mathbb{R}(\mathrm{Ord})$
+such that
+$a+\varepsilon\in A,$
+we have
+${}^*f(a+\varepsilon)\approx L.$
+Equivalently,
+$$
+\lim_{x\to a}f(x)=L
+\leftrightarrow
+\operatorname{st}
+\left(
+{}^*f(a+\varepsilon)
+\right)
+=L.
+$$
+
+\end{theorem}
+\begin{proof}
+
+Suppose first that $\lim_{x\to a}f(x)=L$. Let $\varepsilon$ be a nonzero infinitesimal such that $a+\varepsilon\in A$. We prove that
+
+$$
+{}^*f(a+\varepsilon)\approx L.
+$$
+
+Let $\varepsilon>0$. By the definition of the limit, there exists $\delta>0$ such that $0<|x-a|<\delta$ implies $|f(x)-L|<\varepsilon$. Since $\varepsilon$ is infinitesimal, $|\varepsilon|<\delta$. Therefore
+
+$$
+0<|(a+\varepsilon)-a|<\delta.
+$$
+
+Hence
+
+$$
+|{}^*f(a+\varepsilon)-L|<\varepsilon.
+$$
+
+Since this holds for every $\varepsilon>0$,
+
+$$
+{}^*f(a+\varepsilon)\approx L.
+$$
+
+Conversely, suppose that for every nonzero infinitesimal $\varepsilon$ such that $a+\varepsilon\in{}^*A$, we have ${}^*f(a+\varepsilon)\approx L$. Suppose, toward a contradiction, that $\lim_{x\to a}f(x)\neq L$. Then there exists $\varepsilon>0$ such that for every $\delta>0$ there exists $x\in A$ such that $0<|x-a|<\delta$ and $|f(x)-L|\geq\varepsilon$.
+
+In particular, for every $n\in\mathbb{N}$ there exists $x_n\in A$ such that
+
+$$
+0<|x_n-a|<\frac1n
+$$
+
+and
+
+$$
+|f(x_n)-L|\geq\varepsilon.
+$$
+
+By the nonstandard extension, taking an infinite index $N$, we obtain
+
+$$
+0<|x_N-a|<\frac1N.
+$$
+
+Since $N$ is infinite, $1/N$ is infinitesimal. Therefore $\varepsilon:=x_N-a$ is a nonzero infinitesimal. But
+
+$$
+|{}^*f(a+\varepsilon)-L|
+=
+|f(x_N)-L|
+\geq\varepsilon,
+$$
+
+so ${}^*f(a+\varepsilon)\not\approx L$, contradicting the assumption. Therefore $\lim_{x\to a}f(x)=L$.
+
+Finally,
+
+$$
+{}^*f(a+\varepsilon)\approx L
+$$
+
+is equivalent to
+
+$$
+\operatorname{st}\bigl({}^*f(a+\varepsilon)\bigr)=L.
+$$
+
+\end{proof}
+
+
+\begin{theorem}[Uniqueness of Limit]
+
+If $\lim_{x\to a}f(x)=L$ and $\lim_{x\to a}f(x)=M$, then $L=M$.
+
+\end{theorem}
+
+\begin{proof}
+
+Let $\varepsilon$ be a nonzero infinitesimal such that $a+\varepsilon\in{}^*A$. By the Infinitesimal Characterization of Limits,
+
+$$
+\operatorname{st}\bigl({}^*f(a+\varepsilon)\bigr)=L
+$$
+
+and
+
+$$
+\operatorname{st}\bigl({}^*f(a+\varepsilon)\bigr)=M.
+$$
+
+Hence
+
+$$
+L=M.
+$$
+
+\end{proof}
+
+
+\begin{theorem}[Limit Laws]
+
+Suppose $\lim_{x\to a}f(x)=L$ and $\lim_{x\to a}g(x)=M$. Then $\lim_{x\to a}(f(x)+g(x))=L+M$, $\lim_{x\to a}(f(x)-g(x))=L-M$, and $\lim_{x\to a}f(x)g(x)=LM$. If $M\neq0$, then $\lim_{x\to a}\frac{f(x)}{g(x)}=\frac{L}{M}$. Moreover, for every $c\in\mathbb{R}$, $\lim_{x\to a}cf(x)=cL$.
+
+\end{theorem}
+
+\begin{proof}
+
+Let $\varepsilon$ be a nonzero infinitesimal such that $a+\varepsilon\in A$. By the Infinitesimal Characterization of Limits,
+
+$$
+{}^*f(a+\varepsilon)\approx L
+\qquad\text{and}\qquad
+{}^*g(a+\varepsilon)\approx M.
+$$
+
+Therefore, by the Standard Part Theorem,
+
+$$
+\operatorname{st}\bigl({}^*f(a+\varepsilon)+{}^*g(a+\varepsilon)\bigr)
+=L+M.
+$$
+
+Similarly,
+
+$$
+\operatorname{st}\bigl({}^*f(a+\varepsilon)-{}^*g(a+\varepsilon)\bigr)
+=L-M.
+$$
+
+For the product,
+
+$$
+\operatorname{st}\bigl({}^*f(a+\varepsilon){}^*g(a+\varepsilon)\bigr)
+=
+\operatorname{st}({}^*f(a+\varepsilon))
+\operatorname{st}({}^*g(a+\varepsilon))
+=LM.
+$$
+
+If $M\neq0$, then $\operatorname{st}({}^*g(a+\varepsilon))=M\neq0$, and hence ${}^*g(a+\varepsilon)\neq0$. Therefore,
+
+$$
+\operatorname{st}\left(
+\frac{{}^*f(a+\varepsilon)}
+{{}^*g(a+\varepsilon)}
+\right)
+=
+\frac{\operatorname{st}({}^*f(a+\varepsilon))}
+{\operatorname{st}({}^*g(a+\varepsilon))}
+=
+\frac{L}{M}.
+$$
+
+Finally, for every $c\in\mathbb{R}$,
+
+$$
+\operatorname{st}\bigl(c{}^*f(a+\varepsilon)\bigr)
+=
+c\operatorname{st}({}^*f(a+\varepsilon))
+=cL.
+$$
+
+Thus all the stated limit laws hold.
+
+\end{proof}
+
+
+\begin{theorem}[Squeeze Theorem]
+
+Suppose that for all $x$ sufficiently close to $a$, $f(x)\leq g(x)\leq h(x)$. If $\lim_{x\to a}f(x)=L$ and $\lim_{x\to a}h(x)=L$, then $\lim_{x\to a}g(x)=L$.
+
+\end{theorem}
+
+\begin{proof}
+
+Let $\varepsilon$ be a nonzero infinitesimal such that $a+\varepsilon\in{}^*A$. Since the inequality holds for all $x$ sufficiently close to $a$, by the Transfer Principle,
+
+$$
+{}^*f(a+\varepsilon)
+\leq
+{}^*g(a+\varepsilon)
+\leq
+{}^*h(a+\varepsilon).
+$$
+
+By the Infinitesimal Characterization of Limits,
+
+$$
+{}^*f(a+\varepsilon)\approx L
+\qquad\text{and}\qquad
+{}^*h(a+\varepsilon)\approx L.
+$$
+
+Hence, by the Squeeze Principle for infinitesimals,
+
+$$
+{}^*g(a+\varepsilon)\approx L.
+$$
+
+Therefore, by the Infinitesimal Characterization of Limits,
+
+$$
+\lim_{x\to a}g(x)=L.
+$$
+
+\end{proof}
+
+\begin{theorem}[Absolute Value]
+
+If $\lim_{x\to a}f(x)=L$, then $\lim_{x\to a}|f(x)|=|L|$.
+
+\end{theorem}
+
+\begin{proof}
+
+Since ${}^*f(a+\varepsilon)\approx L$,
+
+$$
+\left|
+|{}^*f(a+\varepsilon)|-|L|
+\right|
+\leq
+|{}^*f(a+\varepsilon)-L|.
+$$
+
+Therefore,
+
+$$
+|{}^*f(a+\varepsilon)|\approx|L|.
+$$
+
+Hence, by the Infinitesimal Characterization of Limits,
+
+$$
+\lim_{x\to a}|f(x)|=|L|.
+$$
+
+\end{proof}
+\begin{theorem}[Composition of Limits]
+
+Let $\lim_{x\to a}g(x)=b$ and $\lim_{y\to b}f(y)=L$. Suppose that $g(x)\neq b$ whenever $x$ is sufficiently close to $a$ and $x\neq a$. Then $\lim_{x\to a}f(g(x))=L$.
+
+\end{theorem}
+
+\begin{proof}
+
+Let $\varepsilon$ be a nonzero infinitesimal such that $a+\varepsilon\in{}^*A$. Since $\lim_{x\to a}g(x)=b$,
+
+$$
+{}^*g(a+\varepsilon)\approx b.
+$$
+
+By the Transfer Principle and the assumption on $g$, we have ${}^*g(a+\varepsilon)\neq b$. Therefore, by the Infinitesimal Characterization of $\lim_{y\to b}f(y)=L$,
+
+$$
+{}^*f\bigl({}^*g(a+\varepsilon)\bigr)\approx L.
+$$
+
+Since ${}^*f\bigl({}^*g(a+\varepsilon)\bigr)={}^*(f\circ g)(a+\varepsilon)$,
+
+$$
+{}^*(f\circ g)(a+\varepsilon)\approx L.
+$$
+
+Hence, by the Infinitesimal Characterization of Limits,
+
+$$
+\lim_{x\to a}f(g(x))=L.
+$$
+
+\end{proof}
+
+\begin{theorem}[Polynomial Limit]
+
+Let $p(x)=a_0+a_1x+\cdots+a_nx^n$. Then $\lim_{x\to a}p(x)=p(a)$.
+
+\end{theorem}
+
+\begin{proof}
+
+By the Limit Laws,
+
+$$
+\lim_{x\to a}x^k=a^k
+$$
+
+for every $k\in\mathbb{N}$. Therefore,
+
+$$
+\lim_{x\to a}p(x)
+=
+a_0+a_1a+\cdots+a_na^n
+=
+p(a).
+$$
+
+\end{proof}
+
+\begin{theorem}[Rational Function Limit]
+
+Let $r(x)=\frac{p(x)}{q(x)}$ where $p$ and $q$ are polynomials. If $q(a)\neq0$, then
+
+$$
+\lim_{x\to a}r(x)=\frac{p(a)}{q(a)}.
+$$
+
+\end{theorem}
+
+\begin{proof}
+
+Let $\varepsilon$ be a nonzero infinitesimal such that $a+\varepsilon\in{}^*A$. By the Polynomial Limit Theorem,
+
+$$
+\operatorname{st}\bigl({}^*p(a+\varepsilon)\bigr)=p(a)
+$$
+
+and
+
+$$
+\operatorname{st}\bigl({}^*q(a+\varepsilon)\bigr)=q(a)\neq0.
+$$
+
+Hence ${}^*q(a+\varepsilon)\neq0$. By the Standard Part Theorem,
+
+$$
+\operatorname{st}\left(
+\frac{{}^*p(a+\varepsilon)}
+{{}^*q(a+\varepsilon)}
+\right)
+=
+\frac{
+\operatorname{st}({}^*p(a+\varepsilon))
+}{
+\operatorname{st}({}^*q(a+\varepsilon))
+}
+=
+\frac{p(a)}{q(a)}.
+$$
+
+Therefore,
+
+$$
+\lim_{x\to a}r(x)=\frac{p(a)}{q(a)}.
+$$
+
+\end{proof}
+
+
+\begin{definition}
+Let
+
+$$
+f:A\to\mathbb{R}
+$$
+
+and let $a$ be a limit point of $A$.
+
+We say that $f$ has the \textbf{Right Limit} $L$ at $a$ if
+
+$$
+\forall\varepsilon>0\ \exists\delta>0\ \forall x\in A
+\left(
+a<x<a+\delta
+\Longrightarrow
+|f(x)-L|<\varepsilon
+\right).
+$$
+
+We write
+
+$$
+\lim_{x\to a^+}f(x)=L.
+$$
+
+Similarly, we say that $f$ has the \textbf{Left Limit} $L$ at $a$ if
+
+$$
+\forall\varepsilon>0\ \exists\delta>0\ \forall x\in A
+\left(
+a-\delta<x<a
+\Longrightarrow
+|f(x)-L|<\varepsilon
+\right).
+$$
+
+We write
+
+$$
+\lim_{x\to a^-}f(x)=L.
+$$
+
+\end{definition}
+
+\begin{theorem}[Infinitesimal Characterization of One-Sided Limits]
+We have
+
+$$
+\lim_{x\to a^+}f(x)=L
+$$
+
+if and only if
+
+$$
+{}^*f(a+\varepsilon)\approx L
+$$
+
+for every positive infinitesimal $\varepsilon$ such that
+
+$$
+a+\varepsilon\in A.
+$$
+
+Similarly,
+
+$$
+\lim_{x\to a^-}f(x)=L
+$$
+
+if and only if
+
+$$
+{}^*f(a+\varepsilon)\approx L
+$$
+
+for every negative infinitesimal $\varepsilon$ such that
+
+$$
+a+\varepsilon\in A.
+$$
+
+\end{theorem}
+
+\begin{theorem}[One-Sided Limits]
+The following are equivalent:
+
+$$
+\lim_{x\to a}f(x)=L
+$$
+
+and
+
+$$
+\lim_{x\to a^-}f(x)
+=
+\lim_{x\to a^+}f(x)
+=
+L.
+$$
+
+\end{theorem}
+
+\begin{proof}
+If
+
+$$
+\lim_{x\to a}f(x)=L,
+$$
+
+then every nonzero infinitesimal is either positive or negative.
+Therefore
+
+$$
+{}^*f(a+\varepsilon)\approx L
+$$
+
+for both positive and negative infinitesimal $\varepsilon$.
+
+Hence
+
+$$
+\lim_{x\to a^-}f(x)=L
+$$
+
+and
+
+$$
+\lim_{x\to a^+}f(x)=L.
+$$
+
+Conversely, suppose
+
+$$
+\lim_{x\to a^-}f(x)=L
+$$
+
+and
+
+$$
+\lim_{x\to a^+}f(x)=L.
+$$
+
+Every nonzero infinitesimal $\varepsilon$ is either positive or negative.
+Therefore
+
+$$
+{}^*f(a+\varepsilon)\approx L.
+$$
+
+Hence
+
+$$
+\lim_{x\to a}f(x)=L.
+$$
+
+\end{proof}
+
+\begin{definition}
+We say that
+
+$$
+f(x)
+$$
+
+has the \textbf{Limit $+\infty$} at $a$ if
+
+$$
+\forall M>0\ \exists\delta>0\ \forall x\in A
+\left(
+0<|x-a|<\delta
+\Longrightarrow
+f(x)>M
+\right).
+$$
+
+We write
+
+$$
+\lim_{x\to a}f(x)=+\infty.
+$$
+
+Similarly,
+
+$$
+\lim_{x\to a}f(x)=-\infty
+$$
+
+if
+
+$$
+\forall M>0\ \exists\delta>0\ \forall x\in A
+\left(
+0<|x-a|<\delta
+\Longrightarrow
+f(x)<-M
+\right).
+$$
+
+\end{definition}
+
+\begin{theorem}[Infinitesimal Characterization of Infinite Limits]
+We have
+
+$$
+\lim_{x\to a}f(x)=+\infty
+$$
+
+if and only if
+
+$$
+{}^*f(a+\varepsilon)
+$$
+
+is positive infinite for every nonzero infinitesimal $\varepsilon$ such that
+
+$$
+a+\varepsilon\in A.
+$$
+
+Similarly,
+
+$$
+\lim_{x\to a}f(x)=-\infty
+$$
+
+if and only if
+
+$$
+{}^*f(a+\varepsilon)
+$$
+
+is negative infinite for every such $\varepsilon$.
+\end{theorem}
+
+\begin{definition}
+Let
+
+$$
+f:A\to\mathbb{R}
+$$
+
+where $A\subseteq\mathbb{R}$ is unbounded above.
+
+We say that
+
+$$
+\lim_{x\to\infty}f(x)=L
+$$
+
+if
+
+$$
+\forall\varepsilon>0\ \exists M>0\ \forall x\in A
+\left(
+x>M
+\Longrightarrow
+|f(x)-L|<\varepsilon
+\right).
+$$
+
+\end{definition}
+
+\begin{theorem}[Infinitesimal Characterization of Limits at Infinity]
+We have
+
+$$
+\lim_{x\to\infty}f(x)=L
+$$
+
+if and only if
+
+$$
+f(H)\approx L
+$$
+
+for every positive infinite
+
+$$
+H\in\mathbb{R}(\mathrm{Ord})
+$$
+
+such that
+
+$$
+H\in A.
+$$
+
+Equivalently,
+
+$$
+\lim_{x\to\infty}f(x)=L
+\iff
+\operatorname{st}(f(H))=L.
+$$
+
+\end{theorem}
+
+\begin{proof}
+Suppose
+
+$$
+\lim_{x\to\infty}f(x)=L.
+$$
+
+Let $H$ be positive infinite.
+
+Suppose that
+
+$$
+f(H)\not\approx L.
+$$
+
+Then there exists
+
+$$
+\varepsilon>0
+$$
+
+such that
+
+$$
+|f(H)-L|\geq\varepsilon.
+$$
+
+By the definition of the limit, there exists $M>0$ such that
+
+$$
+x>M
+$$
+
+implies
+
+$$
+|f(x)-L|<\varepsilon.
+$$
+
+Since $H$ is positive infinite,
+
+$$
+H>M.
+$$
+
+Therefore
+
+$$
+|f(H)-L|<\varepsilon,
+$$
+
+a contradiction.
+
+Hence
+
+$$
+f(H)\approx L.
+$$
+
+Conversely, suppose that
+
+$$
+f(H)\approx L
+$$
+
+for every positive infinite $H\in A$.
+
+Suppose that
+
+$$
+\lim_{x\to\infty}f(x)\neq L.
+$$
+
+Then there exists $\varepsilon>0$ such that for every $M>0$ there exists
+$x\in A$ satisfying
+
+$$
+x>M
+$$
+
+and
+
+$$
+|f(x)-L|\geq\varepsilon.
+$$
+
+Thus, for every $n\in\mathbb{N}$, there exists $x_n\in A$ such that
+
+$$
+x_n>n
+$$
+
+and
+
+$$
+|f(x_n)-L|\geq\varepsilon.
+$$
+
+Taking an infinite index $N$ gives
+
+$$
+x_N>N.
+$$
+
+Hence $x_N$ is positive infinite. But
+
+$$
+|f(x_N)-L|\geq\varepsilon,
+$$
+
+so
+
+$$
+f(x_N)\not\approx L,
+$$
+
+contradicting the assumption.
+
+Therefore
+
+$$
+\lim_{x\to\infty}f(x)=L.
+$$
+
+\end{proof}
+
+\begin{definition}
+We say that
+
+$$
+\lim_{x\to\infty}f(x)=+\infty
+$$
+
+if
+
+$$
+\forall M>0\ \exists N>0\ \forall x\in A
+\left(
+x>N
+\Longrightarrow
+f(x)>M
+\right).
+$$
+
+Similarly,
+
+$$
+\lim_{x\to\infty}f(x)=-\infty
+$$
+
+if
+
+$$
+\forall M>0\ \exists N>0\ \forall x\in A
+\left(
+x>N
+\Longrightarrow
+f(x)<-M
+\right).
+$$
+
+\end{definition}
+
+\begin{theorem}[Infinitesimal Characterization of Infinite Limits at Infinity]
+We have
+
+$$
+\lim_{x\to\infty}f(x)=+\infty
+$$
+
+if and only if
+
+$$
+f(H)
+$$
+
+is positive infinite for every positive infinite $H\in A$.
+
+Similarly,
+
+$$
+\lim_{x\to\infty}f(x)=-\infty
+$$
+
+if and only if
+
+$$
+f(H)
+$$
+
+is negative infinite for every positive infinite $H\in A$.
+\end{theorem}
+
+\begin{theorem}[Sequential Characterization of Limits]
+Let
+
+$$
+f:A\to\mathbb{R}
+$$
+
+and let $a$ be a limit point of $A$.
+
+Then
+
+$$
+\lim_{x\to a}f(x)=L
+$$
+
+if and only if, for every sequence
+
+$$
+(x_n)_{n\in\mathbb{N}}
+$$
+
+in $A$ such that
+
+$$
+x_n\neq a
+$$
+
+and
+
+$$
+\lim_{n\to\infty}x_n=a,
+$$
+
+we have
+
+$$
+\lim_{n\to\infty}f(x_n)=L.
+$$
+
+\end{theorem}
+
+\begin{theorem}[Limit of a Monotone Function]
+Suppose that $f$ is monotone on an interval.
+
+Then the one-sided limits of $f$ exist at every interior point of the
+interval, possibly taking the values $+\infty$ or $-\infty$.
+\end{theorem}
+
+\begin{theorem}[Limit of Powers]
+If
+
+$$
+\lim_{x\to a}f(x)=L,
+$$
+
+then for every
+
+$$
+n\in\mathbb{N},
+$$
+
+$$
+\lim_{x\to a}f(x)^n=L^n.
+$$
+
+\end{theorem}
+
+\begin{proof}
+This follows by repeated application of the Limit Laws.
+\end{proof}
+
+```
+
+One thing I would **not** put in this section yet is L'Hôpital's rule, Taylor's theorem, or anything involving derivatives. Those belong after your Derivatives section.
+
+The most important conceptual result of this section is the chain
+
+\[
+\boxed{
+\lim_{x\to a}f(x)=L
+\iff
+{}^*f(a+\varepsilon)\approx L
+\iff
+\operatorname{st}({}^*f(a+\varepsilon))=L
+}
+\]
+
+which you can then reuse directly in your definitions of **continuity, derivative, and eventually the Riemann integral**.
+```
+
+
+
+\begin{theorem}[Infinitesimal Characterization of Limits]
+Let
+\[
+f:A\to\mathbb{R}
+\]
+and let $a$ be a limit point of $A$.
+
+Then
+\[
+\lim_{x\to a}f(x)=L
+\]
+if and only if, for every nonzero infinitesimal
+\[
+\varepsilon\footnotemark \in\mathbb{R}(\mathrm{Ord})
+\]
+
+\footnotetext{\label{fn:infinitesimal}
+In this book, the symbol $\varepsilon$ denotes the distinguished
+infinitesimal traditionally used in nonstandard analysis. The symbol
+$\varepsilon$ is reserved for an arbitrary (variable) infinitesimal and Real positives.}
+
+
+such that
+\[
+a+\varepsilon\in A,
+\]
+we have
+\[
+{}^*f(a+\varepsilon)\approx L.
+\]
+
+Equivalently,
+\[
+\lim_{x\to a}f(x)=L
+\leftrightarrow
+\operatorname{st}
+\bigl(
+{}^*f(a+\varepsilon)
+\bigr)
+=L
+\]
+for every nonzero infinitesimal $\varepsilon$ such that
+$a+\varepsilon\in A$.
+\end{theorem}
+
+
+\begin{proof}
+Suppose first that
+\[
+\lim_{x\to a}f(x)=L.
+\]
+
+We must prove that
+\[
+{}^*f(a+\varepsilon)\approx L
+\]
+for every nonzero infinitesimal $\varepsilon$.
+
+Assume, toward a contradiction, that there exists a nonzero
+infinitesimal $\varepsilon$ such that
+\[
+{}^*f(a+\varepsilon)\not\approx L.
+\]
+
+Then
+\[
+|{}^*f(a+\varepsilon)-L|
+\]
+is not infinitesimal. Hence there exists
+\[
+\delta_0>0
+\]
+such that
+\[
+|{}^*f(a+\varepsilon)-L|\geq\delta_0.
+\]
+
+Since
+\[
+\lim_{x\to a}f(x)=L,
+\]
+there exists $\eta>0$ such that
+\[
+0<|x-a|<\eta
+\]
+implies
+\[
+|f(x)-L|<\delta_0.
+\]
+
+But $\varepsilon$ is infinitesimal, so
+\[
+0<|\varepsilon|<\eta.
+\]
+
+Taking
+\[
+x=a+\varepsilon
+\]
+gives
+\[
+|{}^*f(a+\varepsilon)-L|<\delta_0,
+\]
+contradicting
+\[
+|{}^*f(a+\varepsilon)-L|\geq\delta_0.
+\]
+
+Therefore
+\[
+{}^*f(a+\varepsilon)\approx L.
+\]
+
+Conversely, suppose that for every nonzero infinitesimal $\varepsilon$,
+\[
+{}^*f(a+\varepsilon)\approx L.
+\]
+
+Suppose, toward a contradiction, that
+\[
+\lim_{x\to a}f(x)\neq L.
+\]
+
+Then, by the negation of the classical definition of limit, there exists
+\[
+\delta_0>0
+\]
+such that for every $\eta>0$ there exists
+\[
+x\in A
+\]
+satisfying
+\[
+0<|x-a|<\eta
+\]
+and
+\[
+|f(x)-L|\geq\delta_0.
+\]
+
+Using this statement for
+\[
+\eta=\frac1n
+\]
+for every $n\in\mathbb{N}$, we obtain points $x_n\in A$ such that
+\[
+0<|x_n-a|<\frac1n
+\]
+and
+\[
+|f(x_n)-L|\geq\delta_0.
+\]
+
+By the nonstandard extension, this sequence has an infinite-index
+term $x_N$ satisfying
+\[
+0<|x_N-a|<\frac1N.
+\]
+
+Since $N$ is infinite,
+\[
+\frac1N
+\]
+is infinitesimal. Hence
+\[
+\varepsilon:=x_N-a
+\]
+is a nonzero infinitesimal.
+
+But
+\[
+|{}^*f(a+\varepsilon)-L|
+=
+|f(x_N)-L|
+\geq\delta_0,
+\]
+so
+\[
+{}^*f(a+\varepsilon)\not\approx L,
+\]
+contradicting our assumption.
+
+Therefore
+\[
+\lim_{x\to a}f(x)=L.
+\]
+
+Finally,
+\[
+{}^*f(a+\varepsilon)\approx L
+\]
+is equivalent to
+\[
+\operatorname{st}({}^*f(a+\varepsilon))=L.
+\]
+
+Hence
+\[
+\lim_{x\to a}f(x)=L
+\iff
+\operatorname{st}
+\bigl(
+{}^*f(a+\varepsilon)
+\bigr)
+=L.
+\]
+\end{proof}
+
+\begin{definition}
+Let
+\[
+f:A\to\mathbb{R}
+\]
+where $A\subseteq\mathbb{R}$ is unbounded above.
+
+We say that $L\in\mathbb{R}$ is the \textbf{Limit} of $f$ as $x$
+approaches infinity if
+\[
+\forall\varepsilon>0\ \exists M>0\
+\forall x\in A
+\left(
+x>M
+\Longrightarrow
+|f(x)-L|<\varepsilon
+\right).
+\]
+
+We write
+\[
+\lim_{x\to\infty}f(x)=L.
+\]
+
+\end{definition}
+
+
+\begin{definition}
+Let
+\[
+x\in\mathbb{R}(\mathrm{Ord}).
+\]
+
+We say that $x$ is \textbf{Infinite} if
+\[
+|x|>n
+\qquad
+\forall n\in\mathbb{N}.
+\]
+
+If
+\[
+x>n
+\qquad
+\forall n\in\mathbb{N},
+\]
+we say that $x$ is a \textbf{Positive Infinite} number.
+
+\end{definition}
+
+
+\begin{theorem}[Infinitesimal Characterization of the Limit at Infinity]
+Let
+\[
+f:A\to\mathbb{R}
+\]
+where $A\subseteq\mathbb{R}$ is unbounded above.
+
+Then
+\[
+\lim_{x\to\infty}f(x)=L
+\]
+if and only if, for every positive infinite
+\[
+H\in\mathbb{R}(\mathrm{Ord})
+\]
+such that
+\[
+H\in A,
+\]
+we have
+\[
+f(H)\approx L.
+\]
+
+Equivalently,
+\[
+\lim_{x\to\infty}f(x)=L
+\]
+if and only if
+\[
+\operatorname{st}(f(H))=L
+\]
+for every positive infinite $H\in A$.
+\end{theorem}
+
+
+\begin{proof}
+Suppose first that
+\[
+\lim_{x\to\infty}f(x)=L.
+\]
+
+Let $H$ be a positive infinite number.
+
+We want to prove
+\[
+f(H)\approx L.
+\]
+
+Suppose, toward a contradiction, that
+\[
+f(H)\not\approx L.
+\]
+
+Then there exists
+\[
+\varepsilon>0
+\]
+such that
+\[
+|f(H)-L|\geq\varepsilon.
+\]
+
+Since
+\[
+\lim_{x\to\infty}f(x)=L,
+\]
+there exists $M>0$ such that
+\[
+x>M
+\]
+implies
+\[
+|f(x)-L|<\varepsilon.
+\]
+
+But $H$ is positive infinite, so
+\[
+H>M.
+\]
+
+Therefore
+\[
+|f(H)-L|<\varepsilon,
+\]
+which is a contradiction.
+
+Hence
+\[
+f(H)\approx L.
+\]
+
+Conversely, suppose that for every positive infinite $H\in A$,
+\[
+f(H)\approx L.
+\]
+
+Suppose, toward a contradiction, that
+\[
+\lim_{x\to\infty}f(x)\neq L.
+\]
+
+Then there exists
+\[
+\varepsilon>0
+\]
+such that for every $M>0$ there exists
+\[
+x\in A
+\]
+satisfying
+\[
+x>M
+\]
+and
+\[
+|f(x)-L|\geq\varepsilon.
+\]
+
+In particular, for every
+\[
+n\in\mathbb{N},
+\]
+there exists $x_n\in A$ such that
+\[
+x_n>n
+\]
+and
+\[
+|f(x_n)-L|\geq\varepsilon.
+\]
+
+By the nonstandard extension, taking an infinite index $N$ gives
+\[
+x_N>N
+\]
+and
+\[
+|f(x_N)-L|\geq\varepsilon.
+\]
+
+Since $N$ is infinite,
+\[
+x_N
+\]
+is positive infinite.
+
+Let
+\[
+H:=x_N.
+\]
+
+Then
+\[
+H
+\]
+is positive infinite, but
+\[
+|f(H)-L|\geq\varepsilon.
+\]
+
+Therefore
+\[
+f(H)\not\approx L,
+\]
+contradicting the assumption.
+
+Hence
+\[
+\lim_{x\to\infty}f(x)=L.
+\]
+
+Finally,
+\[
+f(H)\approx L
+\]
+is equivalent to
+\[
+\operatorname{st}(f(H))=L.
+\]
+
+Therefore
+\[
+\lim_{x\to\infty}f(x)=L
+\iff
+\operatorname{st}(f(H))=L.
+\]
+\end{proof}
+
+\section{Continuity}
+
+First we have to fix a ``Main point''. It is almost all the time $a$.
+
+\begin{definition}
+Let
+\[
+f:A\to\mathbb{R}
+\]
+where $A\subseteq\mathbb{R}$, and let
+\[
+a\in A.
+\]
+
+We say that $f$ is \textbf{Continuous} at $a$ if
+\[
+\forall\varepsilon>0\ \exists\delta>0\
+\forall x\in A
+\left(
+|x-a|<\delta
+\Longrightarrow
+|f(x)-f(a)|<\varepsilon
+\right).
+\]
+
+\end{definition}
+
+
+\begin{theorem}[Continuity and Limits]
+Let
+\[
+f:A\to\mathbb{R}
+\]
+and let $a\in A$ be a limit point of $A$.
+
+Then $f$ is continuous at $a$ if and only if
+\[
+\lim_{x\to a}f(x)=f(a).
+\]
+\end{theorem}
+
+\begin{proof}
+Suppose first that $f$ is continuous at $a$.
+
+Then, by definition,
+\[
+\forall\varepsilon>0\ \exists\delta>0\
+\forall x\in A
+\left(
+|x-a|<\delta
+\Longrightarrow
+|f(x)-f(a)|<\varepsilon
+\right).
+\]
+
+Since $a$ is a limit point of $A$, this is precisely the definition of
+\[
+\lim_{x\to a}f(x)=f(a).
+\]
+
+Conversely, suppose
+\[
+\lim_{x\to a}f(x)=f(a).
+\]
+
+Then
+\[
+\forall\varepsilon>0\ \exists\delta>0\
+\forall x\in A
+\left(
+0<|x-a|<\delta
+\Longrightarrow
+|f(x)-f(a)|<\varepsilon
+\right).
+\]
+
+If
+\[
+x=a,
+\]
+then
+\[
+|f(x)-f(a)|=0<\varepsilon.
+\]
+
+Therefore
+\[
+|x-a|<\delta
+\Longrightarrow
+|f(x)-f(a)|<\varepsilon.
+\]
+
+Hence $f$ is continuous at $a$.
+\end{proof}
+
+
+\begin{theorem}[Infinitesimal Characterization of Continuity]
+Let
+\[
+f:A\to\mathbb{R}
+\]
+and let
+\[
+a\in A.
+\]
+
+Then $f$ is continuous at $a$ if and only if, for every infinitesimal
+\[
+\varepsilon\in\mathbb{R}(\mathrm{Ord}),
+\]
+such that
+\[
+a+\varepsilon\in A,
+\]
+we have
+\[
+{}^*f(a+\varepsilon)\approx f(a).
+\]
+
+Equivalently,
+\[
+f\text{ is continuous at }a
+\]
+if and only if
+\[
+\operatorname{st}
+\left(
+{}^*f(a+\varepsilon)
+\right)
+=
+f(a)
+\]
+for every infinitesimal $\varepsilon$ such that
+$a+\varepsilon\in A$.
+\end{theorem}
+
+
+\begin{proof}
+Suppose first that $f$ is continuous at $a$.
+
+Let
+\[
+\varepsilon\in\mathbb{R}(\mathrm{Ord})
+\]
+be infinitesimal and suppose
+\[
+a+\varepsilon\in A.
+\]
+
+We want to prove
+\[
+{}^*f(a+\varepsilon)\approx f(a).
+\]
+
+Suppose, toward a contradiction, that
+\[
+{}^*f(a+\varepsilon)\not\approx f(a).
+\]
+
+Then there exists
+\[
+\varepsilon>0
+\]
+such that
+\[
+|{}^*f(a+\varepsilon)-f(a)|\geq\varepsilon.
+\]
+
+Since $f$ is continuous at $a$, there exists $\delta>0$ such that
+\[
+|x-a|<\delta
+\]
+implies
+\[
+|f(x)-f(a)|<\varepsilon.
+\]
+
+Since $\varepsilon$ is infinitesimal,
+\[
+|\varepsilon|<\delta.
+\]
+
+Therefore
+\[
+|(a+\varepsilon)-a|<\delta,
+\]
+and hence
+\[
+|{}^*f(a+\varepsilon)-f(a)|<\varepsilon,
+\]
+a contradiction.
+
+Thus
+\[
+{}^*f(a+\varepsilon)\approx f(a).
+\]
+
+Conversely, suppose that for every infinitesimal $\varepsilon$,
+\[
+{}^*f(a+\varepsilon)\approx f(a).
+\]
+
+Suppose, toward a contradiction, that $f$ is not continuous at $a$.
+
+Then there exists
+\[
+\varepsilon>0
+\]
+such that for every $\delta>0$ there exists
+\[
+x\in A
+\]
+such that
+\[
+|x-a|<\delta
+\]
+and
+\[
+|f(x)-f(a)|\geq\varepsilon.
+\]
+
+In particular, for every
+\[
+n\in\mathbb{N},
+\]
+there exists $x_n\in A$ such that
+\[
+|x_n-a|<\frac1n
+\]
+and
+\[
+|f(x_n)-f(a)|\geq\varepsilon.
+\]
+
+By the nonstandard extension, taking an infinite index $N$ gives
+\[
+|x_N-a|<\frac1N.
+\]
+
+Since $N$ is infinite,
+\[
+\frac1N
+\]
+is infinitesimal.
+
+Therefore
+\[
+\varepsilon:=x_N-a
+\]
+is infinitesimal.
+
+But
+\[
+|{}^*f(a+\varepsilon)-f(a)|
+=
+|f(x_N)-f(a)|
+\geq\varepsilon,
+\]
+so
+\[
+{}^*f(a+\varepsilon)\not\approx f(a).
+\]
+
+This contradicts our assumption.
+
+Therefore $f$ is continuous at $a$.
+
+Finally,
+\[
+{}^*f(a+\varepsilon)\approx f(a)
+\]
+is equivalent to
+\[
+\operatorname{st}
+\left(
+{}^*f(a+\varepsilon)
+\right)
+=
+f(a).
+\]
+
+Hence the two definitions are equivalent.
+\end{proof}
+
+\begin{theorem}[Algebra of Continuous Functions]
+Let $f$ and $g$ be continuous at $a$. Then
+\[
+f+g,
+\qquad
+f-g,
+\qquad
+fg
+\]
+are continuous at $a$.
+
+If
+\[
+g(a)\neq0,
+\]
+then
+\[
+\frac{f}{g}
+\]
+is continuous at $a$.
+\end{theorem}
+
+\begin{proof}
+Since $f$ and $g$ are continuous at $a$, for every infinitesimal
+$\varepsilon$,
+\[
+{}^*f(a+\varepsilon)\approx f(a)
+\]
+and
+\[
+{}^*g(a+\varepsilon)\approx g(a).
+\]
+
+By the Limit Laws,
+\[
+{}^*f(a+\varepsilon)+{}^*g(a+\varepsilon)
+\approx
+f(a)+g(a),
+\]
+\[
+{}^*f(a+\varepsilon)-{}^*g(a+\varepsilon)
+\approx
+f(a)-g(a),
+\]
+and
+\[
+{}^*f(a+\varepsilon){}^*g(a+\varepsilon)
+\approx
+f(a)g(a).
+\]
+
+If $g(a)\neq0$, then
+\[
+\frac{{}^*f(a+\varepsilon)}{{}^*g(a+\varepsilon)}
+\approx
+\frac{f(a)}{g(a)}.
+\]
+
+Therefore the stated functions are continuous at $a$.
+\end{proof}
+
+
+\begin{theorem}[Composition of Continuous Functions]
+Let
+\[
+g:A\to\mathbb{R}
+\]
+be continuous at $a$, and let
+\[
+f:B\to\mathbb{R}
+\]
+be continuous at $g(a)$, where
+\[
+g(A)\subseteq B.
+\]
+
+Then
+\[
+f\circ g
+\]
+is continuous at $a$.
+\end{theorem}
+
+\begin{proof}
+Since $g$ is continuous at $a$,
+\[
+{}^*g(a+\varepsilon)\approx g(a)
+\]
+for every infinitesimal $\varepsilon$.
+
+Since $f$ is continuous at $g(a)$,
+\[
+f({}^*g(a+\varepsilon))
+\approx
+f(g(a)).
+\]
+
+Therefore
+\[
+(f\circ g)(a+\varepsilon)
+\approx
+(f\circ g)(a).
+\]
+
+Hence $f\circ g$ is continuous at $a$.
+\end{proof}
+
+
+\begin{theorem}[Continuous Functions Have Continuous Limits]
+Let
+\[
+f:A\to\mathbb{R}
+\]
+be continuous at $a$. Then
+\[
+\lim_{x\to a}f(x)=f(a).
+\]
+\end{theorem}
+
+\begin{proof}
+This follows from the Continuity and Limits Theorem.
+\end{proof}
+
 
 \section{Derivatives}
 
 first we have to fix a ``Main variable'' it's almost all the time ``$x$''.
 (sometimes it's ``$t$'').
 \begin{definition} assume $f : \mathbb{R} (Ord) \to \mathbb{R} (Ord)$
-    we define \textbf{Difrential $(d_\epsilon(f))$}
-    \[ d_\epsilon(f) := f( x + \epsilon ) -  f(x) \]
+    we define \textbf{Difrential $(d_\varepsilon(f))$}
+    \[ d_\varepsilon(f) := f( x + \varepsilon ) -  f(x) \]
 \end{definition}
 
 
@@ -9606,17 +12486,17 @@ first we have to fix a ``Main variable'' it's almost all the time ``$x$''.
 
 
 Main reason we choose ``$x$'' in definition because it's ``Main variable''. you
-can prove $\forall x \in \mathbb{R} (Ord) \quad d_\epsilon(x) = \epsilon$.
+can prove $\forall x \in \mathbb{R} (Ord) \quad d_\varepsilon(x) = \varepsilon$.
 
 \begin{definition} we define \textbf{Derivative}
 
     
 Let $ f:\mathbb{R}\to\mathbb{R}$
-and let \(  \epsilon  \in\mathbb{R} (Ord)\) be a nonzero infinitesimal:
+and let \(  \varepsilon  \in\mathbb{R} (Ord)\) be a nonzero infinitesimal:
 \[
- \epsilon \neq 0,
+ \varepsilon \neq 0,
 \qquad
-| \epsilon |<\frac{1}{n}
+| \varepsilon |<\frac{1}{n}
 \quad\forall n\in\mathbb{N}.
 \]
 
@@ -9627,7 +12507,7 @@ Define
 \frac{df}{dx} = f'(x) =
 \operatorname{st}
 \left(
-\frac{d_\epsilon(f)}{d_\epsilon(x)}
+\frac{d_\varepsilon(f)}{d_\varepsilon(x)}
 \right)
 \]
 
@@ -9637,14 +12517,14 @@ Equivalently,
 =
 \operatorname{st}
 \left(
-\frac{f(x + \epsilon )-f(x)}{ \epsilon }.
+\frac{f(x + \varepsilon )-f(x)}{ \varepsilon }.
 \right)
 \]
 
 
 More generally,
 
-    \[ \frac{d}{dx}  :=  \{ \big(f , st(\frac{d_\epsilon(f)}{d_\epsilon(x)}) \big) \mid f : \mathbb{R} (Ord) \to \mathbb{R} (Ord) \} \]
+    \[ \frac{d}{dx}  :=  \{ \big(f , st(\frac{d_\varepsilon(f)}{d_\varepsilon(x)}) \big) \mid f : \mathbb{R} (Ord) \to \mathbb{R} (Ord) \} \]
     there is a biggest set like $A$ s.t. $ \frac{d}{dx} A$ is a function (you can
     prove it as an exercise). we call that set ``Derivatible funsions'' and that
     function ``Derivative''.
@@ -9656,12 +12536,12 @@ More generally,
 first we have to fix a ``Main variable'' it's almost all the time ``$x$''.
 (sometimes it's ``$t$'').
 \begin{definition} assume $f : \mathbb{R} (Ord)^n  \to \mathbb{R} (Ord)$
-    we define \textbf{Partial Difrential $(d_\epsilon(f))$}
-    \[ \partial_{\epsilon , x_i } (f) := f(x_1,\ldots,x_i+ \epsilon ,\ldots,x_n) - f(x_1,\ldots,x_i,\ldots,x_n) \]
+    we define \textbf{Partial Difrential $(d_\varepsilon(f))$}
+    \[ \partial_{\varepsilon , x_i } (f) := f(x_1,\ldots,x_i+ \varepsilon ,\ldots,x_n) - f(x_1,\ldots,x_i,\ldots,x_n) \]
 \end{definition}
 
 Main reason we choose ``$x$'' in definition because it's ``Main variable''. you
-can prove $\forall x \in \mathbb{R} (Ord) \quad \partial_{\epsilon , x }(x) = \epsilon$.
+can prove $\forall x \in \mathbb{R} (Ord) \quad \partial_{\varepsilon , x }(x) = \varepsilon$.
 
 \begin{definition} we define \textbf{Partial Derivative}
 
@@ -9669,11 +12549,11 @@ can prove $\forall x \in \mathbb{R} (Ord) \quad \partial_{\epsilon , x }(x) = \e
 Let$f:\mathbb{R}^n\to\mathbb{R},
 \qquad
 f=f(x_1,\ldots,x_n).$
-and let \(  \epsilon  \in\mathbb{R} (Ord)\) be a nonzero infinitesimal:
+and let \(  \varepsilon  \in\mathbb{R} (Ord)\) be a nonzero infinitesimal:
 \[
- \epsilon \neq 0,
+ \varepsilon \neq 0,
 \qquad
-| \epsilon |<\frac{1}{n}
+| \varepsilon |<\frac{1}{n}
 \quad\forall n\in\mathbb{N}.
 \]
 
@@ -9684,7 +12564,7 @@ and let \(  \epsilon  \in\mathbb{R} (Ord)\) be a nonzero infinitesimal:
 =
 \operatorname{st}
 \left(
-\frac{\partial_{\epsilon , x_i }(f)}{\partial_{\epsilon , x_i }(x_i)}
+\frac{\partial_{\varepsilon , x_i }(f)}{\partial_{\varepsilon , x_i }(x_i)}
 \right)
 \]
 
@@ -9695,137 +12575,141 @@ Equivalently,
 \operatorname{st}
 \left(
 \frac{
-f(x_1,\ldots,x_i+ \epsilon ,\ldots,x_n)
+f(x_1,\ldots,x_i+ \varepsilon ,\ldots,x_n)
 -
 f(x_1,\ldots,x_i,\ldots,x_n)
-}{ \epsilon }
+}{ \varepsilon }
 \right)
 \]
 
 More generally,
-    \[ \frac{ \partial }{\partial x_i }  :=  \{ \big(f , st(\frac{\partial_{\epsilon , x_i }(f)}{\partial_{\epsilon , x_i }(x_i)}) \big) \mid f : \mathbb{R} (Ord) \to \mathbb{R} (Ord) \} \]
+    \[ \frac{ \partial }{\partial x_i }  :=  \{ \big(f , st(\frac{\partial_{\varepsilon , x_i }(f)}{\partial_{\varepsilon , x_i }(x_i)}) \big) \mid f : \mathbb{R} (Ord) \to \mathbb{R} (Ord) \} \]
 \end{definition}
 
 
 
 \section{Riemann Integral}
 
-First we have to fix a ``Main interval''. It is almost all the time
-\[
-[a,b]\subseteq\mathbb{R}.
-\]
+
 
 \begin{definition}
-Assume
-\[
-f:\mathbb{R}(\mathrm{Ord})\to\mathbb{R}(\mathrm{Ord}).
-\]
 
-Let
-\[
-N\in\mathbb{R}(\mathrm{Ord})
-\]
-be an infinite positive integer. We define
-\[
-\varepsilon:=\frac{b-a}{N}.
-\]
+Let $f:[a,b]\to\mathbb{R}$. A \textbf{Partition} of $[a,b]$ is a finite ordered set $P=\{x_0,x_1,\ldots,x_n\}$ such that
 
-Then $\varepsilon$ is a positive infinitesimal:
-\[
-\varepsilon>0,
-\qquad
-\varepsilon<\frac{1}{n}
-\quad\forall n\in\mathbb{N}.
-\]
+$$
+a=x_0<x_1<\cdots<x_n=b.
+$$
 
-We define the infinitesimal partition of $[a,b]$ by
-\[
-x_i:=a+i\varepsilon,
-\qquad
-i=0,1,\ldots,N.
-\]
+We define the \textbf{Mesh} of $P$ by
+
+$$
+\|P\|:=\max_{1\leq i\leq n}(x_i-x_{i-1}).
+$$
+
+For every partition $P$, define $M_i:=\sup\{f(x):x\in[x_{i-1},x_i]\}$ and $m_i:=\inf\{f(x):x\in[x_{i-1},x_i]\}$. The \textbf{Upper Darboux Sum} of $f$ with respect to $P$ is
+
+$$
+U(f,P):=\sum_{i=1}^{n}M_i(x_i-x_{i-1}),
+$$
+
+and the \textbf{Lower Darboux Sum} of $f$ with respect to $P$ is
+
+$$
+L(f,P):=\sum_{i=1}^{n}m_i(x_i-x_{i-1}).
+$$
+
+We say that $f$ is \textbf{Riemann Integrable} on $[a,b]$ if $f$ is bounded and
+
+$$
+\inf_P U(f,P)=\sup_P L(f,P).
+$$
+
+In this case, we define
+
+$$
+\int_a^b f(x)\,dx
+:=\inf_P U(f,P)
+=\sup_P L(f,P).
+$$
+
+\end{definition}
+\begin{theorem}[Convergence of Riemann Sums]
+
+Suppose that $f:[a,b]\to\mathbb{R}$ is Riemann integrable. For each $n\in\mathbb{N}$, let
+
+$$
+x_i=a+\frac{i(b-a)}{n},
+\qquad 0\leq i\leq n.
+$$
 
 Then
-\[
-x_0=a,
-\qquad
-x_N=b,
-\qquad
-d_\varepsilon(x_i)=\varepsilon.
-\]
 
-\end{definition}
-
-\begin{definition}
-We define the \textbf{Riemann Sum} of $f$ on $[a,b]$ by
-\[
-S_\varepsilon(f)
-:=
-\sum_{i=0}^{N-1}
-f(\xi_i)\varepsilon
-\]
-where
-\[
-\xi_i\in[x_i,x_{i+1}]
-\qquad
-(i=0,\ldots,N-1).
-\]
-
-Equivalently, since
-\[
-d_\varepsilon(x_i)=\varepsilon,
-\]
-we may write
-\[
-S_\varepsilon(f)
+$$
+\lim_{n\to\infty}
+\sum_{i=0}^{n-1}f(x_i)\frac{b-a}{n}
 =
-\sum_{i=0}^{N-1}
-f(\xi_i)d_\varepsilon(x_i).
-\]
+\int_a^b f(x)\,dx.
+$$
 
-\end{definition}
+\end{theorem}
 
-\begin{definition}
-Let
-\[
-f:[a,b]\to\mathbb{R}.
-\]
+\begin{proof}
 
-We say that $f$ is \textbf{Riemann Integrable} on $[a,b]$ if there exists
-\[
-I\in\mathbb{R}
-\]
-such that for every infinite positive integer $N$ and every choice of
-sample points
-\[
-\xi_i\in[x_i,x_{i+1}],
-\]
-we have
-\[
-\operatorname{st}
-\left(
-S_\varepsilon(f)
-\right)
+Let $P_n=\{x_0,x_1,\ldots,x_n\}$. Since $f$ is Riemann integrable,
+
+$$
+\lim_{n\to\infty}U(f,P_n)
 =
-I,
-\]
-where
-\[
-\varepsilon=\frac{b-a}{N}.
-\]
+\lim_{n\to\infty}L(f,P_n)
+=
+\int_a^b f(x)\,dx,
+$$
 
-We define the \textbf{Riemann Integral} by
-\[
+because $\|P_n\|=(b-a)/n\to0$.
+
+Since $f(x_i)$ lies between the infimum and supremum of $f$ on $[x_i,x_{i+1}]$,
+
+$$
+L(f,P_n)
+\leq
+\sum_{i=0}^{n-1}f(x_i)\frac{b-a}{n}
+\leq
+U(f,P_n).
+$$
+
+Therefore, by the Squeeze Theorem,
+
+$$
 \int_a^b f(x)\,dx
-:=
+=
+\lim_{n\to\infty}
+\sum_{i=0}^{n-1}f(x_i)\frac{b-a}{n}
+$$
+
+\end{proof}
+
+Since the Riemann sum converges to $\int_a^b f(x)\,dx$, by the Standard Part Theorem, for an infinite $N$ and $\varepsilon=\frac{b-a}{N}$,
+
+$$
+\int_a^b f(x)\,dx.
+=
 \operatorname{st}
 \left(
-\sum_{i=0}^{N-1}
-f(\xi_i)\varepsilon
-\right).
-\]
+\sum_{i=0}^{N-1}f(x_i)\varepsilon
+\right)
+$$
 
-\end{definition}
+ let $\varepsilon=\frac{b-a}{N}$ and $x_i=a+i\varepsilon$. we can prove for every choice of sample points $\xi_i\in[x_i,x_{i+1}]$,
+
+$$
+\int_a^b f(x)\,dx.
+=
+\operatorname{st}
+\left(
+\sum_{i=0}^{N-1}f(\xi_i)\varepsilon
+\right)
+$$
+
 
 More generally,
 \[
@@ -9850,570 +12734,20 @@ There is a biggest set $A$ such that $\int_a^b A$ is a function
 ``Riemann Integrable Functions'' and that function
 ``Riemann Integral''.
 
-\begin{definition}
-Let
 
-$$
-f:[a,b]\to\mathbb{R}.
-$$
+\chapter{Ordinal Integral{\small(more powerful than Lebesgue Integral)\small}}
 
-A \textbf{Partition} of $[a,b]$ is a finite ordered set
 
-$$
-P=\{x_0,x_1,\ldots,x_n\}
-$$
-
-such that
-
-$$
-a=x_0<x_1<\cdots<x_n=b.
-$$
-
-We define the \textbf{Mesh} of $P$ by
-
-$$
-\|P\|
+\[
+\lim_{n\to\alpha} f(n)
 :=
-\max_{1\leq i\leq n}(x_i-x_{i-1}).
-$$
+\left[f(n)\right]_{n\in\alpha}
+\]
 
-For every partition $P$, define
-
-$$
-M_i:=\sup\{f(x):x\in[x_{i-1},x_i]\}
-$$
-
-and
-
-$$
-m_i:=\inf\{f(x):x\in[x_{i-1},x_i]\}.
-$$
-
-The \textbf{Upper Darboux Sum} of $f$ with respect to $P$ is
-
-$$
-U(f,P)
+\[
+\lim_{n\to\alpha + m} f(n)
 :=
-\sum_{i=1}^{n}
-M_i(x_i-x_{i-1}),
-$$
-
-and the \textbf{Lower Darboux Sum} of $f$ with respect to $P$ is
-
-$$
-L(f,P)
-:=
-\sum_{i=1}^{n}
-m_i(x_i-x_{i-1}).
-$$
-
-We say that $f$ is \textbf{Riemann Integrable} on $[a,b]$ if $f$ is bounded and
-
-$$
-\inf_P U(f,P)
-=
-\sup_P L(f,P).
-$$
-
-In this case we define
-
-$$
-\int_a^b f(x)\,dx
-:=
-\inf_P U(f,P)
-=
-\sup_P L(f,P).
-$$
-
-\end{definition}
-
-\begin{lemma}
-Let
-
-$$
-f:[a,b]\to\mathbb{R}
-$$
-
-be bounded. Then $f$ is Riemann integrable if and only if for every
-$\delta>0$ there exists $\eta>0$ such that, for every partition $P$
-satisfying
-
-$$
-\|P\|<\eta,
-$$
-
-and every two choices of sample points
-
-$$
-\xi_i,\zeta_i\in[x_{i-1},x_i],
-\qquad
-i=1,\ldots,n,
-$$
-
-we have
-
-$$
-\left|
-\sum_{i=1}^{n}f(\xi_i)(x_i-x_{i-1})
--
-\sum_{i=1}^{n}f(\zeta_i)(x_i-x_{i-1})
-\right|
-<\delta.
-$$
-
-\end{lemma}
-
-\begin{proof}
-Suppose first that $f$ is Riemann integrable. Let
-
-$$
-I:=\int_a^b f(x)\,dx.
-$$
-
-Let $\delta>0$. Since $f$ is Riemann integrable, there exists a partition
-$P_0$ such that
-
-$$
-U(f,P_0)-L(f,P_0)<\frac{\delta}{2}.
-$$
-
-Let
-
-$$
-M:=\sup_{x\in[a,b]}|f(x)|.
-$$
-
-Choose $\eta>0$ such that
-
-$$
-\eta<\min\left\{
-\|P_0\|,
-\frac{\delta}{4M n_0}
-\right\},
-$$
-
-where $n_0$ is the number of intervals of $P_0$.
-
-Now let
-
-$$
-P=\{x_0,\ldots,x_n\}
-$$
-
-be a partition with
-
-$$
-\|P\|<\eta.
-$$
-
-Consider its common refinement with $P_0$:
-
-$$
-P\cup P_0.
-$$
-
-Since refinement can only decrease the lower sum and increase the upper
-sum, we have
-
-$$
-L(f,P\cup P_0)\ge L(f,P_0)
-$$
-
-and
-
-$$
-U(f,P\cup P_0)\le U(f,P_0).
-$$
-
-Hence
-
-$$
-U(f,P\cup P_0)-L(f,P\cup P_0)
-<
-\frac{\delta}{2}.
-$$
-
-Now let
-
-$$
-S(f,P,\xi)
-:=
-\sum_{i=1}^{n}
-f(\xi_i)(x_i-x_{i-1})
-$$
-
-and
-
-$$
-S(f,P,\zeta)
-:=
-\sum_{i=1}^{n}
-f(\zeta_i)(x_i-x_{i-1}).
-$$
-
-For each interval,
-
-$$
-m_i\le f(\xi_i),f(\zeta_i)\le M_i,
-$$
-
-and therefore
-
-$$
-|f(\xi_i)-f(\zeta_i)|
-\le M_i-m_i.
-$$
-
-Thus
-
-$$
-\begin{aligned}
-|S(f,P,\xi)-S(f,P,\zeta)|
-&\le
-\sum_{i=1}^{n}
-|f(\xi_i)-f(\zeta_i)|
-(x_i-x_{i-1})\\
-&\le
-\sum_{i=1}^{n}
-(M_i-m_i)(x_i-x_{i-1})\\
-&=
-U(f,P)-L(f,P).
-\end{aligned}
-$$
-
-Since $P$ is sufficiently fine, we obtain
-
-$$
-|S(f,P,\xi)-S(f,P,\zeta)|<\delta.
-$$
-
-Therefore the required condition holds.
-
-Conversely, suppose that for every $\delta>0$ there exists $\eta>0$
-such that every partition $P$ satisfying
-
-$$
-\|P\|<\eta
-$$
-
-and every two choices of sample points satisfy
-
-$$
-|S(f,P,\xi)-S(f,P,\zeta)|<\delta.
-$$
-
-We prove that $f$ is Riemann integrable.
-
-Fix $\delta>0$ and choose $\eta>0$ according to the hypothesis.
-Let
-
-$$
-P=\{x_0,\ldots,x_n\}
-$$
-
-be any partition satisfying
-
-$$
-\|P\|<\eta.
-$$
-
-For each $i$, choose
-
-$$
-\xi_i,\zeta_i\in[x_{i-1},x_i]
-$$
-
-such that
-
-$$
-f(\xi_i)>M_i-\frac{\delta}{2(b-a)}
-$$
-
-and
-
-$$
-f(\zeta_i)<m_i+\frac{\delta}{2(b-a)}.
-$$
-
-Such points exist by the definition of supremum and infimum.
-
-Then
-
-$$
-\begin{aligned}
-S(f,P,\xi)-S(f,P,\zeta)
-&>
-\sum_{i=1}^{n}
-\left(
-M_i-m_i-\frac{\delta}{b-a}
-\right)
-(x_i-x_{i-1})\\
-&=
-U(f,P)-L(f,P)-\delta.
-\end{aligned}
-$$
-
-By the hypothesis,
-
-$$
-|S(f,P,\xi)-S(f,P,\zeta)|<\delta.
-$$
-
-Consequently,
-
-$$
-U(f,P)-L(f,P)<2\delta.
-$$
-
-Since $\delta>0$ was arbitrary, for every $\varepsilon>0$ there exists a
-partition $P$ such that
-
-$$
-U(f,P)-L(f,P)<\varepsilon.
-$$
-
-Therefore
-
-$$
-\inf_P U(f,P)
-=
-\sup_P L(f,P).
-$$
-
-Hence $f$ is Riemann integrable.
-\end{proof}
-
-\begin{theorem}
-Let
-
-$$
-f:[a,b]\to\mathbb{R}.
-$$
-
-Then $f$ is Riemann integrable if and only if for every $\delta>0$ there
-exists $\eta>0$ such that every partition $P$ satisfying
-
-$$
-\|P\|<\eta
-$$
-
-has the property that all of its Riemann sums differ from one another
-by less than $\delta$.
-\end{theorem}
-
-\begin{proof}
-This is exactly the preceding lemma.
-\end{proof}
-
-
-\begin{theorem}
-Let
-\[
-f:[a,b]\to\mathbb{R}
-\]
-and suppose that $f$ is Riemann integrable in the usual sense. Then, for every
-infinite positive integer $N$ and
-\[
-\varepsilon=\frac{b-a}{N},
-\]
-and for every choice of sample points
-\[
-\xi_i\in[x_i,x_{i+1}],
-\qquad
-x_i=a+i\varepsilon,
-\]
-we have
-\[
-\operatorname{st}
-\left(
-\sum_{i=0}^{N-1}f(\xi_i)\varepsilon
-\right)
-=
-\int_a^b f(x)\,dx.
-\]
-
-Conversely, if there exists $I\in\mathbb{R}$ such that
-\[
-\operatorname{st}
-\left(
-\sum_{i=0}^{N-1}f(\xi_i)\varepsilon
-\right)
-=
-I
-\]
-for every infinite positive integer $N$ and every choice of sample points
-\[
-\xi_i\in[x_i,x_{i+1}],
-\]
-then $f$ is Riemann integrable and
-\[
-I=\int_a^b f(x)\,dx.
-\]
-
-Therefore, the definition above is equivalent to the usual definition of
-the Riemann integral.
-\end{theorem}
-
-\begin{proof}
-First suppose that $f$ is Riemann integrable in the usual sense, and let
-\[
-I=\int_a^b f(x)\,dx.
-\]
-
-Let
-\[
-P_N=\{x_0,x_1,\ldots,x_N\}
-\]
-be the partition given by
-\[
-x_i=a+i\varepsilon,
-\qquad
-\varepsilon=\frac{b-a}{N}.
-\]
-
-Its mesh is
-\[
-\|P_N\|=\varepsilon.
-\]
-
-Since $N$ is infinite,
-\[
-\varepsilon=\frac{b-a}{N}
-\]
-is infinitesimal. Hence
-\[
-\|P_N\|\approx0.
-\]
-
-Since $f$ is Riemann integrable, for every $\delta>0$ there exists
-$\eta>0$ such that whenever a partition $P$ satisfies
-\[
-\|P\|<\eta,
-\]
-every Riemann sum associated with $P$ differs from $I$ by less than
-$\delta$.
-
-Applying this to the infinitesimal partition $P_N$, we obtain
-\[
-\left|
-\sum_{i=0}^{N-1}f(\xi_i)\varepsilon-I
-\right|
-\]
-is infinitesimal.
-
-Therefore
-\[
-\sum_{i=0}^{N-1}f(\xi_i)\varepsilon
-\approx I.
-\]
-
-Taking standard parts gives
-\[
-\operatorname{st}
-\left(
-\sum_{i=0}^{N-1}f(\xi_i)\varepsilon
-\right)
-=
-I.
-\]
-
-Thus
-\[
-\operatorname{st}
-\left(
-\sum_{i=0}^{N-1}f(\xi_i)\varepsilon
-\right)
-=
-\int_a^b f(x)\,dx.
-\]
-
-Conversely, suppose that there exists $I\in\mathbb{R}$ such that
-\[
-\operatorname{st}
-\left(
-\sum_{i=0}^{N-1}f(\xi_i)\varepsilon
-\right)
-=
-I
-\]
-for every infinite positive integer $N$ and every choice of sample
-points $\xi_i$.
-
-Suppose, toward a contradiction, that $f$ is not Riemann integrable.
-Then there exists $\delta>0$ such that for every sufficiently fine
-partition $P$ there are Riemann sums whose values differ by at least
-$\delta$.
-
-In particular, for arbitrarily fine partitions, one can choose two
-sets of sample points
-\[
-\{\xi_i\}
-\qquad\text{and}\qquad
-\{\eta_i\}
-\]
-such that
-\[
-\left|
-\sum_{i=0}^{N-1}f(\xi_i)\varepsilon
--
-\sum_{i=0}^{N-1}f(\eta_i)\varepsilon
-\right|
-\geq\delta.
-\]
-
-Passing to an infinite $N$ gives
-\[
-\left|
-\sum_{i=0}^{N-1}f(\xi_i)\varepsilon
--
-\sum_{i=0}^{N-1}f(\eta_i)\varepsilon
-\right|
-\geq\delta.
-\]
-
-Hence their standard parts cannot be equal. But by assumption,
-\[
-\operatorname{st}
-\left(
-\sum_{i=0}^{N-1}f(\xi_i)\varepsilon
-\right)
-=
-I
-\]
-and
-\[
-\operatorname{st}
-\left(
-\sum_{i=0}^{N-1}f(\eta_i)\varepsilon
-\right)
-=
-I,
-\]
-which is a contradiction.
-
-Therefore $f$ is Riemann integrable and
-\[
-I=\int_a^b f(x)\,dx.
-\]
-
-Hence the infinitesimal definition is equivalent to the usual Riemann
-integral.
-\end{proof}
-
-
-\chapter{Lebesgue Integral}
-
-
-\[
-\lim_{n\to\epsilon} f(n)
-:=
-\left[f(n)\right]_{n\in\epsilon}
-\]
-
-\[
-\lim_{n\to\epsilon+m} f(n)
-:=
-\left[f(n+m)\right]_{n\in\epsilon}
+\left[f(n+m)\right]_{n\in\alpha}
 \]
 
 \[
@@ -10425,9 +12759,9 @@ f:\mathbb{N}\to\mathbb{N}
 \]
 
 \[
-f(\epsilon)
+f(\alpha)
 =
-\lim_{n\to\epsilon}f(n)
+\lim_{n\to\alpha}f(n)
 \]
 
 \[
@@ -10538,15 +12872,15 @@ D(x_i),&i\in 2^{\aleph_0}.
 =
 \operatorname{st}
 \left(
-\frac{\displaystyle\sum_{i=0}^{\epsilon}y(i)}
-{\epsilon}
+\frac{\displaystyle\sum_{i=0}^{\alpha}y(i)}
+{\alpha}
 \right)
 \]
 
 \[
 y(i)=f(x_i),
 \qquad
-\{x_i\}_{i\in\epsilon}=[a,b].
+\{x_i\}_{i\in\alpha}=[a,b].
 \]
 
 \chapter{New beginning for Probability theory}

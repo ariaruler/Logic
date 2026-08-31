@@ -1,16 +1,22 @@
 # Fdb version 4
-["makeindex Logic.idx"] 1787104326.88176 "Logic.idx" "Logic.ind" "Logic" 1787940325.9483 0
-  "Logic.idx" 1787940320 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+["makeindex Logic.idx"] 1788102082.85226 "Logic.idx" "Logic.ind" "Logic" 1788183505.96243 0
+  "Logic.idx" 1788183500 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
   (generated)
   "Logic.ilg"
   "Logic.ind"
   (rewritten before read)
-["xdvipdfmx"] 1787940325.48271 "Logic.xdv" "Logic.pdf" "Logic" 1787940325.9532 0
-  "Logic.xdv" 1787940325 1323288 70379364a7b04aa2d4569925801c95fa "xelatex"
+["xdvipdfmx"] 1788183505.47231 "Logic.xdv" "Logic.pdf" "Logic" 1788183505.96696 0
+  "Logic.xdv" 1788183505 1504480 9236331fc0e6ce0bdbdd6e4f6bb90d35 "xelatex"
   (generated)
   "Logic.pdf"
   (rewritten before read)
-["xelatex"] 1787940320.01529 "d:/pdf/Logic/Logic.tex" "Logic.xdv" "Logic" 1787940325.94841 0
+["xelatex"] 1788183499.93812 "d:/pdf/Logic/Logic.tex" "Logic.xdv" "Logic" 1788183505.96255 0
+  "C:/Users/TS/AppData/Local/MiKTeX/fonts/tfm/public/stmaryrd/stmary10.tfm" 1788010964 848 f478e0761563bbc369eca609a1741348 ""
+  "C:/Users/TS/AppData/Local/MiKTeX/fonts/tfm/public/stmaryrd/stmary5.tfm" 1788010967 848 e1bc58a31b9ed9c3729ffea165acfaac ""
+  "C:/Users/TS/AppData/Local/MiKTeX/fonts/tfm/public/stmaryrd/stmary6.tfm" 1788010965 848 068dd119e13b75777e62821af7d4f2a6 ""
+  "C:/Users/TS/AppData/Local/MiKTeX/fonts/tfm/public/stmaryrd/stmary7.tfm" 1788010966 848 26631fcb3e4cb6757598b9cda7967b63 ""
+  "C:/Users/TS/AppData/Local/MiKTeX/fonts/tfm/public/stmaryrd/stmary8.tfm" 1788010965 848 6125cdd3627e68d3db8013b98e587508 ""
+  "C:/Users/TS/AppData/Local/MiKTeX/fonts/tfm/public/stmaryrd/stmary9.tfm" 1788010969 848 594c171945930dfc7cc52fb30457c803 ""
   "C:/Users/TS/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1787101925 27175430 cc2a1ccf8834b9e831e5581873de4515 ""
   "C:/Users/TS/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136801054 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/Users/TS/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -183,18 +189,20 @@
   "C:/Users/TS/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfrcs.sty" 1756451144 325 f9f16d12354225b7dd52a3321f085955 ""
   "C:/Users/TS/AppData/Local/Programs/MiKTeX/tex/latex/refcount/refcount.sty" 1576433952 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "C:/Users/TS/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1751104012 9684 a33a14b82ce60d6e77cb9be689d79ee6 ""
+  "C:/Users/TS/AppData/Local/Programs/MiKTeX/tex/latex/stmaryrd/stmaryrd.sty" 1303229068 11317 aa7f81da60ce104f0dbb8b827dd14383 ""
+  "C:/Users/TS/AppData/Local/Programs/MiKTeX/tex/latex/stmaryrd/ustmry.fd" 1303229068 1811 216b0f832c406513647608b5bb9bb8ff ""
   "C:/Users/TS/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1761901070 15651 9d7c62df82cb29a555c00550babfe364 ""
   "C:/Users/TS/AppData/Local/Programs/MiKTeX/tex/latex/twemojis/all-twemojis.pdf" 1648652385 6929935 78fab466dfb7f6d2a8607168c9cf9c17 ""
   "C:/Users/TS/AppData/Local/Programs/MiKTeX/tex/latex/twemojis/twemojis.sty" 1649148999 365308 f83b238af2ba6ee3863a4efa272f41c8 ""
   "C:/Users/TS/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/TS/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "Logic.aux" 1787940325 10720 1b529ba55c53c4eb384883e8d0eb5ae1 "xelatex"
-  "Logic.ind" 1787104327 0 d41d8cd98f00b204e9800998ecf8427e "makeindex Logic.idx"
-  "Logic.out" 1787940325 12655 f633c78c60a65a8de246937c8fac801c "xelatex"
-  "Logic.tex" 1787940313 367602 dcd48d43fc54100d5cc98e7962976032 ""
-  "Logic.toc" 1787940325 6303 5f370b9f13e026b9bd95be665b5c0538 "xelatex"
+  "Logic.aux" 1788183505 10518 666e99c54ea1f2e7b7d150bd44e07e69 "xelatex"
+  "Logic.ind" 1788102083 0 d41d8cd98f00b204e9800998ecf8427e "makeindex Logic.idx"
+  "Logic.out" 1788183505 12231 cb2819e825c8ebcf90c7875c21ce6fe6 "xelatex"
+  "Logic.tex" 1788183493 399752 8247b32c32624e8e7cbd553edef2c9b8 ""
+  "Logic.toc" 1788183505 6126 4a1387cac7a459c7e1d4660d8b513767 "xelatex"
   "R-Im-Dom (1).pdf" 1787101340 7419 c1582c39d92191940df593f07f25b211 ""
-  "d:/pdf/Logic/Logic.tex" 1787940313 367602 dcd48d43fc54100d5cc98e7962976032 ""
+  "d:/pdf/Logic/Logic.tex" 1788183493 399752 8247b32c32624e8e7cbd553edef2c9b8 ""
   "fitch.sty" 1787101340 10729 bb855575fc376ae11afeb3d4c92c18eb ""
   (generated)
   "Logic.aux"
