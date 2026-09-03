@@ -53,7 +53,7 @@
 \contentsline {section}{\numberline {14.1}Filters}{139}{section.14.1}%
 \contentsline {section}{\numberline {14.2}Ultrafilters}{140}{section.14.2}%
 \contentsline {section}{\numberline {14.3}Nonprincipal Ultrafilters}{141}{section.14.3}%
-\contentsline {section}{\numberline {14.4}Definition of ${}^\ast \mathbb {N}$, ${}^\ast \mathbb {Z}$, ${}^\ast \mathbb {Q}$, and ${}^\ast \mathbb {R}$}{143}{section.14.4}%
+\contentsline {section}{\numberline {14.4}Definition of ${}^\ast \mathbb {N}$, ${}^\ast \mathbb {Z}$, ${}^\ast \mathbb {Q}$, ${}^\ast \mathbb {R}$ , and ${}^*\mathbb {R}_{Ord}$}{143}{section.14.4}%
 \contentsline {section}{\numberline {14.5}The Ultrapower Construction of the Hyperreals}{145}{section.14.5}%
 \contentsline {section}{\numberline {14.6}(Un)limited, Infinitesimal, and Appreciable Numbers}{149}{section.14.6}%
 \contentsline {section}{\numberline {14.7}Arithmetic of Hyperreals}{151}{section.14.7}%
@@ -62,9 +62,9 @@
 \contentsline {section}{\numberline {14.10}Shadows and Completeness}{154}{section.14.10}%
 \contentsline {chapter}{\numberline {15}New beginning for calculus }{155}{chapter.15}%
 \contentsline {section}{\numberline {15.1}Limits}{155}{section.15.1}%
-\contentsline {section}{\numberline {15.2}Continuity}{173}{section.15.2}%
-\contentsline {section}{\numberline {15.3}Derivatives}{178}{section.15.3}%
-\contentsline {section}{\numberline {15.4}Partial Derivatives}{179}{section.15.4}%
-\contentsline {section}{\numberline {15.5}Riemann Integral}{179}{section.15.5}%
-\contentsline {chapter}{\numberline {16}Ordinal Integral{\small (more powerful than Lebesgue Integral)\small }}{183}{chapter.16}%
-\contentsline {chapter}{\numberline {17}New beginning for Probability theory}{185}{chapter.17}%
+\contentsline {section}{\numberline {15.2}Continuity}{161}{section.15.2}%
+\contentsline {section}{\numberline {15.3}Derivatives}{163}{section.15.3}%
+\contentsline {section}{\numberline {15.4}Partial Derivatives}{163}{section.15.4}%
+\contentsline {section}{\numberline {15.5}Riemann Integral}{164}{section.15.5}%
+\contentsline {chapter}{\numberline {16}Well-Ordered Integral{\small (more powerful than Lebesgue Integral)\small }}{169}{chapter.16}%
+\contentsline {chapter}{\numberline {17}New beginning for Probability theory}{171}{chapter.17}%

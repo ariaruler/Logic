@@ -47,6 +47,7 @@
 \newtheorem{Attention}{Attention}[section]
 \newtheorem{observation}{Observation}[section]
 \newtheorem{corollary}{Corollary}[section]
+\newtheorem{remark}{Remark}[section]
 \makeatletter
 
 
@@ -1057,7 +1058,7 @@ sentences.
 \section{Rules of first order logic.}
 
 \begin{theorem}
-     \textbf{**$(schema)$**} $(\forall I,\forall E,\exists I,\exists E)$
+    \textbf{**$(schema)$**} $(\forall I,\forall E,\exists I,\exists E)$
 
     Assume that the universe of discourse is
     \[
@@ -1068,26 +1069,23 @@ sentences.
 
         \hline
 
-        Rules
-        \rule[0pt]{0pt}{0pt} &
-        Terms and Conditions
-        \\
+        Rules \rule[0pt]{0pt}{0pt} & Terms and Conditions \\
 
         \hline
 
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {\phi(x)}
             \have [ ] {2} {\therefore \forall x\,\phi(x)}
-                \by{$\forall I$}{}
+            \by{$\forall I$}{}
         \end{fitchproof}
-        \rule[0pt]{0pt}{0pt} &
+        \rule[0pt]{0pt}{0pt}       &
 
         \begin{enumerate}
             \setlength{\itemsep}{0pt}
             \item $x$ is a variable.
             \item $x$ is arbitrary.
-            \item $x$ does not occur free in any 
-            assumption on which $\phi(x)$ depends.
+            \item $x$ does not occur free in any
+                  assumption on which $\phi(x)$ depends.
         \end{enumerate}
 
         \\
@@ -1097,9 +1095,9 @@ sentences.
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {\forall x\,\phi(x)}
             \have [ ] {2} {\therefore \phi[a/x]}
-                \by{$\forall E$}{}
+            \by{$\forall E$}{}
         \end{fitchproof}
-        \rule[0pt]{0pt}{0pt} &
+        \rule[0pt]{0pt}{0pt}       &
 
         \begin{enumerate}
             \setlength{\itemsep}{0pt}
@@ -1114,9 +1112,9 @@ sentences.
         \begin{fitchproof}[arrayenv=tabular]
             \hypo [ ] {2} {\phi[a/x]}
             \have [ ] {2} {\therefore \exists x\,\phi(x)}
-                \by{$\exists I$}{}
+            \by{$\exists I$}{}
         \end{fitchproof}
-        \rule[0pt]{0pt}{0pt} &
+        \rule[0pt]{0pt}{0pt}       &
 
         \begin{enumerate}
             \setlength{\itemsep}{0pt}
@@ -1136,9 +1134,9 @@ sentences.
             \have [ ] {2} {\theta}
             \close
             \have [ ] {2} {\therefore\theta}
-                \by{$\exists E$}{}
+            \by{$\exists E$}{}
         \end{fitchproof}
-        \rule[0pt]{0pt}{0pt} &
+        \rule[0pt]{0pt}{0pt}       &
 
         \begin{enumerate}
             \setlength{\itemsep}{0pt}
@@ -2616,7 +2614,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
 \end{definition}
 
 \begin{theorem}
-    \textbf{$(schema)$} 
+    \textbf{$(schema)$}
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
@@ -2632,8 +2630,8 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
 
         \begin{fitchproof}[arrayenv=tabular]
             \hypo  [ ]  {2} {f(x)=y}
-            \have [ ] {2} { \therefore  Func(f) }    \by{$f() E$}{} 
-            \have [ ] {2} { \therefore (x,y) \in f }    \by{$f() E$}{} 
+            \have [ ] {2} { \therefore  Func(f) }    \by{$f() E$}{}
+            \have [ ] {2} { \therefore (x,y) \in f }    \by{$f() E$}{}
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt}
         \\
@@ -2696,10 +2694,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
 
         \hline
 
-        Rules
-        \rule[0pt]{0pt}{0pt} &
-        Terms and Conditions
-        \\
+        Rules \rule[0pt]{0pt}{0pt} & Terms and Conditions \\
 
         \hline
 
@@ -2707,7 +2702,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \hypo [ ] {2} {\phi (x)}
             \have [ ] {2} {\therefore \forall x \phi (x)} \by{$\forall I$}{}
         \end{fitchproof}
-        \rule[0pt]{0pt}{0pt} &
+        \rule[0pt]{0pt}{0pt}       &
 
         \begin{enumerate}
             \setlength{\itemsep}{0pt}
@@ -2725,7 +2720,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \hypo [ ] {2} {\forall x \phi (x)}
             \have [ ] {2} {\therefore \phi [t/x]} \by{$\forall E$}{}
         \end{fitchproof}
-        \rule[0pt]{0pt}{0pt} &
+        \rule[0pt]{0pt}{0pt}       &
 
         \begin{enumerate}
             \setlength{\itemsep}{0pt}
@@ -2741,7 +2736,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \hypo [ ] {2} {\phi [t/x]}
             \have [ ] {2} {\therefore \exists x \phi (x)} \by{$\exists I$}{}
         \end{fitchproof}
-        \rule[0pt]{0pt}{0pt} &
+        \rule[0pt]{0pt}{0pt}       &
 
         \begin{enumerate}
             \setlength{\itemsep}{0pt}
@@ -2762,7 +2757,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
             \close
             \have [ ] {2} {\therefore\theta } \by{$\exists E$}{}
         \end{fitchproof}
-        \rule[0pt]{0pt}{0pt} &
+        \rule[0pt]{0pt}{0pt}       &
 
         \begin{enumerate}
             \setlength{\itemsep}{0pt}
@@ -2952,8 +2947,6 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
 \begin{lemma}
     \[ /\therefore  \bigcap_{i \in I} A_i =  \{x \mid \forall i \in I \quad x \in A_i\} \]
 
-
-    
     \begin{fitchproof}[arrayenv=tabular]
         \open
         \have {1} { x \in \bigcap_{i \in I} A_i  }                                 \by{$acp$}{}
@@ -3954,7 +3947,7 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
 
     Define a relation $\sim$ on $S \times S$ by
     \[
-        (a,b) \sim (c,d) \iff a + d = b + c.
+        (a,b) \sim (c,d) \leftrightarrow a + d = b + c.
     \]
 
     \textbf{Claim 0: $\sim$ is an equivalence relation.}
@@ -4156,7 +4149,7 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
 
         Define a relation $\sim$ on $S \times S$ by
         \[
-            (a,b) \sim (c,d) \iff a + d = b + c.
+            (a,b) \sim (c,d) \leftrightarrow a + d = b + c.
         \]
         \textbf{Claim 0: $\sim$ is an equivalence relation.}
 
@@ -4370,7 +4363,7 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
 
     Define a relation $\sim$ on $R \times (R \setminus \{0\})$ by
     \[
-        (a,b) \sim (c,d) \iff ad = bc.
+        (a,b) \sim (c,d) \leftrightarrow ad = bc.
     \]
 
     \textbf{Claim 0: $\sim$ is an equivalence relation.}
@@ -5241,8 +5234,8 @@ we denote also ``Multiplication'' with ``$m \cdot n$'' and ``$mn$'' too.
 \section{Peano arithmetic}
 
 assume a structure ``$\mathfrak{N} := (N , + , \cdot , s , 0)$''(here ``$+ ,
-    \cdot , s , 0 $'' are arbitrary functions and constants and doesn't have meaning
-we defined before). with these properties.
+    \cdot , s , 0 $'' are arbitrary functions and constants and doesn't have
+meaning we defined before). with these properties.
 
 \begin{enumerate}
     \setlength{\itemsep}{0pt} % No extra space between items
@@ -7117,7 +7110,7 @@ when ``$f : W_1 \to W_2$'' is a (weak) homomorphism.
     \[
         f\subseteq W_1\times W_2
         \quad\text{by}\quad
-        (x,y)\in f \iff W_1[x]\cong W_2[y].
+        (x,y)\in f \leftrightarrow W_1[x]\cong W_2[y].
     \]
 
     \textbf{Claim 1: $f$ is a function.}
@@ -7966,8 +7959,6 @@ renaming.
 
 \section{Arithmetic of Ordinals}
 
-
-
 \begin{theorem}\textbf{Summation} there is a unique function ``$+ :Ord \times Ord \to Ord$'' s.t.
 
     \begin{enumerate}
@@ -7995,9 +7986,9 @@ we denote also ``Multiplication'' with ``$\alpha  \cdot  \beta $'' and ``$\alpha
 \section{Transfinite Peano arithmetic}
 
 assume a structure ``$\mathfrak{N} := (N , + , \cdot , s , 0)$''(here ``$+ ,
-    \cdot , s , 0 $'' are arbitrary functions and constants and doesn't have meaning
-we defined before). with ``$ Limit(x) : \forall y \in N \quad s(y) \not= x $ ''
-and these properties.
+    \cdot , s , 0 $'' are arbitrary functions and constants and doesn't have
+meaning we defined before). with ``$ Limit(x) : \forall y \in N \quad s(y)
+    \not= x $ '' and these properties.
 
 \begin{enumerate}
     \setlength{\itemsep}{0pt} % No extra space between items
@@ -8063,7 +8054,6 @@ arithmetic. so properties are true for them.
 \chapter{Cardinals }
 
 \chapter{Axiom of choice}
-
 
 \chapter{fantacy numbers($ \mathbb{Z} (Ord) , \mathbb{Q} (Ord) ,\mathbb{R} (Ord) ,\mathbb{C} (Ord)$) }
 
@@ -8282,8 +8272,8 @@ we usually give ``$N$'' natural numbers but it's not necessary.
 
 we define an equivalence relation ``$ (a_i)_{i \in Ord} \sim (b_i)_{i \in Ord}
     : \forall \varepsilon > 0 \quad \exists N \quad \forall n \quad N < n < roof(N)
-    \to | a_n - b_n | < \varepsilon $''(check it's an equivalence relation). we denote
-every $[(a_i)_{i \in Ord}]$ with $[a_i]_{i \in Ord}$.
+    \to | a_n - b_n | < \varepsilon $''(check it's an equivalence relation). we
+denote every $[(a_i)_{i \in Ord}]$ with $[a_i]_{i \in Ord}$.
 
 \begin{definition}\textbf{fantacy Real numbers ``$\mathbb{R} (Ord)$''} is a set
     \[ \mathbb{R} (Ord) :=  Cauchy/ \sim  \]
@@ -8516,70 +8506,76 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
 \chapter{hyperreal numbers($ {}^*\mathbb{N}  , {}^*\mathbb{Z}, {}^*\mathbb{Q} , {}^*\mathbb{R} $)  }
 \section{Filters}
 
-Filters are mathematical objects used to formalize the idea of ``large subsets'' of a set.
+Filters are mathematical objects used to formalize the idea of ``large
+subsets'' of a set.
 
 \begin{definition}[Filter]
 
-Let $X$ be a nonempty set. A \emph{filter} $\mathcal{F}$ on $X$ is a collection of subsets of $X$ such that:
+    Let $X$ be a nonempty set. A \emph{filter} $\mathcal{F}$ on $X$ is a collection
+    of subsets of $X$ such that:
 
-\begin{enumerate}
+    \begin{enumerate}
 
-    \item $\emptyset\notin\mathcal{F}$.
+        \item $\emptyset\notin\mathcal{F}$.
 
-    \item $X\in\mathcal{F}$.
+        \item $X\in\mathcal{F}$.
 
-    \item If $A,B\in\mathcal{F}$, then
+        \item If $A,B\in\mathcal{F}$, then
 
-    $$
-    A\cap B\in\mathcal{F}.
-    $$
+              $$
+                  A\cap B\in\mathcal{F}.
+              $$
 
-    \item If $A\in\mathcal{F}$ and $A\subseteq B\subseteq X$, then
+        \item If $A\in\mathcal{F}$ and $A\subseteq B\subseteq X$, then
 
-    $$
-    B\in\mathcal{F}.
-    $$
+              $$
+                  B\in\mathcal{F}.
+              $$
 
-\end{enumerate}
+    \end{enumerate}
 
 \end{definition}
 
-Intuitively, the sets in $\mathcal{F}$ are considered ``large''. The intersection of two large sets is still large, and every superset of a large set is also large.
+Intuitively, the sets in $\mathcal{F}$ are considered ``large''. The
+intersection of two large sets is still large, and every superset of a large
+set is also large.
 
 \begin{example}[Trivial Filter]
 
-For any set $X$,
+    For any set $X$,
 
-$$
-\mathcal{F}=\{X\}
-$$
+    $$
+        \mathcal{F}=\{X\}
+    $$
 
-is a filter on $X$.
+    is a filter on $X$.
 
 \end{example}
 
 \begin{example}[Principal Filter]
 
-Fix $A\subseteq X$ with $A\neq\emptyset$. Define
+    Fix $A\subseteq X$ with $A\neq\emptyset$. Define
 
-$$
-\mathcal{F}_A:=\{B\subseteq X:A\subseteq B\}.
-$$
+    $$
+        \mathcal{F}_A:=\{B\subseteq X:A\subseteq B\}.
+    $$
 
-Then $\mathcal{F}_A$ is a filter on $X$. This is called the \emph{principal filter generated by $A$}.
+    Then $\mathcal{F}_A$ is a filter on $X$. This is called the \emph{principal
+        filter generated by $A$}.
 
 \end{example}
 \begin{example}[Fr\'echet Filter]
 
-Let $X=\mathbb{N}$. Define
+    Let $X=\mathbb{N}$. Define
 
-$$
-\mathcal{F}
-=
-\{A\subseteq\mathbb{N}:\mathbb{N}\setminus A\text{ is finite}\}.
-$$
+    $$
+        \mathcal{F}
+        =
+        \{A\subseteq\mathbb{N}:\mathbb{N}\setminus A\text{ is finite}\}.
+    $$
 
-Then $\mathcal{F}$ is a filter. Its elements are the cofinite subsets of $\mathbb{N}$. This is called the \emph{Fr\'echet filter}.
+    Then $\mathcal{F}$ is a filter. Its elements are the cofinite subsets of
+    $\mathbb{N}$. This is called the \emph{Fr\'echet filter}.
 
 \end{example}
 
@@ -8589,11 +8585,13 @@ Ultrafilters are maximal filters.
 
 \begin{definition}[Ultrafilter]
 
-A filter $\mathcal{U}$ on $X$ is called an \emph{ultrafilter} if it is maximal among filters; that is, whenever $\mathcal{F}$ is a filter on $X$ and $\mathcal{U}\subseteq\mathcal{F}$, then
+    A filter $\mathcal{U}$ on $X$ is called an \emph{ultrafilter} if it is maximal
+    among filters; that is, whenever $\mathcal{F}$ is a filter on $X$ and
+    $\mathcal{U}\subseteq\mathcal{F}$, then
 
-$$
-\mathcal{F}=\mathcal{U}.
-$$
+    $$
+        \mathcal{F}=\mathcal{U}.
+    $$
 
 \end{definition}
 
@@ -8601,58 +8599,77 @@ There is a very important characterization of ultrafilters.
 
 \begin{theorem}[Ultrafilter Characterization]
 
-Let $\mathcal{U}$ be a filter on $X$. Then $\mathcal{U}$ is an ultrafilter if and only if for every subset $A\subseteq X$, exactly one of the following holds:
+    Let $\mathcal{U}$ be a filter on $X$. Then $\mathcal{U}$ is an ultrafilter if
+    and only if for every subset $A\subseteq X$, exactly one of the following
+    holds:
 
-$$
-A\in\mathcal{U},
-\quad
-\text{or}
-\quad
-X\setminus A\in\mathcal{U}.
-$$
+    $$
+        A\in\mathcal{U},
+        \quad
+        \text{or}
+        \quad
+        X\setminus A\in\mathcal{U}.
+    $$
 
 \end{theorem}
 
 \begin{proof}
 
-Suppose first that $\mathcal{U}$ is an ultrafilter. Let $A\subseteq X$. We cannot have both $A\in\mathcal{U}$ and $X\setminus A\in\mathcal{U}$, since then $\emptyset=A\cap(X\setminus A)\in\mathcal{U}$, which is impossible. Suppose that neither $A$ nor $X\setminus A$ belongs to $\mathcal{U}$. Then the filter generated by $\mathcal{U}\cup\{A\}$ is strictly larger than $\mathcal{U}$, contradicting the maximality of $\mathcal{U}$. Hence exactly one of them belongs to $\mathcal{U}$.
+    Suppose first that $\mathcal{U}$ is an ultrafilter. Let $A\subseteq X$. We
+    cannot have both $A\in\mathcal{U}$ and $X\setminus A\in\mathcal{U}$, since then
+    $\emptyset=A\cap(X\setminus A)\in\mathcal{U}$, which is impossible. Suppose
+    that neither $A$ nor $X\setminus A$ belongs to $\mathcal{U}$. Then the filter
+    generated by $\mathcal{U}\cup\{A\}$ is strictly larger than $\mathcal{U}$,
+    contradicting the maximality of $\mathcal{U}$. Hence exactly one of them
+    belongs to $\mathcal{U}$.
 
-Conversely, suppose that for every $A\subseteq X$, exactly one of $A$ and $X\setminus A$ belongs to $\mathcal{U}$. Let $\mathcal{F}$ be a filter on $X$ such that $\mathcal{U}\subseteq\mathcal{F}$. If $\mathcal{F}\neq\mathcal{U}$, choose $A\in\mathcal{F}\setminus\mathcal{U}$. By assumption, $X\setminus A\in\mathcal{U}\subseteq\mathcal{F}$. Therefore
+    Conversely, suppose that for every $A\subseteq X$, exactly one of $A$ and
+    $X\setminus A$ belongs to $\mathcal{U}$. Let $\mathcal{F}$ be a filter on $X$
+    such that $\mathcal{U}\subseteq\mathcal{F}$. If $\mathcal{F}\neq\mathcal{U}$,
+    choose $A\in\mathcal{F}\setminus\mathcal{U}$. By assumption, $X\setminus
+        A\in\mathcal{U}\subseteq\mathcal{F}$. Therefore
 
-$$
-A\cap(X\setminus A)=\emptyset\in\mathcal{F},
-$$
+    $$
+        A\cap(X\setminus A)=\emptyset\in\mathcal{F},
+    $$
 
-a contradiction. Hence $\mathcal{F}=\mathcal{U}$, so $\mathcal{U}$ is an ultrafilter.
+    a contradiction. Hence $\mathcal{F}=\mathcal{U}$, so $\mathcal{U}$ is an
+    ultrafilter.
 
 \end{proof}
 
-Thus an ultrafilter makes a complete decision about every subset of $X$: exactly one of $A$ and $X\setminus A$ is ``large''.
+Thus an ultrafilter makes a complete decision about every subset of $X$:
+exactly one of $A$ and $X\setminus A$ is ``large''.
 \begin{example}
 
-Fix $x\in X$. Define
+    Fix $x\in X$. Define
 
-$$
-\mathcal{U}_x:=\{A\subseteq X:x\in A\}.
-$$
+    $$
+        \mathcal{U}_x:=\{A\subseteq X:x\in A\}.
+    $$
 
-Then $\mathcal{U}_x$ is an ultrafilter. It is called the \emph{principal ultrafilter at $x$}.
+    Then $\mathcal{U}_x$ is an ultrafilter. It is called the \emph{principal
+        ultrafilter at $x$}.
 
 \end{example}
 
 \begin{proof}
 
-First, $\emptyset\notin\mathcal{U}_x$ and $X\in\mathcal{U}_x$. If $A,B\in\mathcal{U}_x$, then $x\in A\cap B$, so $A\cap B\in\mathcal{U}_x$. If $A\in\mathcal{U}_x$ and $A\subseteq B$, then $x\in B$, so $B\in\mathcal{U}_x$. Thus $\mathcal{U}_x$ is a filter.
+    First, $\emptyset\notin\mathcal{U}_x$ and $X\in\mathcal{U}_x$. If
+    $A,B\in\mathcal{U}_x$, then $x\in A\cap B$, so $A\cap B\in\mathcal{U}_x$. If
+    $A\in\mathcal{U}_x$ and $A\subseteq B$, then $x\in B$, so $B\in\mathcal{U}_x$.
+    Thus $\mathcal{U}_x$ is a filter.
 
-Moreover, for every $A\subseteq X$, either $x\in A$ or $x\notin A$. Hence either
+    Moreover, for every $A\subseteq X$, either $x\in A$ or $x\notin A$. Hence
+    either
 
-$$
-A\in\mathcal{U}_x,
-\qquad
-X\setminus A\in\mathcal{U}_x.
-$$
+    $$
+        A\in\mathcal{U}_x,
+        \qquad
+        X\setminus A\in\mathcal{U}_x.
+    $$
 
-By the Ultrafilter Characterization, $\mathcal{U}_x$ is an ultrafilter.
+    By the Ultrafilter Characterization, $\mathcal{U}_x$ is an ultrafilter.
 
 \end{proof}
 
@@ -8694,11 +8711,15 @@ So every filter can be enlarged until it becomes maximal.
     \[
         \mathcal{F}=\{A\subseteq\mathbb{N}:\mathbb{N}\setminus A\text{ is finite}\}.
     \]
-    This is the Fr\'echet filter. It is not an ultrafilter, because for the set of even numbers
+    This is the Fr\'echet filter. It is not an ultrafilter, because for the set of
+    even numbers
     \[
         E=\{0,2,4,6,\dots\},
     \]
-    neither $E\in\mathcal{F}$ nor $\mathbb{N}\setminus E\in\mathcal{F}$. By the Ultrafilter Lemma, there exists an ultrafilter $\mathcal{U}$ such that $\mathcal{F}\subseteq\mathcal{U}$. Since $\mathcal{U}$ is an ultrafilter, exactly one of
+    neither $E\in\mathcal{F}$ nor $\mathbb{N}\setminus E\in\mathcal{F}$. By the
+    Ultrafilter Lemma, there exists an ultrafilter $\mathcal{U}$ such that
+    $\mathcal{F}\subseteq\mathcal{U}$. Since $\mathcal{U}$ is an ultrafilter,
+    exactly one of
     \[
         E\in\mathcal{U},
         \quad
@@ -8723,21 +8744,33 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
     \[
         \mathcal{P}=\{\mathcal{G}:\mathcal{G}\text{ is a filter on }X\text{ and }\mathcal{F}\subseteq\mathcal{G}\}.
     \]
-    We partially order $\mathcal{P}$ by inclusion. Let $\mathcal{C}\subseteq\mathcal{P}$ be a chain and define
+    We partially order $\mathcal{P}$ by inclusion. Let
+    $\mathcal{C}\subseteq\mathcal{P}$ be a chain and define
     \[
         \mathcal{H}=\bigcup_{\mathcal{G}\in\mathcal{C}}\mathcal{G}.
     \]
-    Clearly $\emptyset\notin\mathcal{H}$ and $X\in\mathcal{H}$. If $A,B\in\mathcal{H}$, then $A\in\mathcal{G}_1$ and $B\in\mathcal{G}_2$ for some $\mathcal{G}_1,\mathcal{G}_2\in\mathcal{C}$. Since $\mathcal{C}$ is a chain, one of $\mathcal{G}_1\subseteq\mathcal{G}_2$ or $\mathcal{G}_2\subseteq\mathcal{G}_1$ holds, so $A,B$ belong to the larger filter and hence
+    Clearly $\emptyset\notin\mathcal{H}$ and $X\in\mathcal{H}$. If
+    $A,B\in\mathcal{H}$, then $A\in\mathcal{G}_1$ and $B\in\mathcal{G}_2$ for some
+    $\mathcal{G}_1,\mathcal{G}_2\in\mathcal{C}$. Since $\mathcal{C}$ is a chain,
+    one of $\mathcal{G}_1\subseteq\mathcal{G}_2$ or
+    $\mathcal{G}_2\subseteq\mathcal{G}_1$ holds, so $A,B$ belong to the larger
+    filter and hence
     \[
         A\cap B\in\mathcal{H}.
     \]
-    If $A\in\mathcal{H}$ and $A\subseteq B\subseteq X$, then $A\in\mathcal{G}$ for some $\mathcal{G}\in\mathcal{C}$, and since $\mathcal{G}$ is a filter, $B\in\mathcal{G}\subseteq\mathcal{H}$. Thus $\mathcal{H}$ is a filter. Moreover,
+    If $A\in\mathcal{H}$ and $A\subseteq B\subseteq X$, then $A\in\mathcal{G}$ for
+    some $\mathcal{G}\in\mathcal{C}$, and since $\mathcal{G}$ is a filter,
+    $B\in\mathcal{G}\subseteq\mathcal{H}$. Thus $\mathcal{H}$ is a filter.
+    Moreover,
     \[
         \mathcal{F}\subseteq\mathcal{H},
     \]
-    so $\mathcal{H}\in\mathcal{P}$. Therefore every chain in $\mathcal{P}$ has an upper bound, and by Zorn's Lemma, $\mathcal{P}$ has a maximal element, say $\mathcal{U}$.
+    so $\mathcal{H}\in\mathcal{P}$. Therefore every chain in $\mathcal{P}$ has an
+    upper bound, and by Zorn's Lemma, $\mathcal{P}$ has a maximal element, say
+    $\mathcal{U}$.
 
-    We claim that $\mathcal{U}$ is an ultrafilter. Suppose $\mathcal{U}\subseteq\mathcal{V}$, where $\mathcal{V}$ is a filter on $X$. Then
+    We claim that $\mathcal{U}$ is an ultrafilter. Suppose
+    $\mathcal{U}\subseteq\mathcal{V}$, where $\mathcal{V}$ is a filter on $X$. Then
     \[
         \mathcal{F}\subseteq\mathcal{U}\subseteq\mathcal{V},
     \]
@@ -8764,12 +8797,14 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
         \quad
         \mathbb{N}\setminus A\in\mathcal{U}
     \]
-    holds. Hence $\mathbb{N}\setminus A\in\mathcal{U}$. Thus $\mathcal{U}$ contains a finite set, say
+    holds. Hence $\mathbb{N}\setminus A\in\mathcal{U}$. Thus $\mathcal{U}$ contains
+    a finite set, say
     \[
         F=\{n_1,\ldots,n_k\}\in\mathcal{U}.
     \]
 
-    Suppose that $\{n_i\}\notin\mathcal{U}$ for every $i$. Then, since $\mathcal{U}$ is an ultrafilter,
+    Suppose that $\{n_i\}\notin\mathcal{U}$ for every $i$. Then, since
+    $\mathcal{U}$ is an ultrafilter,
     \[
         \mathbb{N}\setminus\{n_i\}\in\mathcal{U}
     \]
@@ -8784,7 +8819,8 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
     \[
         F\cap(\mathbb{N}\setminus F)=\emptyset\in\mathcal{U},
     \]
-    a contradiction. Therefore $\{n_i\}\in\mathcal{U}$ for some $i$, so $\mathcal{U}$ is principal, contradicting our assumption.
+    a contradiction. Therefore $\{n_i\}\in\mathcal{U}$ for some $i$, so
+    $\mathcal{U}$ is principal, contradicting our assumption.
 
     Hence $A\in\mathcal{U}$. Since $A$ was arbitrary,
     \[
@@ -8792,7 +8828,7 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
     \]
 \end{proof}
 
-\section{Definition of ${}^\ast\mathbb{N}$, ${}^\ast\mathbb{Z}$, ${}^\ast\mathbb{Q}$, and ${}^\ast\mathbb{R}$}
+\section{Definition of ${}^\ast\mathbb{N}$, ${}^\ast\mathbb{Z}$, ${}^\ast\mathbb{Q}$,  ${}^\ast\mathbb{R}$ , and ${}^*\mathbb{R}_{Ord}$}
 
 \begin{definition}[Ultrapower Construction]
     Let $X$ be a set and let $\mathcal{U}$ be a nonprincipal ultrafilter on $\omega$. Consider the set
@@ -8815,7 +8851,8 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
     \[
         \{i\in\omega:a_i=b_i\}\in\mathcal{U}.
     \]
-    In words, two sequences are equivalent if they agree on a set of indices belonging to the ultrafilter.
+    In words, two sequences are equivalent if they agree on a set of indices
+    belonging to the ultrafilter.
 \end{definition}
 
 \begin{theorem}
@@ -8843,7 +8880,8 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
         \qquad
         B=\{i\in\omega:b_i=c_i\}\in\mathcal{U}.
     \]
-    Since $\mathcal{U}$ is a filter, $A\cap B\in\mathcal{U}$. If $i\in A\cap B$, then $a_i=b_i=c_i$, so
+    Since $\mathcal{U}$ is a filter, $A\cap B\in\mathcal{U}$. If $i\in A\cap B$,
+    then $a_i=b_i=c_i$, so
     \[
         A\cap B\subseteq\{i\in\omega:a_i=c_i\}.
     \]
@@ -8859,7 +8897,8 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
     \[
         X^\omega/\sim
     \]
-    is called the \emph{ultrapower} of $X$ modulo $\mathcal{U}$. The equivalence class of $a\in X^\omega$ is denoted by $[a]$.
+    is called the \emph{ultrapower} of $X$ modulo $\mathcal{U}$. The equivalence
+    class of $a\in X^\omega$ is denoted by $[a]$.
 \end{definition}
 
 We now apply this construction to the standard number systems.
@@ -8892,7 +8931,16 @@ We now apply this construction to the standard number systems.
     \]
 \end{definition}
 
-The algebraic operations are defined componentwise. For example, if $[a],[b]\in{}^\ast\mathbb{R}$, then
+\begin{definition}[The Structure ${}^*\mathbb{R}_{Ord}$]
+    For each ordinal $\alpha$, let ${}^*\mathbb{R}_\alpha$ denote the corresponding stage of hyperreal extension. Define
+    $$
+        {}^*\mathbb{R}_{Ord}:=\bigcup_{\alpha\in\mathrm{Ord}}{}^*\mathbb{R}_\alpha.
+    $$
+    Since $\mathrm{Ord}\subseteq{}^*\mathbb{R}_{Ord}$, every ordinal $\beta$ is itself an element of ${}^*\mathbb{R}_{Ord}$. In particular, given $N\in{}^*\mathbb{R}_{Ord}$ and the index set $\{0,\ldots,N-1\}\subseteq{}^*\mathbb{R}_{Ord}$, we say $i\in\{0,\ldots,N-1\}$ \textbf{is an ordinal} if $i\in\mathrm{Ord}$ (as opposed to $i$ being a non-ordinal element of some ${}^*\mathbb{R}_\alpha$).
+\end{definition}
+
+The algebraic operations are defined componentwise. For example, if
+$[a],[b]\in{}^\ast\mathbb{R}$, then
 \[
     [a]+[b]=[(a_i+b_i)_{i\in\omega}],
     \qquad
@@ -8922,7 +8970,8 @@ if
     \[
         \{i\in\omega:r=s\}\in\mathcal{U}.
     \]
-    If $r\neq s$, then $\{i\in\omega:r=s\}=\emptyset$, which cannot belong to a filter. Hence $r=s$, so $\iota$ is injective.
+    If $r\neq s$, then $\{i\in\omega:r=s\}=\emptyset$, which cannot belong to a
+    filter. Hence $r=s$, so $\iota$ is injective.
 \end{proof}
 
 \begin{example}
@@ -8930,7 +8979,8 @@ if
     \[
         [a]\in{}^\ast\mathbb{N}
     \]
-    is larger than every standard natural number. Indeed, for every $n\in\mathbb{N}$,
+    is larger than every standard natural number. Indeed, for every
+    $n\in\mathbb{N}$,
     \[
         \{i\in\omega:n<a_i\}
         =
@@ -8943,387 +8993,420 @@ if
 \end{example}
 \section{The Ultrapower Construction of the Hyperreals}
 
-Let \(r=(r_n)_{n\in\mathbb N}\) and \(s=(s_n)_{n\in\mathbb N}\) be two sequences of real numbers. We denote the set \(\{n\in\mathbb N:r_n=s_n\}\) by \(\llbracket r=s\rrbracket\). Thus
+Let \(r=(r_n)_{n\in\mathbb N}\) and \(s=(s_n)_{n\in\mathbb N}\) be two
+sequences of real numbers. We denote the set \(\{n\in\mathbb N:r_n=s_n\}\) by
+\(\llbracket r=s\rrbracket\). Thus
 
 $$
-\llbracket r=s\rrbracket=\{n\in\mathbb N:r_n=s_n\}.
+    \llbracket r=s\rrbracket=\{n\in\mathbb N:r_n=s_n\}.
 $$
 
-The set \(\llbracket r=s\rrbracket\) may be thought of as the interpretation, or value, of the statement ``\(r=s\)''. Instead of assigning a truth value to the statement, we assign the set of indices at which it is true.
+The set \(\llbracket r=s\rrbracket\) may be thought of as the interpretation,
+or value, of the statement ``\(r=s\)''. Instead of assigning a truth value to
+the statement, we assign the set of indices at which it is true.
 
-Let \(\mathcal F\) be a free ultrafilter on \(\mathbb N\). We define \(r\sim s\) if and only if
+Let \(\mathcal F\) be a free ultrafilter on \(\mathbb N\). We define \(r\sim
+s\) if and only if
 
 $$
-\llbracket r=s\rrbracket\in\mathcal F.
+    \llbracket r=s\rrbracket\in\mathcal F.
 $$
 
-In this case we say that \(r=s\) holds \textbf{almost everywhere modulo \(\mathcal F\)}.
+In this case we say that \(r=s\) holds \textbf{almost everywhere modulo
+    \(\mathcal F\)}.
 
 The same idea applies to other assertions. We define
 
 $$
-\llbracket r<s\rrbracket=\{n\in\mathbb N:r_n<s_n\},
-\qquad
-\llbracket r>s\rrbracket=\{n\in\mathbb N:r_n>s_n\},
+    \llbracket r<s\rrbracket=\{n\in\mathbb N:r_n<s_n\},
+    \qquad
+    \llbracket r>s\rrbracket=\{n\in\mathbb N:r_n>s_n\},
 $$
 
 and
 
 $$
-\llbracket r\leq s\rrbracket=\{n\in\mathbb N:r_n\leq s_n\}.
+    \llbracket r\leq s\rrbracket=\{n\in\mathbb N:r_n\leq s_n\}.
 $$
 
-Thus, for example, \(\llbracket r<s\rrbracket\in\mathcal F\) means that \(r_n<s_n\) for \(\mathcal F\)-almost all \(n\). We call these sets the \textbf{Statement Values} of the corresponding statements.
+Thus, for example, \(\llbracket r<s\rrbracket\in\mathcal F\) means that
+\(r_n<s_n\) for \(\mathcal F\)-almost all \(n\). We call these sets the
+\textbf{Statement Values} of the corresponding statements.
 
 \begin{theorem}
 
-The relation \(\sim\) is an equivalence relation on \(\mathbb R^{\mathbb N}\).
+    The relation \(\sim\) is an equivalence relation on \(\mathbb R^{\mathbb N}\).
 
 \end{theorem}
 
 \begin{proof}
 
-For every \(r\in\mathbb R^{\mathbb N}\), \(\llbracket r=r\rrbracket=\mathbb N\in\mathcal F\), so \(r\sim r\).
+    For every \(r\in\mathbb R^{\mathbb N}\), \(\llbracket r=r\rrbracket=\mathbb
+    N\in\mathcal F\), so \(r\sim r\).
 
-If \(r\sim s\), then \(\llbracket r=s\rrbracket=\llbracket s=r\rrbracket\in\mathcal F\), so \(s\sim r\).
+    If \(r\sim s\), then \(\llbracket r=s\rrbracket=\llbracket
+    s=r\rrbracket\in\mathcal F\), so \(s\sim r\).
 
-Finally, suppose \(r\sim s\) and \(s\sim t\). Then \(\llbracket r=s\rrbracket,\llbracket s=t\rrbracket\in\mathcal F\), so
+    Finally, suppose \(r\sim s\) and \(s\sim t\). Then \(\llbracket
+    r=s\rrbracket,\llbracket s=t\rrbracket\in\mathcal F\), so
 
-$$
-\llbracket r=s\rrbracket\cap\llbracket s=t\rrbracket\in\mathcal F.
-$$
+    $$
+        \llbracket r=s\rrbracket\cap\llbracket s=t\rrbracket\in\mathcal F.
+    $$
 
-Since
+    Since
 
-$$
-\llbracket r=s\rrbracket\cap\llbracket s=t\rrbracket
-\subseteq
-\llbracket r=t\rrbracket,
-$$
+    $$
+        \llbracket r=s\rrbracket\cap\llbracket s=t\rrbracket
+        \subseteq
+        \llbracket r=t\rrbracket,
+    $$
 
-and \(\mathcal F\) is closed upward, \(\llbracket r=t\rrbracket\in\mathcal F\). Hence \(r\sim t\).
+    and \(\mathcal F\) is closed upward, \(\llbracket r=t\rrbracket\in\mathcal F\).
+    Hence \(r\sim t\).
 
 \end{proof}
 
 \begin{definition}
 
-The equivalence class of \(r\in\mathbb R^{\mathbb N}\) under \(\sim\) is denoted by
+    The equivalence class of \(r\in\mathbb R^{\mathbb N}\) under \(\sim\) is
+    denoted by
 
-$$
-[r]=\{s\in\mathbb R^{\mathbb N}:r\sim s\}.
-$$
+    $$
+        [r]=\{s\in\mathbb R^{\mathbb N}:r\sim s\}.
+    $$
 
 \end{definition}
 
 \begin{definition}
 
-For \(r,s\in\mathbb R^{\mathbb N}\), define addition and multiplication on \({}^\ast\mathbb R\) by
+    For \(r,s\in\mathbb R^{\mathbb N}\), define addition and multiplication on
+    \({}^\ast\mathbb R\) by
 
-$$
-[r]+[s]=[r+s],
-\qquad
-[r]\cdot[s]=[r\cdot s],
-$$
+    $$
+        [r]+[s]=[r+s],
+        \qquad
+        [r]\cdot[s]=[r\cdot s],
+    $$
 
-where \((r+s)_n=r_n+s_n\) and \((r\cdot s)_n=r_ns_n\).
+    where \((r+s)_n=r_n+s_n\) and \((r\cdot s)_n=r_ns_n\).
 
-We define the order relation by
+    We define the order relation by
 
-$$
-[r]<[s]
-\iff
-\llbracket r<s\rrbracket\in\mathcal F.
-$$
+    $$
+        [r]<[s]
+        \leftrightarrow
+        \llbracket r<s\rrbracket\in\mathcal F.
+    $$
 
 \end{definition}
 
-These definitions are well-defined. If \(r\sim r'\) and \(s\sim s'\), then \(r+s\sim r'+s'\) and \(r\cdot s\sim r'\cdot s'\). Similarly,
+These definitions are well-defined. If \(r\sim r'\) and \(s\sim s'\), then
+\(r+s\sim r'+s'\) and \(r\cdot s\sim r'\cdot s'\). Similarly,
 
 $$
-[r]<[s]\iff[r']<[s'].
+    [r]<[s]\leftrightarrow[r']<[s'].
 $$
 
 \begin{theorem}[Almost-All Criterion]
 
-For sequences \(r=(r_n)\), \(s=(s_n)\), and \(t=(t_n)\), we have
+    For sequences \(r=(r_n)\), \(s=(s_n)\), and \(t=(t_n)\), we have
 
-$$
-[r]=[s]
-\iff
-r_n=s_n
-\quad\text{for \(\mathcal F\)-almost all }n,
-$$
+    $$
+        [r]=[s]
+        \leftrightarrow
+        r_n=s_n
+        \quad\text{for \(\mathcal F\)-almost all }n,
+    $$
 
-$$
-[r]<[s]
-\iff
-r_n<s_n
-\quad\text{for \(\mathcal F\)-almost all }n,
-$$
+    $$
+        [r]<[s]
+        \leftrightarrow
+        r_n<s_n
+        \quad\text{for \(\mathcal F\)-almost all }n,
+    $$
 
-$$
-[r]+[s]=[t]
-\iff
-r_n+s_n=t_n
-\quad\text{for \(\mathcal F\)-almost all }n,
-$$
+    $$
+        [r]+[s]=[t]
+        \leftrightarrow
+        r_n+s_n=t_n
+        \quad\text{for \(\mathcal F\)-almost all }n,
+    $$
 
-and
+    and
 
-$$
-[r]\cdot[s]=[t]
-\iff
-r_ns_n=t_n
-\quad\text{for \(\mathcal F\)-almost all }n.
-$$
+    $$
+        [r]\cdot[s]=[t]
+        \leftrightarrow
+        r_ns_n=t_n
+        \quad\text{for \(\mathcal F\)-almost all }n.
+    $$
 
-The same principle holds for many other mathematical statements and is the basis of the \textbf{Transfer Principle}.
+    The same principle holds for many other mathematical statements and is the
+    basis of the \textbf{Transfer Principle}.
 
 \end{theorem}
 
 \begin{theorem}
 
-The structure
+    The structure
 
-$$
-({}^\ast\mathbb R,+,\cdot,<)
-$$
+    $$
+        ({}^\ast\mathbb R,+,\cdot,<)
+    $$
 
-is an ordered field with zero \([0]\) and unity \([1]\).
+    is an ordered field with zero \([0]\) and unity \([1]\).
 
 \end{theorem}
 
 \begin{proof}
 
-The ring properties follow directly from the corresponding properties of \(\mathbb R\). In particular, the additive inverse of \([r]\) is \(-[r]=[-r]\).
+    The ring properties follow directly from the corresponding properties of
+    \(\mathbb R\). In particular, the additive inverse of \([r]\) is \(-[r]=[-r]\).
 
-It remains to show that every nonzero element has a multiplicative inverse. Suppose \([r]\neq[0]\). Then \(\llbracket r=0\rrbracket\notin\mathcal F\). Since \(\mathcal F\) is an ultrafilter,
+    It remains to show that every nonzero element has a multiplicative inverse.
+    Suppose \([r]\neq[0]\). Then \(\llbracket r=0\rrbracket\notin\mathcal F\).
+    Since \(\mathcal F\) is an ultrafilter,
 
-$$
-J=\{n\in\mathbb N:r_n\neq0\}\in\mathcal F.
-$$
+    $$
+        J=\{n\in\mathbb N:r_n\neq0\}\in\mathcal F.
+    $$
 
-Define
+    Define
 
-$$
-s_n=
-\begin{cases}
-\dfrac1{r_n},&n\in J,\\
-0,&n\notin J.
-\end{cases}
-$$
+    $$
+        s_n=
+        \begin{cases}
+            \dfrac1{r_n}, & n\in J,    \\
+            0,            & n\notin J.
+        \end{cases}
+    $$
 
-Then \(\llbracket r\cdot s=1\rrbracket=J\in\mathcal F\), so \([r]\cdot[s]=[1]\). Thus \([s]\) is the multiplicative inverse of \([r]\).
+    Then \(\llbracket r\cdot s=1\rrbracket=J\in\mathcal F\), so
+    \([r]\cdot[s]=[1]\). Thus \([s]\) is the multiplicative inverse of \([r]\).
 
-Finally, since \(\mathcal F\) is an ultrafilter, for any \(r,s\), exactly one of
+    Finally, since \(\mathcal F\) is an ultrafilter, for any \(r,s\), exactly one
+    of
 
-$$
-\llbracket r<s\rrbracket,\qquad
-\llbracket r=s\rrbracket,\qquad
-\llbracket s<r\rrbracket
-$$
+    $$
+        \llbracket r<s\rrbracket,\qquad
+        \llbracket r=s\rrbracket,\qquad
+        \llbracket s<r\rrbracket
+    $$
 
-belongs to \(\mathcal F\). Hence the order on \({}^\ast\mathbb R\) is linear. Therefore
+    belongs to \(\mathcal F\). Hence the order on \({}^\ast\mathbb R\) is linear.
+    Therefore
 
-$$
-({}^\ast\mathbb R,+,\cdot,<)
-$$
+    $$
+        ({}^\ast\mathbb R,+,\cdot,<)
+    $$
 
-is an ordered field.
+    is an ordered field.
 
 \end{proof}
 
 \begin{definition}
 
-We identify every real number \(r\in\mathbb R\) with the equivalence class of the constant sequence \((r,r,r,\ldots)\). Thus
+    We identify every real number \(r\in\mathbb R\) with the equivalence class of
+    the constant sequence \((r,r,r,\ldots)\). Thus
 
-$$
-r=[(r,r,r,\ldots)].
-$$
+    $$
+        r=[(r,r,r,\ldots)].
+    $$
 
-Under this identification,
+    Under this identification,
 
-$$
-\mathbb R\subseteq{}^\ast\mathbb R.
-$$
+    $$
+        \mathbb R\subseteq{}^\ast\mathbb R.
+    $$
 
 \end{definition}
 
 For example, consider
 
 $$
-\varepsilon=
-\left[
-\left(
-1,\frac12,\frac13,\frac14,\ldots
-\right)
-\right].
+    \varepsilon=
+    \left[
+        \left(
+        1,\frac12,\frac13,\frac14,\ldots
+        \right)
+        \right].
 $$
 
-For every \(n\in\mathbb N\), \(0<\varepsilon<1/n\), and therefore \(\varepsilon\) is a positive infinitesimal.
+For every \(n\in\mathbb N\), \(0<\varepsilon<1/n\), and therefore
+\(\varepsilon\) is a positive infinitesimal.
 
 Similarly,
 
 $$
-\omega=[(1,2,3,4,\ldots)]
+    \omega=[(1,2,3,4,\ldots)]
 $$
 
 satisfies
 
 $$
-\omega>n
-\qquad\forall n\in\mathbb N.
+    \omega>n
+    \qquad\forall n\in\mathbb N.
 $$
 
 Therefore \(\omega\) is a positive infinite hyperreal number.
 
 \begin{definition}
 
-Let \(f:A\to\mathbb R\), where \(A\subseteq\mathbb R\). The \textbf{Nonstandard Extension} of \(f\) is the function
+    Let \(f:A\to\mathbb R\), where \(A\subseteq\mathbb R\). The \textbf{Nonstandard
+        Extension} of \(f\) is the function
 
-$$
-{}^\ast f:{}^\ast A\to{}^\ast\mathbb R
-$$
+    $$
+        {}^\ast f:{}^\ast A\to{}^\ast\mathbb R
+    $$
 
-defined by
+    defined by
 
-$$
-{}^\ast f([x_n])=[f(x_n)],
-$$
+    $$
+        {}^\ast f([x_n])=[f(x_n)],
+    $$
 
-where
+    where
 
-$$
-{}^\ast A=\{[x_n]:x_n\in A\}.
-$$
+    $$
+        {}^\ast A=\{[x_n]:x_n\in A\}.
+    $$
 
 \end{definition}
 
 The definition is well-defined. If \([x_n]=[y_n]\), then
 
 $$
-\{n\in\mathbb N:x_n=y_n\}\in\mathcal F.
+    \{n\in\mathbb N:x_n=y_n\}\in\mathcal F.
 $$
 
 Therefore
 
 $$
-\{n\in\mathbb N:f(x_n)=f(y_n)\}\in\mathcal F,
+    \{n\in\mathbb N:f(x_n)=f(y_n)\}\in\mathcal F,
 $$
 
-so \([f(x_n)]=[f(y_n)]\). Thus the value of \({}^\ast f([x_n])\) does not depend on the representative chosen for \([x_n]\).
+so \([f(x_n)]=[f(y_n)]\). Thus the value of \({}^\ast f([x_n])\) does not
+depend on the representative chosen for \([x_n]\).
 
 Moreover, if \(x\in A\) is standard, then
 
 $$
-{}^\ast f(x)=f(x).
+    {}^\ast f(x)=f(x).
 $$
 
 Indeed,
 
 $$
-{}^\ast f([(x,x,x,\ldots)])
-=[(f(x),f(x),f(x),\ldots)]
-=f(x).
+    {}^\ast f([(x,x,x,\ldots)])
+    =[(f(x),f(x),f(x),\ldots)]
+    =f(x).
 $$
 
 Therefore \({}^\ast f\) is genuinely an extension of \(f\).
 
-The Almost-All Criterion is the fundamental reason why this construction allows ordinary statements about real numbers to be extended to nonstandard numbers. For example, if \(f(x)=x^2\) and \(\omega=[(1,2,3,\ldots)]\), then
+The Almost-All Criterion is the fundamental reason why this construction allows
+ordinary statements about real numbers to be extended to nonstandard numbers.
+For example, if \(f(x)=x^2\) and \(\omega=[(1,2,3,\ldots)]\), then
 
 $$
-{}^\ast f(\omega)=[(1,4,9,\ldots)].
+    {}^\ast f(\omega)=[(1,4,9,\ldots)].
 $$
 
 Thus expressions such as
 
 $$
-{}^\ast f(a+\varepsilon)
+    {}^\ast f(a+\varepsilon)
 $$
 
 are well-defined even when \(a+\varepsilon\notin\mathbb R\).
 
-This is the construction that will allow us to formulate limits, continuity, derivatives, and integrals using infinitesimals.
+This is the construction that will allow us to formulate limits, continuity,
+derivatives, and integrals using infinitesimals.
 \section{(Un)limited, Infinitesimal, and Appreciable Numbers}
 
 A hyperreal number \(b\in{}^\ast\mathbb R\) is called:
 
 \begin{itemize}
 
-\item \textbf{limited} if \(r<b<s\) for some \(r,s\in\mathbb R\);
+    \item \textbf{limited} if \(r<b<s\) for some \(r,s\in\mathbb R\);
 
-\item \textbf{positive unlimited} if \(r<b\) for every \(r\in\mathbb R\);
+    \item \textbf{positive unlimited} if \(r<b\) for every \(r\in\mathbb R\);
 
-\item \textbf{negative unlimited} if \(b<r\) for every \(r\in\mathbb R\);
+    \item \textbf{negative unlimited} if \(b<r\) for every \(r\in\mathbb R\);
 
-\item \textbf{unlimited} if it is positive unlimited or negative unlimited;
+    \item \textbf{unlimited} if it is positive unlimited or negative unlimited;
 
-\item \textbf{positive infinitesimal} if \(0<b<r\) for every \(r\in\mathbb R_{>0}\);
+    \item \textbf{positive infinitesimal} if \(0<b<r\) for every \(r\in\mathbb R_{>0}\);
 
-\item \textbf{negative infinitesimal} if \(r<b<0\) for every \(r\in\mathbb R_{<0}\);
+    \item \textbf{negative infinitesimal} if \(r<b<0\) for every \(r\in\mathbb R_{<0}\);
 
-\item \textbf{infinitesimal} if it is positive infinitesimal, negative infinitesimal, or \(0\);
+    \item \textbf{infinitesimal} if it is positive infinitesimal, negative infinitesimal, or \(0\);
 
-\item \textbf{appreciable} if it is limited but not infinitesimal.
+    \item \textbf{appreciable} if it is limited but not infinitesimal.
 
 \end{itemize}
 
-Thus all real numbers and all infinitesimals are limited. The only infinitesimal real number is \(0\), while every other real number is appreciable. An appreciable number is therefore a hyperreal number that is neither infinitely small nor infinitely large.
+Thus all real numbers and all infinitesimals are limited. The only
+infinitesimal real number is \(0\), while every other real number is
+appreciable. An appreciable number is therefore a hyperreal number that is
+neither infinitely small nor infinitely large.
 
-The above definitions can also be expressed using the natural numbers. For \(b\in{}^\ast\mathbb R\),
-
-$$
-b\text{ is limited}
-\iff
-|b|<n
-\quad\text{for some }n\in\mathbb N,
-$$
+The above definitions can also be expressed using the natural numbers. For
+\(b\in{}^\ast\mathbb R\),
 
 $$
-b\text{ is unlimited}
-\iff
-|b|>n
-\quad\forall n\in\mathbb N,
+    b\text{ is limited}
+    \leftrightarrow
+    |b|<n
+    \quad\text{for some }n\in\mathbb N,
 $$
 
 $$
-b\text{ is infinitesimal}
-\iff
-|b|<\frac1n
-\quad\forall n\in\mathbb N,
+    b\text{ is unlimited}
+    \leftrightarrow
+    |b|>n
+    \quad\forall n\in\mathbb N,
+$$
+
+$$
+    b\text{ is infinitesimal}
+    \leftrightarrow
+    |b|<\frac1n
+    \quad\forall n\in\mathbb N,
 $$
 
 and
 
 $$
-b\text{ is appreciable}
-\iff
-\frac1n<|b|<m
-\quad\text{for some }n,m\in\mathbb N.
+    b\text{ is appreciable}
+    \leftrightarrow
+    \frac1n<|b|<m
+    \quad\text{for some }n,m\in\mathbb N.
 $$
 
 In particular, if \(\varepsilon\neq0\) is an infinitesimal, then
 
 $$
-|\varepsilon|<\frac1n
-\qquad\forall n\in\mathbb N.
+    |\varepsilon|<\frac1n
+    \qquad\forall n\in\mathbb N.
 $$
 
 For example,
 
 $$
-\varepsilon=
-\left[
-\left(
-1,\frac12,\frac13,\ldots
-\right)
-\right]
+    \varepsilon=
+    \left[
+        \left(
+        1,\frac12,\frac13,\ldots
+        \right)
+        \right]
 $$
 
 is a positive infinitesimal, while
 
 $$
-\omega=[(1,2,3,\ldots)]
+    \omega=[(1,2,3,\ldots)]
 $$
 
 is a positive unlimited hyperreal number.
@@ -9331,77 +9414,79 @@ is a positive unlimited hyperreal number.
 We denote the set of unlimited hypernaturals by
 
 $$
-{}^\ast\mathbb N_\infty
-=
-{}^\ast\mathbb N-\mathbb N.
+    {}^\ast\mathbb N_\infty
+        =
+        {}^\ast\mathbb N-\mathbb N.
 $$
 
 Similarly, we denote the sets of positive and negative unlimited hyperreals by
 
 $$
-{}^\ast\mathbb R_\infty^+
-=
-\{x\in{}^\ast\mathbb R:x\text{ is positive unlimited}\}
+    {}^\ast\mathbb R_\infty^+
+    =
+    \{x\in{}^\ast\mathbb R:x\text{ is positive unlimited}\}
 $$
 
 and
 
 $$
-{}^\ast\mathbb R_\infty^-
-=
-\{x\in{}^\ast\mathbb R:x\text{ is negative unlimited}\}.
+    {}^\ast\mathbb R_\infty^-
+    =
+    \{x\in{}^\ast\mathbb R:x\text{ is negative unlimited}\}.
 $$
 
-This notation may be adapted to an arbitrary subset \(X\subseteq{}^\ast\mathbb R\). For example,
+This notation may be adapted to an arbitrary subset \(X\subseteq{}^\ast\mathbb
+R\). For example,
 
 $$
-X_\infty
-=
-\{x\in X:x\text{ is unlimited}\},
+    X_\infty
+    =
+    \{x\in X:x\text{ is unlimited}\},
 $$
 
 $$
-X^+
-=
-\{x\in X:x>0\},
-\qquad
-X^-
-=
-\{x\in X:x<0\}.
+    X^+
+    =
+    \{x\in X:x>0\},
+    \qquad
+    X^-
+    =
+    \{x\in X:x<0\}.
 $$
 
 We will also use
 
 $$
-\mathcal L
-=
-\{x\in{}^\ast\mathbb R:x\text{ is limited}\}
+    \mathcal L
+    =
+    \{x\in{}^\ast\mathbb R:x\text{ is limited}\}
 $$
 
 for the set of all limited hyperreal numbers, and
 
 $$
-\mathcal I
-=
-\{x\in{}^\ast\mathbb R:x\text{ is infinitesimal}\}
+    \mathcal I
+    =
+    \{x\in{}^\ast\mathbb R:x\text{ is infinitesimal}\}
 $$
 
 for the set of all infinitesimals.
 
 \section{Arithmetic of Hyperreals}
 
-Let \(\varepsilon,\delta\) be infinitesimals, let \(b,c\) be appreciable, and let \(H,K\) be unlimited hyperreal numbers. Then the following properties hold.
+Let \(\varepsilon,\delta\) be infinitesimals, let \(b,c\) be appreciable, and
+let \(H,K\) be unlimited hyperreal numbers. Then the following properties hold.
 
 \textbf{Sums:} \(\varepsilon+\delta\) is infinitesimal, \(b+\varepsilon\) is appreciable, \(b+c\) is limited (possibly infinitesimal), and \(H+\varepsilon\) and \(H+b\) are unlimited.
 
 \textbf{Opposites:}
 
 $$
--\varepsilon\text{ is infinitesimal},
-\qquad
--b\text{ is appreciable},
-\qquad
--H\text{ is unlimited}.
+    -\varepsilon\text{ is infinitesimal},
+    \qquad
+    -b\text{ is appreciable},
+    \qquad
+    -H\text{ is unlimited}.
 $$
 
 \textbf{Products:} \(\varepsilon\delta\) and \(\varepsilon b\) are infinitesimal, \(bc\) is appreciable, and \(bH\) and \(HK\) are unlimited.
@@ -9415,13 +9500,13 @@ $$
 \textbf{Indeterminate Forms:} The expressions
 
 $$
-\frac{\varepsilon}{\delta},
-\qquad
-\frac{H}{K},
-\qquad
-\varepsilon H,
-\qquad
-H+K
+    \frac{\varepsilon}{\delta},
+    \qquad
+    \frac{H}{K},
+    \qquad
+    \varepsilon H,
+    \qquad
+    H+K
 $$
 
 do not have a determined classification from the information given alone.
@@ -9429,28 +9514,31 @@ do not have a determined classification from the information given alone.
 For example, if \(\varepsilon=1/\omega\), then
 
 $$
-\varepsilon\omega=1,
+    \varepsilon\omega=1,
 $$
 
-which is appreciable. On the other hand, if \(\varepsilon=1/\sqrt{\omega}\), then
+which is appreciable. On the other hand, if \(\varepsilon=1/\sqrt{\omega}\),
+then
 
 $$
-\varepsilon\omega=\sqrt{\omega},
+    \varepsilon\omega=\sqrt{\omega},
 $$
 
-which is unlimited. Thus arithmetic involving unlimited and infinitesimal numbers must be considered carefully.
+which is unlimited. Thus arithmetic involving unlimited and infinitesimal
+numbers must be considered carefully.
 
 In \({}^\ast\mathbb R\), the terminology is interpreted as follows:
 
 \begin{itemize}
 
-\item \textbf{Finite} means limited (bounded by a real number).
+    \item \textbf{Finite} means limited (bounded by a real number).
 
-\item \textbf{Infinite} means unlimited (larger in magnitude than every real number).
+    \item \textbf{Infinite} means unlimited (larger in magnitude than every real number).
 
 \end{itemize}
 
-This distinction is relative to \(\mathbb R\) inside \({}^\ast\mathbb R\): a number may be finite in this sense while still being nonstandard.
+This distinction is relative to \(\mathbb R\) inside \({}^\ast\mathbb R\): a
+number may be finite in this sense while still being nonstandard.
 
 \section{Halos, Galaxies, and Real Comparisons}
 
@@ -9458,202 +9546,148 @@ Let \(x,y\in{}^\ast\mathbb R\).
 
 \begin{definition}[Infinitesimal Closeness]
 
-We say that \(x\) is \emph{infinitely close} to \(y\), and write
+    We say that \(x\) is \emph{infinitely close} to \(y\), and write
 
-$$
-x\approx y,
-$$
+    $$
+        x\approx y,
+    $$
 
-if \(x-y\) is infinitesimal.
+    if \(x-y\) is infinitesimal.
 
 \end{definition}
 
 \begin{definition}[Halo]
 
-The \emph{halo} of \(x\in{}^\ast\mathbb R\) is the set
+    The \emph{halo} of \(x\in{}^\ast\mathbb R\) is the set
 
-$$
-\operatorname{hal}(x)
-=
-\{y\in{}^\ast\mathbb R:y\approx x\}.
-$$
+    $$
+        \operatorname{hal}(x)
+        =
+        \{y\in{}^\ast\mathbb R:y\approx x\}.
+    $$
 
 \end{definition}
 
 \begin{definition}[Galaxy]
 
-The \emph{galaxy} of \(x\in{}^\ast\mathbb R\) is the set
+    The \emph{galaxy} of \(x\in{}^\ast\mathbb R\) is the set
 
-$$
-\operatorname{gal}(x)
-=
-\{y\in{}^\ast\mathbb R:x-y\text{ is limited}\}.
-$$
+    $$
+        \operatorname{gal}(x)
+        =
+        \{y\in{}^\ast\mathbb R:x-y\text{ is limited}\}.
+    $$
 
 \end{definition}
 
 \begin{lemma}
 
-Every halo is contained in a galaxy.
+    Every halo is contained in a galaxy.
 
 \end{lemma}
 
 \begin{proof}
 
-If \(y\in\operatorname{hal}(x)\), then \(x-y\) is infinitesimal, hence limited. Therefore \(y\in\operatorname{gal}(x)\).
+    If \(y\in\operatorname{hal}(x)\), then \(x-y\) is infinitesimal, hence limited.
+    Therefore \(y\in\operatorname{gal}(x)\).
 
 \end{proof}
 
 \begin{lemma}
 
-For standard \(r,s\in\mathbb R\),
+    For standard \(r,s\in\mathbb R\),
 
-$$
-r\approx s
-\quad\Longleftrightarrow\quad
-r=s.
-$$
+    $$
+        r\approx s
+        \quad\leftrightarrow\quad
+        r=s.
+    $$
 
 \end{lemma}
 
 \begin{proof}
 
-If \(r\approx s\), then \(r-s\) is a real infinitesimal, hence \(r-s=0\). Therefore \(r=s\).
+    If \(r\approx s\), then \(r-s\) is a real infinitesimal, hence \(r-s=0\).
+    Therefore \(r=s\).
 
 \end{proof}
 \section{Standard Parts}
 
 \begin{theorem}
 
-Every limited hyperreal $b$ is infinitely close to exactly one real number. This real number is called the \textbf{**standard part**} of $b$ and is denoted by $\operatorname{st}(b)$. Thus
-$$
-b\approx\operatorname{st}(b).
-$$
+    Every limited hyperreal $b$ is infinitely close to exactly one real number.
+    This real number is called the \textbf{**standard part**} of $b$ and is denoted
+    by $\operatorname{st}(b)$. Thus $$ b\approx\operatorname{st}(b). $$
 
 \end{theorem}
 
 \begin{proof}
 
-Let
-$$
-A=\{r\in\mathbb R:r<b\}.
-$$
-Since $b$ is limited, there exist real numbers $r,s$ such that $r<b<s$. Therefore $A$ is nonempty and bounded above by $s$. By the completeness of $\mathbb R$, $A$ has a least upper bound
-$$
-c=\sup A\in\mathbb R.
-$$
+    Let $$ A=\{r\in\mathbb R:r<b\}. $$ Since $b$ is limited, there exist real
+    numbers $r,s$ such that $r<b<s$. Therefore $A$ is nonempty and bounded above by
+    $s$. By the completeness of $\mathbb R$, $A$ has a least upper bound $$ c=\sup
+        A\in\mathbb R. $$
 
-We show that $b\approx c$. Let $\epsilon>0$ be any positive real number. Since $c$ is an upper bound of $A$, we cannot have $c+\epsilon\in A$. Therefore
-$$
-b\leq c+\epsilon.
-$$
-On the other hand, $c-\epsilon$ cannot be an upper bound of $A$, since $c$ is the least upper bound. Hence there exists some $a\in A$ such that $c-\epsilon<a<b$. Therefore
-$$
-c-\epsilon<b.
-$$
-Thus
-$$
-c-\epsilon<b\leq c+\epsilon,
-$$
-and consequently
-$$
-|b-c|\leq\epsilon.
-$$
-Since this holds for every positive real $\epsilon$, we have
-$$
-b\approx c.
-$$
+    We show that $b\approx c$. Let $\epsilon>0$ be any positive real number. Since
+    $c$ is an upper bound of $A$, we cannot have $c+\epsilon\in A$. Therefore $$
+        b\leq c+\epsilon. $$ On the other hand, $c-\epsilon$ cannot be an upper bound
+    of $A$, since $c$ is the least upper bound. Hence there exists some $a\in A$
+    such that $c-\epsilon<a<b$. Therefore $$ c-\epsilon<b. $$ Thus $$
+        c-\epsilon<b\leq c+\epsilon, $$ and consequently $$ |b-c|\leq\epsilon. $$ Since
+    this holds for every positive real $\epsilon$, we have $$ b\approx c. $$
 
-It remains to prove uniqueness. Suppose $b\approx c'$ for some $c'\in\mathbb R$. Since also $b\approx c$, we obtain
-$$
-c\approx c'.
-$$
-But $c,c'\in\mathbb R$, and the only real infinitesimal is $0$. Hence
-$$
-c=c'.
-$$
-Therefore there exists exactly one real number infinitely close to $b$. We define this number to be
-$$
-\operatorname{st}(b)=c.
-$$
+    It remains to prove uniqueness. Suppose $b\approx c'$ for some $c'\in\mathbb
+        R$. Since also $b\approx c$, we obtain $$ c\approx c'. $$ But $c,c'\in\mathbb
+        R$, and the only real infinitesimal is $0$. Hence $$ c=c'. $$ Therefore there
+    exists exactly one real number infinitely close to $b$. We define this number
+    to be $$ \operatorname{st}(b)=c. $$
 
 \end{proof}
 
 \begin{theorem}
 
-Let $b,c$ be limited hyperreal numbers and let $n\in\mathbb N$. Then
-$$
-\operatorname{st}(b\pm c)=\operatorname{st}(b)\pm\operatorname{st}(c),
-$$
-$$
-\operatorname{st}(bc)=\operatorname{st}(b)\operatorname{st}(c),
-$$
-and
-$$
-\operatorname{st}\left(\frac bc\right)=\frac{\operatorname{st}(b)}{\operatorname{st}(c)}
-\qquad\text{if }\operatorname{st}(c)\neq0.
-$$
-Also,
-$$
-\operatorname{st}(b^n)=\operatorname{st}(b)^n,
-$$
-$$
-\operatorname{st}(|b|)=|\operatorname{st}(b)|,
-$$
-and, if $b\geq0$,
-$$
-\operatorname{st}(\sqrt b)=\sqrt{\operatorname{st}(b)}.
-$$
-Furthermore,
-$$
-b\leq c\quad\Longrightarrow\quad\operatorname{st}(b)\leq\operatorname{st}(c).
-$$
+    Let $b,c$ be limited hyperreal numbers and let $n\in\mathbb N$. Then $$
+        \operatorname{st}(b\pm c)=\operatorname{st}(b)\pm\operatorname{st}(c), $$ $$
+        \operatorname{st}(bc)=\operatorname{st}(b)\operatorname{st}(c), $$ and $$
+        \operatorname{st}\left(\frac
+        bc\right)=\frac{\operatorname{st}(b)}{\operatorname{st}(c)} \qquad\text{if
+        }\operatorname{st}(c)\neq0. $$ Also, $$
+        \operatorname{st}(b^n)=\operatorname{st}(b)^n, $$ $$
+        \operatorname{st}(|b|)=|\operatorname{st}(b)|, $$ and, if $b\geq0$, $$
+        \operatorname{st}(\sqrt b)=\sqrt{\operatorname{st}(b)}. $$ Furthermore, $$
+        b\leq c\quad \to\quad\operatorname{st}(b)\leq\operatorname{st}(c). $$
 
 \end{theorem}
 
 \begin{proof}
 
-Exercise.
+    Exercise.
 
 \end{proof}
 
-These properties show that the standard-part map
-$$
-\operatorname{st}:\mathcal L\to\mathbb R,
-$$
-where $\mathcal L$ denotes the set of all limited hyperreal numbers, is an order-preserving ring homomorphism onto $\mathbb R$. Its kernel is precisely the set of infinitesimals:
-$$
-\ker(\operatorname{st})=\{b\in\mathcal L:\operatorname{st}(b)=0\}=\mathcal I.
+These properties show that the standard-part map $$ \operatorname{st}:\mathcal
+    L\to\mathbb R, $$ where $\mathcal L$ denotes the set of all limited hyperreal
+numbers, is an order-preserving ring homomorphism onto $\mathbb R$. Its kernel
+is precisely the set of infinitesimals: $$
+    \ker(\operatorname{st})=\{b\in\mathcal L:\operatorname{st}(b)=0\}=\mathcal I.
 $$
 
-Thus two limited hyperreal numbers have the same standard part exactly when they are infinitely close:
-$$
-\operatorname{st}(b)=\operatorname{st}(c)\iff b\approx c.
-$$
+Thus two limited hyperreal numbers have the same standard part exactly when
+they are infinitely close: $$
+    \operatorname{st}(b)=\operatorname{st}(c)\leftrightarrow b\approx c. $$
 
-Equivalently, the equivalence classes of the relation $\approx$ on the limited hyperreals are precisely the sets
-$$
-\operatorname{hal}(b)=\{c\in\mathcal L:c\approx b\},
-$$
-called the \textbf{**halos**} of $b$.
+Equivalently, the equivalence classes of the relation $\approx$ on the limited
+hyperreals are precisely the sets $$ \operatorname{hal}(b)=\{c\in\mathcal
+    L:c\approx b\}, $$ called the \textbf{**halos**} of $b$.
 
-Therefore the quotient of the ring of limited hyperreals by the ideal of infinitesimals is isomorphic to the real number field.
+Therefore the quotient of the ring of limited hyperreals by the ideal of
+infinitesimals is isomorphic to the real number field.
 
 \begin{theorem}
 
-The quotient ring
-$$
-\mathcal L/\mathcal I
-$$
-is isomorphic to $\mathbb R$ by the correspondence
-$$
-\operatorname{hal}(b)\longmapsto\operatorname{st}(b).
-$$
-In particular,
-$$
-\mathcal I
-$$
-is a maximal ideal of the ring $\mathcal L$.
+    The quotient ring $$ \mathcal L/\mathcal I $$ is isomorphic to $\mathbb R$ by
+    the correspondence $$ \operatorname{hal}(b)\longmapsto\operatorname{st}(b). $$
+    In particular, $$ \mathcal I $$ is a maximal ideal of the ring $\mathcal L$.
 
 \end{theorem}
 
@@ -9661,2274 +9695,1097 @@ is a maximal ideal of the ring $\mathcal L$.
 
 \begin{lemma}
 
-Every limited $x\in{}^\ast\mathbb R$ is infinitely close to a unique real number.
+    Every limited $x\in{}^\ast\mathbb R$ is infinitely close to a unique real
+    number.
 
 \end{lemma}
 
 \begin{proof}
 
-This follows from the Standard Part Theorem.
+    This follows from the Standard Part Theorem.
 
 \end{proof}
 
-
 \chapter{New beginning for calculus }
 \section{Limits}
-
-
 
 First we have to fix a ``Main variable''. It is almost all the time $x$.
 
 (sometimes it is ``$t$'').
 
 \begin{definition}
-Let $ f:A\to\mathbb{R} $
-where $A\subseteq\mathbb{R}$, and let $a$ be a limit point of $A$.
-We say that $L\in\mathbb{R}$ is the \textbf{Limit} of $f$ as $x$
-approaches $a$ if
+    Let $ f:A\to\mathbb{R} $
+    where $A\subseteq\mathbb{R}$, and let $a$ be a limit point of $A$.
+    We say that $L\in\mathbb{R}$ is the \textbf{Limit} of $f$ as $x$
+    approaches $a$ if
 
-\[
-\forall\varepsilon>0\ \exists\delta>0\
-\forall x\in A
-\left(
-0<|x-a|<\delta
-\to
-|f(x)-L|<\varepsilon
-\right).
-\]
+    \[
+        \forall\varepsilon>0\ \exists\delta>0\
+        \forall x\in A
+        \left(
+        0<|x-a|<\delta
+        \to
+        |f(x)-L|<\varepsilon
+        \right).
+    \]
 
-We write
-\[
-\lim_{x\to a}f(x)=L.
-\]
+    We write
+    \[
+        \lim_{x\to a}f(x)=L.
+    \]
 
 \end{definition}
 
-
-
-
 \begin{theorem}[Infinitesimal Characterization of Limits]
-Let$
-f:A\to\mathbb{R},
-\qquad
-A\subseteq\mathbb{R},
-$and let $a$ be a limit point of $A$.Then$\lim_{x\to a}f(x)=L$
-if and only if, for every nonzero infinitesimal$\varepsilon\in\mathbb{R}(\mathrm{Ord})$
-such that
-$a+\varepsilon\in A,$
-we have
-${}^*f(a+\varepsilon)\approx L.$
-Equivalently,
-$$
-\lim_{x\to a}f(x)=L
-\leftrightarrow
-\operatorname{st}
-\left(
-{}^*f(a+\varepsilon)
-\right)
-=L.
-$$
+    Let$
+        f:A\to\mathbb{R},
+        \qquad
+        A\subseteq\mathbb{R},
+    $and let $a$ be a limit point of $A$.Then$\lim_{x\to a}f(x)=L$
+    if and only if, for every nonzero infinitesimal$\varepsilon\in\mathbb{R}(\mathrm{Ord})$
+    such that
+    $a+\varepsilon\in A,$
+    we have
+    ${}^*f(a+\varepsilon)\approx L.$
+    Equivalently,
+    $$
+        \lim_{x\to a}f(x)=L
+        \leftrightarrow
+        \operatorname{st}
+        \left(
+        {}^*f(a+\varepsilon)
+        \right)
+        =L.
+    $$
 
 \end{theorem}
 \begin{proof}
 
-Suppose first that $\lim_{x\to a}f(x)=L$. Let $\varepsilon$ be a nonzero infinitesimal such that $a+\varepsilon\in A$. We prove that
+    Suppose first that $\lim_{x\to a}f(x)=L$. Let $\varepsilon$ be a nonzero
+    infinitesimal such that $a+\varepsilon\in A$. We prove that
 
-$$
-{}^*f(a+\varepsilon)\approx L.
-$$
+    $$
+        {}^*f(a+\varepsilon)\approx L.
+    $$
 
-Let $\varepsilon>0$. By the definition of the limit, there exists $\delta>0$ such that $0<|x-a|<\delta$ implies $|f(x)-L|<\varepsilon$. Since $\varepsilon$ is infinitesimal, $|\varepsilon|<\delta$. Therefore
+    Let $\varepsilon>0$. By the definition of the limit, there exists $\delta>0$
+    such that $0<|x-a|<\delta$ implies $|f(x)-L|<\varepsilon$. Since $\varepsilon$
+    is infinitesimal, $|\varepsilon|<\delta$. Therefore
+    $0<|(a+\varepsilon)-a|<\delta.$Hence$|{}^*f(a+\varepsilon)-L|<\varepsilon.$Since
+    this holds for every $\varepsilon>0$,${}^*f(a+\varepsilon)\approx L.$
+    Conversely, suppose that for every nonzero infinitesimal $\varepsilon$ such
+    that $a+\varepsilon\in{}^*A$, we have ${}^*f(a+\varepsilon)\approx L$. Suppose,
+    toward a contradiction, that $\lim_{x\to a}f(x)\neq L$. Then there exists
+    $\varepsilon>0$ such that for every $\delta>0$ there exists $x\in A$ such that
+    $0<|x-a|<\delta$ and $|f(x)-L|\geq\varepsilon$.
 
-$$
-0<|(a+\varepsilon)-a|<\delta.
-$$
+    In particular, for every $n\in\mathbb{N}$ there exists $x_n\in A$ such that$
+        0<|x_n-a|<\frac1n \quad \text{and} \quad |f(x_n)-L|\geq\varepsilon. $By the
+    nonstandard extension, taking an infinite index $N$, we obtain$
+        0<|x_N-a|<\frac1N. $Since $N$ is infinite, $1/N$ is infinitesimal. Therefore
+    $\varepsilon:=x_N-a$ is a nonzero infinitesimal. But
 
-Hence
+    $$
+        |{}^*f(a+\varepsilon)-L| =  |f(x_N)-L| \geq\varepsilon,
+    $$
 
-$$
-|{}^*f(a+\varepsilon)-L|<\varepsilon.
-$$
-
-Since this holds for every $\varepsilon>0$,
-
-$$
-{}^*f(a+\varepsilon)\approx L.
-$$
-
-Conversely, suppose that for every nonzero infinitesimal $\varepsilon$ such that $a+\varepsilon\in{}^*A$, we have ${}^*f(a+\varepsilon)\approx L$. Suppose, toward a contradiction, that $\lim_{x\to a}f(x)\neq L$. Then there exists $\varepsilon>0$ such that for every $\delta>0$ there exists $x\in A$ such that $0<|x-a|<\delta$ and $|f(x)-L|\geq\varepsilon$.
-
-In particular, for every $n\in\mathbb{N}$ there exists $x_n\in A$ such that
-
-$$
-0<|x_n-a|<\frac1n
-$$
-
-and
-
-$$
-|f(x_n)-L|\geq\varepsilon.
-$$
-
-By the nonstandard extension, taking an infinite index $N$, we obtain
-
-$$
-0<|x_N-a|<\frac1N.
-$$
-
-Since $N$ is infinite, $1/N$ is infinitesimal. Therefore $\varepsilon:=x_N-a$ is a nonzero infinitesimal. But
-
-$$
-|{}^*f(a+\varepsilon)-L|
-=
-|f(x_N)-L|
-\geq\varepsilon,
-$$
-
-so ${}^*f(a+\varepsilon)\not\approx L$, contradicting the assumption. Therefore $\lim_{x\to a}f(x)=L$.
-
-Finally,
-
-$$
-{}^*f(a+\varepsilon)\approx L
-$$
-
-is equivalent to
-
-$$
-\operatorname{st}\bigl({}^*f(a+\varepsilon)\bigr)=L.
-$$
+    so ${}^*f(a+\varepsilon)\not\approx L$, contradicting the assumption. Therefore
+    $\lim_{x\to a}f(x)=L$. Finally,${}^*f(a+\varepsilon)\approx L$is equivalent to
+    $ \operatorname{st}\bigl({}^*f(a+\varepsilon)\bigr)=L. $
 
 \end{proof}
-
 
 \begin{theorem}[Uniqueness of Limit]
 
-If $\lim_{x\to a}f(x)=L$ and $\lim_{x\to a}f(x)=M$, then $L=M$.
+    If $\lim_{x\to a}f(x)=L$ and $\lim_{x\to a}f(x)=M$, then $L=M$.
 
 \end{theorem}
 
 \begin{proof}
 
-Let $\varepsilon$ be a nonzero infinitesimal such that $a+\varepsilon\in{}^*A$. By the Infinitesimal Characterization of Limits,
-
-$$
-\operatorname{st}\bigl({}^*f(a+\varepsilon)\bigr)=L
-$$
-
-and
-
-$$
-\operatorname{st}\bigl({}^*f(a+\varepsilon)\bigr)=M.
-$$
-
-Hence
-
-$$
-L=M.
-$$
+    Let $\varepsilon$ be a nonzero infinitesimal such that $a+\varepsilon\in{}^*A$.
+    By the Infinitesimal Characterization of Limits,$
+        \operatorname{st}\bigl({}^*f(a+\varepsilon)\bigr)=L $and$
+        \operatorname{st}\bigl({}^*f(a+\varepsilon)\bigr)=M. $Hence$ L=M. $
 
 \end{proof}
-
 
 \begin{theorem}[Limit Laws]
 
-Suppose $\lim_{x\to a}f(x)=L$ and $\lim_{x\to a}g(x)=M$. Then $\lim_{x\to a}(f(x)+g(x))=L+M$, $\lim_{x\to a}(f(x)-g(x))=L-M$, and $\lim_{x\to a}f(x)g(x)=LM$. If $M\neq0$, then $\lim_{x\to a}\frac{f(x)}{g(x)}=\frac{L}{M}$. Moreover, for every $c\in\mathbb{R}$, $\lim_{x\to a}cf(x)=cL$.
+    Suppose $\lim_{x\to a}f(x)=L$ and $\lim_{x\to a}g(x)=M$. Then $\lim_{x\to
+            a}(f(x)+g(x))=L+M$, $\lim_{x\to a}(f(x)-g(x))=L-M$, and $\lim_{x\to
+            a}f(x)g(x)=LM$. If $M\neq0$, then $\lim_{x\to a}\frac{f(x)}{g(x)}=\frac{L}{M}$.
+    Moreover, for every $c\in\mathbb{R}$, $\lim_{x\to a}cf(x)=cL$.
 
 \end{theorem}
 
 \begin{proof}
 
-Let $\varepsilon$ be a nonzero infinitesimal such that $a+\varepsilon\in A$. By the Infinitesimal Characterization of Limits,
+    Let $\varepsilon$ be a nonzero infinitesimal such that $a+\varepsilon\in A$. By
+    the Infinitesimal Characterization of Limits,
 
-$$
-{}^*f(a+\varepsilon)\approx L
-\qquad\text{and}\qquad
-{}^*g(a+\varepsilon)\approx M.
-$$
+    $$
+        {}^*f(a+\varepsilon)\approx L
+        \qquad\text{and}\qquad
+        {}^*g(a+\varepsilon)\approx M.
+    $$
 
-Therefore, by the Standard Part Theorem,
+    Therefore, by the Standard Part Theorem,
 
-$$
-\operatorname{st}\bigl({}^*f(a+\varepsilon)+{}^*g(a+\varepsilon)\bigr)
-=L+M.
-$$
+    $$
+        \operatorname{st}\bigl({}^*f(a+\varepsilon)+{}^*g(a+\varepsilon)\bigr)
+        =L+M.
+    $$
 
-Similarly,
+    Similarly,
 
-$$
-\operatorname{st}\bigl({}^*f(a+\varepsilon)-{}^*g(a+\varepsilon)\bigr)
-=L-M.
-$$
+    $$
+        \operatorname{st}\bigl({}^*f(a+\varepsilon)-{}^*g(a+\varepsilon)\bigr)
+        =L-M.
+    $$
 
-For the product,
+    For the product,
 
-$$
-\operatorname{st}\bigl({}^*f(a+\varepsilon){}^*g(a+\varepsilon)\bigr)
-=
-\operatorname{st}({}^*f(a+\varepsilon))
-\operatorname{st}({}^*g(a+\varepsilon))
-=LM.
-$$
+    $$
+        \operatorname{st}\bigl({}^*f(a+\varepsilon){}^*g(a+\varepsilon)\bigr)
+        =
+        \operatorname{st}({}^*f(a+\varepsilon))
+        \operatorname{st}({}^*g(a+\varepsilon))
+        =LM.
+    $$
 
-If $M\neq0$, then $\operatorname{st}({}^*g(a+\varepsilon))=M\neq0$, and hence ${}^*g(a+\varepsilon)\neq0$. Therefore,
+    If $M\neq0$, then $\operatorname{st}({}^*g(a+\varepsilon))=M\neq0$, and hence
+    ${}^*g(a+\varepsilon)\neq0$. Therefore,
 
-$$
-\operatorname{st}\left(
-\frac{{}^*f(a+\varepsilon)}
-{{}^*g(a+\varepsilon)}
-\right)
-=
-\frac{\operatorname{st}({}^*f(a+\varepsilon))}
-{\operatorname{st}({}^*g(a+\varepsilon))}
-=
-\frac{L}{M}.
-$$
+    $$
+        \operatorname{st}\left(
+        \frac{{}^*f(a+\varepsilon)}
+        {{}^*g(a+\varepsilon)}
+        \right)
+        =
+        \frac{\operatorname{st}({}^*f(a+\varepsilon))}
+        {\operatorname{st}({}^*g(a+\varepsilon))}
+        =
+        \frac{L}{M}.
+    $$
 
-Finally, for every $c\in\mathbb{R}$,
+    Finally, for every $c\in\mathbb{R}$,
 
-$$
-\operatorname{st}\bigl(c{}^*f(a+\varepsilon)\bigr)
-=
-c\operatorname{st}({}^*f(a+\varepsilon))
-=cL.
-$$
+    $$
+        \operatorname{st}\bigl(c{}^*f(a+\varepsilon)\bigr)
+        =
+        c\operatorname{st}({}^*f(a+\varepsilon))
+        =cL.
+    $$
 
-Thus all the stated limit laws hold.
+    Thus all the stated limit laws hold.
 
 \end{proof}
-
 
 \begin{theorem}[Squeeze Theorem]
 
-Suppose that for all $x$ sufficiently close to $a$, $f(x)\leq g(x)\leq h(x)$. If $\lim_{x\to a}f(x)=L$ and $\lim_{x\to a}h(x)=L$, then $\lim_{x\to a}g(x)=L$.
+    Suppose that for all $x$ sufficiently close to $a$, $f(x)\leq g(x)\leq h(x)$.
+    If $\lim_{x\to a}f(x)=L$ and $\lim_{x\to a}h(x)=L$, then $\lim_{x\to a}g(x)=L$.
 
 \end{theorem}
 
 \begin{proof}
 
-Let $\varepsilon$ be a nonzero infinitesimal such that $a+\varepsilon\in{}^*A$. Since the inequality holds for all $x$ sufficiently close to $a$, by the Transfer Principle,
-
-$$
-{}^*f(a+\varepsilon)
-\leq
-{}^*g(a+\varepsilon)
-\leq
-{}^*h(a+\varepsilon).
-$$
-
-By the Infinitesimal Characterization of Limits,
-
-$$
-{}^*f(a+\varepsilon)\approx L
-\qquad\text{and}\qquad
-{}^*h(a+\varepsilon)\approx L.
-$$
-
-Hence, by the Squeeze Principle for infinitesimals,
-
-$$
-{}^*g(a+\varepsilon)\approx L.
-$$
-
-Therefore, by the Infinitesimal Characterization of Limits,
-
-$$
-\lim_{x\to a}g(x)=L.
-$$
+    Let $\varepsilon$ be a nonzero infinitesimal such that $a+\varepsilon\in{}^*A$.
+    Since the inequality holds for all $x$ sufficiently close to $a$, by the
+    Transfer Principle,$ {}^*f(a+\varepsilon) \leq {}^*g(a+\varepsilon) \leq
+        {}^*h(a+\varepsilon). $By the Infinitesimal Characterization of Limits,$
+        {}^*f(a+\varepsilon)\approx L \qquad\text{and}\qquad
+        {}^*h(a+\varepsilon)\approx L. $Hence, by the Squeeze Principle for
+    infinitesimals,$ {}^*g(a+\varepsilon)\approx L.$Therefore, by the Infinitesimal
+    Characterization of Limits,$ \lim_{x\to a}g(x)=L.$
 
 \end{proof}
-
 \begin{theorem}[Absolute Value]
 
-If $\lim_{x\to a}f(x)=L$, then $\lim_{x\to a}|f(x)|=|L|$.
+    If $\lim_{x\to a}f(x)=L$, then $\lim_{x\to a}|f(x)|=|L|$.
 
 \end{theorem}
 
 \begin{proof}
 
-Since ${}^*f(a+\varepsilon)\approx L$,
-
-$$
-\left|
-|{}^*f(a+\varepsilon)|-|L|
-\right|
-\leq
-|{}^*f(a+\varepsilon)-L|.
-$$
-
-Therefore,
-
-$$
-|{}^*f(a+\varepsilon)|\approx|L|.
-$$
-
-Hence, by the Infinitesimal Characterization of Limits,
-
-$$
-\lim_{x\to a}|f(x)|=|L|.
-$$
+    Since ${}^*f(a+\varepsilon)\approx L$, $$
+        \left||{}^*f(a+\varepsilon)|-|L|\right| \leq |{}^*f(a+\varepsilon)-L|. $$
+    Therefore $|{}^*f(a+\varepsilon)|\approx|L|$. Hence, by the Infinitesimal
+    Characterization of Limits, $$ \lim_{x\to a}|f(x)|=|L|. $$
 
 \end{proof}
+
 \begin{theorem}[Composition of Limits]
 
-Let $\lim_{x\to a}g(x)=b$ and $\lim_{y\to b}f(y)=L$. Suppose that $g(x)\neq b$ whenever $x$ is sufficiently close to $a$ and $x\neq a$. Then $\lim_{x\to a}f(g(x))=L$.
+    Let $\lim_{x\to a}g(x)=b$ and $\lim_{y\to b}f(y)=L$. Suppose that $g(x)\neq b$
+    whenever $x$ is sufficiently close to $a$ and $x\neq a$. Then $\lim_{x\to
+            a}f(g(x))=L$.
 
 \end{theorem}
 
 \begin{proof}
 
-Let $\varepsilon$ be a nonzero infinitesimal such that $a+\varepsilon\in{}^*A$. Since $\lim_{x\to a}g(x)=b$,
-
-$$
-{}^*g(a+\varepsilon)\approx b.
-$$
-
-By the Transfer Principle and the assumption on $g$, we have ${}^*g(a+\varepsilon)\neq b$. Therefore, by the Infinitesimal Characterization of $\lim_{y\to b}f(y)=L$,
-
-$$
-{}^*f\bigl({}^*g(a+\varepsilon)\bigr)\approx L.
-$$
-
-Since ${}^*f\bigl({}^*g(a+\varepsilon)\bigr)={}^*(f\circ g)(a+\varepsilon)$,
-
-$$
-{}^*(f\circ g)(a+\varepsilon)\approx L.
-$$
-
-Hence, by the Infinitesimal Characterization of Limits,
-
-$$
-\lim_{x\to a}f(g(x))=L.
-$$
+    Let $\varepsilon$ be a nonzero infinitesimal such that $a+\varepsilon\in{}^*A$.
+    Since $\lim_{x\to a}g(x)=b$, $$ {}^*g(a+\varepsilon)\approx b. $$ By the
+    Transfer Principle and the assumption on $g$, ${}^*g(a+\varepsilon)\neq b$.
+    Therefore, by the Infinitesimal Characterization of $\lim_{y\to b}f(y)=L$,
+    ${}^*f({}^*g(a+\varepsilon))\approx L$. Since
+    ${}^*f({}^*g(a+\varepsilon))={}^*(f\circ g)(a+\varepsilon)$, we have $$
+        {}^*(f\circ g)(a+\varepsilon)\approx L. $$ Hence, by the Infinitesimal
+    Characterization of Limits, $$ \lim_{x\to a}f(g(x))=L. $$
 
 \end{proof}
 
 \begin{theorem}[Polynomial Limit]
 
-Let $p(x)=a_0+a_1x+\cdots+a_nx^n$. Then $\lim_{x\to a}p(x)=p(a)$.
+    Let $p(x)=a_0+a_1x+\cdots+a_nx^n$. Then $\lim_{x\to a}p(x)=p(a)$.
 
 \end{theorem}
 
 \begin{proof}
 
-By the Limit Laws,
-
-$$
-\lim_{x\to a}x^k=a^k
-$$
-
-for every $k\in\mathbb{N}$. Therefore,
-
-$$
-\lim_{x\to a}p(x)
-=
-a_0+a_1a+\cdots+a_na^n
-=
-p(a).
-$$
+    By the Limit Laws, $\lim_{x\to a}x^k=a^k$ for every $k\in\mathbb N$. Therefore,
+    $$ \lim_{x\to a}p(x) = a_0+a_1a+\cdots+a_na^n = p(a). $$
 
 \end{proof}
 
 \begin{theorem}[Rational Function Limit]
 
-Let $r(x)=\frac{p(x)}{q(x)}$ where $p$ and $q$ are polynomials. If $q(a)\neq0$, then
-
-$$
-\lim_{x\to a}r(x)=\frac{p(a)}{q(a)}.
-$$
+    Let $r(x)=\frac{p(x)}{q(x)}$ where $p$ and $q$ are polynomials. If $q(a)\neq0$,
+    then $$ \lim_{x\to a}r(x)=\frac{p(a)}{q(a)}. $$
 
 \end{theorem}
 
 \begin{proof}
 
-Let $\varepsilon$ be a nonzero infinitesimal such that $a+\varepsilon\in{}^*A$. By the Polynomial Limit Theorem,
-
-$$
-\operatorname{st}\bigl({}^*p(a+\varepsilon)\bigr)=p(a)
-$$
-
-and
-
-$$
-\operatorname{st}\bigl({}^*q(a+\varepsilon)\bigr)=q(a)\neq0.
-$$
-
-Hence ${}^*q(a+\varepsilon)\neq0$. By the Standard Part Theorem,
-
-$$
-\operatorname{st}\left(
-\frac{{}^*p(a+\varepsilon)}
-{{}^*q(a+\varepsilon)}
-\right)
-=
-\frac{
-\operatorname{st}({}^*p(a+\varepsilon))
-}{
-\operatorname{st}({}^*q(a+\varepsilon))
-}
-=
-\frac{p(a)}{q(a)}.
-$$
-
-Therefore,
-
-$$
-\lim_{x\to a}r(x)=\frac{p(a)}{q(a)}.
-$$
+    Let $\varepsilon$ be a nonzero infinitesimal such that $a+\varepsilon\in{}^*A$.
+    By the Polynomial Limit Theorem, $$
+        \operatorname{st}\bigl({}^*p(a+\varepsilon)\bigr)=p(a), \qquad
+        \operatorname{st}\bigl({}^*q(a+\varepsilon)\bigr)=q(a)\neq0. $$ Hence
+    ${}^*q(a+\varepsilon)\neq0$, and by the Standard Part Theorem, $$
+        \operatorname{st}\left( \frac{{}^*p(a+\varepsilon)} {{}^*q(a+\varepsilon)}
+        \right) = \frac{p(a)}{q(a)}. $$ Therefore, by the Infinitesimal
+    Characterization of Limits, $$ \lim_{x\to a}r(x)=\frac{p(a)}{q(a)}. $$
 
 \end{proof}
-
-
 \begin{definition}
-Let
 
-$$
-f:A\to\mathbb{R}
-$$
+    Let $f:A\to\mathbb R$ and let $a$ be a limit point of $A$. We say that $f$ has
+    the \textbf{**Right Limit**} $L$ at $a$ if
 
-and let $a$ be a limit point of $A$.
+    $$
+        \forall\varepsilon>0\
+        \exists\delta>0\ \forall x\in A \left( a<x<a+\delta \to |f(x)-L|<\varepsilon
+        \right).
+    $$
 
-We say that $f$ has the \textbf{Right Limit} $L$ at $a$ if
+    We write $\lim_{x\to a^+}f(x)=L$. Similarly, we say that $f$ has the
+    \textbf{**Left Limit**} $L$ at $a$ if
 
-$$
-\forall\varepsilon>0\ \exists\delta>0\ \forall x\in A
-\left(
-a<x<a+\delta
-\Longrightarrow
-|f(x)-L|<\varepsilon
-\right).
-$$
+    $$
+        \forall\varepsilon>0\ \exists\delta>0\
+        \forall x\in A \left( a-\delta<x<a \to |f(x)-L|<\varepsilon \right).
+    $$
 
-We write
-
-$$
-\lim_{x\to a^+}f(x)=L.
-$$
-
-Similarly, we say that $f$ has the \textbf{Left Limit} $L$ at $a$ if
-
-$$
-\forall\varepsilon>0\ \exists\delta>0\ \forall x\in A
-\left(
-a-\delta<x<a
-\Longrightarrow
-|f(x)-L|<\varepsilon
-\right).
-$$
-
-We write
-
-$$
-\lim_{x\to a^-}f(x)=L.
-$$
+    We write $\lim_{x\to a^-}f(x)=L$.
 
 \end{definition}
 
 \begin{theorem}[Infinitesimal Characterization of One-Sided Limits]
-We have
 
-$$
-\lim_{x\to a^+}f(x)=L
-$$
-
-if and only if
-
-$$
-{}^*f(a+\varepsilon)\approx L
-$$
-
-for every positive infinitesimal $\varepsilon$ such that
-
-$$
-a+\varepsilon\in A.
-$$
-
-Similarly,
-
-$$
-\lim_{x\to a^-}f(x)=L
-$$
-
-if and only if
-
-$$
-{}^*f(a+\varepsilon)\approx L
-$$
-
-for every negative infinitesimal $\varepsilon$ such that
-
-$$
-a+\varepsilon\in A.
-$$
+    We have $\lim_{x\to a^+}f(x)=L$ if and only if ${}^*f(a+\varepsilon)\approx L$
+    for every positive infinitesimal $\varepsilon$ such that
+    $a+\varepsilon\in{}^*A$. Similarly, $\lim_{x\to a^-}f(x)=L$ if and only if
+    ${}^*f(a+\varepsilon)\approx L$ for every negative infinitesimal $\varepsilon$
+    such that $a+\varepsilon\in{}^*A$.
 
 \end{theorem}
 
 \begin{theorem}[One-Sided Limits]
-The following are equivalent:
 
-$$
-\lim_{x\to a}f(x)=L
-$$
-
-and
-
-$$
-\lim_{x\to a^-}f(x)
-=
-\lim_{x\to a^+}f(x)
-=
-L.
-$$
+    The following are equivalent: $$ \lim_{x\to a}f(x)=L \quad \leftrightarrow
+        \quad \lim_{x\to a^-}f(x)=\lim_{x\to a^+}f(x)=L. $$
 
 \end{theorem}
 
 \begin{proof}
-If
 
-$$
-\lim_{x\to a}f(x)=L,
-$$
+    If $\lim_{x\to a}f(x)=L$, then every nonzero infinitesimal is either positive
+    or negative. Therefore ${}^*f(a+\varepsilon)\approx L$ for both positive and
+    negative infinitesimal $\varepsilon$. Hence $\lim_{x\to a^-}f(x)=L$ and
+    $\lim_{x\to a^+}f(x)=L$.
 
-then every nonzero infinitesimal is either positive or negative.
-Therefore
-
-$$
-{}^*f(a+\varepsilon)\approx L
-$$
-
-for both positive and negative infinitesimal $\varepsilon$.
-
-Hence
-
-$$
-\lim_{x\to a^-}f(x)=L
-$$
-
-and
-
-$$
-\lim_{x\to a^+}f(x)=L.
-$$
-
-Conversely, suppose
-
-$$
-\lim_{x\to a^-}f(x)=L
-$$
-
-and
-
-$$
-\lim_{x\to a^+}f(x)=L.
-$$
-
-Every nonzero infinitesimal $\varepsilon$ is either positive or negative.
-Therefore
-
-$$
-{}^*f(a+\varepsilon)\approx L.
-$$
-
-Hence
-
-$$
-\lim_{x\to a}f(x)=L.
-$$
+    Conversely, suppose $\lim_{x\to a^-}f(x)=L$ and $\lim_{x\to a^+}f(x)=L$. Every
+    nonzero infinitesimal $\varepsilon$ is either positive or negative, so
+    ${}^*f(a+\varepsilon)\approx L$. Hence $\lim_{x\to a}f(x)=L$.
 
 \end{proof}
-
 \begin{definition}
-We say that
 
-$$
-f(x)
-$$
+    We say $\lim_{x\to a}f(x)=+\infty$ if
 
-has the \textbf{Limit $+\infty$} at $a$ if
+    $$ \forall
+        M>0\ \exists\delta>0\ \forall x\in A\left(0<|x-a|<\delta \to f(x)>M\right)
+    $$
+    . Similarly, $\lim_{x\to a}f(x)=-\infty$ if
 
-$$
-\forall M>0\ \exists\delta>0\ \forall x\in A
-\left(
-0<|x-a|<\delta
-\Longrightarrow
-f(x)>M
-\right).
-$$
-
-We write
-
-$$
-\lim_{x\to a}f(x)=+\infty.
-$$
-
-Similarly,
-
-$$
-\lim_{x\to a}f(x)=-\infty
-$$
-
-if
-
-$$
-\forall M>0\ \exists\delta>0\ \forall x\in A
-\left(
-0<|x-a|<\delta
-\Longrightarrow
-f(x)<-M
-\right).
-$$
+    $$ \forall M>0\ \exists\delta>0\ \forall x\in A\left(0<|x-a|<\delta \to
+        f(x)<-M\right)
+    $$
 
 \end{definition}
 
 \begin{theorem}[Infinitesimal Characterization of Infinite Limits]
-We have
 
-$$
-\lim_{x\to a}f(x)=+\infty
-$$
+    We have $\lim_{x\to a}f(x)=+\infty$ if and only if ${}^*f(a+\varepsilon)$ is
+    positive infinite for every nonzero infinitesimal $\varepsilon$ such that
+    $a+\varepsilon\in{}^*A$. Similarly, $\lim_{x\to a}f(x)=-\infty$ if and only if
+    ${}^*f(a+\varepsilon)$ is negative infinite for every such $\varepsilon$.
 
-if and only if
-
-$$
-{}^*f(a+\varepsilon)
-$$
-
-is positive infinite for every nonzero infinitesimal $\varepsilon$ such that
-
-$$
-a+\varepsilon\in A.
-$$
-
-Similarly,
-
-$$
-\lim_{x\to a}f(x)=-\infty
-$$
-
-if and only if
-
-$$
-{}^*f(a+\varepsilon)
-$$
-
-is negative infinite for every such $\varepsilon$.
 \end{theorem}
 
 \begin{definition}
-Let
 
-$$
-f:A\to\mathbb{R}
-$$
-
-where $A\subseteq\mathbb{R}$ is unbounded above.
-
-We say that
-
-$$
-\lim_{x\to\infty}f(x)=L
-$$
-
-if
-
-$$
-\forall\varepsilon>0\ \exists M>0\ \forall x\in A
-\left(
-x>M
-\Longrightarrow
-|f(x)-L|<\varepsilon
-\right).
-$$
+    Let $f:A\to\mathbb R$ where $A\subseteq\mathbb R$ is unbounded above. We say
+    that $\lim_{x\to\infty}f(x)=L$ if $\forall\epsilon>0\ \exists M>0\ \forall x\in
+        A\left(x>M \to |f(x)-L|<\epsilon\right)$.
 
 \end{definition}
 
 \begin{theorem}[Infinitesimal Characterization of Limits at Infinity]
-We have
 
-$$
-\lim_{x\to\infty}f(x)=L
-$$
+    We have $\lim_{x\to\infty}f(x)=L$ if and only if ${}^*f(H)\approx L$ for every
+    positive infinite $H\in{}^*\mathbb R$ such that $H\in{}^*A$. Equivalently,
 
-if and only if
-
-$$
-f(H)\approx L
-$$
-
-for every positive infinite
-
-$$
-H\in\mathbb{R}(\mathrm{Ord})
-$$
-
-such that
-
-$$
-H\in A.
-$$
-
-Equivalently,
-
-$$
-\lim_{x\to\infty}f(x)=L
-\iff
-\operatorname{st}(f(H))=L.
-$$
+    $$
+        \lim_{x\to\infty}f(x)=L
+        \leftrightarrow
+        \operatorname{st}({}^*f(H))=L.
+    $$
 
 \end{theorem}
 
 \begin{proof}
-Suppose
 
-$$
-\lim_{x\to\infty}f(x)=L.
-$$
+    Suppose $\lim_{x\to\infty}f(x)=L$. Let $H$ be positive infinite. If
+    ${}^*f(H)\not\approx L$, then for some $\epsilon>0$,
+    $|{}^*f(H)-L|\geq\epsilon$. By the definition of the limit, there exists $M>0$
+    such that $x>M$ implies $|f(x)-L|<\epsilon$. By Transfer, $H>M$ implies
+    $|{}^*f(H)-L|<\epsilon$, a contradiction. Hence ${}^*f(H)\approx L$.
 
-Let $H$ be positive infinite.
-
-Suppose that
-
-$$
-f(H)\not\approx L.
-$$
-
-Then there exists
-
-$$
-\varepsilon>0
-$$
-
-such that
-
-$$
-|f(H)-L|\geq\varepsilon.
-$$
-
-By the definition of the limit, there exists $M>0$ such that
-
-$$
-x>M
-$$
-
-implies
-
-$$
-|f(x)-L|<\varepsilon.
-$$
-
-Since $H$ is positive infinite,
-
-$$
-H>M.
-$$
-
-Therefore
-
-$$
-|f(H)-L|<\varepsilon,
-$$
-
-a contradiction.
-
-Hence
-
-$$
-f(H)\approx L.
-$$
-
-Conversely, suppose that
-
-$$
-f(H)\approx L
-$$
-
-for every positive infinite $H\in A$.
-
-Suppose that
-
-$$
-\lim_{x\to\infty}f(x)\neq L.
-$$
-
-Then there exists $\varepsilon>0$ such that for every $M>0$ there exists
-$x\in A$ satisfying
-
-$$
-x>M
-$$
-
-and
-
-$$
-|f(x)-L|\geq\varepsilon.
-$$
-
-Thus, for every $n\in\mathbb{N}$, there exists $x_n\in A$ such that
-
-$$
-x_n>n
-$$
-
-and
-
-$$
-|f(x_n)-L|\geq\varepsilon.
-$$
-
-Taking an infinite index $N$ gives
-
-$$
-x_N>N.
-$$
-
-Hence $x_N$ is positive infinite. But
-
-$$
-|f(x_N)-L|\geq\varepsilon,
-$$
-
-so
-
-$$
-f(x_N)\not\approx L,
-$$
-
-contradicting the assumption.
-
-Therefore
-
-$$
-\lim_{x\to\infty}f(x)=L.
-$$
+    Conversely, suppose that ${}^*f(H)\approx L$ for every positive infinite
+    $H\in{}^*A$. If $\lim_{x\to\infty}f(x)\neq L$, then for some $\epsilon>0$, for
+    every $M>0$ there exists $x\in A$ such that $x>M$ and $|f(x)-L|\geq\epsilon$.
+    Thus, for every $n\in\mathbb N$, choose $x_n\in A$ such that $x_n>n$ and
+    $|f(x_n)-L|\geq\epsilon$. Let $H=[(x_n)]$. Then $H$ is positive infinite, while
+    by Transfer $|{}^*f(H)-L|\geq\epsilon$, so ${}^*f(H)\not\approx L$, a
+    contradiction. Therefore $\lim_{x\to\infty}f(x)=L$.
 
 \end{proof}
 
 \begin{definition}
-We say that
 
-$$
-\lim_{x\to\infty}f(x)=+\infty
-$$
+    We say that $\lim_{x\to\infty}f(x)=+\infty$ if
 
-if
+    $$\forall M>0\ \exists N>0\
+        \forall x\in A\left(x>N \to f(x)>M\right)$$.
 
-$$
-\forall M>0\ \exists N>0\ \forall x\in A
-\left(
-x>N
-\Longrightarrow
-f(x)>M
-\right).
-$$
+    Similarly,$\lim_{x\to\infty}f(x)=-\infty$ if
 
-Similarly,
-
-$$
-\lim_{x\to\infty}f(x)=-\infty
-$$
-
-if
-
-$$
-\forall M>0\ \exists N>0\ \forall x\in A
-\left(
-x>N
-\Longrightarrow
-f(x)<-M
-\right).
-$$
+    $$\forall M>0\ \exists N>0\ \forall x\in
+        A\left(x>N \to f(x)<-M\right)$$.
 
 \end{definition}
-
 \begin{theorem}[Infinitesimal Characterization of Infinite Limits at Infinity]
-We have
 
-$$
-\lim_{x\to\infty}f(x)=+\infty
-$$
+    We have $\lim_{x\to\infty}f(x)=+\infty$ if and only if ${}^*f(H)$ is positive
+    infinite for every positive infinite $H\in{}^*A$. Similarly,
+    $\lim_{x\to\infty}f(x)=-\infty$ if and only if ${}^*f(H)$ is negative infinite
+    for every positive infinite $H\in{}^*A$.
 
-if and only if
-
-$$
-f(H)
-$$
-
-is positive infinite for every positive infinite $H\in A$.
-
-Similarly,
-
-$$
-\lim_{x\to\infty}f(x)=-\infty
-$$
-
-if and only if
-
-$$
-f(H)
-$$
-
-is negative infinite for every positive infinite $H\in A$.
 \end{theorem}
 
 \begin{theorem}[Sequential Characterization of Limits]
-Let
 
-$$
-f:A\to\mathbb{R}
-$$
-
-and let $a$ be a limit point of $A$.
-
-Then
-
-$$
-\lim_{x\to a}f(x)=L
-$$
-
-if and only if, for every sequence
-
-$$
-(x_n)_{n\in\mathbb{N}}
-$$
-
-in $A$ such that
-
-$$
-x_n\neq a
-$$
-
-and
-
-$$
-\lim_{n\to\infty}x_n=a,
-$$
-
-we have
-
-$$
-\lim_{n\to\infty}f(x_n)=L.
-$$
+    Let $f:A\to\mathbb R$ and let $a$ be a limit point of $A$. Then $\lim_{x\to
+            a}f(x)=L$ if and only if, for every sequence $(x_n)*{n\in\mathbb N}$ in $A$
+    such that $x_n\neq a$ and $\lim*{n\to\infty}x_n=a$, we have
+    $\lim_{n\to\infty}f(x_n)=L$.
 
 \end{theorem}
 
 \begin{theorem}[Limit of a Monotone Function]
-Suppose that $f$ is monotone on an interval.
 
-Then the one-sided limits of $f$ exist at every interior point of the
-interval, possibly taking the values $+\infty$ or $-\infty$.
+    Suppose that $f$ is monotone on an interval. Then the one-sided limits of $f$
+    exist at every interior point of the interval, possibly taking the values
+    $+\infty$ or $-\infty$.
+
 \end{theorem}
 
 \begin{theorem}[Limit of Powers]
-If
 
-$$
-\lim_{x\to a}f(x)=L,
-$$
+    If $\lim_{x\to a}f(x)=L$, then for every $n\in\mathbb N$,
 
-then for every
-
-$$
-n\in\mathbb{N},
-$$
-
-$$
-\lim_{x\to a}f(x)^n=L^n.
-$$
+    $$
+        \lim_{x\to a}f(x)^n=L^n.
+    $$
 
 \end{theorem}
 
 \begin{proof}
-This follows by repeated application of the Limit Laws.
+
+    This follows by repeated application of the Limit Laws.
+
 \end{proof}
-
-```
-
-One thing I would **not** put in this section yet is L'Hôpital's rule, Taylor's theorem, or anything involving derivatives. Those belong after your Derivatives section.
 
 The most important conceptual result of this section is the chain
 
-\[
-\boxed{
-\lim_{x\to a}f(x)=L
-\iff
-{}^*f(a+\varepsilon)\approx L
-\iff
-\operatorname{st}({}^*f(a+\varepsilon))=L
-}
-\]
+$$
+    \lim_{x\to a}f(x)=L\leftrightarrow{}^*f(a+\varepsilon)\approx L\leftrightarrow\operatorname{st}({}^*f(a+\varepsilon))=L.
+$$
 
-which you can then reuse directly in your definitions of **continuity, derivative, and eventually the Riemann integral**.
-```
-
-
+which will be used directly in the definitions of continuity, derivatives, and
+the Riemann integral.
 
 \begin{theorem}[Infinitesimal Characterization of Limits]
-Let
-\[
-f:A\to\mathbb{R}
-\]
-and let $a$ be a limit point of $A$.
 
-Then
-\[
-\lim_{x\to a}f(x)=L
-\]
-if and only if, for every nonzero infinitesimal
-\[
-\varepsilon\footnotemark \in\mathbb{R}(\mathrm{Ord})
-\]
+    Let $f:A\to\mathbb R$ and let $a$ be a limit point of $A$. Then $\lim_{x\to
+            a}f(x)=L$ if and only if, for every nonzero infinitesimal
+    $\varepsilon\in{}^*\mathbb R$ such that $a+\varepsilon\in{}^*A$, we have
+    ${}^*f(a+\varepsilon)\approx L$. Equivalently,
 
-\footnotetext{\label{fn:infinitesimal}
-In this book, the symbol $\varepsilon$ denotes the distinguished
-infinitesimal traditionally used in nonstandard analysis. The symbol
-$\varepsilon$ is reserved for an arbitrary (variable) infinitesimal and Real positives.}
+    $$
+        \lim_{x\to a}f(x)=L\leftrightarrow\operatorname{st}\bigl({}^*f(a+\varepsilon)\bigr)=L.
+    $$
 
-
-such that
-\[
-a+\varepsilon\in A,
-\]
-we have
-\[
-{}^*f(a+\varepsilon)\approx L.
-\]
-
-Equivalently,
-\[
-\lim_{x\to a}f(x)=L
-\leftrightarrow
-\operatorname{st}
-\bigl(
-{}^*f(a+\varepsilon)
-\bigr)
-=L
-\]
-for every nonzero infinitesimal $\varepsilon$ such that
-$a+\varepsilon\in A$.
 \end{theorem}
 
-
 \begin{proof}
-Suppose first that
-\[
-\lim_{x\to a}f(x)=L.
-\]
 
-We must prove that
-\[
-{}^*f(a+\varepsilon)\approx L
-\]
-for every nonzero infinitesimal $\varepsilon$.
+    Suppose first that $\lim_{x\to a}f(x)=L$. Let $\varepsilon$ be a nonzero
+    infinitesimal such that $a+\varepsilon\in{}^*A$. If
+    ${}^*f(a+\varepsilon)\not\approx L$, then for some $\epsilon>0$ we have
+    $|{}^*f(a+\varepsilon)-L|\geq\epsilon$. By the definition of the limit, there
+    exists $\delta>0$ such that $0<|x-a|<\delta$ implies $|f(x)-L|<\epsilon$. By
+    Transfer, $0<|\varepsilon|<\delta$ implies $|{}^*f(a+\varepsilon)-L|<\epsilon$,
+    a contradiction. Hence ${}^*f(a+\varepsilon)\approx L$.
 
-Assume, toward a contradiction, that there exists a nonzero
-infinitesimal $\varepsilon$ such that
-\[
-{}^*f(a+\varepsilon)\not\approx L.
-\]
+    Conversely, suppose that ${}^*f(a+\varepsilon)\approx L$ for every nonzero
+    infinitesimal $\varepsilon$ such that $a+\varepsilon\in{}^*A$. Suppose that
+    $\lim_{x\to a}f(x)\neq L$. Then for some $\epsilon>0$, for every $n\in\mathbb
+        N$ there exists $x_n\in A$ such that $0<|x_n-a|<1/n$ and
+    $|f(x_n)-L|\geq\epsilon$. Let $H=[(x_n)]$. Then $H-a$ is a nonzero
+    infinitesimal, but $|{}^*f(H)-L|\geq\epsilon$, so ${}^*f(H)\not\approx L$, a
+    contradiction. Therefore $\lim_{x\to a}f(x)=L$.
 
-Then
-\[
-|{}^*f(a+\varepsilon)-L|
-\]
-is not infinitesimal. Hence there exists
-\[
-\delta_0>0
-\]
-such that
-\[
-|{}^*f(a+\varepsilon)-L|\geq\delta_0.
-\]
+    Finally, ${}^*f(a+\varepsilon)\approx L$ if and only if
+    $\operatorname{st}({}^*f(a+\varepsilon))=L$.
 
-Since
-\[
-\lim_{x\to a}f(x)=L,
-\]
-there exists $\eta>0$ such that
-\[
-0<|x-a|<\eta
-\]
-implies
-\[
-|f(x)-L|<\delta_0.
-\]
-
-But $\varepsilon$ is infinitesimal, so
-\[
-0<|\varepsilon|<\eta.
-\]
-
-Taking
-\[
-x=a+\varepsilon
-\]
-gives
-\[
-|{}^*f(a+\varepsilon)-L|<\delta_0,
-\]
-contradicting
-\[
-|{}^*f(a+\varepsilon)-L|\geq\delta_0.
-\]
-
-Therefore
-\[
-{}^*f(a+\varepsilon)\approx L.
-\]
-
-Conversely, suppose that for every nonzero infinitesimal $\varepsilon$,
-\[
-{}^*f(a+\varepsilon)\approx L.
-\]
-
-Suppose, toward a contradiction, that
-\[
-\lim_{x\to a}f(x)\neq L.
-\]
-
-Then, by the negation of the classical definition of limit, there exists
-\[
-\delta_0>0
-\]
-such that for every $\eta>0$ there exists
-\[
-x\in A
-\]
-satisfying
-\[
-0<|x-a|<\eta
-\]
-and
-\[
-|f(x)-L|\geq\delta_0.
-\]
-
-Using this statement for
-\[
-\eta=\frac1n
-\]
-for every $n\in\mathbb{N}$, we obtain points $x_n\in A$ such that
-\[
-0<|x_n-a|<\frac1n
-\]
-and
-\[
-|f(x_n)-L|\geq\delta_0.
-\]
-
-By the nonstandard extension, this sequence has an infinite-index
-term $x_N$ satisfying
-\[
-0<|x_N-a|<\frac1N.
-\]
-
-Since $N$ is infinite,
-\[
-\frac1N
-\]
-is infinitesimal. Hence
-\[
-\varepsilon:=x_N-a
-\]
-is a nonzero infinitesimal.
-
-But
-\[
-|{}^*f(a+\varepsilon)-L|
-=
-|f(x_N)-L|
-\geq\delta_0,
-\]
-so
-\[
-{}^*f(a+\varepsilon)\not\approx L,
-\]
-contradicting our assumption.
-
-Therefore
-\[
-\lim_{x\to a}f(x)=L.
-\]
-
-Finally,
-\[
-{}^*f(a+\varepsilon)\approx L
-\]
-is equivalent to
-\[
-\operatorname{st}({}^*f(a+\varepsilon))=L.
-\]
-
-Hence
-\[
-\lim_{x\to a}f(x)=L
-\iff
-\operatorname{st}
-\bigl(
-{}^*f(a+\varepsilon)
-\bigr)
-=L.
-\]
 \end{proof}
 
 \begin{definition}
-Let
-\[
-f:A\to\mathbb{R}
-\]
-where $A\subseteq\mathbb{R}$ is unbounded above.
 
-We say that $L\in\mathbb{R}$ is the \textbf{Limit} of $f$ as $x$
-approaches infinity if
-\[
-\forall\varepsilon>0\ \exists M>0\
-\forall x\in A
-\left(
-x>M
-\Longrightarrow
-|f(x)-L|<\varepsilon
-\right).
-\]
+    Let $f:A\to\mathbb R$ where $A\subseteq\mathbb R$ is unbounded above. We say
+    that $\lim_{x\to\infty}f(x)=L$ if
 
-We write
-\[
-\lim_{x\to\infty}f(x)=L.
-\]
+    $$\forall\epsilon>0\ \exists M>0\ \forall x\in
+        A\left(x>M \to|f(x)-L|<\epsilon\right)$$.
 
 \end{definition}
-
 
 \begin{definition}
-Let
-\[
-x\in\mathbb{R}(\mathrm{Ord}).
-\]
 
-We say that $x$ is \textbf{Infinite} if
-\[
-|x|>n
-\qquad
-\forall n\in\mathbb{N}.
-\]
-
-If
-\[
-x>n
-\qquad
-\forall n\in\mathbb{N},
-\]
-we say that $x$ is a \textbf{Positive Infinite} number.
+    Let $x\in{}^*\mathbb R$. We say that $x$ is \textbf{**Infinite**} if $|x|>n$
+    for every $n\in\mathbb N$. If $x>n$ for every $n\in\mathbb N$, we say that $x$
+    is a \textbf{**Positive Infinite**} number.
 
 \end{definition}
-
 
 \begin{theorem}[Infinitesimal Characterization of the Limit at Infinity]
-Let
-\[
-f:A\to\mathbb{R}
-\]
-where $A\subseteq\mathbb{R}$ is unbounded above.
 
-Then
-\[
-\lim_{x\to\infty}f(x)=L
-\]
-if and only if, for every positive infinite
-\[
-H\in\mathbb{R}(\mathrm{Ord})
-\]
-such that
-\[
-H\in A,
-\]
-we have
-\[
-f(H)\approx L.
-\]
+    Let $f:A\to\mathbb R$ where $A\subseteq\mathbb R$ is unbounded above. Then
+    $\lim_{x\to\infty}f(x)=L$ if and only if, for every positive infinite
+    $H\in{}^*A$, we have ${}^*f(H)\approx L$. Equivalently,
 
-Equivalently,
-\[
-\lim_{x\to\infty}f(x)=L
-\]
-if and only if
-\[
-\operatorname{st}(f(H))=L
-\]
-for every positive infinite $H\in A$.
+    $$
+        \lim_{x\to\infty}f(x)=L\leftrightarrow\operatorname{st}({}^*f(H))=L.
+    $$
+
 \end{theorem}
 
-
 \begin{proof}
-Suppose first that
-\[
-\lim_{x\to\infty}f(x)=L.
-\]
 
-Let $H$ be a positive infinite number.
+    Suppose first that $\lim_{x\to\infty}f(x)=L$. Let $H\in{}^*A$ be positive
+    infinite. If ${}^*f(H)\not\approx L$, then for some $\epsilon>0$,
+    $|{}^*f(H)-L|\geq\epsilon$. By the definition of the limit, there exists $M>0$
+    such that $x>M$ implies $|f(x)-L|<\epsilon$. By Transfer, $H>M$ implies
+    $|{}^*f(H)-L|<\epsilon$, a contradiction. Hence ${}^*f(H)\approx L$.
 
-We want to prove
-\[
-f(H)\approx L.
-\]
+    Conversely, suppose that ${}^*f(H)\approx L$ for every positive infinite
+    $H\in{}^*A$. If $\lim_{x\to\infty}f(x)\neq L$, then for some $\epsilon>0$, for
+    every $n\in\mathbb N$ there exists $x_n\in A$ such that $x_n>n$ and
+    $|f(x_n)-L|\geq\epsilon$. Let $H=[(x_n)]$. Then $H$ is positive infinite, while
+    $|{}^*f(H)-L|\geq\epsilon$, so ${}^*f(H)\not\approx L$, a contradiction.
+    Therefore $\lim_{x\to\infty}f(x)=L$.
 
-Suppose, toward a contradiction, that
-\[
-f(H)\not\approx L.
-\]
-
-Then there exists
-\[
-\varepsilon>0
-\]
-such that
-\[
-|f(H)-L|\geq\varepsilon.
-\]
-
-Since
-\[
-\lim_{x\to\infty}f(x)=L,
-\]
-there exists $M>0$ such that
-\[
-x>M
-\]
-implies
-\[
-|f(x)-L|<\varepsilon.
-\]
-
-But $H$ is positive infinite, so
-\[
-H>M.
-\]
-
-Therefore
-\[
-|f(H)-L|<\varepsilon,
-\]
-which is a contradiction.
-
-Hence
-\[
-f(H)\approx L.
-\]
-
-Conversely, suppose that for every positive infinite $H\in A$,
-\[
-f(H)\approx L.
-\]
-
-Suppose, toward a contradiction, that
-\[
-\lim_{x\to\infty}f(x)\neq L.
-\]
-
-Then there exists
-\[
-\varepsilon>0
-\]
-such that for every $M>0$ there exists
-\[
-x\in A
-\]
-satisfying
-\[
-x>M
-\]
-and
-\[
-|f(x)-L|\geq\varepsilon.
-\]
-
-In particular, for every
-\[
-n\in\mathbb{N},
-\]
-there exists $x_n\in A$ such that
-\[
-x_n>n
-\]
-and
-\[
-|f(x_n)-L|\geq\varepsilon.
-\]
-
-By the nonstandard extension, taking an infinite index $N$ gives
-\[
-x_N>N
-\]
-and
-\[
-|f(x_N)-L|\geq\varepsilon.
-\]
-
-Since $N$ is infinite,
-\[
-x_N
-\]
-is positive infinite.
-
-Let
-\[
-H:=x_N.
-\]
-
-Then
-\[
-H
-\]
-is positive infinite, but
-\[
-|f(H)-L|\geq\varepsilon.
-\]
-
-Therefore
-\[
-f(H)\not\approx L,
-\]
-contradicting the assumption.
-
-Hence
-\[
-\lim_{x\to\infty}f(x)=L.
-\]
-
-Finally,
-\[
-f(H)\approx L
-\]
-is equivalent to
-\[
-\operatorname{st}(f(H))=L.
-\]
-
-Therefore
-\[
-\lim_{x\to\infty}f(x)=L
-\iff
-\operatorname{st}(f(H))=L.
-\]
 \end{proof}
-
 \section{Continuity}
 
-First we have to fix a ``Main point''. It is almost all the time $a$.
+First we fix a ``Main Point''. It is almost all the time $a$.
 
 \begin{definition}
-Let
-\[
-f:A\to\mathbb{R}
-\]
-where $A\subseteq\mathbb{R}$, and let
-\[
-a\in A.
-\]
 
-We say that $f$ is \textbf{Continuous} at $a$ if
-\[
-\forall\varepsilon>0\ \exists\delta>0\
-\forall x\in A
-\left(
-|x-a|<\delta
-\Longrightarrow
-|f(x)-f(a)|<\varepsilon
-\right).
-\]
+    Let $f:A\to\mathbb R$, where $A\subseteq\mathbb R$, and let $a\in A$. We say
+    that $f$ is \textbf{**Continuous**} at $a$ if
+
+    $$\forall\epsilon>0\
+        \exists\delta>0\ \forall x\in A \left(|x-a|<\delta
+        \to|f(x)-f(a)|<\epsilon\right)$$.
 
 \end{definition}
 
-
 \begin{theorem}[Continuity and Limits]
-Let
-\[
-f:A\to\mathbb{R}
-\]
-and let $a\in A$ be a limit point of $A$.
 
-Then $f$ is continuous at $a$ if and only if
-\[
-\lim_{x\to a}f(x)=f(a).
-\]
+    Let $f:A\to\mathbb R$ and let $a\in A$ be a limit point of $A$. Then $f$ is
+    continuous at $a$ if and only if $\lim_{x\to a}f(x)=f(a)$.
+
 \end{theorem}
 
 \begin{proof}
-Suppose first that $f$ is continuous at $a$.
 
-Then, by definition,
-\[
-\forall\varepsilon>0\ \exists\delta>0\
-\forall x\in A
-\left(
-|x-a|<\delta
-\Longrightarrow
-|f(x)-f(a)|<\varepsilon
-\right).
-\]
+    Suppose first that $f$ is continuous at $a$. Then, by definition, for every
+    $\epsilon>0$ there exists $\delta>0$ such that $|x-a|<\delta$ implies
+    $|f(x)-f(a)|<\epsilon$. In particular, this holds whenever $0<|x-a|<\delta$.
+    Hence $\lim_{x\to a}f(x)=f(a)$.
 
-Since $a$ is a limit point of $A$, this is precisely the definition of
-\[
-\lim_{x\to a}f(x)=f(a).
-\]
+    Conversely, suppose that $\lim_{x\to a}f(x)=f(a)$. Then for every $\epsilon>0$
+    there exists $\delta>0$ such that $0<|x-a|<\delta$ implies
+    $|f(x)-f(a)|<\epsilon$. If $x=a$, then $|f(x)-f(a)|=0<\epsilon$. Therefore
+    $|x-a|<\delta$ implies $|f(x)-f(a)|<\epsilon$, and hence $f$ is continuous at
+    $a$.
 
-Conversely, suppose
-\[
-\lim_{x\to a}f(x)=f(a).
-\]
-
-Then
-\[
-\forall\varepsilon>0\ \exists\delta>0\
-\forall x\in A
-\left(
-0<|x-a|<\delta
-\Longrightarrow
-|f(x)-f(a)|<\varepsilon
-\right).
-\]
-
-If
-\[
-x=a,
-\]
-then
-\[
-|f(x)-f(a)|=0<\varepsilon.
-\]
-
-Therefore
-\[
-|x-a|<\delta
-\Longrightarrow
-|f(x)-f(a)|<\varepsilon.
-\]
-
-Hence $f$ is continuous at $a$.
 \end{proof}
 
-
 \begin{theorem}[Infinitesimal Characterization of Continuity]
-Let
-\[
-f:A\to\mathbb{R}
-\]
-and let
-\[
-a\in A.
-\]
 
-Then $f$ is continuous at $a$ if and only if, for every infinitesimal
-\[
-\varepsilon\in\mathbb{R}(\mathrm{Ord}),
-\]
-such that
-\[
-a+\varepsilon\in A,
-\]
-we have
-\[
-{}^*f(a+\varepsilon)\approx f(a).
-\]
+    Let $f:A\to\mathbb R$ and let $a\in A$. Then $f$ is continuous at $a$ if and
+    only if, for every infinitesimal $\varepsilon\in\mathbb R(\mathrm{Ord})$ such
+    that $a+\varepsilon\in A$, ${}^*f(a+\varepsilon)\approx f(a)$.
 
-Equivalently,
-\[
-f\text{ is continuous at }a
-\]
-if and only if
-\[
-\operatorname{st}
-\left(
-{}^*f(a+\varepsilon)
-\right)
-=
-f(a)
-\]
-for every infinitesimal $\varepsilon$ such that
-$a+\varepsilon\in A$.
+    Equivalently,
+
+    \[
+        f\text{ is continuous at }a
+        \leftrightarrow
+        \operatorname{st}\bigl({}^*f(a+\varepsilon)\bigr)=f(a)
+    \]
+
+    for every infinitesimal $\varepsilon$ such that $a+\varepsilon\in A$.
+
 \end{theorem}
 
-
 \begin{proof}
-Suppose first that $f$ is continuous at $a$.
 
-Let
-\[
-\varepsilon\in\mathbb{R}(\mathrm{Ord})
-\]
-be infinitesimal and suppose
-\[
-a+\varepsilon\in A.
-\]
+    Suppose first that $f$ is continuous at $a$. Let $\varepsilon$ be an
+    infinitesimal such that $a+\varepsilon\in A$. If
+    ${}^*f(a+\varepsilon)\not\approx f(a)$, then there exists a positive real
+    $\epsilon$ such that $|{}^*f(a+\varepsilon)-f(a)|\geq\epsilon$. By continuity,
+    there exists $\delta>0$ such that $|x-a|<\delta$ implies
+    $|f(x)-f(a)|<\epsilon$. Since $\varepsilon$ is infinitesimal,
+    $|\varepsilon|<\delta$. By the Transfer Principle,
 
-We want to prove
-\[
-{}^*f(a+\varepsilon)\approx f(a).
-\]
+    $|{}^*f(a+\varepsilon)-f(a)|<\epsilon$, a contradiction. Hence
+    ${}^*f(a+\varepsilon)\approx f(a)$.
 
-Suppose, toward a contradiction, that
-\[
-{}^*f(a+\varepsilon)\not\approx f(a).
-\]
+    Conversely, suppose that ${}^*f(a+\varepsilon)\approx f(a)$ for every
+    infinitesimal $\varepsilon$ such that $a+\varepsilon\in A$. Suppose that $f$ is
+    not continuous at $a$. Then there exists $\epsilon>0$ such that for every
+    $\delta>0$ there is $x\in A$ with $|x-a|<\delta$ and $|f(x)-f(a)|\geq\epsilon$.
 
-Then there exists
-\[
-\varepsilon>0
-\]
-such that
-\[
-|{}^*f(a+\varepsilon)-f(a)|\geq\varepsilon.
-\]
+    For every $n\in\mathbb N$, choose $x_n\in A$ such that $|x_n-a|<1/n$ and
+    $|f(x_n)-f(a)|\geq\epsilon$. Taking an infinite index $N$ gives $|x_N-a|<1/N$,
+    so $\varepsilon:=x_N-a$ is infinitesimal. But
+    $|{}^*f(a+\varepsilon)-f(a)|\geq\epsilon$, contradicting
+    ${}^*f(a+\varepsilon)\approx f(a)$. Therefore $f$ is continuous at $a$.
 
-Since $f$ is continuous at $a$, there exists $\delta>0$ such that
-\[
-|x-a|<\delta
-\]
-implies
-\[
-|f(x)-f(a)|<\varepsilon.
-\]
+    Finally, ${}^*f(a+\varepsilon)\approx f(a)$ is equivalent to
+    $\operatorname{st}({}^*f(a+\varepsilon))=f(a)$ by the Standard Part Theorem.
 
-Since $\varepsilon$ is infinitesimal,
-\[
-|\varepsilon|<\delta.
-\]
-
-Therefore
-\[
-|(a+\varepsilon)-a|<\delta,
-\]
-and hence
-\[
-|{}^*f(a+\varepsilon)-f(a)|<\varepsilon,
-\]
-a contradiction.
-
-Thus
-\[
-{}^*f(a+\varepsilon)\approx f(a).
-\]
-
-Conversely, suppose that for every infinitesimal $\varepsilon$,
-\[
-{}^*f(a+\varepsilon)\approx f(a).
-\]
-
-Suppose, toward a contradiction, that $f$ is not continuous at $a$.
-
-Then there exists
-\[
-\varepsilon>0
-\]
-such that for every $\delta>0$ there exists
-\[
-x\in A
-\]
-such that
-\[
-|x-a|<\delta
-\]
-and
-\[
-|f(x)-f(a)|\geq\varepsilon.
-\]
-
-In particular, for every
-\[
-n\in\mathbb{N},
-\]
-there exists $x_n\in A$ such that
-\[
-|x_n-a|<\frac1n
-\]
-and
-\[
-|f(x_n)-f(a)|\geq\varepsilon.
-\]
-
-By the nonstandard extension, taking an infinite index $N$ gives
-\[
-|x_N-a|<\frac1N.
-\]
-
-Since $N$ is infinite,
-\[
-\frac1N
-\]
-is infinitesimal.
-
-Therefore
-\[
-\varepsilon:=x_N-a
-\]
-is infinitesimal.
-
-But
-\[
-|{}^*f(a+\varepsilon)-f(a)|
-=
-|f(x_N)-f(a)|
-\geq\varepsilon,
-\]
-so
-\[
-{}^*f(a+\varepsilon)\not\approx f(a).
-\]
-
-This contradicts our assumption.
-
-Therefore $f$ is continuous at $a$.
-
-Finally,
-\[
-{}^*f(a+\varepsilon)\approx f(a)
-\]
-is equivalent to
-\[
-\operatorname{st}
-\left(
-{}^*f(a+\varepsilon)
-\right)
-=
-f(a).
-\]
-
-Hence the two definitions are equivalent.
 \end{proof}
 
 \begin{theorem}[Algebra of Continuous Functions]
-Let $f$ and $g$ be continuous at $a$. Then
-\[
-f+g,
-\qquad
-f-g,
-\qquad
-fg
-\]
-are continuous at $a$.
 
-If
-\[
-g(a)\neq0,
-\]
-then
-\[
-\frac{f}{g}
-\]
-is continuous at $a$.
+    Let $f$ and $g$ be continuous at $a$. Then $f+g$, $f-g$, and $fg$ are
+    continuous at $a$. If $g(a)\neq0$, then $f/g$ is continuous at $a$.
+
 \end{theorem}
 
 \begin{proof}
-Since $f$ and $g$ are continuous at $a$, for every infinitesimal
-$\varepsilon$,
-\[
-{}^*f(a+\varepsilon)\approx f(a)
-\]
-and
-\[
-{}^*g(a+\varepsilon)\approx g(a).
-\]
 
-By the Limit Laws,
-\[
-{}^*f(a+\varepsilon)+{}^*g(a+\varepsilon)
-\approx
-f(a)+g(a),
-\]
-\[
-{}^*f(a+\varepsilon)-{}^*g(a+\varepsilon)
-\approx
-f(a)-g(a),
-\]
-and
-\[
-{}^*f(a+\varepsilon){}^*g(a+\varepsilon)
-\approx
-f(a)g(a).
-\]
+    For every infinitesimal $\varepsilon$, continuity gives
+    ${}^*f(a+\varepsilon)\approx f(a)$ and ${}^*g(a+\varepsilon)\approx g(a)$. By
+    the arithmetic of hyperreals,
 
-If $g(a)\neq0$, then
-\[
-\frac{{}^*f(a+\varepsilon)}{{}^*g(a+\varepsilon)}
-\approx
-\frac{f(a)}{g(a)}.
-\]
+    ${}^*(f+g)(a+\varepsilon)\approx f(a)+g(a)$,
+    ${}^*(f-g)(a+\varepsilon)\approx f(a)-g(a)$, and
+    ${}^*(fg)(a+\varepsilon)\approx f(a)g(a)$. If $g(a)\neq0$, then
+    ${}^*g(a+\varepsilon)\approx g(a)\neq0$, and therefore
+    ${}^*(f/g)(a+\varepsilon)\approx f(a)/g(a)$. Hence the stated functions
+    are continuous at $a$.
 
-Therefore the stated functions are continuous at $a$.
 \end{proof}
-
 
 \begin{theorem}[Composition of Continuous Functions]
-Let
-\[
-g:A\to\mathbb{R}
-\]
-be continuous at $a$, and let
-\[
-f:B\to\mathbb{R}
-\]
-be continuous at $g(a)$, where
-\[
-g(A)\subseteq B.
-\]
 
-Then
-\[
-f\circ g
-\]
-is continuous at $a$.
+    Let $g:A\to\mathbb R$ be continuous at $a$, and let $f:B\to\mathbb R$ be
+    continuous at $g(a)$, where $g(A)\subseteq B$. Then $f\circ g$ is continuous at
+    $a$.
+
 \end{theorem}
 
 \begin{proof}
-Since $g$ is continuous at $a$,
-\[
-{}^*g(a+\varepsilon)\approx g(a)
-\]
-for every infinitesimal $\varepsilon$.
 
-Since $f$ is continuous at $g(a)$,
-\[
-f({}^*g(a+\varepsilon))
-\approx
-f(g(a)).
-\]
+    Let $\varepsilon$ be infinitesimal such that $a+\varepsilon\in A$. Since $g$ is
+    continuous at $a$, ${}^*g(a+\varepsilon)\approx g(a)$. Since $f$ is continuous
+    at $g(a)$, ${}^*f({}^*g(a+\varepsilon))\approx f(g(a))$. By the composition
+    property of nonstandard extensions,
 
-Therefore
-\[
-(f\circ g)(a+\varepsilon)
-\approx
-(f\circ g)(a).
-\]
+    ${}^*(f\circ g)(a+\varepsilon)
+        ={}^*f({}^*g(a+\varepsilon))
+        \approx f(g(a))
+        =(f\circ g)(a)$.
 
-Hence $f\circ g$ is continuous at $a$.
+    Therefore $f\circ g$ is continuous at $a$.
+
 \end{proof}
 
+\begin{theorem}[Continuous Functions Have Limits]
 
-\begin{theorem}[Continuous Functions Have Continuous Limits]
-Let
-\[
-f:A\to\mathbb{R}
-\]
-be continuous at $a$. Then
-\[
-\lim_{x\to a}f(x)=f(a).
-\]
+    Let $f:A\to\mathbb R$ be continuous at $a$, where $a$ is a limit point of $A$.
+    Then
+
+    \[
+        \lim_{x\to a}f(x)=f(a).
+    \]
+
 \end{theorem}
 
 \begin{proof}
-This follows from the Continuity and Limits Theorem.
-\end{proof}
 
+    This follows immediately from the Continuity and Limits Theorem.
+
+\end{proof}
 
 \section{Derivatives}
 
 first we have to fix a ``Main variable'' it's almost all the time ``$x$''.
 (sometimes it's ``$t$'').
-\begin{definition} assume $f : \mathbb{R} (Ord) \to \mathbb{R} (Ord)$
+\begin{definition} assume $f : {}^*\mathbb{R}_{Ord} \to {}^*\mathbb{R}_{Ord}$
     we define \textbf{Difrential $(d_\varepsilon(f))$}
     \[ d_\varepsilon(f) := f( x + \varepsilon ) -  f(x) \]
 \end{definition}
 
-
-
-
-
 Main reason we choose ``$x$'' in definition because it's ``Main variable''. you
-can prove $\forall x \in \mathbb{R} (Ord) \quad d_\varepsilon(x) = \varepsilon$.
+can prove $\forall x \in {}^*\mathbb{R}_{Ord} \quad d_\varepsilon(x) =
+    \varepsilon$.
 
 \begin{definition} we define \textbf{Derivative}
 
-    
-Let $ f:\mathbb{R}\to\mathbb{R}$
-and let \(  \varepsilon  \in\mathbb{R} (Ord)\) be a nonzero infinitesimal:
-\[
- \varepsilon \neq 0,
-\qquad
-| \varepsilon |<\frac{1}{n}
-\quad\forall n\in\mathbb{N}.
-\]
+    Let $ f:\mathbb{R}\to\mathbb{R}$ and let \( \varepsilon
+    \in{}^*\mathbb{R}_{Ord}\) be a nonzero infinitesimal:
+    \[
+        \varepsilon \neq 0,
+        \qquad
+        | \varepsilon |<\frac{1}{n}
+        \quad\forall n\in\mathbb{N}.
+    \]
 
-Define
+    Define
 
+    \[
+        \frac{df}{dx} = f'(x) =
+        \operatorname{st}
+        \left(
+        \frac{d_\varepsilon(f)}{d_\varepsilon(x)}
+        \right)
+    \]
 
-\[
-\frac{df}{dx} = f'(x) =
-\operatorname{st}
-\left(
-\frac{d_\varepsilon(f)}{d_\varepsilon(x)}
-\right)
-\]
+    Equivalently,
+    \[
+        \frac{df}{dx}
+        =
+        \operatorname{st}
+        \left(
+        \frac{f(x + \varepsilon )-f(x)}{ \varepsilon }.
+        \right)
+    \]
 
-Equivalently,
-\[
-\frac{df}{dx}
-=
-\operatorname{st}
-\left(
-\frac{f(x + \varepsilon )-f(x)}{ \varepsilon }.
-\right)
-\]
+    More generally,
 
-
-More generally,
-
-    \[ \frac{d}{dx}  :=  \{ \big(f , st(\frac{d_\varepsilon(f)}{d_\varepsilon(x)}) \big) \mid f : \mathbb{R} (Ord) \to \mathbb{R} (Ord) \} \]
+    \[ \frac{d}{dx}  :=  \{ \big(f , st(\frac{d_\varepsilon(f)}{d_\varepsilon(x)}) \big) \mid f : {}^*\mathbb{R}_{Ord} \to {}^*\mathbb{R}_{Ord} \} \]
     there is a biggest set like $A$ s.t. $ \frac{d}{dx} A$ is a function (you can
     prove it as an exercise). we call that set ``Derivatible funsions'' and that
     function ``Derivative''.
 \end{definition}
 
-
 \section{Partial Derivatives}
 
 first we have to fix a ``Main variable'' it's almost all the time ``$x$''.
 (sometimes it's ``$t$'').
-\begin{definition} assume $f : \mathbb{R} (Ord)^n  \to \mathbb{R} (Ord)$
+\begin{definition} assume $f : {}^*\mathbb{R}_{Ord}^n  \to {}^*\mathbb{R}_{Ord}$
     we define \textbf{Partial Difrential $(d_\varepsilon(f))$}
     \[ \partial_{\varepsilon , x_i } (f) := f(x_1,\ldots,x_i+ \varepsilon ,\ldots,x_n) - f(x_1,\ldots,x_i,\ldots,x_n) \]
 \end{definition}
 
 Main reason we choose ``$x$'' in definition because it's ``Main variable''. you
-can prove $\forall x \in \mathbb{R} (Ord) \quad \partial_{\varepsilon , x }(x) = \varepsilon$.
+can prove $\forall x \in {}^*\mathbb{R}_{Ord} \quad \partial_{\varepsilon , x
+    }(x) = \varepsilon$.
 
 \begin{definition} we define \textbf{Partial Derivative}
 
-    
-Let$f:\mathbb{R}^n\to\mathbb{R},
-\qquad
-f=f(x_1,\ldots,x_n).$
-and let \(  \varepsilon  \in\mathbb{R} (Ord)\) be a nonzero infinitesimal:
-\[
- \varepsilon \neq 0,
-\qquad
-| \varepsilon |<\frac{1}{n}
-\quad\forall n\in\mathbb{N}.
-\]
+    Let$f:\mathbb{R}^n\to\mathbb{R}, \qquad f=f(x_1,\ldots,x_n).$ and let \(
+    \varepsilon \in{}^*\mathbb{R}_{Ord}\) be a nonzero infinitesimal:
+    \[
+        \varepsilon \neq 0,
+        \qquad
+        | \varepsilon |<\frac{1}{n}
+        \quad\forall n\in\mathbb{N}.
+    \]
 
- define
+    define
 
-\[
-\frac{\partial f}{\partial x_i}
-=
-\operatorname{st}
-\left(
-\frac{\partial_{\varepsilon , x_i }(f)}{\partial_{\varepsilon , x_i }(x_i)}
-\right)
-\]
+    \[
+        \frac{\partial f}{\partial x_i}
+        =
+        \operatorname{st}
+        \left(
+        \frac{\partial_{\varepsilon , x_i }(f)}{\partial_{\varepsilon , x_i }(x_i)}
+        \right)
+    \]
 
-Equivalently,
-\[
-\frac{\partial f}{\partial x_i}
-=
-\operatorname{st}
-\left(
-\frac{
-f(x_1,\ldots,x_i+ \varepsilon ,\ldots,x_n)
--
-f(x_1,\ldots,x_i,\ldots,x_n)
-}{ \varepsilon }
-\right)
-\]
+    Equivalently,
+    \[
+        \frac{\partial f}{\partial x_i}
+        =
+        \operatorname{st}
+        \left(
+        \frac{
+            f(x_1,\ldots,x_i+ \varepsilon ,\ldots,x_n)
+            -
+            f(x_1,\ldots,x_i,\ldots,x_n)
+        }{ \varepsilon }
+        \right)
+    \]
 
-More generally,
-    \[ \frac{ \partial }{\partial x_i }  :=  \{ \big(f , st(\frac{\partial_{\varepsilon , x_i }(f)}{\partial_{\varepsilon , x_i }(x_i)}) \big) \mid f : \mathbb{R} (Ord) \to \mathbb{R} (Ord) \} \]
+    More generally,
+    \[ \frac{ \partial }{\partial x_i }  :=  \{ \big(f , st(\frac{\partial_{\varepsilon , x_i }(f)}{\partial_{\varepsilon , x_i }(x_i)}) \big) \mid f : {}^*\mathbb{R}_{Ord} \to {}^*\mathbb{R}_{Ord} \} \]
 \end{definition}
-
-
 
 \section{Riemann Integral}
 
-
-
 \begin{definition}
 
-Let $f:[a,b]\to\mathbb{R}$. A \textbf{Partition} of $[a,b]$ is a finite ordered set $P=\{x_0,x_1,\ldots,x_n\}$ such that
+    Let $f:[a,b]\to\mathbb{R}$. A \textbf{Partition} of $[a,b]$ is a finite ordered
+    set $P=\{x_0,x_1,\ldots,x_n\}$ such that
 
-$$
-a=x_0<x_1<\cdots<x_n=b.
-$$
+    $$
+        a=x_0<x_1<\cdots<x_n=b.
+    $$
 
-We define the \textbf{Mesh} of $P$ by
+    We define the \textbf{Mesh} of $P$ by
 
-$$
-\|P\|:=\max_{1\leq i\leq n}(x_i-x_{i-1}).
-$$
+    $$
+        \|P\|:=\max_{1\leq i\leq n}(x_i-x_{i-1}).
+    $$
 
-For every partition $P$, define $M_i:=\sup\{f(x):x\in[x_{i-1},x_i]\}$ and $m_i:=\inf\{f(x):x\in[x_{i-1},x_i]\}$. The \textbf{Upper Darboux Sum} of $f$ with respect to $P$ is
+    For every partition $P$, define $M_i:=\sup\{f(x):x\in[x_{i-1},x_i]\}$ and
+    $m_i:=\inf\{f(x):x\in[x_{i-1},x_i]\}$. The \textbf{Upper Darboux Sum} of $f$
+    with respect to $P$ is
 
-$$
-U(f,P):=\sum_{i=1}^{n}M_i(x_i-x_{i-1}),
-$$
+    $$
+        U(f,P):=\sum_{i=1}^{n}M_i(x_i-x_{i-1}),
+    $$
 
-and the \textbf{Lower Darboux Sum} of $f$ with respect to $P$ is
+    and the \textbf{Lower Darboux Sum} of $f$ with respect to $P$ is
 
-$$
-L(f,P):=\sum_{i=1}^{n}m_i(x_i-x_{i-1}).
-$$
+    $$
+        L(f,P):=\sum_{i=1}^{n}m_i(x_i-x_{i-1}).
+    $$
 
-We say that $f$ is \textbf{Riemann Integrable} on $[a,b]$ if $f$ is bounded and
+    We say that $f$ is \textbf{Riemann Integrable} on $[a,b]$ if $f$ is bounded and
 
-$$
-\inf_P U(f,P)=\sup_P L(f,P).
-$$
+    $$
+        \inf_P U(f,P)=\sup_P L(f,P).
+    $$
 
-In this case, we define
+    In this case, we define
 
-$$
-\int_a^b f(x)\,dx
-:=\inf_P U(f,P)
-=\sup_P L(f,P).
-$$
+    $$
+        \int_a^b f(x)\,dx
+        :=\inf_P U(f,P)
+        =\sup_P L(f,P).
+    $$
 
 \end{definition}
 \begin{theorem}[Convergence of Riemann Sums]
 
-Suppose that $f:[a,b]\to\mathbb{R}$ is Riemann integrable. For each $n\in\mathbb{N}$, let
+    Suppose that $f:[a,b]\to\mathbb{R}$ is Riemann integrable. For each
+    $n\in\mathbb{N}$, let
 
-$$
-x_i=a+\frac{i(b-a)}{n},
-\qquad 0\leq i\leq n.
-$$
+    $$
+        x_i=a+\frac{i(b-a)}{n},
+        \qquad 0\leq i\leq n.
+    $$
 
-Then
+    Then
 
-$$
-\lim_{n\to\infty}
-\sum_{i=0}^{n-1}f(x_i)\frac{b-a}{n}
-=
-\int_a^b f(x)\,dx.
-$$
+    $$
+        \lim_{n\to\infty}
+        \sum_{i=0}^{n-1}f(x_i)\frac{b-a}{n}
+        =
+        \int_a^b f(x)\,dx.
+    $$
 
 \end{theorem}
 
 \begin{proof}
 
-Let $P_n=\{x_0,x_1,\ldots,x_n\}$. Since $f$ is Riemann integrable,
+    Let $P_n=\{x_0,x_1,\ldots,x_n\}$. Since $f$ is Riemann integrable,
 
-$$
-\lim_{n\to\infty}U(f,P_n)
-=
-\lim_{n\to\infty}L(f,P_n)
-=
-\int_a^b f(x)\,dx,
-$$
+    $$
+        \lim_{n\to\infty}U(f,P_n)
+        =
+        \lim_{n\to\infty}L(f,P_n)
+        =
+        \int_a^b f(x)\,dx,
+    $$
 
-because $\|P_n\|=(b-a)/n\to0$.
+    because $\|P_n\|=(b-a)/n\to0$.
 
-Since $f(x_i)$ lies between the infimum and supremum of $f$ on $[x_i,x_{i+1}]$,
+    Since $f(x_i)$ lies between the infimum and supremum of $f$ on $[x_i,x_{i+1}]$,
 
-$$
-L(f,P_n)
-\leq
-\sum_{i=0}^{n-1}f(x_i)\frac{b-a}{n}
-\leq
-U(f,P_n).
-$$
+    $$
+        L(f,P_n)
+        \leq
+        \sum_{i=0}^{n-1}f(x_i)\frac{b-a}{n}
+        \leq
+        U(f,P_n).
+    $$
 
-Therefore, by the Squeeze Theorem,
+    Therefore, by the Squeeze Theorem,
 
-$$
-\int_a^b f(x)\,dx
-=
-\lim_{n\to\infty}
-\sum_{i=0}^{n-1}f(x_i)\frac{b-a}{n}
-$$
+    $$
+        \int_a^b f(x)\,dx
+        =
+        \lim_{n\to\infty}
+        \sum_{i=0}^{n-1}f(x_i)\frac{b-a}{n}
+    $$
 
 \end{proof}
 
-Since the Riemann sum converges to $\int_a^b f(x)\,dx$, by the Standard Part Theorem, for an infinite $N$ and $\varepsilon=\frac{b-a}{N}$,
+Since the Riemann sum converges to $\int_a^b f(x)\,dx$, by the Standard Part
+Theorem, for an infinite $N$ and $\varepsilon=\frac{b-a}{N}$,
 
 $$
-\int_a^b f(x)\,dx.
-=
-\operatorname{st}
-\left(
-\sum_{i=0}^{N-1}f(x_i)\varepsilon
-\right)
+    \int_a^b f(x)\,dx.
+    =
+    \operatorname{st}
+    \left(
+    \sum_{i=0}^{N-1}f(x_i)\varepsilon
+    \right)
 $$
 
- let $\varepsilon=\frac{b-a}{N}$ and $x_i=a+i\varepsilon$. we can prove for every choice of sample points $\xi_i\in[x_i,x_{i+1}]$,
+let $\varepsilon=\frac{b-a}{N}$ and $x_i=a+i\varepsilon$. we can prove for
+every choice of sample points $\xi_n (i) \in[x_i,x_{i+1}]$,
 
 $$
-\int_a^b f(x)\,dx.
-=
-\operatorname{st}
-\left(
-\sum_{i=0}^{N-1}f(\xi_i)\varepsilon
-\right)
+    \int_a^b f(x)\,dx.
+    =
+    \operatorname{st}
+    \left(
+    \sum_{i=0}^{N-1}f(\xi_n (i))\varepsilon
+    \right)
 $$
-
 
 More generally,
 \[
-\int_a^b
-:=
-\left\{
-\left(
-f,\,
-\operatorname{st}
-\left(
-\sum_{i=0}^{N-1}
-f(\xi_i)\varepsilon
-\right)
-\right)
-\middle|
-f\text{ is Riemann integrable on }[a,b]
-\right\}.
+    \int_a^b
+    :=
+    \left\{
+    \left(
+    f,\,
+    \operatorname{st}
+    \left(
+    \sum_{i=0}^{N-1}
+    f(\xi_i)\varepsilon
+    \right)
+    \right)
+    \middle|
+    f\text{ is Riemann integrable on }[a,b]
+    \right\}.
 \]
 
-There is a biggest set $A$ such that $\int_a^b A$ is a function
-(you can prove it as an exercise). We call that set
-``Riemann Integrable Functions'' and that function
-``Riemann Integral''.
+There is a biggest set $A$ such that $\int_a^b A$ is a function (you can prove
+it as an exercise). We call that set ``Riemann Integrable Functions'' and that
+function ``Riemann Integral''.
 
+\begin{definition}[More Generalisation for $\xi$]
+    Let $\varepsilon=\frac{b-a}{N}$ and
 
-\chapter{Ordinal Integral{\small(more powerful than Lebesgue Integral)\small}}
+    $$
+        x_i=a+i\varepsilon,\qquad i \in \{ 0,\ldots,N - 1 \}.
+    $$
 
+    Let $K$ be an index set. For each $k\in K$, let $\xi_N^k : \{ 0,\ldots,N - 1 \}
+        \to [a,b]$ be a choice of sample points, such that there is a permutation
+    $\sigma : \{ 0,\ldots,N - 1 \} \to \{ 0,\ldots,N - 1 \}$ such that
 
-\[
-\lim_{n\to\alpha} f(n)
-:=
-\left[f(n)\right]_{n\in\alpha}
-\]
+    $$
+        \xi_N^k(i)\in[x_{\sigma(i)},x_{\sigma(i)+1}].
+    $$
 
-\[
-\lim_{n\to\alpha + m} f(n)
-:=
-\left[f(n+m)\right]_{n\in\alpha}
-\]
+    then for every Riemann integrable function $f:[a,b]\to\mathbb{R}$,
 
-\[
-f:\mathbb{N}\to\mathbb{N}
-\]
+    $$
+        \int_a^b f(x)\,dx
+        =
+        \operatorname{st}\left(
+        \sum_{i=0}^{N-1}f(\xi_N^k(i))\varepsilon
+        \right),
+        \qquad k\in K.
+    $$
 
-\[
-\text{Extended } f\longrightarrow f^*
-\]
+\end{definition}
 
-\[
-f(\alpha)
-=
-\lim_{n\to\alpha}f(n)
-\]
+\begin{lemma}[Riemann Integrability and Sample Points]
+    Let $f:[a,b]\to\mathbb{R}$ be bounded. Then $f$ is Riemann integrable if and only if for every $k,l\in K$,
 
-\[
-\text{Trivial Extension}
-\]
+    $$
+        \operatorname{st}\left(
+        \sum_{i=0}^{N-1}f(\xi_N^k(i))\varepsilon
+        \right)
+        =
+        \operatorname{st}\left(
+        \sum_{i=0}^{N-1}f(\xi_N^l(i))\varepsilon
+        \right).
+    $$
 
-\[
-\sum_{i=0}^{2^{\aleph_0}}i
-=
-\lim_{n\to 2^{\aleph_0}}
-\sum_{i=0}^{n}i
-=
-\left[
-\sum_{i=0}^{n}i
-\right]_{n\in 2^{\aleph_0}}
-=
-\left[
-\frac{n(n+1)}{2}
-\right]_{n\in 2^{\aleph_0}}
-=
-\frac{2^{\aleph_0}(2^{\aleph_0}+1)}{2}
-\]
+\end{lemma}
 
-\[
-\sum_{i=1}^{\aleph_1+5}i^2
-=
-\lim_{n\to\aleph_1+5}
-\sum_{i=0}^{n}i^2
-=
-\left[
-\sum_{i=0}^{n}i^2
-\right]_{n\in\aleph_1+5}
-=
-\left[
-\frac{n(n+1)(2n+1)}{6}
-\right]_{n\in\aleph_1+5}
-\]
+\begin{proof}
+    Suppose first that $f$ is Riemann integrable and let
 
-\[
-=
-\frac{(\aleph_1+5)(\aleph_1+6)(2\aleph_1+11)}{6}
-\]
+    $$
+        I=\int_a^b f(x)\,dx.
+    $$
 
-\[
-D:[0,1]\to\{0,1\}
-\]
+    For every $k\in K$, since $\sigma$ is a permutation, the points $\xi_N^k(i)$
+    give one sample point in each interval of the partition $P_N={x_0,\ldots,x_N}$.
+    Hence, if
 
-\[
-D(x)=
-\begin{cases}
-1,&x\in\mathbb{Q}^{c},\\
-0,&x\in\mathbb{Q}.
-\end{cases}
-\]
+    $$
+        m_i=\inf_{x\in[x_i,x_{i+1}]}f(x),
+        \qquad
+        M_i=\sup_{x\in[x_i,x_{i+1}]}f(x),
+    $$
 
-\[
-\int_0^1D(x)\,dx\;?
-\]
+    then
 
-\[
-\exists (y_i)_{i\in\omega}
-\qquad
-\{y_i\}_{i\in\omega}
-=
-\mathbb{Q}\cap[0,1]
-\]
+    $$
+        \sum_{i=0}^{N-1}m_i\varepsilon
+        \leq
+        \sum_{i=0}^{N-1}f(\xi_N^k(i))\varepsilon
+        \leq
+        \sum_{i=0}^{N-1}M_i\varepsilon.
+    $$
 
-\[
-\exists (x_i)_{i\in 2^{\aleph_0}}
-\qquad
-\{x_i\}_{i\in 2^{\aleph_0}}
-=
-\mathbb{Q}^{c}\cap[0,1]
-\]
+    Taking standard parts and using the Riemann integrability of $f$, both the
+    lower and upper sums have standard part $I$. Therefore
 
-\[
-f:2^{\aleph_0}+\omega\to[0,1]
-\]
+    $$
+        \operatorname{st}\left(
+        \sum_{i=0}^{N-1}f(\xi_N^k(i))\varepsilon
+        \right)=I
+    $$
 
-\[
-f(i)=
-\begin{cases}
-D(y_i),&i\in\omega,\\
-D(x_i),&i\in 2^{\aleph_0}.
-\end{cases}
-\]
+    for every $k\in K$, and hence the required equality holds for every $k,l\in K$.
 
-\[
-\int_0^1D(x)\,dx
-=
-\operatorname{st}
-\left(
-\frac{\displaystyle\sum_{i=0}^{2^{\aleph_0}+\omega}f(i)}
-{2^{\aleph_0}+\omega}
-\right)
-=
-\operatorname{st}
-\left(
-\frac{2^{\aleph_0}}
-{2^{\aleph_0}+\omega}
-\right)
-=
-1
-\]
+    Conversely, suppose that
 
-\[
-\int_a^b f(x)\,dx
-=
-\operatorname{st}
-\left(
-\frac{\displaystyle\sum_{i=0}^{\alpha}y(i)}
-{\alpha}
-\right)
-\]
+    $$
+        \operatorname{st}\left(
+        \sum_{i=0}^{N-1}f(\xi_N^k(i))\varepsilon
+        \right)
+        =
+        \operatorname{st}\left(
+        \sum_{i=0}^{N-1}f(\xi_N^l(i))\varepsilon
+        \right)
+    $$
 
-\[
-y(i)=f(x_i),
-\qquad
-\{x_i\}_{i\in\alpha}=[a,b].
-\]
+    for every $k,l\in K$. Then the standard part of the Riemann sum is independent
+    of the choice of sample points. Hence the upper and lower sums have the same
+    standard part, so
+
+    $$
+        \operatorname{st}(U(f,P_N))
+        =
+        \operatorname{st}(L(f,P_N)).
+    $$
+
+    Thus
+
+    $$
+        \operatorname{st}\bigl(U(f,P_N)-L(f,P_N)\bigr)=0,
+    $$
+
+    and therefore $f$ is Riemann integrable.
+\end{proof}
+
+\chapter{Well-Ordered Integral{\small(more powerful than Lebesgue Integral)\small}}
+
+\begin{definition}[Admissible Sample Points]
+    Let $\varepsilon=\dfrac{b-a}{N}$ and $x_i=a+i\varepsilon$ for $i\in\{0,\ldots,N-1\}\subseteq{}^*\mathbb{R}_{Ord}$. For each $k\in K$ let
+    $$
+        \xi_N^k:\{0,\ldots,N-1\}\to[a,b]
+    $$
+    be a choice of sample points. We say $\xi_N^k$ is \textbf{admissible} if:
+
+    \begin{enumerate}
+        \item For every $i\in\{0,\ldots,N-1\}$ that is an ordinal, $\xi_N^k(i)\in\mathbb{R}$
+              is a standard real number.
+        \item For every $i,j\in\{0,\ldots,N-1\}$ such that $\xi_N^k(i)$ and $\xi_N^k(j)$ lie
+              in the same halo, we have $$ \xi_N^k(j)=\xi_N^k(i)\pm\varepsilon_N $$ for some
+              infinitesimal $\varepsilon_N$.
+        \item For every $i\in\{0,\ldots,N-1\}$ that is not an ordinal, there exists an
+              ordinal $j<i$, $j\in\{0,\ldots,N-1\}$, such that $$
+                  \xi_N^k(i)\approx\xi_N^k(j), $$ where $\approx$ denotes infinite closeness.
+    \end{enumerate}
+
+    Let $K_{\mathrm{adm}}\subseteq K$ denote the set of indices $k$ for which
+    $\xi_N^k$ is admissible.
+\end{definition}
+
+\begin{definition}[Well-Ordered Integral]
+    Let $f:[a,b]\to\mathbb{R}$ be bounded. We say $f$ is \textbf{well-ordered integrable} on $[a,b]$ if for every $k,l\in K_{\mathrm{adm}}$,
+    $$
+        \operatorname{st}\left(\sum_{i=0}^{N-1} f(\xi_N^k(i))\,\varepsilon\right)
+        =
+        \operatorname{st}\left(\sum_{i=0}^{N-1} f(\xi_N^l(i))\,\varepsilon\right).
+    $$
+
+    In this case we define $$ {}^\circledast\!\int_a^b f(x)\,dx :=
+        \operatorname{st}\left(\sum_{i=0}^{N-1} f(\xi_N^k(i))\,\varepsilon\right),
+        \qquad k\in K_{\mathrm{adm}}. $$
+\end{definition}
+
+\begin{remark}
+    Since $K_{\mathrm{adm}}\subseteq K$, agreement over $K_{\mathrm{adm}}$ alone is a weaker requirement than agreement over all of $K$. Hence every Riemann integrable function is well-ordered integrable, and
+    $$
+        {}^\circledast\!\int_a^b f(x)\,dx = \int_a^b f(x)\,dx
+    $$
+    whenever $f$ is Riemann integrable.
+\end{remark}
 
 \chapter{New beginning for Probability theory}
 
