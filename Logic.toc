@@ -67,4 +67,7 @@
 \contentsline {section}{\numberline {15.4}Partial Derivatives}{163}{section.15.4}%
 \contentsline {section}{\numberline {15.5}Riemann Integral}{164}{section.15.5}%
 \contentsline {chapter}{\numberline {16}Well-Ordered Integral{\small (more powerful than Lebesgue Integral)\small }}{169}{chapter.16}%
-\contentsline {chapter}{\numberline {17}New beginning for Probability theory}{171}{chapter.17}%
+\contentsline {chapter}{\numberline {17}New beginning for Probability and Measeure theory}{171}{chapter.17}%
+\contentsline {section}{\numberline {17.1}Finite Approach}{171}{section.17.1}%
+\contentsline {section}{\numberline {17.2}Nonstandard Approach}{173}{section.17.2}%
+\contentsline {section}{\numberline {17.3}Countable Probability}{175}{section.17.3}%

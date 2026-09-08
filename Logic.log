@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.8.18)  3 SEP 2026 22:21
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.8.18)  8 SEP 2026 19:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2279,21 +2279,21 @@ Overfull \hbox (35.93321pt too wide) has occurred while \output is active
 Chapter 17.
 [171
 
-] (Logic.aux)
+] [172] [173] [174] [175] [176] [177] (Logic.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `Logic.out' has not changed.
-(rerunfilecheck)             Checksum: 94DF019DCDA2EAA5E54756302A8BF221;12297.
+(rerunfilecheck)             Checksum: A72B0F8869C27C3C11F80581A9C6AB67;12828.
  ) 
 Here is how much of TeX's memory you used:
- 37845 strings out of 402987
- 865814 string characters out of 5449145
- 1419497 words of memory out of 5000000
- 66096 multiletter control sequences out of 15000+600000
+ 37846 strings out of 402987
+ 865826 string characters out of 5449145
+ 1420063 words of memory out of 5000000
+ 66097 multiletter control sequences out of 15000+600000
  646957 words of font info for 143 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  84i,27n,104p,630b,704s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Logic.xdv (177 pages, 1484428 bytes).
+Output written on Logic.xdv (183 pages, 1576428 bytes).

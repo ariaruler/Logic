@@ -10787,7 +10787,364 @@ function ``Riemann Integral''.
     whenever $f$ is Riemann integrable.
 \end{remark}
 
-\chapter{New beginning for Probability theory}
+\chapter{New beginning for Probability and Measeure theory}
+
+\section{Finite Approach}
+
+We begin with the simplest form of probability, where the sample space is a finite set. In this case, probability can be understood directly in terms of counting.
+
+\begin{definition}[Finite Probability Space]
+Let $S$ be a finite nonempty set. A \textbf{probability function} on $S$ is a function
+
+$$
+P_S:\mathcal{P}(S)\to[0,1]
+$$
+
+such that $P_S(S)=1$ and, for every pair of disjoint subsets $A,B\subseteq S$,
+
+$$
+P_S(A\cup B)=P_S(A)+P_S(B).
+$$
+
+The pair $(S,P_S)$ is called a \textbf{finite probability space}. The elements of $S$ are called \textbf{outcomes}, and the subsets of $S$ are called \textbf{events}.
+\end{definition}
+
+The simplest probability function is obtained when all outcomes are equally likely.
+
+\begin{definition}[Uniform Probability]
+Let $S$ be a finite nonempty set. The \textbf{uniform probability} on $S$ is defined by
+
+$$
+P_S(A)=\frac{|A|}{|S|}
+$$
+
+for every $A\subseteq S$.
+\end{definition}
+
+Thus, the probability of an event is the ratio between the number of favorable outcomes and the total number of outcomes.
+
+\begin{example}
+Consider tossing a fair coin. Let
+
+$$
+S=\{H,T\}.
+$$
+
+Then $P_S({H})=P_S({T})=\frac12$. If $A={H}$ is the event of obtaining heads, then
+
+$$
+P_S(A)=\frac{|A|}{|S|}=\frac12.
+$$
+
+\end{example}
+
+The uniform probability satisfies the axioms of a probability function.
+
+\begin{theorem}
+Let $S$ be a finite nonempty set and define $P_S(A)=|A|/|S|$ for every $A\subseteq S$. Then $P_S$ is a probability function.
+\end{theorem}
+
+\begin{proof}
+Clearly, $P_S(S)=|S|/|S|=1$. Let $A,B\subseteq S$ be disjoint. Since $A$ and $B$ are disjoint finite sets, $|A\cup B|=|A|+|B|$. Therefore
+
+$$
+P_S(A\cup B)
+=\frac{|A\cup B|}{|S|}
+=\frac{|A|+|B|}{|S|}
+=P_S(A)+P_S(B).
+$$
+
+Hence $P_S$ is a probability function.
+\end{proof}
+
+The finite case also gives the probability of a single outcome. If $S$ has $n$ elements and the probability is uniform, then every outcome has probability $1/n$. Consequently, for every event $A\subseteq S$,
+
+$$
+P_S(A)=\sum_{s\in A}P_S(\{s\})
+=\frac{|A|}{|S|}.
+$$
+
+This suggests that probability can be viewed as a generalization of counting. Counting assigns to a finite set $A$ its cardinality $|A|$, while probability assigns to an event $A$ a normalized value between $0$ and $1$.
+
+\begin{definition}[Weighted Finite Probability Space]
+Let $S$ be a finite nonempty set. A function $p:S\to[0,1]$ is called a \textbf{probability mass function} if
+
+$$
+\sum_{s\in S}p(s)=1.
+$$
+
+For every $A\subseteq S$, define
+
+$$
+P_S(A)=\sum_{s\in A}p(s).
+$$
+
+Then $(S,P_S)$ is called a \textbf{finite probability space}.
+\end{definition}
+
+The uniform probability space is the special case in which $p(s)=1/|S|$ for every $s\in S$.
+
+\begin{example}
+Suppose
+
+$$
+S=\{1,2,3,4,5,6\}
+$$
+
+is the set of possible outcomes of a die. For a fair die, $p(s)=1/6$ for every $s\in S$. Hence, if
+
+$$
+A=\{2,4,6\},
+$$
+
+then
+
+$$
+P_S(A)=\frac16+\frac16+\frac16=\frac12.
+$$
+
+Thus the probability of obtaining an even number is $1/2$.
+\end{example}
+
+
+\section{Nonstandard Approach}
+
+The finite probability space provides a natural starting point for a nonstandard construction of probability. Recall that if $S$ is finite and the probability is uniform, then for every event $A\subseteq S$ we have $P_S(A)=|A|/|S|$. The idea is to keep this same definition when the size of the sample space is an infinite hyperinteger.
+
+Let ${}^*\mathbb{N}$ denote the hypernatural numbers. Since ${}^*\mathbb{N}$ contains infinite elements, we may choose
+
+$$
+H\in{}^*\mathbb{N}\setminus\mathbb{N}.
+$$
+
+We call such an $H$ an \textbf{infinite hypernatural}.
+
+Consider the hyperfinite set
+
+$$
+S_H=\{0,1,2,\ldots,H -1\}.
+$$
+
+Although $S_H$ is infinite from the standard point of view, it behaves internally like a finite set with $H$ elements. In particular, every internal subset $A\subseteq S_H$ has an internal cardinality $|A|\in{}^*\mathbb{N}$.
+
+This allows us to extend the finite formula for uniform probability without changing its form.
+
+\begin{definition}[Hyperfinite Probability]
+Let $H\in{}^*\mathbb{N}\setminus\mathbb{N}$ and let $S_H={1,\ldots,H}$. For every internal set $A\subseteq S_H$, define its \textbf{hyperfinite probability} by
+
+$$
+P_{S_H}(A)=\frac{|A_H|}{H}.
+$$
+
+\end{definition}
+
+This is exactly the same formula as in the finite case. The only difference is that $H$ and $|A|$ may now be infinite hyperintegers. Consequently, $P_{S_H}(A)$ is generally a hyperreal number rather than a standard real number.
+
+For example, consider the set of even elements of $S_H$,
+
+$$
+A=\{0,2,4,\ldots,H-2\},
+$$
+
+assuming $H$ is even. Then $|A|=H/2$, and therefore $P_{S_H}(A)=1/2$. More generally, if $A$ contains approximately half of the elements of $S_H$, its hyperfinite probability is approximately $1/2$.
+
+The finite additivity of probability follows immediately from the corresponding property of finite cardinality.
+
+\begin{theorem}
+Let $A,B\subseteq S_H$ be internal and disjoint. Then
+
+$$
+P_{S_H}(A\cup B)=P_{S_H}(A)+P_{S_H}(B).
+$$
+
+Moreover, $P_{S_H}(S_H)=1$.
+\end{theorem}
+
+\begin{proof}
+Since $A$ and $B$ are internal and disjoint, the transfer principle gives $|A\cup B|=|A|+|B|$. Hence
+
+$$
+P_{S_H}(A\cup B)
+=\frac{|A\cup B|}{H}
+=\frac{|A|+|B|}{H}
+=P_{S_H}(A)+P_{S_H}(B).
+$$
+
+Also, $|S_H|=H$, so $P_{S_H}(S_H)=H/H=1$.
+\end{proof}
+
+There is, however, an important difference between the finite and hyperfinite cases. In the finite case, $P_S(A)$ is always a standard real number. In the hyperfinite case, $P_{S_H}(A)$ may be infinitesimally close to a real number without being equal to it. For example, if $A\subseteq S_H$ satisfies $|A|=H-1$, then
+
+$$
+P_{S_H}(A)=1-\frac1H.
+$$
+
+Since $H$ is infinite, $1/H$ is infinitesimal. Thus $P_{S_H}(A)\approx1$.
+
+This suggests that the standard probability associated with a hyperfinite event should be obtained by taking its standard part.
+
+\begin{definition}[Standard Part Probability]
+Let $A\subseteq S_H$ be internal. If $P_{S_H}(A)$ is finite, define
+
+$$
+P(A)=\operatorname{st}\bigl(P_{S_H}(A_H)\bigr).
+$$
+
+\end{definition}
+
+For the previous example, $P_{S_H}(A)=1-1/H\approx1$, and therefore $P(A)=1$.
+
+The important point is that the nonstandard approach does not replace counting by a completely different construction. Instead, it extends finite counting to a hyperfinite set and then uses the standard-part map to return to ordinary real probabilities.
+
+Thus the basic construction is
+
+$$
+\text{finite counting}
+\;\longrightarrow\;
+\text{hyperfinite counting}
+\;\longrightarrow\;
+\text{standard probability}.
+$$
+
+\section{Countable Probability}
+
+We now want to extend the finite construction to a countable sample space. The first example is the set of natural numbers. Let $S=\mathbb{N}$. One might try to define the probability of an event $A\subseteq\mathbb{N}$ by the same formula as in the finite case, namely $P_S(A)=|A|/|S|$. However, this expression is not well-defined in the usual theory, since $\mathbb{N}$ has no finite cardinality and there is no uniform probability on $\mathbb{N}$ assigning the same positive probability to every element.
+
+A natural way to approximate $\mathbb{N}$ by finite sets is to consider its initial segments. For every $n\in\mathbb{N}$, let
+
+$$
+S_n=\{0,1,\ldots,n-1\}.
+$$
+
+For an event $A\subseteq\mathbb{N}$, define
+
+$$
+A_n=A\cap S_n=\{a\in A:a<n\}.
+$$
+
+Thus, $A_n$ contains the elements of $A$ that occur among the first $n$ natural numbers. Since $S_n$ is finite, its uniform probability of $A_n$ is
+
+$$
+P_{S_n}(A_n)=\frac{|A_n|}{n}.
+$$
+
+This gives a natural finite approximation to the probability of $A$. If the limit exists, we define the probability of $A$ by
+
+$$
+P_{\mathbb N}(A)=\lim_{n\to\infty}\frac{|A_n|}{n}.
+$$
+
+This quantity is usually called the \textbf{asymptotic density} of $A$.
+
+For example, let $A$ be the set of even natural numbers. Then $A_n$ contains approximately half of the elements of $S_n$, and therefore
+
+$$
+\lim_{n\to\infty}\frac{|A_n|}{n}=\frac12.
+$$
+
+Thus the natural density of the even numbers is $1/2$. Similarly, the set of odd numbers has probability $1/2$.
+
+Now consider the nonstandard construction. Let $H\in{}^*\mathbb N\setminus\mathbb N$ be an infinite hypernatural and let
+
+$$
+S_H=\{0,1,\ldots,H-1\}.
+$$
+
+For an internal set $A\subseteq S_H$, its hyperfinite probability is
+
+$$
+P_{S_H}(A)=\frac{|A_H|}{H}.
+$$
+
+The finite approximations $A_n={a\in A:a<n}$ suggest that the standard value of this hyperfinite probability should correspond to the limiting density of the finite approximations. In fact, whenever the limit exists,
+
+$$
+\lim_{n\to\infty}\frac{|A_n|}{n}
+=
+\operatorname{st}\left(\frac{|A_H|}{H}\right).
+$$
+
+Thus the nonstandard formulation replaces the limiting process by a single hyperfinite computation. Instead of letting $n$ tend to infinity, we choose one infinite $H$ and count the elements of $A$ inside the hyperfinite set $S_H$. Taking the standard part then gives the same value as the classical limit.
+
+This also explains why the nonstandard approach is useful: the expression $|A|/H$ is defined before taking the standard part, while the standard expression $|A|/|\mathbb N|$ has no meaning as a uniform probability.
+
+We now extend this idea from $\mathbb N$ to an arbitrary countable set.
+
+Let $S$ be a countably infinite set. In order to speak about the first $n$ elements of $S$, we must first choose a well-ordering of $S$. Fix a well-ordering
+
+$$
+S=\{s_0,s_1,s_2,\ldots\}.
+$$
+
+For every $n\in\mathbb N$, define the finite initial segment
+
+$$
+S_n=\{s_0,s_1,\ldots,s_{n-1}\}.
+$$
+
+For an event $A\subseteq S$, define
+
+$$
+A_n=\{s_k\in A:k<n\}.
+$$
+
+Equivalently, $A_n=A\cap S_n$.
+
+We can now define the probability of $A$ whenever the corresponding limit exists.
+
+\begin{definition}[Countable Probability]
+Let $S$ be a countably infinite set equipped with a fixed well-ordering
+
+$$
+S=\{s_0,s_1,s_2,\ldots\}.
+$$
+
+For $A\subseteq S$, define
+
+$$
+A_n=\{s_k\in A:k<n\}.
+$$
+
+If the limit exists, the \textbf{countable density} of $A$ is
+
+$$
+P_S(A)=\lim_{n\to\infty}\frac{|A_n|}{n}.
+$$
+
+\end{definition}
+
+The definition depends, in general, on the chosen well-ordering of $S$. Therefore, a countable set by itself does not determine a unique uniform probability. The ordering specifies how the finite approximations $S_n$ approach the whole set.
+
+In the nonstandard formulation, the same ordering gives the hyperfinite sample space
+
+$$
+S_H=\{s_0,s_1,\ldots,s_{H-1}\},
+$$
+
+where $H\in{}^*\mathbb N\setminus\mathbb N$. For an internal event $A\subseteq S_H$, we define
+
+$$
+P_{S_H}(A)=\frac{|A_H|}{H}.
+$$
+
+Whenever the corresponding standard density exists, we again have
+
+$$
+P_S(A)=\operatorname{st}\left(P_{S_H}(A_H)\right)
+=\operatorname{st}\left(\frac{|A_H|}{H}\right).
+$$
+
+Thus, after fixing a well-ordering, the passage from a finite probability space to a countable one can be summarized as
+
+$$
+\text{finite counting}
+\;\longrightarrow\;
+\lim_{n\to\infty}\frac{|A_n|}{n}
+\;\longleftrightarrow\;
+\operatorname{st}\left(\frac{|A_H|}{H}\right).
+$$
+
+
 
 \end{document}
 
