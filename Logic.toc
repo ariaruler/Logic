@@ -71,3 +71,6 @@
 \contentsline {section}{\numberline {16.1}Finite Approach}{171}{section.16.1}%
 \contentsline {section}{\numberline {16.2}Nonstandard Approach}{173}{section.16.2}%
 \contentsline {section}{\numberline {16.3}Countable Probability}{175}{section.16.3}%
+\contentsline {subsection}{\numberline {16.3.1}Infinitesimal Probabilities and the Random Natural Number}{177}{subsection.16.3.1}%
+\contentsline {subsection}{\numberline {16.3.2}A Decision Problem with Infinitesimal Probabilities}{179}{subsection.16.3.2}%
+\contentsline {section}{\numberline {16.4}Measure}{182}{section.16.4}%

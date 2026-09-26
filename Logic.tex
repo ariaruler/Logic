@@ -389,7 +389,6 @@ we denote propositions with ``$p ,q ,r ,...$''.
 
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt}   \\
-
     \end{tabular}
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
@@ -495,7 +494,6 @@ we denote propositions with ``$p ,q ,r ,...$''.
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt}
         \\
-
     \end{tabular}
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
@@ -589,7 +587,6 @@ we denote propositions with ``$p ,q ,r ,...$''.
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt}
         \\
-
     \end{tabular}
 
     \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}}
@@ -845,7 +842,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
     \textbf{} for  ``$p,q,r$'' prove.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        % \item  $p /\therefore p$
+              % \item  $p /\therefore p$
         \item  $/\therefore p \vee \neg p$
         \item  $\neg p, p \vee q /\therefore q$
         \item  $\neg p /\therefore p \rightarrow q$
@@ -1150,7 +1147,6 @@ sentences.
         \\
 
         \hline
-
     \end{tabular}
     % \printindex
 
@@ -1201,7 +1197,6 @@ sentences.
             \close
             \have  {2} {\theta }                    \by{$\exists E,3$}{}
         \end{fitchproof}
-
     \end{tabular}
 
 \end{theorem}
@@ -1289,7 +1284,6 @@ sentences.
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt}
         \\
-
     \end{tabular}
 
     \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}}
@@ -1382,7 +1376,6 @@ sentences.
         \end{fitchproof}
 
         \\
-
     \end{tabular}
 
     \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}}
@@ -1797,7 +1790,6 @@ later.
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt}
         \\
-
     \end{tabular}
 \end{theorem}
 
@@ -2773,7 +2765,6 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
         \\
 
         \hline
-
     \end{tabular}    % \printindex
     \\
     \\
@@ -2809,7 +2800,6 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt}
         \\
-
     \end{tabular}
 
 \end{theorem}
@@ -3229,7 +3219,6 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt}
         \\
-
     \end{tabular}
 
     prove.2 \\
@@ -3270,7 +3259,6 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt}
         \\
-
     \end{tabular}
 
 \end{lemma}
@@ -10796,116 +10784,116 @@ function ``Riemann Integral''.
 We begin with the simplest form of probability, where the sample space is a finite set. In this case, probability can be understood directly in terms of counting.
 
 \begin{definition}[Finite Probability Space]
-Let $S$ be a finite nonempty set. A \textbf{probability function} on $S$ is a function
+    Let $S$ be a finite nonempty set. A \textbf{probability function} on $S$ is a function
 
-$$
-P_S:\mathcal{P}(S)\to[0,1]
-$$
+    $$
+        P_S:\mathcal{P}(S)\to[0,1]
+    $$
 
-such that $P_S(S)=1$ and, for every pair of disjoint subsets $A,B\subseteq S$,
+    such that $P_S(S)=1$ and, for every pair of disjoint subsets $A,B\subseteq S$,
 
-$$
-P_S(A\cup B)=P_S(A)+P_S(B).
-$$
+    $$
+        P_S(A\cup B)=P_S(A)+P_S(B).
+    $$
 
-The pair $(S,P_S)$ is called a \textbf{finite probability space}. The elements of $S$ are called \textbf{outcomes}, and the subsets of $S$ are called \textbf{events}.
+    The pair $(S,P_S)$ is called a \textbf{finite probability space}. The elements of $S$ are called \textbf{outcomes}, and the subsets of $S$ are called \textbf{events}.
 \end{definition}
 
 The simplest probability function is obtained when all outcomes are equally likely.
 
 \begin{definition}[Uniform Probability]
-Let $S$ be a finite nonempty set. The \textbf{uniform probability} on $S$ is defined by
+    Let $S$ be a finite nonempty set. The \textbf{uniform probability} on $S$ is defined by
 
-$$
-P_S(A)=\frac{|A|}{|S|}
-$$
+    $$
+        P_S(A)=\frac{|A|}{|S|}
+    $$
 
-for every $A\subseteq S$.
+    for every $A\subseteq S$.
 \end{definition}
 
 Thus, the probability of an event is the ratio between the number of favorable outcomes and the total number of outcomes.
 
 \begin{example}
-Consider tossing a fair coin. Let
+    Consider tossing a fair coin. Let
 
-$$
-S=\{H,T\}.
-$$
+    $$
+        S=\{H,T\}.
+    $$
 
-Then $P_S({H})=P_S({T})=\frac12$. If $A={H}$ is the event of obtaining heads, then
+    Then $P_S({H})=P_S({T})=\frac12$. If $A={H}$ is the event of obtaining heads, then
 
-$$
-P_S(A)=\frac{|A|}{|S|}=\frac12.
-$$
+    $$
+        P_S(A)=\frac{|A|}{|S|}=\frac12.
+    $$
 
 \end{example}
 
 The uniform probability satisfies the axioms of a probability function.
 
 \begin{theorem}
-Let $S$ be a finite nonempty set and define $P_S(A)=|A|/|S|$ for every $A\subseteq S$. Then $P_S$ is a probability function.
+    Let $S$ be a finite nonempty set and define $P_S(A)=|A|/|S|$ for every $A\subseteq S$. Then $P_S$ is a probability function.
 \end{theorem}
 
 \begin{proof}
-Clearly, $P_S(S)=|S|/|S|=1$. Let $A,B\subseteq S$ be disjoint. Since $A$ and $B$ are disjoint finite sets, $|A\cup B|=|A|+|B|$. Therefore
+    Clearly, $P_S(S)=|S|/|S|=1$. Let $A,B\subseteq S$ be disjoint. Since $A$ and $B$ are disjoint finite sets, $|A\cup B|=|A|+|B|$. Therefore
 
-$$
-P_S(A\cup B)
-=\frac{|A\cup B|}{|S|}
-=\frac{|A|+|B|}{|S|}
-=P_S(A)+P_S(B).
-$$
+    $$
+        P_S(A\cup B)
+        =\frac{|A\cup B|}{|S|}
+        =\frac{|A|+|B|}{|S|}
+        =P_S(A)+P_S(B).
+    $$
 
-Hence $P_S$ is a probability function.
+    Hence $P_S$ is a probability function.
 \end{proof}
 
 The finite case also gives the probability of a single outcome. If $S$ has $n$ elements and the probability is uniform, then every outcome has probability $1/n$. Consequently, for every event $A\subseteq S$,
 
 $$
-P_S(A)=\sum_{s\in A}P_S(\{s\})
-=\frac{|A|}{|S|}.
+    P_S(A)=\sum_{s\in A}P_S(\{s\})
+    =\frac{|A|}{|S|}.
 $$
 
 This suggests that probability can be viewed as a generalization of counting. Counting assigns to a finite set $A$ its cardinality $|A|$, while probability assigns to an event $A$ a normalized value between $0$ and $1$.
 
 \begin{definition}[Weighted Finite Probability Space]
-Let $S$ be a finite nonempty set. A function $p:S\to[0,1]$ is called a \textbf{probability mass function} if
+    Let $S$ be a finite nonempty set. A function $p:S\to[0,1]$ is called a \textbf{probability mass function} if
 
-$$
-\sum_{s\in S}p(s)=1.
-$$
+    $$
+        \sum_{s\in S}p(s)=1.
+    $$
 
-For every $A\subseteq S$, define
+    For every $A\subseteq S$, define
 
-$$
-P_S(A)=\sum_{s\in A}p(s).
-$$
+    $$
+        P_S(A)=\sum_{s\in A}p(s).
+    $$
 
-Then $(S,P_S)$ is called a \textbf{finite probability space}.
+    Then $(S,P_S)$ is called a \textbf{finite probability space}.
 \end{definition}
 
 The uniform probability space is the special case in which $p(s)=1/|S|$ for every $s\in S$.
 
 \begin{example}
-Suppose
+    Suppose
 
-$$
-S=\{1,2,3,4,5,6\}
-$$
+    $$
+        S=\{1,2,3,4,5,6\}
+    $$
 
-is the set of possible outcomes of a die. For a fair die, $p(s)=1/6$ for every $s\in S$. Hence, if
+    is the set of possible outcomes of a die. For a fair die, $p(s)=1/6$ for every $s\in S$. Hence, if
 
-$$
-A=\{2,4,6\},
-$$
+    $$
+        A=\{2,4,6\},
+    $$
 
-then
+    then
 
-$$
-P_S(A)=\frac16+\frac16+\frac16=\frac12.
-$$
+    $$
+        P_S(A)=\frac16+\frac16+\frac16=\frac12.
+    $$
 
-Thus the probability of obtaining an even number is $1/2$.
+    Thus the probability of obtaining an even number is $1/2$.
 \end{example}
 
 
@@ -10916,7 +10904,7 @@ The finite probability space provides a natural starting point for a nonstandard
 Let ${}^*\mathbb{N}$ denote the hypernatural numbers. Since ${}^*\mathbb{N}$ contains infinite elements, we may choose
 
 $$
-H\in{}^*\mathbb{N}\setminus\mathbb{N}.
+    H\in{}^*\mathbb{N}\setminus\mathbb{N}.
 $$
 
 We call such an $H$ an \textbf{infinite hypernatural}.
@@ -10924,7 +10912,7 @@ We call such an $H$ an \textbf{infinite hypernatural}.
 Consider the hyperfinite set
 
 $$
-S_H=\{0,1,2,\ldots,H -1\}.
+    S_H=\{0,1,2,\ldots,H -1\}.
 $$
 
 Although $S_H$ is infinite from the standard point of view, it behaves internally like a finite set with $H$ elements. In particular, every internal subset $A\subseteq S_H$ has an internal cardinality $|A|\in{}^*\mathbb{N}$.
@@ -10932,11 +10920,11 @@ Although $S_H$ is infinite from the standard point of view, it behaves internall
 This allows us to extend the finite formula for uniform probability without changing its form.
 
 \begin{definition}[Hyperfinite Probability]
-Let $H\in{}^*\mathbb{N}\setminus\mathbb{N}$ and let $S_H={1,\ldots,H}$. For every internal set $A\subseteq S_H$, define its \textbf{hyperfinite probability} by
+    Let $H\in{}^*\mathbb{N}\setminus\mathbb{N}$ and let $S_H={1,\ldots,H}$. For every internal set $A\subseteq S_H$, define its \textbf{hyperfinite probability} by
 
-$$
-P_{S_H}(A)=\frac{|A_H|}{H}.
-$$
+    $$
+        P_{S_H}(A)=\frac{|A_H|}{H}.
+    $$
 
 \end{definition}
 
@@ -10945,7 +10933,7 @@ This is exactly the same formula as in the finite case. The only difference is t
 For example, consider the set of even elements of $S_H$,
 
 $$
-A=\{0,2,4,\ldots,H-2\},
+    A=\{0,2,4,\ldots,H-2\},
 $$
 
 assuming $H$ is even. Then $|A|=H/2$, and therefore $P_{S_H}(A)=1/2$. More generally, if $A$ contains approximately half of the elements of $S_H$, its hyperfinite probability is approximately $1/2$.
@@ -10953,32 +10941,32 @@ assuming $H$ is even. Then $|A|=H/2$, and therefore $P_{S_H}(A)=1/2$. More gener
 The finite additivity of probability follows immediately from the corresponding property of finite cardinality.
 
 \begin{theorem}
-Let $A,B\subseteq S_H$ be internal and disjoint. Then
+    Let $A,B\subseteq S_H$ be internal and disjoint. Then
 
-$$
-P_{S_H}(A\cup B)=P_{S_H}(A)+P_{S_H}(B).
-$$
+    $$
+        P_{S_H}(A\cup B)=P_{S_H}(A)+P_{S_H}(B).
+    $$
 
-Moreover, $P_{S_H}(S_H)=1$.
+    Moreover, $P_{S_H}(S_H)=1$.
 \end{theorem}
 
 \begin{proof}
-Since $A$ and $B$ are internal and disjoint, the transfer principle gives $|A\cup B|=|A|+|B|$. Hence
+    Since $A$ and $B$ are internal and disjoint, the transfer principle gives $|A\cup B|=|A|+|B|$. Hence
 
-$$
-P_{S_H}(A\cup B)
-=\frac{|A\cup B|}{H}
-=\frac{|A|+|B|}{H}
-=P_{S_H}(A)+P_{S_H}(B).
-$$
+    $$
+        P_{S_H}(A\cup B)
+        =\frac{|A\cup B|}{H}
+        =\frac{|A|+|B|}{H}
+        =P_{S_H}(A)+P_{S_H}(B).
+    $$
 
-Also, $|S_H|=H$, so $P_{S_H}(S_H)=H/H=1$.
+    Also, $|S_H|=H$, so $P_{S_H}(S_H)=H/H=1$.
 \end{proof}
 
 There is, however, an important difference between the finite and hyperfinite cases. In the finite case, $P_S(A)$ is always a standard real number. In the hyperfinite case, $P_{S_H}(A)$ may be infinitesimally close to a real number without being equal to it. For example, if $A\subseteq S_H$ satisfies $|A|=H-1$, then
 
 $$
-P_{S_H}(A)=1-\frac1H.
+    P_{S_H}(A)=1-\frac1H.
 $$
 
 Since $H$ is infinite, $1/H$ is infinitesimal. Thus $P_{S_H}(A)\approx1$.
@@ -10986,11 +10974,11 @@ Since $H$ is infinite, $1/H$ is infinitesimal. Thus $P_{S_H}(A)\approx1$.
 This suggests that the standard probability associated with a hyperfinite event should be obtained by taking its standard part.
 
 \begin{definition}[Standard Part Probability]
-Let $A\subseteq S_H$ be internal. If $P_{S_H}(A)$ is finite, define
+    Let $A\subseteq S_H$ be internal. If $P_{S_H}(A)$ is finite, define
 
-$$
-P(A)=\operatorname{st}\bigl(P_{S_H}(A_H)\bigr).
-$$
+    $$
+        P(A)=\operatorname{st}\bigl(P_{S_H}(A_H)\bigr).
+    $$
 
 \end{definition}
 
@@ -11001,39 +10989,32 @@ The important point is that the nonstandard approach does not replace counting b
 Thus the basic construction is
 
 $$
-\text{finite counting}
-\;\longrightarrow\;
-\text{hyperfinite counting}
-\;\longrightarrow\;
-\text{standard probability}.
+    \text{finite counting}
+    \;\longrightarrow\;
+    \text{hyperfinite counting}
+    \;\longrightarrow\;
+    \text{standard probability}.
 $$
 
 \section{Countable Probability}
 
 We now want to extend the finite construction to a countable sample space. The first example is the set of natural numbers. Let $S=\mathbb{N}$. One might try to define the probability of an event $A\subseteq\mathbb{N}$ by the same formula as in the finite case, namely $P_S(A)=|A|/|S|$. However, this expression is not well-defined in the usual theory, since $\mathbb{N}$ has no finite cardinality and there is no uniform probability on $\mathbb{N}$ assigning the same positive probability to every element.
 
-A natural way to approximate $\mathbb{N}$ by finite sets is to consider its initial segments. For every $n\in\mathbb{N}$, let
-
-$$
-S_n=\{0,1,\ldots,n-1\}.
-$$
-
-For an event $A\subseteq\mathbb{N}$, define
-
-$$
-A_n=A\cap S_n=\{a\in A:a<n\}.
-$$
-
+A natural way to approximate $\mathbb{N}$ by finite sets is to consider its initial segments. For every $n\in\mathbb{N}$, let $
+    S_n=\{0,1,\ldots,n-1\}.
+$ For an event $A\subseteq\mathbb{N}$, define $
+    A_n=A\cap S_n=\{a\in A:a<n\}.
+$
 Thus, $A_n$ contains the elements of $A$ that occur among the first $n$ natural numbers. Since $S_n$ is finite, its uniform probability of $A_n$ is
 
 $$
-P_{S_n}(A_n)=\frac{|A_n|}{n}.
+    P_{S_n}(A_n)=\frac{|A_n|}{n}.
 $$
 
 This gives a natural finite approximation to the probability of $A$. If the limit exists, we define the probability of $A$ by
 
 $$
-P_{\mathbb N}(A)=\lim_{n\to\infty}\frac{|A_n|}{n}.
+    P_{\mathbb N}(A)=\lim_{n\to\infty}\frac{|A_n|}{n}.
 $$
 
 This quantity is usually called the \textbf{asymptotic density} of $A$.
@@ -11041,7 +11022,7 @@ This quantity is usually called the \textbf{asymptotic density} of $A$.
 For example, let $A$ be the set of even natural numbers. Then $A_n$ contains approximately half of the elements of $S_n$, and therefore
 
 $$
-\lim_{n\to\infty}\frac{|A_n|}{n}=\frac12.
+    \lim_{n\to\infty}\frac{|A_n|}{n}=\frac12.
 $$
 
 Thus the natural density of the even numbers is $1/2$. Similarly, the set of odd numbers has probability $1/2$.
@@ -11049,21 +11030,21 @@ Thus the natural density of the even numbers is $1/2$. Similarly, the set of odd
 Now consider the nonstandard construction. Let $H\in{}^*\mathbb N\setminus\mathbb N$ be an infinite hypernatural and let
 
 $$
-S_H=\{0,1,\ldots,H-1\}.
+    S_H=\{0,1,\ldots,H-1\}.
 $$
 
 For an internal set $A\subseteq S_H$, its hyperfinite probability is
 
 $$
-P_{S_H}(A)=\frac{|A_H|}{H}.
+    P_{S_H}(A)=\frac{|A_H|}{H}.
 $$
 
 The finite approximations $A_n={a\in A:a<n}$ suggest that the standard value of this hyperfinite probability should correspond to the limiting density of the finite approximations. In fact, whenever the limit exists,
 
 $$
-\lim_{n\to\infty}\frac{|A_n|}{n}
-=
-\operatorname{st}\left(\frac{|A_H|}{H}\right).
+    \lim_{n\to\infty}\frac{|A_n|}{n}
+    =
+    \operatorname{st}\left(\frac{|A_H|}{H}\right).
 $$
 
 Thus the nonstandard formulation replaces the limiting process by a single hyperfinite computation. Instead of letting $n$ tend to infinity, we choose one infinite $H$ and count the elements of $A$ inside the hyperfinite set $S_H$. Taking the standard part then gives the same value as the classical limit.
@@ -11072,22 +11053,14 @@ This also explains why the nonstandard approach is useful: the expression $|A|/H
 
 We now extend this idea from $\mathbb N$ to an arbitrary countable set.
 
-Let $S$ be a countably infinite set. In order to speak about the first $n$ elements of $S$, we must first choose a well-ordering of $S$. Fix a well-ordering
+Let $S$ be a countably infinite set. In order to speak about the first $n$ elements of $S$, we must first choose a well-ordering of $S$. Fix a well-ordering $ S=\{s_0,s_1,s_2,\ldots\}.  $
 
-$$
-S=\{s_0,s_1,s_2,\ldots\}.
-$$
-
-For every $n\in\mathbb N$, define the finite initial segment
-
-$$
-S_n=\{s_0,s_1,\ldots,s_{n-1}\}.
-$$
+For every $n\in\mathbb N$, define the finite initial segment $ S_n=\{s_0,s_1,\ldots,s_{n-1}\}.$
 
 For an event $A\subseteq S$, define
 
 $$
-A_n=\{s_k\in A:k<n\}.
+    A_n=\{s_k\in A:k<n\}.
 $$
 
 Equivalently, $A_n=A\cap S_n$.
@@ -11095,141 +11068,464 @@ Equivalently, $A_n=A\cap S_n$.
 We can now define the probability of $A$ whenever the corresponding limit exists.
 
 \begin{definition}[Countable Probability]
-Let $S$ be a countably infinite set equipped with a fixed well-ordering
+    Let $S$ be a countably infinite set equipped with a fixed well-ordering
 
-$$
-S=\{s_0,s_1,s_2,\ldots\}.
-$$
+    $$
+        S=\{s_0,s_1,s_2,\ldots\}.
+    $$
 
-For $A\subseteq S$, define
+    For $A\subseteq S$, define
 
-$$
-A_n=\{s_k\in A:k<n\}.
-$$
+    $$
+        A_n=\{s_k\in A:k<n\}.
+    $$
 
-If the limit exists, the \textbf{countable density} of $A$ is
+    If the limit exists, the \textbf{countable density} of $A$ is
 
-$$
-P_S(A)=\lim_{n\to\infty}\frac{|A_n|}{n}.
-$$
+    $$
+        P_S(A)=\lim_{n\to\infty}\frac{|A_n|}{n}.
+    $$
 
 \end{definition}
 
 The definition depends, in general, on the chosen well-ordering of $S$. Therefore, a countable set by itself does not determine a unique uniform probability. The ordering specifies how the finite approximations $S_n$ approach the whole set.
 
-In the nonstandard formulation, the same ordering gives the hyperfinite sample space
-
-$$
-S_H=\{s_0,s_1,\ldots,s_{H-1}\},
-$$
+In the nonstandard formulation, the same ordering gives the hyperfinite sample space $ S_H=\{s_0,s_1,\ldots,s_{H-1}\}, $
 
 where $H\in{}^*\mathbb N\setminus\mathbb N$. For an internal event $A\subseteq S_H$, we define
 
 $$
-P_{S_H}(A)=\frac{|A_H|}{H}.
+    P_{S_H}(A)=\frac{|A_H|}{H}.
 $$
 
 Whenever the corresponding standard density exists, we again have
 
 $$
-P_S(A)=\operatorname{st}\left(P_{S_H}(A_H)\right)
-=\operatorname{st}\left(\frac{|A_H|}{H}\right).
+    P_S(A)=\operatorname{st}\left(P_{S_H}(A_H)\right)
+    =\operatorname{st}\left(\frac{|A_H|}{H}\right).
 $$
 
 Thus, after fixing a well-ordering, the passage from a finite probability space to a countable one can be summarized as
 
 $$
-\text{finite counting}
-\;\longrightarrow\;
-\lim_{n\to\infty}\frac{|A_n|}{n}
-\;\longleftrightarrow\;
-\operatorname{st}\left(\frac{|A_H|}{H}\right).
+    \text{finite counting}
+    \;\longrightarrow\;
+    \lim_{n\to\infty}\frac{|A_n|}{n}
+    \;\longleftrightarrow\;
+    \operatorname{st}\left(\frac{|A_H|}{H}\right).
 $$
+
+\subsection{Infinitesimal Probabilities and the Random Natural Number}
+
+The previous construction shows that a countably infinite set does not admit a uniform countably additive probability. Nevertheless, the finite approximations suggest a natural way to interpret the statement that a natural number is chosen ``uniformly at random''. This interpretation becomes particularly interesting when we compare standard limits with hyperfinite probabilities.
+
+Consider the following problem. A natural number $N$ is chosen randomly, and one of the following three rules is used:
+
+\begin{enumerate}
+    \item Every natural number makes the player lose.
+    \item Only $0$ makes the player win.
+    \item Every number from $0$ through $999$ makes the player win.
+\end{enumerate}
+
+The first rule has probability $0$ of winning, while the other two rules raise the question of what ``randomly choosing a natural number'' should mean.
+
+There is no uniform countably additive probability on $\mathbb N$. Indeed, suppose that every $n\in\mathbb N$ has the same probability $p$. If $p>0$, then
+
+$$
+    P_{\mathbb N}(\mathbb N)=\sum_{n=0}^{\infty}p=\infty,
+$$
+
+while if $p=0$, then
+
+$$
+    P_{\mathbb N}(\mathbb N)=\sum_{n=0}^{\infty}0=0.
+$$
+
+In neither case is $P_{\mathbb N}(\mathbb N)=1$.
+
+We may instead use the finite approximations
+
+$$
+    S_n=\{0,1,\ldots,n-1\}
+$$
+
+and choose $N_n$ uniformly from $S_n$. Let
+
+$$
+    A=\{0\},
+    \qquad
+    B=\{0,1,\ldots,999\}.
+$$
+
+Then
+
+$$
+    P_{S_n}(A)=\frac1n
+$$
+
+and, for $n>999$,
+
+$$
+    P_{S_n}(B)=\frac{1000}{n}.
+$$
+
+Consequently,
+
+$$
+    \lim_{n\to\infty}P_{S_n}(A)
+    =
+    \lim_{n\to\infty}P_{S_n}(B)
+    =0.
+$$
+
+Thus, according to ordinary asymptotic probability, both events have probability $0$. Nevertheless, for every $n>999$,
+
+$$
+    P_{S_n}(B)=1000P_{S_n}(A).
+$$
+
+The limiting operation has therefore lost information: two events whose probabilities have a fixed ratio of $1000$ for every sufficiently large finite space become indistinguishable after taking the limit.
+The nonstandard approach preserves this information.
+The probability of an individual outcome is now
+
+$$
+    P_{S_H}(\{k\})=\frac1H.
+$$
+
+Since $H$ is infinite, $1/H$ is a positive infinitesimal. Thus an individual natural number can have a positive probability in the hyperfinite model, although its standard part is zero.
+
+For the two events above, we obtain $
+    P_{S_H}(A)=\frac1H
+$ and $
+    P_{S_H}(B)=\frac{1000}{H}.
+$ Therefore
+$
+    P_{S_H}(B)=1000P_{S_H}(A),
+$ and hence $
+    P_{S_H}(A)<P_{S_H}(B).
+$
+
+Both probabilities are infinitesimal, but they are not equal.
+
+
+
+$1/H$ is a positive infinitesimal. The same is true of $1000/H$.
+
+Taking standard parts gives
+
+$$
+    \operatorname{st}\left(\frac1H\right)
+    =
+    \operatorname{st}\left(\frac{1000}{H}\right)
+    =0.
+$$
+
+Thus the standard probability identifies the two events, while the hyperfinite probability distinguishes them:
+
+$$
+    \boxed{
+        \frac1H<\frac{1000}{H},
+        \qquad
+        \operatorname{st}\left(\frac1H\right)
+        =
+        \operatorname{st}\left(\frac{1000}{H}\right)=0.
+    }
+$$
+
+This illustrates an important limitation of ordinary limiting probability. The standard part map preserves the macroscopic probability but can erase information contained at the infinitesimal scale. In the hyperfinite model, the probabilities remain different even though their standard parts are equal.
+
+This phenomenon is closely related to the use of nonstandard methods in probability and decision theory. Nonstandard probability allows infinitesimal probabilities to be retained instead of immediately replacing them by their standard parts. In particular, nonstandard methods have been used in statistical decision theory to study the relationship between Bayesian procedures and admissibility, where infinitesimal probabilities can play an essential role.
+
+The idea of assigning probabilities to individual natural numbers by means of infinitesimals should therefore be distinguished from the ordinary uniform probability on $\mathbb N$. There is no uniform countably additive probability on $\mathbb N$ in the standard sense. Instead, the hyperfinite construction provides an internal probability space
+
+$$
+    S_H=\{0,1,\ldots,H-1\}
+$$
+
+whose individual points have infinitesimal probability. The standard probability is recovered only after applying the standard-part map.
+
+This gives another interpretation of the relation established in the previous section:
+
+$$
+    \lim_{n\to\infty}\frac{|A_n|}{n}
+    =
+    \operatorname{st}\left(\frac{|A|}{H}\right),
+$$
+
+whenever the corresponding density exists. The left-hand side records only the standard limiting probability, whereas the right-hand side is obtained from a hyperfinite probability that may contain additional infinitesimal information.
+
+The distinction becomes particularly relevant in problems in which several events all have standard probability zero but occur with different infinitesimal probabilities. In such cases, the hyperfinite model can preserve comparisons that are invisible after taking the standard part.
+
+For a genuine countably additive probability theory, however, one must still pass from the internal hyperfinite probability to a standard measure on a suitable $\sigma$-algebra. This is the role of the \textbf{Loeb measure}, which will be developed later.
+
+Yes. We can make the example a genuine decision-theoretic problem: define the state space, actions/rules, payoff (or loss), decision rule, and then show that under the hyperfinite model rule (3) has strictly larger winning probability than rule (2), even though their standard probabilities are both \(0\).
+
+I would avoid saying this is a theorem about all possible decision criteria; the conclusion follows for the specific payoff and probability model we define.
+
+\subsection{A Decision Problem with Infinitesimal Probabilities}
+
+The previous example can be formulated as a decision problem. This makes clear why the distinction between zero probability and infinitesimal probability can be important.
+
+\begin{definition}[Decision Problem]
+    A \textbf{decision problem} consists of a state space $S$, a set of actions $\mathcal A$, and a payoff function
+
+    $$
+        u:S\times\mathcal A\to\mathbb R.
+    $$
+
+    After a state $s\in S$ is realized, the decision maker chooses an action $a\in\mathcal A$, and receives the payoff $u(s,a)$.
+\end{definition}
+
+In our problem, let the state space be the natural numbers,
+
+$$
+    S=\mathbb N,
+$$
+
+and let the three possible actions be
+
+$$
+    \mathcal A=\{a_1,a_2,a_3\}.
+$$
+
+We define the payoff function by
+
+$$
+    u(s,a_1)=0,
+$$
+
+$$
+    u(s,a_2)=
+    \begin{cases}
+        1, & s=0,    \\
+        0, & s\neq0,
+    \end{cases}
+$$
+
+and
+
+$$
+    u(s,a_3)=
+    \begin{cases}
+        1, & 0\leq s\leq999, \\
+        0, & s>999.
+    \end{cases}
+$$
+
+Thus action $a_1$ never wins, action $a_2$ wins only at $0$, and action $a_3$ wins whenever the chosen natural number is between $0$ and $999$.
+
+\begin{definition}[Expected Payoff]
+    Let $(S,P_S)$ be a probability space and let $a\in\mathcal A$ be an action. The \textbf{expected payoff} of $a$ is
+
+    $$
+        E_{P_S}[u(\cdot,a)]
+        =
+        \sum_{s\in S}u(s,a)P_S(\{s\}),
+    $$
+
+    whenever this expression is defined.
+\end{definition}
+
+For the ordinary standard model on $\mathbb N$, there is no uniform countably additive probability $P_{\mathbb N}$. Consequently, the expected payoffs of the three actions cannot be defined using a uniform standard probability on $\mathbb N$.
+
+We therefore use the hyperfinite model. Let
+
+$$
+    H\in{}^*\mathbb N\setminus\mathbb N
+$$
+
+and let
+
+$$
+    S_H=\{0,1,\ldots,H-1\}.
+$$
+
+The three actions are extended to $S_H$ by the same rules. Their hyperfinite expected payoffs are
+
+$$
+    E_{S_H}(a_1)=0,
+$$
+
+$$
+    E_{S_H}(a_2)=\frac1H,
+$$
+
+and
+
+$$
+    E_{S_H}(a_3)=\frac{1000}{H}.
+$$
+
+Since $H$ is infinite, both $1/H$ and $1000/H$ are positive infinitesimals. However,
+
+$$
+    \frac1H<\frac{1000}{H}.
+$$
+
+Therefore
+
+$$
+    E_{S_H}(a_1)
+    <
+    E_{S_H}(a_2)
+    <
+    E_{S_H}(a_3).
+$$
+
+\begin{theorem}
+    In the hyperfinite decision problem above, the action $a_3$ has strictly greater expected payoff than both $a_1$ and $a_2$. Hence the optimal action with respect to expected payoff is
+
+    $$
+        \boxed{a_3}.
+    $$
+
+\end{theorem}
 
 \begin{proof}
-First, we check that $\mu_0$ is well defined. Suppose
+    We have
+
+    $$
+        E_{S_H}(a_1)=0,
+        \qquad
+        E_{S_H}(a_2)=\frac1H,
+        \qquad
+        E_{S_H}(a_3)=\frac{1000}{H}.
+    $$
+
+    Since $H>0$,
+
+    $$
+        0<\frac1H<\frac{1000}{H}.
+    $$
+
+    Thus
+
+    $$
+        E_{S_H}(a_3)>E_{S_H}(a_2)>E_{S_H}(a_1).
+    $$
+
+    Therefore $a_3$ uniquely maximizes the hyperfinite expected payoff.
+\end{proof}
+
+The important point is that this conclusion cannot be recovered from the standard parts alone. Indeed,
 
 $$
-(a,b]=\bigcup_{j=1}^n(a_j,b_j]
+    \operatorname{st}\bigl(E_{S_H}(a_1)\bigr)
+    =
+    \operatorname{st}\bigl(E_{S_H}(a_2)\bigr)
+    =
+    \operatorname{st}\bigl(E_{S_H}(a_3)\bigr)
+    =0.
 $$
 
-is a disjoint union. After ordering the intervals, we have
-$a=a_1<b_1=a_2<\cdots<b_{n-1}=a_n<b_n=b$, and hence
+If we first take standard parts, all three actions appear to have the same expected payoff. The infinitesimal information distinguishing $a_2$ from $a_3$ has disappeared.
+
+Thus we obtain
 
 $$
-\sum_{j=1}^n\mu_0((a_j,b_j])
-=\sum_{j=1}^n[F(b_j)-F(a_j)]
-=F(b)-F(a).
+    \boxed{
+        E_{S_H}(a_2)=\frac1H
+        <
+        \frac{1000}{H}=E_{S_H}(a_3),
+        \qquad
+        \operatorname{st}(E_{S_H}(a_2))
+        =
+        \operatorname{st}(E_{S_H}(a_3))=0.
+    }
 $$
 
-The same argument applied to a common refinement shows that different representations of the same element of $\mathcal A$ give the same value. Thus $\mu_0$ is well defined and, by construction, finitely additive.
+This example shows why a nonstandard probability can contain information that is invisible to ordinary real-valued probability. The standard part records the macroscopic probability, whereas the hyperreal probability also records the infinitesimal scale.
 
-It remains to prove countable additivity. Let ${I_j}_{j=1}^\infty$ be disjoint $h$-intervals such that
+In particular, if the decision criterion is to maximize expected payoff in the hyperfinite probability space, then the decision is $a_3$. The conclusion does not follow from the standard asymptotic probabilities alone, because both winning events have asymptotic density zero.
 
-$$
-I=\bigcup_{j=1}^\infty I_j\in\mathcal A.
-$$
+This phenomenon is related to the broader use of nonstandard probability in decision theory. In nonstandard statistical decision theory, infinitesimal probabilities can be used to represent events that have standard probability zero while still allowing different such events to be distinguished. The hyperfinite construction above gives a simple example of this principle.
 
-By finite additivity, it is enough to consider the case $I=(a,b]$. Since
+It is important, however, to distinguish the present construction from a standard uniform probability on $\mathbb N$. There is no countably additive uniform probability on $\mathbb N$. The decision $a_3$ is obtained only after choosing the hyperfinite model
 
 $$
-\bigcup_{j=1}^nI_j\subseteq I,
+    S_H=\{0,1,\ldots,H-1\}
 $$
 
-we have
+and using its internal uniform probability.
 
-$$
-\sum_{j=1}^n\mu_0(I_j)\leq\mu_0(I).
-$$
+The next step is therefore to determine how such an internal probability can be converted into an ordinary countably additive probability measure. This leads naturally to the construction of Loeb probability.
 
-Letting $n\to\infty$ gives
 
-$$
-\sum_{j=1}^\infty\mu_0(I_j)\leq\mu_0(I).
-$$
+\section{Measure}
 
-For the reverse inequality, fix $\varepsilon>0$. By right continuity of $F$, choose $\delta>0$ such that
+\begin{proof}
+    First, we check that $\mu_0$ is well defined. Suppose$(a,b]=\bigcup_{j=1}^n(a_j,b_j]$
+    is a disjoint union. After ordering the intervals, we have
+    $a=a_1<b_1=a_2<\cdots<b_{n-1}=a_n<b_n=b$, and hence
 
-$$
-F(a+\delta)-F(a)<\varepsilon,
-$$
+    $$
+        \sum_{j=1}^n\mu_0((a_j,b_j])
+        =\sum_{j=1}^n[F(b_j)-F(a_j)]
+        =F(b)-F(a).
+    $$
 
-and, writing $I_j=(a_j,b_j]$, choose $\delta_j>0$ such that
+    The same argument applied to a common refinement shows that different representations of the same element of $\mathcal A$ give the same value. Thus $\mu_0$ is well defined and, by construction, finitely additive.
 
-$$
-F(b_j+\delta_j)-F(b_j)<\varepsilon2^{-j}.
-$$
+    It remains to prove countable additivity. Let ${I_j}_{j=1}^\infty$ be disjoint $h$-intervals such that $
+        I=\bigcup_{j=1}^\infty I_j\in\mathcal A.
+    $
 
-The open intervals $(a_j,b_j+\delta_j)$ cover $[a+\delta,b]$. By compactness, finitely many of them cover this interval. After relabeling, we may assume that they are $(a_j,b_j+\delta_j)$, $j=1,\ldots,N$, and that consecutive intervals overlap.
+    By finite additivity, it is enough to consider the case $I=(a,b]$. Since$
+        \bigcup_{j=1}^nI_j\subseteq I,
+    $ we have
 
-Therefore,
+    $$
+        \sum_{j=1}^n\mu_0(I_j)\leq\mu_0(I).
+    $$
 
-$$
-\begin{aligned}
-\mu_0(I)
-&=F(b)-F(a)\\
-&<\sum_{j=1}^N
-\bigl[F(b_j+\delta_j)-F(a_j)\bigr]+\varepsilon\\
-&<\sum_{j=1}^N
-\bigl[F(b_j)-F(a_j)\bigr]+2\varepsilon\\
-&\leq\sum_{j=1}^\infty\mu_0(I_j)+2\varepsilon.
-\end{aligned}
-$$
+    Letting $n\to\infty$ gives
 
-Since $\varepsilon>0$ is arbitrary,
+    $$
+        \sum_{j=1}^\infty\mu_0(I_j)\leq\mu_0(I).
+    $$
 
-$$
-\mu_0(I)\leq\sum_{j=1}^\infty\mu_0(I_j).
-$$
+    For the reverse inequality, fix $\varepsilon>0$. By right continuity of $F$, choose $\delta>0$ such that
 
-Combining the two inequalities gives
+    $$
+        F(a+\delta)-F(a)<\varepsilon,
+    $$
 
-$$
-\boxed{\mu_0\left(\bigcup_{j=1}^\infty I_j\right)
-=\sum_{j=1}^\infty\mu_0(I_j).}
-$$
+    and, writing $I_j=(a_j,b_j]$, choose $\delta_j>0$ such that
 
-Hence $\mu_0$ is a premeasure on $\mathcal A$.
+    $$
+        F(b_j+\delta_j)-F(b_j)<\varepsilon2^{-j}.
+    $$
+
+    The open intervals $(a_j,b_j+\delta_j)$ cover $[a+\delta,b]$. By compactness, finitely many of them cover this interval. After relabeling, we may assume that they are $(a_j,b_j+\delta_j)$, $j=1,\ldots,N$, and that consecutive intervals overlap.
+
+    Therefore,
+
+    $$
+        \begin{aligned}
+            \mu_0(I)
+             & =F(b)-F(a)                                    \\
+             & <\sum_{j=1}^N
+            \bigl[F(b_j+\delta_j)-F(a_j)\bigr]+\varepsilon   \\
+             & <\sum_{j=1}^N
+            \bigl[F(b_j)-F(a_j)\bigr]+2\varepsilon           \\
+             & \leq\sum_{j=1}^\infty\mu_0(I_j)+2\varepsilon.
+        \end{aligned}
+    $$
+
+    Since $\varepsilon>0$ is arbitrary,
+
+    $$
+        \mu_0(I)\leq\sum_{j=1}^\infty\mu_0(I_j).
+    $$
+
+    Combining the two inequalities gives
+
+    $$
+        \boxed{\mu_0\left(\bigcup_{j=1}^\infty I_j\right)
+            =\sum_{j=1}^\infty\mu_0(I_j).}
+    $$
+
+    Hence $\mu_0$ is a premeasure on $\mathcal A$.
 \end{proof}
 
 
