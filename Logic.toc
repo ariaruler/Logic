@@ -72,5 +72,14 @@
 \contentsline {section}{\numberline {16.2}Nonstandard Approach}{173}{section.16.2}%
 \contentsline {section}{\numberline {16.3}Countable Probability}{175}{section.16.3}%
 \contentsline {subsection}{\numberline {16.3.1}Infinitesimal Probabilities and the Random Natural Number}{177}{subsection.16.3.1}%
-\contentsline {subsection}{\numberline {16.3.2}A Decision Problem with Infinitesimal Probabilities}{179}{subsection.16.3.2}%
-\contentsline {section}{\numberline {16.4}Measure}{182}{section.16.4}%
+\contentsline {section}{\numberline {16.4}Decision Theory}{179}{section.16.4}%
+\contentsline {subsection}{\numberline {16.4.1}The State Space}{180}{subsection.16.4.1}%
+\contentsline {subsection}{\numberline {16.4.2}The Action Space}{180}{subsection.16.4.2}%
+\contentsline {subsection}{\numberline {16.4.3}The Set of Consequences}{180}{subsection.16.4.3}%
+\contentsline {subsection}{\numberline {16.4.4}The Utility Function}{180}{subsection.16.4.4}%
+\contentsline {subsection}{\numberline {16.4.5}Probability on the State Space}{182}{subsection.16.4.5}%
+\contentsline {subsection}{\numberline {16.4.6}Expected Utility}{182}{subsection.16.4.6}%
+\contentsline {subsection}{\numberline {16.4.7}The Maximizing Action}{184}{subsection.16.4.7}%
+\contentsline {subsection}{\numberline {16.4.8}Formal Summary}{185}{subsection.16.4.8}%
+\contentsline {subsection}{\numberline {16.4.9}A Decision Problem with Infinitesimal Probabilities}{186}{subsection.16.4.9}%
+\contentsline {section}{\numberline {16.5}Measure}{196}{section.16.5}%

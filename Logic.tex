@@ -11017,7 +11017,7 @@ $$
     P_{\mathbb N}(A)=\lim_{n\to\infty}\frac{|A_n|}{n}.
 $$
 
-This quantity is usually called the \textbf{asymptotic density} of $A$.
+This quantity is usually called the \textbf{natural density} of $A$.
 
 For example, let $A$ be the set of even natural numbers. Then $A_n$ contains approximately half of the elements of $S_n$, and therefore
 
@@ -11178,7 +11178,7 @@ $$
     =0.
 $$
 
-Thus, according to ordinary asymptotic probability, both events have probability $0$. Nevertheless, for every $n>999$,
+Thus, according to ordinary natural probability, both events have probability $0$. Nevertheless, for every $n>999$,
 
 $$
     P_{S_n}(B)=1000P_{S_n}(A).
@@ -11234,7 +11234,7 @@ $$
 
 This illustrates an important limitation of ordinary limiting probability. The standard part map preserves the macroscopic probability but can erase information contained at the infinitesimal scale. In the hyperfinite model, the probabilities remain different even though their standard parts are equal.
 
-This phenomenon is closely related to the use of nonstandard methods in probability and decision theory. Nonstandard probability allows infinitesimal probabilities to be retained instead of immediately replacing them by their standard parts. In particular, nonstandard methods have been used in statistical decision theory to study the relationship between Bayesian procedures and admissibility, where infinitesimal probabilities can play an essential role.
+This phenomenon is closely related to the use of nonstandard methods in probability and decision theory. Nonstandard probability allows infinitesimal probabilities to be retained instead of immediately replacing them by their standard parts. In particular, nonstandard methods have been used in decision theory to study , where infinitesimal probabilities can play an essential role.
 
 The idea of assigning probabilities to individual natural numbers by means of infinitesimals should therefore be distinguished from the ordinary uniform probability on $\mathbb N$. There is no uniform countably additive probability on $\mathbb N$ in the standard sense. Instead, the hyperfinite construction provides an internal probability space
 
@@ -11256,199 +11256,1119 @@ whenever the corresponding density exists. The left-hand side records only the s
 
 The distinction becomes particularly relevant in problems in which several events all have standard probability zero but occur with different infinitesimal probabilities. In such cases, the hyperfinite model can preserve comparisons that are invisible after taking the standard part.
 
-For a genuine countably additive probability theory, however, one must still pass from the internal hyperfinite probability to a standard measure on a suitable $\sigma$-algebra. This is the role of the \textbf{Loeb measure}, which will be developed later.
+\section{Decision Theory}
 
-Yes. We can make the example a genuine decision-theoretic problem: define the state space, actions/rules, payoff (or loss), decision rule, and then show that under the hyperfinite model rule (3) has strictly larger winning probability than rule (2), even though their standard probabilities are both \(0\).
+Decision theory is the mathematical study of the choice of an action when the consequences of that action depend on an uncertain state of the world.
 
-I would avoid saying this is a theorem about all possible decision criteria; the conclusion follows for the specific payoff and probability model we define.
-
-\subsection{A Decision Problem with Infinitesimal Probabilities}
-
-The previous example can be formulated as a decision problem. This makes clear why the distinction between zero probability and infinitesimal probability can be important.
-
-\begin{definition}[Decision Problem]
-    A \textbf{decision problem} consists of a state space $S$, a set of actions $\mathcal A$, and a payoff function
-
-    $$
-        u:S\times\mathcal A\to\mathbb R.
-    $$
-
-    After a state $s\in S$ is realized, the decision maker chooses an action $a\in\mathcal A$, and receives the payoff $u(s,a)$.
-\end{definition}
-
-In our problem, let the state space be the natural numbers,
+A decision problem can be formally described by a tuple
 
 $$
-    S=\mathbb N,
+\mathcal D=(S,A,u,P),
 $$
 
-and let the three possible actions be
+where \(S,A\) are sets, \(u\) is a function, and \(P\) is a probability measure. We describe each of these objects formally.
+
+\subsection{The State Space}
+
+Let \(S\) be a nonempty set. The elements of \(S\) are called states of nature. A state \(s\in S\) represents a possible condition of the world relevant to the decision.
+
+For example, suppose that we must decide whether to take an umbrella. We may have
 
 $$
-    \mathcal A=\{a_1,a_2,a_3\}.
+S=\{\mathrm{Rain},\mathrm{NoRain}\}.
 $$
 
-We define the payoff function by
+Thus the actual state of the world is an element of \(S\), although the decision-maker may not know which element it is.
+
+\subsection{The Action Space}
+
+Let \(A\) be a nonempty set. The elements of \(A\) are called actions or decisions. An element \(a\in A\) represents an action available to the decision-maker.
+
+For example,
 
 $$
-    u(s,a_1)=0,
+A=\{\mathrm{Take},\mathrm{Leave}\},
 $$
 
+where \(\mathrm{Take}\) means taking an umbrella and \(\mathrm{Leave}\) means leaving it at home.
+
+\subsection{The Set of Consequences}
+
+ for the purposes of decision theory, we may work directly with a utility function
+
 $$
-    u(s,a_2)=
-    \begin{cases}
-        1, & s=0,    \\
-        0, & s\neq0,
-    \end{cases}
+u:A\times S\longrightarrow\mathbb R.
+$$
+
+The value
+
+$$
+u(a,s)
+$$
+
+
+\subsection{The Utility Function}
+
+Let
+
+$$
+u:A\times S\longrightarrow\mathbb R.
+$$
+
+Thus \(u\) is a set-theoretic function whose domain is the Cartesian product
+
+$$
+A\times S
+=
+\{(a,s)\mid a\in A,\ s\in S\}
+$$
+
+and whose codomain is \(\mathbb R\).
+
+For every pair
+
+$$
+(a,s)\in A\times S,
+$$
+
+there is exactly one real number
+
+$$
+u(a,s)\in\mathbb R.
+$$
+
+The number \(u(a,s)\) represents the utility of choosing action \(a\) when the state of nature is \(s\).
+
+For example, let
+
+$$
+S=\{\mathrm{Rain},\mathrm{NoRain}\}
 $$
 
 and
 
 $$
-    u(s,a_3)=
-    \begin{cases}
-        1, & 0\leq s\leq999, \\
-        0, & s>999.
-    \end{cases}
+A=\{\mathrm{Take},\mathrm{Leave}\}.
 $$
 
-Thus action $a_1$ never wins, action $a_2$ wins only at $0$, and action $a_3$ wins whenever the chosen natural number is between $0$ and $999$.
-
-\begin{definition}[Expected Payoff]
-    Let $(S,P_S)$ be a probability space and let $a\in\mathcal A$ be an action. The \textbf{expected payoff} of $a$ is
-
-    $$
-        E_{P_S}[u(\cdot,a)]
-        =
-        \sum_{s\in S}u(s,a)P_S(\{s\}),
-    $$
-
-    whenever this expression is defined.
-\end{definition}
-
-For the ordinary standard model on $\mathbb N$, there is no uniform countably additive probability $P_{\mathbb N}$. Consequently, the expected payoffs of the three actions cannot be defined using a uniform standard probability on $\mathbb N$.
-
-We therefore use the hyperfinite model. Let
+Suppose that the utility function is given by
 
 $$
-    H\in{}^*\mathbb N\setminus\mathbb N
+\begin{array}{c|cc}
+u(a,s)&\mathrm{Rain}&\mathrm{NoRain}\\
+\hline
+\mathrm{Take}&10&8\\
+\mathrm{Leave}&0&10
+\end{array}
+$$
+
+This means
+
+$$
+u(\mathrm{Take},\mathrm{Rain})=10,
+$$
+
+$$
+u(\mathrm{Take},\mathrm{NoRain})=8,
+$$
+
+$$
+u(\mathrm{Leave},\mathrm{Rain})=0,
+$$
+
+and
+
+$$
+u(\mathrm{Leave},\mathrm{NoRain})=10.
+$$
+
+The function \(u\) therefore completely describes the utility associated with every possible combination of an action and a state.
+
+\subsection{Probability on the State Space}
+
+Suppose that uncertainty about the state of nature is represented by a probability measure
+
+$$
+P:\mathcal F\longrightarrow[0,1],
+$$
+
+where \(\mathcal F\subseteq\mathcal P(S)\) is a \(\sigma\)-algebra on \(S\), and
+
+$$
+P(S)=1.
+$$
+
+The pair
+
+$$
+(S,\mathcal F,P)
+$$
+
+is called a probability space.
+
+For a finite state space, we may simply assign a probability \(P(\{s\})\) to every \(s\in S\), satisfying
+
+$$
+\sum_{s\in S}P(\{s\})=1.
+$$
+
+In the umbrella example, suppose
+
+$$
+P(\{\mathrm{Rain}\})=0.3
+$$
+
+and
+
+$$
+P(\{\mathrm{NoRain}\})=0.7.
+$$
+
+\subsection{Expected Utility}
+
+For every action \(a\in A\), its expected utility is defined by
+
+$$
+EU(a)=\mathbb E_P[u(a,S)].
+$$
+
+Here \(S\) in \(u(a,S)\) denotes the random state of nature. More formally, let
+
+$$
+X_a:S\longrightarrow\mathbb R
+$$
+
+be the function defined by
+
+$$
+X_a(s)=u(a,s).
+$$
+
+Then
+
+$$
+EU(a)=\mathbb E_P[X_a].
+$$
+
+Equivalently,
+
+$$
+\boxed{
+EU(a)=\mathbb E_P[u(a,S)]
+}
+$$
+
+where the expectation is taken with respect to the probability measure \(P\).
+
+
+
+
+The expected utility of an action \(a\in A\) is then defined by
+
+$$
+EU(a)
+=
+\mathbb{E}_{P}[u(a,S)]
+=
+\int_S u(a,s)\,dP(s),
+$$
+
+provided that \(u_a\) is integrable.
+
+Equivalently,
+
+$$
+EU:A\longrightarrow\mathbb{R}
+$$
+
+is the function defined by
+
+$$
+EU(a)=\int_Su(a,s)\,dP(s).
+$$
+
+When \(S\) is finite, the expectation becomes
+
+$$
+EU(a)
+=
+\sum_{s\in S}P(\{s\})u(a,s).
+$$
+
+For the action \(\mathrm{Take}\), we have
+
+$$
+\begin{aligned}
+EU(\mathrm{Take})
+&=
+P(\{\mathrm{Rain}\})u(\mathrm{Take},\mathrm{Rain})
++
+P(\{\mathrm{NoRain}\})u(\mathrm{Take},\mathrm{NoRain})\\
+&=0.3(10)+0.7(8)\\
+&=8.6.
+\end{aligned}
+$$
+
+Similarly,
+
+$$
+\begin{aligned}
+EU(\mathrm{Leave})
+&=
+P(\{\mathrm{Rain}\})u(\mathrm{Leave},\mathrm{Rain})
++
+P(\{\mathrm{NoRain}\})u(\mathrm{Leave},\mathrm{NoRain})\\
+&=0.3(0)+0.7(10)\\
+&=7.
+\end{aligned}
+$$
+
+Thus
+
+$$
+EU(\mathrm{Take})>EU(\mathrm{Leave}).
+$$
+
+\subsection{The Maximizing Action}
+
+The set of actions with maximal expected utility is denoted by
+
+$$
+\arg\max_{a\in A}EU(a).
+$$
+
+Formally,
+
+$$
+\boxed{
+\arg\max_{a\in A}EU(a)
+=
+\left\{
+a\in A:
+EU(a)=\sup_{b\in A}EU(b)
+\right\}.
+}
+$$
+
+If the maximum exists, this can equivalently be written as
+
+$$
+\arg\max_{a\in A}EU(a)
+=
+\left\{
+a\in A:
+EU(a)=\max_{b\in A}EU(b)
+\right\}.
+$$
+
+Notice the distinction between
+
+$$
+\max_{a\in A}EU(a)
+$$
+
+and
+
+$$
+\arg\max_{a\in A}EU(a).
+$$
+
+The first is a real number, namely the largest expected utility. The second is a subset of \(A\), namely the set of actions that attain that largest value.
+
+In the umbrella example,
+
+$$
+EU(\mathrm{Take})=8.6
+$$
+
+and
+
+$$
+EU(\mathrm{Leave})=7.
+$$
+
+Therefore,
+
+$$
+\max_{a\in A}EU(a)=8.6
+$$
+
+while
+
+$$
+\arg\max_{a\in A}EU(a)
+=
+\{\mathrm{Take}\}.
+$$
+
+Consequently,
+
+$$
+a^*\in\arg\max_{a\in A}EU(a)
+$$
+
+means that \(a^*\) is an action whose expected utility is maximal.
+
+In this example,
+
+$$
+a^*=\mathrm{Take}.
+$$
+
+The notation \(a^*\in\arg\max_{a\in A}EU(a)\) does not necessarily imply that there is a unique optimal action. For example, if
+
+$$
+EU(a_1)=EU(a_2)=10
+$$
+
+and every other action has expected utility less than \(10\), then
+
+$$
+\arg\max_{a\in A}EU(a)=\{a_1,a_2\}.
+$$
+
+Thus the expected-utility rule may determine a set of optimal actions rather than a unique action.
+
+\subsection{Formal Summary}
+
+A basic decision problem under probabilistic uncertainty consists of a probability space
+
+$$
+(S,\mathcal F,P),
+$$
+
+a nonempty action space \(A\), and a utility function
+
+$$
+u:A\times S\longrightarrow\mathbb R.
+$$
+
+For each action \(a\in A\), define its expected utility by
+
+$$
+EU(a)
+=
+\mathbb E_P[u(a,S)].
+$$
+
+When \(S\) is finite,
+
+$$
+EU(a)
+=
+\sum_{s\in S}P(\{s\})u(a,s).
+$$
+
+The expected-utility decision rule selects the actions in
+
+$$
+\boxed{
+\arg\max_{a\in A}EU(a)
+=
+\left\{
+a\in A:
+EU(a)=\sup_{b\in A}EU(b)
+\right\}.
+}
+$$
+
+If \(a^*\in\arg\max_{a\in A}EU(a)\), then \(a^*\) is an action having maximal expected utility.
+\subsection{A Decision Problem with Infinitesimal Probabilities}
+
+The previous example can be formulated precisely as a decision problem. The purpose is to show how infinitesimal probabilities can distinguish events which all have standard probability zero.
+
+
+
+We now consider the following decision problem. Let
+
+$$
+S=\mathbb N
 $$
 
 and let
 
 $$
-    S_H=\{0,1,\ldots,H-1\}.
+\mathcal A=\{a_1,a_2,a_3\}.
 $$
 
-The three actions are extended to $S_H$ by the same rules. Their hyperfinite expected payoffs are
+Define the payoff function
 
 $$
-    E_{S_H}(a_1)=0,
+u:\mathbb N\times\mathcal A\longrightarrow\mathbb R
 $$
 
+by
+
 $$
-    E_{S_H}(a_2)=\frac1H,
+u(s,a_1)=0,
 $$
 
 and
 
 $$
-    E_{S_H}(a_3)=\frac{1000}{H}.
+u(s,a_2)
+=
+\begin{cases}
+1,&s=0,\\
+0,&s\neq0,
+\end{cases}
 $$
 
-Since $H$ is infinite, both $1/H$ and $1000/H$ are positive infinitesimals. However,
+and
 
 $$
-    \frac1H<\frac{1000}{H}.
+u(s,a_3)
+=
+\begin{cases}
+1,&0\leq s\leq999,\\
+0,&s>999.
+\end{cases}
+$$
+
+Thus $a_1$ never gives a positive payoff, $a_2$ gives payoff $1$ precisely when $s=0$, and $a_3$ gives payoff $1$ precisely when
+
+$$
+s\in\{0,1,\ldots,999\}.
+$$
+
+Define the corresponding winning events by
+
+$$
+W_1=\varnothing,
+\qquad
+W_2=\{0\},
+\qquad
+W_3=\{0,1,\ldots,999\}.
+$$
+
+Then
+
+$$
+u(s,a_i)=\chi_{W_i}(s),
+$$
+
+where $\chi_{W_i}$ denotes the indicator function of $W_i$.
+
+Suppose first that we attempt to formulate this problem using an ordinary countably additive probability measure on $\mathbb N$.
+
+
+There is no countably additive probability measure $P$ on $\mathbb N$ which assigns the same probability to every singleton.
+
+
+
+\begin{proof}
+
+Suppose that such a probability measure exists. Since all singletons have the same probability, there is some $p\in[0,1]$ such that
+
+$$
+P(\{n\})=p
+$$
+
+for every $n\in\mathbb N$.
+
+If $p>0$, then for every $N\in\mathbb N$,
+
+$$
+P(\{0,1,\ldots,N\})
+=
+\sum_{n=0}^{N}P(\{n\})
+=
+(N+1)p.
+$$
+
+For sufficiently large $N$, we have $(N+1)p>1$, contradicting
+
+$$
+P(\mathbb N)=1.
 $$
 
 Therefore
 
 $$
-    E_{S_H}(a_1)
-    <
-    E_{S_H}(a_2)
-    <
-    E_{S_H}(a_3).
+p=0.
+$$
+
+But countable additivity gives
+
+$$
+P(\mathbb N)
+=
+P\left(\bigcup_{n\in\mathbb N}\{n\}\right)
+=
+\sum_{n\in\mathbb N}P(\{n\})
+=
+\sum_{n\in\mathbb N}0
+=
+0,
+$$
+
+contradicting
+
+$$
+P(\mathbb N)=1.
+$$
+
+Hence no such probability measure exists.
+\end{proof}
+
+In fact, for any countably additive probability measure $P$ on $\mathbb N$, every singleton may have probability zero only if the total probability is zero. Therefore the ordinary standard model cannot provide a uniform countably additive probability on $\mathbb N$.
+
+We therefore replace $\mathbb N$ by a hyperfinite initial segment.
+
+Let
+
+$$
+H\in{}^*\mathbb N\setminus\mathbb N
+$$
+
+be an infinite hypernatural number and define
+
+$$
+S_H=\{0,1,\ldots,H-1\}.
+$$
+
+The set $S_H$ is hyperfinite and has internal cardinality
+
+$$
+|S_H|=H.
+$$
+
+We equip $S_H$ with its internal uniform probability. For every internal subset $B\subseteq S_H$, define
+
+$$
+P_{S_H}(B)=\frac{|B|}{H}.
+$$
+
+In particular, for every $s\in S_H$,
+
+$$
+P_{S_H}(\{s\})
+=
+\frac{1}{H}.
+$$
+
+Because $H$ is an infinite hypernatural,
+
+$$
+H>n
+$$
+
+for every standard $n\in\mathbb N$. Consequently,
+
+$$
+0<\frac1H<\frac1n
+$$
+
+for every standard positive integer $n$. Hence
+
+$$
+\frac1H
+$$
+
+is a positive infinitesimal.
+
+We now extend the payoff function to $S_H\times\mathcal A$. Since $999$ is standard and
+
+$$
+H>999,
+$$
+
+we have
+
+$$
+\{0,1,\ldots,999\}\subseteq S_H.
+$$
+
+The three payoff functions are therefore
+
+$$
+u(\cdot,a_1)=0,
+$$
+
+$$
+u(s,a_2)=
+\begin{cases}
+1,&s=0,\\
+0,&s\neq0,
+\end{cases}
+$$
+
+and
+
+$$
+u(s,a_3)=
+\begin{cases}
+1,&0\leq s\leq999,\\
+0,&999<s<H.
+\end{cases}
+$$
+
+For an action $a\in\mathcal A$, its hyperfinite expected payoff is
+
+$$
+EU_H(a)
+=
+\mathbb E_{P_{S_H}}[u(\cdot,a)].
+$$
+
+Since $S_H$ is hyperfinite, the expectation is given by the hyperfinite sum
+
+$$
+EU_H(a)
+=
+\sum_{s=0}^{H-1}u(s,a)P_{S_H}(\{s\})
+=
+\frac1H\sum_{s=0}^{H-1}u(s,a).
+$$
+
+We now calculate the three expected payoffs separately.
+
+For $a_1$, we have
+
+$$
+u(s,a_1)=0
+$$
+
+for every $s\in S_H$. Therefore
+
+$$
+EU_H(a_1)
+=
+\frac1H\sum_{s=0}^{H-1}0
+=
+0.
+$$
+
+For $a_2$, the only state at which the payoff is $1$ is $s=0$. Hence
+
+$$
+\sum_{s=0}^{H-1}u(s,a_2)=1.
+$$
+
+Therefore
+
+$$
+EU_H(a_2)
+=
+\frac1H.
+$$
+
+Equivalently, since
+
+$$
+W_2=\{0\},
+$$
+
+we have
+
+$$
+EU_H(a_2)
+=
+P_{S_H}(W_2)
+=
+P_{S_H}(\{0\})
+=
+\frac1H.
+$$
+
+For $a_3$, the payoff is $1$ at exactly the $1000$ states
+
+$$
+0,1,\ldots,999.
+$$
+
+Thus
+
+$$
+\sum_{s=0}^{H-1}u(s,a_3)
+=
+1000,
+$$
+
+and therefore
+
+$$
+EU_H(a_3)
+=
+\frac{1000}{H}.
+$$
+
+Equivalently,
+
+$$
+W_3=\{0,1,\ldots,999\},
+$$
+
+so
+
+$$
+EU_H(a_3)
+=
+P_{S_H}(W_3)
+=
+\frac{|W_3|}{H}
+=
+\frac{1000}{H}.
+$$
+
+Consequently,
+
+$$
+EU_H(a_1)=0,
+\qquad
+EU_H(a_2)=\frac1H,
+\qquad
+EU_H(a_3)=\frac{1000}{H}.
+$$
+
+Since
+
+$$
+H>0,
+$$
+
+we have
+
+$$
+0<1<1000.
+$$
+
+Multiplication by the positive hyperreal number $1/H$ gives
+
+$$
+0<\frac1H<\frac{1000}{H}.
+$$
+
+Hence
+
+$$
+\boxed{
+EU_H(a_1)
+<
+EU_H(a_2)
+<
+EU_H(a_3).
+}
+$$
+
+Therefore
+
+$$
+\operatorname*{arg\,max}_{a\in\mathcal A}EU_H(a)
+=
+\{a_3\}.
+$$
+
+In particular,
+
+$$
+\boxed{a_3\text{ is the unique expected-payoff maximizing action.}}
 $$
 
 \begin{theorem}
-    In the hyperfinite decision problem above, the action $a_3$ has strictly greater expected payoff than both $a_1$ and $a_2$. Hence the optimal action with respect to expected payoff is
 
-    $$
-        \boxed{a_3}.
-    $$
+Let $H\in{}^*\mathbb N\setminus\mathbb N$ be infinite and let
+
+$$
+S_H=\{0,1,\ldots,H-1\}
+$$
+
+be equipped with its internal uniform probability
+
+$$
+P_{S_H}(B)=\frac{|B|}{H}.
+$$
+
+For the decision problem above,
+
+$$
+\operatorname*{arg\,max}_{a\in\mathcal A}EU_H(a)=\{a_3\}.
+$$
 
 \end{theorem}
 
 \begin{proof}
-    We have
 
-    $$
-        E_{S_H}(a_1)=0,
-        \qquad
-        E_{S_H}(a_2)=\frac1H,
-        \qquad
-        E_{S_H}(a_3)=\frac{1000}{H}.
-    $$
+The three expected payoffs are
 
-    Since $H>0$,
+$$
+EU_H(a_1)=0,
+\qquad
+EU_H(a_2)=\frac1H,
+\qquad
+EU_H(a_3)=\frac{1000}{H}.
+$$
 
-    $$
-        0<\frac1H<\frac{1000}{H}.
-    $$
+Since $H>0$,
 
-    Thus
+$$
+0<\frac1H<\frac{1000}{H}.
+$$
 
-    $$
-        E_{S_H}(a_3)>E_{S_H}(a_2)>E_{S_H}(a_1).
-    $$
+Therefore
 
-    Therefore $a_3$ uniquely maximizes the hyperfinite expected payoff.
+$$
+EU_H(a_3)>EU_H(a_2)>EU_H(a_1).
+$$
+
+Thus $a_3$ is the unique action maximizing expected payoff, and hence
+
+$$
+\operatorname*{arg\,max}_{a\in\mathcal A}EU_H(a)=\{a_3\}.
+$$
+
 \end{proof}
 
-The important point is that this conclusion cannot be recovered from the standard parts alone. Indeed,
+The crucial feature is that both
 
 $$
-    \operatorname{st}\bigl(E_{S_H}(a_1)\bigr)
-    =
-    \operatorname{st}\bigl(E_{S_H}(a_2)\bigr)
-    =
-    \operatorname{st}\bigl(E_{S_H}(a_3)\bigr)
-    =0.
+\frac1H
+\qquad\text{and}\qquad
+\frac{1000}{H}
 $$
 
-If we first take standard parts, all three actions appear to have the same expected payoff. The infinitesimal information distinguishing $a_2$ from $a_3$ has disappeared.
+are positive infinitesimals.
 
-Thus we obtain
-
-$$
-    \boxed{
-        E_{S_H}(a_2)=\frac1H
-        <
-        \frac{1000}{H}=E_{S_H}(a_3),
-        \qquad
-        \operatorname{st}(E_{S_H}(a_2))
-        =
-        \operatorname{st}(E_{S_H}(a_3))=0.
-    }
-$$
-
-This example shows why a nonstandard probability can contain information that is invisible to ordinary real-valued probability. The standard part records the macroscopic probability, whereas the hyperreal probability also records the infinitesimal scale.
-
-In particular, if the decision criterion is to maximize expected payoff in the hyperfinite probability space, then the decision is $a_3$. The conclusion does not follow from the standard asymptotic probabilities alone, because both winning events have asymptotic density zero.
-
-This phenomenon is related to the broader use of nonstandard probability in decision theory. In nonstandard statistical decision theory, infinitesimal probabilities can be used to represent events that have standard probability zero while still allowing different such events to be distinguished. The hyperfinite construction above gives a simple example of this principle.
-
-It is important, however, to distinguish the present construction from a standard uniform probability on $\mathbb N$. There is no countably additive uniform probability on $\mathbb N$. The decision $a_3$ is obtained only after choosing the hyperfinite model
+Indeed,
 
 $$
-    S_H=\{0,1,\ldots,H-1\}
+0<\frac1H<\frac1n
 $$
 
-and using its internal uniform probability.
+for every standard $n\in\mathbb N$, and similarly
 
-The next step is therefore to determine how such an internal probability can be converted into an ordinary countably additive probability measure. This leads naturally to the construction of Loeb probability.
+$$
+0<\frac{1000}{H}<\frac1n
+$$
+
+for every sufficiently large standard $n$. Thus
+
+$$
+\operatorname{st}\left(\frac1H\right)=0
+$$
+
+and
+
+$$
+\operatorname{st}\left(\frac{1000}{H}\right)=0.
+$$
+
+Consequently,
+
+$$
+\operatorname{st}(EU_H(a_1))
+=
+\operatorname{st}(EU_H(a_2))
+=
+\operatorname{st}(EU_H(a_3))
+=
+0.
+$$
+
+Therefore taking the standard part before maximizing destroys the distinction between $a_2$ and $a_3$.
+
+Indeed,
+
+$$
+EU_H(a_2)<EU_H(a_3),
+$$
+
+but
+
+$$
+\operatorname{st}(EU_H(a_2))
+=
+\operatorname{st}(EU_H(a_3)).
+$$
+
+Thus, in general,
+
+$$
+\operatorname*{arg\,max}_{a\in\mathcal A}EU_H(a)
+$$
+
+cannot be recovered from
+
+$$
+\operatorname{st}(EU_H(a))
+$$
+
+alone.
+
+In the present example,
+
+$$
+\boxed{
+\frac1H
+<
+\frac{1000}{H},
+\qquad
+\operatorname{st}\left(\frac1H\right)
+=
+\operatorname{st}\left(\frac{1000}{H}\right)
+=
+0.
+}
+$$
+
+This demonstrates the difference between equality of standard parts and equality of hyperreal probabilities. Two positive infinitesimals can have the same standard part while one is strictly larger than the other.
+
+There is also an important distinction between the internal probability $P_{S_H}$ and its standard part. The internal probability satisfies
+
+$$
+P_{S_H}(\{0\})=\frac1H
+$$
+
+and
+
+$$
+P_{S_H}(\{0,\ldots,999\})=\frac{1000}{H},
+$$
+
+so the two events are distinguished by $P_{S_H}$.
+
+However,
+
+$$
+\operatorname{st}\bigl(P_{S_H}(\{0\})\bigr)=0
+$$
+
+and
+
+$$
+\operatorname{st}\bigl(P_{S_H}(\{0,\ldots,999\})\bigr)=0.
+$$
+
+Thus their corresponding Loeb probabilities are both zero:
+
+$$
+P_L(\{0\})=0
+$$
+
+and
+
+$$
+P_L(\{0,\ldots,999\})=0.
+$$
+
+Hence the Loeb measure preserves the standard probability information but does not preserve the infinitesimal distinction between these two events.
+
+This point is important. The hyperfinite probability $P_{S_H}$ contains more information than its standard part. In particular, it records the infinitesimal scale of probabilities such as
+
+$$
+\frac1H,\quad \frac2H,\quad\ldots,\quad\frac{1000}{H},
+$$
+
+whereas the standard-part map sends all of these positive infinitesimals to $0$.
+
+The present construction should therefore not be interpreted as defining a uniform countably additive probability measure on $\mathbb N$. The probability $P_{S_H}$ is defined on the hyperfinite set
+
+$$
+S_H=\{0,1,\ldots,H-1\},
+$$
+
+not directly on $\mathbb N$. Moreover, the resulting infinitesimal probabilities depend on the chosen hyperfinite model.
+
+For example, the particular choice
+
+$$
+S_H=\{0,\ldots,H-1\}
+$$
+
+gives
+
+$$
+P_{S_H}(\{0\})=\frac1H
+$$
+
+and
+
+$$
+P_{S_H}(\{0,\ldots,999\})=\frac{1000}{H}.
+$$
+
+The ratio of these probabilities is exactly
+
+$$
+\frac{P_{S_H}(\{0,\ldots,999\})}
+{P_{S_H}(\{0\})}
+=
+1000.
+$$
+
+This ratio is precisely the information that disappears after taking standard parts:
+
+$$
+\frac{
+\operatorname{st}(P_{S_H}(\{0,\ldots,999\}))
+}{
+\operatorname{st}(P_{S_H}(\{0\}))
+}
+=
+\frac00,
+$$
+
+which is undefined.
+
+Thus the standard part operation is not an order-preserving representation of the relative sizes of positive infinitesimals. It preserves the macroscopic probability but can lose all information occurring at an infinitesimal scale.
+
+The example therefore gives the following hierarchy:
+
+$$
+P_{S_H}(\{0\})
+=
+\frac1H
+<
+\frac{1000}{H}
+=
+P_{S_H}(\{0,\ldots,999\}),
+$$
+
+while
+
+$$
+\operatorname{st}\bigl(P_{S_H}(\{0\})\bigr)
+=
+\operatorname{st}\bigl(P_{S_H}(\{0,\ldots,999\})\bigr)
+=
+0.
+$$
+
+Hence, if the decision criterion is to maximize the internal hyperfinite expected payoff, then
+
+$$
+\boxed{
+\operatorname*{arg\,max}_{a\in\mathcal A}EU_H(a)
+=
+\{a_3\}.
+}
+$$
+
+This conclusion uses the infinitesimal information contained in the internal probability $P_{S_H}$. It cannot be obtained by replacing the hyperfinite probabilities with their standard parts before performing the maximization.
+
+The construction illustrates a general principle of nonstandard probability: an internal probability can distinguish events having positive infinitesimal probabilities even though all such events have standard probability zero after taking standard parts.
+
+The passage from the internal probability $P_{S_H}$ to an ordinary countably additive probability is obtained by the Loeb construction. In the present example, the Loeb measure satisfies
+
+$$
+P_L(B)=\operatorname{st}(P_{S_H}(B))
+$$
+
+for internal sets $B\subseteq S_H$. Thus
+
+$$
+P_L(\{0\})=0
+$$
+
+and
+
+$$
+P_L(\{0,\ldots,999\})=0.
+$$
+
+Consequently, Loeb probability provides an ordinary countably additive measure, but the particular infinitesimal distinction used to choose $a_3$ has already disappeared when passing from $P_{S_H}$ to $P_L$.
+
+The hyperfinite model and the Loeb measure therefore play different roles: the internal probability $P_{S_H}$ retains infinitesimal information, while the Loeb measure extracts its standard, countably additive part.
 
 
 \section{Measure}
