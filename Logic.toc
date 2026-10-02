@@ -51,35 +51,34 @@
 \contentsline {section}{\numberline {12.4}fantacy Complex numbers``$\mathbb {C} (Ord)$''}{136}{section.12.4}%
 \contentsline {chapter}{\numberline {13}hyperreal numbers($ {}^*\mathbb {N} , {}^*\mathbb {Z}, {}^*\mathbb {Q} , {}^*\mathbb {R} $) }{139}{chapter.13}%
 \contentsline {section}{\numberline {13.1}Filters}{139}{section.13.1}%
-\contentsline {section}{\numberline {13.2}Ultrafilters}{140}{section.13.2}%
+\contentsline {section}{\numberline {13.2}Ultrafilters}{139}{section.13.2}%
 \contentsline {section}{\numberline {13.3}Nonprincipal Ultrafilters}{141}{section.13.3}%
-\contentsline {section}{\numberline {13.4}Definition of ${}^\ast \mathbb {N}$, ${}^\ast \mathbb {Z}$, ${}^\ast \mathbb {Q}$, ${}^\ast \mathbb {R}$ , and ${}^*\mathbb {R}_{Ord}$}{143}{section.13.4}%
-\contentsline {section}{\numberline {13.5}The Ultrapower Construction of the Hyperreals}{145}{section.13.5}%
-\contentsline {section}{\numberline {13.6}(Un)limited, Infinitesimal, and Appreciable Numbers}{149}{section.13.6}%
-\contentsline {section}{\numberline {13.7}Arithmetic of Hyperreals}{151}{section.13.7}%
-\contentsline {section}{\numberline {13.8}Halos, Galaxies, and Real Comparisons}{152}{section.13.8}%
-\contentsline {section}{\numberline {13.9}Standard Parts}{152}{section.13.9}%
-\contentsline {section}{\numberline {13.10}Shadows and Completeness}{154}{section.13.10}%
-\contentsline {chapter}{\numberline {14}New beginning for calculus }{155}{chapter.14}%
-\contentsline {section}{\numberline {14.1}Limits}{155}{section.14.1}%
-\contentsline {section}{\numberline {14.2}Continuity}{161}{section.14.2}%
-\contentsline {section}{\numberline {14.3}Derivatives}{163}{section.14.3}%
-\contentsline {section}{\numberline {14.4}Partial Derivatives}{163}{section.14.4}%
-\contentsline {section}{\numberline {14.5}Riemann Integral}{164}{section.14.5}%
-\contentsline {chapter}{\numberline {15}Well-Ordered Integral{\small (more powerful than Lebesgue Integral)\small }}{169}{chapter.15}%
-\contentsline {chapter}{\numberline {16}New beginning for Probability and Measeure theory}{171}{chapter.16}%
-\contentsline {section}{\numberline {16.1}Finite Approach}{171}{section.16.1}%
-\contentsline {section}{\numberline {16.2}Nonstandard Approach}{173}{section.16.2}%
-\contentsline {section}{\numberline {16.3}Countable Probability}{175}{section.16.3}%
-\contentsline {subsection}{\numberline {16.3.1}Infinitesimal Probabilities and the Random Natural Number}{177}{subsection.16.3.1}%
-\contentsline {section}{\numberline {16.4}Decision Theory}{179}{section.16.4}%
-\contentsline {subsection}{\numberline {16.4.1}The State Space}{180}{subsection.16.4.1}%
-\contentsline {subsection}{\numberline {16.4.2}The Action Space}{180}{subsection.16.4.2}%
-\contentsline {subsection}{\numberline {16.4.3}The Set of Consequences}{180}{subsection.16.4.3}%
-\contentsline {subsection}{\numberline {16.4.4}The Utility Function}{180}{subsection.16.4.4}%
-\contentsline {subsection}{\numberline {16.4.5}Probability on the State Space}{182}{subsection.16.4.5}%
-\contentsline {subsection}{\numberline {16.4.6}Expected Utility}{182}{subsection.16.4.6}%
-\contentsline {subsection}{\numberline {16.4.7}The Maximizing Action}{184}{subsection.16.4.7}%
-\contentsline {subsection}{\numberline {16.4.8}Formal Summary}{185}{subsection.16.4.8}%
-\contentsline {subsection}{\numberline {16.4.9}A Decision Problem with Infinitesimal Probabilities}{186}{subsection.16.4.9}%
-\contentsline {section}{\numberline {16.5}Measure}{196}{section.16.5}%
+\contentsline {section}{\numberline {13.4}Definition of ${}^\ast \mathbb {N}$, ${}^\ast \mathbb {Z}$, ${}^\ast \mathbb {Q}$, ${}^\ast \mathbb {R}$ , and ${}^*\mathbb {R}_{Ord}$}{142}{section.13.4}%
+\contentsline {section}{\numberline {13.5}The Ultrapower Construction of the Hyperreals}{144}{section.13.5}%
+\contentsline {section}{\numberline {13.6}(Un)limited, Infinitesimal, and Appreciable Numbers}{147}{section.13.6}%
+\contentsline {section}{\numberline {13.7}Arithmetic of Hyperreals}{148}{section.13.7}%
+\contentsline {section}{\numberline {13.8}Halos, Galaxies, and Real Comparisons}{149}{section.13.8}%
+\contentsline {section}{\numberline {13.9}Standard Parts}{150}{section.13.9}%
+\contentsline {chapter}{\numberline {14}New beginning for calculus }{153}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Limits}{153}{section.14.1}%
+\contentsline {section}{\numberline {14.2}Continuity}{159}{section.14.2}%
+\contentsline {section}{\numberline {14.3}Derivatives}{161}{section.14.3}%
+\contentsline {section}{\numberline {14.4}Partial Derivatives}{161}{section.14.4}%
+\contentsline {section}{\numberline {14.5}Riemann Integral}{162}{section.14.5}%
+\contentsline {chapter}{\numberline {15}Well-Ordered Integral{\small (more powerful than Lebesgue Integral)\small }}{167}{chapter.15}%
+\contentsline {chapter}{\numberline {16}New beginning for Probability and Measeure theory}{169}{chapter.16}%
+\contentsline {section}{\numberline {16.1}Finite Approach}{169}{section.16.1}%
+\contentsline {subsection}{\numberline {16.1.1}Expected Value in the Finite Approach}{171}{subsection.16.1.1}%
+\contentsline {section}{\numberline {16.2}Continuous Approach}{172}{section.16.2}%
+\contentsline {subsection}{\numberline {16.2.1}Expected Value in the Continuous Approach}{175}{subsection.16.2.1}%
+\contentsline {section}{\numberline {16.3}Nonstandard Approach}{184}{section.16.3}%
+\contentsline {section}{\numberline {16.4}Countable Probability}{186}{section.16.4}%
+\contentsline {section}{\numberline {16.5}Decision Theory}{188}{section.16.5}%
+\contentsline {subsection}{\numberline {16.5.1}The State Space}{188}{subsection.16.5.1}%
+\contentsline {subsection}{\numberline {16.5.2}The Action Space}{189}{subsection.16.5.2}%
+\contentsline {subsection}{\numberline {16.5.3}The Utility Function}{189}{subsection.16.5.3}%
+\contentsline {subsection}{\numberline {16.5.4}Probability on the State Space}{190}{subsection.16.5.4}%
+\contentsline {subsection}{\numberline {16.5.5}Expected Utility}{190}{subsection.16.5.5}%
+\contentsline {subsection}{\numberline {16.5.6}The Maximizing Action}{191}{subsection.16.5.6}%
+\contentsline {subsection}{\numberline {16.5.7}A Decision Problem with Infinitesimal Probabilities}{191}{subsection.16.5.7}%
+\contentsline {section}{\numberline {16.6}Measure}{194}{section.16.6}%

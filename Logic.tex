@@ -8511,16 +8511,13 @@ subsets'' of a set.
         \item $X\in\mathcal{F}$.
 
         \item If $A,B\in\mathcal{F}$, then
-
-              $$
+              $
                   A\cap B\in\mathcal{F}.
-              $$
-
+              $
         \item If $A\in\mathcal{F}$ and $A\subseteq B\subseteq X$, then
-
-              $$
+              $
                   B\in\mathcal{F}.
-              $$
+              $
 
     \end{enumerate}
 
@@ -8533,11 +8530,9 @@ set is also large.
 \begin{example}[Trivial Filter]
 
     For any set $X$,
-
-    $$
+    $
         \mathcal{F}=\{X\}
-    $$
-
+    $
     is a filter on $X$.
 
 \end{example}
@@ -8578,10 +8573,9 @@ Ultrafilters are maximal filters.
     A filter $\mathcal{U}$ on $X$ is called an \emph{ultrafilter} if it is maximal
     among filters; that is, whenever $\mathcal{F}$ is a filter on $X$ and
     $\mathcal{U}\subseteq\mathcal{F}$, then
-
-    $$
+    $
         \mathcal{F}=\mathcal{U}.
-    $$
+    $
 
 \end{definition}
 
@@ -8677,9 +8671,9 @@ mathematics; their existence usually requires the Axiom of Choice.
     Let $\mathcal{F}$ and $\mathcal{G}$ be filters on a set $X$.
 
     We say that $\mathcal{G}$ extends $\mathcal{F}$ if
-    \[
+    $
         \mathcal{F}\subseteq \mathcal{G}.
-    \]
+    $
 
     This means every set considered ``large'' by $\mathcal{F}$ is also considered
     ``large'' by $\mathcal{G}$.
@@ -8691,9 +8685,9 @@ mathematics; their existence usually requires the Axiom of Choice.
 
 In other words, if $\mathcal{F}$ is a filter on $X$, then there exists an
 ultrafilter $\mathcal{U}$ such that
-\[
+$
     \mathcal{F}\subseteq \mathcal{U}.
-\]
+$
 
 So every filter can be enlarged until it becomes maximal.
 \begin{example}
@@ -8703,9 +8697,9 @@ So every filter can be enlarged until it becomes maximal.
     \]
     This is the Fr\'echet filter. It is not an ultrafilter, because for the set of
     even numbers
-    \[
+    $
         E=\{0,2,4,6,\dots\},
-    \]
+    $
     neither $E\in\mathcal{F}$ nor $\mathbb{N}\setminus E\in\mathcal{F}$. By the
     Ultrafilter Lemma, there exists an ultrafilter $\mathcal{U}$ such that
     $\mathcal{F}\subseteq\mathcal{U}$. Since $\mathcal{U}$ is an ultrafilter,
@@ -8724,20 +8718,20 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
 
 \begin{theorem}[Ultrafilter Lemma]
     Let $\mathcal{F}$ be a filter on a set $X$. Then there exists an ultrafilter $\mathcal{U}$ on $X$ such that
-    \[
+    $
         \mathcal{F}\subseteq\mathcal{U}.
-    \]
+    $
 \end{theorem}
 
 \begin{proof}
     Let
-    \[
+    $
         \mathcal{P}=\{\mathcal{G}:\mathcal{G}\text{ is a filter on }X\text{ and }\mathcal{F}\subseteq\mathcal{G}\}.
-    \]
+    $
     We partially order $\mathcal{P}$ by inclusion. Let
     $\mathcal{C}\subseteq\mathcal{P}$ be a chain and define
     \[
-        \mathcal{H}=\bigcup_{\mathcal{G}\in\mathcal{C}}\mathcal{G}.
+        \mathcal{H} :=\bigcup_{\mathcal{G}\in\mathcal{C}}\mathcal{G}.
     \]
     Clearly $\emptyset\notin\mathcal{H}$ and $X\in\mathcal{H}$. If
     $A,B\in\mathcal{H}$, then $A\in\mathcal{G}_1$ and $B\in\mathcal{G}_2$ for some
@@ -8745,36 +8739,36 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
     one of $\mathcal{G}_1\subseteq\mathcal{G}_2$ or
     $\mathcal{G}_2\subseteq\mathcal{G}_1$ holds, so $A,B$ belong to the larger
     filter and hence
-    \[
+    $
         A\cap B\in\mathcal{H}.
-    \]
+    $
     If $A\in\mathcal{H}$ and $A\subseteq B\subseteq X$, then $A\in\mathcal{G}$ for
     some $\mathcal{G}\in\mathcal{C}$, and since $\mathcal{G}$ is a filter,
     $B\in\mathcal{G}\subseteq\mathcal{H}$. Thus $\mathcal{H}$ is a filter.
     Moreover,
-    \[
+    $
         \mathcal{F}\subseteq\mathcal{H},
-    \]
+    $
     so $\mathcal{H}\in\mathcal{P}$. Therefore every chain in $\mathcal{P}$ has an
     upper bound, and by Zorn's Lemma, $\mathcal{P}$ has a maximal element, say
     $\mathcal{U}$.
 
     We claim that $\mathcal{U}$ is an ultrafilter. Suppose
     $\mathcal{U}\subseteq\mathcal{V}$, where $\mathcal{V}$ is a filter on $X$. Then
-    \[
+    $
         \mathcal{F}\subseteq\mathcal{U}\subseteq\mathcal{V},
-    \]
+    $
     so $\mathcal{V}\in\mathcal{P}$. By the maximality of $\mathcal{U}$,
-    \[
+    $
         \mathcal{V}=\mathcal{U}.
-    \]
+    $
     Therefore $\mathcal{U}$ is an ultrafilter extending $\mathcal{F}$.
 \end{proof}
 \begin{theorem}
     Let $\mathcal{U}$ be a nonprincipal ultrafilter on $\mathbb{N}$. Then
-    \[
+    $
         \mathcal{F}_{\mathrm{Fr}}\subseteq\mathcal{U}.
-    \]
+    $
     That is, every cofinite subset of $\mathbb{N}$ belongs to $\mathcal{U}$.
 \end{theorem}
 
@@ -8789,15 +8783,15 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
     \]
     holds. Hence $\mathbb{N}\setminus A\in\mathcal{U}$. Thus $\mathcal{U}$ contains
     a finite set, say
-    \[
+    $
         F=\{n_1,\ldots,n_k\}\in\mathcal{U}.
-    \]
+    $
 
     Suppose that $\{n_i\}\notin\mathcal{U}$ for every $i$. Then, since
     $\mathcal{U}$ is an ultrafilter,
-    \[
+    $
         \mathbb{N}\setminus\{n_i\}\in\mathcal{U}
-    \]
+    $
     for every $i$. By closure under finite intersections,
     \[
         \mathbb{N}\setminus F
@@ -8806,41 +8800,41 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
         \in\mathcal{U}.
     \]
     Since also $F\in\mathcal{U}$, we obtain
-    \[
+    $
         F\cap(\mathbb{N}\setminus F)=\emptyset\in\mathcal{U},
-    \]
+    $
     a contradiction. Therefore $\{n_i\}\in\mathcal{U}$ for some $i$, so
     $\mathcal{U}$ is principal, contradicting our assumption.
 
     Hence $A\in\mathcal{U}$. Since $A$ was arbitrary,
-    \[
+    $
         \mathcal{F}_{\mathrm{Fr}}\subseteq\mathcal{U}.
-    \]
+    $
 \end{proof}
 
 \section{Definition of ${}^\ast\mathbb{N}$, ${}^\ast\mathbb{Z}$, ${}^\ast\mathbb{Q}$,  ${}^\ast\mathbb{R}$ , and ${}^*\mathbb{R}_{Ord}$}
 
 \begin{definition}[Ultrapower Construction]
     Let $X$ be a set and let $\mathcal{U}$ be a nonprincipal ultrafilter on $\omega$. Consider the set
-    \[
+    $
         X^\omega
-    \]
+    $
     of all functions $a:\omega\to X$. We usually write such a function as
-    \[
+    $
         a=(a_i)_{i\in\omega},
-    \]
+    $
     where $a_i\in X$ for every $i\in\omega$.
 \end{definition}
 
 \begin{definition}
     Define a relation $\sim$ on $X^\omega$ by
-    \[
+    $
         a\sim b
-    \]
+    $
     if
-    \[
+    $
         \{i\in\omega:a_i=b_i\}\in\mathcal{U}.
-    \]
+    $
     In words, two sequences are equivalent if they agree on a set of indices
     belonging to the ultrafilter.
 \end{definition}
@@ -8884,9 +8878,9 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
 
 \begin{definition}
     The quotient
-    \[
+    $
         X^\omega/\sim
-    \]
+    $
     is called the \emph{ultrapower} of $X$ modulo $\mathcal{U}$. The equivalence
     class of $a\in X^\omega$ is denoted by $[a]$.
 \end{definition}
@@ -8937,13 +8931,13 @@ $[a],[b]\in{}^\ast\mathbb{R}$, then
     [a]\cdot[b]=[(a_ib_i)_{i\in\omega}].
 \]
 Similarly, the order relation is defined by
-\[
+$
     [a]<[b]
-\]
+$
 if
-\[
+$
     \{i\in\omega:a_i<b_i\}\in\mathcal{U}.
-\]
+$
 
 \begin{theorem}
     The standard structures $\mathbb{N}$, $\mathbb{Z}$, $\mathbb{Q}$, and $\mathbb{R}$ embed into ${}^\ast\mathbb{N}$, ${}^\ast\mathbb{Z}$, ${}^\ast\mathbb{Q}$, and ${}^\ast\mathbb{R}$, respectively.
@@ -8966,9 +8960,9 @@ if
 
 \begin{example}
     Define $a_i=i$ for every $i\in\omega$. Then
-    \[
+    $
         [a]\in{}^\ast\mathbb{N}
-    \]
+    $
     is larger than every standard natural number. Indeed, for every
     $n\in\mathbb{N}$,
     \[
@@ -8977,9 +8971,9 @@ if
         \{i\in\omega:n<i\}
     \]
     is cofinite, hence belongs to $\mathcal{U}$. Therefore
-    \[
+    $
         n<[a].
-    \]
+    $
 \end{example}
 \section{The Ultrapower Construction of the Hyperreals}
 
@@ -8997,10 +8991,9 @@ the statement, we assign the set of indices at which it is true.
 
 Let \(\mathcal F\) be a free ultrafilter on \(\mathbb N\). We define \(r\sim
 s\) if and only if
-
-$$
+$
     \llbracket r=s\rrbracket\in\mathcal F.
-$$
+$
 
 In this case we say that \(r=s\) holds \textbf{almost everywhere modulo
     \(\mathcal F\)}.
@@ -9140,11 +9133,9 @@ $$
 \begin{theorem}
 
     The structure
-
-    $$
+    $
         ({}^\ast\mathbb R,+,\cdot,<)
-    $$
-
+    $
     is an ordered field with zero \([0]\) and unity \([1]\).
 
 \end{theorem}
@@ -9186,10 +9177,9 @@ $$
 
     belongs to \(\mathcal F\). Hence the order on \({}^\ast\mathbb R\) is linear.
     Therefore
-
-    $$
+    $
         ({}^\ast\mathbb R,+,\cdot,<)
-    $$
+    $
 
     is an ordered field.
 
@@ -9199,26 +9189,23 @@ $$
 
     We identify every real number \(r\in\mathbb R\) with the equivalence class of
     the constant sequence \((r,r,r,\ldots)\). Thus
-
-    $$
+    $
         r=[(r,r,r,\ldots)].
-    $$
-
+    $
     Under this identification,
-
-    $$
+    $
         \mathbb R\subseteq{}^\ast\mathbb R.
-    $$
+    $
 
 \end{definition}
 
 For example, consider
 
 $$
-    \varepsilon=
+    \epsilon=
     \left[
         \left(
-        1,\frac12,\frac13,\frac14,\ldots
+        0,1,\frac12,\frac13,\frac14,\ldots
         \right)
         \right].
 $$
@@ -9233,11 +9220,10 @@ $$
 $$
 
 satisfies
-
-$$
+$
     \omega>n
     \qquad\forall n\in\mathbb N.
-$$
+$
 
 Therefore \(\omega\) is a positive infinite hyperreal number.
 
@@ -9245,11 +9231,9 @@ Therefore \(\omega\) is a positive infinite hyperreal number.
 
     Let \(f:A\to\mathbb R\), where \(A\subseteq\mathbb R\). The \textbf{Nonstandard
         Extension} of \(f\) is the function
-
-    $$
+    $
         {}^\ast f:{}^\ast A\to{}^\ast\mathbb R
-    $$
-
+    $
     defined by
 
     $$
@@ -9257,19 +9241,16 @@ Therefore \(\omega\) is a positive infinite hyperreal number.
     $$
 
     where
-
-    $$
+    $
         {}^\ast A=\{[x_n]:x_n\in A\}.
-    $$
+    $
 
 \end{definition}
 
 The definition is well-defined. If \([x_n]=[y_n]\), then
-
-$$
+$
     \{n\in\mathbb N:x_n=y_n\}\in\mathcal F.
-$$
-
+$
 Therefore
 
 $$
@@ -9280,11 +9261,9 @@ so \([f(x_n)]=[f(y_n)]\). Thus the value of \({}^\ast f([x_n])\) does not
 depend on the representative chosen for \([x_n]\).
 
 Moreover, if \(x\in A\) is standard, then
-
-$$
+$
     {}^\ast f(x)=f(x).
-$$
-
+$
 Indeed,
 
 $$
@@ -9298,16 +9277,13 @@ Therefore \({}^\ast f\) is genuinely an extension of \(f\).
 The Almost-All Criterion is the fundamental reason why this construction allows
 ordinary statements about real numbers to be extended to nonstandard numbers.
 For example, if \(f(x)=x^2\) and \(\omega=[(1,2,3,\ldots)]\), then
-
-$$
+$
     {}^\ast f(\omega)=[(1,4,9,\ldots)].
-$$
-
+$
 Thus expressions such as
-
-$$
+$
     {}^\ast f(a+\varepsilon)
-$$
+$
 
 are well-defined even when \(a+\varepsilon\notin\mathbb R\).
 
@@ -9382,33 +9358,13 @@ $$
     \qquad\forall n\in\mathbb N.
 $$
 
-For example,
-
-$$
-    \varepsilon=
-    \left[
-        \left(
-        1,\frac12,\frac13,\ldots
-        \right)
-        \right]
-$$
-
-is a positive infinitesimal, while
-
-$$
-    \omega=[(1,2,3,\ldots)]
-$$
-
-is a positive unlimited hyperreal number.
 
 We denote the set of unlimited hypernaturals by
-
-$$
+$
     {}^\ast\mathbb N_\infty
         =
         {}^\ast\mathbb N-\mathbb N.
-$$
-
+$
 Similarly, we denote the sets of positive and negative unlimited hyperreals by
 
 $$
@@ -9615,34 +9571,34 @@ Let \(x,y\in{}^\ast\mathbb R\).
 
     Let $$ A=\{r\in\mathbb R:r<b\}. $$ Since $b$ is limited, there exist real
     numbers $r,s$ such that $r<b<s$. Therefore $A$ is nonempty and bounded above by
-    $s$. By the completeness of $\mathbb R$, $A$ has a least upper bound $$ c=\sup
-        A\in\mathbb R. $$
+    $s$. By the completeness of $\mathbb R$, $A$ has a least upper bound $ c=\sup
+        A\in\mathbb R. $
 
     We show that $b\approx c$. Let $\epsilon>0$ be any positive real number. Since
-    $c$ is an upper bound of $A$, we cannot have $c+\epsilon\in A$. Therefore $$
-        b\leq c+\epsilon. $$ On the other hand, $c-\epsilon$ cannot be an upper bound
+    $c$ is an upper bound of $A$, we cannot have $c+\epsilon\in A$. Therefore $
+        b\leq c+\epsilon. $ On the other hand, $c-\epsilon$ cannot be an upper bound
     of $A$, since $c$ is the least upper bound. Hence there exists some $a\in A$
-    such that $c-\epsilon<a<b$. Therefore $$ c-\epsilon<b. $$ Thus $$
-        c-\epsilon<b\leq c+\epsilon, $$ and consequently $$ |b-c|\leq\epsilon. $$ Since
-    this holds for every positive real $\epsilon$, we have $$ b\approx c. $$
+    such that $c-\epsilon<a<b$. Therefore $ c-\epsilon<b. $ Thus $
+        c-\epsilon<b\leq c+\epsilon, $ and consequently $ |b-c|\leq\epsilon. $ Since
+    this holds for every positive real $\epsilon$, we have $ b\approx c. $
 
     It remains to prove uniqueness. Suppose $b\approx c'$ for some $c'\in\mathbb
-        R$. Since also $b\approx c$, we obtain $$ c\approx c'. $$ But $c,c'\in\mathbb
-        R$, and the only real infinitesimal is $0$. Hence $$ c=c'. $$ Therefore there
+        R$. Since also $b\approx c$, we obtain $ c\approx c'. $ But $c,c'\in\mathbb
+        R$, and the only real infinitesimal is $0$. Hence $ c=c'. $ Therefore there
     exists exactly one real number infinitely close to $b$. We define this number
-    to be $$ \operatorname{st}(b)=c. $$
+    to be $ \operatorname{st}(b)=c. $
 
 \end{proof}
 
 \begin{theorem}
 
     Let $b,c$ be limited hyperreal numbers and let $n\in\mathbb N$. Then $$
-        \operatorname{st}(b\pm c)=\operatorname{st}(b)\pm\operatorname{st}(c), $$ $$
+        \operatorname{st}(b\pm c)=\operatorname{st}(b)\pm\operatorname{st}(c),
         \operatorname{st}(bc)=\operatorname{st}(b)\operatorname{st}(c), $$ and $$
         \operatorname{st}\left(\frac
         bc\right)=\frac{\operatorname{st}(b)}{\operatorname{st}(c)} \qquad\text{if
         }\operatorname{st}(c)\neq0. $$ Also, $$
-        \operatorname{st}(b^n)=\operatorname{st}(b)^n, $$ $$
+        \operatorname{st}(b^n)=\operatorname{st}(b)^n,
         \operatorname{st}(|b|)=|\operatorname{st}(b)|, $$ and, if $b\geq0$, $$
         \operatorname{st}(\sqrt b)=\sqrt{\operatorname{st}(b)}. $$ Furthermore, $$
         b\leq c\quad \to\quad\operatorname{st}(b)\leq\operatorname{st}(c). $$
@@ -9675,26 +9631,13 @@ infinitesimals is isomorphic to the real number field.
 
 \begin{theorem}
 
-    The quotient ring $$ \mathcal L/\mathcal I $$ is isomorphic to $\mathbb R$ by
-    the correspondence $$ \operatorname{hal}(b)\longmapsto\operatorname{st}(b). $$
-    In particular, $$ \mathcal I $$ is a maximal ideal of the ring $\mathcal L$.
+    The quotient ring $ \mathcal L/\mathcal I $ is isomorphic to $\mathbb R$ by
+    the correspondence $ \operatorname{hal}(b)\longmapsto\operatorname{st}(b). $
+    In particular, $ \mathcal I $ is a maximal ideal of the ring $\mathcal L$.
 
 \end{theorem}
 
-\section{Shadows and Completeness}
 
-\begin{lemma}
-
-    Every limited $x\in{}^\ast\mathbb R$ is infinitely close to a unique real
-    number.
-
-\end{lemma}
-
-\begin{proof}
-
-    This follows from the Standard Part Theorem.
-
-\end{proof}
 
 \chapter{New beginning for calculus }
 \section{Limits}
@@ -10815,11 +10758,9 @@ Thus, the probability of an event is the ratio between the number of favorable o
 
 \begin{example}
     Consider tossing a fair coin. Let
-
-    $$
+    $
         S=\{H,T\}.
-    $$
-
+    $
     Then $P_S({H})=P_S({T})=\frac12$. If $A={H}$ is the event of obtaining heads, then
 
     $$
@@ -10876,17 +10817,13 @@ The uniform probability space is the special case in which $p(s)=1/|S|$ for ever
 
 \begin{example}
     Suppose
-
-    $$
+    $
         S=\{1,2,3,4,5,6\}
-    $$
-
+    $
     is the set of possible outcomes of a die. For a fair die, $p(s)=1/6$ for every $s\in S$. Hence, if
-
-    $$
+    $
         A=\{2,4,6\},
-    $$
-
+    $
     then
 
     $$
@@ -10896,6 +10833,1195 @@ The uniform probability space is the special case in which $p(s)=1/|S|$ for ever
     Thus the probability of obtaining an even number is $1/2$.
 \end{example}
 
+\subsection{Expected Value in the Finite Approach}
+
+Probability allows us not only to assign probabilities to events, but also to describe the average value of a random outcome. This leads to the notion of expected value.
+
+\begin{definition}[Random Variable]
+
+Let $(S,P_S)$ be a finite probability space. A \textbf{**random variable**} is a function
+
+$$
+X:S\to\mathbb R.
+$$
+
+\end{definition}
+
+\begin{definition}[Expected Value]
+
+Let $(S,P_S)$ be a finite probability space and let $X:S\to\mathbb R$ be a random variable. The \textbf{**expected value**} of $X$ is
+
+$$
+\mathbb E_{P_S}[X]
+=
+\sum_{s\in S}X(s)P_S(\{s\}).
+$$
+
+\end{definition}
+
+Thus, the expected value is a weighted average of the possible values of $X$, where the weight of each outcome is its probability.
+
+For a uniform finite probability space, we have
+
+$$
+P_S(\{s\})=\frac1{|S|},
+$$
+
+and therefore
+
+$$
+\mathbb E_{P_S}[X]
+=
+\frac1{|S|}
+\sum_{s\in S}X(s).
+$$
+
+\begin{example}
+
+Consider a fair six-sided die. Let
+
+$$
+S=\{1,2,3,4,5,6\}
+$$
+
+and define $X(s)=s$. Since every outcome has probability $1/6$,
+
+$$
+\mathbb E_{P_S}[X]
+=
+\frac16(1+2+3+4+5+6)
+=
+\frac{21}{6}
+=
+\frac72.
+$$
+
+Thus the expected value of the result of a fair die is $7/2$.
+\end{example}
+
+\begin{example}
+
+Suppose a game has three possible outcomes with payoffs
+
+$$
+X(s_1)=0,\qquad X(s_2)=10,\qquad X(s_3)=20,
+$$
+
+and suppose
+
+$$
+P_S(\{s_1\})=\frac12,\qquad
+P_S(\{s_2\})=\frac13,\qquad
+P_S(\{s_3\})=\frac16.
+$$
+
+Then
+
+$$
+\mathbb E_{P_S}[X]
+=
+0\cdot\frac12
++
+10\cdot\frac13
++
+20\cdot\frac16
+=
+\frac{20}{3}.
+$$
+
+Thus the expected payoff is $20/3$.
+\end{example}
+
+
+
+\section{Continuous Approach}
+
+The finite approach is based on counting the elements of a finite set. For continuous spaces, however, counting is no longer an appropriate notion of size. Instead, we use a measure.
+
+\begin{definition}[Measure]
+
+Let $S$ be a set and let $\mathcal F\subseteq\mathcal P(S)$ be a $\sigma$-algebra. A \textbf{**measure**} on $(S,\mathcal F)$ is a function
+
+$$
+\mu:\mathcal F\to[0,\infty]
+$$
+
+such that $\mu(\varnothing)=0$ and, for every sequence $(A_n)_{n\in\mathbb N}$ of pairwise disjoint sets in $\mathcal F$,
+
+$$
+\mu\left(\bigcup_{n=0}^{\infty}A_n\right)
+=
+\sum_{n=0}^{\infty}\mu(A_n).
+$$
+
+\end{definition}
+
+
+
+The most important measure on $\mathbb R$ for probability theory is the Lebesgue measure, denoted by $\lambda$. For an interval,
+
+$$
+\lambda([a,b])=b-a.
+$$
+
+We can normalize the Lebesgue measure on a finite interval to obtain a probability measure.
+
+
+\begin{definition}[Probability Measure]
+
+Let $(S,\mathcal{F})$ be a measurable space. A \textbf{**probability measure**} on $(S,\mathcal{F})$ is a measure $P$ satisfying
+
+$$
+P(S)=1.
+$$
+
+The triple $(S,\mathcal{F},P)$ is called a \textbf{**probability space**}.
+\end{definition}
+
+In the finite case, the uniform probability of an event $A$ is obtained by dividing its cardinality by the cardinality of the whole space. In a continuous space, cardinality is no longer an appropriate notion of size. Instead, we use a measure.
+
+For example, consider the interval $[a,b]$. Its natural size is its length,
+
+$$
+\mu([a,b])=b-a.
+$$
+
+Normalizing this measure gives the uniform probability on $[a,b]$.
+
+\begin{definition}[Uniform Probability on an Interval]
+
+Let $a<b$ and let $\mathcal F$ be the collection of Lebesgue measurable subsets of $[a,b]$. Define
+
+$$
+P_S(A)=\frac{\lambda(A)}{b-a}
+$$
+
+for every $A\in\mathcal F$, where $S=[a,b]$. We call $P_S$ the \textbf{**uniform probability**} on $[a,b]$.
+\end{definition}
+
+We first verify that this is indeed a probability measure.
+
+\begin{theorem}
+
+Let $S=[a,b]$ with $a<b$. The function
+
+$$
+P_S(A)=\frac{\lambda(A)}{b-a}
+$$
+
+is a probability measure on the measurable subsets of $S$.
+
+\end{theorem}
+
+\begin{proof}
+
+Since $\lambda(\varnothing)=0$,
+
+$$
+P_S(\varnothing)=\frac{\lambda(\varnothing)}{b-a}=0.
+$$
+
+Also,
+
+$$
+P_S(S)=\frac{\lambda([a,b])}{b-a}
+=\frac{b-a}{b-a}=1.
+$$
+
+Now let $(A_n)_{n\in\mathbb N}$ be a sequence of pairwise disjoint measurable subsets of $S$. Since Lebesgue measure is countably additive,
+
+$$
+\lambda\left(\bigcup_{n=0}^{\infty}A_n\right)
+=
+\sum_{n=0}^{\infty}\lambda(A_n).
+$$
+
+Therefore,
+
+$$
+P_S\left(\bigcup_{n=0}^{\infty}A_n\right)
+=
+\frac{1}{b-a}
+\sum_{n=0}^{\infty}\lambda(A_n)
+=
+\sum_{n=0}^{\infty}
+\frac{\lambda(A_n)}{b-a}
+=
+\sum_{n=0}^{\infty}P_S(A_n).
+$$
+
+Hence $P_S$ is countably additive and satisfies $P_S(S)=1$. Thus it is a probability measure.
+\end{proof}
+
+The formula
+
+$$
+P_S(A)=\frac{\lambda(A)}{b-a}
+$$
+
+is therefore the continuous analogue of the finite formula
+
+$$
+P_S(A)=\frac{|A|}{|S|}.
+$$
+
+In the finite case, cardinality measures the size of a set; in the continuous case, Lebesgue measure plays the same role.
+
+\begin{example}
+
+Choose a real number uniformly from $[0,1]$. What is the probability that the chosen number belongs to $[0,\frac14]$?
+
+Here $S=[0,1]$ and $A=[0,\frac14]$. Therefore
+
+$$
+P_S(A)
+=
+\frac{\lambda([0,\frac14])}{\lambda([0,1])}
+=
+\frac{\frac14}{1}
+=
+\frac14.
+$$
+
+\end{example}
+
+\begin{example}
+
+Choose a real number uniformly from $[0,10]$. What is the probability that the chosen number belongs to $[3,7]$?
+
+Since
+
+$$
+\lambda([3,7])=7-3=4
+$$
+
+and
+
+$$
+\lambda([0,10])=10,
+$$
+
+we obtain
+
+$$
+P_S([3,7])
+=
+\frac{4}{10}
+=
+\frac25.
+$$
+
+\end{example}
+
+\begin{example}
+
+Choose a real number uniformly from $[0,1]$. What is the probability that the chosen number is greater than $\frac12$?
+
+Let
+
+$$
+A=\left(\frac12,1\right].
+$$
+
+Then
+
+$$
+P_S(A)
+=
+\frac{\lambda((\frac12,1])}{\lambda([0,1])}
+=
+\frac{\frac12}{1}
+=
+\frac12.
+$$
+
+Notice that whether the endpoint $\frac12$ is included does not affect the probability, since
+
+$$
+P_S(\{\tfrac12\})=0.
+$$
+
+\end{example}
+
+\begin{example}
+
+Choose a real number uniformly from $[0,1]$. What is the probability that the chosen number is rational?
+
+Let
+
+$$
+A=\mathbb Q\cap[0,1].
+$$
+
+The set $A$ is countable and therefore has Lebesgue measure zero. Hence
+
+$$
+P_S(A)
+=
+\frac{\lambda(\mathbb Q\cap[0,1])}{\lambda([0,1])}
+=
+0.
+$$
+
+Thus a randomly chosen real number from $[0,1]$ is rational with probability $0$.
+\end{example}
+
+\begin{example}
+
+Choose a real number uniformly from $[0,1]$. What is the probability that the chosen number belongs to
+
+$$
+A=[0,\tfrac13]\cup[\tfrac23,1]?
+$$
+
+The two intervals are disjoint except possibly at endpoints, which have measure zero. Therefore
+
+$$
+\lambda(A)
+=
+\frac13+\frac13
+=
+\frac23.
+$$
+
+Consequently,
+
+$$
+P_S(A)=\frac23.
+$$
+
+\end{example}
+
+
+
+\subsection{Expected Value in the Continuous Approach}
+
+The same idea extends to continuous probability spaces. Instead of summing over individual outcomes, we integrate with respect to the probability measure.
+
+\begin{definition}[Expected Value in a Continuous Probability Space]
+
+Let $(S,\mathcal F,P)$ be a probability space and let $X:S\to\mathbb R$ be an integrable random variable. The \textbf{**expected value**} of $X$ is
+
+$$
+\mathbb E_{P_S}[X]
+=
+\int_S X\,dP.
+$$
+
+\end{definition}
+
+
+
+
+\begin{theorem}
+
+Let $X:S\to\mathbb R$ be integrable with respect to Lebesgue measure. Then
+
+$$
+\mathbb E_{P_S}[X]
+=
+\frac{1}{b-a}\int_a^b X(x)\,dx.
+$$
+
+\end{theorem}
+
+\begin{proof}
+
+We first prove the result for nonnegative simple functions. Let
+
+$$
+\phi=\sum_{i=1}^n c_i \chi_{A_i},
+$$
+
+where the $A_i$ are pairwise disjoint measurable subsets of $S$ and $c_i\geq0$. By the definition of integration of a simple function,
+
+$$
+\int_S\phi\,dP_S
+=
+\sum_{i=1}^n c_iP_S(A_i).
+$$
+
+Since
+
+$$
+P_S(A_i)=\frac{\lambda(A_i)}{b-a},
+$$
+
+we obtain
+
+$$
+\int_S\phi\,dP_S
+=
+\frac{1}{b-a}\sum_{i=1}^n c_i\lambda(A_i)
+=
+\frac{1}{b-a}\int_S\phi\,d\lambda.
+$$
+
+Now let $X:S\to[0,\infty]$ be measurable. There exists a sequence of nonnegative simple functions $(\phi_n)$ such that $\phi_n\uparrow X$. By the Monotone Convergence Theorem,
+
+$$
+\int_S X\,dP_S
+=
+\lim_{n\to\infty}\int_S\phi_n\,dP_S.
+$$
+
+Using the result for simple functions,
+
+$$
+\begin{aligned}
+\int_S X\,dP_S
+&=
+\lim_{n\to\infty}
+\frac{1}{b-a}\int_S\phi_n\,d\lambda\\
+&=
+\frac{1}{b-a}\int_S X\,d\lambda,
+\end{aligned}
+$$
+
+where the last equality follows again from the Monotone Convergence Theorem.
+
+Finally, let $X:S\to\mathbb R$ be integrable. Write
+
+$$
+X=X^+-X^-,
+$$
+
+where
+
+$$
+X^+=\max\{X,0\},
+\qquad
+X^-=\max\{-X,0\}.
+$$
+
+Since $X$ is integrable, both $X^+$ and $X^-$ are integrable. Applying the result above to each of them gives
+
+$$
+\begin{aligned}
+\int_S X\,dP_S
+&=
+\int_S X^+\,dP_S-\int_S X^-\,dP_S\\
+&=
+\frac{1}{b-a}
+\left(
+\int_S X^+\,d\lambda
+-
+\int_S X^-\,d\lambda
+\right)\\
+&=
+\frac{1}{b-a}\int_S X\,d\lambda.
+\end{aligned}
+$$
+
+Since $S=[a,b]$,
+
+$$
+\int_S X\,d\lambda
+=
+\int_a^b X(x)\,dx.
+$$
+
+Therefore,
+
+$$
+\boxed{
+\mathbb E_{P_S}[X]
+=
+\int_S X\,dP_S
+=
+\frac{1}{b-a}\int_a^b X(x)\,dx
+}.
+$$
+
+\end{proof}
+
+\begin{example}
+
+Choose a real number $X$ uniformly from $[0,1]$. Then
+
+$$
+\mathbb E_{P_S}[X]
+=
+\int_0^1x\,dx
+=
+\frac12.
+$$
+
+Thus the expected value of a uniformly chosen number from $[0,1]$ is $1/2$.
+\end{example}
+
+\begin{example}
+
+Choose a real number $X$ uniformly from $[0,10]$. Then
+
+$$
+\mathbb E_{P_S}[X]
+=
+\frac1{10}\int_0^{10}x\,dx
+=
+\frac1{10}\cdot\frac{10^2}{2}
+=
+5.
+$$
+
+Thus the expected value is the midpoint of the interval.
+\end{example}
+
+\begin{example}
+
+Let $X$ be uniformly distributed on $[0,1]$ and consider the random variable
+
+$$
+Y=X^2.
+$$
+
+Then
+
+$$
+\mathbb E[Y]
+=
+\int_0^1x^2\,dx
+=
+\frac13.
+$$
+
+Notice that
+
+$$
+\mathbb E[X^2]\neq(\mathbb E_{P_S}[X])^2,
+$$
+
+since
+
+$$
+\frac13\neq\frac14.
+$$
+
+\end{example}
+
+\begin{example}
+
+Let $X$ be uniformly distributed on $[a,b]$. Then
+
+$$
+\mathbb E_{P_S}[X]
+=
+\frac1{b-a}\int_a^b x\,dx
+=
+\frac1{b-a}
+\left[\frac{x^2}{2}\right]_a^b.
+$$
+
+Hence
+
+$$
+\mathbb E_{P_S}[X]
+=
+\frac{b^2-a^2}{2(b-a)}
+=
+\frac{a+b}{2}.
+$$
+
+Thus, for a uniform distribution on an interval, the expected value is its midpoint.
+\end{example}
+
+\begin{example}
+
+Let $S=[0,1]$ and define the random variable
+
+$$
+X:S\to\mathbb R,
+\qquad
+X(x)=x.
+$$
+
+Then, by the previous proposition,
+
+$$
+\mathbb E_{P_S}[X]
+=
+\int_0^1x\,dx
+=
+\frac12.
+$$
+
+Thus the expected value of the coordinate function $X(x)=x$ on $[0,1]$ is $1/2$.
+
+\end{example}
+
+\begin{example}
+
+Let $S=[0,10]$ and define
+
+$$
+X:S\to\mathbb R,
+\qquad
+X(x)=x.
+$$
+
+By the previous proposition,
+
+$$
+\mathbb E_{P_S}[X]
+=
+\frac1{10}\int_0^{10}x\,dx
+=
+\frac1{10}\cdot\frac{10^2}{2}
+=
+5.
+$$
+
+Thus the expected value of the coordinate function on $[0,10]$ is the midpoint of the interval.
+
+\end{example}
+
+\begin{example}
+
+Let $S=[0,1]$ and define
+
+$$
+X:S\to\mathbb R,
+\qquad
+X(x)=x^2.
+$$
+
+Then
+
+$$
+\mathbb E_{P_S}[X]
+=
+\int_0^1x^2\,dx
+=
+\frac13.
+$$
+
+On the other hand, if $Y:S\to\mathbb R$ is defined by $Y(x)=x$, then
+
+$$
+\mathbb E_{P_S}[Y]=\frac12.
+$$
+
+Consequently,
+
+$$
+\mathbb E_{P_S}[X]
+=
+\frac13
+\neq
+\frac14
+=
+\left(\mathbb E_{P_S}[Y]\right)^2.
+$$
+
+This illustrates that, in general,
+
+$$
+\mathbb E[X^2]\neq(\mathbb E[X])^2.
+$$
+
+\end{example}
+
+\begin{example}
+
+Let $S=[0,1]$ and define
+
+$$
+X:S\to\mathbb R,
+\qquad
+X(x)=x(1-x).
+$$
+
+Then
+
+$$
+\begin{aligned}
+\mathbb E_{P_S}[X]
+&=
+\int_0^1x(1-x)\,dx\\
+&=
+\int_0^1(x-x^2)\,dx\\
+&=
+\frac12-\frac13
+=
+\frac16.
+\end{aligned}
+$$
+
+\end{example}
+
+\begin{example}
+
+Let $S=[0,1]$ and let
+
+$$
+A=\left[0,\frac12\right].
+$$
+
+Define the indicator random variable
+
+$$
+X:S\to\mathbb R,
+\qquad
+X(x)=\mathbf 1_A(x).
+$$
+
+Thus,
+
+$$
+X(x)=
+\begin{cases}
+1,&0\leq x\leq\frac12,\\
+0,&\frac12<x\leq1.
+\end{cases}
+$$
+
+By the previous proposition,
+
+$$
+\mathbb E_{P_S}[X]
+=
+\int_0^1\mathbf 1_A(x)\,dx
+=
+\lambda(A)
+=
+\frac12.
+$$
+
+This agrees with the general identity
+
+$$
+\mathbb E_{P_S}[\mathbf 1_A]=P_S(A).
+$$
+
+\end{example}
+
+\begin{example}
+
+Let $S=[0,1]$ and define the Dirichlet function
+
+$$
+X:S\to\mathbb R,
+\qquad
+X(x)=
+\begin{cases}
+1,&x\in\mathbb Q,\\
+0,&x\notin\mathbb Q.
+\end{cases}
+$$
+
+The function $X$ is measurable because $\mathbb Q\cap[0,1]$ is countable and therefore Lebesgue measurable. Moreover,
+
+$$
+\lambda(\mathbb Q\cap[0,1])=0.
+$$
+
+Hence, using the previous proposition,
+
+$$
+\mathbb E_{P_S}[X]
+=
+\int_0^1X(x)\,dx
+=
+\lambda(\mathbb Q\cap[0,1])
+=
+0.
+$$
+
+Notice that $X(x)=1$ for every rational $x$, but the expected value is still $0$, because the rationals have Lebesgue measure zero.
+
+\end{example}
+
+\begin{example}
+
+Let $S=[0,1]$ and define
+
+$$
+X:S\to\mathbb R,
+\qquad
+X(x)=
+\begin{cases}
+x,&x\in\mathbb Q,\\
+x^2,&x\notin\mathbb Q.
+\end{cases}
+$$
+
+Since $\mathbb Q\cap[0,1]$ has Lebesgue measure zero, the functions $X$ and $x^2$ are equal almost everywhere. Therefore,
+
+$$
+\mathbb E_{P_S}[X]
+=
+\int_0^1X(x)\,dx
+=
+\int_0^1x^2\,dx
+=
+\frac13.
+$$
+
+Thus changing a function on a set of probability zero does not change its expectation.
+
+\end{example}
+
+\begin{example}
+
+Let $S=[0,1]$ and define
+
+$$
+X:S\to\mathbb R,
+\qquad
+X(x)=
+\begin{cases}
+1,&x\in[0,\frac14],\\
+2,&x\in(\frac14,\frac34],\\
+4,&x\in(\frac34,1].
+\end{cases}
+$$
+
+Then
+
+$$
+\begin{aligned}
+\mathbb E_{P_S}[X]
+&=
+\int_0^1X(x)\,dx\\
+&=
+1\cdot\frac14
++
+2\cdot\frac12
++
+4\cdot\frac14\\
+&=
+\frac14+1+1
+=
+\frac94.
+\end{aligned}
+$$
+
+This gives the continuous analogue of the usual weighted-average formula for a discrete random variable.
+\end{example}
+
+\begin{example}
+
+Let $S=[0,1]$ and define
+
+$$
+X:S\to\mathbb R,
+\qquad
+X(x)=x^2.
+$$
+
+Then $X$ is integrable on $[0,1]$. By the previous proposition,
+
+$$
+\mathbb E_{P_S}[X]
+=
+\int_0^1x^2\,dx
+=
+\frac13.
+$$
+
+\end{example}
+
+\begin{example}
+
+Let $S=[-1,1]$ and define
+
+$$
+X:S\to\mathbb R,
+\qquad
+X(x)=x^3.
+$$
+
+Then
+
+$$
+\mathbb E_{P_S}[X]
+=
+\frac12\int_{-1}^1x^3\,dx
+=
+0,
+$$
+
+because $x^3$ is an odd function.
+
+Thus a random variable can take both positive and negative values while having expected value $0$.
+
+\end{example}
+
+\begin{example}
+
+Let $S=[0,1]$ and define
+
+$$
+X:S\to\mathbb R,
+\qquad
+X(x)=x(1-x).
+$$
+
+Then
+
+$$
+\begin{aligned}
+\mathbb E_{P_S}[X]
+&=
+\int_0^1x(1-x)\,dx\\
+&=
+\int_0^1(x-x^2)\,dx\\
+&=
+\frac12-\frac13
+=
+\frac16.
+\end{aligned}
+$$
+
+\end{example}
+
+\begin{example}
+
+Let $S=[0,2]$ and define
+
+$$
+X:S\to\mathbb R,
+\qquad
+X(x)=
+\begin{cases}
+x,&0\leq x\leq1,\\
+2-x,&1<x\leq2.
+\end{cases}
+$$
+
+Then
+
+$$
+\begin{aligned}
+\mathbb E_{P_S}[X]
+&=
+\frac12
+\left(
+\int_0^1x\,dx
++
+\int_1^2(2-x)\,dx
+\right)\\
+&=
+\frac12
+\left(
+\frac12+\frac12
+\right)\\
+&=
+\frac12.
+\end{aligned}
+$$
+
+\end{example}
+
+\begin{example}
+
+Let $S=[0,1]$ and let
+
+$$
+A=\left[\frac14,\frac34\right].
+$$
+
+Define
+
+$$
+X:S\to\mathbb R,
+\qquad
+X(x)=\mathbf 1_A(x).
+$$
+
+Thus,
+
+$$
+X(x)=
+\begin{cases}
+1,&\frac14\leq x\leq\frac34,\\
+0,&\text{otherwise}.
+\end{cases}
+$$
+
+Then
+
+$$
+\begin{aligned}
+\mathbb E_{P_S}[X]
+&=
+\int_0^1\mathbf 1_A(x)\,dx\\
+&=
+\int_{1/4}^{3/4}1\,dx\\
+&=
+\frac12.
+\end{aligned}
+$$
+
+In particular,
+
+$$
+\mathbb E_{P_S}[\mathbf 1_A]
+=
+P_S(A).
+$$
+
+\end{example}
+
+\begin{example}
+
+Let $S=[0,1]$ and define
+
+$$
+X:S\to\mathbb R,
+\qquad
+X(x)=
+\begin{cases}
+1,&0\leq x<\frac12,\\
+3,&\frac12\leq x\leq1.
+\end{cases}
+$$
+
+Then
+
+$$
+\begin{aligned}
+\mathbb E_{P_S}[X]
+&=
+\int_0^{1/2}1\,dx
++
+\int_{1/2}^1 3\,dx\\
+&=
+\frac12+\frac32\\
+&=
+2.
+\end{aligned}
+$$
+
+Thus the expected value is the average of the two values $1$ and $3$, weighted according to the lengths of the regions on which they occur.
+
+\end{example}
+
+\begin{example}
+
+Let $S=[0,1]$ and define
+
+$$
+X:S\to\mathbb R,
+\qquad
+X(x)=
+\begin{cases}
+x,&0\leq x\leq\frac12,\\
+x^2,&\frac12<x\leq1.
+\end{cases}
+$$
+
+Then
+
+$$
+\begin{aligned}
+\mathbb E_{P_S}[X]
+&=
+\int_0^{1/2}x\,dx
++
+\int_{1/2}^1x^2\,dx\\
+&=
+\frac18+
+\left[
+\frac{x^3}{3}
+\right]_{1/2}^1\\
+&=
+\frac18+
+\frac13-\frac1{24}\\
+&=
+\frac5{12}.
+\end{aligned}
+$$
+
+\end{example}
+
+\begin{example}
+
+Let $S=[0,1]$ and define
+
+$$
+X:S\to\mathbb R,
+\qquad
+X(x)=\frac{1}{1+x}.
+$$
+
+Since $X$ is continuous on $[0,1]$, it is integrable. By the previous proposition,
+
+$$
+\begin{aligned}
+\mathbb E_{P_S}[X]
+&=
+\int_0^1\frac{1}{1+x}\,dx\\
+&=
+\left[\ln(1+x)\right]_0^1\\
+&=
+\ln 2.
+\end{aligned}
+$$
+
+\end{example}
+
+\begin{example}
+
+Let $S=[0,1]$ and define
+
+$$
+X:S\to\mathbb R,
+\qquad
+X(x)=e^x.
+$$
+
+Then
+
+$$
+\begin{aligned}
+\mathbb E_{P_S}[X]
+&=
+\int_0^1e^x\,dx\\
+&=
+\left[e^x\right]_0^1\\
+&=
+e-1.
+\end{aligned}
+$$
+
+\end{example}
+
+
+
+We can therefore see the common structure between the finite and continuous cases. In the finite case, expected value is obtained by a weighted sum,
+
+$$
+\mathbb E_{P_S}[X]=\sum_{s\in S}X(s)P_S(\{s\}),
+$$
+
+while in the continuous case it is obtained by integration,
+
+$$
+\mathbb E_{P_S}[X]=\int_S X\,dP.
+$$
+
+For a uniform finite space, this is an ordinary average,
+
+$$
+\mathbb E_{P_S}[X]=\frac1{|S|}\sum_{s\in S}X(s),
+$$
+
+whereas for a uniform interval it is an average integral,
+
+$$
+\mathbb E_{P_S}[X]=\frac1{b-a}\int_a^bX(x)\,dx.
+$$
+
+This gives another important connection:
+
+$$
+\text{finite average}
+\;\longrightarrow\;
+\text{integral average}.
+$$
+
+Later, the nonstandard approach will allow these averages to be represented using hyperfinite sums, providing a direct connection between finite, continuous, and nonstandard probability.
 
 \section{Nonstandard Approach}
 
@@ -10912,77 +12038,77 @@ We call such an $H$ an \textbf{infinite hypernatural}.
 Consider the hyperfinite set
 
 $$
-    S_H=\{0,1,2,\ldots,H -1\}.
+    {}^*\mathbb{N}_H=\{0,1,2,\ldots,H -1\}.
 $$
 
-Although $S_H$ is infinite from the standard point of view, it behaves internally like a finite set with $H$ elements. In particular, every internal subset $A\subseteq S_H$ has an internal cardinality $|A|\in{}^*\mathbb{N}$.
+Although ${}^*\mathbb{N}_H$ is infinite from the standard point of view, it behaves internally like a finite set with $H$ elements. In particular, every internal subset $A\subseteq {}^*\mathbb{N}_H$ has an internal cardinality $|A|\in{}^*\mathbb{N}$.
 
 This allows us to extend the finite formula for uniform probability without changing its form.
 
 \begin{definition}[Hyperfinite Probability]
-    Let $H\in{}^*\mathbb{N}\setminus\mathbb{N}$ and let $S_H={1,\ldots,H}$. For every internal set $A\subseteq S_H$, define its \textbf{hyperfinite probability} by
+    Let $H\in{}^*\mathbb{N}\setminus\mathbb{N}$ and let ${}^*\mathbb{N}_H={1,\ldots,H}$. For every internal set $A\subseteq {}^*\mathbb{N}_H$, define its \textbf{hyperfinite probability} by
 
     $$
-        P_{S_H}(A)=\frac{|A_H|}{H}.
+        P_H(A)=\frac{|A_H|}{H}.
     $$
 
 \end{definition}
 
-This is exactly the same formula as in the finite case. The only difference is that $H$ and $|A|$ may now be infinite hyperintegers. Consequently, $P_{S_H}(A)$ is generally a hyperreal number rather than a standard real number.
+This is exactly the same formula as in the finite case. The only difference is that $H$ and $|A|$ may now be infinite hyperintegers. Consequently, $P_H(A)$ is generally a hyperreal number rather than a standard real number.
 
-For example, consider the set of even elements of $S_H$,
+For example, consider the set of even elements of ${}^*\mathbb{N}_H$,
 
 $$
     A=\{0,2,4,\ldots,H-2\},
 $$
 
-assuming $H$ is even. Then $|A|=H/2$, and therefore $P_{S_H}(A)=1/2$. More generally, if $A$ contains approximately half of the elements of $S_H$, its hyperfinite probability is approximately $1/2$.
+assuming $H$ is even. Then $|A|=H/2$, and therefore $P_H(A)=1/2$. More generally, if $A$ contains approximately half of the elements of ${}^*\mathbb{N}_H$, its hyperfinite probability is approximately $1/2$.
 
 The finite additivity of probability follows immediately from the corresponding property of finite cardinality.
 
 \begin{theorem}
-    Let $A,B\subseteq S_H$ be internal and disjoint. Then
+    Let $A,B\subseteq {}^*\mathbb{N}_H$ be internal and disjoint. Then
 
     $$
-        P_{S_H}(A\cup B)=P_{S_H}(A)+P_{S_H}(B).
+        P_H(A\cup B)=P_H(A)+P_H(B).
     $$
 
-    Moreover, $P_{S_H}(S_H)=1$.
+    Moreover, $P_H({}^*\mathbb{N}_H)=1$.
 \end{theorem}
 
 \begin{proof}
     Since $A$ and $B$ are internal and disjoint, the transfer principle gives $|A\cup B|=|A|+|B|$. Hence
 
     $$
-        P_{S_H}(A\cup B)
+        P_H(A\cup B)
         =\frac{|A\cup B|}{H}
         =\frac{|A|+|B|}{H}
-        =P_{S_H}(A)+P_{S_H}(B).
+        =P_H(A)+P_H(B).
     $$
 
-    Also, $|S_H|=H$, so $P_{S_H}(S_H)=H/H=1$.
+    Also, $|{}^*\mathbb{N}_H|=H$, so $P_H({}^*\mathbb{N}_H)=H/H=1$.
 \end{proof}
 
-There is, however, an important difference between the finite and hyperfinite cases. In the finite case, $P_S(A)$ is always a standard real number. In the hyperfinite case, $P_{S_H}(A)$ may be infinitesimally close to a real number without being equal to it. For example, if $A\subseteq S_H$ satisfies $|A|=H-1$, then
+There is, however, an important difference between the finite and hyperfinite cases. In the finite case, $P_S(A)$ is always a standard real number. In the hyperfinite case, $P_H(A)$ may be infinitesimally close to a real number without being equal to it. For example, if $A\subseteq {}^*\mathbb{N}_H$ satisfies $|A|=H-1$, then
 
 $$
-    P_{S_H}(A)=1-\frac1H.
+    P_H(A)=1-\frac1H.
 $$
 
-Since $H$ is infinite, $1/H$ is infinitesimal. Thus $P_{S_H}(A)\approx1$.
+Since $H$ is infinite, $1/H$ is infinitesimal. Thus $P_H(A)\approx1$.
 
 This suggests that the standard probability associated with a hyperfinite event should be obtained by taking its standard part.
 
 \begin{definition}[Standard Part Probability]
-    Let $A\subseteq S_H$ be internal. If $P_{S_H}(A)$ is finite, define
+    Let $A\subseteq {}^*\mathbb{N}_H$ be internal. If $P_H(A)$ is finite, define
 
     $$
-        P(A)=\operatorname{st}\bigl(P_{S_H}(A_H)\bigr).
+        P(A)=\operatorname{st}\bigl(P_H(A_H)\bigr).
     $$
 
 \end{definition}
 
-For the previous example, $P_{S_H}(A)=1-1/H\approx1$, and therefore $P(A)=1$.
+For the previous example, $P_H(A)=1-1/H\approx1$, and therefore $P(A)=1$.
 
 The important point is that the nonstandard approach does not replace counting by a completely different construction. Instead, it extends finite counting to a hyperfinite set and then uses the standard-part map to return to ordinary real probabilities.
 
@@ -11001,14 +12127,14 @@ $$
 We now want to extend the finite construction to a countable sample space. The first example is the set of natural numbers. Let $S=\mathbb{N}$. One might try to define the probability of an event $A\subseteq\mathbb{N}$ by the same formula as in the finite case, namely $P_S(A)=|A|/|S|$. However, this expression is not well-defined in the usual theory, since $\mathbb{N}$ has no finite cardinality and there is no uniform probability on $\mathbb{N}$ assigning the same positive probability to every element.
 
 A natural way to approximate $\mathbb{N}$ by finite sets is to consider its initial segments. For every $n\in\mathbb{N}$, let $
-    S_n=\{0,1,\ldots,n-1\}.
+    n=\{0,1,\ldots,n-1\}.
 $ For an event $A\subseteq\mathbb{N}$, define $
-    A_n=A\cap S_n=\{a\in A:a<n\}.
+    A_n=A\cap n=\{a\in A:a<n\}.
 $
-Thus, $A_n$ contains the elements of $A$ that occur among the first $n$ natural numbers. Since $S_n$ is finite, its uniform probability of $A_n$ is
+Thus, $A_n$ contains the elements of $A$ that occur among the first $n$ natural numbers. Since $n$ is finite, its uniform probability of $A_n$ is
 
 $$
-    P_{S_n}(A_n)=\frac{|A_n|}{n}.
+    P_{n}(A_n)=\frac{|A_n|}{n}.
 $$
 
 This gives a natural finite approximation to the probability of $A$. If the limit exists, we define the probability of $A$ by
@@ -11019,7 +12145,7 @@ $$
 
 This quantity is usually called the \textbf{natural density} of $A$.
 
-For example, let $A$ be the set of even natural numbers. Then $A_n$ contains approximately half of the elements of $S_n$, and therefore
+For example, let $A$ be the set of even natural numbers. Then $A_n$ contains approximately half of the elements of $n$, and therefore
 
 $$
     \lim_{n\to\infty}\frac{|A_n|}{n}=\frac12.
@@ -11030,13 +12156,13 @@ Thus the natural density of the even numbers is $1/2$. Similarly, the set of odd
 Now consider the nonstandard construction. Let $H\in{}^*\mathbb N\setminus\mathbb N$ be an infinite hypernatural and let
 
 $$
-    S_H=\{0,1,\ldots,H-1\}.
+    {}^*\mathbb{N}_H=\{0,1,\ldots,H-1\}.
 $$
 
-For an internal set $A\subseteq S_H$, its hyperfinite probability is
+For an internal set $A\subseteq {}^*\mathbb{N}_H$, its hyperfinite probability is
 
 $$
-    P_{S_H}(A)=\frac{|A_H|}{H}.
+    P_H(A)=\frac{|A_H|}{H}.
 $$
 
 The finite approximations $A_n={a\in A:a<n}$ suggest that the standard value of this hyperfinite probability should correspond to the limiting density of the finite approximations. In fact, whenever the limit exists,
@@ -11053,19 +12179,7 @@ This also explains why the nonstandard approach is useful: the expression $|A|/H
 
 We now extend this idea from $\mathbb N$ to an arbitrary countable set.
 
-Let $S$ be a countably infinite set. In order to speak about the first $n$ elements of $S$, we must first choose a well-ordering of $S$. Fix a well-ordering $ S=\{s_0,s_1,s_2,\ldots\}.  $
 
-For every $n\in\mathbb N$, define the finite initial segment $ S_n=\{s_0,s_1,\ldots,s_{n-1}\}.$
-
-For an event $A\subseteq S$, define
-
-$$
-    A_n=\{s_k\in A:k<n\}.
-$$
-
-Equivalently, $A_n=A\cap S_n$.
-
-We can now define the probability of $A$ whenever the corresponding limit exists.
 
 \begin{definition}[Countable Probability]
     Let $S$ be a countably infinite set equipped with a fixed well-ordering
@@ -11088,34 +12202,340 @@ We can now define the probability of $A$ whenever the corresponding limit exists
 
 \end{definition}
 
-The definition depends, in general, on the chosen well-ordering of $S$. Therefore, a countable set by itself does not determine a unique uniform probability. The ordering specifies how the finite approximations $S_n$ approach the whole set.
+The definition depends, in general, on the chosen well-ordering of $S$. Therefore, a countable set by itself does not determine a unique uniform probability. The ordering specifies how the finite approximations $n$ approach the whole set.
 
-In the nonstandard formulation, the same ordering gives the hyperfinite sample space $ S_H=\{s_0,s_1,\ldots,s_{H-1}\}, $
 
-where $H\in{}^*\mathbb N\setminus\mathbb N$. For an internal event $A\subseteq S_H$, we define
+In the nonstandard formulation, the same ordering gives the hyperfinite sample space
 
 $$
-    P_{S_H}(A)=\frac{|A_H|}{H}.
+\{{}^*s_i\}_{i<H},
+\qquad H\in{}^*\mathbb N\setminus\mathbb N.
+$$
+
+For an internal event \(A_H\subseteq\{{}^*s_i\}_{i<H}\), we define
+
+$$
+P_H(A_H)=\frac{|A_H|}{H}.
 $$
 
 Whenever the corresponding standard density exists, we again have
 
 $$
-    P_S(A)=\operatorname{st}\left(P_{S_H}(A_H)\right)
-    =\operatorname{st}\left(\frac{|A_H|}{H}\right).
+P_S(A)=\operatorname{st}\left(P_H(A_H)\right)
+=\operatorname{st}\left(\frac{|A_H|}{H}\right).
 $$
 
 Thus, after fixing a well-ordering, the passage from a finite probability space to a countable one can be summarized as
 
 $$
-    \text{finite counting}
-    \;\longrightarrow\;
-    \lim_{n\to\infty}\frac{|A_n|}{n}
-    \;\longleftrightarrow\;
-    \operatorname{st}\left(\frac{|A_H|}{H}\right).
+\text{finite counting}
+\;\longrightarrow\;
+\lim_{n\to\infty}\frac{|A_n|}{n}
+\;\longleftrightarrow\;
+\operatorname{st}\left(\frac{|A_H|}{H}\right).
 $$
 
-\subsection{Infinitesimal Probabilities and the Random Natural Number}
+
+
+\section{Decision Theory}
+
+Decision theory is the mathematical study of the choice of an action when the consequences of that action depend on an uncertain state of the world.
+
+A decision problem can be formally described by a tuple
+
+$$
+    \mathcal D=(S,A,u,P),
+$$
+
+where \(S,A\) are sets, \(u\) is a function, and \(P\) is a probability measure. We describe each of these objects formally.
+
+\subsection{The State Space}
+
+Let \(S\) be a nonempty set. The elements of \(S\) are called states of nature. A state \(s\in S\) represents a possible condition of the world relevant to the decision.
+
+For example, suppose that we must decide whether to take an umbrella. We may have
+
+$$
+    S=\{\mathrm{Rain},\mathrm{NoRain}\}.
+$$
+
+Thus the actual state of the world is an element of \(S\), although the decision-maker may not know which element it is.
+
+\subsection{The Action Space}
+
+Let \(A\) be a nonempty set. The elements of \(A\) are called actions or decisions. An element \(a\in A\) represents an action available to the decision-maker.
+
+For example,
+
+$$
+    A=\{\mathrm{Take},\mathrm{Leave}\},
+$$
+
+where \(\mathrm{Take}\) means taking an umbrella and \(\mathrm{Leave}\) means leaving it at home.
+
+
+
+\subsection{The Utility Function}
+
+Let
+
+$$
+    u:A\times S\longrightarrow\mathbb R.
+$$
+
+Thus \(u\) is a set-theoretic function whose domain is the Cartesian product
+$
+    A\times S
+    =
+    \{(a,s)\mid a\in A,\ s\in S\}
+$
+and whose codomain is \(\mathbb R\).
+
+For every pair
+$
+    (a,s)\in A\times S,
+$
+there is exactly one real number
+$
+    u(a,s)\in\mathbb R.
+$
+The number \(u(a,s)\) represents the utility of choosing action \(a\) when the state of nature is \(s\).
+
+For example, let
+$
+    S=\{\mathrm{Rain},\mathrm{NoRain}\}
+$
+and
+$
+    A=\{\mathrm{Take},\mathrm{Leave}\}.
+$
+
+Suppose that the utility function is given by
+
+$$
+    \begin{array}{c|cc}
+        u(a,s)         & \mathrm{Rain} & \mathrm{NoRain} \\
+        \hline
+        \mathrm{Take}  & 10            & 8               \\
+        \mathrm{Leave} & 0             & 10
+    \end{array}
+$$
+
+This means
+
+$
+    u(\mathrm{Take},\mathrm{Rain})=10,
+$
+
+$
+    u(\mathrm{Take},\mathrm{NoRain})=8,
+$
+
+$
+    u(\mathrm{Leave},\mathrm{Rain})=0,
+$
+
+and
+
+$
+    u(\mathrm{Leave},\mathrm{NoRain})=10.
+$
+
+The function \(u\) therefore completely describes the utility associated with every possible combination of an action and a state.
+
+\subsection{Probability on the State Space}
+
+Suppose that uncertainty about the state of nature is represented by a probability measure
+$
+    P:\mathcal F\longrightarrow[0,1],
+$
+where \(\mathcal F\subseteq\mathcal P(S)\) is a \(\sigma\)-algebra on \(S\), and
+$
+    P(S)=1.
+$
+The pair
+$
+    (S,\mathcal F,P)
+$
+
+is called a probability space.
+
+For a finite state space, we may simply assign a probability \(P(\{s\})\) to every \(s\in S\), satisfying
+
+$$
+    \sum_{s\in S}P(\{s\})=1.
+$$
+
+In the umbrella example, suppose
+$
+    P(\{\mathrm{Rain}\})=0.3
+$
+and
+$
+    P(\{\mathrm{NoRain}\})=0.7.
+$
+
+\subsection{Expected Utility}
+
+For every action \(a\in A\), its expected utility is defined by
+$
+    EU(a)=\mathbb E_{P_S}[u_a].
+$
+
+Here \(S\) in \(u(a,S)\) denotes the random state of nature. More formally, let
+$
+    u_a:S\longrightarrow\mathbb R
+$
+be the function defined by
+$
+    u_a(s)=u(a,s).
+$
+Then
+$
+    EU(a)=\mathbb E_{P_S}[u_a].
+$
+Equivalently,
+
+$$
+    \boxed{
+        EU(a)=\mathbb E_{P_S}[u_a]
+    }
+$$
+
+where the expectation is taken with respect to the probability measure \(P\).
+
+
+
+
+The expected utility of an action \(a\in A\) is then defined by
+
+$$
+    EU(a)
+    =
+    \mathbb{E}_{P}[u_a]
+    =
+    \int_S u(a,s)\,dP(s),
+$$
+
+provided that \(u_a\) is integrable.
+
+Equivalently,
+$
+    EU:A\longrightarrow\mathbb{R}
+$
+is the function defined by
+
+$$
+    EU(a)=\int_Su(a,s)\,dP(s).
+$$
+
+When \(S\) is finite, the expectation becomes
+
+$$
+    EU(a)
+    =
+    \sum_{s\in S}P(\{s\})u(a,s).
+$$
+
+For the action \(\mathrm{Take}\), we have
+
+$$
+    \begin{aligned}
+        EU(\mathrm{Take})
+         & =
+        P(\{\mathrm{Rain}\})u(\mathrm{Take},\mathrm{Rain})
+        +
+        P(\{\mathrm{NoRain}\})u(\mathrm{Take},\mathrm{NoRain}) \\
+         & =0.3(10)+0.7(8)                                     \\
+         & =8.6.
+    \end{aligned}
+$$
+
+Similarly,
+
+$$
+    \begin{aligned}
+        EU(\mathrm{Leave})
+         & =
+        P(\{\mathrm{Rain}\})u(\mathrm{Leave},\mathrm{Rain})
+        +
+        P(\{\mathrm{NoRain}\})u(\mathrm{Leave},\mathrm{NoRain}) \\
+         & =0.3(0)+0.7(10)                                      \\
+         & =7.
+    \end{aligned}
+$$
+
+Thus
+$
+    EU(\mathrm{Take})>EU(\mathrm{Leave}).
+$
+
+\subsection{The Maximizing Action}
+
+The set of actions with maximal expected utility is denoted by
+$
+    \arg\max_{a\in A}EU(a).
+$
+If the maximum exists, this can equivalently be written as
+
+$$
+    \arg\max_{a\in A}EU(a)
+    =
+    \left\{
+    a\in A:
+    EU(a)=\max_{b\in A}EU(b)
+    \right\}.
+$$
+
+Notice the distinction between
+$
+    \max_{a\in A}EU(a)
+$
+and
+$
+    \arg\max_{a\in A}EU(a).
+$
+The first is a real number, namely the largest expected utility. The second is a subset of \(A\), namely the set of actions that attain that largest value.
+
+In the umbrella example,
+$
+    EU(\mathrm{Take})=8.6
+$
+and
+$
+    EU(\mathrm{Leave})=7.
+$
+Therefore,
+$
+    \max_{a\in A}EU(a)=8.6
+$
+while
+$
+    \arg\max_{a\in A}EU(a)
+    =
+    \{\mathrm{Take}\}.
+$
+Consequently,
+$
+    a^*\in\arg\max_{a\in A}EU(a)
+$
+means that \(a^*\) is an action whose expected utility is maximal.
+In this example,
+$
+    a^*=\mathrm{Take}.
+$
+The notation \(a^*\in\arg\max_{a\in A}EU(a)\) does not necessarily imply that there is a unique optimal action. For example, if
+$
+    EU(a_1)=EU(a_2)=10
+$
+and every other action has expected utility less than \(10\), then
+$
+    \arg\max_{a\in A}EU(a)=\{a_1,a_2\}.
+$
+
+Thus the expected-utility rule may determine a set of optimal actions rather than a unique action.
+
+\subsection{A Decision Problem with Infinitesimal Probabilities}
 
 The previous construction shows that a countably infinite set does not admit a uniform countably additive probability. Nevertheless, the finite approximations suggest a natural way to interpret the statement that a natural number is chosen ``uniformly at random''. This interpretation becomes particularly interesting when we compare standard limits with hyperfinite probabilities.
 
@@ -11143,610 +12563,48 @@ $$
 
 In neither case is $P_{\mathbb N}(\mathbb N)=1$.
 
-We may instead use the finite approximations
-
-$$
-    S_n=\{0,1,\ldots,n-1\}
-$$
-
-and choose $N_n$ uniformly from $S_n$. Let
-
-$$
-    A=\{0\},
-    \qquad
-    B=\{0,1,\ldots,999\}.
-$$
-
-Then
-
-$$
-    P_{S_n}(A)=\frac1n
-$$
-
-and, for $n>999$,
-
-$$
-    P_{S_n}(B)=\frac{1000}{n}.
-$$
-
-Consequently,
-
-$$
-    \lim_{n\to\infty}P_{S_n}(A)
-    =
-    \lim_{n\to\infty}P_{S_n}(B)
-    =0.
-$$
-
-Thus, according to ordinary natural probability, both events have probability $0$. Nevertheless, for every $n>999$,
-
-$$
-    P_{S_n}(B)=1000P_{S_n}(A).
-$$
-
-The limiting operation has therefore lost information: two events whose probabilities have a fixed ratio of $1000$ for every sufficiently large finite space become indistinguishable after taking the limit.
-The nonstandard approach preserves this information.
-The probability of an individual outcome is now
-
-$$
-    P_{S_H}(\{k\})=\frac1H.
-$$
-
-Since $H$ is infinite, $1/H$ is a positive infinitesimal. Thus an individual natural number can have a positive probability in the hyperfinite model, although its standard part is zero.
-
-For the two events above, we obtain $
-    P_{S_H}(A)=\frac1H
-$ and $
-    P_{S_H}(B)=\frac{1000}{H}.
-$ Therefore
-$
-    P_{S_H}(B)=1000P_{S_H}(A),
-$ and hence $
-    P_{S_H}(A)<P_{S_H}(B).
-$
-
-Both probabilities are infinitesimal, but they are not equal.
-
-
-
-$1/H$ is a positive infinitesimal. The same is true of $1000/H$.
-
-Taking standard parts gives
-
-$$
-    \operatorname{st}\left(\frac1H\right)
-    =
-    \operatorname{st}\left(\frac{1000}{H}\right)
-    =0.
-$$
-
-Thus the standard probability identifies the two events, while the hyperfinite probability distinguishes them:
-
-$$
-    \boxed{
-        \frac1H<\frac{1000}{H},
-        \qquad
-        \operatorname{st}\left(\frac1H\right)
-        =
-        \operatorname{st}\left(\frac{1000}{H}\right)=0.
-    }
-$$
-
-This illustrates an important limitation of ordinary limiting probability. The standard part map preserves the macroscopic probability but can erase information contained at the infinitesimal scale. In the hyperfinite model, the probabilities remain different even though their standard parts are equal.
-
-This phenomenon is closely related to the use of nonstandard methods in probability and decision theory. Nonstandard probability allows infinitesimal probabilities to be retained instead of immediately replacing them by their standard parts. In particular, nonstandard methods have been used in decision theory to study , where infinitesimal probabilities can play an essential role.
-
-The idea of assigning probabilities to individual natural numbers by means of infinitesimals should therefore be distinguished from the ordinary uniform probability on $\mathbb N$. There is no uniform countably additive probability on $\mathbb N$ in the standard sense. Instead, the hyperfinite construction provides an internal probability space
-
-$$
-    S_H=\{0,1,\ldots,H-1\}
-$$
-
-whose individual points have infinitesimal probability. The standard probability is recovered only after applying the standard-part map.
-
-This gives another interpretation of the relation established in the previous section:
-
-$$
-    \lim_{n\to\infty}\frac{|A_n|}{n}
-    =
-    \operatorname{st}\left(\frac{|A|}{H}\right),
-$$
-
-whenever the corresponding density exists. The left-hand side records only the standard limiting probability, whereas the right-hand side is obtained from a hyperfinite probability that may contain additional infinitesimal information.
-
-The distinction becomes particularly relevant in problems in which several events all have standard probability zero but occur with different infinitesimal probabilities. In such cases, the hyperfinite model can preserve comparisons that are invisible after taking the standard part.
-
-\section{Decision Theory}
-
-Decision theory is the mathematical study of the choice of an action when the consequences of that action depend on an uncertain state of the world.
-
-A decision problem can be formally described by a tuple
-
-$$
-\mathcal D=(S,A,u,P),
-$$
-
-where \(S,A\) are sets, \(u\) is a function, and \(P\) is a probability measure. We describe each of these objects formally.
-
-\subsection{The State Space}
-
-Let \(S\) be a nonempty set. The elements of \(S\) are called states of nature. A state \(s\in S\) represents a possible condition of the world relevant to the decision.
-
-For example, suppose that we must decide whether to take an umbrella. We may have
-
-$$
-S=\{\mathrm{Rain},\mathrm{NoRain}\}.
-$$
-
-Thus the actual state of the world is an element of \(S\), although the decision-maker may not know which element it is.
-
-\subsection{The Action Space}
-
-Let \(A\) be a nonempty set. The elements of \(A\) are called actions or decisions. An element \(a\in A\) represents an action available to the decision-maker.
-
-For example,
-
-$$
-A=\{\mathrm{Take},\mathrm{Leave}\},
-$$
-
-where \(\mathrm{Take}\) means taking an umbrella and \(\mathrm{Leave}\) means leaving it at home.
-
-\subsection{The Set of Consequences}
-
- for the purposes of decision theory, we may work directly with a utility function
-
-$$
-u:A\times S\longrightarrow\mathbb R.
-$$
-
-The value
-
-$$
-u(a,s)
-$$
-
-
-\subsection{The Utility Function}
-
-Let
-
-$$
-u:A\times S\longrightarrow\mathbb R.
-$$
-
-Thus \(u\) is a set-theoretic function whose domain is the Cartesian product
-
-$$
-A\times S
-=
-\{(a,s)\mid a\in A,\ s\in S\}
-$$
-
-and whose codomain is \(\mathbb R\).
-
-For every pair
-
-$$
-(a,s)\in A\times S,
-$$
-
-there is exactly one real number
-
-$$
-u(a,s)\in\mathbb R.
-$$
-
-The number \(u(a,s)\) represents the utility of choosing action \(a\) when the state of nature is \(s\).
-
-For example, let
-
-$$
-S=\{\mathrm{Rain},\mathrm{NoRain}\}
-$$
-
-and
-
-$$
-A=\{\mathrm{Take},\mathrm{Leave}\}.
-$$
-
-Suppose that the utility function is given by
-
-$$
-\begin{array}{c|cc}
-u(a,s)&\mathrm{Rain}&\mathrm{NoRain}\\
-\hline
-\mathrm{Take}&10&8\\
-\mathrm{Leave}&0&10
-\end{array}
-$$
-
-This means
-
-$$
-u(\mathrm{Take},\mathrm{Rain})=10,
-$$
-
-$$
-u(\mathrm{Take},\mathrm{NoRain})=8,
-$$
-
-$$
-u(\mathrm{Leave},\mathrm{Rain})=0,
-$$
-
-and
-
-$$
-u(\mathrm{Leave},\mathrm{NoRain})=10.
-$$
-
-The function \(u\) therefore completely describes the utility associated with every possible combination of an action and a state.
-
-\subsection{Probability on the State Space}
-
-Suppose that uncertainty about the state of nature is represented by a probability measure
-
-$$
-P:\mathcal F\longrightarrow[0,1],
-$$
-
-where \(\mathcal F\subseteq\mathcal P(S)\) is a \(\sigma\)-algebra on \(S\), and
-
-$$
-P(S)=1.
-$$
-
-The pair
-
-$$
-(S,\mathcal F,P)
-$$
-
-is called a probability space.
-
-For a finite state space, we may simply assign a probability \(P(\{s\})\) to every \(s\in S\), satisfying
-
-$$
-\sum_{s\in S}P(\{s\})=1.
-$$
-
-In the umbrella example, suppose
-
-$$
-P(\{\mathrm{Rain}\})=0.3
-$$
-
-and
-
-$$
-P(\{\mathrm{NoRain}\})=0.7.
-$$
-
-\subsection{Expected Utility}
-
-For every action \(a\in A\), its expected utility is defined by
-
-$$
-EU(a)=\mathbb E_P[u(a,S)].
-$$
-
-Here \(S\) in \(u(a,S)\) denotes the random state of nature. More formally, let
-
-$$
-X_a:S\longrightarrow\mathbb R
-$$
-
-be the function defined by
-
-$$
-X_a(s)=u(a,s).
-$$
-
-Then
-
-$$
-EU(a)=\mathbb E_P[X_a].
-$$
-
-Equivalently,
-
-$$
-\boxed{
-EU(a)=\mathbb E_P[u(a,S)]
-}
-$$
-
-where the expectation is taken with respect to the probability measure \(P\).
-
-
-
-
-The expected utility of an action \(a\in A\) is then defined by
-
-$$
-EU(a)
-=
-\mathbb{E}_{P}[u(a,S)]
-=
-\int_S u(a,s)\,dP(s),
-$$
-
-provided that \(u_a\) is integrable.
-
-Equivalently,
-
-$$
-EU:A\longrightarrow\mathbb{R}
-$$
-
-is the function defined by
-
-$$
-EU(a)=\int_Su(a,s)\,dP(s).
-$$
-
-When \(S\) is finite, the expectation becomes
-
-$$
-EU(a)
-=
-\sum_{s\in S}P(\{s\})u(a,s).
-$$
-
-For the action \(\mathrm{Take}\), we have
-
-$$
-\begin{aligned}
-EU(\mathrm{Take})
-&=
-P(\{\mathrm{Rain}\})u(\mathrm{Take},\mathrm{Rain})
-+
-P(\{\mathrm{NoRain}\})u(\mathrm{Take},\mathrm{NoRain})\\
-&=0.3(10)+0.7(8)\\
-&=8.6.
-\end{aligned}
-$$
-
-Similarly,
-
-$$
-\begin{aligned}
-EU(\mathrm{Leave})
-&=
-P(\{\mathrm{Rain}\})u(\mathrm{Leave},\mathrm{Rain})
-+
-P(\{\mathrm{NoRain}\})u(\mathrm{Leave},\mathrm{NoRain})\\
-&=0.3(0)+0.7(10)\\
-&=7.
-\end{aligned}
-$$
-
-Thus
-
-$$
-EU(\mathrm{Take})>EU(\mathrm{Leave}).
-$$
-
-\subsection{The Maximizing Action}
-
-The set of actions with maximal expected utility is denoted by
-
-$$
-\arg\max_{a\in A}EU(a).
-$$
-
-Formally,
-
-$$
-\boxed{
-\arg\max_{a\in A}EU(a)
-=
-\left\{
-a\in A:
-EU(a)=\sup_{b\in A}EU(b)
-\right\}.
-}
-$$
-
-If the maximum exists, this can equivalently be written as
-
-$$
-\arg\max_{a\in A}EU(a)
-=
-\left\{
-a\in A:
-EU(a)=\max_{b\in A}EU(b)
-\right\}.
-$$
-
-Notice the distinction between
-
-$$
-\max_{a\in A}EU(a)
-$$
-
-and
-
-$$
-\arg\max_{a\in A}EU(a).
-$$
-
-The first is a real number, namely the largest expected utility. The second is a subset of \(A\), namely the set of actions that attain that largest value.
-
-In the umbrella example,
-
-$$
-EU(\mathrm{Take})=8.6
-$$
-
-and
-
-$$
-EU(\mathrm{Leave})=7.
-$$
-
-Therefore,
-
-$$
-\max_{a\in A}EU(a)=8.6
-$$
-
-while
-
-$$
-\arg\max_{a\in A}EU(a)
-=
-\{\mathrm{Take}\}.
-$$
-
-Consequently,
-
-$$
-a^*\in\arg\max_{a\in A}EU(a)
-$$
-
-means that \(a^*\) is an action whose expected utility is maximal.
-
-In this example,
-
-$$
-a^*=\mathrm{Take}.
-$$
-
-The notation \(a^*\in\arg\max_{a\in A}EU(a)\) does not necessarily imply that there is a unique optimal action. For example, if
-
-$$
-EU(a_1)=EU(a_2)=10
-$$
-
-and every other action has expected utility less than \(10\), then
-
-$$
-\arg\max_{a\in A}EU(a)=\{a_1,a_2\}.
-$$
-
-Thus the expected-utility rule may determine a set of optimal actions rather than a unique action.
-
-\subsection{Formal Summary}
-
-A basic decision problem under probabilistic uncertainty consists of a probability space
-
-$$
-(S,\mathcal F,P),
-$$
-
-a nonempty action space \(A\), and a utility function
-
-$$
-u:A\times S\longrightarrow\mathbb R.
-$$
-
-For each action \(a\in A\), define its expected utility by
-
-$$
-EU(a)
-=
-\mathbb E_P[u(a,S)].
-$$
-
-When \(S\) is finite,
-
-$$
-EU(a)
-=
-\sum_{s\in S}P(\{s\})u(a,s).
-$$
-
-The expected-utility decision rule selects the actions in
-
-$$
-\boxed{
-\arg\max_{a\in A}EU(a)
-=
-\left\{
-a\in A:
-EU(a)=\sup_{b\in A}EU(b)
-\right\}.
-}
-$$
-
-If \(a^*\in\arg\max_{a\in A}EU(a)\), then \(a^*\) is an action having maximal expected utility.
-\subsection{A Decision Problem with Infinitesimal Probabilities}
-
 The previous example can be formulated precisely as a decision problem. The purpose is to show how infinitesimal probabilities can distinguish events which all have standard probability zero.
 
-
-
-We now consider the following decision problem. Let
-
-$$
-S=\mathbb N
-$$
-
-and let
-
-$$
-\mathcal A=\{a_1,a_2,a_3\}.
-$$
-
-Define the payoff function
-
-$$
-u:\mathbb N\times\mathcal A\longrightarrow\mathbb R
-$$
-
-by
-
-$$
-u(s,a_1)=0,
-$$
-
-and
-
-$$
-u(s,a_2)
-=
-\begin{cases}
-1,&s=0,\\
-0,&s\neq0,
-\end{cases}
-$$
-
-and
-
-$$
-u(s,a_3)
-=
-\begin{cases}
-1,&0\leq s\leq999,\\
-0,&s>999.
-\end{cases}
-$$
-
+We now consider the following decision problem. Let $
+    S=\mathbb N
+$ and let $
+    \mathcal A=\{a_1,a_2,a_3\}.
+$ Define the payoff function $
+    u:\mathbb N\times\mathcal A\longrightarrow\mathbb R
+$
+by $
+    u(s,a_1)=0,
+$ and $
+    u(s,a_2)
+    =
+    \begin{cases}
+        1, & s=0,    \\
+        0, & s\neq0,
+    \end{cases}
+$ and $
+    u(s,a_3)
+    =
+    \begin{cases}
+        1, & 0\leq s\leq999, \\
+        0, & s>999.
+    \end{cases}
+$
 Thus $a_1$ never gives a positive payoff, $a_2$ gives payoff $1$ precisely when $s=0$, and $a_3$ gives payoff $1$ precisely when
-
-$$
-s\in\{0,1,\ldots,999\}.
-$$
-
+$
+    s\in\{0,1,\ldots,999\}.
+$
 Define the corresponding winning events by
-
-$$
-W_1=\varnothing,
-\qquad
-W_2=\{0\},
-\qquad
-W_3=\{0,1,\ldots,999\}.
-$$
-
+$
+    W_1=\varnothing,
+    \qquad
+    W_2=\{0\},
+    \qquad
+    W_3=\{0,1,\ldots,999\}.
+$
 Then
-
-$$
-u(s,a_i)=\chi_{W_i}(s),
-$$
-
+$
+    u(s,a_i)=\chi_{W_i}(s),
+$
 where $\chi_{W_i}$ denotes the indicator function of $W_i$.
 
 Suppose first that we attempt to formulate this problem using an ordinary countably additive probability measure on $\mathbb N$.
@@ -11758,57 +12616,51 @@ There is no countably additive probability measure $P$ on $\mathbb N$ which assi
 
 \begin{proof}
 
-Suppose that such a probability measure exists. Since all singletons have the same probability, there is some $p\in[0,1]$ such that
+    Suppose that such a probability measure exists. Since all singletons have the same probability, there is some $p\in[0,1]$ such that
+    $
+        P(\{n\})=p
+    $
 
-$$
-P(\{n\})=p
-$$
+    for every $n\in\mathbb N$.
 
-for every $n\in\mathbb N$.
+    If $p>0$, then for every $N\in\mathbb N$,
+    $
+        P(\{0,1,\ldots,N\})
+        =
+        \sum_{n=0}^{N}P(\{n\})
+        =
+        (N+1)p.
+    $
 
-If $p>0$, then for every $N\in\mathbb N$,
+    For sufficiently large $N$, we have $(N+1)p>1$, contradicting
+    $
+        P(\mathbb N)=1.
+    $
 
-$$
-P(\{0,1,\ldots,N\})
-=
-\sum_{n=0}^{N}P(\{n\})
-=
-(N+1)p.
-$$
+    Therefore
+    $
+        p=0.
+    $
 
-For sufficiently large $N$, we have $(N+1)p>1$, contradicting
+    But countable additivity gives
+    $
+        P(\mathbb N)
+        =
+        P\left(\bigcup_{n\in\mathbb N}\{n\}\right)
+        =
+        \sum_{n\in\mathbb N}P(\{n\})
+        =
+        \sum_{n\in\mathbb N}0
+        =
+        0,
+    $
 
-$$
-P(\mathbb N)=1.
-$$
+    contradicting
+    $
+        P(\mathbb N)=1.
+    $
 
-Therefore
-
-$$
-p=0.
-$$
-
-But countable additivity gives
-
-$$
-P(\mathbb N)
-=
-P\left(\bigcup_{n\in\mathbb N}\{n\}\right)
-=
-\sum_{n\in\mathbb N}P(\{n\})
-=
-\sum_{n\in\mathbb N}0
-=
-0,
-$$
-
-contradicting
-
-$$
-P(\mathbb N)=1.
-$$
-
-Hence no such probability measure exists.
+    Hence no such probability measure exists.
 \end{proof}
 
 In fact, for any countably additive probability measure $P$ on $\mathbb N$, every singleton may have probability zero only if the total probability is zero. Therefore the ordinary standard model cannot provide a uniform countably additive probability on $\mathbb N$.
@@ -11816,560 +12668,188 @@ In fact, for any countably additive probability measure $P$ on $\mathbb N$, ever
 We therefore replace $\mathbb N$ by a hyperfinite initial segment.
 
 Let
-
-$$
-H\in{}^*\mathbb N\setminus\mathbb N
-$$
-
+$
+    H\in{}^*\mathbb N\setminus\mathbb N
+$
 be an infinite hypernatural number and define
-
-$$
-S_H=\{0,1,\ldots,H-1\}.
-$$
-
+$
+    S_H=\{0,1,\ldots,H-1\}.
+$
 The set $S_H$ is hyperfinite and has internal cardinality
-
-$$
-|S_H|=H.
-$$
-
+$
+    |S_H|=H.
+$
 We equip $S_H$ with its internal uniform probability. For every internal subset $B\subseteq S_H$, define
-
-$$
-P_{S_H}(B)=\frac{|B|}{H}.
-$$
-
+$
+    P_{S_H}(B)=\frac{|B|}{H}.
+$
 In particular, for every $s\in S_H$,
-
-$$
-P_{S_H}(\{s\})
-=
-\frac{1}{H}.
-$$
-
+$
+    P_{S_H}(\{s\})
+    =
+    \frac{1}{H}.
+$
 Because $H$ is an infinite hypernatural,
-
-$$
-H>n
-$$
-
+$
+    H>n
+$
 for every standard $n\in\mathbb N$. Consequently,
-
-$$
-0<\frac1H<\frac1n
-$$
-
+$
+    0<\frac1H<\frac1n
+$
 for every standard positive integer $n$. Hence
-
-$$
-\frac1H
-$$
+$
+    \frac1H
+$
 
 is a positive infinitesimal.
 
 We now extend the payoff function to $S_H\times\mathcal A$. Since $999$ is standard and
-
-$$
-H>999,
-$$
-
+$
+    H>999,
+$
 we have
-
-$$
-\{0,1,\ldots,999\}\subseteq S_H.
-$$
-
+$
+    \{0,1,\ldots,999\}\subseteq S_H.
+$
 The three payoff functions are therefore
-
-$$
-u(\cdot,a_1)=0,
-$$
-
-$$
-u(s,a_2)=
-\begin{cases}
-1,&s=0,\\
-0,&s\neq0,
-\end{cases}
-$$
-
+$
+    u(\cdot,a_1)=0,
+$,
+$
+    u(s,a_2)=
+    \begin{cases}
+        1, & s=0,    \\
+        0, & s\neq0,
+    \end{cases}
+$
 and
-
-$$
-u(s,a_3)=
-\begin{cases}
-1,&0\leq s\leq999,\\
-0,&999<s<H.
-\end{cases}
-$$
-
+$
+    u(s,a_3)=
+    \begin{cases}
+        1, & 0\leq s\leq999, \\
+        0, & 999<s<H.
+    \end{cases}
+$
 For an action $a\in\mathcal A$, its hyperfinite expected payoff is
-
-$$
-EU_H(a)
-=
-\mathbb E_{P_{S_H}}[u(\cdot,a)].
-$$
-
+$
+    EU_H(a)
+    =
+    \mathbb E_{P_{S_H}}[u(\cdot,a)].
+$
 Since $S_H$ is hyperfinite, the expectation is given by the hyperfinite sum
-
 $$
-EU_H(a)
-=
-\sum_{s=0}^{H-1}u(s,a)P_{S_H}(\{s\})
-=
-\frac1H\sum_{s=0}^{H-1}u(s,a).
+    EU_H(a)
+    =
+    \sum_{s=0}^{H-1}u(s,a)P_{S_H}(\{s\})
+    =
+    \frac1H\sum_{s=0}^{H-1}u(s,a).
 $$
-
 We now calculate the three expected payoffs separately.
 
 For $a_1$, we have
-
-$$
-u(s,a_1)=0
-$$
-
+$
+    u(s,a_1)=0
+$
 for every $s\in S_H$. Therefore
-
 $$
-EU_H(a_1)
-=
-\frac1H\sum_{s=0}^{H-1}0
-=
-0.
+    EU_H(a_1)
+    =
+    \frac1H\sum_{s=0}^{H-1}0
+    =
+    0.
 $$
-
 For $a_2$, the only state at which the payoff is $1$ is $s=0$. Hence
-
-$$
-\sum_{s=0}^{H-1}u(s,a_2)=1.
-$$
-
+$
+    \sum_{s=0}^{H-1}u(s,a_2)=1.
+$
 Therefore
-
 $$
-EU_H(a_2)
-=
-\frac1H.
+    EU_H(a_2)
+    =
+    \frac1H.
 $$
-
 Equivalently, since
-
-$$
-W_2=\{0\},
-$$
-
+$
+    W_2=\{0\},
+$
 we have
-
 $$
-EU_H(a_2)
-=
-P_{S_H}(W_2)
-=
-P_{S_H}(\{0\})
-=
-\frac1H.
+    EU_H(a_2)
+    =
+    P_{S_H}(W_2)
+    =
+    P_{S_H}(\{0\})
+    =
+    \frac1H.
 $$
-
 For $a_3$, the payoff is $1$ at exactly the $1000$ states
-
-$$
-0,1,\ldots,999.
-$$
-
+$
+    0,1,\ldots,999.
+$
 Thus
-
-$$
-\sum_{s=0}^{H-1}u(s,a_3)
-=
-1000,
-$$
-
+$
+    \sum_{s=0}^{H-1}u(s,a_3)
+    =
+    1000,
+$
 and therefore
-
 $$
-EU_H(a_3)
-=
-\frac{1000}{H}.
+    EU_H(a_3)
+    =
+    \frac{1000}{H}.
 $$
-
 Equivalently,
-
-$$
-W_3=\{0,1,\ldots,999\},
-$$
-
+$
+    W_3=\{0,1,\ldots,999\},
+$
 so
-
-$$
-EU_H(a_3)
-=
-P_{S_H}(W_3)
-=
-\frac{|W_3|}{H}
-=
-\frac{1000}{H}.
-$$
-
+$
+    EU_H(a_3)
+    =
+    P_{S_H}(W_3)
+    =
+    \frac{|W_3|}{H}
+    =
+    \frac{1000}{H}.
+$
 Consequently,
-
-$$
-EU_H(a_1)=0,
-\qquad
-EU_H(a_2)=\frac1H,
-\qquad
-EU_H(a_3)=\frac{1000}{H}.
-$$
-
-Since
-
-$$
-H>0,
-$$
-
-we have
-
-$$
-0<1<1000.
-$$
-
+$
+    EU_H(a_1)=0,
+    \qquad
+    EU_H(a_2)=\frac1H,
+    \qquad
+    EU_H(a_3)=\frac{1000}{H}.
+$
+Since $  H>0, $ we have $  0<1<1000. $
 Multiplication by the positive hyperreal number $1/H$ gives
-
-$$
-0<\frac1H<\frac{1000}{H}.
-$$
-
+$
+    0<\frac1H<\frac{1000}{H}.
+$
 Hence
 
 $$
-\boxed{
-EU_H(a_1)
-<
-EU_H(a_2)
-<
-EU_H(a_3).
-}
+    \boxed{
+        EU_H(a_1)
+        <
+        EU_H(a_2)
+        <
+        EU_H(a_3).
+    }
 $$
 
 Therefore
 
 $$
-\operatorname*{arg\,max}_{a\in\mathcal A}EU_H(a)
-=
-\{a_3\}.
+    \operatorname*{arg\,max}_{a\in\mathcal A}EU_H(a)
+    =
+    \{a_3\}.
 $$
 
 In particular,
-
-$$
-\boxed{a_3\text{ is the unique expected-payoff maximizing action.}}
-$$
-
-\begin{theorem}
-
-Let $H\in{}^*\mathbb N\setminus\mathbb N$ be infinite and let
-
-$$
-S_H=\{0,1,\ldots,H-1\}
-$$
-
-be equipped with its internal uniform probability
-
-$$
-P_{S_H}(B)=\frac{|B|}{H}.
-$$
-
-For the decision problem above,
-
-$$
-\operatorname*{arg\,max}_{a\in\mathcal A}EU_H(a)=\{a_3\}.
-$$
-
-\end{theorem}
-
-\begin{proof}
-
-The three expected payoffs are
-
-$$
-EU_H(a_1)=0,
-\qquad
-EU_H(a_2)=\frac1H,
-\qquad
-EU_H(a_3)=\frac{1000}{H}.
-$$
-
-Since $H>0$,
-
-$$
-0<\frac1H<\frac{1000}{H}.
-$$
-
-Therefore
-
-$$
-EU_H(a_3)>EU_H(a_2)>EU_H(a_1).
-$$
-
-Thus $a_3$ is the unique action maximizing expected payoff, and hence
-
-$$
-\operatorname*{arg\,max}_{a\in\mathcal A}EU_H(a)=\{a_3\}.
-$$
-
-\end{proof}
-
-The crucial feature is that both
-
-$$
-\frac1H
-\qquad\text{and}\qquad
-\frac{1000}{H}
-$$
-
-are positive infinitesimals.
-
-Indeed,
-
-$$
-0<\frac1H<\frac1n
-$$
-
-for every standard $n\in\mathbb N$, and similarly
-
-$$
-0<\frac{1000}{H}<\frac1n
-$$
-
-for every sufficiently large standard $n$. Thus
-
-$$
-\operatorname{st}\left(\frac1H\right)=0
-$$
-
-and
-
-$$
-\operatorname{st}\left(\frac{1000}{H}\right)=0.
-$$
-
-Consequently,
-
-$$
-\operatorname{st}(EU_H(a_1))
-=
-\operatorname{st}(EU_H(a_2))
-=
-\operatorname{st}(EU_H(a_3))
-=
-0.
-$$
-
-Therefore taking the standard part before maximizing destroys the distinction between $a_2$ and $a_3$.
-
-Indeed,
-
-$$
-EU_H(a_2)<EU_H(a_3),
-$$
-
-but
-
-$$
-\operatorname{st}(EU_H(a_2))
-=
-\operatorname{st}(EU_H(a_3)).
-$$
-
-Thus, in general,
-
-$$
-\operatorname*{arg\,max}_{a\in\mathcal A}EU_H(a)
-$$
-
-cannot be recovered from
-
-$$
-\operatorname{st}(EU_H(a))
-$$
-
-alone.
-
-In the present example,
-
-$$
-\boxed{
-\frac1H
-<
-\frac{1000}{H},
-\qquad
-\operatorname{st}\left(\frac1H\right)
-=
-\operatorname{st}\left(\frac{1000}{H}\right)
-=
-0.
-}
-$$
-
-This demonstrates the difference between equality of standard parts and equality of hyperreal probabilities. Two positive infinitesimals can have the same standard part while one is strictly larger than the other.
-
-There is also an important distinction between the internal probability $P_{S_H}$ and its standard part. The internal probability satisfies
-
-$$
-P_{S_H}(\{0\})=\frac1H
-$$
-
-and
-
-$$
-P_{S_H}(\{0,\ldots,999\})=\frac{1000}{H},
-$$
-
-so the two events are distinguished by $P_{S_H}$.
-
-However,
-
-$$
-\operatorname{st}\bigl(P_{S_H}(\{0\})\bigr)=0
-$$
-
-and
-
-$$
-\operatorname{st}\bigl(P_{S_H}(\{0,\ldots,999\})\bigr)=0.
-$$
-
-Thus their corresponding Loeb probabilities are both zero:
-
-$$
-P_L(\{0\})=0
-$$
-
-and
-
-$$
-P_L(\{0,\ldots,999\})=0.
-$$
-
-Hence the Loeb measure preserves the standard probability information but does not preserve the infinitesimal distinction between these two events.
-
-This point is important. The hyperfinite probability $P_{S_H}$ contains more information than its standard part. In particular, it records the infinitesimal scale of probabilities such as
-
-$$
-\frac1H,\quad \frac2H,\quad\ldots,\quad\frac{1000}{H},
-$$
-
-whereas the standard-part map sends all of these positive infinitesimals to $0$.
-
-The present construction should therefore not be interpreted as defining a uniform countably additive probability measure on $\mathbb N$. The probability $P_{S_H}$ is defined on the hyperfinite set
-
-$$
-S_H=\{0,1,\ldots,H-1\},
-$$
-
-not directly on $\mathbb N$. Moreover, the resulting infinitesimal probabilities depend on the chosen hyperfinite model.
-
-For example, the particular choice
-
-$$
-S_H=\{0,\ldots,H-1\}
-$$
-
-gives
-
-$$
-P_{S_H}(\{0\})=\frac1H
-$$
-
-and
-
-$$
-P_{S_H}(\{0,\ldots,999\})=\frac{1000}{H}.
-$$
-
-The ratio of these probabilities is exactly
-
-$$
-\frac{P_{S_H}(\{0,\ldots,999\})}
-{P_{S_H}(\{0\})}
-=
-1000.
-$$
-
-This ratio is precisely the information that disappears after taking standard parts:
-
-$$
-\frac{
-\operatorname{st}(P_{S_H}(\{0,\ldots,999\}))
-}{
-\operatorname{st}(P_{S_H}(\{0\}))
-}
-=
-\frac00,
-$$
-
-which is undefined.
-
-Thus the standard part operation is not an order-preserving representation of the relative sizes of positive infinitesimals. It preserves the macroscopic probability but can lose all information occurring at an infinitesimal scale.
-
-The example therefore gives the following hierarchy:
-
-$$
-P_{S_H}(\{0\})
-=
-\frac1H
-<
-\frac{1000}{H}
-=
-P_{S_H}(\{0,\ldots,999\}),
-$$
-
-while
-
-$$
-\operatorname{st}\bigl(P_{S_H}(\{0\})\bigr)
-=
-\operatorname{st}\bigl(P_{S_H}(\{0,\ldots,999\})\bigr)
-=
-0.
-$$
-
-Hence, if the decision criterion is to maximize the internal hyperfinite expected payoff, then
-
-$$
-\boxed{
-\operatorname*{arg\,max}_{a\in\mathcal A}EU_H(a)
-=
-\{a_3\}.
-}
-$$
-
-This conclusion uses the infinitesimal information contained in the internal probability $P_{S_H}$. It cannot be obtained by replacing the hyperfinite probabilities with their standard parts before performing the maximization.
-
-The construction illustrates a general principle of nonstandard probability: an internal probability can distinguish events having positive infinitesimal probabilities even though all such events have standard probability zero after taking standard parts.
-
-The passage from the internal probability $P_{S_H}$ to an ordinary countably additive probability is obtained by the Loeb construction. In the present example, the Loeb measure satisfies
-
-$$
-P_L(B)=\operatorname{st}(P_{S_H}(B))
-$$
-
-for internal sets $B\subseteq S_H$. Thus
-
-$$
-P_L(\{0\})=0
-$$
-
-and
-
-$$
-P_L(\{0,\ldots,999\})=0.
-$$
-
-Consequently, Loeb probability provides an ordinary countably additive measure, but the particular infinitesimal distinction used to choose $a_3$ has already disappeared when passing from $P_{S_H}$ to $P_L$.
-
-The hyperfinite model and the Loeb measure therefore play different roles: the internal probability $P_{S_H}$ retains infinitesimal information, while the Loeb measure extracts its standard, countably additive part.
-
+$
+    a_3\text{ is the unique expected-payoff maximizing action.}
+$
 
 \section{Measure}
 
