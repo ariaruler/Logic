@@ -1656,18 +1656,14 @@ so we can rewrite axiom of Extensionality like this.
         \open
         \have{1} { \forall x  ( x \notin  x  \leftrightarrow x \in R)}                                \by{acp}{}
         \have{1} {    R \notin  R  \leftrightarrow R \in R}                                \by{acp}{}
-        \have{1} {    R \notin  R  \lor R \in R}                                \by{lem}{}
-        \open
-        \have{1} {    R \notin  R  }                                \by{acp}{}
-        \have{1} {     R \in R}                                \by{$\leftrightarrow E$}{}
-        \have{1} {    \bot }                                \by{$\bot I$}{}
-        \close
         \open
         \have{1} {     R \in R}                                \by{acp}{}
         \have{1} {    R \notin  R  }                                \by{$\leftrightarrow E$}{}
         \have{1} {    \bot }                                \by{$\bot I$}{}
         \close
-        \have{1} {    \bot }                                \by{ $\lor E$}{}
+        \have{1} {    R \notin  R  }                                \by{acp}{}
+        \have{1} {     R \in R}                                \by{$\leftrightarrow E$}{}
+        \have{1} {    \bot }                                \by{$\bot I$}{}
         \close
         \have   {2} {\bot}                                          \by{$\exists E$ }{}
 
@@ -1864,11 +1860,11 @@ later.
     Intersection:
     \[ A \cap B:=\{x \mid x \in A \wedge x \in B \} \]
     therefore.
-    \[\forall x( x \in A \cap B  \leftrightarrow  (x \in A \wedge x \in B )) \]
+    \[\forall x( x \in A \cap B  \leftrightarrow  (Type_0(x) \wedge x \in A \wedge x \in B )) \]
     Union:
     \[ A \cup B:=\{x \mid x \in A \lor x \in B \} \]
-    therefore.
-    \[\forall x( x \in A \cup B  \leftrightarrow  (x \in A \lor x \in B )) \]
+    therefore.0
+    \[\forall x( x \in A \cup B  \leftrightarrow  (Type_0(x) \wedge (x \in A \lor x \in B ))) \]
 \end{definition}
 
 \begin{theorem}
@@ -2022,12 +2018,12 @@ sometimes all members of a set is also set we call it ``set of sets''.
             \have [ ] {2} {\vdots}
             \have  [ ] {2} {\bot}
             \close
-            \have  [ ]{2} {\therefore a \notin  A} \by{$()^c I$}{}
+            \have  [ ]{2} {\therefore a \in  A^c} \by{$()^c I$}{}
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt}  \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \open
-            \have [ ] {1} {a \notin  A }
+            \have [ ] {1} {a \in  A^c }
             \have [ ] {2} {\vdots}
             \have  [ ] {2} {\bot}
             \close
