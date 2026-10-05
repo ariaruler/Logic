@@ -1462,10 +1462,10 @@ if we are talking about ``$\forall x \in A \quad P(x)$'' it means ``$\forall x
     (x \in A \to P(x))$'' and when we are talking about ``$\exists x \in A \quad
     P(x)$'' it means ``$\exists x (x \in A \land P(x))$''.
 
-and we have a definitions.
-\[ Type_0(X) : \exists Y \quad X \in Y \]
+and we have a predicate ``$Type_0(X)$''.
+% \[ Type_0(X) : \exists Y \quad X \in Y \]
 
-\[ Type_1(X) : \neg \exists Y \quad X \in Y \]
+% \[ Type_1(X) : \neg \exists Y \quad X \in Y \]
 
 \section{Axioms of set theory}
 we emphasis before that set has no definition.but we can describe what set is
@@ -1563,74 +1563,64 @@ so we can rewrite axiom of Extensionality like this.
 
 \begin{theorem}
     \textbf{$(schema)$} $( = I,  = E)$
+\end{theorem}
 
-    \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
-        \hline
-        \begin{fitchproof}[arrayenv=tabular]
-            \open
-            \have [ ] {1} {x \in A }
-            \have [ ] {2} {\vdots}
-            \have  [ ] {2} {x \in B}
-            \close
-            \open
-            \have [ ] {1} {x \in B}
-            \have [ ] {2} {\vdots}
-            \have  [ ] {2} {x \in A}
-            \close
-            \have  [ ]{2} {\therefore A = B } \by{$ = I$}{}
-        \end{fitchproof}
-        \rule[0pt]{0pt}{0pt} &
-        \begin{minipage}[t]{\linewidth}
-            \centering
-            \begin{minipage}[t]{0.48\linewidth}
-                \begin{fitchproof}[arrayenv=tabular]
-                    \hypo [ ]{1} {A = B }
-                    \hypo [ ] {2} {a \in A }
-                    \have  [ ]{2} {\therefore  a \in B } \by{$ = E$}{}
-                \end{fitchproof}
-            \end{minipage}
-            % \hfill
-            \begin{minipage}[t]{0.48\linewidth}
-                \begin{fitchproof}[arrayenv=tabular]
-                    \hypo [ ]{1} {A = B }
-                    \hypo [ ] {2} { a \in B}
-                    \have  [ ]{2} { \therefore  a \in A} \by{$ = E$}{}
-                \end{fitchproof}
-            \end{minipage}
-        \end{minipage}
-        \\
-        \hline
-    \end{tabular}
-
+\begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
+    \hline
     \begin{fitchproof}[arrayenv=tabular]
         \open
-        \have  {1} {x \in A }                                                                 \by{acp  }{}
+        \have [ ] {1} {x \in A }
         \have [ ] {2} {\vdots}
-        \have  [n] {2} {x \in B}
+        \have  [ ] {2} {x \in B}
         \close
-        \have   {2} {A \subseteq B }                                                        \by{$\subseteq I,1,n$  }{}
         \open
-        \have  {1} {x \in B}                                                                \by{acp }{}
+        \have [ ] {1} {x \in B}
         \have [ ] {2} {\vdots}
-        \have  [m] {2} {x \in A}
+        \have  [ ] {2} {x \in A}
         \close
-        \have  {2} {B \subseteq A }                                                          \by{$\subseteq I,n+2,m$ }{}
-        \have  {2} {\forall X, Y((X \subseteq Y \wedge Y \subseteq X) \rightarrow X=Y)}   \by{Extensionality }{}
-        \have  {2} {(A \subseteq B \wedge B \subseteq A) \rightarrow A=B}                 \by{$\forall E,m+2$ }{}
-        \have  {2} {A \subseteq B \wedge B \subseteq A}                                       \by{$\land I,n+1,m+1$}{}
-        \have  {2} {A=B}                                                                        \by{$E\rightarrow,m+3,m+4$}{}
+        \have  [ ]{2} {\therefore A = B } \by{$ = I$}{}
     \end{fitchproof}
-    \par
-    % \begin{fitchproof}[arrayenv=tabular]
-    %     \have {1} {A = B }
-    %     \have  {2} {a \in A }
-    %     \have  {2} {\forall X, Y((X \subseteq Y \wedge Y \subseteq X) \leftrightarrow X=Y)}    \by{Extensionality}{}
-    %     \have  {2} {(A \subseteq B \wedge B \subseteq A) \leftrightarrow A=B}                   \by{$\forall E,3$ }{}
-    %     \have  {2} {A \subseteq B \wedge B \subseteq A}                                          \by{$\leftrightarrow E,1,4$}{}
-    %     \have  {2} {A \subseteq B}                                                              \by{$E\wedge 5$}{}
-    %     \have  {2} {  a \in B }                                                                   \by{$\subseteq E,2,6$ }{}
-    % \end{fitchproof}
-\end{theorem}
+    \rule[0pt]{0pt}{0pt} &
+    \begin{minipage}[t]{\linewidth}
+        \centering
+        \begin{minipage}[t]{0.48\linewidth}
+            \begin{fitchproof}[arrayenv=tabular]
+                \hypo [ ]{1} {A = B }
+                \hypo [ ] {2} {a \in A }
+                \have  [ ]{2} {\therefore  a \in B } \by{$ = E$}{}
+            \end{fitchproof}
+        \end{minipage}
+        % \hfill
+        \begin{minipage}[t]{0.48\linewidth}
+            \begin{fitchproof}[arrayenv=tabular]
+                \hypo [ ]{1} {A = B }
+                \hypo [ ] {2} { a \in B}
+                \have  [ ]{2} { \therefore  a \in A} \by{$ = E$}{}
+            \end{fitchproof}
+        \end{minipage}
+    \end{minipage}
+    \\
+    \hline
+\end{tabular}
+
+\begin{fitchproof}[arrayenv=tabular]
+    \open
+    \have  {1} {x \in A }                                                                 \by{acp  }{}
+    \have [ ] {2} {\vdots}
+    \have  [n] {2} {x \in B}
+    \close
+    \have   {2} {A \subseteq B }                                                        \by{$\subseteq I,1,n$  }{}
+    \open
+    \have  {1} {x \in B}                                                                \by{acp }{}
+    \have [ ] {2} {\vdots}
+    \have  [m] {2} {x \in A}
+    \close
+    \have  {2} {B \subseteq A }                                                          \by{$\subseteq I,n+2,m$ }{}
+    \have  {2} {\forall X, Y((X \subseteq Y \wedge Y \subseteq X) \rightarrow X=Y)}   \by{Extensionality }{}
+    \have  {2} {(A \subseteq B \wedge B \subseteq A) \rightarrow A=B}                 \by{$\forall E,m+2$ }{}
+    \have  {2} {A \subseteq B \wedge B \subseteq A}                                       \by{$\land I,n+1,m+1$}{}
+    \have  {2} {A=B}                                                                        \by{$E\rightarrow,m+3,m+4$}{}
+\end{fitchproof}
 
 \begin{axiom}
     \textbf{Weak comprehension} $(schema)$ this axioms says for every open proposition
@@ -1656,6 +1646,33 @@ so we can rewrite axiom of Extensionality like this.
 % \section{definitions of set theory}
 % Let's talk about some definitions in set theoty.These definitions will come in
 % handy later.
+
+\begin{lemma}[Russell's paradox] assume the comprehension axiom $( \forall x_0 , x_1, ... , x_n \exists X \forall x  ( \phi (x,x_0 , x_1, ... , x_n) \leftrightarrow x \in X) )$
+    and prove inconsistency i.e.
+    \[  \forall x_0 , x_1, ... , x_n \exists X \forall x  ( \phi (x,x_0 , x_1, ... , x_n) \leftrightarrow x \in X) /\therefore \bot\]
+
+    \begin{fitchproof}[arrayenv=tabular]
+        \have{1} {\exists X \forall x  ( x \notin  x  \leftrightarrow x \in X)}                                \by{comprehension axiom}{}
+        \open
+        \have{1} { \forall x  ( x \notin  x  \leftrightarrow x \in R)}                                \by{acp}{}
+        \have{1} {    R \notin  R  \leftrightarrow R \in R}                                \by{acp}{}
+        \have{1} {    R \notin  R  \lor R \in R}                                \by{lem}{}
+        \open
+        \have{1} {    R \notin  R  }                                \by{acp}{}
+        \have{1} {     R \in R}                                \by{$\leftrightarrow E$}{}
+        \have{1} {    \bot }                                \by{$\bot I$}{}
+        \close
+        \open
+        \have{1} {     R \in R}                                \by{acp}{}
+        \have{1} {    R \notin  R  }                                \by{$\leftrightarrow E$}{}
+        \have{1} {    \bot }                                \by{$\bot I$}{}
+        \close
+        \have{1} {    \bot }                                \by{ $\lor E$}{}
+        \close
+        \have   {2} {\bot}                                          \by{$\exists E$ }{}
+
+    \end{fitchproof}
+\end{lemma}
 
 Let's talk about some axioms in set theoty.These daxioms will come in handy
 later.
@@ -1793,10 +1810,7 @@ later.
     \end{tabular}
 \end{theorem}
 
-\begin{axiom}
-    \textbf{Existence}
-    \[  Type_0(\emptyset) \]
-\end{axiom}
+
 
 \begin{definition}
     \textbf{Pairing set}
@@ -1842,7 +1856,7 @@ later.
 
 \begin{axiom}
     \textbf{Pairing}  $(schema)$
-    \[  Type_0(\{a_{0}, a_{1}, a_{2}, ... ,a_{n} \}) \]
+    \[ \forall x_0,...,x_n \quad Type_0(x_0) \land ... \land Type(X_n) \to Type_0(\{x_{0}, x_{1}, x_{2}, ... ,x_{n} \}) \]
 \end{axiom}
 
 \begin{definition}
@@ -2099,6 +2113,12 @@ sometimes all members of a set is also set we call it ``set of sets''.
     therefore.
     \[ Type_0(A) \to  Type_0(A - B) \]
 \end{axiom}
+
+
+\begin{lemma}
+    \textbf{}
+    \[  Type_0(\emptyset) \]
+\end{lemma}
 
 \begin{axiom}
     \textbf{union}
@@ -5913,48 +5933,108 @@ we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
     \[ A \cong B : \exists f  (f:A \xrightarrow[surj]{inj} B) \]
 \end{definition}
 
-\begin{lemma} ``$\cong$'' is a equivalence relation in ``$(V , \cong)$''\\
 
-    \begin{fitchproof}[arrayenv=tabular]
-        \have {14} {  id : X \xrightarrow[surj]{inj} X }
-        \have {14} {  \exists f \quad f : X \xrightarrow[surj]{inj} X }   \by{$ \exists I$}{}
-        \have {14} {  X \cong X }                                              \by{$ def. 2$}{}
-    \end{fitchproof}
 
-    \begin{fitchproof}[arrayenv=tabular]
-        \have {14} {  X \cong Y }                     \by{$ ass $}{}
-        \have {14} {  \exists f \quad f : X \xrightarrow[surj]{inj} Y }   \by{$ def. 1$}{}
-
-        \open
-        \have {14} {  f : X \xrightarrow[surj]{inj} Y }        \by{$ acp $}{}
-        \have {14} {  f^{-1} : Y \xrightarrow[surj]{inj} X }           \by{$ lemma$}{}
-        \have {14} {  \exists f \quad f : Y \xrightarrow[surj]{inj} X }           \by{$ \exists I$}{}
-        \have {14} {  Y \cong X }                                \by{$ def. 5$}{}
-        \close
-        \have {14} {  Y \cong X }                               \by{$ \exists E$}{}
-
-    \end{fitchproof}
-
-    \begin{fitchproof}[arrayenv=tabular]
-        \have {14} {  X \cong Y }               \by{$ ass $}{}
-        \have {14} {  Y \cong Z }                  \by{$ ass $}{}
-
-        \have {14} {  \exists f \quad f : X \xrightarrow[surj]{inj} Y }         \by{$ def. 1$}{}
-        \have {14} {  \exists f \quad f : Y \xrightarrow[surj]{inj} Z }           \by{$ def. 2$}{}
-        \open
-        \have {14} {  f : X \xrightarrow[surj]{inj} Y }                      \by{$ acp $}{}
-        \open
-        \have {14} {  g : Y \xrightarrow[surj]{inj} Z }                        \by{$ acp $}{}
-        \have {14} {  g \circ f : X \xrightarrow[surj]{inj} Z }                     \by{$ lemma$}{}
-        \have {14} {  \exists f \quad f : X \xrightarrow[surj]{inj} Z }
-        \have {14} {  X \cong Z }
-        \close
-        \close
-        \have {14} {  X \cong Z }
-
-    \end{fitchproof}
-
+\begin{lemma}
+    The relation ``$\cong$'' on $V$ is an equivalence relation.
 \end{lemma}
+
+\begin{proof}
+    We prove reflexivity, symmetry, and transitivity.
+
+    \textbf{Reflexivity.}
+    For every $X\in V$, the identity function $\operatorname{id}_X:X\to X$ is both injective and surjective. Hence
+
+    $$
+        \operatorname{id}_X:X\xrightarrow[surj]{inj}X.
+    $$
+
+    Therefore, by the definition of $\cong$, we have $X\cong X$.
+
+    \begin{fitchproof}[arrayenv=tabular]
+        \have {14} { \operatorname{id}_X:X\xrightarrow[surj]{inj}X }
+        \have {14} { \exists f; f:X\xrightarrow[surj]{inj}X }
+        \by{$\exists I$}{}
+        \have {14} { X\cong X }
+        \by{$\mathrm{def.}$}{}
+    \end{fitchproof}
+
+    \textbf{Symmetry.}
+    Suppose $X\cong Y$. Then, by definition, there exists a bijection
+    $f:X\to Y$. Let $f$ be such a function. Since the inverse of a bijection is again a bijection,
+
+    $$
+        f^{-1}:Y\xrightarrow[surj]{inj}X.
+    $$
+
+    Hence there exists a bijection from $Y$ to $X$, and therefore $Y\cong X$.
+
+    \begin{fitchproof}[arrayenv=tabular]
+        \have {14} { X\cong Y }
+        \by{$ass$}{}
+        \have {14} { \exists f; f:X\xrightarrow[surj]{inj}Y }
+        \by{$\mathrm{def.}$}{}
+        \open
+        \have {14} { f:X\xrightarrow[surj]{inj}Y }
+        \by{$acp$}{}
+        \have {14} { f^{-1}:Y\xrightarrow[surj]{inj}X }
+        \by{$\mathrm{lemma}$}{}
+        \have {14} { \exists g\; g:Y\xrightarrow[surj]{inj}X }
+        \by{$\exists I$}{}
+        \have {14} { Y\cong X }
+        \by{$\mathrm{def.}$}{}
+        \close
+
+        \have {14} { Y\cong X }
+        \by{$\exists E$}{}
+
+
+    \end{fitchproof}
+
+    \textbf{Transitivity.}
+    Suppose $X\cong Y$ and $Y\cong Z$. Then there exist bijections
+    $f:X\to Y$ and $g:Y\to Z$. Since the composition of two bijections is a bijection,
+
+    $$
+        g\circ f:X\xrightarrow[surj]{inj}Z.
+    $$
+
+    Thus there exists a bijection from $X$ to $Z$, and consequently $X\cong Z$.
+
+    \begin{fitchproof}[arrayenv=tabular]
+        \have {14} { X\cong Y }
+        \by{$ass$}{}
+        \have {14} { Y\cong Z }
+        \by{$ass$}{}
+
+        \have {14} { \exists f\; f:X\xrightarrow[surj]{inj}Y }
+        \by{$\mathrm{def.}$}{}
+        \have {14} { \exists g\; g:Y\xrightarrow[surj]{inj}Z }
+        \by{$\mathrm{def.}$}{}
+
+        \open
+        \have {14} { f:X\xrightarrow[surj]{inj}Y }
+        \by{$acp$}{}
+
+        \open
+        \have {14} { g:Y\xrightarrow[surj]{inj}Z }
+        \by{$acp$}{}
+        \have {14} { g\circ f:X\xrightarrow[surj]{inj}Z }
+        \by{$\mathrm{lemma}$}{}
+        \have {14} { \exists h\; h:X\xrightarrow[surj]{inj}Z }
+        \by{$\exists I$}{}
+        \have {14} { X\cong Z }
+        \by{$\mathrm{def.}$}{}
+        \close
+        \close
+
+        \have {14} { X\cong Z }
+        \by{$\exists E$}{}
+
+
+    \end{fitchproof}
+\end{proof}
+
 
 so ``$ V / \cong $'' is a partition for ``$V$'' and every partition equals to a
 $[A]_{\cong}$ we denote it by $[A]$.
@@ -5999,30 +6079,30 @@ similarly we define ``$[A] \preceq [B] : \forall X \in [A] , Y \in [B] \quad X
     \have {14} {  [A] \preceq  [B] }
 \end{fitchproof}
 
-\begin{theorem} \textbf{Schroeder-Bernstein} $ X \precsim  Y , Y \precsim  X / \therefore X \cong  Y$\\
+\begin{theorem} \textbf{Schroeder-Bernstein} $ A \precsim  B , B \precsim  A / \therefore A \cong  B$\\
     Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
 \[
-    h(x) :=
+    h(y) :=
     \begin{cases}
-        f(g(y)) &
-        \exists i \quad y \in A_i
+        f \circ g(y)) &
+        \bigcup_{i \in \mathbb N} A_i
         \\
-        y       &
-        \exists i \quad y \in B_i
+        y             &
+        \bigcup_{i \in \mathbb N} B_i
     \end{cases}
 \]
 
 \[
-    C_0 := Y
+    C_0 := B
 \]
 \[
     C_{s(n)} := f \circ g [C_n]
 \]
 
 \[
-    D_0 := f[X]
+    D_0 := f[A]
 \]
 \[
     D_{s(n)} := f \circ g [D_n]
@@ -6032,27 +6112,242 @@ similarly we define ``$[A] \preceq [B] : \forall X \in [A] , Y \in [B] \quad X
     A_n := C_n - D_n
 \]
 \[
-    B_n := D_n - C_s(n)
+    B_n := D_n - C_{s(n)}
 \]
 
-\textbf{Claim 1: $ \bigcup_{i \in \mathbb{N}} A_i \cap  \bigcup_{i \in \mathbb{N}} B_i \not= \emptyset$}
+\textbf{Claim 0:  $\exists n\in\mathbb N \quad C_{s(n)}=C_n \to A\cong B$.}
 
-\textbf{Claim 2: $ Func(h)$}
+\begin{fitchproof}[arrayenv=tabular]
+    \have {14}
+    { \exists n\in\mathbb N\quad C_{s(n)}=C_n } \by{$ass$}{}
 
-\textbf{Claim 3: $ injective(h)$}
+    \open
+    \have {14}
+    { C_{s(n)}=C_n }\by{$acp$}{}
 
-\textbf{Claim 4: $ h : Y \xrightarrow[surj]{inj} f[X]$}
+    \have {14}
+    { C_n\subseteq D_n }\by{$lemma$}{}
+
+    \have {14}
+    { D_n\subseteq C_n }\by{$lemma$}{}
+
+    \have {14}
+    { C_n=D_n }\by{$\subseteq E$}{}
+
+    \have {14}
+    { A_n=C_n-D_n }\by{$def.$}{}
+
+    \have {14}
+    { A_n=\emptyset }\by{$=$}{}
+
+    \have {14}
+    { B_n=D_n-C_{s(n)} }\by{$def.$}{}
+
+    \have {14}
+    { B_n=\emptyset }\by{$=$}{}
+
+    \have {14}
+    { C_n=D_n=C_{s(n)} }\by{$\wedge I$}{}
+
+    \have {14}
+    { C_{s(n+1)}=C_{s(n)} }\by{$def.$}{}
+
+    \have {14}
+    { C_{s(n+1)}=C_n }\by{$=$}{}
+
+    \have {14}
+    { \cdots=C_n }\by{$induction$}{}
+
+    \have {14}
+    { C_i=C_n\quad(i\geq n) }\by{$induction$}{}
+
+    \have {14}
+    { \bigcup_{i\in\mathbb N}C_i=C_0 }\by{$def.$}{}
+
+    \have {14}
+    { B=C_0 }\by{$def.$}{}
+
+    \have {14}
+    { B\cong f[A] }\by{$lemma$}{}
+
+    \have {14}
+    { A\cong f[A] }\by{$lemma$}{}
+
+    \have {14}
+    { A\cong B }\by{$trans$}{}
+
+    \close
+
+
+\end{fitchproof}
+
+\textbf{Claim 1: $ \bigcup_{i \in \mathbb{N}} A_i \cap  \bigcup_{i \in \mathbb{N}} B_i = \emptyset$}
+
 
 \begin{fitchproof}[arrayenv=tabular]
 
-    % \open
-    \have {14} {  h : Y \xrightarrow[surj]{inj} f[X] }
-    \have {14} {  Y \cong f[X] }
-    \have {14} {  X \cong f[X] }
-    \have {14} {  X \cong Y }
-    % \close
+
+    \have {14}
+    { \exists x\;
+        \left(
+        x\in\bigcup_{i\in\mathbb N}A_i
+        \cap
+        \bigcup_{j\in\mathbb N}B_j
+        \right) }
+
+    \open
+    \have {14}
+    { x\in\bigcup_{i\in\mathbb N}A_i }
+    \have {14}
+    { x\in\bigcup_{j\in\mathbb N}B_j }
+
+    \have {14}
+    { \exists i\in\mathbb N\quad x\in A_i }\by{$\cup E$}{}
+
+    \have {14}
+    { \exists j\in\mathbb N\quad x\in B_j }\by{$\cup E$}{}
+
+    \open
+    \have {14}
+    { x\in A_i }\by{$acp$}{}
+
+    \have {14}
+    { x\in C_i } \by{$def.$}{}
+
+    \have {14}
+    { x\notin D_i }\by{$def.$}{}
+
+    \open
+    \have {14}
+    { x\in B_j } \by{$acp$}{}
+
+    \have {14}
+    { x\in D_j }\by{$def.$}{}
+
+    \have {14}
+    { x\notin C_{s(j)} }\by{$def.$}{}
+
+    \have {14}
+    { i\leq j\;\lor\;j<i }\by{$LEM$}{}
+
+    \open
+    \have {14}
+    { i\leq j }\by{$acp$}{}
+
+    \have {14}
+    { D_j\subseteq D_i }\by{$nesting$}{}
+
+    \have {14}
+    { x\in D_i }\by{$\subseteq E$}{}
+
+    \have {14}
+    { \bot }\by{$\neg E$}{}
+
+    \close
+
+    \open
+    \have {14}
+    { j<i }\by{$acp$}{}
+
+    \have {14}
+    { C_i\subseteq C_{s(j)} }\by{$nesting$}{}
+
+    \have {14}
+    { x\in C_{s(j)} }\by{$\subseteq E$}{}
+
+    \have {14}
+    { \bot }\by{$\neg E$}{}
+
+    \close
+
+    \have {14}
+    { \bot }\by{$\vee E$}{}
+
+    \close
+    \close
+
+    \have {14}
+    { \bot }\by{$\vee E$}{}
+
+    \close
+
+    \have {14}
+    { \neg\exists x\;
+        \left(
+        x\in\bigcup_{i\in\mathbb N}A_i
+        \cap
+        \bigcup_{j\in\mathbb N}B_j
+        \right) }\by{$\neg I$}{}
+
 
 \end{fitchproof}
+
+
+\textbf{Claim 2: $ \bigcup_{i \in \mathbb{N}} A_i \cup  \bigcup_{i \in \mathbb{N}} B_i = B$}
+
+
+
+\begin{fitchproof}[arrayenv=tabular]
+
+    \have {14}
+    { \bigcap_{i\in\mathbb N}C_i=\emptyset } \by{$ass$}{}
+
+    \have {14}
+    { C_{s(n)}\subseteq D_n\subseteq C_n }
+    \by{$nesting$}{}
+
+    \have {14}
+    { C_n-D_n\;\cup\;D_n-C_{s(n)}
+        =
+        C_n-C_{s(n)} } \by{$lemma$}{}
+
+    \have {14}
+    { A_n\cup B_n=C_n-C_{s(n)} }  \by{$def.$}{}
+
+    \have {14}
+    { \bigcup_{n\in\mathbb N}(A_n\cup B_n)
+        =
+        \bigcup_{n\in\mathbb N}
+        (C_n-C_{s(n)}) } \by{$\cup E$}{}
+
+    \have {14}
+    { \bigcup_{n\in\mathbb N}
+        (C_n-C_{s(n)})
+        =
+        C_0-\bigcap_{n\in\mathbb N}C_n }  \by{$lemma$}{}
+
+    \have {14}
+    { C_0-\bigcap_{n\in\mathbb N}C_n=C_0 }  \by{$ass$}{}
+
+    \have {14}
+    { C_0=B }\by{$def.$}{}
+
+    \have {14}
+    { \bigcup_{n\in\mathbb N}(A_n\cup B_n)=B }\by{$\exists E$}{}
+
+    \have {14}
+    { \bigcup_{n\in\mathbb N}A_n
+        \cup
+        \bigcup_{n\in\mathbb N}B_n=B }\by{$\cup$}{}
+
+
+\end{fitchproof}
+
+\textbf{Claim 3: $ Func(h)$}
+
+\textbf{Claim 4: $ injective(h)$}
+
+\textbf{Claim 5: $ h : B \xrightarrow[surj]{inj} f[A]$}
+\begin{fitchproof}[arrayenv=tabular]
+    % \open
+    \have {14} {  h : B \xrightarrow[surj]{inj} f[A] }
+    \have {14} {  B \cong f[A] }
+    \have {14} {  A \cong f[A] }
+    \have {14} {  A \cong B }
+    % \close
+\end{fitchproof}
+
+
 
 \begin{center}
 
@@ -6079,13 +6374,13 @@ similarly we define ``$[A] \preceq [B] : \forall X \in [A] , Y \in [B] \quad X
         % Text Node
         \draw (323.53,161.29) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle g$};
         % Text Node
-        \draw (176.84,52.89) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle X$};
+        \draw (176.84,52.89) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle A$};
         % Text Node
-        \draw (348.24,53.08) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle Y$};
+        \draw (348.24,53.08) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle B$};
         % Text Node
-        \draw (197.82,66.95) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize] [align=left] {$\displaystyle g[ Y]$};
+        \draw (197.82,66.95) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize] [align=left] {$\displaystyle g[ B]$};
         % Text Node
-        \draw (358.48,70.09) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize] [align=left] {$\displaystyle f[ X]$};
+        \draw (358.48,70.09) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize] [align=left] {$\displaystyle f[ A]$};
 
     \end{tikzpicture}
 
@@ -6132,21 +6427,21 @@ similarly we define ``$[A] \preceq [B] : \forall X \in [A] , Y \in [B] \quad X
         % Text Node
         \draw (331.33,164.67) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle g$};
         % Text Node
-        \draw (72,11.33) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle X$};
+        \draw (72,11.33) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle A$};
         % Text Node
-        \draw (386,10.67) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle Y$};
+        \draw (386,10.67) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle B$};
         % Text Node
-        \draw (106.67,31.33) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize] [align=left] {$\displaystyle g[ Y]$};
+        \draw (106.67,31.33) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize] [align=left] {$\displaystyle g[ B]$};
         % Text Node
-        \draw (408.67,32) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize] [align=left] {$\displaystyle f[ X]$};
+        \draw (408.67,32) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize] [align=left] {$\displaystyle f[ A]$};
         % Text Node
-        \draw (142.67,46) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {$\displaystyle g[ f[ X]]$};
+        \draw (142.67,46) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {$\displaystyle g[ f[ A]]$};
         % Text Node
-        \draw (401.33,54) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {$\displaystyle f[ g[ Y]]$};
+        \draw (401.33,54) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {$\displaystyle f[ g[ B]]$};
         % Text Node
-        \draw (138,69.33) node [anchor=north west][inner sep=0.75pt]  [font=\tiny] [align=left] {$\displaystyle g[ f[ g[ Y]]]$};
+        \draw (138,69.33) node [anchor=north west][inner sep=0.75pt]  [font=\tiny] [align=left] {$\displaystyle g[ f[ g[ B]]]$};
         % Text Node
-        \draw (440.67,69.33) node [anchor=north west][inner sep=0.75pt]  [font=\tiny] [align=left] {$\displaystyle f[ g[ f[ X]]]$};
+        \draw (440.67,69.33) node [anchor=north west][inner sep=0.75pt]  [font=\tiny] [align=left] {$\displaystyle f[ g[ f[ A]]]$};
         % Text Node
         \draw (455.33,228.67) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle A_{0}$};
         % Text Node
@@ -6198,7 +6493,7 @@ similarly we define ``$[A] \preceq [B] : \forall X \in [A] , Y \in [B] \quad X
         \have {14} {   \bot }
         \close
         % \have {14} {  X \cong f[X] }
-        % \have {14} {  X \cong Y }
+        % \have {14} {  X \cong B }
         \open
         \have {14} {  n \in  X  }
         \have {14} {  n \in  Dom(f)  }
@@ -10839,23 +11134,23 @@ Probability allows us not only to assign probabilities to events, but also to de
 
 \begin{definition}[Random Variable]
 
-Let $(S,P_S)$ be a finite probability space. A \textbf{**random variable**} is a function
+    Let $(S,P_S)$ be a finite probability space. A \textbf{**random variable**} is a function
 
-$$
-X:S\to\mathbb R.
-$$
+    $$
+        X:S\to\mathbb R.
+    $$
 
 \end{definition}
 
 \begin{definition}[Expected Value]
 
-Let $(S,P_S)$ be a finite probability space and let $X:S\to\mathbb R$ be a random variable. The \textbf{**expected value**} of $X$ is
+    Let $(S,P_S)$ be a finite probability space and let $X:S\to\mathbb R$ be a random variable. The \textbf{**expected value**} of $X$ is
 
-$$
-\mathbb E_{P_S}[X]
-=
-\sum_{s\in S}X(s)P_S(\{s\}).
-$$
+    $$
+        \mathbb E_{P_S}[X]
+        =
+        \sum_{s\in S}X(s)P_S(\{s\}).
+    $$
 
 \end{definition}
 
@@ -10864,72 +11159,72 @@ Thus, the expected value is a weighted average of the possible values of $X$, wh
 For a uniform finite probability space, we have
 
 $$
-P_S(\{s\})=\frac1{|S|},
+    P_S(\{s\})=\frac1{|S|},
 $$
 
 and therefore
 
 $$
-\mathbb E_{P_S}[X]
-=
-\frac1{|S|}
-\sum_{s\in S}X(s).
+    \mathbb E_{P_S}[X]
+    =
+    \frac1{|S|}
+    \sum_{s\in S}X(s).
 $$
 
 \begin{example}
 
-Consider a fair six-sided die. Let
+    Consider a fair six-sided die. Let
 
-$$
-S=\{1,2,3,4,5,6\}
-$$
+    $$
+        S=\{1,2,3,4,5,6\}
+    $$
 
-and define $X(s)=s$. Since every outcome has probability $1/6$,
+    and define $X(s)=s$. Since every outcome has probability $1/6$,
 
-$$
-\mathbb E_{P_S}[X]
-=
-\frac16(1+2+3+4+5+6)
-=
-\frac{21}{6}
-=
-\frac72.
-$$
+    $$
+        \mathbb E_{P_S}[X]
+        =
+        \frac16(1+2+3+4+5+6)
+        =
+        \frac{21}{6}
+        =
+        \frac72.
+    $$
 
-Thus the expected value of the result of a fair die is $7/2$.
+    Thus the expected value of the result of a fair die is $7/2$.
 \end{example}
 
 \begin{example}
 
-Suppose a game has three possible outcomes with payoffs
+    Suppose a game has three possible outcomes with payoffs
 
-$$
-X(s_1)=0,\qquad X(s_2)=10,\qquad X(s_3)=20,
-$$
+    $$
+        X(s_1)=0,\qquad X(s_2)=10,\qquad X(s_3)=20,
+    $$
 
-and suppose
+    and suppose
 
-$$
-P_S(\{s_1\})=\frac12,\qquad
-P_S(\{s_2\})=\frac13,\qquad
-P_S(\{s_3\})=\frac16.
-$$
+    $$
+        P_S(\{s_1\})=\frac12,\qquad
+        P_S(\{s_2\})=\frac13,\qquad
+        P_S(\{s_3\})=\frac16.
+    $$
 
-Then
+    Then
 
-$$
-\mathbb E_{P_S}[X]
-=
-0\cdot\frac12
-+
-10\cdot\frac13
-+
-20\cdot\frac16
-=
-\frac{20}{3}.
-$$
+    $$
+        \mathbb E_{P_S}[X]
+        =
+        0\cdot\frac12
+        +
+        10\cdot\frac13
+        +
+        20\cdot\frac16
+        =
+        \frac{20}{3}.
+    $$
 
-Thus the expected payoff is $20/3$.
+    Thus the expected payoff is $20/3$.
 \end{example}
 
 
@@ -10940,19 +11235,19 @@ The finite approach is based on counting the elements of a finite set. For conti
 
 \begin{definition}[Measure]
 
-Let $S$ be a set and let $\mathcal F\subseteq\mathcal P(S)$ be a $\sigma$-algebra. A \textbf{**measure**} on $(S,\mathcal F)$ is a function
+    Let $S$ be a set and let $\mathcal F\subseteq\mathcal P(S)$ be a $\sigma$-algebra. A \textbf{**measure**} on $(S,\mathcal F)$ is a function
 
-$$
-\mu:\mathcal F\to[0,\infty]
-$$
+    $$
+        \mu:\mathcal F\to[0,\infty]
+    $$
 
-such that $\mu(\varnothing)=0$ and, for every sequence $(A_n)_{n\in\mathbb N}$ of pairwise disjoint sets in $\mathcal F$,
+    such that $\mu(\varnothing)=0$ and, for every sequence $(A_n)_{n\in\mathbb N}$ of pairwise disjoint sets in $\mathcal F$,
 
-$$
-\mu\left(\bigcup_{n=0}^{\infty}A_n\right)
-=
-\sum_{n=0}^{\infty}\mu(A_n).
-$$
+    $$
+        \mu\left(\bigcup_{n=0}^{\infty}A_n\right)
+        =
+        \sum_{n=0}^{\infty}\mu(A_n).
+    $$
 
 \end{definition}
 
@@ -10961,7 +11256,7 @@ $$
 The most important measure on $\mathbb R$ for probability theory is the Lebesgue measure, denoted by $\lambda$. For an interval,
 
 $$
-\lambda([a,b])=b-a.
+    \lambda([a,b])=b-a.
 $$
 
 We can normalize the Lebesgue measure on a finite interval to obtain a probability measure.
@@ -10969,13 +11264,13 @@ We can normalize the Lebesgue measure on a finite interval to obtain a probabili
 
 \begin{definition}[Probability Measure]
 
-Let $(S,\mathcal{F})$ be a measurable space. A \textbf{**probability measure**} on $(S,\mathcal{F})$ is a measure $P$ satisfying
+    Let $(S,\mathcal{F})$ be a measurable space. A \textbf{**probability measure**} on $(S,\mathcal{F})$ is a measure $P$ satisfying
 
-$$
-P(S)=1.
-$$
+    $$
+        P(S)=1.
+    $$
 
-The triple $(S,\mathcal{F},P)$ is called a \textbf{**probability space**}.
+    The triple $(S,\mathcal{F},P)$ is called a \textbf{**probability space**}.
 \end{definition}
 
 In the finite case, the uniform probability of an event $A$ is obtained by dividing its cardinality by the cardinality of the whole space. In a continuous space, cardinality is no longer an appropriate notion of size. Instead, we use a measure.
@@ -10983,212 +11278,212 @@ In the finite case, the uniform probability of an event $A$ is obtained by divid
 For example, consider the interval $[a,b]$. Its natural size is its length,
 
 $$
-\mu([a,b])=b-a.
+    \mu([a,b])=b-a.
 $$
 
 Normalizing this measure gives the uniform probability on $[a,b]$.
 
 \begin{definition}[Uniform Probability on an Interval]
 
-Let $a<b$ and let $\mathcal F$ be the collection of Lebesgue measurable subsets of $[a,b]$. Define
+    Let $a<b$ and let $\mathcal F$ be the collection of Lebesgue measurable subsets of $[a,b]$. Define
 
-$$
-P_S(A)=\frac{\lambda(A)}{b-a}
-$$
+    $$
+        P_S(A)=\frac{\lambda(A)}{b-a}
+    $$
 
-for every $A\in\mathcal F$, where $S=[a,b]$. We call $P_S$ the \textbf{**uniform probability**} on $[a,b]$.
+    for every $A\in\mathcal F$, where $S=[a,b]$. We call $P_S$ the \textbf{**uniform probability**} on $[a,b]$.
 \end{definition}
 
 We first verify that this is indeed a probability measure.
 
 \begin{theorem}
 
-Let $S=[a,b]$ with $a<b$. The function
+    Let $S=[a,b]$ with $a<b$. The function
 
-$$
-P_S(A)=\frac{\lambda(A)}{b-a}
-$$
+    $$
+        P_S(A)=\frac{\lambda(A)}{b-a}
+    $$
 
-is a probability measure on the measurable subsets of $S$.
+    is a probability measure on the measurable subsets of $S$.
 
 \end{theorem}
 
 \begin{proof}
 
-Since $\lambda(\varnothing)=0$,
+    Since $\lambda(\varnothing)=0$,
 
-$$
-P_S(\varnothing)=\frac{\lambda(\varnothing)}{b-a}=0.
-$$
+    $$
+        P_S(\varnothing)=\frac{\lambda(\varnothing)}{b-a}=0.
+    $$
 
-Also,
+    Also,
 
-$$
-P_S(S)=\frac{\lambda([a,b])}{b-a}
-=\frac{b-a}{b-a}=1.
-$$
+    $$
+        P_S(S)=\frac{\lambda([a,b])}{b-a}
+        =\frac{b-a}{b-a}=1.
+    $$
 
-Now let $(A_n)_{n\in\mathbb N}$ be a sequence of pairwise disjoint measurable subsets of $S$. Since Lebesgue measure is countably additive,
+    Now let $(A_n)_{n\in\mathbb N}$ be a sequence of pairwise disjoint measurable subsets of $S$. Since Lebesgue measure is countably additive,
 
-$$
-\lambda\left(\bigcup_{n=0}^{\infty}A_n\right)
-=
-\sum_{n=0}^{\infty}\lambda(A_n).
-$$
+    $$
+        \lambda\left(\bigcup_{n=0}^{\infty}A_n\right)
+        =
+        \sum_{n=0}^{\infty}\lambda(A_n).
+    $$
 
-Therefore,
+    Therefore,
 
-$$
-P_S\left(\bigcup_{n=0}^{\infty}A_n\right)
-=
-\frac{1}{b-a}
-\sum_{n=0}^{\infty}\lambda(A_n)
-=
-\sum_{n=0}^{\infty}
-\frac{\lambda(A_n)}{b-a}
-=
-\sum_{n=0}^{\infty}P_S(A_n).
-$$
+    $$
+        P_S\left(\bigcup_{n=0}^{\infty}A_n\right)
+        =
+        \frac{1}{b-a}
+        \sum_{n=0}^{\infty}\lambda(A_n)
+        =
+        \sum_{n=0}^{\infty}
+        \frac{\lambda(A_n)}{b-a}
+        =
+        \sum_{n=0}^{\infty}P_S(A_n).
+    $$
 
-Hence $P_S$ is countably additive and satisfies $P_S(S)=1$. Thus it is a probability measure.
+    Hence $P_S$ is countably additive and satisfies $P_S(S)=1$. Thus it is a probability measure.
 \end{proof}
 
 The formula
 
 $$
-P_S(A)=\frac{\lambda(A)}{b-a}
+    P_S(A)=\frac{\lambda(A)}{b-a}
 $$
 
 is therefore the continuous analogue of the finite formula
 
 $$
-P_S(A)=\frac{|A|}{|S|}.
+    P_S(A)=\frac{|A|}{|S|}.
 $$
 
 In the finite case, cardinality measures the size of a set; in the continuous case, Lebesgue measure plays the same role.
 
 \begin{example}
 
-Choose a real number uniformly from $[0,1]$. What is the probability that the chosen number belongs to $[0,\frac14]$?
+    Choose a real number uniformly from $[0,1]$. What is the probability that the chosen number belongs to $[0,\frac14]$?
 
-Here $S=[0,1]$ and $A=[0,\frac14]$. Therefore
+    Here $S=[0,1]$ and $A=[0,\frac14]$. Therefore
 
-$$
-P_S(A)
-=
-\frac{\lambda([0,\frac14])}{\lambda([0,1])}
-=
-\frac{\frac14}{1}
-=
-\frac14.
-$$
-
-\end{example}
-
-\begin{example}
-
-Choose a real number uniformly from $[0,10]$. What is the probability that the chosen number belongs to $[3,7]$?
-
-Since
-
-$$
-\lambda([3,7])=7-3=4
-$$
-
-and
-
-$$
-\lambda([0,10])=10,
-$$
-
-we obtain
-
-$$
-P_S([3,7])
-=
-\frac{4}{10}
-=
-\frac25.
-$$
+    $$
+        P_S(A)
+        =
+        \frac{\lambda([0,\frac14])}{\lambda([0,1])}
+        =
+        \frac{\frac14}{1}
+        =
+        \frac14.
+    $$
 
 \end{example}
 
 \begin{example}
 
-Choose a real number uniformly from $[0,1]$. What is the probability that the chosen number is greater than $\frac12$?
+    Choose a real number uniformly from $[0,10]$. What is the probability that the chosen number belongs to $[3,7]$?
 
-Let
+    Since
 
-$$
-A=\left(\frac12,1\right].
-$$
+    $$
+        \lambda([3,7])=7-3=4
+    $$
 
-Then
+    and
 
-$$
-P_S(A)
-=
-\frac{\lambda((\frac12,1])}{\lambda([0,1])}
-=
-\frac{\frac12}{1}
-=
-\frac12.
-$$
+    $$
+        \lambda([0,10])=10,
+    $$
 
-Notice that whether the endpoint $\frac12$ is included does not affect the probability, since
+    we obtain
 
-$$
-P_S(\{\tfrac12\})=0.
-$$
+    $$
+        P_S([3,7])
+        =
+        \frac{4}{10}
+        =
+        \frac25.
+    $$
 
 \end{example}
 
 \begin{example}
 
-Choose a real number uniformly from $[0,1]$. What is the probability that the chosen number is rational?
+    Choose a real number uniformly from $[0,1]$. What is the probability that the chosen number is greater than $\frac12$?
 
-Let
+    Let
 
-$$
-A=\mathbb Q\cap[0,1].
-$$
+    $$
+        A=\left(\frac12,1\right].
+    $$
 
-The set $A$ is countable and therefore has Lebesgue measure zero. Hence
+    Then
 
-$$
-P_S(A)
-=
-\frac{\lambda(\mathbb Q\cap[0,1])}{\lambda([0,1])}
-=
-0.
-$$
+    $$
+        P_S(A)
+        =
+        \frac{\lambda((\frac12,1])}{\lambda([0,1])}
+        =
+        \frac{\frac12}{1}
+        =
+        \frac12.
+    $$
 
-Thus a randomly chosen real number from $[0,1]$ is rational with probability $0$.
+    Notice that whether the endpoint $\frac12$ is included does not affect the probability, since
+
+    $$
+        P_S(\{\tfrac12\})=0.
+    $$
+
 \end{example}
 
 \begin{example}
 
-Choose a real number uniformly from $[0,1]$. What is the probability that the chosen number belongs to
+    Choose a real number uniformly from $[0,1]$. What is the probability that the chosen number is rational?
 
-$$
-A=[0,\tfrac13]\cup[\tfrac23,1]?
-$$
+    Let
 
-The two intervals are disjoint except possibly at endpoints, which have measure zero. Therefore
+    $$
+        A=\mathbb Q\cap[0,1].
+    $$
 
-$$
-\lambda(A)
-=
-\frac13+\frac13
-=
-\frac23.
-$$
+    The set $A$ is countable and therefore has Lebesgue measure zero. Hence
 
-Consequently,
+    $$
+        P_S(A)
+        =
+        \frac{\lambda(\mathbb Q\cap[0,1])}{\lambda([0,1])}
+        =
+        0.
+    $$
 
-$$
-P_S(A)=\frac23.
-$$
+    Thus a randomly chosen real number from $[0,1]$ is rational with probability $0$.
+\end{example}
+
+\begin{example}
+
+    Choose a real number uniformly from $[0,1]$. What is the probability that the chosen number belongs to
+
+    $$
+        A=[0,\tfrac13]\cup[\tfrac23,1]?
+    $$
+
+    The two intervals are disjoint except possibly at endpoints, which have measure zero. Therefore
+
+    $$
+        \lambda(A)
+        =
+        \frac13+\frac13
+        =
+        \frac23.
+    $$
+
+    Consequently,
+
+    $$
+        P_S(A)=\frac23.
+    $$
 
 \end{example}
 
@@ -11200,13 +11495,13 @@ The same idea extends to continuous probability spaces. Instead of summing over 
 
 \begin{definition}[Expected Value in a Continuous Probability Space]
 
-Let $(S,\mathcal F,P)$ be a probability space and let $X:S\to\mathbb R$ be an integrable random variable. The \textbf{**expected value**} of $X$ is
+    Let $(S,\mathcal F,P)$ be a probability space and let $X:S\to\mathbb R$ be an integrable random variable. The \textbf{**expected value**} of $X$ is
 
-$$
-\mathbb E_{P_S}[X]
-=
-\int_S X\,dP.
-$$
+    $$
+        \mathbb E_{P_S}[X]
+        =
+        \int_S X\,dP.
+    $$
 
 \end{definition}
 
@@ -11215,775 +11510,687 @@ $$
 
 \begin{theorem}
 
-Let $X:S\to\mathbb R$ be integrable with respect to Lebesgue measure. Then
+    Let $X:S\to\mathbb R$ be integrable with respect to Lebesgue measure. Then
 
-$$
-\mathbb E_{P_S}[X]
-=
-\frac{1}{b-a}\int_a^b X(x)\,dx.
-$$
+    $$
+        \mathbb E_{P_S}[X]
+        =
+        \frac{1}{b-a}\int_a^b X(x)\,dx.
+    $$
 
 \end{theorem}
 
 \begin{proof}
 
-We first prove the result for nonnegative simple functions. Let
+    We first prove the result for nonnegative simple functions. Let
 
-$$
-\phi=\sum_{i=1}^n c_i \chi_{A_i},
-$$
+    $$
+        \phi=\sum_{i=1}^n c_i \chi_{A_i},
+    $$
 
-where the $A_i$ are pairwise disjoint measurable subsets of $S$ and $c_i\geq0$. By the definition of integration of a simple function,
+    where the $A_i$ are pairwise disjoint measurable subsets of $S$ and $c_i\geq0$. By the definition of integration of a simple function,
 
-$$
-\int_S\phi\,dP_S
-=
-\sum_{i=1}^n c_iP_S(A_i).
-$$
+    $$
+        \int_S\phi\,dP_S
+        =
+        \sum_{i=1}^n c_iP_S(A_i).
+    $$
 
-Since
+    Since
 
-$$
-P_S(A_i)=\frac{\lambda(A_i)}{b-a},
-$$
+    $$
+        P_S(A_i)=\frac{\lambda(A_i)}{b-a},
+    $$
 
-we obtain
+    we obtain
 
-$$
-\int_S\phi\,dP_S
-=
-\frac{1}{b-a}\sum_{i=1}^n c_i\lambda(A_i)
-=
-\frac{1}{b-a}\int_S\phi\,d\lambda.
-$$
+    $$
+        \int_S\phi\,dP_S
+        =
+        \frac{1}{b-a}\sum_{i=1}^n c_i\lambda(A_i)
+        =
+        \frac{1}{b-a}\int_S\phi\,d\lambda.
+    $$
 
-Now let $X:S\to[0,\infty]$ be measurable. There exists a sequence of nonnegative simple functions $(\phi_n)$ such that $\phi_n\uparrow X$. By the Monotone Convergence Theorem,
+    Now let $X:S\to[0,\infty]$ be measurable. There exists a sequence of nonnegative simple functions $(\phi_n)$ such that $\phi_n\uparrow X$. By the Monotone Convergence Theorem,
 
-$$
-\int_S X\,dP_S
-=
-\lim_{n\to\infty}\int_S\phi_n\,dP_S.
-$$
+    $$
+        \int_S X\,dP_S
+        =
+        \lim_{n\to\infty}\int_S\phi_n\,dP_S.
+    $$
 
-Using the result for simple functions,
+    Using the result for simple functions,
 
-$$
-\begin{aligned}
-\int_S X\,dP_S
-&=
-\lim_{n\to\infty}
-\frac{1}{b-a}\int_S\phi_n\,d\lambda\\
-&=
-\frac{1}{b-a}\int_S X\,d\lambda,
-\end{aligned}
-$$
+    $$
+        \begin{aligned}
+            \int_S X\,dP_S
+             & =
+            \lim_{n\to\infty}
+            \frac{1}{b-a}\int_S\phi_n\,d\lambda \\
+             & =
+            \frac{1}{b-a}\int_S X\,d\lambda,
+        \end{aligned}
+    $$
 
-where the last equality follows again from the Monotone Convergence Theorem.
+    where the last equality follows again from the Monotone Convergence Theorem.
 
-Finally, let $X:S\to\mathbb R$ be integrable. Write
+    Finally, let $X:S\to\mathbb R$ be integrable. Write
 
-$$
-X=X^+-X^-,
-$$
+    $$
+        X=X^+-X^-,
+    $$
 
-where
+    where
 
-$$
-X^+=\max\{X,0\},
-\qquad
-X^-=\max\{-X,0\}.
-$$
+    $$
+        X^+=\max\{X,0\},
+        \qquad
+        X^-=\max\{-X,0\}.
+    $$
 
-Since $X$ is integrable, both $X^+$ and $X^-$ are integrable. Applying the result above to each of them gives
+    Since $X$ is integrable, both $X^+$ and $X^-$ are integrable. Applying the result above to each of them gives
 
-$$
-\begin{aligned}
-\int_S X\,dP_S
-&=
-\int_S X^+\,dP_S-\int_S X^-\,dP_S\\
-&=
-\frac{1}{b-a}
-\left(
-\int_S X^+\,d\lambda
--
-\int_S X^-\,d\lambda
-\right)\\
-&=
-\frac{1}{b-a}\int_S X\,d\lambda.
-\end{aligned}
-$$
+    $$
+        \begin{aligned}
+            \int_S X\,dP_S
+             & =
+            \int_S X^+\,dP_S-\int_S X^-\,dP_S \\
+             & =
+            \frac{1}{b-a}
+            \left(
+            \int_S X^+\,d\lambda
+            -
+            \int_S X^-\,d\lambda
+            \right)                           \\
+             & =
+            \frac{1}{b-a}\int_S X\,d\lambda.
+        \end{aligned}
+    $$
 
-Since $S=[a,b]$,
+    Since $S=[a,b]$,
 
-$$
-\int_S X\,d\lambda
-=
-\int_a^b X(x)\,dx.
-$$
+    $$
+        \int_S X\,d\lambda
+        =
+        \int_a^b X(x)\,dx.
+    $$
 
-Therefore,
+    Therefore,
 
-$$
-\boxed{
-\mathbb E_{P_S}[X]
-=
-\int_S X\,dP_S
-=
-\frac{1}{b-a}\int_a^b X(x)\,dx
-}.
-$$
+    $$
+        \boxed{
+            \mathbb E_{P_S}[X]
+            =
+            \int_S X\,dP_S
+            =
+            \frac{1}{b-a}\int_a^b X(x)\,dx
+        }.
+    $$
 
 \end{proof}
 
-\begin{example}
 
-Choose a real number $X$ uniformly from $[0,1]$. Then
-
-$$
-\mathbb E_{P_S}[X]
-=
-\int_0^1x\,dx
-=
-\frac12.
-$$
-
-Thus the expected value of a uniformly chosen number from $[0,1]$ is $1/2$.
-\end{example}
 
 \begin{example}
 
-Choose a real number $X$ uniformly from $[0,10]$. Then
+    Let $S=[0,1]$ and define the random variable
 
-$$
-\mathbb E_{P_S}[X]
-=
-\frac1{10}\int_0^{10}x\,dx
-=
-\frac1{10}\cdot\frac{10^2}{2}
-=
-5.
-$$
+    $$
+        X:S\to\mathbb R,
+        \qquad
+        X(x)=x.
+    $$
 
-Thus the expected value is the midpoint of the interval.
-\end{example}
+    Then, by the previous proposition,
 
-\begin{example}
+    $$
+        \mathbb E_{P_S}[X]
+        =
+        \int_0^1x\,dx
+        =
+        \frac12.
+    $$
 
-Let $X$ be uniformly distributed on $[0,1]$ and consider the random variable
-
-$$
-Y=X^2.
-$$
-
-Then
-
-$$
-\mathbb E[Y]
-=
-\int_0^1x^2\,dx
-=
-\frac13.
-$$
-
-Notice that
-
-$$
-\mathbb E[X^2]\neq(\mathbb E_{P_S}[X])^2,
-$$
-
-since
-
-$$
-\frac13\neq\frac14.
-$$
+    Thus the expected value of the coordinate function $X(x)=x$ on $[0,1]$ is $1/2$.
 
 \end{example}
 
 \begin{example}
 
-Let $X$ be uniformly distributed on $[a,b]$. Then
+    Let $S=[0,10]$ and define
 
-$$
-\mathbb E_{P_S}[X]
-=
-\frac1{b-a}\int_a^b x\,dx
-=
-\frac1{b-a}
-\left[\frac{x^2}{2}\right]_a^b.
-$$
+    $$
+        X:S\to\mathbb R,
+        \qquad
+        X(x)=x.
+    $$
 
-Hence
+    By the previous proposition,
 
-$$
-\mathbb E_{P_S}[X]
-=
-\frac{b^2-a^2}{2(b-a)}
-=
-\frac{a+b}{2}.
-$$
+    $$
+        \mathbb E_{P_S}[X]
+        =
+        \frac1{10}\int_0^{10}x\,dx
+        =
+        \frac1{10}\cdot\frac{10^2}{2}
+        =
+        5.
+    $$
 
-Thus, for a uniform distribution on an interval, the expected value is its midpoint.
-\end{example}
-
-\begin{example}
-
-Let $S=[0,1]$ and define the random variable
-
-$$
-X:S\to\mathbb R,
-\qquad
-X(x)=x.
-$$
-
-Then, by the previous proposition,
-
-$$
-\mathbb E_{P_S}[X]
-=
-\int_0^1x\,dx
-=
-\frac12.
-$$
-
-Thus the expected value of the coordinate function $X(x)=x$ on $[0,1]$ is $1/2$.
+    Thus the expected value of the coordinate function on $[0,10]$ is the midpoint of the interval.
 
 \end{example}
 
 \begin{example}
 
-Let $S=[0,10]$ and define
+    Let $S=[0,1]$ and define
 
-$$
-X:S\to\mathbb R,
-\qquad
-X(x)=x.
-$$
+    $$
+        X:S\to\mathbb R,
+        \qquad
+        X(x)=x^2.
+    $$
 
-By the previous proposition,
+    Then
 
-$$
-\mathbb E_{P_S}[X]
-=
-\frac1{10}\int_0^{10}x\,dx
-=
-\frac1{10}\cdot\frac{10^2}{2}
-=
-5.
-$$
+    $$
+        \mathbb E_{P_S}[X]
+        =
+        \int_0^1x^2\,dx
+        =
+        \frac13.
+    $$
 
-Thus the expected value of the coordinate function on $[0,10]$ is the midpoint of the interval.
+    On the other hand, if $Y:S\to\mathbb R$ is defined by $Y(x)=x$, then
 
-\end{example}
+    $$
+        \mathbb E_{P_S}[Y]=\frac12.
+    $$
 
-\begin{example}
+    Consequently,
 
-Let $S=[0,1]$ and define
+    $$
+        \mathbb E_{P_S}[X]
+        =
+        \frac13
+        \neq
+        \frac14
+        =
+        \left(\mathbb E_{P_S}[Y]\right)^2.
+    $$
 
-$$
-X:S\to\mathbb R,
-\qquad
-X(x)=x^2.
-$$
+    This illustrates that, in general,
 
-Then
-
-$$
-\mathbb E_{P_S}[X]
-=
-\int_0^1x^2\,dx
-=
-\frac13.
-$$
-
-On the other hand, if $Y:S\to\mathbb R$ is defined by $Y(x)=x$, then
-
-$$
-\mathbb E_{P_S}[Y]=\frac12.
-$$
-
-Consequently,
-
-$$
-\mathbb E_{P_S}[X]
-=
-\frac13
-\neq
-\frac14
-=
-\left(\mathbb E_{P_S}[Y]\right)^2.
-$$
-
-This illustrates that, in general,
-
-$$
-\mathbb E[X^2]\neq(\mathbb E[X])^2.
-$$
+    $$
+        \mathbb E[X^2]\neq(\mathbb E[X])^2.
+    $$
 
 \end{example}
 
 \begin{example}
 
-Let $S=[0,1]$ and define
+    Let $S=[0,1]$ and define
 
-$$
-X:S\to\mathbb R,
-\qquad
-X(x)=x(1-x).
-$$
+    $$
+        X:S\to\mathbb R,
+        \qquad
+        X(x)=x(1-x).
+    $$
 
-Then
+    Then
 
-$$
-\begin{aligned}
-\mathbb E_{P_S}[X]
-&=
-\int_0^1x(1-x)\,dx\\
-&=
-\int_0^1(x-x^2)\,dx\\
-&=
-\frac12-\frac13
-=
-\frac16.
-\end{aligned}
-$$
-
-\end{example}
-
-\begin{example}
-
-Let $S=[0,1]$ and let
-
-$$
-A=\left[0,\frac12\right].
-$$
-
-Define the indicator random variable
-
-$$
-X:S\to\mathbb R,
-\qquad
-X(x)=\mathbf 1_A(x).
-$$
-
-Thus,
-
-$$
-X(x)=
-\begin{cases}
-1,&0\leq x\leq\frac12,\\
-0,&\frac12<x\leq1.
-\end{cases}
-$$
-
-By the previous proposition,
-
-$$
-\mathbb E_{P_S}[X]
-=
-\int_0^1\mathbf 1_A(x)\,dx
-=
-\lambda(A)
-=
-\frac12.
-$$
-
-This agrees with the general identity
-
-$$
-\mathbb E_{P_S}[\mathbf 1_A]=P_S(A).
-$$
+    $$
+        \begin{aligned}
+            \mathbb E_{P_S}[X]
+             & =
+            \int_0^1x(1-x)\,dx  \\
+             & =
+            \int_0^1(x-x^2)\,dx \\
+             & =
+            \frac12-\frac13
+            =
+            \frac16.
+        \end{aligned}
+    $$
 
 \end{example}
 
 \begin{example}
 
-Let $S=[0,1]$ and define the Dirichlet function
+    Let $S=[0,1]$ and let
 
-$$
-X:S\to\mathbb R,
-\qquad
-X(x)=
-\begin{cases}
-1,&x\in\mathbb Q,\\
-0,&x\notin\mathbb Q.
-\end{cases}
-$$
+    $$
+        A=\left[0,\frac12\right].
+    $$
 
-The function $X$ is measurable because $\mathbb Q\cap[0,1]$ is countable and therefore Lebesgue measurable. Moreover,
+    Define the indicator random variable
 
-$$
-\lambda(\mathbb Q\cap[0,1])=0.
-$$
+    $$
+        X:S\to\mathbb R,
+        \qquad
+        X(x)=\mathbf \chi_A(x).
+    $$
 
-Hence, using the previous proposition,
+    Thus,
 
-$$
-\mathbb E_{P_S}[X]
-=
-\int_0^1X(x)\,dx
-=
-\lambda(\mathbb Q\cap[0,1])
-=
-0.
-$$
+    $$
+        X(x)=
+        \begin{cases}
+            1, & 0\leq x\leq\frac12, \\
+            0, & \frac12<x\leq1.
+        \end{cases}
+    $$
 
-Notice that $X(x)=1$ for every rational $x$, but the expected value is still $0$, because the rationals have Lebesgue measure zero.
+    By the previous proposition,
 
-\end{example}
+    $$
+        \mathbb E_{P_S}[X]
+        =
+        \int_0^1\mathbf \chi_A(x)\,dx
+        =
+        \lambda(A)
+        =
+        \frac12.
+    $$
 
-\begin{example}
+    This agrees with the general identity
 
-Let $S=[0,1]$ and define
-
-$$
-X:S\to\mathbb R,
-\qquad
-X(x)=
-\begin{cases}
-x,&x\in\mathbb Q,\\
-x^2,&x\notin\mathbb Q.
-\end{cases}
-$$
-
-Since $\mathbb Q\cap[0,1]$ has Lebesgue measure zero, the functions $X$ and $x^2$ are equal almost everywhere. Therefore,
-
-$$
-\mathbb E_{P_S}[X]
-=
-\int_0^1X(x)\,dx
-=
-\int_0^1x^2\,dx
-=
-\frac13.
-$$
-
-Thus changing a function on a set of probability zero does not change its expectation.
+    $$
+        \mathbb E_{P_S}[\mathbf \chi_A]=P_S(A).
+    $$
 
 \end{example}
 
 \begin{example}
 
-Let $S=[0,1]$ and define
+    Let $S=[0,1]$ and define the Dirichlet function
 
-$$
-X:S\to\mathbb R,
-\qquad
-X(x)=
-\begin{cases}
-1,&x\in[0,\frac14],\\
-2,&x\in(\frac14,\frac34],\\
-4,&x\in(\frac34,1].
-\end{cases}
-$$
+    $$
+        X:S\to\mathbb R,
+        \qquad
+        X(x)=
+        \begin{cases}
+            1, & x\in\mathbb Q,    \\
+            0, & x\notin\mathbb Q.
+        \end{cases}
+    $$
 
-Then
+    The function $X$ is measurable because $\mathbb Q\cap[0,1]$ is countable and therefore Lebesgue measurable. Moreover,
 
-$$
-\begin{aligned}
-\mathbb E_{P_S}[X]
-&=
-\int_0^1X(x)\,dx\\
-&=
-1\cdot\frac14
-+
-2\cdot\frac12
-+
-4\cdot\frac14\\
-&=
-\frac14+1+1
-=
-\frac94.
-\end{aligned}
-$$
+    $$
+        \lambda(\mathbb Q\cap[0,1])=0.
+    $$
 
-This gives the continuous analogue of the usual weighted-average formula for a discrete random variable.
-\end{example}
+    Hence, using the previous proposition,
 
-\begin{example}
+    $$
+        \mathbb E_{P_S}[X]
+        =
+        \int_0^1X(x)\,dx
+        =
+        \lambda(\mathbb Q\cap[0,1])
+        =
+        0.
+    $$
 
-Let $S=[0,1]$ and define
-
-$$
-X:S\to\mathbb R,
-\qquad
-X(x)=x^2.
-$$
-
-Then $X$ is integrable on $[0,1]$. By the previous proposition,
-
-$$
-\mathbb E_{P_S}[X]
-=
-\int_0^1x^2\,dx
-=
-\frac13.
-$$
+    Notice that $X(x)=1$ for every rational $x$, but the expected value is still $0$, because the rationals have Lebesgue measure zero.
 
 \end{example}
 
 \begin{example}
 
-Let $S=[-1,1]$ and define
+    Let $S=[0,1]$ and define
 
-$$
-X:S\to\mathbb R,
-\qquad
-X(x)=x^3.
-$$
+    $$
+        X:S\to\mathbb R,
+        \qquad
+        X(x)=
+        \begin{cases}
+            x,   & x\in\mathbb Q,    \\
+            x^2, & x\notin\mathbb Q.
+        \end{cases}
+    $$
 
-Then
+    Since $\mathbb Q\cap[0,1]$ has Lebesgue measure zero, the functions $X$ and $x^2$ are equal almost everywhere. Therefore,
 
-$$
-\mathbb E_{P_S}[X]
-=
-\frac12\int_{-1}^1x^3\,dx
-=
-0,
-$$
+    $$
+        \mathbb E_{P_S}[X]
+        =
+        \int_0^1X(x)\,dx
+        =
+        \int_0^1x^2\,dx
+        =
+        \frac13.
+    $$
 
-because $x^3$ is an odd function.
-
-Thus a random variable can take both positive and negative values while having expected value $0$.
-
-\end{example}
-
-\begin{example}
-
-Let $S=[0,1]$ and define
-
-$$
-X:S\to\mathbb R,
-\qquad
-X(x)=x(1-x).
-$$
-
-Then
-
-$$
-\begin{aligned}
-\mathbb E_{P_S}[X]
-&=
-\int_0^1x(1-x)\,dx\\
-&=
-\int_0^1(x-x^2)\,dx\\
-&=
-\frac12-\frac13
-=
-\frac16.
-\end{aligned}
-$$
+    Thus changing a function on a set of probability zero does not change its expectation.
 
 \end{example}
 
 \begin{example}
 
-Let $S=[0,2]$ and define
+    Let $S=[0,1]$ and define
 
-$$
-X:S\to\mathbb R,
-\qquad
-X(x)=
-\begin{cases}
-x,&0\leq x\leq1,\\
-2-x,&1<x\leq2.
-\end{cases}
-$$
+    $$
+        X:S\to\mathbb R,
+        \qquad
+        X(x)=
+        \begin{cases}
+            1, & x\in[0,\frac14],       \\
+            2, & x\in(\frac14,\frac34], \\
+            4, & x\in(\frac34,1].
+        \end{cases}
+    $$
 
-Then
+    Then
 
-$$
-\begin{aligned}
-\mathbb E_{P_S}[X]
-&=
-\frac12
-\left(
-\int_0^1x\,dx
-+
-\int_1^2(2-x)\,dx
-\right)\\
-&=
-\frac12
-\left(
-\frac12+\frac12
-\right)\\
-&=
-\frac12.
-\end{aligned}
-$$
+    $$
+        \begin{aligned}
+            \mathbb E_{P_S}[X]
+             & =
+            \int_0^1X(x)\,dx \\
+             & =
+            1\cdot\frac14
+            +
+            2\cdot\frac12
+            +
+            4\cdot\frac14    \\
+             & =
+            \frac14+1+1
+            =
+            \frac94.
+        \end{aligned}
+    $$
+
+    This gives the continuous analogue of the usual weighted-average formula for a discrete random variable.
+\end{example}
+
+\begin{example}
+
+    Let $S=[0,1]$ and define
+
+    $$
+        X:S\to\mathbb R,
+        \qquad
+        X(x)=x^2.
+    $$
+
+    Then $X$ is integrable on $[0,1]$. By the previous proposition,
+
+    $$
+        \mathbb E_{P_S}[X]
+        =
+        \int_0^1x^2\,dx
+        =
+        \frac13.
+    $$
 
 \end{example}
 
 \begin{example}
 
-Let $S=[0,1]$ and let
+    Let $S=[-1,1]$ and define
 
-$$
-A=\left[\frac14,\frac34\right].
-$$
+    $$
+        X:S\to\mathbb R,
+        \qquad
+        X(x)=x^3.
+    $$
 
-Define
+    Then
 
-$$
-X:S\to\mathbb R,
-\qquad
-X(x)=\mathbf 1_A(x).
-$$
+    $$
+        \mathbb E_{P_S}[X]
+        =
+        \frac12\int_{-1}^1x^3\,dx
+        =
+        0,
+    $$
 
-Thus,
+    because $x^3$ is an odd function.
 
-$$
-X(x)=
-\begin{cases}
-1,&\frac14\leq x\leq\frac34,\\
-0,&\text{otherwise}.
-\end{cases}
-$$
-
-Then
-
-$$
-\begin{aligned}
-\mathbb E_{P_S}[X]
-&=
-\int_0^1\mathbf 1_A(x)\,dx\\
-&=
-\int_{1/4}^{3/4}1\,dx\\
-&=
-\frac12.
-\end{aligned}
-$$
-
-In particular,
-
-$$
-\mathbb E_{P_S}[\mathbf 1_A]
-=
-P_S(A).
-$$
+    Thus a random variable can take both positive and negative values while having expected value $0$.
 
 \end{example}
 
 \begin{example}
 
-Let $S=[0,1]$ and define
+    Let $S=[0,1]$ and define
 
-$$
-X:S\to\mathbb R,
-\qquad
-X(x)=
-\begin{cases}
-1,&0\leq x<\frac12,\\
-3,&\frac12\leq x\leq1.
-\end{cases}
-$$
+    $$
+        X:S\to\mathbb R,
+        \qquad
+        X(x)=x(1-x).
+    $$
 
-Then
+    Then
 
-$$
-\begin{aligned}
-\mathbb E_{P_S}[X]
-&=
-\int_0^{1/2}1\,dx
-+
-\int_{1/2}^1 3\,dx\\
-&=
-\frac12+\frac32\\
-&=
-2.
-\end{aligned}
-$$
-
-Thus the expected value is the average of the two values $1$ and $3$, weighted according to the lengths of the regions on which they occur.
+    $$
+        \begin{aligned}
+            \mathbb E_{P_S}[X]
+             & =
+            \int_0^1x(1-x)\,dx  \\
+             & =
+            \int_0^1(x-x^2)\,dx \\
+             & =
+            \frac12-\frac13
+            =
+            \frac16.
+        \end{aligned}
+    $$
 
 \end{example}
 
 \begin{example}
 
-Let $S=[0,1]$ and define
+    Let $S=[0,2]$ and define
 
-$$
-X:S\to\mathbb R,
-\qquad
-X(x)=
-\begin{cases}
-x,&0\leq x\leq\frac12,\\
-x^2,&\frac12<x\leq1.
-\end{cases}
-$$
+    $$
+        X:S\to\mathbb R,
+        \qquad
+        X(x)=
+        \begin{cases}
+            x,   & 0\leq x\leq1, \\
+            2-x, & 1<x\leq2.
+        \end{cases}
+    $$
 
-Then
+    Then
 
-$$
-\begin{aligned}
-\mathbb E_{P_S}[X]
-&=
-\int_0^{1/2}x\,dx
-+
-\int_{1/2}^1x^2\,dx\\
-&=
-\frac18+
-\left[
-\frac{x^3}{3}
-\right]_{1/2}^1\\
-&=
-\frac18+
-\frac13-\frac1{24}\\
-&=
-\frac5{12}.
-\end{aligned}
-$$
-
-\end{example}
-
-\begin{example}
-
-Let $S=[0,1]$ and define
-
-$$
-X:S\to\mathbb R,
-\qquad
-X(x)=\frac{1}{1+x}.
-$$
-
-Since $X$ is continuous on $[0,1]$, it is integrable. By the previous proposition,
-
-$$
-\begin{aligned}
-\mathbb E_{P_S}[X]
-&=
-\int_0^1\frac{1}{1+x}\,dx\\
-&=
-\left[\ln(1+x)\right]_0^1\\
-&=
-\ln 2.
-\end{aligned}
-$$
+    $$
+        \begin{aligned}
+            \mathbb E_{P_S}[X]
+             & =
+            \frac12
+            \left(
+            \int_0^1x\,dx
+            +
+            \int_1^2(2-x)\,dx
+            \right) \\
+             & =
+            \frac12
+            \left(
+            \frac12+\frac12
+            \right) \\
+             & =
+            \frac12.
+        \end{aligned}
+    $$
 
 \end{example}
 
 \begin{example}
 
-Let $S=[0,1]$ and define
+    Let $S=[0,1]$ and let
 
-$$
-X:S\to\mathbb R,
-\qquad
-X(x)=e^x.
-$$
+    $$
+        A=\left[\frac14,\frac34\right].
+    $$
 
-Then
+    Define
 
-$$
-\begin{aligned}
-\mathbb E_{P_S}[X]
-&=
-\int_0^1e^x\,dx\\
-&=
-\left[e^x\right]_0^1\\
-&=
-e-1.
-\end{aligned}
-$$
+    $$
+        X:S\to\mathbb R,
+        \qquad
+        X(x)=\mathbf \chi_A(x).
+    $$
+
+    Thus,
+
+    $$
+        X(x)=
+        \begin{cases}
+            1, & \frac14\leq x\leq\frac34, \\
+            0, & \text{otherwise}.
+        \end{cases}
+    $$
+
+    Then
+
+    $$
+        \begin{aligned}
+            \mathbb E_{P_S}[X]
+             & =
+            \int_0^1\mathbf \chi_A(x)\,dx \\
+             & =
+            \int_{1/4}^{3/4}1\,dx         \\
+             & =
+            \frac12.
+        \end{aligned}
+    $$
+
+    In particular,
+
+    $$
+        \mathbb E_{P_S}[\mathbf \chi_A]
+        =
+        P_S(A).
+    $$
+
+\end{example}
+
+\begin{example}
+
+    Let $S=[0,1]$ and define
+
+    $$
+        X:S\to\mathbb R,
+        \qquad
+        X(x)=
+        \begin{cases}
+            1, & 0\leq x<\frac12,    \\
+            3, & \frac12\leq x\leq1.
+        \end{cases}
+    $$
+
+    Then
+
+    $$
+        \begin{aligned}
+            \mathbb E_{P_S}[X]
+             & =
+            \int_0^{1/2}1\,dx
+            +
+            \int_{1/2}^1 3\,dx \\
+             & =
+            \frac12+\frac32    \\
+             & =
+            2.
+        \end{aligned}
+    $$
+
+    Thus the expected value is the average of the two values $1$ and $3$, weighted according to the lengths of the regions on which they occur.
+
+\end{example}
+
+\begin{example}
+
+    Let $S=[0,1]$ and define
+
+    $$
+        X:S\to\mathbb R,
+        \qquad
+        X(x)=
+        \begin{cases}
+            x,   & 0\leq x\leq\frac12, \\
+            x^2, & \frac12<x\leq1.
+        \end{cases}
+    $$
+
+    Then
+
+    $$
+        \begin{aligned}
+            \mathbb E_{P_S}[X]
+             & =
+            \int_0^{1/2}x\,dx
+            +
+            \int_{1/2}^1x^2\,dx \\
+             & =
+            \frac18+
+            \left[
+                \frac{x^3}{3}
+                \right]_{1/2}^1 \\
+             & =
+            \frac18+
+            \frac13-\frac1{24}  \\
+             & =
+            \frac5{12}.
+        \end{aligned}
+    $$
+
+\end{example}
+
+\begin{example}
+
+    Let $S=[0,1]$ and define
+
+    $$
+        X:S\to\mathbb R,
+        \qquad
+        X(x)=\frac{1}{1+x}.
+    $$
+
+    Since $X$ is continuous on $[0,1]$, it is integrable. By the previous proposition,
+
+    $$
+        \begin{aligned}
+            \mathbb E_{P_S}[X]
+             & =
+            \int_0^1\frac{1}{1+x}\,dx \\
+             & =
+            \left[\ln(1+x)\right]_0^1 \\
+             & =
+            \ln 2.
+        \end{aligned}
+    $$
+
+\end{example}
+
+\begin{example}
+
+    Let $S=[0,1]$ and define
+
+    $$
+        X:S\to\mathbb R,
+        \qquad
+        X(x)=e^x.
+    $$
+
+    Then
+
+    $$
+        \begin{aligned}
+            \mathbb E_{P_S}[X]
+             & =
+            \int_0^1e^x\,dx      \\
+             & =
+            \left[e^x\right]_0^1 \\
+             & =
+            e-1.
+        \end{aligned}
+    $$
 
 \end{example}
 
@@ -11992,33 +12199,33 @@ $$
 We can therefore see the common structure between the finite and continuous cases. In the finite case, expected value is obtained by a weighted sum,
 
 $$
-\mathbb E_{P_S}[X]=\sum_{s\in S}X(s)P_S(\{s\}),
+    \mathbb E_{P_S}[X]=\sum_{s\in S}X(s)P_S(\{s\}),
 $$
 
 while in the continuous case it is obtained by integration,
 
 $$
-\mathbb E_{P_S}[X]=\int_S X\,dP.
+    \mathbb E_{P_S}[X]=\int_S X\,dP.
 $$
 
 For a uniform finite space, this is an ordinary average,
 
 $$
-\mathbb E_{P_S}[X]=\frac1{|S|}\sum_{s\in S}X(s),
+    \mathbb E_{P_S}[X]=\frac1{|S|}\sum_{s\in S}X(s),
 $$
 
 whereas for a uniform interval it is an average integral,
 
 $$
-\mathbb E_{P_S}[X]=\frac1{b-a}\int_a^bX(x)\,dx.
+    \mathbb E_{P_S}[X]=\frac1{b-a}\int_a^bX(x)\,dx.
 $$
 
 This gives another important connection:
 
 $$
-\text{finite average}
-\;\longrightarrow\;
-\text{integral average}.
+    \text{finite average}
+    \;\longrightarrow\;
+    \text{integral average}.
 $$
 
 Later, the nonstandard approach will allow these averages to be represented using hyperfinite sums, providing a direct connection between finite, continuous, and nonstandard probability.
@@ -12030,7 +12237,7 @@ The finite probability space provides a natural starting point for a nonstandard
 Let ${}^*\mathbb{N}$ denote the hypernatural numbers. Since ${}^*\mathbb{N}$ contains infinite elements, we may choose
 
 $$
-    H\in{}^*\mathbb{N}\setminus\mathbb{N}.
+    H\in{}^*\mathbb{N}_\infty
 $$
 
 We call such an $H$ an \textbf{infinite hypernatural}.
@@ -12046,7 +12253,7 @@ Although ${}^*\mathbb{N}_H$ is infinite from the standard point of view, it beha
 This allows us to extend the finite formula for uniform probability without changing its form.
 
 \begin{definition}[Hyperfinite Probability]
-    Let $H\in{}^*\mathbb{N}\setminus\mathbb{N}$ and let ${}^*\mathbb{N}_H={1,\ldots,H}$. For every internal set $A\subseteq {}^*\mathbb{N}_H$, define its \textbf{hyperfinite probability} by
+    Let $H\in {}^*\mathbb{N}_\infty $ and let ${}^*\mathbb{N}_H={1,\ldots,H}$. For every internal set $A\subseteq {}^*\mathbb{N}_H$, define its \textbf{hyperfinite probability} by
 
     $$
         P_H(A)=\frac{|A_H|}{H}.
@@ -12103,7 +12310,7 @@ This suggests that the standard probability associated with a hyperfinite event 
     Let $A\subseteq {}^*\mathbb{N}_H$ be internal. If $P_H(A)$ is finite, define
 
     $$
-        P(A)=\operatorname{st}\bigl(P_H(A_H)\bigr).
+        P(A)=\operatorname{st}\bigl(P_H({}^*A_H)\bigr).
     $$
 
 \end{definition}
@@ -12162,7 +12369,7 @@ $$
 For an internal set $A\subseteq {}^*\mathbb{N}_H$, its hyperfinite probability is
 
 $$
-    P_H(A)=\frac{|A_H|}{H}.
+    P_H(A)=\frac{|{}^*A_H|}{H}.
 $$
 
 The finite approximations $A_n={a\in A:a<n}$ suggest that the standard value of this hyperfinite probability should correspond to the limiting density of the finite approximations. In fact, whenever the limit exists,
@@ -12170,7 +12377,7 @@ The finite approximations $A_n={a\in A:a<n}$ suggest that the standard value of 
 $$
     \lim_{n\to\infty}\frac{|A_n|}{n}
     =
-    \operatorname{st}\left(\frac{|A_H|}{H}\right).
+    \operatorname{st}\left(\frac{|{}^*A_H|}{H}\right).
 $$
 
 Thus the nonstandard formulation replaces the limiting process by a single hyperfinite computation. Instead of letting $n$ tend to infinity, we choose one infinite $H$ and count the elements of $A$ inside the hyperfinite set $S_H$. Taking the standard part then gives the same value as the classical limit.
@@ -12208,31 +12415,31 @@ The definition depends, in general, on the chosen well-ordering of $S$. Therefor
 In the nonstandard formulation, the same ordering gives the hyperfinite sample space
 
 $$
-\{{}^*s_i\}_{i<H},
-\qquad H\in{}^*\mathbb N\setminus\mathbb N.
+    \{{}^*s_i\}_{i<H},
+    \qquad H\in{}^*\mathbb N\setminus\mathbb N.
 $$
 
-For an internal event \(A_H\subseteq\{{}^*s_i\}_{i<H}\), we define
+For an internal event \({}^*A_H\subseteq\{{}^*s_i\}_{i<H}\), we define
 
 $$
-P_H(A_H)=\frac{|A_H|}{H}.
+    P_H({}^*A_H)=\frac{|{}^*A_H|}{H}.
 $$
 
 Whenever the corresponding standard density exists, we again have
 
 $$
-P_S(A)=\operatorname{st}\left(P_H(A_H)\right)
-=\operatorname{st}\left(\frac{|A_H|}{H}\right).
+    P_S(A)=\operatorname{st}\left(P_H({}^*A_H)\right)
+    =\operatorname{st}\left(\frac{|{}^*A_H|}{H}\right).
 $$
 
 Thus, after fixing a well-ordering, the passage from a finite probability space to a countable one can be summarized as
 
 $$
-\text{finite counting}
-\;\longrightarrow\;
-\lim_{n\to\infty}\frac{|A_n|}{n}
-\;\longleftrightarrow\;
-\operatorname{st}\left(\frac{|A_H|}{H}\right).
+    \text{finite counting}
+    \;\longrightarrow\;
+    \lim_{n\to\infty}\frac{|A_n|}{n}
+    \;\longleftrightarrow\;
+    \operatorname{st}\left(\frac{|{}^*A_H|}{H}\right).
 $$
 
 
@@ -12372,7 +12579,7 @@ $
 $
 and
 $
-    P(\{\mathrm{NoRain}\})=0.7.
+    P(\{\mathrm{NoRain}\})=0.7
 $
 
 \subsection{Expected Utility}
@@ -12447,7 +12654,7 @@ $$
         +
         P(\{\mathrm{NoRain}\})u(\mathrm{Take},\mathrm{NoRain}) \\
          & =0.3(10)+0.7(8)                                     \\
-         & =8.6.
+         & =8.6
     \end{aligned}
 $$
 
@@ -12461,7 +12668,7 @@ $$
         +
         P(\{\mathrm{NoRain}\})u(\mathrm{Leave},\mathrm{NoRain}) \\
          & =0.3(0)+0.7(10)                                      \\
-         & =7.
+         & =7
     \end{aligned}
 $$
 
@@ -12482,7 +12689,7 @@ $$
     \arg\max_{a\in A}EU(a)
     =
     \left\{
-    a\in A:
+    a\in A \mid
     EU(a)=\max_{b\in A}EU(b)
     \right\}.
 $$
