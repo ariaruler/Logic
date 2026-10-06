@@ -423,8 +423,8 @@ we denote propositions with ``$p ,q ,r ,...$''.
         \textbf{} for  ``$p,q,r$'' we can prove these.
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
-            \item $p \wedge q /\therefore q \wedge p$
-            \item $(p \wedge q) \wedge r /\therefore p \wedge(q \wedge r)$
+            \item $p \wedge q /\therefore q \wedge p$  \text{(Commutativity of Conjunction)}
+            \item $(p \wedge q) \wedge r /\therefore p \wedge(q \wedge r)$  \quad\text{(Associativity of Conjunction)}
             \item $p \rightarrow q /\therefore(p \wedge r) \rightarrow q$
             \item $(p \wedge q) \rightarrow r /\therefore p \rightarrow(q \rightarrow r)$
             \item  $p \rightarrow(q \rightarrow r) /\therefore(p \wedge r) \rightarrow q$
@@ -539,9 +539,9 @@ we denote propositions with ``$p ,q ,r ,...$''.
         \textbf{} for  ``$p,q,r$'' we can prove these.
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
-            \item $p \vee q /\therefore q \vee p$
-            \item $(p \vee q) \vee r /\therefore p \vee(q \vee r)$
-            \item $ p \wedge(q \vee r) /\therefore(p \wedge q) \vee(p \wedge r)$
+            \item $p \vee q /\therefore q \vee p$   \quad\text{(Commutativity of Disjunction)}
+            \item $(p \vee q) \vee r /\therefore p \vee(q \vee r)$  \quad\text{(Associativity of Disjunction)}
+            \item $ p \wedge(q \vee r) /\therefore(p \wedge q) \vee(p \wedge r)$  \quad\text{(Distribution and Factorization)}
             \item  $(p \rightarrow q) \wedge(r \rightarrow s) /\therefore(p \vee r) \rightarrow(q \vee s)$
         \end{enumerate}
     \end{example}
@@ -721,8 +721,8 @@ we denote propositions with ``$p ,q ,r ,...$''.
         \textbf{} for  ``$p,q,r$'' we can prove these.
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
-            \item  $p \rightarrow q, \neg q /\therefore \neg p$
-            \item  $p \rightarrow q /\therefore \neg p \vee q$
+            \item  $p \rightarrow q, \neg q /\therefore \neg p$  \quad\text{(Modus Tollens)}
+            \item  $p \rightarrow q /\therefore \neg p \vee q$  \quad\text{(Implication--Disjunction Equivalence)}
         \end{enumerate}
     \end{example}
 
@@ -843,13 +843,13 @@ we denote propositions with ``$p ,q ,r ,...$''.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
               % \item  $p /\therefore p$
-        \item  $/\therefore p \vee \neg p$
-        \item  $\neg p, p \vee q /\therefore q$
-        \item  $\neg p /\therefore p \rightarrow q$
-        \item  $p \rightarrow q \therefore /\therefore \neg q \rightarrow \neg p$
-        \item  $(p \vee q) \wedge(p \vee r) \therefore /\therefore(p \vee(q \wedge r)) $
-        \item  $\neg p \wedge \neg q \therefore /\therefore \neg(p \vee q)$ (De morgan)
-        \item $\neg p \vee \neg q \therefore /\therefore \neg(p \wedge q)$  (De morgan)
+        \item  $/\therefore p \vee \neg p$  \quad\text{(Law of Excluded Middle)}
+        \item  $\neg p, p \vee q /\therefore q$ \quad\text{(Disjunctive Syllogism)}
+        \item  $\neg p /\therefore p \rightarrow q$ \quad\text{(Vacuous Implication)}
+        \item  $p \rightarrow q \therefore /\therefore \neg q \rightarrow \neg p$ \quad\text{(Contraposition)}
+        \item  $(p \vee q) \wedge(p \vee r) \therefore /\therefore(p \vee(q \wedge r)) $ \quad\text{(Distribution and Factorization)}
+        \item  $\neg p \wedge \neg q \therefore /\therefore \neg(p \vee q)$   \quad\text{(De morgan)}
+        \item $\neg p \vee \neg q \therefore /\therefore \neg(p \wedge q)$    \quad\text{(De morgan)}
         \item  $(\neg p \rightarrow q) /\therefore((p \rightarrow q) \rightarrow q)$
         \item  $/\therefore(p \wedge q \rightarrow r) \wedge(p \wedge s \rightarrow r) \rightarrow(p \wedge(q \vee s) \rightarrow r)$
         \item $/\therefore(p \wedge q \rightarrow r) \vee(p \wedge s \rightarrow r) \rightarrow(p \wedge(q \wedge s) \rightarrow r)$
@@ -1150,6 +1150,10 @@ sentences.
     \end{tabular}
     % \printindex
 
+    \end{theorem}
+
+    \begin{proof} $\quad$
+
     \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}>{\centering\arraybackslash}m{7.5cm}}
         \begin{fitchproof}[arrayenv=tabular]
             \have  {2} {\phi (x)}                                         \by{$ass$  }{}
@@ -1165,8 +1169,13 @@ sentences.
             \have  {2} {\bigwedge\limits_{i=0}^n \phi [a_{i}/x]}      \by{$def.1$}{}
             \have  {2} { \phi [a/x]}                         \by{$\land E 2$}{}
         \end{fitchproof}
+        
+    \end{tabular}
 
-        \\
+
+
+        \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}>{\centering\arraybackslash}m{7.5cm}}
+
 
         \begin{fitchproof}[arrayenv=tabular]
             \have  {2} {\phi [a/x]}
@@ -1199,7 +1208,7 @@ sentences.
         \end{fitchproof}
     \end{tabular}
 
-\end{theorem}
+\end{proof}
 
 \begin{Rule}
     \textbf{$(schema)$} $( = I , = E)$
@@ -1247,12 +1256,12 @@ sentences.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
 
-        \item   $ \forall x(P(x) \wedge Q(x)) \therefore / \therefore \forall x P(x) \wedge \forall x Q(x) $ (D F $\forall \land$)(Distribution and Factorization of $\forall \land$)
-        \item   $ \exists x(P(x) \vee Q(x)) \therefore /\therefore \exists x P(x) \vee \exists x Q(x) $ (D F $\exists \lor$)
-        \item   $ \forall x P(x) \vee \forall x Q(x) /\therefore \forall x(P(x) \vee Q(x)) $   (F $\forall \lor$)
-        \item   $ \exists x(P(x) \wedge Q(x)) /\therefore \exists x P(x) \wedge \exists x Q(x) $   (D $\exists \land$)
-        \item   $ \forall x(P(x) \rightarrow Q(x)) /\therefore  \forall x P(x) \rightarrow \forall x Q(x) $  (D $\forall \to$)
-        \item   $\exists x P(x) \rightarrow \exists x Q(x) /\therefore \exists x(P(x) \rightarrow Q(x)) $  (F $\exists \to$)
+        \item   $ \forall x(P(x) \wedge Q(x)) \therefore / \therefore \forall x P(x) \wedge \forall x Q(x) $ \quad\text{(Distribution and Factorization of $\forall\land$)}
+        \item   $ \exists x(P(x) \vee Q(x)) \therefore /\therefore \exists x P(x) \vee \exists x Q(x) $     \quad\text{(Distribution and Factorization of $\exists\lor$)}
+        \item   $ \forall x P(x) \vee \forall x Q(x) /\therefore \forall x(P(x) \vee Q(x)) $       \quad\text{(Factorization of $\forall\lor$)}
+        \item   $ \exists x(P(x) \wedge Q(x)) /\therefore \exists x P(x) \wedge \exists x Q(x) $         \quad\text{(Distribution of $\exists\land$)}
+        \item   $ \forall x(P(x) \rightarrow Q(x)) /\therefore  \forall x P(x) \rightarrow \forall x Q(x) $        \quad\text{(Distribution of $\forall\to$)}
+        \item   $\exists x P(x) \rightarrow \exists x Q(x) /\therefore \exists x(P(x) \rightarrow Q(x)) $       \quad\text{(Factorization of $\exists\to$)}
 
     \end{enumerate}
 
@@ -1428,16 +1437,17 @@ sentences.
     \textbf{}for P,Q,R prove.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
-        \item   $ \forall x P(x) \wedge Q \therefore /\therefore \forall x(P(x) \wedge Q) $
-        \item   $ \forall x P(x) \vee Q \therefore /\therefore \forall x(P(x) \vee Q) $
-        \item   $ \exists x P(x) \wedge Q \therefore /\therefore \exists x(P(x) \wedge Q) $
-        \item   $ \exists x P(x) \vee Q \therefore /\therefore \exists x(P(x) \vee Q) $
-        \item   $Q \rightarrow \forall x P(x) \therefore /\therefore \forall x(Q \rightarrow P(x)) $
-        \item   $Q \rightarrow \exists x P(x) \therefore /\therefore \exists x(Q \rightarrow P(x)) $
-        \item   $\forall x P(x) \rightarrow Q \therefore /\therefore \exists x(P(x) \rightarrow Q) $
-        \item   $\exists x P(x) \rightarrow Q \therefore /\therefore \forall x(P(x) \rightarrow Q) $
-        \item   $ \exists x \neg P(x) \therefore /\therefore \neg \forall x P(x)  $  (De morgan)
-        \item   $ \forall x \neg P(x) \therefore /\therefore \neg \exists x P(x) $ (De morgan)
+        \item   $ \forall x P(x) \wedge Q \therefore /\therefore \forall x(P(x) \wedge Q) $ \quad\text{(Distribution and Factorization of $\forall\land$)}
+        \item   $ \forall x P(x) \vee Q \therefore /\therefore \forall x(P(x) \vee Q) $ \quad\text{(Distribution and Factorization of $\forall\lor$)}
+        \item   $ \exists x P(x) \wedge Q \therefore /\therefore \exists x(P(x) \wedge Q) $ \quad\text{(Distribution and Factorization of $\exists\land$)}
+        \item   $ \exists x P(x) \vee Q \therefore /\therefore \exists x(P(x) \vee Q) $ \quad\text{(Distribution and Factorization of $\exists\lor$)}
+        \item   $Q \rightarrow \forall x P(x) \therefore /\therefore \forall x(Q \rightarrow P(x)) $  \quad\text{(Distribution and Factorization of $\forall\rightarrow$)}
+        \item   $Q \rightarrow \exists x P(x) \therefore /\therefore \exists x(Q \rightarrow P(x)) $  \quad\text{(Distribution and Factorization of $\exists\rightarrow$)}
+        \item   $\forall x P(x) \rightarrow Q \therefore /\therefore \exists x(P(x) \rightarrow Q) $  \quad\text{(Factorization of $\forall\rightarrow$)}
+        \item   $\exists x P(x) \rightarrow Q \therefore /\therefore \forall x(P(x) \rightarrow Q) $         \quad\text{(Distribution of $\exists\rightarrow$)}
+        \item   $ \exists x \neg P(x) \therefore /\therefore \neg \forall x P(x)  $   \quad\text{(De morgan)}
+        \item   $ \forall x \neg P(x) \therefore /\therefore \neg \exists x P(x) $   \quad\text{(De morgan)}
+        \item   $ \exists x \forall y  P(x,y)  /\therefore \forall x \exists y  P(x,y)  $  \quad\text{(Quantifier Exchange Fallacy)}
         \item   $ \exists x \Big(P(x) \wedge \exists y Q(y) \rightarrow \forall z R(z)\Big) /\therefore \forall y \forall z \Big(\forall x P(x) \wedge Q(y) \rightarrow R(z)\Big) $
         \item   $ \forall x \exists y \Big(P(x) \wedge Q(y) \rightarrow \forall z R(z)\Big) /\therefore \forall z \Big(\exists x P(x) \wedge \forall y Q(y) \rightarrow R(z)\Big) $
         \item   $\forall x P(x) \rightarrow \exists y Q(y) /\therefore \exists x \exists y \Big(P(x) \rightarrow Q(y)\Big) $
@@ -1462,8 +1472,8 @@ if we are talking about ``$\forall x \in A \quad P(x)$'' it means ``$\forall x
     (x \in A \to P(x))$'' and when we are talking about ``$\exists x \in A \quad
     P(x)$'' it means ``$\exists x (x \in A \land P(x))$''.
 
-and we have a predicate ``$Type_0(X)$''.
-% \[ Type_0(X) : \exists Y \quad X \in Y \]
+and we have a predicate ``$Type_0(x)$''.
+\[ Type_0(x) : \exists Y \quad x \in Y \]
 
 % \[ Type_1(X) : \neg \exists Y \quad X \in Y \]
 
@@ -1484,7 +1494,6 @@ with rules and axioms.
     \textbf{Subset} a subset is a set where every element is also an element of another, larger set called the superset
     \[ A \subseteq B: \forall x(x \in A \rightarrow x \in B) \]
     or i.e.
-    \[ \forall x \in A \quad x \in B \]
 \end{definition}
 
 \begin{theorem}
@@ -1668,6 +1677,12 @@ so we can rewrite axiom of Extensionality like this.
         \have   {2} {\bot}                                          \by{$\exists E$ }{}
 
     \end{fitchproof}
+\end{lemma}
+
+
+
+\begin{lemma} $( \forall X \forall x ( x \in X \land Type_0(x) \leftrightarrow x \in X ) )$
+
 \end{lemma}
 
 Let's talk about some axioms in set theoty.These daxioms will come in handy
