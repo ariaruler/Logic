@@ -2126,7 +2126,6 @@ sometimes all members of a set is also set we call it ``set of sets''.
 
 
 \begin{lemma}
-    \textbf{}
     \[  Type_0(\emptyset) \]
 \end{lemma}
 
@@ -2168,6 +2167,14 @@ sometimes all members of a set is also set we call it ``set of sets''.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
+\begin{lemma} prove.
+     \begin{enumerate}
+        \item $A\in\mathcal P(A)$.
+        \item $\varnothing\in\mathcal P(A)$.
+        \item $\mathcal P(\varnothing)=\{\varnothing\}$.
+         \end{enumerate}
+\end{lemma}
+
 \begin{axiom}
     \textbf{Powerset}
     \[ \forall X \quad  Type_0(X) \to Type_0(P(X)) \]
@@ -2193,14 +2200,14 @@ sometimes all members of a set is also set we call it ``set of sets''.
                   = (A \cap B) \cup (A \cap C)$
               \quad\text{(Distributivity of Intersection over Union)}
         \item $(A \cup B) \cap (A \cup C)
-                 = A \cup (B \cap C)$
+                  = A \cup (B \cap C)$
               \quad\text{(Distributivity of Union over Intersection)}
         \item $B\cap\bigcup A=\bigcup\{B\cap X  \mid X \in A\}$
               \quad\text{(Distributivity of Intersection over Union)}
         \item $B\cup\bigcap A=\bigcap\{B\cup X  \mid X \in A\}.$
               \quad\text{(Distributivity of Union over Intersection)}
         \item $A \cup A^c = V$
-        \quad\text{(Law of Excluded Middle for sets)}
+              \quad\text{(Law of Excluded Middle for sets)}
         \item $A\cap A^c=\varnothing$
               \quad\text{(The Law of Contradiction for sets)}
         \item $A^c \cap B^c = (A \cup B)^c$
@@ -2212,7 +2219,20 @@ sometimes all members of a set is also set we call it ``set of sets''.
         \item $\left(\bigcap A\right)^c = \bigcup\{X^c \mid X \in A\}.$
               \quad\text{(De Morgan)}
         \item $\bigcap A \subseteq \bigcup A.$
-        
+        \item $A-(B\cup C)=(A-B)\cap(A-C)$ \quad\text{(De Morgan)}
+        \item $A-(B\cap C)=(A-B)\cup(A-C)$ \quad\text{(De Morgan)}
+        \item $(A\cup B)-C=(A-C)\cup(B-C)$.
+        \item $(A\cap B)-C=(A-C)\cap(B-C)$.
+        \item $A-(B-A)=A$.
+        \item $A-(A-B)=A\cap B$.
+        \item $A-B=\varnothing \therefore / \therefore A\subseteq B$.
+        \item $A-B=A \therefore / \therefore A\cap B=\varnothing$.
+        \item $A-B=B-A \therefore / \therefore A=B$.
+        \item $\mathcal P(A)\cap\mathcal P(B)=\mathcal P(A\cap B)$.
+        \item $\mathcal P(A)\cup\mathcal P(B)\subseteq\mathcal P(A\cup B)$.
+        \item $\mathcal P(A)\subseteq\mathcal P(B) \therefore / \therefore A\subseteq B$.
+        \item $\mathcal P(A-B) =\{X\in\mathcal P(A)\mid X\cap B=\varnothing\}$.
+        \item $\mathcal P(A)\setminus\mathcal P(B) =\{X\subseteq A\mid X\nsubseteq B\}$.
     \end{enumerate}
 \end{exercise}
 

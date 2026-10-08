@@ -8,77 +8,77 @@
 \contentsline {section}{\numberline {2.2}Rules of first order logic.}{15}{section.2.2}%
 \contentsline {chapter}{\numberline {3}The beginning of set theory}{21}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Axioms of set theory}{21}{section.3.1}%
-\contentsline {chapter}{\numberline {4}Relations and Functions}{31}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Ordered pair and Cartesian product}{31}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Relations}{32}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Functions}{36}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Family of sets}{39}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Structures and morphisms}{43}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Equivalences and Partitions}{44}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Orderings}{48}{section.4.7}%
-\contentsline {chapter}{\numberline {5} The beginning of Abstract Algebra }{57}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Group theory}{57}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Ring theory}{60}{section.5.2}%
-\contentsline {chapter}{\numberline {6} Natural numbers }{67}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Introduction to Natural numbers}{67}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Properties of Natural numbers}{68}{section.6.2}%
-\contentsline {section}{\numberline {6.3}The Recursion theorem}{70}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Arithmetic of Natural numbers}{76}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Peano arithmetic}{77}{section.6.5}%
-\contentsline {chapter}{\numberline {7}From Natural numbers to Complex numbers }{81}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Integers``$\mathbb {Z}$''}{81}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Rational numbers ``$\mathbb {Q}$''}{82}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Real numbers ``$\mathbb {R}$''}{84}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Complex numbers``$\mathbb {C}$''}{87}{section.7.4}%
-\contentsline {chapter}{\numberline {8}Finite and Infinite sets}{91}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Equipotent and Order in sets}{91}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Finite sets}{97}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Countable sets}{101}{section.8.3}%
-\contentsline {section}{\numberline {8.4}Uncountable sets}{110}{section.8.4}%
-\contentsline {chapter}{\numberline {9}Ordinals }{113}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Well ordered sets}{113}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Ordinal numbers}{115}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Transfinite Induction}{122}{section.9.3}%
-\contentsline {section}{\numberline {9.4}Transfinite Recurtion}{123}{section.9.4}%
-\contentsline {section}{\numberline {9.5}Arithmetic of Ordinals}{126}{section.9.5}%
-\contentsline {section}{\numberline {9.6}Transfinite Peano arithmetic}{126}{section.9.6}%
-\contentsline {chapter}{\numberline {10}Cardinals }{129}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Axiom of choice}{131}{chapter.11}%
-\contentsline {chapter}{\numberline {12}fantacy numbers($ \mathbb {Z} (Ord) , \mathbb {Q} (Ord) ,\mathbb {R} (Ord) ,\mathbb {C} (Ord)$) }{133}{chapter.12}%
-\contentsline {section}{\numberline {12.1}fantacy Integers``$\mathbb {Z} (Ord)$''}{133}{section.12.1}%
-\contentsline {section}{\numberline {12.2}fantacy Rational numbers ``$\mathbb {Q} (Ord) $''}{134}{section.12.2}%
-\contentsline {section}{\numberline {12.3}fantacy Real numbers ``$\mathbb {R} (Ord)$''}{136}{section.12.3}%
-\contentsline {section}{\numberline {12.4}fantacy Complex numbers``$\mathbb {C} (Ord)$''}{138}{section.12.4}%
-\contentsline {chapter}{\numberline {13}hyperreal numbers($ {}^*\mathbb {N} , {}^*\mathbb {Z}, {}^*\mathbb {Q} , {}^*\mathbb {R} $) }{141}{chapter.13}%
-\contentsline {section}{\numberline {13.1}Filters}{141}{section.13.1}%
-\contentsline {section}{\numberline {13.2}Ultrafilters}{141}{section.13.2}%
-\contentsline {section}{\numberline {13.3}Nonprincipal Ultrafilters}{143}{section.13.3}%
-\contentsline {section}{\numberline {13.4}Definition of ${}^\ast \mathbb {N}$, ${}^\ast \mathbb {Z}$, ${}^\ast \mathbb {Q}$, ${}^\ast \mathbb {R}$ , and ${}^*\mathbb {R}_{Ord}$}{144}{section.13.4}%
-\contentsline {section}{\numberline {13.5}The Ultrapower Construction of the Hyperreals}{146}{section.13.5}%
-\contentsline {section}{\numberline {13.6}(Un)limited, Infinitesimal, and Appreciable Numbers}{149}{section.13.6}%
-\contentsline {section}{\numberline {13.7}Arithmetic of Hyperreals}{150}{section.13.7}%
-\contentsline {section}{\numberline {13.8}Halos, Galaxies, and Real Comparisons}{151}{section.13.8}%
-\contentsline {section}{\numberline {13.9}Standard Parts}{152}{section.13.9}%
-\contentsline {chapter}{\numberline {14}New beginning for calculus }{155}{chapter.14}%
-\contentsline {section}{\numberline {14.1}Limits}{155}{section.14.1}%
-\contentsline {section}{\numberline {14.2}Continuity}{161}{section.14.2}%
-\contentsline {section}{\numberline {14.3}Derivatives}{163}{section.14.3}%
-\contentsline {section}{\numberline {14.4}Partial Derivatives}{163}{section.14.4}%
-\contentsline {section}{\numberline {14.5}Riemann Integral}{164}{section.14.5}%
-\contentsline {chapter}{\numberline {15}Well-Ordered Integral{\small (more powerful than Lebesgue Integral)\small }}{169}{chapter.15}%
-\contentsline {chapter}{\numberline {16}New beginning for Probability and Measeure theory}{171}{chapter.16}%
-\contentsline {section}{\numberline {16.1}Finite Approach}{171}{section.16.1}%
-\contentsline {subsection}{\numberline {16.1.1}Expected Value in the Finite Approach}{173}{subsection.16.1.1}%
-\contentsline {section}{\numberline {16.2}Continuous Approach}{174}{section.16.2}%
-\contentsline {subsection}{\numberline {16.2.1}Expected Value in the Continuous Approach}{177}{subsection.16.2.1}%
-\contentsline {section}{\numberline {16.3}Nonstandard Approach}{185}{section.16.3}%
-\contentsline {section}{\numberline {16.4}Countable Probability}{187}{section.16.4}%
-\contentsline {section}{\numberline {16.5}Decision Theory}{189}{section.16.5}%
-\contentsline {subsection}{\numberline {16.5.1}The State Space}{189}{subsection.16.5.1}%
-\contentsline {subsection}{\numberline {16.5.2}The Action Space}{190}{subsection.16.5.2}%
-\contentsline {subsection}{\numberline {16.5.3}The Utility Function}{190}{subsection.16.5.3}%
-\contentsline {subsection}{\numberline {16.5.4}Probability on the State Space}{191}{subsection.16.5.4}%
-\contentsline {subsection}{\numberline {16.5.5}Expected Utility}{191}{subsection.16.5.5}%
-\contentsline {subsection}{\numberline {16.5.6}The Maximizing Action}{192}{subsection.16.5.6}%
-\contentsline {subsection}{\numberline {16.5.7}A Decision Problem with Infinitesimal Probabilities}{192}{subsection.16.5.7}%
-\contentsline {section}{\numberline {16.6}Measure}{195}{section.16.6}%
+\contentsline {chapter}{\numberline {4}Relations and Functions}{33}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Ordered pair and Cartesian product}{33}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Relations}{34}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Functions}{38}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Family of sets}{41}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Structures and morphisms}{45}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Equivalences and Partitions}{46}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Orderings}{50}{section.4.7}%
+\contentsline {chapter}{\numberline {5} The beginning of Abstract Algebra }{59}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Group theory}{59}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Ring theory}{62}{section.5.2}%
+\contentsline {chapter}{\numberline {6} Natural numbers }{69}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Introduction to Natural numbers}{69}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Properties of Natural numbers}{70}{section.6.2}%
+\contentsline {section}{\numberline {6.3}The Recursion theorem}{72}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Arithmetic of Natural numbers}{78}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Peano arithmetic}{79}{section.6.5}%
+\contentsline {chapter}{\numberline {7}From Natural numbers to Complex numbers }{83}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Integers``$\mathbb {Z}$''}{83}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Rational numbers ``$\mathbb {Q}$''}{84}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Real numbers ``$\mathbb {R}$''}{86}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Complex numbers``$\mathbb {C}$''}{89}{section.7.4}%
+\contentsline {chapter}{\numberline {8}Finite and Infinite sets}{93}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Equipotent and Order in sets}{93}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Finite sets}{99}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Countable sets}{103}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Uncountable sets}{112}{section.8.4}%
+\contentsline {chapter}{\numberline {9}Ordinals }{115}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Well ordered sets}{115}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Ordinal numbers}{117}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Transfinite Induction}{124}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Transfinite Recurtion}{125}{section.9.4}%
+\contentsline {section}{\numberline {9.5}Arithmetic of Ordinals}{128}{section.9.5}%
+\contentsline {section}{\numberline {9.6}Transfinite Peano arithmetic}{128}{section.9.6}%
+\contentsline {chapter}{\numberline {10}Cardinals }{131}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Axiom of choice}{133}{chapter.11}%
+\contentsline {chapter}{\numberline {12}fantacy numbers($ \mathbb {Z} (Ord) , \mathbb {Q} (Ord) ,\mathbb {R} (Ord) ,\mathbb {C} (Ord)$) }{135}{chapter.12}%
+\contentsline {section}{\numberline {12.1}fantacy Integers``$\mathbb {Z} (Ord)$''}{135}{section.12.1}%
+\contentsline {section}{\numberline {12.2}fantacy Rational numbers ``$\mathbb {Q} (Ord) $''}{136}{section.12.2}%
+\contentsline {section}{\numberline {12.3}fantacy Real numbers ``$\mathbb {R} (Ord)$''}{138}{section.12.3}%
+\contentsline {section}{\numberline {12.4}fantacy Complex numbers``$\mathbb {C} (Ord)$''}{140}{section.12.4}%
+\contentsline {chapter}{\numberline {13}hyperreal numbers($ {}^*\mathbb {N} , {}^*\mathbb {Z}, {}^*\mathbb {Q} , {}^*\mathbb {R} $) }{143}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Filters}{143}{section.13.1}%
+\contentsline {section}{\numberline {13.2}Ultrafilters}{143}{section.13.2}%
+\contentsline {section}{\numberline {13.3}Nonprincipal Ultrafilters}{145}{section.13.3}%
+\contentsline {section}{\numberline {13.4}Definition of ${}^\ast \mathbb {N}$, ${}^\ast \mathbb {Z}$, ${}^\ast \mathbb {Q}$, ${}^\ast \mathbb {R}$ , and ${}^*\mathbb {R}_{Ord}$}{146}{section.13.4}%
+\contentsline {section}{\numberline {13.5}The Ultrapower Construction of the Hyperreals}{148}{section.13.5}%
+\contentsline {section}{\numberline {13.6}(Un)limited, Infinitesimal, and Appreciable Numbers}{151}{section.13.6}%
+\contentsline {section}{\numberline {13.7}Arithmetic of Hyperreals}{152}{section.13.7}%
+\contentsline {section}{\numberline {13.8}Halos, Galaxies, and Real Comparisons}{153}{section.13.8}%
+\contentsline {section}{\numberline {13.9}Standard Parts}{154}{section.13.9}%
+\contentsline {chapter}{\numberline {14}New beginning for calculus }{157}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Limits}{157}{section.14.1}%
+\contentsline {section}{\numberline {14.2}Continuity}{163}{section.14.2}%
+\contentsline {section}{\numberline {14.3}Derivatives}{165}{section.14.3}%
+\contentsline {section}{\numberline {14.4}Partial Derivatives}{165}{section.14.4}%
+\contentsline {section}{\numberline {14.5}Riemann Integral}{166}{section.14.5}%
+\contentsline {chapter}{\numberline {15}Well-Ordered Integral{\small (more powerful than Lebesgue Integral)\small }}{171}{chapter.15}%
+\contentsline {chapter}{\numberline {16}New beginning for Probability and Measeure theory}{173}{chapter.16}%
+\contentsline {section}{\numberline {16.1}Finite Approach}{173}{section.16.1}%
+\contentsline {subsection}{\numberline {16.1.1}Expected Value in the Finite Approach}{175}{subsection.16.1.1}%
+\contentsline {section}{\numberline {16.2}Continuous Approach}{176}{section.16.2}%
+\contentsline {subsection}{\numberline {16.2.1}Expected Value in the Continuous Approach}{179}{subsection.16.2.1}%
+\contentsline {section}{\numberline {16.3}Nonstandard Approach}{187}{section.16.3}%
+\contentsline {section}{\numberline {16.4}Countable Probability}{189}{section.16.4}%
+\contentsline {section}{\numberline {16.5}Decision Theory}{191}{section.16.5}%
+\contentsline {subsection}{\numberline {16.5.1}The State Space}{191}{subsection.16.5.1}%
+\contentsline {subsection}{\numberline {16.5.2}The Action Space}{192}{subsection.16.5.2}%
+\contentsline {subsection}{\numberline {16.5.3}The Utility Function}{192}{subsection.16.5.3}%
+\contentsline {subsection}{\numberline {16.5.4}Probability on the State Space}{193}{subsection.16.5.4}%
+\contentsline {subsection}{\numberline {16.5.5}Expected Utility}{193}{subsection.16.5.5}%
+\contentsline {subsection}{\numberline {16.5.6}The Maximizing Action}{194}{subsection.16.5.6}%
+\contentsline {subsection}{\numberline {16.5.7}A Decision Problem with Infinitesimal Probabilities}{194}{subsection.16.5.7}%
+\contentsline {section}{\numberline {16.6}Measure}{197}{section.16.6}%
