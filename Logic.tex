@@ -1150,9 +1150,9 @@ sentences.
     \end{tabular}
     % \printindex
 
-    \end{theorem}
+\end{theorem}
 
-    \begin{proof} $\quad$
+\begin{proof} $\quad$
 
     \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}>{\centering\arraybackslash}m{7.5cm}}
         \begin{fitchproof}[arrayenv=tabular]
@@ -1169,12 +1169,11 @@ sentences.
             \have  {2} {\bigwedge\limits_{i=0}^n \phi [a_{i}/x]}      \by{$def.1$}{}
             \have  {2} { \phi [a/x]}                         \by{$\land E 2$}{}
         \end{fitchproof}
-        
     \end{tabular}
 
 
 
-        \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}>{\centering\arraybackslash}m{7.5cm}}
+    \begin{tabular}{>{\centering\arraybackslash}m{7.5cm}>{\centering\arraybackslash}m{7.5cm}}
 
 
         \begin{fitchproof}[arrayenv=tabular]
@@ -1875,11 +1874,11 @@ later.
     Intersection:
     \[ A \cap B:=\{x \mid x \in A \wedge x \in B \} \]
     therefore.
-    \[\forall x( x \in A \cap B  \leftrightarrow  (Type_0(x) \wedge x \in A \wedge x \in B )) \]
+    \[\forall x( x \in A \cap B  \leftrightarrow  ( x \in A \wedge x \in B )) \]
     Union:
     \[ A \cup B:=\{x \mid x \in A \lor x \in B \} \]
     therefore.0
-    \[\forall x( x \in A \cup B  \leftrightarrow  (Type_0(x) \wedge (x \in A \lor x \in B ))) \]
+    \[\forall x( x \in A \cup B  \leftrightarrow  ( (x \in A \lor x \in B ))) \]
 \end{definition}
 
 \begin{theorem}
@@ -2067,7 +2066,7 @@ sometimes all members of a set is also set we call it ``set of sets''.
     \textbf{Subtraction}
     \[ A - B:=\{x \mid x \in A \wedge x \notin B \} \]
     therefore.
-    \[\forall x \Big( x \in A - B  \leftrightarrow  ( Type_0(x) \land  x \in A \wedge x \notin B ) \Big) \]
+    \[\forall x \Big( x \in A - B  \leftrightarrow  (   x \in A \wedge x \notin B ) \Big) \]
 \end{definition}
 
 \begin{theorem}
@@ -2173,6 +2172,50 @@ sometimes all members of a set is also set we call it ``set of sets''.
     \textbf{Powerset}
     \[ \forall X \quad  Type_0(X) \to Type_0(P(X)) \]
 \end{axiom}
+
+
+
+
+\begin{exercise}
+    \textbf{}for A,B,C prove.
+
+    \begin{enumerate}
+
+        \item $A \cap B = B \cap A$
+              \quad\text{(Commutativity of Intersection)}
+        \item $A \cup B = B \cup A$
+              \quad\text{(Commutativity of Union)}
+        \item $(A \cap B) \cap C = A \cap (B \cap C)$
+              \quad\text{(Associativity of Intersection)}
+        \item $(A \cup B) \cup C = A \cup (B \cup C)$
+              \quad\text{(Associativity of Union)}
+        \item $A \cap (B \cup C)
+                  = (A \cap B) \cup (A \cap C)$
+              \quad\text{(Distributivity of Intersection over Union)}
+        \item $(A \cup B) \cap (A \cup C)
+                 = A \cup (B \cap C)$
+              \quad\text{(Distributivity of Union over Intersection)}
+        \item $B\cap\bigcup A=\bigcup\{B\cap X  \mid X \in A\}$
+              \quad\text{(Distributivity of Intersection over Union)}
+        \item $B\cup\bigcap A=\bigcap\{B\cup X  \mid X \in A\}.$
+              \quad\text{(Distributivity of Union over Intersection)}
+        \item $A \cup A^c = V$
+        \quad\text{(Law of Excluded Middle for sets)}
+        \item $A\cap A^c=\varnothing$
+              \quad\text{(The Law of Contradiction for sets)}
+        \item $A^c \cap B^c = (A \cup B)^c$
+              \quad\text{(De Morgan)}
+        \item $A^c \cup B^c = (A \cap B)^c$
+              \quad\text{(De Morgan)}
+        \item $\left(\bigcup A\right)^c = \bigcap\{X^c \mid X \in A\}$
+              \quad\text{(De Morgan)}
+        \item $\left(\bigcap A\right)^c = \bigcup\{X^c \mid X \in A\}.$
+              \quad\text{(De Morgan)}
+        \item $\bigcap A \subseteq \bigcup A.$
+        
+    \end{enumerate}
+\end{exercise}
+
 
 from now on we don't get in to all details of proofs because it will be too
 long and hard to read. so we will take it easy from now and don't write all
