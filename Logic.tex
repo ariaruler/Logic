@@ -1449,10 +1449,9 @@ sentences.
         \item   $ \exists x \forall y  P(x,y)  /\therefore \forall x \exists y  P(x,y)  $  \quad\text{(Quantifier Exchange Fallacy)}
         \item   $ \exists x \Big(P(x) \wedge \exists y Q(y) \rightarrow \forall z R(z)\Big) /\therefore \forall y \forall z \Big(\forall x P(x) \wedge Q(y) \rightarrow R(z)\Big) $
         \item   $ \forall x \exists y \Big(P(x) \wedge Q(y) \rightarrow \forall z R(z)\Big) /\therefore \forall z \Big(\exists x P(x) \wedge \forall y Q(y) \rightarrow R(z)\Big) $
-        \item   $\forall x P(x) \rightarrow \exists y Q(y) /\therefore \exists x \exists y \Big(P(x) \rightarrow Q(y)\Big) $
         \item   $ \forall x \forall z \exists y \exists w \Big(P(y,z) \vee Q(z) \rightarrow R(x,w)\Big) /\therefore \Big(\exists z \forall y P(y,z) \vee \exists z Q(z)\Big) \rightarrow \forall x \exists w R(x,w) $
         \item   $ \exists x P(x) \vee \exists x \Big(Q(x) \wedge R(x) \Big) /\therefore \exists x \Big(P(x) \vee Q(x) \Big) \wedge \exists x \Big(P(x) \vee R(x)\Big) $
-        \item   $\exists x \exists z \forall y \Big(P(x,y) \rightarrow Q(z) \vee R(x,y) \Big) /\therefore \forall x \exists y P(x,y) \rightarrow \Big(\exists z Q(z) \vee \exists x \exists z R(x,y)\Big) $
+        \item   $\exists x \exists z \forall y \Big(P(x,y) \rightarrow Q(z) \vee R(x,z) \Big) /\therefore \forall x \exists y P(x,y) \rightarrow \Big(\exists z Q(z) \vee \exists x \exists z R(x,z)\Big) $
         \item   $ \forall x \exists y \Big(\exists z P(x,y,z) \wedge Q(x,y)\Big) \vee \forall x \exists y \exists z \Big(P(x,y,z) \wedge R(x,y)\Big) /\therefore \forall x \exists y \exists z \Big(P(x,y,z) \wedge(Q(x,y) \vee R(x,y))\Big) $
     \end{enumerate}
 \end{exercise}
