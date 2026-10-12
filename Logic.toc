@@ -11,7 +11,7 @@
 \contentsline {chapter}{\numberline {4}Relations and Functions}{33}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Ordered pair and Cartesian product}{33}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Relations}{34}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Functions}{38}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Functions}{37}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Family of sets}{41}{section.4.4}%
 \contentsline {section}{\numberline {4.5}Structures and morphisms}{45}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Equivalences and Partitions}{46}{section.4.6}%

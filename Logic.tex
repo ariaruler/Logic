@@ -2250,7 +2250,7 @@ what happened there.\twemoji{1f600}
     \[ (x,y) := \{ \{x\},\{x,y\} \}. \]
 \end{definition}
 
-so $\forall x,y \quad Type_0((x,y))$
+so $\forall x,y \quad Type_0(x) \land Type_0(y) \to Type_0((x,y))$
 
 \begin{definition}
     \textbf{Tuples}(n is a arbitrary number.)(this is a temporary definition, we will give a better one in the next chapter.)
@@ -2258,7 +2258,7 @@ so $\forall x,y \quad Type_0((x,y))$
 \end{definition}
 
 \begin{lemma}
-    \textbf{} $/ \therefore  (x_0,y_0) = (x_1,y_1) \leftrightarrow ((x_0=x_1) \wedge (y_0=y_1))$
+    \textbf{} $/ \therefore \forall x_0,x_1 \quad  (x_0,y_0) = (x_1,y_1) \leftrightarrow ((x_0=x_1) \wedge (y_0=y_1))$
     \\
     \\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
@@ -2343,15 +2343,15 @@ so $ \forall X,Y \quad Type_0(X) \land Type_0(Y) \to Type_0( X \times Y )$
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{fitchproof}[arrayenv=tabular]
-            \hypo [ ] {2} {t \in A }
-            \hypo [ ] {2} {s \in B }
-            \have  [ ]{2} {\therefore   (t,s) \in A \times B } \by{$\times I$}{}
+            \hypo [ ] {2} {a \in A }
+            \hypo [ ] {2} {b \in B }
+            \have  [ ]{2} {\therefore   (a,b) \in A \times B } \by{$\times I$}{}
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt}  \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
-            \have  [ ]{2} {\therefore   t \in A \times B }
+            \have  [ ]{2} {\therefore   a \in A \times B }
             \open
-            \have  [ ]{2} {   t = (x,y) }
+            \have  [ ]{2} {   a = (x,y) }
             \have [ ] {2} {x \in A }
             \have [ ] {2} {y \in B }
             \have [ ] {2} { \vdots }
@@ -2375,13 +2375,13 @@ so $ \forall X,Y \quad Type_0(X) \land Type_0(Y) \to Type_0( X \times Y )$
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{fitchproof}[arrayenv=tabular]
-            \hypo   [ ]{2} {  (t,s) \in A \times B }
-            \have [ ] {2} { \therefore  t \in A }
+            \hypo   [ ]{2} {  (a,b) \in A \times B }
+            \have [ ] {2} { \therefore  a \in A }
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
-            \hypo  [ ]{2} {  (t,s) \in A \times B }
-            \have  [ ] {2}  {\therefore  s \in B }
+            \hypo  [ ]{2} {  (a,b) \in A \times B }
+            \have  [ ] {2}  {\therefore  b \in B }
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt}
         \\
@@ -2393,15 +2393,7 @@ so $ \forall X,Y \quad Type_0(X) \land Type_0(Y) \to Type_0( X \times Y )$
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-\begin{exercise}
-    \textbf{} for sets A, B, C, prove.
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item  $/\therefore A \times (B \cap C) = (A \times B)\cap (A \times C)$
-        \item  $/\therefore A \times (B \cup C) = (A \times B) \cup (A \times C)$
-        \item  $ /\therefore A \times (B-C) = (A \times B) - (A \times C)$
-    \end{enumerate}
-\end{exercise}
+
 
 \section{Relations}
 
@@ -2450,14 +2442,14 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{fitchproof}[arrayenv=tabular]
-            \hypo   [ ]{2} {   t R s }
-            \have [ ] {2} {\therefore t \in Dom(R) }  \by{$Dom I$}{}
+            \hypo   [ ]{2} {   a R b }
+            \have [ ] {2} {\therefore a \in Dom(R) }  \by{$Dom I$}{}
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
-            \have  [ ]{2} {  t \in Dom(R) }
+            \have  [ ]{2} {  a \in Dom(R) }
             \open
-            \have  [ ]{2} {   t R y   }
+            \have  [ ]{2} {   a R y   }
             \have [ ] {2} { \vdots }
             \have [ ] {2} { \theta }
             \close
@@ -2479,14 +2471,14 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{fitchproof}[arrayenv=tabular]
-            \hypo   [ ]{2} {   t R s }
-            \have [ ] {2} {\therefore s \in Range(R) }  \by{$Range I$}{}
+            \hypo   [ ]{2} {   a R b }
+            \have [ ] {2} {\therefore b \in Range(R) }  \by{$Range I$}{}
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
-            \have  [ ]{2} {  s \in Range(R) }
+            \have  [ ]{2} {  b \in Range(R) }
             \open
-            \have  [ ]{2} {   x R s   }
+            \have  [ ]{2} {   x R b   }
             \have [ ] {2} { \vdots }
             \have [ ] {2} { \theta }
             \close
@@ -2519,14 +2511,14 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{fitchproof}[arrayenv=tabular]
-            \hypo   [ ]{2} {   t R s }
-            \have [ ] {2} {\therefore s R^{-1} t  }  \by{$()^{-1} I$}{}
+            \hypo   [ ]{2} {   a R b }
+            \have [ ] {2} {\therefore b R^{-1} a  }  \by{$()^{-1} I$}{}
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
-            \have  [ ]{2} {  t \in R^{-1} }
+            \have  [ ]{2} {  a \in R^{-1} }
             \open
-            \have  [ ]{2} {   t = (x,y) }
+            \have  [ ]{2} {   a = (x,y) }
             \have  [ ]{2} {   y R^{-1} x   }
             \have [ ] {2} { \vdots }
             \have [ ] {2} { \theta }
@@ -2560,15 +2552,15 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{fitchproof}[arrayenv=tabular]
-            \hypo   [ ]{2} {   t S s  }
-            \hypo   [ ]{2} {  s R r }
-            \have [ ] {2} {\therefore s R \circ S r  }  \by{$\circ I$}{}
+            \hypo   [ ]{2} {   a S b  }
+            \hypo   [ ]{2} {  b R c }
+            \have [ ] {2} {\therefore b R \circ S c  }  \by{$\circ I$}{}
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
-            \have  [ ]{2} {  t \in R \circ S }
+            \have  [ ]{2} {  a \in R \circ S }
             \open
-            \have  [ ]{2} {   t = (x,y) }
+            \have  [ ]{2} {   a = (x,y) }
             \have  [ ]{2} {   x S z  }
             \have  [ ]{2} {   z R y  }
             \have [ ] {2} { \vdots }
@@ -2602,16 +2594,16 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{fitchproof}[arrayenv=tabular]
-            \hypo   [ ]{2} {   t \in A }
-            \hypo   [ ]{2} {   t R s }
-            \have [ ] {2} {\therefore s \in R[A] }  \by{$R[] I$}{}
+            \hypo   [ ]{2} {   a \in A }
+            \hypo   [ ]{2} {   a R b }
+            \have [ ] {2} {\therefore b \in R[A] }  \by{$R[] I$}{}
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
-            \have  [ ]{2} {  s \in R[A] }
+            \have  [ ]{2} {  b \in R[A] }
             \open
             \have  [ ]{2} {   x \in A   }
-            \have  [ ]{2} {   x R s   }
+            \have  [ ]{2} {   x R b   }
             \have [ ] {2} { \vdots }
             \have [ ] {2} { \theta }
             \close
@@ -2621,16 +2613,16 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
         \\
         \hline
         \begin{fitchproof}[arrayenv=tabular]
-            \hypo   [ ]{2} {   s \in B }
-            \hypo   [ ]{2} {   t R s }
-            \have [ ] {2} {\therefore t \in R^{-1}[B] }  \by{$R^{-1}[] I$}{}
+            \hypo   [ ]{2} {   b \in B }
+            \hypo   [ ]{2} {   a R b }
+            \have [ ] {2} {\therefore a \in R^{-1}[B] }  \by{$R^{-1}[] I$}{}
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
-            \have  [ ]{2} {  t \in R^{-1}[B] }
+            \have  [ ]{2} {  a \in R^{-1}[B] }
             \open
             \have  [ ]{2} {   y \in B   }
-            \have  [ ]{2} {   t R y   }
+            \have  [ ]{2} {   a R y   }
             \have [ ] {2} { \vdots }
             \have [ ] {2} { \theta }
             \close
@@ -2672,9 +2664,9 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
         \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
             \have [ ] {2} {  Func(f) }
-            \hypo   [ ]{2} {   t f s }
-            \hypo   [ ]{2} {   t f r }
-            \have [ ] {2} {\therefore s = r }    \by{$Func E$}{}
+            \hypo   [ ]{2} {   a f b }
+            \hypo   [ ]{2} {   a f c }
+            \have [ ] {2} {\therefore b = c }    \by{$Func E$}{}
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt}
         \\
@@ -2692,13 +2684,13 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
     \[ f\upharpoonright X := \{(x, y) \in f \mid x \in X \} \]
 \end{definition}
 
-\begin{definition}
-    \textbf{Output of a function} assume a function \textbf{f} and  \textbf{$(x,y) \in f$},
-    we define ``$f(x):= y$'' and we call ``$f(x)$'' a ``\textbf{output of a function}''.
+\begin{axiom}[output of a function]
+     assume a function \textbf{f} and  \textbf{$(x,y) \in f$},
+    we can use ``$f(x)$'' as ``$f(x)= y$'' and we call ``$f(x)$'' a ``\textbf{output of a function}''.
     and the reverse is also true, if we use ``$f(x)$'',
     we have a function  ``\textbf{f}'' and we can say  ``$x \in Dom(f)$''.
     ``output of a function'' is object too.
-\end{definition}
+\end{axiom}
 
 \begin{theorem}
     \textbf{$(schema)$}
@@ -3965,6 +3957,17 @@ if the structure clear to us we don't write structure index ``$min(\_),
 
     this theorem holds for ``$max , sup$'' too.
 \end{theorem}
+
+
+\begin{exercise}
+    \textbf{} for sets A, B, C, prove.
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item  $/\therefore A \times (B \cap C) = (A \times B)\cap (A \times C)$
+        \item  $/\therefore A \times (B \cup C) = (A \times B) \cup (A \times C)$
+        \item  $ /\therefore A \times (B-C) = (A \times B) - (A \times C)$
+    \end{enumerate}
+\end{exercise}
 
 \chapter{ The beginning of Abstract Algebra }
 
