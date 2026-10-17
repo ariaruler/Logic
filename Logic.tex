@@ -266,8 +266,6 @@ $v$, $w$,$...$
         % Labels between lines
         \node at (-0.5,2) {$1.$};
         \node at (-0.5,1) {$2.$};
-
-
         \node at (0.2,2) {$a$};
         \node at (1.2,1) {$a$};
     \end{tikzpicture}
@@ -658,6 +656,10 @@ we denote propositions with ``$p ,q ,r ,...$''.
 
     \begin{definition}
         \textbf{$\bot$} : $\varphi  \land \neg \varphi$
+    \end{definition}
+
+    \begin{definition}
+        \textbf{$\top$} : $\varphi  \lor \neg \varphi$
     \end{definition}
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
@@ -2188,11 +2190,11 @@ sometimes all members of a set is also set we call it ``set of sets''.
 \end{theorem}
 
 \begin{lemma} prove.
-     \begin{enumerate}
+    \begin{enumerate}
         \item $A\in\mathcal P(A)$.
         \item $\varnothing\in\mathcal P(A)$.
         \item $\mathcal P(\varnothing)=\{\varnothing\}$.
-         \end{enumerate}
+    \end{enumerate}
 \end{lemma}
 
 \begin{axiom}
@@ -2472,7 +2474,7 @@ so $ \forall X,Y \quad Type_0(X) \land Type_0(Y) \to Type_0( X \times Y )$
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt}  \rule[0pt]{0pt}{0pt} &
         \begin{fitchproof}[arrayenv=tabular]
-            \have  [ ]{2} {\therefore   a \in A \times B }
+            \have  [ ]{2} { a \in A \times B }
             \open
             \have  [ ]{2} {   a = (x,y) }
             \have [ ] {2} {x \in A }
@@ -2480,7 +2482,7 @@ so $ \forall X,Y \quad Type_0(X) \land Type_0(Y) \to Type_0( X \times Y )$
             \have [ ] {2} { \vdots }
             \have [ ] {2} { \theta }
             \close
-            \have [ ] {2} { \theta }     \by{$\times E$}{}
+            \have [ ] {2} { \therefore  \theta }     \by{$\times E$}{}
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt}
         \\
@@ -2808,7 +2810,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
 \end{definition}
 
 \begin{axiom}[output of a function]
-     assume a function \textbf{f} and  \textbf{$(x,y) \in f$},
+    assume a function \textbf{f} and  \textbf{$(x,y) \in f$},
     we can use ``$f(x)$'' as ``$f(x)= y$'' and we call ``$f(x)$'' a ``\textbf{output of a function}''.
     and the reverse is also true, if we use ``$f(x)$'',
     we have a function  ``\textbf{f}'' and we can say  ``$x \in Dom(f)$''.
@@ -3151,11 +3153,9 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
         \open
         \have {1} { x \in \bigcap_{i \in I} A_i  }                                 \by{$acp$}{}
         \have  {2} {x \in \bigcap \{ A_i \}_{i \in I}}                                \by{$def.1$}{}
-        \have  {2} {x \in \bigcap A[I]}                                               \by{$def.1$}{}
         \have  {2} {\forall Y  \in  A[I] \quad x \in Y }                              \by{$def \bigcap$}{}
         \have  {2} {\forall Y ((\exists i \in I \quad A_i=Y) \to x \in Y) }           \by{$def image$}{}
-        \have  {2} {\forall Y \quad \forall i \in I \quad ( A_i=Y \to x \in Y) }           \by{$def image$}{}
-        % \have  {2} {(\exists i \in I \quad A_i=A_{i'}) \to x \in A_{i'} }              \by{$\forall E$}{}
+        \have  {2} {\forall Y \quad \forall i \in I \quad ( A_i=Y \to x \in Y) }           \by{$Ex.$}{}
         \open
         \have  {2} {i \in I }                                                         \by{$acp$}{}
         \have  {2} { A_{i}=A_{i} }                                                   \by{$=I$}{}
@@ -3183,7 +3183,6 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
         \have  {2} {(\exists i \in I \quad A_i=Y) \to x \in Y }                            \by{$\to I$}{}
         \have  {2} {\forall Y ((\exists i \in I \quad A_i=Y) \to x \in Y) }              \by{$\forall I$}{}
         \have  {2} {\forall Y  \in  A[I] \quad x \in Y }                                  \by{$def$}{}
-        \have  {2} {x \in \bigcap A[I]}                                                   \by{$def$}{}
         \have  {2} {x \in \bigcap \{ A_i \}_{i \in I}}                                   \by{$def$}{}
         \have {1} { x \in \bigcap_{i \in I} A_i  }                                        \by{$def$}{}
         \close
@@ -3197,12 +3196,11 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
         \open
         \have {1} { x \in \bigcup_{i \in I} A_i  }                                 \by{$acp$}{}
         \have  {2} {x \in \bigcup \{ A_i \}_{i \in I}}                                \by{$def.1$}{}
-        \have  {2} {x \in \bigcup A[I]}                                               \by{$def.1$}{}
         \have  {2} {\exists Y  \in  A[I] \quad x \in Y }                              \by{$def \bigcup$}{}
-        \have  {2} {\exists Y ((\exists i \in I \quad A_i=Y) \land x \in Y) }           \by{$def.image$}{}
+        \have  {2} {\exists Y (\exists i \in I \quad A_i=Y \land x \in Y) }           \by{$def.image$}{}
         \open
-        \have  {2} { x \in Y }                                                          \by{$acp$}{}
-        \have  {2} {\exists i \in I \quad A_i=Y }                                        \by{$acp$}{}
+        \have  {2} {(\exists i \in I \quad   A_i=Y ) \land x \in Y }           \by{$acp$}{}
+        \have  {2} {\exists i \in I \quad  ( A_i=Y  \land x \in Y )}           \by{$Ex.$}{}
         \open
         \have  {2} {i \in I }                                                         \by{$acp$}{}
         \have  {2} { A_i=Y }                                                   \by{$acp$}{}
@@ -3221,16 +3219,15 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
         \have {1} { x \in \{x \mid \exists i \in I \quad x \in A_i\}  }                \by{$acp$}{}
         \have {1} { \exists i \in I \quad x \in A_i  }                                 \by{$def$}{}
         \open
-        \have  {2} { i' \in I }                                                        \by{$acp$}{}
-        \have  {2} { x \in A_{i'} }                                                      \by{$acp$}{}
-        \have  {2} {  A_{i'}=A_{i'} }                                                     \by{$= I$}{}
-        \have  {2} {\exists i \in I \quad  A_i=A_{i'} }                                       \by{$\exists I$}{}
-        \have  {2} {(\exists i \in I \quad  A_i=A_{i'})\land x \in A_{i'} }                    \by{$\land I$}{}
+        \have  {2} { i \in I }                                                        \by{$acp$}{}
+        \have  {2} { x \in A_{i} }                                                      \by{$acp$}{}
+        \have  {2} {  A_{i}=A_{i} }                                                     \by{$= I$}{}
+        \have  {2} {\exists i \in I \quad  A_i=A_{i} }                                       \by{$\exists I$}{}
+        \have  {2} {(\exists i \in I \quad  A_i=A_{i})\land x \in A_{i} }                    \by{$\land I$}{}
         \have  {2} {\exists Y ((\exists i \in I \quad A_i=Y) \land x \in Y) }              \by{$\exists I$}{}
         \close
         \have  {2} {\exists Y ((\exists i \in I \quad A_i=Y) \land x \in Y) }              \by{$\exists E$}{}
         \have  {2} {\exists Y  \in  A[I] \quad x \in Y }                                  \by{$def$}{}
-        \have  {2} {x \in \bigcup A[I]}                                                   \by{$def$}{}
         \have  {2} {x \in \bigcup \{ A_i \}_{i \in I}}                                   \by{$def$}{}
         \have {1} { x \in \bigcup_{i \in I} A_i  }                                        \by{$def$}{}
         \close
@@ -3291,6 +3288,113 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
 \end{theorem}
 
 
+
+\begin{exercise}
+    \textbf{} Prove the following for sets $A,B,C,R,S,T$ and functions $f,g$ whenever the expressions are defined.
+
+    \begin{enumerate}
+        \item $A\times(B\cup C)=(A\times B)\cup(A\times C)$.
+        \item $A\times(B\cap C)=(A\times B)\cap(A\times C)$.
+        \item $(A\cup B)\times C=(A\times C)\cup(B\times C)$.
+        \item $(A\cap B)\times C=(A\times C)\cap(B\times C)$.
+        \item $A\times B=\varnothing \leftrightarrow (A=\varnothing \lor B=\varnothing)$.
+        \item $A\times B=B\times A \therefore / \therefore (A=B \lor A=\varnothing \lor B=\varnothing)$.
+        \item $Dom(R^{-1})=Range(R)$.
+        \item $Range(R^{-1})=Dom(R)$.
+        \item $(R^{-1})^{-1}=R$.
+        \item $Dom(R\cup S)=Dom(R)\cup Dom(S)$.
+        \item $Range(R\cup S)=Range(R)\cup Range(S)$.
+        \item $Dom(R\cap S)\subseteq Dom(R)\cap Dom(S)$.
+        \item $Range(R\cap S)\subseteq Range(R)\cap Range(S)$.
+        \item $(R\cup S)^{-1}=R^{-1}\cup S^{-1}$.
+        \item $(R\cap S)^{-1}=R^{-1}\cap S^{-1}$.
+        \item $(R\circ S)^{-1}=S^{-1}\circ R^{-1}$.
+        \item $R\circ(S\circ T)=(R\circ S)\circ T$.
+        \item $R\circ(S\cup T)=(R\circ S)\cup(R\circ T)$.
+        \item $(R\cup S)\circ T=(R\circ T)\cup(S\circ T)$.
+        \item $R[A\cup B]=R[A]\cup R[B]$.
+        \item $R[A\cap B]\subseteq R[A]\cap R[B]$.
+        \item $R^{-1}[B\cup C]=R^{-1}[B]\cup R^{-1}[C]$.
+        \item $R^{-1}[B\cap C]=R^{-1}[B]\cap R^{-1}[C]$.
+        \item $R^{-1}[R[A]]\supseteq A\cap Dom(R)$.
+        \item $R[R^{-1}[B]]\subseteq B$.
+        \item $R[A]=\bigcup\{R[\{x\}]\mid x\in A\}$.
+        \item $R^{-1}[B]=\bigcup\{R^{-1}[\{y\}]\mid y\in B\}$.
+        \item $f:A\to B \land g:B\to C \therefore / \therefore g\circ f:A\to C$.
+        \item $f:A\xrightarrow{inj}B \land g:B\xrightarrow{inj}C \therefore / \therefore g\circ f:A\xrightarrow{inj}C$.
+        \item $f:A\xrightarrow[surj]{}B \land g:B\xrightarrow[surj]{}C \therefore / \therefore g\circ f:A\xrightarrow[surj]{}C$.
+        \item $f:A\xrightarrow{inj}B \land g:B\xrightarrow{inj}C \therefore / \therefore g\circ f$ is injective.
+        \item $f:A\xrightarrow[surj]{}B \land g:B\xrightarrow[surj]{}C \therefore / \therefore g\circ f$ is surjective.
+        \item $f:A\xrightarrow{inj}B \land g\circ f:A\to C \text{ is injective} \therefore / \therefore g \text{ is injective on } f[A]$.
+        \item $f:A\xrightarrow{inj}B \therefore / \therefore f^{-1}:Range(f)\to A$ is a function.
+        \item $f:A\xrightarrow[surj]{}B \therefore / \therefore f^{-1}$ is a function is not valid in general.
+        \item $f:A\xrightarrow[surj]{inj}B \therefore / \therefore f^{-1}:B\xrightarrow[surj]{inj}A$.
+        \item $f:A\xrightarrow[surj]{inj}B \therefore / \therefore f^{-1}\circ f=Id_A$.
+        \item $f:A\xrightarrow[surj]{inj}B \therefore / \therefore f\circ f^{-1}=Id_B$.
+        \item $f:A\to B \therefore / \therefore f[A]\subseteq B$.
+        \item $f:A\to B \therefore / \therefore f^{-1}[C]\subseteq A$ for every $C\subseteq B$.
+        \item $f:A\to B \therefore / \therefore f^{-1}[B]=A$.
+        \item $f:A\to B \therefore / \therefore f[A]=B$ if and only if $f$ is surjective.
+        \item $f:A\to B \therefore / \therefore f[A]=\varnothing$ if and only if $A=\varnothing$.
+        \item $f:A\to B \land A\subseteq C \therefore / \therefore f[A]\subseteq f[C]$ whenever $f$ is defined on $C$.
+        \item $f:A\to B \therefore / \therefore f[A\cap C]\subseteq f[A]\cap f[C]$.
+        \item $f:A\to B \therefore / \therefore f[A\cup C]=f[A]\cup f[C]$.
+        \item $f:A\to B \therefore / \therefore f^{-1}[B\cup C]=f^{-1}[B]\cup f^{-1}[C]$.
+        \item $f:A\to B \therefore / \therefore f^{-1}[B\cap C]=f^{-1}[B]\cap f^{-1}[C]$.
+        \item $f:A\to B \therefore / \therefore f^{-1}[B-C]=f^{-1}[B]-f^{-1}[C]$.
+        \item $f:A\to B \therefore / \therefore f[A-C]\supseteq f[A]-f[C]$.
+        \item $f:A\xrightarrow{inj}B \therefore / \therefore f[A-C]=f[A]-f[C]$ whenever $C\subseteq A$.
+        \item $f:A\to B \land g:B\to C \therefore / \therefore (g\circ f)[A]=g[f[A]]$.
+        \item $\bigcup_{i\in I}(A_i\cap B_i)\subseteq
+                  \left(\bigcup_{i\in I}A_i\right)\cap
+                  \left(\bigcup_{i\in I}B_i\right)$.
+        \item $\left(\bigcap_{i\in I}A_i\right)\cup
+                  \left(\bigcap_{i\in I}B_i\right)\subseteq
+                  \bigcap_{i\in I}(A_i\cup B_i)$.
+        \item $\bigcup_{i\in I}(A_i\cup B_i)=
+                  \left(\bigcup_{i\in I}A_i\right)\cup
+                  \left(\bigcup_{i\in I}B_i\right)$.
+        \item $\bigcap_{i\in I}(A_i\cap B_i)=
+                  \left(\bigcap_{i\in I}A_i\right)\cap
+                  \left(\bigcap_{i\in I}B_i\right)$.
+        \item $\bigcup_{i\in I}(A_i\setminus B_i)\subseteq
+                  \left(\bigcup_{i\in I}A_i\right)\setminus
+                  \left(\bigcap_{i\in I}B_i\right)$.
+        \item $\bigcap_{i\in I}A_i=\bigcup_{i\in I}A_i
+                  \leftrightarrow \forall i,j\in I\ (A_i=A_j)$.
+        \item $\bigcup_{i\in I}A_i=\varnothing
+                  \leftrightarrow \forall i\in I\ (A_i=\varnothing)$.
+        \item $\bigcap_{i\in I}A_i=\varnothing
+                  \rightarrow \exists i\in I\ (A_i=\varnothing)$.
+        \item $\bigcup_{i\in I}A_i\subseteq B
+                  \leftrightarrow \forall i\in I\ (A_i\subseteq B)$.
+        \item $B\subseteq\bigcap_{i\in I}A_i
+                  \leftrightarrow \forall i\in I\ (B\subseteq A_i)$.
+        \item $\bigcup_{i\in I}(A_i\cap B)
+                  =\left(\bigcup_{i\in I}A_i\right)\cap B$.
+        \item $\bigcap_{i\in I}(A_i\cup B)
+                  =\left(\bigcap_{i\in I}A_i\right)\cup B$.
+        \item $\bigcup_{i\in I}(A_i\setminus B)
+                  =\left(\bigcup_{i\in I}A_i\right)\setminus B$.
+        \item $\bigcap_{i\in I}(A_i\setminus B)
+                  =\left(\bigcap_{i\in I}A_i\right)\setminus B$.
+        \item $\bigcup_{i\in I}(A_i\cap B_i)
+                  =\left(\bigcup_{i\in I}A_i\right)\cap
+                  \left(\bigcup_{i\in I}B_i\right)$.
+        \item $\bigcap_{i\in I}(A_i\cup B_i)
+                  =\left(\bigcap_{i\in I}A_i\right)\cup
+                  \left(\bigcap_{i\in I}B_i\right)$.
+        \item $\bigcup_{i\in I}A_i\subseteq\bigcap_{i\in I}A_i
+                  \leftrightarrow \forall i,j\in I\ (A_i\subseteq A_j)$.
+        \item $\bigcap_{i\in I}A_i\subseteq\bigcup_{i\in I}A_i$.
+        \item $Dom(f\upharpoonright A)=Dom(f)\cap A$.
+        \item $Range(f\upharpoonright A)=f[A\cap Dom(f)]$.
+        \item $f\upharpoonright Dom(f)=f$.
+        \item $f\upharpoonright A=f\upharpoonright B \therefore / \therefore f\upharpoonright(A\cap Dom(f))=f\upharpoonright(B\cap Dom(f))$.
+        \item $f\upharpoonright A\subseteq f$.
+        \item $f\upharpoonright A=f$ if and only if $Dom(f)\subseteq A$.
+    \end{enumerate}
+\end{exercise}
 
 
 
