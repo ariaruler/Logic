@@ -1481,11 +1481,11 @@ with rules and axioms.
 
 \begin{axiom}
     \textbf{Existence of universe of set theory}
-    There exists a set $V_2$ (we denote it as $V_2$.it simply means the set of all sets), known as the Von Neumann Universe, which contains every set.
+    There exists a set $V_1$ (we denote it as $V_1$.it simply means the set of all sets), known as the Von Neumann Universe, which contains every set.
     (this axiom can't be formolized in first order logic).
     (there must be another axiom let us use logic for set theory but we ignore that).
     (from now on when we are talking about proposition ``$\phi$'' in ``set theory'' we mean
-    proposition ``$\phi$'' in ``$V_2$'').
+    proposition ``$\phi$'' in ``$V_1$'').
 \end{axiom}
 
 \begin{definition}
@@ -2240,6 +2240,108 @@ from now on we don't get in to all details of proofs because it will be too
 long and hard to read. so we will take it easy from now and don't write all
 details like reasons of lines and all lines we left it to reader to understand
 what happened there.\twemoji{1f600}
+
+
+\section{Another set theory}
+
+In this section we want to construct a universe of sets beginning
+with some objects that are not sets. These objects are called
+\textbf{urelements}. We then construct sets from these urelements
+and continue this process through the ordinals.
+
+
+
+\begin{axiom}
+    \textbf{Existence of urelements}
+
+    There exists a nonempty set $U$ whose elements are urelements.
+    We denote the predicate ``$x$ is a urelement'' by
+    $\operatorname{Urelement}(x)$.
+\end{axiom}
+
+\begin{definition}
+    \textbf{The first universe}
+
+    We define
+    \[
+        V_0=U.
+    \]
+    Thus, $V_0$ contains the urelements from which we will
+    construct sets.
+\end{definition}
+
+\subsection{Construction of sets}
+
+\begin{axiom}
+    \textbf{Bounded comprehension} $(\mathrm{schema})$
+
+    For every formula $\phi(x,x_0,\ldots,x_n)$ and every
+    existing set $A$, there exists a set $X$ such that
+    \[
+        \forall x\,
+        \bigl(x\in X\leftrightarrow
+        (x\in A\land\phi(x,x_0,\ldots,x_n))\bigr).
+    \]
+\end{axiom}
+
+By this axiom, we can form sets whose elements are selected
+from an already existing set. In particular, we can form
+subsets of $V_0$.
+
+We distinguish urelements from sets: a urelement is not a set,
+although it may be an element of a set.
+
+\begin{definition}
+    \textbf{The next universe}
+
+    We define
+    \[
+        V_1=U\cup\mathcal P(U),
+    \]
+    where $\mathcal P(U)$ denotes the power set of $U$.
+    Thus, $V_1$ contains the urelements of $V_0$ and all sets
+    whose elements belong to $V_0$.
+\end{definition}
+
+\begin{definition}
+    \textbf{Successor stages}
+
+    If $V_\alpha$ has been defined, we define
+    \[
+        V_{\alpha+1}=U\cup\mathcal P(V_\alpha).
+    \]
+    Hence, at each successor stage, we add all sets whose
+    elements belong to the preceding stage.
+\end{definition}
+
+\begin{definition}
+    \textbf{Limit stages}
+
+    If $\lambda$ is a nonzero limit ordinal, we define
+    \[
+        V_\lambda=\bigcup_{\alpha<\lambda}V_\alpha.
+    \]
+    Thus, at a limit stage, we take the union of all preceding
+    stages.
+\end{definition}
+
+\subsection{The cumulative hierarchy}
+
+We continue the construction for every ordinal $\alpha$.
+The resulting hierarchy is denoted by
+\[
+    (V_\alpha)_{\alpha\in\mathrm{Ord}}.
+\]
+
+We write
+\[
+    V=\bigcup_{\alpha\in\mathrm{Ord}}V_\alpha.
+\]
+
+Here $V$ denotes the class of all objects appearing at some
+stage of the hierarchy.
+
+
 
 \chapter{Relations and Functions}
 
@@ -3031,15 +3133,15 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
         \have  {2} {x \in \bigcap A[I]}                                               \by{$def.1$}{}
         \have  {2} {\forall Y  \in  A[I] \quad x \in Y }                              \by{$def \bigcap$}{}
         \have  {2} {\forall Y ((\exists i \in I \quad A_i=Y) \to x \in Y) }           \by{$def image$}{}
-        \have  {2} {(\exists i \in I \quad A_i=A_{i'}) \to x \in A_{i'} }              \by{$\forall E$}{}
+        \have  {2} {\forall Y \quad \forall i \in I \quad ( A_i=Y \to x \in Y) }           \by{$def image$}{}
+        % \have  {2} {(\exists i \in I \quad A_i=A_{i'}) \to x \in A_{i'} }              \by{$\forall E$}{}
         \open
-        \have  {2} {i' \in I }                                                         \by{$acp$}{}
-        \have  {2} { A_{i'}=A_{i'} }                                                   \by{$=I$}{}
-        \have  {2} { i' \in I \land A_{i'}=A_{i'} }                                      \by{$\land I$}{}
-        \have  {2} { \exists i \in I \quad A_i=A_{i'} }                                   \by{$\exists I$}{}
-        \have {1} {  x \in A_{i'}  }                                                       \by{$\to E$}{}
+        \have  {2} {i \in I }                                                         \by{$acp$}{}
+        \have  {2} { A_{i}=A_{i} }                                                   \by{$=I$}{}
+        \have  {2} {  A_{i}=A_{i} \to  x \in A_{i}  }                                      \by{$\forall E$}{}
+        \have {1} {  x \in A_{i}  }                                                       \by{$\to E$}{}
         \close
-        \have {1} {  i' \in I \to x \in A_{i'}  }                                            \by{$\to I$}{}
+        \have {1} {  i \in I \to x \in A_{i}  }                                            \by{$\to I$}{}
         \have {1} { \forall i \in I \quad x \in A_i  }                                    \by{$\forall I$}{}
         \have {1} { x \in \{x \mid \forall i \in I \quad x \in A_i\}  }                 \by{$def$}{}
         \close
@@ -3049,15 +3151,14 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
         \have {1} { x \in \{x \mid \forall i \in I \quad x \in A_i\}  }                \by{$acp$}{}
         \have {1} { \forall i \in I \quad x \in A_i  }                                 \by{$def$}{}
         \open
-        \have  {2} {\exists i \in I \quad A_i=Y}                                       \by{$acp$}{}
-        \open
         \have  {2} { i \in I }                                                              \by{$acp$}{}
-        \have  {2} {x \in A_i}                                                             \by{$\forall E$}{}
-        \have  {2} {  A_i=Y}                                                             \by{$\land E$}{}
+        \open
+        \have  {2} {  A_i=Y}                                                             \by{$\land E$}{}                                                         \by{$\forall E$}{}
         \have  {2} {x \in Y}                                                             \by{$= E$}{}
         \close
-        \have  {2} {x \in Y}                                                                \by{$\exists E$}{}
+        \have  {2} { A_i=Y \to x \in Y}                                                                \by{$\exists E$}{}
         \close
+        \have  {2} {\forall i \in I \quad( A_i=Y) \to x \in Y }                            \by{$\to I$}{}
         \have  {2} {(\exists i \in I \quad A_i=Y) \to x \in Y }                            \by{$\to I$}{}
         \have  {2} {\forall Y ((\exists i \in I \quad A_i=Y) \to x \in Y) }              \by{$\forall I$}{}
         \have  {2} {\forall Y  \in  A[I] \quad x \in Y }                                  \by{$def$}{}
