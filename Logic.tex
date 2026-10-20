@@ -3297,7 +3297,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
         \item $A\times(B\cap C)=(A\times B)\cap(A\times C)$.
         \item $(A\cup B)\times C=(A\times C)\cup(B\times C)$.
         \item $(A\cap B)\times C=(A\times C)\cap(B\times C)$.
-        \item $A\times B=\varnothing \leftrightarrow (A=\varnothing \lor B=\varnothing)$.
+        \item $A\times B=\varnothing \therefore / \therefore (A=\varnothing \lor B=\varnothing)$.
         \item $A\times B=B\times A \therefore / \therefore (A=B \lor A=\varnothing \lor B=\varnothing)$.
         \item $Dom(R^{-1})=Range(R)$.
         \item $Range(R^{-1})=Dom(R)$.
@@ -3314,36 +3314,19 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
         \item $(R\cup S)\circ T=(R\circ T)\cup(S\circ T)$.
         \item $R[A\cup B]=R[A]\cup R[B]$.
         \item $R[A\cap B]\subseteq R[A]\cap R[B]$.
-        \item $R^{-1}[B\cup C]=R^{-1}[B]\cup R^{-1}[C]$.
-        \item $R^{-1}[B\cap C]=R^{-1}[B]\cap R^{-1}[C]$.
-        \item $R^{-1}[R[A]]\supseteq A\cap Dom(R)$.
+        \item $ A \subseteq Dom(R) / \therefore A \subseteq  R^{-1}[R[A]]$.
         \item $R[R^{-1}[B]]\subseteq B$.
-        \item $R[A]=\bigcup\{R[\{x\}]\mid x\in A\}$.
-        \item $R^{-1}[B]=\bigcup\{R^{-1}[\{y\}]\mid y\in B\}$.
         \item $f:A\to B \land g:B\to C \therefore / \therefore g\circ f:A\to C$.
         \item $f:A\xrightarrow{inj}B \land g:B\xrightarrow{inj}C \therefore / \therefore g\circ f:A\xrightarrow{inj}C$.
         \item $f:A\xrightarrow[surj]{}B \land g:B\xrightarrow[surj]{}C \therefore / \therefore g\circ f:A\xrightarrow[surj]{}C$.
-        \item $f:A\xrightarrow{inj}B \land g:B\xrightarrow{inj}C \therefore / \therefore g\circ f$ is injective.
-        \item $f:A\xrightarrow[surj]{}B \land g:B\xrightarrow[surj]{}C \therefore / \therefore g\circ f$ is surjective.
-        \item $f:A\xrightarrow{inj}B \land g\circ f:A\to C \text{ is injective} \therefore / \therefore g \text{ is injective on } f[A]$.
-        \item $f:A\xrightarrow{inj}B \therefore / \therefore f^{-1}:Range(f)\to A$ is a function.
-        \item $f:A\xrightarrow[surj]{}B \therefore / \therefore f^{-1}$ is a function is not valid in general.
+        \item $f:A\xrightarrow{inj}B \therefore / \therefore f^{-1}:Range(f)\to A$ .
         \item $f:A\xrightarrow[surj]{inj}B \therefore / \therefore f^{-1}:B\xrightarrow[surj]{inj}A$.
-        \item $f:A\xrightarrow[surj]{inj}B \therefore / \therefore f^{-1}\circ f=Id_A$.
-        \item $f:A\xrightarrow[surj]{inj}B \therefore / \therefore f\circ f^{-1}=Id_B$.
         \item $f:A\to B \therefore / \therefore f[A]\subseteq B$.
-        \item $f:A\to B \therefore / \therefore f^{-1}[C]\subseteq A$ for every $C\subseteq B$.
         \item $f:A\to B \therefore / \therefore f^{-1}[B]=A$.
-        \item $f:A\to B \therefore / \therefore f[A]=B$ if and only if $f$ is surjective.
-        \item $f:A\to B \therefore / \therefore f[A]=\varnothing$ if and only if $A=\varnothing$.
-        \item $f:A\to B \land A\subseteq C \therefore / \therefore f[A]\subseteq f[C]$ whenever $f$ is defined on $C$.
-        \item $f:A\to B \therefore / \therefore f[A\cap C]\subseteq f[A]\cap f[C]$.
-        \item $f:A\to B \therefore / \therefore f[A\cup C]=f[A]\cup f[C]$.
-        \item $f:A\to B \therefore / \therefore f^{-1}[B\cup C]=f^{-1}[B]\cup f^{-1}[C]$.
-        \item $f:A\to B \therefore / \therefore f^{-1}[B\cap C]=f^{-1}[B]\cap f^{-1}[C]$.
+        \item $f:A\to B \therefore / \therefore f^{-1}[D \cap C]=f^{-1}[D]\cap f^{-1}[C]$.
         \item $f:A\to B \therefore / \therefore f^{-1}[B-C]=f^{-1}[B]-f^{-1}[C]$.
         \item $f:A\to B \therefore / \therefore f[A-C]\supseteq f[A]-f[C]$.
-        \item $f:A\xrightarrow{inj}B \therefore / \therefore f[A-C]=f[A]-f[C]$ whenever $C\subseteq A$.
+        \item $f:A\xrightarrow{inj}B , C\subseteq A / \therefore f[A-C]=f[A]-f[C]$ .
         \item $f:A\to B \land g:B\to C \therefore / \therefore (g\circ f)[A]=g[f[A]]$.
         \item $\bigcup_{i\in I}(A_i\cap B_i)\subseteq
                   \left(\bigcup_{i\in I}A_i\right)\cap
@@ -3392,7 +3375,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
         \item $f\upharpoonright Dom(f)=f$.
         \item $f\upharpoonright A=f\upharpoonright B \therefore / \therefore f\upharpoonright(A\cap Dom(f))=f\upharpoonright(B\cap Dom(f))$.
         \item $f\upharpoonright A\subseteq f$.
-        \item $f\upharpoonright A=f$ if and only if $Dom(f)\subseteq A$.
+        \item $f\upharpoonright A=f \therefore / \therefore Dom(f)\subseteq A$.
     \end{enumerate}
 \end{exercise}
 
