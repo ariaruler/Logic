@@ -9,8 +9,7 @@
 \contentsline {chapter}{\numberline {3}The beginning of set theory}{21}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Axioms of set theory}{21}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Another set theory}{31}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Construction of sets}{31}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}The cumulative hierarchy}{32}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}combination of two theories and height of the Level}{31}{section.3.3}%
 \contentsline {chapter}{\numberline {4}Relations and Functions}{33}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Ordered pair and Cartesian product}{33}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Relations}{34}{section.4.2}%

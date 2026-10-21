@@ -100,8 +100,8 @@ we  start the book by building logic step by step.block by block in first it
 might seem a little annoying but I advice you to be patient.book will show its
 power soon. like euclidian geometry this book has undefined concepts. I tried
 to explain them for you to understand.but they don't have any definition.
-\begin{undefined}
-    \textbf{Urelements} are the most fundamental entities in a logical.
+\begin{undefined}[Urelements]
+    are the most fundamental entities in a logical.
     They cannot be constructed, defined, or described in terms of other things.
     Their existence is primitive—accepted without internal structure or relational properties.
     Urelements simply are.
@@ -2273,13 +2273,27 @@ with some objects that are not sets. These objects are called
 and continue this process through the ordinals.
 
 
+\begin{axiom}
+    \textbf{Extensionality}Two sets are equal (are the same set) if they have the same elements.
+    \\
+    \[  \forall X,Y (\forall x ( x \in X \leftrightarrow x \in Y ) \rightarrow X = Y )  \]
+\end{axiom}
 
 \begin{axiom}
-    \textbf{Existence of urelements}
+    \textbf{Existence of universe of set theory}
+    There exists a set $V_1$ (we denote it as $V_1$.it simply means the set of all sets), known as the Von Neumann Universe, which contains every set.
+    (this axiom can't be formolized in first order logic).
+    (there must be another axiom let us use logic for set theory but we ignore that).
+    (from now on when we are talking about proposition ``$\phi$'' in ``set theory'' we mean
+    proposition ``$\phi$'' in ``$V_1$'').
+\end{axiom}
 
-    There exists a nonempty set $U$ whose elements are urelements.
-    We denote the predicate ``$x$ is a urelement'' by
-    $\operatorname{Urelement}(x)$.
+
+
+\begin{axiom}[Existence of set of obj]
+
+    There exists a nonempty set $U$ whose elements are obj.
+
 \end{axiom}
 
 \begin{definition}
@@ -2293,76 +2307,168 @@ and continue this process through the ordinals.
     construct sets.
 \end{definition}
 
-\subsection{Construction of sets}
 
-\begin{axiom}
+
+\begin{axiom}[Extending set of obj to set theory universe ]
     \textbf{Bounded comprehension} $(\mathrm{schema})$
-
+    assume you have set of obj $U$ you can extend it to
+    a set theory universe. we call it V.
     For every formula $\phi(x,x_0,\ldots,x_n)$ and every
-    existing set $A$, there exists a set $X$ such that
+    existing set of obj $U$, there exists a set $X$ such that
     \[
-        \forall x\,
+        \forall x_0 , ... , x_n \quad \exists X \quad \forall x \quad
         \bigl(x\in X\leftrightarrow
-        (x\in A\land\phi(x,x_0,\ldots,x_n))\bigr).
+        (x\in U \land \phi(x,x_0,\ldots,x_n))\bigr).
     \]
 \end{axiom}
 
-By this axiom, we can form sets whose elements are selected
-from an already existing set. In particular, we can form
-subsets of $V_0$.
-
-We distinguish urelements from sets: a urelement is not a set,
-although it may be an element of a set.
+By this axiom, there is a universe we call $V_1$. we can form sets whose elements are selected
+from an already existing set($V_0$).
 
 \begin{definition}
-    \textbf{The next universe}
+    \textbf{The next universe(Level)}
 
-    We define
+    We define $V_2$ the extension universe of $V_1$  and so on.
+
+\end{definition}
+
+
+\section{combination of two theories and height of the Level}
+
+We now combine the two theories.  We begin with a set \(V_0\) whose
+elements satisfies \(Type_0(x)\).  We then extend \(V_0\) to \(V_1\)
+by adding all sets that can be formed from \(V_0\) using the axioms of
+comprehension.  We then extend \(V_1\) to
+\(V_2\) in the same way, and so on.
+
+\begin{definition}
+    \textbf{Type}
+
     \[
-        V_1=U\cup\mathcal P(U),
+        Type_0(x) : x \in V_0
     \]
-    where $\mathcal P(U)$ denotes the power set of $U$.
-    Thus, $V_1$ contains the urelements of $V_0$ and all sets
-    whose elements belong to $V_0$.
+    \[
+        Type_1(x) : x \in V_1
+    \]
+
+\end{definition}
+
+\begin{axiom}[Union]
+    For every \(X \in V_0\), the union \(\bigcup X\) is a set, and we add
+    it to \(V_1\):
+    \[
+        \forall X \in V_1 \quad Type_1\Bigl(\bigcup X\Bigr).
+    \]
+\end{axiom}
+
+\begin{axiom}[Powerset]
+    For every \(X \in V_0\), the powerset \(\mathcal{P}(X)\) is a set,
+    and we add it to \(V_1\):
+    \[
+        \forall X \in V_1 \quad Type_1\bigl(\mathcal{P}(X)\bigr).
+    \]
+\end{axiom}
+
+\begin{axiom}[Pairing and separation]
+    For every \(a,b \in V_1\), the pair \(\{a,b\}\) is a set in \(V_1\).
+    More generally, for every formula \(\phi(x,x_0,\ldots,x_n)\) and every
+    \(x_0,\ldots,x_n \in V_1\), the set
+    \[
+        \{x \in V_1 \mid \phi(x,x_0,\ldots,x_n)\}
+    \]
+    is a set in \(V_1\).
+\end{axiom}
+
+\begin{definition}
+    \textbf{The next level}
+    We define \(V_1\) to be the smallest set containing \(V_0\) and closed
+    under the operations of union, powerset, pairing, and comprehension
+    over \(V_0\).  That is,
+    \[
+        V_1 := V_0 \cup
+        \Bigl\{\bigcup X \mid X \in V_0\Bigr\} \cup
+        \Bigl\{\mathcal{P}(X) \mid X \in V_0\Bigr\} \cup
+        \Bigl\{\{a,b\} \mid a,b \in V_0\Bigr\} \cup \cdots
+    \]
+    We then define \(V_2\) from \(V_1\) in exactly the same way, and in
+    general \(V_{n+1}\) from \(V_n\).
 \end{definition}
 
 \begin{definition}
-    \textbf{Successor stages}
-
-    If $V_\alpha$ has been defined, we define
+    \textbf{Height of the Level}
+    The \emph{height} of \(V_1\) is the least ordinal \(\kappa\) such that
     \[
-        V_{\alpha+1}=U\cup\mathcal P(V_\alpha).
+        V_1 = V_\kappa,
     \]
-    Hence, at each successor stage, we add all sets whose
-    elements belong to the preceding stage.
+    where the cumulative hierarchy \(V_\alpha\) is defined by
+    \[
+        V_0 = V_0, \qquad
+        V_{\alpha+1} = V_\alpha \cup \mathcal{P}(V_\alpha), \qquad
+        V_\lambda = \bigcup_{\beta<\lambda} V_\beta
+        \quad (\lambda \text{ a limit ordinal}).
+    \]
+    We denote this height by \(\kappa_1\).  Thus \(V_1\) is itself a set,
+    and its height \(\kappa_1\) is an ordinal.
 \end{definition}
 
-\begin{definition}
-    \textbf{Limit stages}
+\begin{observation}
+    With this definition, \(V_1\) is a set of height \(\kappa_1\).  The
+    universe of the first theory is recovered by taking the union of all
+    levels \(V_n\), which is \(V_{\kappa}\) for
+    \(\kappa = \sup_n \kappa_n\).
+\end{observation}
 
-    If $\lambda$ is a nonzero limit ordinal, we define
+\begin{example}
+    If \(V_0\) contains only the empty set, then \(V_1\) is the set of
+    hereditarily finite sets, and its height is \(\omega\).
+\end{example}
+
+\begin{theorem}
+    \textbf{$(schema)$} For every \(n \in \omega\),
     \[
-        V_\lambda=\bigcup_{\alpha<\lambda}V_\alpha.
+        V_n \subseteq V_{n+1} \subseteq V_1.
     \]
-    Thus, at a limit stage, we take the union of all preceding
-    stages.
-\end{definition}
+    \\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
 
-\subsection{The cumulative hierarchy}
+% \begin{definition}
+%     \textbf{Successor stages}
 
-We continue the construction for every ordinal $\alpha$.
-The resulting hierarchy is denoted by
-\[
-    (V_\alpha)_{\alpha\in\mathrm{Ord}}.
-\]
+%     If $V_\alpha$ has been defined, we define
+%     \[
+%         V_{\alpha+1}=U\cup\mathcal P(V_\alpha).
+%     \]
+%     Hence, at each successor stage, we add all sets whose
+%     elements belong to the preceding stage.
+% \end{definition}
 
-We write
-\[
-    V=\bigcup_{\alpha\in\mathrm{Ord}}V_\alpha.
-\]
+% \begin{definition}
+%     \textbf{Limit stages}
 
-Here $V$ denotes the class of all objects appearing at some
-stage of the hierarchy.
+%     If $\lambda$ is a nonzero limit ordinal, we define
+%     \[
+%         V_\lambda=\bigcup_{\alpha<\lambda}V_\alpha.
+%     \]
+%     Thus, at a limit stage, we take the union of all preceding
+%     stages.
+% \end{definition}
+
+% \subsection{The cumulative hierarchy}
+
+% We continue the construction for every ordinal $\alpha$.
+% The resulting hierarchy is denoted by
+% \[
+%     (V_\alpha)_{\alpha\in\mathrm{Ord}}.
+% \]
+
+% We write
+% \[
+%     V=\bigcup_{\alpha\in\mathrm{Ord}}V_\alpha.
+% \]
+
+% Here $V$ denotes the class of all objects appearing at some
+% stage of the hierarchy.
 
 
 
@@ -3153,37 +3259,36 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
         \open
         \have {1} { x \in \bigcap_{i \in I} A_i  }                                 \by{$acp$}{}
         \have  {2} {x \in \bigcap \{ A_i \}_{i \in I}}                                \by{$def.1$}{}
-        \have  {2} {\forall Y  \in  A[I] \quad x \in Y }                              \by{$def \bigcap$}{}
-        \have  {2} {\forall Y ((\exists i \in I \quad A_i=Y) \to x \in Y) }           \by{$def image$}{}
-        \have  {2} {\forall Y \quad \forall i \in I \quad ( A_i=Y \to x \in Y) }           \by{$Ex.$}{}
         \open
-        \have  {2} {i \in I }                                                         \by{$acp$}{}
-        \have  {2} { A_{i}=A_{i} }                                                   \by{$=I$}{}
-        \have  {2} {  A_{i}=A_{i} \to  x \in A_{i}  }                                      \by{$\forall E$}{}
-        \have {1} {  x \in A_{i}  }                                                       \by{$\to E$}{}
+        \have  {2} { Y  \in  A[I] }                             \by{$acp$}{}
+        \have  {2} { x \in Y }                              \by{$acp$}{}
+        \open
+        \have  {2} {i \in I }                                   \by{$acp$}{}
+        \have  {2} { A_i = Y }                                  \by{$acp$}{}
+        \have  {2} { x \in A_i }                              \by{$= E$}{}
         \close
         \have {1} {  i \in I \to x \in A_{i}  }                                            \by{$\to I$}{}
         \have {1} { \forall i \in I \quad x \in A_i  }                                    \by{$\forall I$}{}
+        \close
+        \have {1} { \forall i \in I \quad x \in A_i  }                                    \by{$\bigcap E$}{}
         \have {1} { x \in \{x \mid \forall i \in I \quad x \in A_i\}  }                 \by{$def$}{}
         \close
-    \end{fitchproof}
-    \begin{fitchproof}[arrayenv=tabular]
+
         \open
         \have {1} { x \in \{x \mid \forall i \in I \quad x \in A_i\}  }                \by{$acp$}{}
         \have {1} { \forall i \in I \quad x \in A_i  }                                 \by{$def$}{}
         \open
-        \have  {2} { i \in I }                                                              \by{$acp$}{}
+        \have  {2} { Y  \in  A[I] }                             \by{$acp$}{}
         \open
-        \have  {2} {  A_i=Y}                                                             \by{$\land E$}{}                                                         \by{$\forall E$}{}
+        \have  {2} {i \in I }                                   \by{$acp$}{}
+        \have  {2} { A_i = Y }                                  \by{$acp$}{}
+        \have  {2} { i \in I \to x \in A_i  }                              \by{$= E$}{}
+        \have  {2} { x \in A_i  }                                                       \by{$\to E$}{}
         \have  {2} {x \in Y}                                                             \by{$= E$}{}
         \close
-        \have  {2} { A_i=Y \to x \in Y}                                                                \by{$\exists E$}{}
+        \have  {2} {x \in Y}                                                             \by{$R[] E$}{}
         \close
-        \have  {2} {\forall i \in I \quad( A_i=Y) \to x \in Y }                            \by{$\to I$}{}
-        \have  {2} {(\exists i \in I \quad A_i=Y) \to x \in Y }                            \by{$\to I$}{}
-        \have  {2} {\forall Y ((\exists i \in I \quad A_i=Y) \to x \in Y) }              \by{$\forall I$}{}
-        \have  {2} {\forall Y  \in  A[I] \quad x \in Y }                                  \by{$def$}{}
-        \have  {2} {x \in \bigcap \{ A_i \}_{i \in I}}                                   \by{$def$}{}
+        \have  {2} {x \in \bigcap \{ A_i \}_{i \in I}}                                   \by{$\bigcap I$}{}
         \have {1} { x \in \bigcap_{i \in I} A_i  }                                        \by{$def$}{}
         \close
         \have  {2} { \bigcap_{i \in I} A_i =  \{x \mid \forall i \in I \quad x \in A_i\}  }  \by{$=I$}{}
@@ -3196,39 +3301,32 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
         \open
         \have {1} { x \in \bigcup_{i \in I} A_i  }                                 \by{$acp$}{}
         \have  {2} {x \in \bigcup \{ A_i \}_{i \in I}}                                \by{$def.1$}{}
-        \have  {2} {\exists Y  \in  A[I] \quad x \in Y }                              \by{$def \bigcup$}{}
-        \have  {2} {\exists Y (\exists i \in I \quad A_i=Y \land x \in Y) }           \by{$def.image$}{}
         \open
-        \have  {2} {(\exists i \in I \quad   A_i=Y ) \land x \in Y }           \by{$acp$}{}
-        \have  {2} {\exists i \in I \quad  ( A_i=Y  \land x \in Y )}           \by{$Ex.$}{}
+        \have  {2} {Y  \in  A[I]  }                                                  \by{$acp$}{}
+        \have  {2} { x \in Y }                                                        \by{$acp$}{}
         \open
-        \have  {2} {i \in I }                                                         \by{$acp$}{}
-        \have  {2} { A_i=Y }                                                   \by{$acp$}{}
-        \have  {2} { x \in A_i }                                      \by{$= E$}{}
+        \have  {2} { i \in I  }                                                        \by{$acp$}{}
+        \have  {2} { A_i = Y  }                                                           \by{$acp$}{}
+        \have  {2} { x \in A_i }                                                       \by{$= E$}{}
+        \have  {2} { i \in I \land x \in A_i }                                      \by{$\land I$}{}
         \have  {2} {\exists i \in I \quad x \in A_i }                                      \by{$\exists I$}{}
         \close
-        \have  {2} {\exists i \in I \quad x \in A_i }                                      \by{$\exists E$}{}
+        \have  {2} {\exists i \in I \quad x \in A_i }                                      \by{$R[] E$}{}
         \close
-        \have  {2} {\exists i \in I \quad x \in A_i }                                      \by{$\exists E$}{}
+        \have  {2} {\exists i \in I \quad x \in A_i }                                      \by{$\bigcup E$}{}
         \have {1} { x \in \{x \mid \exists i \in I \quad x \in A_i\}  }                 \by{$def$}{}
         \close
 
-    \end{fitchproof}
-    \begin{fitchproof}[arrayenv=tabular]
         \open
         \have {1} { x \in \{x \mid \exists i \in I \quad x \in A_i\}  }                \by{$acp$}{}
         \have {1} { \exists i \in I \quad x \in A_i  }                                 \by{$def$}{}
         \open
         \have  {2} { i \in I }                                                        \by{$acp$}{}
         \have  {2} { x \in A_{i} }                                                      \by{$acp$}{}
-        \have  {2} {  A_{i}=A_{i} }                                                     \by{$= I$}{}
-        \have  {2} {\exists i \in I \quad  A_i=A_{i} }                                       \by{$\exists I$}{}
-        \have  {2} {(\exists i \in I \quad  A_i=A_{i})\land x \in A_{i} }                    \by{$\land I$}{}
-        \have  {2} {\exists Y ((\exists i \in I \quad A_i=Y) \land x \in Y) }              \by{$\exists I$}{}
+        \have  {2} {  A_{i} \in A[I] }                                                     \by{$R[] I$}{}
+        \have  {2} {x \in \bigcup \{ A_i \}_{i \in I}}                                   \by{$\bigcup I$}{}
         \close
-        \have  {2} {\exists Y ((\exists i \in I \quad A_i=Y) \land x \in Y) }              \by{$\exists E$}{}
-        \have  {2} {\exists Y  \in  A[I] \quad x \in Y }                                  \by{$def$}{}
-        \have  {2} {x \in \bigcup \{ A_i \}_{i \in I}}                                   \by{$def$}{}
+        \have  {2} {x \in \bigcup \{ A_i \}_{i \in I}}                                   \by{$\exists E$}{}
         \have {1} { x \in \bigcup_{i \in I} A_i  }                                        \by{$def$}{}
         \close
         \have  {2} { \bigcup_{i \in I} A_i =  \{x \mid \exists i \in I \quad x \in A_i\}  }  \by{$=I$}{}
@@ -3290,7 +3388,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
 
 
 \begin{exercise}
-    \textbf{} Prove the following for sets $A,B,C,R,S,T$ and functions $f,g$ whenever the expressions are defined.
+    \textbf{} Prove the following for sets $A,B,C$, Relations $R,S,T$ and functions $f,g$ whenever the expressions are defined.
 
     \begin{enumerate}
         \item $A\times(B\cup C)=(A\times B)\cup(A\times C)$.
@@ -3315,22 +3413,20 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
         \item $R[A\cup B]=R[A]\cup R[B]$.
         \item $R[A\cap B]\subseteq R[A]\cap R[B]$.
         \item $ A \subseteq Dom(R) / \therefore A \subseteq  R^{-1}[R[A]]$.
-        \item $R[R^{-1}[B]]\subseteq B$.
-        \item $f:A\to B \land g:B\to C \therefore / \therefore g\circ f:A\to C$.
-        \item $f:A\xrightarrow{inj}B \land g:B\xrightarrow{inj}C \therefore / \therefore g\circ f:A\xrightarrow{inj}C$.
-        \item $f:A\xrightarrow[surj]{}B \land g:B\xrightarrow[surj]{}C \therefore / \therefore g\circ f:A\xrightarrow[surj]{}C$.
-        \item $f:A\xrightarrow{inj}B \therefore / \therefore f^{-1}:Range(f)\to A$ .
-        \item $f:A\xrightarrow[surj]{inj}B \therefore / \therefore f^{-1}:B\xrightarrow[surj]{inj}A$.
-        \item $f:A\to B \therefore / \therefore f[A]\subseteq B$.
-        \item $f:A\to B \therefore / \therefore f^{-1}[B]=A$.
-        \item $f:A\to B \therefore / \therefore f^{-1}[D \cap C]=f^{-1}[D]\cap f^{-1}[C]$.
-        \item $f:A\to B \therefore / \therefore f^{-1}[B-C]=f^{-1}[B]-f^{-1}[C]$.
-        \item $f:A\to B \therefore / \therefore f[A-C]\supseteq f[A]-f[C]$.
-        \item $f:A\xrightarrow{inj}B , C\subseteq A / \therefore f[A-C]=f[A]-f[C]$ .
-        \item $f:A\to B \land g:B\to C \therefore / \therefore (g\circ f)[A]=g[f[A]]$.
+        \item $f:A\to B , g:B\to C  / \therefore g\circ f:A\to C$.
+        \item $f:A\xrightarrow{inj}B , g:B\xrightarrow{inj}C / \therefore g\circ f:A\xrightarrow{inj}C$.
+        \item $f:A\xrightarrow[surj]{}B , g:B\xrightarrow[surj]{}C  / \therefore g\circ f:A\xrightarrow[surj]{}C$.
+        \item $f:A\xrightarrow{inj}B  / \therefore f^{-1}:Range(f)\to A$ .
+        \item $f:A\xrightarrow[surj]{inj}B  / \therefore f^{-1}:B\xrightarrow[surj]{inj}A$.
+        \item $Func(f)  / \therefore f[f^{-1}[B]]\subseteq B$.
+        \item $Func(f)  / \therefore f^{-1}[D \cap C]=f^{-1}[D]\cap f^{-1}[C]$.
+        \item $Func(f)  / \therefore f^{-1}[B-C]=f^{-1}[B]-f^{-1}[C]$.
+        \item $Func(f)  / \therefore f[A]-f[B] \subseteq   f[A-B]$.
+        \item $f:A\xrightarrow{inj}B , C\subseteq A / \therefore f[A-B]=f[A]-f[B]$ .
+        \item $f:A\to B , g:B\to C \therefore / \therefore (g\circ f)[A]=g[f[A]]$.
         \item $\bigcup_{i\in I}(A_i\cap B_i)\subseteq
-                  \left(\bigcup_{i\in I}A_i\right)\cap
-                  \left(\bigcup_{i\in I}B_i\right)$.
+                  \left(\bigcup_{i \in I}A_i\right)\cap
+                  \left(\bigcup_{i \in I}B_i\right)$.
         \item $\left(\bigcap_{i\in I}A_i\right)\cup
                   \left(\bigcap_{i\in I}B_i\right)\subseteq
                   \bigcap_{i\in I}(A_i\cup B_i)$.
@@ -3340,36 +3436,30 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
         \item $\bigcap_{i\in I}(A_i\cap B_i)=
                   \left(\bigcap_{i\in I}A_i\right)\cap
                   \left(\bigcap_{i\in I}B_i\right)$.
-        \item $\bigcup_{i\in I}(A_i\setminus B_i)\subseteq
-                  \left(\bigcup_{i\in I}A_i\right)\setminus
+        \item $\bigcup_{i\in I}(A_i - B_i)\subseteq
+                  \left(\bigcup_{i\in I}A_i\right)-
                   \left(\bigcap_{i\in I}B_i\right)$.
-        \item $\bigcap_{i\in I}A_i=\bigcup_{i\in I}A_i
-                  \leftrightarrow \forall i,j\in I\ (A_i=A_j)$.
-        \item $\bigcup_{i\in I}A_i=\varnothing
-                  \leftrightarrow \forall i\in I\ (A_i=\varnothing)$.
-        \item $\bigcap_{i\in I}A_i=\varnothing
-                  \rightarrow \exists i\in I\ (A_i=\varnothing)$.
-        \item $\bigcup_{i\in I}A_i\subseteq B
-                  \leftrightarrow \forall i\in I\ (A_i\subseteq B)$.
-        \item $B\subseteq\bigcap_{i\in I}A_i
-                  \leftrightarrow \forall i\in I\ (B\subseteq A_i)$.
         \item $\bigcup_{i\in I}(A_i\cap B)
                   =\left(\bigcup_{i\in I}A_i\right)\cap B$.
         \item $\bigcap_{i\in I}(A_i\cup B)
                   =\left(\bigcap_{i\in I}A_i\right)\cup B$.
-        \item $\bigcup_{i\in I}(A_i\setminus B)
-                  =\left(\bigcup_{i\in I}A_i\right)\setminus B$.
-        \item $\bigcap_{i\in I}(A_i\setminus B)
-                  =\left(\bigcap_{i\in I}A_i\right)\setminus B$.
-        \item $\bigcup_{i\in I}(A_i\cap B_i)
-                  =\left(\bigcup_{i\in I}A_i\right)\cap
-                  \left(\bigcup_{i\in I}B_i\right)$.
-        \item $\bigcap_{i\in I}(A_i\cup B_i)
-                  =\left(\bigcap_{i\in I}A_i\right)\cup
-                  \left(\bigcap_{i\in I}B_i\right)$.
-        \item $\bigcup_{i\in I}A_i\subseteq\bigcap_{i\in I}A_i
-                  \leftrightarrow \forall i,j\in I\ (A_i\subseteq A_j)$.
+        \item $\bigcup_{i\in I}(A_i- B)
+                  =\left(\bigcup_{i\in I}A_i\right)- B$.
+        \item $\bigcap_{i\in I}(A_i- B)
+                  =\left(\bigcap_{i\in I}A_i\right)- B$.
         \item $\bigcap_{i\in I}A_i\subseteq\bigcup_{i\in I}A_i$.
+        \item $\bigcap_{i\in I}A_i=\bigcup_{i\in I}A_i
+                  \therefore / \therefore \forall i,j\in I\ (A_i=A_j)$.
+        \item $\bigcap_{i\in I}A_i=\varnothing
+                  \therefore / \therefore \exists i\in I\ (A_i=\varnothing)$.
+        \item $\bigcup_{i\in I}A_i=\varnothing
+                  \therefore / \therefore \forall i\in I\ (A_i=\varnothing)$.
+        \item $\bigcup_{i\in I}A_i\subseteq B
+                  \therefore / \therefore \forall i\in I\ (A_i\subseteq B)$.
+        \item $B\subseteq\bigcap_{i\in I}A_i
+                  \therefore / \therefore \forall i\in I\ (B\subseteq A_i)$.
+        \item $\bigcup_{i\in I}A_i\subseteq\bigcap_{i\in I}A_i
+                  \therefore / \therefore \forall i,j\in I\ (A_i\subseteq A_j)$.
         \item $Dom(f\upharpoonright A)=Dom(f)\cap A$.
         \item $Range(f\upharpoonright A)=f[A\cap Dom(f)]$.
         \item $f\upharpoonright Dom(f)=f$.
@@ -4662,7 +4752,7 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
 
     \textbf{Step 0: Define relation.}
 
-    Define a relation $\sim$ on $R \times (R \setminus \{0\})$ by
+    Define a relation $\sim$ on $R \times (R - \{0\})$ by
     \[
         (a,b) \sim (c,d) \leftrightarrow ad = bc.
     \]
@@ -4675,7 +4765,7 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
 
     \begin{fitchproof}[arrayenv=tabular]
 
-        \have{1}{ (a,b)\in R \times (R\setminus\{0\})}
+        \have{1}{ (a,b)\in R \times (R-\{0\})}
         \have{2}{ ab = ba}
         \have{3}{ (a,b)\sim(a,b)}
 
@@ -4727,7 +4817,7 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
     \textbf{Step 1: Define field of fractions}
 
     \[
-        \operatorname{Frac}(R) := (R \times (R\setminus\{0\}))/\sim
+        \operatorname{Frac}(R) := (R \times (R-\{0\}))/\sim
     \]
 
     \[
@@ -9142,7 +9232,7 @@ set is also large.
     $$
         \mathcal{F}
         =
-        \{A\subseteq\mathbb{N}:\mathbb{N}\setminus A\text{ is finite}\}.
+        \{A\subseteq\mathbb{N}:\mathbb{N}- A\text{ is finite}\}.
     $$
 
     Then $\mathcal{F}$ is a filter. Its elements are the cofinite subsets of
@@ -9178,7 +9268,7 @@ There is a very important characterization of ultrafilters.
         \quad
         \text{or}
         \quad
-        X\setminus A\in\mathcal{U}.
+        X- A\in\mathcal{U}.
     $$
 
 \end{theorem}
@@ -9186,21 +9276,21 @@ There is a very important characterization of ultrafilters.
 \begin{proof}
 
     Suppose first that $\mathcal{U}$ is an ultrafilter. Let $A\subseteq X$. We
-    cannot have both $A\in\mathcal{U}$ and $X\setminus A\in\mathcal{U}$, since then
-    $\emptyset=A\cap(X\setminus A)\in\mathcal{U}$, which is impossible. Suppose
-    that neither $A$ nor $X\setminus A$ belongs to $\mathcal{U}$. Then the filter
+    cannot have both $A\in\mathcal{U}$ and $X- A\in\mathcal{U}$, since then
+    $\emptyset=A\cap(X- A)\in\mathcal{U}$, which is impossible. Suppose
+    that neither $A$ nor $X- A$ belongs to $\mathcal{U}$. Then the filter
     generated by $\mathcal{U}\cup\{A\}$ is strictly larger than $\mathcal{U}$,
     contradicting the maximality of $\mathcal{U}$. Hence exactly one of them
     belongs to $\mathcal{U}$.
 
     Conversely, suppose that for every $A\subseteq X$, exactly one of $A$ and
-    $X\setminus A$ belongs to $\mathcal{U}$. Let $\mathcal{F}$ be a filter on $X$
+    $X- A$ belongs to $\mathcal{U}$. Let $\mathcal{F}$ be a filter on $X$
     such that $\mathcal{U}\subseteq\mathcal{F}$. If $\mathcal{F}\neq\mathcal{U}$,
-    choose $A\in\mathcal{F}\setminus\mathcal{U}$. By assumption, $X\setminus
+    choose $A\in\mathcal{F}-\mathcal{U}$. By assumption, $X-
         A\in\mathcal{U}\subseteq\mathcal{F}$. Therefore
 
     $$
-        A\cap(X\setminus A)=\emptyset\in\mathcal{F},
+        A\cap(X- A)=\emptyset\in\mathcal{F},
     $$
 
     a contradiction. Hence $\mathcal{F}=\mathcal{U}$, so $\mathcal{U}$ is an
@@ -9209,7 +9299,7 @@ There is a very important characterization of ultrafilters.
 \end{proof}
 
 Thus an ultrafilter makes a complete decision about every subset of $X$:
-exactly one of $A$ and $X\setminus A$ is ``large''.
+exactly one of $A$ and $X- A$ is ``large''.
 \begin{example}
 
     Fix $x\in X$. Define
@@ -9236,7 +9326,7 @@ exactly one of $A$ and $X\setminus A$ is ``large''.
     $$
         A\in\mathcal{U}_x,
         \qquad
-        X\setminus A\in\mathcal{U}_x.
+        X- A\in\mathcal{U}_x.
     $$
 
     By the Ultrafilter Characterization, $\mathcal{U}_x$ is an ultrafilter.
@@ -9279,14 +9369,14 @@ So every filter can be enlarged until it becomes maximal.
 \begin{example}
     Let
     \[
-        \mathcal{F}=\{A\subseteq\mathbb{N}:\mathbb{N}\setminus A\text{ is finite}\}.
+        \mathcal{F}=\{A\subseteq\mathbb{N}:\mathbb{N}- A\text{ is finite}\}.
     \]
     This is the Fr\'echet filter. It is not an ultrafilter, because for the set of
     even numbers
     $
         E=\{0,2,4,6,\dots\},
     $
-    neither $E\in\mathcal{F}$ nor $\mathbb{N}\setminus E\in\mathcal{F}$. By the
+    neither $E\in\mathcal{F}$ nor $\mathbb{N}- E\in\mathcal{F}$. By the
     Ultrafilter Lemma, there exists an ultrafilter $\mathcal{U}$ such that
     $\mathcal{F}\subseteq\mathcal{U}$. Since $\mathcal{U}$ is an ultrafilter,
     exactly one of
@@ -9295,7 +9385,7 @@ So every filter can be enlarged until it becomes maximal.
         \quad
         \text{or}
         \quad
-        \mathbb{N}\setminus E\in\mathcal{U}
+        \mathbb{N}- E\in\mathcal{U}
     \]
     holds.
 \end{example}
@@ -9359,15 +9449,15 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
 \end{theorem}
 
 \begin{proof}
-    Let $A\in\mathcal{F}_{\mathrm{Fr}}$. Then $\mathbb{N}\setminus A$ is finite. Suppose, toward a contradiction, that $A\notin\mathcal{U}$. Since $\mathcal{U}$ is an ultrafilter, exactly one of
+    Let $A\in\mathcal{F}_{\mathrm{Fr}}$. Then $\mathbb{N}- A$ is finite. Suppose, toward a contradiction, that $A\notin\mathcal{U}$. Since $\mathcal{U}$ is an ultrafilter, exactly one of
     \[
         A\in\mathcal{U},
         \quad
         \text{or}
         \quad
-        \mathbb{N}\setminus A\in\mathcal{U}
+        \mathbb{N}- A\in\mathcal{U}
     \]
-    holds. Hence $\mathbb{N}\setminus A\in\mathcal{U}$. Thus $\mathcal{U}$ contains
+    holds. Hence $\mathbb{N}- A\in\mathcal{U}$. Thus $\mathcal{U}$ contains
     a finite set, say
     $
         F=\{n_1,\ldots,n_k\}\in\mathcal{U}.
@@ -9376,18 +9466,18 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
     Suppose that $\{n_i\}\notin\mathcal{U}$ for every $i$. Then, since
     $\mathcal{U}$ is an ultrafilter,
     $
-        \mathbb{N}\setminus\{n_i\}\in\mathcal{U}
+        \mathbb{N}-\{n_i\}\in\mathcal{U}
     $
     for every $i$. By closure under finite intersections,
     \[
-        \mathbb{N}\setminus F
+        \mathbb{N}- F
         =
-        \bigcap_{i=1}^k(\mathbb{N}\setminus\{n_i\})
+        \bigcap_{i=1}^k(\mathbb{N}-\{n_i\})
         \in\mathcal{U}.
     \]
     Since also $F\in\mathcal{U}$, we obtain
     $
-        F\cap(\mathbb{N}\setminus F)=\emptyset\in\mathcal{U},
+        F\cap(\mathbb{N}- F)=\emptyset\in\mathcal{U},
     $
     a contradiction. Therefore $\{n_i\}\in\mathcal{U}$ for some $i$, so
     $\mathcal{U}$ is principal, contradicting our assumption.
@@ -12651,7 +12741,7 @@ $$
 
 Thus the natural density of the even numbers is $1/2$. Similarly, the set of odd numbers has probability $1/2$.
 
-Now consider the nonstandard construction. Let $H\in{}^*\mathbb N\setminus\mathbb N$ be an infinite hypernatural and let
+Now consider the nonstandard construction. Let $H\in{}^*\mathbb N-\mathbb N$ be an infinite hypernatural and let
 
 $$
     {}^*\mathbb{N}_H=\{0,1,\ldots,H-1\}.
@@ -12707,7 +12797,7 @@ In the nonstandard formulation, the same ordering gives the hyperfinite sample s
 
 $$
     \{{}^*s_i\}_{i<H},
-    \qquad H\in{}^*\mathbb N\setminus\mathbb N.
+    \qquad H\in{}^*\mathbb N-\mathbb N.
 $$
 
 For an internal event \({}^*A_H\subseteq\{{}^*s_i\}_{i<H}\), we define
@@ -13167,7 +13257,7 @@ We therefore replace $\mathbb N$ by a hyperfinite initial segment.
 
 Let
 $
-    H\in{}^*\mathbb N\setminus\mathbb N
+    H\in{}^*\mathbb N-\mathbb N
 $
 be an infinite hypernatural number and define
 $
