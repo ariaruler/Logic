@@ -3618,19 +3618,15 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
         \begin{fitchproof}[arrayenv=tabular]
             \have  {2} { a \nsim b}     \by{$ass$}{}
             \open
-            \have  {2} { [a]_{\sim} \cap [b]_{\sim}  \not= \emptyset }   \by{$acp$}{}
-            \open
             \have  {2} { x \in [a]_{\sim} \cap [b]_{\sim} }        \by{$acp$}{}
             \have  {2} { x \in [a]_{\sim}  }            \by{$ \cap E$}{}
             \have  {2} { x \in  [b]_{\sim} }            \by{$ \cap E$}{}
             \have  {2} {x \sim a}                     \by{$[]_{\sim} E$}{}
             \have  {2} {x \sim b}                     \by{$[]_{\sim} E$}{}
             \have  {2} {a \sim b }                   \by{$trans$}{}
-            \have  {2} {\bot }
+            \have  {2} {\bot }                        \by{$\bot I$}{}
             \close
-            \have  {2} {\bot }
-            \close
-            \have  {2} { [a]_{\sim} \cap [b]_{\sim}  = \emptyset }
+            \have  {2} { [a]_{\sim} \cap [b]_{\sim}  = \emptyset }    \by{$= \emptyset I$}{}
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt}
          &
@@ -3643,9 +3639,9 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
             \have  {2} {a \in [a]_{\sim} }      \by{$[]_{\sim} I$}{}
             \have  {2} {a \in [b]_{\sim} }      \by{$[]_{\sim} I$}{}
             \have  {2} {a \in [a]_{\sim} \cap [b]_{\sim} }       \by{$ \cap I$}{}
-            \have  {2} {\bot}
+            \have  {2} {\bot}                           \by{$\bot I$}{}
             \close
-            \have  {2} {a \nsim b  }
+            \have  {2} {a \nsim b  }                     \by{$\neg I$}{}
         \end{fitchproof}
         \rule[0pt]{0pt}{0pt}
         \\
@@ -3674,115 +3670,122 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
 \begin{theorem} if ``$\sim$'' is a equivalence class in ``$(A,\sim)$'' then
     ``$A/\sim$'' is a partition for ``$A$'' i.e. ``$Part(A/\sim,A)$''.
 
-    \begin{fitchproof}[arrayenv=tabular]
-        \open
-        \have  {2} {  [x]_{\sim} \in A / \sim  }  \by{$acp$}{}
-        \have  {2} { x  \sim  x  }        \by{$reflex$}{}
-        \have  {2} { x \in [x]_{\sim}  }       \by{$[]_{\sim} I$}{}
-        \have  {2} {  [x]_{\sim} \not= \emptyset  }        \by{$\not= \emptyset I$}{}
-        \close
-        \have  {2} { \forall  [x]_{\sim} \in A / \sim \quad  [x]_{\sim} \not= \emptyset   }
-    \end{fitchproof}
-
-    \begin{fitchproof}[arrayenv=tabular]
-        \open
-        \have  {2} { [x]_{\sim} \not= [y]_{\sim}  }     \by{$acp$}{}
-        \have  {2} { x \nsim  y  }                       \by{$Lemma 5.6.2.1$}{}
-        \have  {2} { [x]_{\sim} \cap [y]_{\sim}  = \emptyset }  \by{$Lemma 5.6.2.2$}{}
-        \close
-        \have  {2} { \forall  [x]_{\sim} , [y]_{\sim} \in A / \sim \quad  [x]_{\sim} \not= [y]_{\sim}  \to   [x]_{\sim} \cap [y]_{\sim}  = \emptyset }
-    \end{fitchproof}
-
-    \begin{fitchproof}[arrayenv=tabular]
-        \open
-        \have  {2} { x \in \bigcup (A/\sim)  }           \by{$acp$}{}
-        \open
-        \have  {2} { [y]_{\sim} \in A/\sim   }               \by{$acp$}{}
-        \have  {2} { x \in [y]_{\sim}  }                    \by{$acp$}{}
-        \have  {2} { [y]_{\sim} \subseteq A  }
-        \have  {2} { x \in A  }         \by{$\subseteq E$}{}
-        \close
-        \have  {2} { x \in A  }                \by{$\bigcup E$}{}
-        \close
-        \open
-        \have  {2} { x \in A  }
-        \have  {2} { x \in [x]_\sim   }
-        \have  {2} {  [x]_\sim \in (A/\sim)  }
-        \have  {2} { x \in \bigcup(A/\sim)  }         \by{$\bigcup I$}{}
-        \close
-        \have  {2} { A  = \bigcup(A/\sim)  }            \by{$= I$}{}
-    \end{fitchproof}
 
 \end{theorem}
+
+\begin{fitchproof}[arrayenv=tabular]
+    \open
+    \have  {2} {  [x]_{\sim} \in A / \sim  }  \by{$acp$}{}
+    \have  {2} { x  \sim  x  }        \by{$reflex$}{}
+    \have  {2} { x \in [x]_{\sim}  }       \by{$[]_{\sim} I$}{}
+    \have  {2} {  [x]_{\sim} \not= \emptyset  }        \by{$\not= \emptyset I$}{}
+    \close
+    \have  {2} { \forall  [x]_{\sim} \in A / \sim \quad  [x]_{\sim} \not= \emptyset   }
+\end{fitchproof}
+
+\begin{fitchproof}[arrayenv=tabular]
+    \open
+    \have  {2} { [x]_{\sim} \not= [y]_{\sim}  }     \by{$acp$}{}
+    \have  {2} { x \nsim  y  }                       \by{$Lemma $}{}
+    \have  {2} { [x]_{\sim} \cap [y]_{\sim}  = \emptyset }  \by{$Lemma $}{}
+    \close
+    \have  {2} { \forall  [x]_{\sim} , [y]_{\sim} \in A / \sim \quad  [x]_{\sim} \not= [y]_{\sim}  \to   [x]_{\sim} \cap [y]_{\sim}  = \emptyset }
+\end{fitchproof}
+
+\begin{fitchproof}[arrayenv=tabular]
+    \open
+    \have  {2} { x \in \bigcup (A/\sim)  }           \by{$acp$}{}
+    \open
+    \have  {2} { [y]_{\sim} \in A/\sim   }               \by{$acp$}{}
+    \have  {2} { x \in [y]_{\sim}  }                    \by{$acp$}{}
+    \have  {2} { [y]_{\sim} \subseteq A  }
+    \have  {2} { x \in A  }                            \by{$\subseteq E$}{}
+    \close
+    \have  {2} { x \in A  }                            \by{$\bigcup E$}{}
+    \close
+    \open
+    \have  {2} { x \in A  }                              \by{$acp$}{}
+    \have  {2} { x \in [x]_\sim   }
+    \have  {2} {  [x]_\sim \in (A/\sim)  }
+    \have  {2} { x \in \bigcup(A/\sim)  }         \by{$\bigcup I$}{}
+    \close
+    \have  {2} { A  = \bigcup(A/\sim)  }            \by{$= I$}{}
+\end{fitchproof}
+
+
 
 \begin{theorem} if ``$P$'' is a partition for ``$A$''  we define
     \[ \sim_P := \{ (x,y) \mid \exists Y \in P \quad ( x \in  Y \land y \in  Y) \} \]
     then ``$\sim_P$'' is a equivalence class in ``$(A,\sim_P)$''.
 
-    \begin{fitchproof}[arrayenv=tabular]
-        \open
-        \have  {2} { x \in A  }          \by{$acp$}{}
-        \have  {2} { x \in \bigcup P  }      \by{$Def$}{}
-        \open
-        \have  {2} {x \in Y  }             \by{$acp$}{}
-        \have  {2} { Y \in P  }             \by{$acp$}{}
-        \have  {2} {\exists Y \in P \quad (x \in Y \land x \in Y  )  }
-        \have  {2} {x \sim_P x  }
-        \close
-        \have  {2} {x \sim_P x  }
-        \close
-        \have  {2} {\forall x \in A \quad x \sim_P x  }
-
-    \end{fitchproof}
-
-    \begin{fitchproof}[arrayenv=tabular]
-        \open
-        \have  {2} { x , y \in A }      \by{$acp$}{}
-        \open
-        \have  {2} { x \sim_P y  }            \by{$acp$}{}
-        \have  {2} {\exists Y \in P \quad ( x \in Y \land y \in Y  )  }   \by{$Def$}{}
-        \open
-        \have  {2} { Y \in P \land  x \in Y \land y \in Y    }      \by{$acp$}{}
-        \have  {2} { Y \in P \land  y \in Y \land x \in Y    }      \by{$commutative \land$}{}
-        \have  {2} {\exists Y \in P \quad ( y \in Y \land x \in Y  )  }
-        \have  {2} { y \sim_P x  }
-        \close
-        \have  {2} { y \sim_P x  }
-        \close
-        \have  {2} {x \sim_P y \to  y \sim_P x  }
-        \close
-        \have  {2} {\forall x,y \in A \quad x \sim_P y \to  y \sim_P x }
-    \end{fitchproof}
-
-    \begin{fitchproof}[arrayenv=tabular]
-        \open
-        \have  {2} { x , y ,z \in A }         \by{$acp$}{}
-        \open
-        \have  {2} { x \sim_P y  }             \by{$acp$}{}
-        \have  {2} { y \sim_P z  }               \by{$acp$}{}
-        \have  {2} {\exists Y \in P \quad ( x \in Y \land y \in Y  )  }
-        \have  {2} {\exists Y \in P \quad ( y \in Y \land z \in Y  )  }
-        \open
-        \have  {2} { Y \in P \land  x \in Y \land y \in Y    }
-        \open
-        \have  {2} { Y' \in P \land  y \in Y' \land z \in Y'    }
-        \have  {2} {Y \cap Y' \not= \emptyset  }
-        \have  {2} {Y = Y'  }
-        \have  {2} {Y \in P \land  x \in Y \land z \in Y   }
-        \have  {2} {\exists Y \in P \quad ( x \in Y \land z \in Y  )  }
-        \have  {2} { x \sim_P z  }
-        \close
-        \have  {2} { x \sim_P z  }
-        \close
-        \have  {2} { x \sim_P z  }
-        \close
-        \have  {2} { x \sim_P y \land y \sim_p z \to  x \sim_P z  }
-
-        \close
-        \have  {2} {\forall x,y,z \in A \quad x \sim_P y \land y \sim_p z \to  x \sim_P z }
-    \end{fitchproof}
 
 \end{theorem}
+
+\begin{fitchproof}[arrayenv=tabular]
+    \open
+    \have  {2} { x \in A  }          \by{$acp$}{}
+    \have  {2} { x \in \bigcup P  }      \by{$Def$}{}
+    \open
+    \have  {2} {x \in Y  }             \by{$acp$}{}
+    \have  {2} { Y \in P  }             \by{$acp$}{}
+    \have  {2} {\exists Y \in P \quad (x \in Y \land x \in Y  )  }  \by{$ \land I  , \exists I , 3 ,4$}{}
+    \have  {2} {x \sim_P x  }         \by{$Def.5$}{}
+    \close
+    \have  {2} {x \sim_P x  }              \by{$\bigcup E , 2 $}{}
+    \close
+    \have  {2} {\forall x \in A \quad x \sim_P x  }   \by{$ \to I  , \forall I $}{}
+
+\end{fitchproof}
+
+\begin{fitchproof}[arrayenv=tabular]
+    \open
+    \have  {2} { x , y \in A }      \by{$acp$}{}
+    \open
+    \have  {2} { x \sim_P y  }            \by{$acp$}{}
+    \have  {2} {\exists Y \in P \quad ( x \in Y \land y \in Y  )  }   \by{$Def2$}{}
+    \open
+    \have  {2} { Y \in P \land  x \in Y \land y \in Y    }      \by{$acp$}{}
+    \have  {2} { Y \in P \land  y \in Y \land x \in Y    }      \by{$commutative \land , 4$}{}
+    \have  {2} {\exists Y \in P \quad ( y \in Y \land x \in Y  )  }    \by{$ \exists I, 5$}{}
+    \have  {2} { y \sim_P x  }                                         \by{$Def6$}{}
+    \close
+    \have  {2} { y \sim_P x  }                                              \by{$ \exists E, 3$}{}
+    \close
+    \have  {2} {x \sim_P y \to  y \sim_P x  }                                \by{$ \to I$}{}
+    \close
+    \have  {2} {\forall x,y \in A \quad x \sim_P y \to  y \sim_P x }             \by{$\to I , \forall I$}{}
+\end{fitchproof}
+
+\begin{fitchproof}[arrayenv=tabular]
+    \open
+    \have  {2} { x , y ,z \in A }         \by{$acp$}{}
+    \open
+    \have  {2} { x \sim_P y  }             \by{$acp$}{}
+    \have  {2} { y \sim_P z  }               \by{$acp$}{}
+    \have  {2} {\exists Y \in P \quad ( x \in Y \land y \in Y  )  }  \by{$Def2$}{}
+    \have  {2} {\exists Y \in P \quad ( y \in Y \land z \in Y  )  }    \by{$Def3$}{}
+    \open
+    \have  {2} { Y \in P \land  x \in Y \land y \in Y    }             \by{$acp$}{}
+    \open
+    \have  {2} { Y' \in P \land  y \in Y' \land z \in Y'    }               \by{$acp$}{}
+    \have  {2} { y \in  Y \cap Y'  }                                  \by{$\land E , \cap I$ 6,7}{}
+    \have  {2} {Y \cap Y' \not= \emptyset  }                       \by{$\emptyset \not= I$}{}
+    \have  {2} {Y = Y'  }                                               \by{$partition-condition , contraposition , 8$}{}
+    \have  {2} {Y \in P \land  x \in Y \land z \in Y   }           \by{$= E , \land I$}{}
+    \have  {2} {\exists Y \in P \quad ( x \in Y \land z \in Y  )  }      \by{$ \exists I$}{}
+    \have  {2} { x \sim_P z  }                                             \by{$Def52$}{}
+    \close
+    \have  {2} { x \sim_P z  }                                            \by{$ \exists E$}{}
+    \close
+    \have  {2} { x \sim_P z  }                                            \by{$ \exists E$}{}
+    \close
+    \have  {2} { x \sim_P y \land y \sim_p z \to  x \sim_P z  }               \by{$ \to I$}{}
+
+    \close
+    \have  {2} {\forall x,y,z \in A \quad x \sim_P y \land y \sim_p z \to  x \sim_P z }        \by{$\to I , \forall I$}{}
+\end{fitchproof}
+
+
 
 \section{Orderings}
 \begin{definition}
@@ -3808,130 +3811,134 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
 now we will show you relation between ``(partial) Order relation'' and
 ``(partial) Strict order relation''.
 
-\begin{theorem}.\\
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item       if ``$\preceq $'' is a ``(partial) Order relation'' in ``$\mathfrak{A}$''
-              define ``$a \prec b : a \preceq b \land a \not= b $'' prove that ``$\prec $''
-              is ``(partial) Strict order relation''.
+\begin{theorem}.
 
-              \begin{fitchproof}[arrayenv=tabular]
-                  \open
-                  \have  {2} { x \in A }    \by{$acp$}{}
-                  \open
-                  \have  {2} { x \prec x }     \by{$acp$}{}
-                  \have  {2} { x \not= x }     \by{$\land E$}{}
-                  \have  {2} { x = x }     \by{$= I$}{}
-                  \have  {2} { \bot  }           \by{$\bot I$}{}
-                  \close
-                  \have  {2} { x \nprec x }             \by{$\neg I$}{}
-                  \close
-                  \have  {2} {\forall x \in A \quad x \nprec x }  \by{$\to I , \forall I $}{}
-              \end{fitchproof}
-
-              \begin{fitchproof}[arrayenv=tabular]
-                  \open
-                  \have  {2} { x,y,z \in A }      \by{$acp$}{}
-                  \open
-                  \have  {2} { x \prec y }       \by{$acp$}{}
-                  \have  {2} { y \prec z }        \by{$acp$}{}
-                  \have  {2} { x \preceq y }   \by{$ \land E$}{}
-                  \have  {2} { y \preceq z }    \by{$\land E$}{}
-                  \have  {2} { x \preceq z } \by{$trans$}{}
-                  \have  {2} { x \not= y }    \by{$\land E$}{}
-                  \have  {2} { y \not= z }     \by{$\land E$}{}
-                  \open
-                  \have  {2} { x = z }     \by{$acp$}{}
-                  \have  {2} { y \preceq x }  \by{$= E$}{}
-                  \have  {2} { x = y }        \by{$antisym$}{}
-                  \have  {2} { \bot  }       \by{$\bot I$}{}
-                  \close
-                  \have  {2} { x \not= z }       \by{$\neg I$}{}
-                  \have  {2} { x \prec z }        \by{$\land I$}{}
-                  \close
-                  \have  {2} { x \prec y \land y \prec z \to x \prec z }        \by{$\to I$}{}
-                  \close
-                  \have  {2} {\forall x,y,z \in A \quad x \prec y \land y \prec z \to x \prec z }   \by{$\to I, \forall I $}{}
-
-              \end{fitchproof}
-
-        \item       if ``$\prec $'' is a ``(partial) Strict Order relation'' in ``$\mathfrak{A}$''
-              define ``$a \preceq b : a \prec b \lor a = b $'' prove that ``$\preceq $'' is
-              ``(partial) order relation''.
-
-              \begin{fitchproof}[arrayenv=tabular]
-                  \open
-                  \have  {2} { x \in A }   \by{$acp$}{}
-                  \have  {2} { x = x }          \by{$= I$}{}
-                  \have  {2} { x \preceq x }     \by{$\lor I$}{}
-                  \close
-                  \have  {2} {\forall x \in A \quad x \preceq x }      \by{$\to I, \forall I $}{}
-              \end{fitchproof}
-
-              \begin{fitchproof}[arrayenv=tabular]
-                  \open
-                  \have  {2} { x,y \in A }      \by{$acp$}{}
-                  \open
-                  \have  {2} { x \preceq y \land y \preceq x }     \by{$acp$}{}
-                  \open
-                  \have  {2} { x \prec y \land y \prec x }     \by{$acp$}{}
-                  \have  {2} { \bot  }                          \by{$asym$}{}
-                  \have  {2} { x = y  }
-                  \close
-                  \open
-                  \have  {2} { x \prec y \land y = x }         \by{$acp$}{}
-                  \have  {2} { x = y  }
-                  \close
-                  \open
-                  \have  {2} { x = y \land y \prec x }          \by{$acp$}{}
-                  \have  {2} { x = y  }
-                  \close
-                  \open
-                  \have  {2} { x = y \land y = x }           \by{$acp$}{}
-                  \have  {2} { x = y  }
-                  \close
-                  \have  {2} { x = y  }                      \by{$\lor E$}{}
-                  \close
-                  \have  {2} { x \preceq y \land y \preceq x \to x=y }      \by{$\to I$}{}
-                  \close
-                  \have  {2} {\forall x,y \in A \quad x \preceq y \land y \preceq x \to x=y }      \by{$\to I, \forall I $}{}
-              \end{fitchproof}
-
-              \begin{fitchproof}[arrayenv=tabular]
-                  \open
-                  \have  {2} { x,y,z \in A }     \by{$acp$}{}
-                  \open
-                  \have  {2} { x \preceq y \land y \preceq z }      \by{$acp$}{}
-                  \open
-                  \have  {2} { x \prec y \land y \prec z }          \by{$acp$}{}
-                  \have  {2} { x \prec z }                           \by{$trans$}{}
-                  \have  {2} { x \preceq z }                         \by{$\lor I$}{}
-                  \close
-                  \open
-                  \have  {2} { x \prec y \land y = z }        \by{$acp$}{}
-                  \have  {2} { x \prec z }                     \by{$= E$}{}
-                  \have  {2} { x \preceq z }                   \by{$\lor I$}{}
-                  \close
-                  \open
-                  \have  {2} { x = y \land y \prec z }             \by{$acp$}{}
-                  \have  {2} { x \prec z }                           \by{$= E$}{}
-                  \have  {2} { x \preceq z }                           \by{$\lor I$}{}
-                  \close
-                  \open
-                  \have  {2} { x = y \land y = z }          \by{$acp$}{}
-                  \have  {2} { x = z }                        \by{$= E$}{}
-                  \have  {2} { x \preceq z }                   \by{$\lor I$}{}
-                  \close
-                  \have  {2} {x \preceq z  }                   \by{$\lor E$}{}
-                  \close
-                  \have  {2} { x \preceq y \land y \prec z \to x \preceq z }           \by{$\to I$}{}
-                  \close
-                  \have  {2} {\forall x,y,z \in A \quad x \preceq y \land y \prec z \to x \preceq z } \by{$\to I, \forall I $}{}
-              \end{fitchproof}
-
-    \end{enumerate}
+    \setlength{\itemsep}{0pt} % No extra space between items
+    if ``$\preceq $'' is a ``(partial) Order relation'' in ``$\mathfrak{A}$''
+    define ``$a \prec b : a \preceq b \land a \not= b $'' prove that ``$\prec $''
+    is ``(partial) Strict order relation''.
 
 \end{theorem}
+
+\begin{fitchproof}[arrayenv=tabular]
+    \open
+    \have  {2} { x \in A }    \by{$acp$}{}
+    \open
+    \have  {2} { x \prec x }     \by{$acp$}{}
+    \have  {2} { x \not= x }     \by{$\land E , 2 $}{}
+    \have  {2} { x = x }     \by{$= I$}{}
+    \have  {2} { \bot  }           \by{$\bot I , 3 , 4$}{}
+    \close
+    \have  {2} { x \nprec x }             \by{$\neg I$}{}
+    \close
+    \have  {2} {\forall x \in A \quad x \nprec x }  \by{$\to I , \forall I $}{}
+\end{fitchproof}
+
+\begin{fitchproof}[arrayenv=tabular]
+    \open
+    \have  {2} { x,y,z \in A }      \by{$acp$}{}
+    \open
+    \have  {2} { x \prec y }       \by{$acp$}{}
+    \have  {2} { y \prec z }        \by{$acp$}{}
+    \have  {2} { x \preceq y }   \by{$ \land E, 2$}{}
+    \have  {2} { y \preceq z }    \by{$\land E , 3$}{}
+    \have  {2} { x \preceq z } \by{$trans , 4 , 5$}{}
+    \have  {2} { x \not= y }    \by{$\land E , 2$}{}
+    \have  {2} { y \not= z }     \by{$\land E , 3 $}{}
+    \open
+    \have  {2} { x = z }     \by{$acp$}{}
+    \have  {2} { y \preceq x }  \by{$= E , 5 ,9$}{}
+    \have  {2} { x = y }        \by{$antisym , 5 ,10 $}{}
+    \have  {2} { \bot  }       \by{$\bot I , 7 , 11$}{}
+    \close
+    \have  {2} { x \not= z }       \by{$\neg I $}{}
+    \have  {2} { x \prec z }        \by{$\land I , 6 , 13$}{}
+    \close
+    \have  {2} { x \prec y \land y \prec z \to x \prec z }        \by{$\to I$}{}
+    \close
+    \have  {2} {\forall x,y,z \in A \quad x \prec y \land y \prec z \to x \prec z }   \by{$\to I, \forall I $}{}
+
+\end{fitchproof}
+
+\begin{theorem}.
+
+    if ``$\prec $'' is a ``(partial) Strict Order relation'' in ``$\mathfrak{A}$''
+    define ``$a \preceq b : a \prec b \lor a = b $'' prove that ``$\preceq $'' is
+    ``(partial) order relation''.
+
+\end{theorem}
+
+\begin{fitchproof}[arrayenv=tabular]
+    \open
+    \have  {2} { x \in A }   \by{$acp$}{}
+    \have  {2} { x = x }          \by{$= I$}{}
+    \have  {2} { x \preceq x }     \by{$\lor I, 2$}{}
+    \close
+    \have  {2} {\forall x \in A \quad x \preceq x }      \by{$\to I, \forall I $}{}
+\end{fitchproof}
+
+\begin{fitchproof}[arrayenv=tabular]
+    \open
+    \have  {2} { x,y \in A }      \by{$acp$}{}
+    \open
+    \have  {2} { x \preceq y \land y \preceq x }     \by{$acp$}{}
+    \open
+    \have  {2} { x \prec y \land y \prec x }     \by{$acp$}{}
+    \have  {2} { \bot  }                          \by{$asym , 3$}{}
+    \have  {2} { x = y  }                       \by{$\bot I, 4$}{}
+    \close
+    \open
+    \have  {2} { x \prec y \land y = x }         \by{$acp$}{}
+    \have  {2} { x = y  }                         \by{$\land E, 6$}{}
+    \close
+    \open
+    \have  {2} { x = y \land y \prec x }          \by{$acp$}{}
+    \have  {2} { x = y  }                        \by{$\land E, 8$}{}
+    \close
+    \open
+    \have  {2} { x = y \land y = x }           \by{$acp$}{}
+    \have  {2} { x = y  }                        \by{$\land E, 10$}{}
+    \close
+    \have  {2} { x = y  }                      \by{$\lor E , 2$}{}
+    \close
+    \have  {2} { x \preceq y \land y \preceq x \to x=y }      \by{$\to I$}{}
+    \close
+    \have  {2} {\forall x,y \in A \quad x \preceq y \land y \preceq x \to x=y }      \by{$\to I, \forall I $}{}
+\end{fitchproof}
+
+\begin{fitchproof}[arrayenv=tabular]
+    \open
+    \have  {2} { x,y,z \in A }     \by{$acp$}{}
+    \open
+    \have  {2} { x \preceq y \land y \preceq z }      \by{$acp$}{}
+    \open
+    \have  {2} { x \prec y \land y \prec z }          \by{$acp$}{}
+    \have  {2} { x \prec z }                           \by{$trans , 3$}{}
+    \have  {2} { x \preceq z }                         \by{$\lor I , 4$}{}
+    \close
+    \open
+    \have  {2} { x \prec y \land y = z }        \by{$acp$}{}
+    \have  {2} { x \prec z }                     \by{$= E , 6$}{}
+    \have  {2} { x \preceq z }                   \by{$\lor I , 7$}{}
+    \close
+    \open
+    \have  {2} { x = y \land y \prec z }             \by{$acp$}{}
+    \have  {2} { x \prec z }                           \by{$= E , 9$}{}
+    \have  {2} { x \preceq z }                           \by{$\lor I , 10$}{}
+    \close
+    \open
+    \have  {2} { x = y \land y = z }          \by{$acp$}{}
+    \have  {2} { x = z }                        \by{$= E , 12$}{}
+    \have  {2} { x \preceq z }                   \by{$\lor I , 13$}{}
+    \close
+    \have  {2} {x \preceq z  }                   \by{$\lor E , 2$}{}
+    \close
+    \have  {2} { x \preceq y \land y \prec z \to x \preceq z }           \by{$\to I$}{}
+    \close
+    \have  {2} {\forall x,y,z \in A \quad x \preceq y \land y \prec z \to x \preceq z } \by{$\to I, \forall I $}{}
+\end{fitchproof}
+
+
 
 \begin{definition}
     \textbf{(Total-Linear) Order relation} assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
@@ -3947,11 +3954,11 @@ now we will show you relation between ``(partial) Order relation'' and
     we say ``$\prec  $''
     is a ``(Total-Linear) Strict order relation'' in  ``$\mathfrak{A}$'' if every two elements are comparable.
 
-    \[ (comparablity) :   \forall x,y \in A \quad x \prec y \lor x=y \lor y \prec x \]
+    \[ (trichotomy) :   \forall x,y \in A \quad x \prec y \lor x=y \lor y \prec x \]
 
 \end{definition}
 
-\begin{theorem}.\\
+\begin{theorem}.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       if ``$\preceq $'' is a ``(Total-Linear) Order relation'' in ``$\mathfrak{A}$''
@@ -3962,72 +3969,71 @@ now we will show you relation between ``(partial) Order relation'' and
               ``$\preceq $'' is ``(Total-Linear) order relation''.
     \end{enumerate}
 
-    \begin{fitchproof}[arrayenv=tabular]
-
-        \open
-        \have{1} {x, y \in A} \by{acp}{}
-        \have{2} {x \preceq y \lor y \preceq x} \by{linearity of $\preceq$ (1)}{}
-
-        \open
-        \have{3} {x = y} \by{acp}{}
-        \have{4} {x \prec y \lor x = y \lor y \prec x} \by{$\lor I$ (3)}{}
-        \close
-
-        \open
-        \have{6} {x \neq y} \by{acp}{}
-
-        \open
-        \have{7} {x \preceq y} \by{acp}{}
-        \have{8} {x \preceq y \land x \neq y} \by{$\land I$ (7, 6)}{}
-        \have{9} {x \prec y} \by{def $\prec$ (8)}{}
-        \have{10} {x \prec y \lor x = y \lor y \prec x} \by{$\lor I$ (9)}{}
-        \close
-
-        \open
-        \have{12} {y \preceq x} \by{acp}{}
-        \have{13} {y \neq x} \by{symmetry of $\neq$ (6)}{}
-        \have{14} {y \preceq x \land y \neq x} \by{$\land I$ (12, 13)}{}
-        \have{15} {y \prec x} \by{def $\prec$ (14)}{}
-        \have{16} {x \prec y \lor x = y \lor y \prec x} \by{$\lor I$ (15)}{}
-        \close
-
-        \have{18} {x \prec y \lor x = y \lor y \prec x} \by{$\lor E$ (2, 11, 17)}{}
-        \close
-        \have{21} {x \prec y \lor x = y \lor y \prec x} \by{$\lor E$ (20, 5, 19)}{}
-        \close
-
-        \have{22} {\forall x, y \in A \quad x \prec y \lor x = y \lor y \prec x} \by{$\forall I$ (1-21)}{}
-
-    \end{fitchproof}
-    \vspace{1cm}
-
-    \begin{fitchproof}[arrayenv=tabular]
-
-        \open
-        \have{1} {x, y \in A} \by{acp}{}
-        \have{2} {x \prec y \lor x = y \lor y \prec x} \by{linearity of $\prec$}{}
-
-        \open
-        \have{3} {x \prec y \lor x = y} \by{acp (Case 1 from 2)}{}
-        \have{4} {x \preceq y} \by{def $\preceq$ (3)}{}
-        \have{5} {x \preceq y \lor y \preceq x} \by{$\lor I$ (4)}{}
-        \close
-
-        \open
-        \have{6} {y \prec x} \by{acp (Case 2 from 2)}{}
-        \have{7} {y \prec x \lor y = x} \by{$\lor I$ (6)}{}
-        \have{8} {y \preceq x} \by{def $\preceq$ (7)}{}
-        \have{9} {x \preceq y \lor y \preceq x} \by{$\lor I$ (8)}{}
-        \close
-
-        \have{10} {x \preceq y \lor y \preceq x} \by{$\lor E$ (2, 3-5, 6-9)}{}
-        \close
-
-        \have{11} {\forall x, y \in A \quad x \preceq y \lor y \preceq x} \by{$\forall I$ (1-10)}{}
-
-    \end{fitchproof}
-
 \end{theorem}
+
+\begin{fitchproof}[arrayenv=tabular]
+
+    \open
+    \have{1} {x, y \in A} \by{acp}{}
+
+    \have{3} {x = y \lor x \not= y} \by{LEM}{}
+    \open
+    \have{3} {x = y} \by{acp}{}
+    \have{4} {x \prec y \lor x = y \lor y \prec x} \by{$\lor I$ 2}{}
+    \close
+    \open
+    \have{6} {x \neq y} \by{acp}{}
+    \have{2} {x \preceq y \lor y \preceq x} \by{comparablity of $\preceq$ 1}{}
+    \open
+    \have{7} {x \preceq y} \by{acp}{}
+    \have{8} {x \preceq y \land x \neq y} \by{$\land I$ 7, 6}{}
+    \have{9} {x \prec y} \by{def $\prec$ 8}{}
+    \have{10} {x \prec y \lor x = y \lor y \prec x} \by{$\lor I$ 9}{}
+    \close
+    \open
+    \have{12} {y \preceq x} \by{acp}{}
+    \have{14} {y \preceq x \land y \neq x} \by{$\land I$ 12, 13}{}
+    \have{15} {y \prec x} \by{def $\prec$ 12}{}
+    \have{16} {x \prec y \lor x = y \lor y \prec x} \by{$\lor I$ 15}{}
+    \close
+
+    \have{18} {x \prec y \lor x = y \lor y \prec x} \by{$\lor E$ 6}{}
+    \close
+    \have{21} {x \prec y \lor x = y \lor y \prec x} \by{$\lor E$ 2}{}
+    \close
+
+    \have{22} {\forall x, y \in A \quad x \prec y \lor x = y \lor y \prec x} \by{$\to I, \forall I $}{}
+
+\end{fitchproof}
+
+
+\begin{fitchproof}[arrayenv=tabular]
+
+    \open
+    \have{1} {x, y \in A} \by{acp}{}
+    \have{2} {x \prec y \lor x = y \lor y \prec x} \by{comparablity of $\prec$}{}
+
+    \open
+    \have{3} {x \prec y \lor x = y} \by{acp }{}
+    \have{4} {x \preceq y} \by{def $\preceq$ 3}{}
+    \have{5} {x \preceq y \lor y \preceq x} \by{$\lor I$ 4}{}
+    \close
+
+    \open
+    \have{6} {y \prec x} \by{acp }{}
+    \have{7} {y \prec x \lor y = x} \by{$\lor I$ 6}{}
+    \have{8} {y \preceq x} \by{def $\preceq$ 7}{}
+    \have{9} {x \preceq y \lor y \preceq x} \by{$\lor I$ 8}{}
+    \close
+
+    \have{10} {x \preceq y \lor y \preceq x} \by{$\lor E$ 2}{}
+    \close
+
+    \have{11} {\forall x, y \in A \quad x \preceq y \lor y \preceq x} \by{$\to I, \forall I $}{}
+
+\end{fitchproof}
+
+
 
 \begin{lemma}
     assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
@@ -4043,131 +4049,84 @@ now we will show you relation between ``(partial) Order relation'' and
 
     \end{enumerate}
 
-    \begin{fitchproof}[arrayenv=tabular]
-
-        \have{1} {\exists b \in B \ \forall x \in B (b \preceq x)} \by{$ass$}{}
-
-        \open
-        \have{2} {b_1, b_2 \in B} \by{acp (assumption for uniqueness)}{}
-
-        \open
-        \have{3} {(\forall x \in B \quad b_1 \preceq x) \land (\forall x \in B \ b_2 \preceq x)} \by{acp}{}
-        \have{4} {\forall x \in B \quad b_1 \preceq x} \by{$\land E$ (3)}{}
-        \have{5} {\forall x \in B \quad b_2 \preceq x} \by{$\land E$ (3)}{}
-        \have{6} {b_1 \preceq b_2} \by{$\forall E$ (4, $x \to b_2$)}{}
-        \have{7} {b_2 \preceq b_1} \by{$\forall E$ (5, $x \to b_1$)}{}
-        \have{8} {b_1 \preceq b_2 \land b_2 \preceq b_1} \by{$\land I$ (6, 7)}{}
-        \have{9} {b_1 = b_2} \by{antisym of $\preceq$ (8)}{}
-        \close
-
-        \have{10} {((\forall x \in B \quad b_1 \preceq x) \land (\forall x \in B \ b_2 \preceq x)) \to b_1 = b_2} \by{$\to I$ (3-9)}{}
-        \close
-
-        \have{11} {\exists! b \in B \quad \forall x \in B (b \preceq x)} \by{$\exists!$ def (1, 10)}{}
-
-    \end{fitchproof}
-    \vspace{1cm}
-
-    \begin{fitchproof}[arrayenv=tabular]
-
-        \have{1} {\exists c \in C \ \forall x \in C (x \preceq c)} \by{$ass$}{}
-
-        \open
-        \have{2} {c_1, c_2 \in C} \by{acp (assumption for uniqueness)}{}
-
-        \open
-        \have{3} {(\forall x \in C \ x \preceq c_1) \land (\forall x \in C \ x \preceq c_2)} \by{acp}{}
-        \have{4} {\forall x \in C \ x \preceq c_1} \by{$\land E$ (3)}{}
-        \have{5} {\forall x \in C \ x \preceq c_2} \by{$\land E$ (3)}{}
-        \have{6} {c_2 \preceq c_1} \by{$\forall E$ (4, $x \to c_2$)}{}
-        \have{7} {c_1 \preceq c_2} \by{$\forall E$ (5, $x \to c_1$)}{}
-        \have{8} {c_1 \preceq c_2 \land c_2 \preceq c_1} \by{$\land I$ (7, 6)}{}
-        \have{9} {c_1 = c_2} \by{antisym of $\preceq$ (8)}{}
-        \close
-
-        \have{10} {((\forall x \in C \ x \preceq c_1) \land (\forall x \in C \ x \preceq c_2)) \to c_1 = c_2} \by{$\to I$ (3-9)}{}
-        \close
-
-        \have{11} {\exists! c \in C \ \forall x \in C (x \preceq c)} \by{$\exists!$ def (1, 10)}{}
-
-    \end{fitchproof}
-
 \end{lemma}
+
+\begin{fitchproof}[arrayenv=tabular]
+    \have{1} {\exists b \in B \ \forall x \in B (b \preceq x)} \by{$ass$}{}
+    \open
+    \have{2} {b_1, b_2 \in B} \by{acp }{}
+    \open
+    \have{4} {\forall x \in B \quad b_1 \preceq x} \by{acp }{}
+    \have{5} {\forall x \in B \quad b_2 \preceq x} \by{acp }{}
+    \have{6} {b_1 \preceq b_2} \by{$\forall E$ 3 }{}
+    \have{7} {b_2 \preceq b_1} \by{$\forall E$ 4 }{}
+    \have{9} {b_1 = b_2} \by{antisym of $\preceq$ 5 ,6}{}
+    \close
+    \have{10} {((\forall x \in B \quad b_1 \preceq x) \land (\forall x \in B \ b_2 \preceq x)) \to b_1 = b_2} \by{$\to I$ }{}
+    \close
+    \have{11} {\exists! b \in B \quad \forall x \in B (b \preceq x)} \by{$\exists!$ def 1, 10}{}
+
+\end{fitchproof}
+
+
+\begin{fitchproof}[arrayenv=tabular]
+
+    \have{1} {\exists c \in C \ \forall x \in C (x \preceq c)} \by{$ass$}{}
+
+    \open
+    \have{2} {c_1, c_2 \in C} \by{acp (assumption for uniqueness)}{}
+
+    \open
+    \have{4} {\forall x \in C \ x \preceq c_1} \by{$\land E$ 3}{}
+    \have{5} {\forall x \in C \ x \preceq c_2} \by{$\land E$ 3}{}
+    \have{6} {c_2 \preceq c_1} \by{$\forall E$ 3 }{}
+    \have{7} {c_1 \preceq c_2} \by{$\forall E$ 4}{}
+    \have{9} {c_1 = c_2} \by{antisym of $\preceq$ 5 , 6}{}
+    \close
+
+    \have{10} {((\forall x \in C \ x \preceq c_1) \land (\forall x \in C \ x \preceq c_2)) \to c_1 = c_2} \by{$\to I$ }{}
+    \close
+
+    \have{11} {\exists! c \in C \ \forall x \in C (x \preceq c)} \by{$\exists!$ def 1, 10}{}
+
+\end{fitchproof}
+
+
 
 \begin{theorem}
     \textbf{Minimum and Maximum} assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
     and $\mathcal{B} := \{ B \subseteq A \mid  HaveLeast(B) \}$ and
     $ \mathcal{C} := \{ C \subseteq A \mid  HaveGreatest(C)  \}$
     we define  like this
-    \[ min_\mathfrak{A} :=  \{ (B,b) \in \mathcal{B} \times V \mid \forall x \in B \quad b \preceq x \}  \]
-    \[ max_\mathfrak{A} := \{ (C,c) \in \mathcal{C} \times V \mid \forall x \in C \quad x \preceq c \}  \]
+    \[ min_\mathfrak{A} :=  \{ (B,b) \in \mathcal{B} \times A \mid \forall x \in B \quad b \preceq x \}  \]
+    \[ max_\mathfrak{A} := \{ (C,c) \in \mathcal{C} \times A \mid \forall x \in C \quad x \preceq c \}  \]
     we must prove these two relations are two functions ``$min_\mathfrak{A} :
         \mathcal{B} \to V$'' and ``$max_\mathfrak{A} : \mathcal{C} \to V$''.
 
     \begin{fitchproof}[arrayenv=tabular]
-
         \open
-        \have{1} {B \in \mathcal{B}} \by{acp}{}
-        \have{2} {\exists b \in B \quad \forall x \in B (b \preceq x)} \by{def $\mathcal{B}$ (1)}{}
-
-        \open
-        \have{3} {b_0 \in B \land \forall x \in B (b_0 \preceq x)} \by{acp (assumption for $\exists E$)}{}
-        \have{4} {(B, b_0) \in min_A} \by{def $min_A$ (3)}{}
-        \have{5} {\exists b \in V ((B, b) \in min_A)} \by{$\exists I$ (4)}{}
-        \close
-
-        \have{6} {\exists b \in V ((B, b) \in min_A)} \by{$\exists E$ (2, 3-5)}{}
-
-        \open
-        \have{7} {b_1, b_2 \in V} \by{acp}{}
-
-        \open
-        \have{8} {(B, b_1) \in min_A \land (B, b_2) \in min_A} \by{acp}{}
-        \have{9} {(\forall x \in B \quad b_1 \preceq x) \land (\forall x \in B \ b_2 \preceq x)} \by{def $min_A$, $\land E$ (8)}{}
+        \have{8} {(B, b_1) \in min_\mathfrak{A} } \by{acp}{}
+        \have{8} { (B, b_2) \in min_\mathfrak{A}} \by{acp}{}
+        \have{9} {(\forall x \in B \quad b_1 \preceq x) } \by{def $min_\mathfrak{A}$ 1}{}
+        \have{9} {(\forall x \in B \quad b_2 \preceq x)}     \by{def $min_\mathfrak{A}$ 2}{}
         \have{10} {b_1 = b_2} \by{Lemma 5.7.1 (uniqueness)}{}
         \close
-
-        \have{11} {((B, b_1) \in min_A \land (B, b_2) \in min_A) \to b_1 = b_2} \by{$\to I$ (8-10)}{}
-        \close
-
-        \have{12} {\exists! b \in V ((B, b) \in min_A)} \by{def $\exists!$ (6, 11)}{}
-        \close
-
-        \have{13} {\forall B \in \mathcal{B} \quad \exists! b \in V ((B, b) \in min_A)} \by{$\forall I$ (1-12)}{}
-
+        \have{11} {((B, b_1) \in min_\mathfrak{A} \land (B, b_2) \in min_{\mathfrak{A}}) \to b_1 = b_2} \by{$\to I$ }{}
+        \have{11}  { Func( min_{\mathfrak{A}}) } \by{Def}{}
     \end{fitchproof}
 
     \begin{fitchproof}[arrayenv=tabular]
-
         \open
-        \have{1} {C \in \mathcal{C}} \by{acp}{}
-        \have{2} {\exists c \in C \ \forall x \in C (x \preceq c)} \by{def $\mathcal{C}$ (1)}{}
-
-        \open
-        \have{3} {c_0 \in C \land \forall x \in C (x \preceq c_0)} \by{acp (assumption for $\exists E$)}{}
-        \have{4} {(C, c_0) \in max_A} \by{def $max_A$ (3)}{}
-        \have{5} {\exists c \in V ((C, c) \in max_A)} \by{$\exists I$ (4)}{}
-        \close
-
-        \have{6} {\exists c \in V ((C, c) \in max_A)} \by{$\exists E$ (2, 3-5)}{}
-
-        \open
-        \have{7} {c_1, c_2 \in V} \by{acp}{}
-
-        \open
-        \have{8} {(C, c_1) \in max_A \land (C, c_2) \in max_A} \by{acp}{}
-        \have{9} {(\forall x \in C \quad x \preceq c_1) \land (\forall x \in C \ x \preceq c_2)} \by{def $max_A$, $\land E$ (8)}{}
+        \have{8} {(C, c_1) \in max_{\mathfrak{A}}} \by{acp}{}
+        \have{8} { (C, c_2) \in max_{\mathfrak{A}}} \by{acp}{}
+        \have{9} {(\forall x \in C \quad x \preceq c_1) } \by{def $max_{\mathfrak{A}}$ 1}{}
+        \have{9} { (\forall x \in C \quad x \preceq c_2)} \by{def $max_{\mathfrak{A}}$ 2}{}
         \have{10} {c_1 = c_2} \by{Lemma 5.7.1 (uniqueness)}{}
         \close
 
-        \have{11} {((C, c_1) \in max_A \land (C, c_2) \in max_A) \to c_1 = c_2} \by{$\to I$ (8-10)}{}
+        \have{11} {((C, c_1) \in max_{\mathfrak{A}} \land (C, c_2) \in max_A) \to c_1 = c_2} \by{$\to I$ }{}
+        \have{11}  { Func( max_{\mathfrak{A}}) } \by{Def}{}
         \close
-
-        \have{12} {\exists! c \in V ((C, c) \in max_A)} \by{def $\exists!$ (6, 11)}{}
-        \close
-
-        \have{13} {\forall C \in \mathcal{C} \quad \exists! c \in V ((C, c) \in max_A)} \by{$\forall I$ (1-12)}{}
-
     \end{fitchproof}
 
 \end{theorem}
@@ -4220,24 +4179,22 @@ if the structure clear to us we don't write structure index ``$min(\_),
 
               \begin{fitchproof}[arrayenv=tabular]
 
-                  \have{1} {min_{\mathfrak{A}}(B) = b} \by{$ass$}{}
-                  \have{2} {b \in B \land \forall y \in B (b \preceq y)} \by{def $min_{\mathfrak{A}}$ (1)}{}
-                  \have{3} {b \in B} \by{$\land E$ (2)}{}
-                  \have{4} {\forall y \in B (b \preceq y)} \by{$\land E$ (2)}{}
-                  \have{5} {Lowerb_{\mathfrak{A}}(b, B)} \by{def $Lowerb_{\mathfrak{A}}$ (4)}{}
-                  \have{6} {b \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\}} \by{set construction (5)}{}
+                  \have{1} {min_{\mathfrak{A}}(B) = b}                               \by{$ass$}{}
+                  \have{3} {b \in B}                                                     \by{def $min_{\mathfrak{A}}$ 1}{}
+                  \have{4} {\forall y \in B \quad b \preceq y}                                      \by{def $min_{\mathfrak{A}}$ 1}{}
+                  \have{5} {Lowerb_{\mathfrak{A}}(b, B)}                                        \by{def $Lowerb_{\mathfrak{A}}$ 4}{}
+                  \have{6} {b \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\}}                        \by{Def 5}{}
 
                   \open
-                  \have{7} {z \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\}} \by{acp}{}
-                  \have{8} {Lowerb_{\mathfrak{A}}(z, B)} \by{set membership (7)}{}
-                  \have{9} {\forall y \in B (z \preceq y)} \by{def $Lowerb_{\mathfrak{A}}$ (8)}{}
-                  \have{10} {z \preceq b} \by{$\forall E$ (9, $y \to b$ using 3)}{}
+                  \have{7} {z \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\}}                   \by{acp}{}
+                  \have{8} {Lowerb_{\mathfrak{A}}(z, B)}                                         \by{def 7}{}
+                  \have{9} {\forall y \in B \quad z \preceq y}                                 \by{def $Lowerb_{\mathfrak{A}}$ 8}{}
+                  \have{10} {z \preceq b}                                    \by{$\forall E$ 9}{}
                   \close
 
-                  \have{11} {\forall z \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\} (z \preceq b)} \by{$\forall I$ (7-10)}{}
-                  \have{12} {b \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\} \land \forall z \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\} (z \preceq b)} \by{$\land I$ (6, 11)}{}
-                  \have{13} {max_{\mathfrak{A}}(\{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\}) = b} \by{def $max_{\mathfrak{A}}$ (12)}{}
-                  \have{14} {inf_{\mathfrak{A}}(B) = b} \by{def $inf_{\mathfrak{A}}$ (13)}{}
+                  \have{11} {\forall z \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\} \quad z \preceq b}             \by{$\forall I$ }{}
+                  \have{13} {max_{\mathfrak{A}}(\{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\}) = b}                     \by{def $max_{\mathfrak{A}}$ 5 , 10}{}
+                  \have{14} {inf_{\mathfrak{A}}(B) = b}                                                 \by{def $inf_{\mathfrak{A}}$ (13)}{}
 
               \end{fitchproof}
 
@@ -4246,15 +4203,13 @@ if the structure clear to us we don't write structure index ``$min(\_),
 
               \begin{fitchproof}[arrayenv=tabular]
 
-                  \have{2} {inf_{\mathfrak{A}}(B) = b}         \by{$ass$ }{}
-                  \have{3} {b \in B}                        \by{$ass$ }{}
-                  \have{4} {max_{\mathfrak{A}}(\{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\}) = b} \by{def $inf_{\mathfrak{A}}$ (2)}{}
-                  \have{5} {b \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\} \land \forall z \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\} (z \preceq b)} \by{def $max_{\mathfrak{A}}$ (4)}{}
-                  \have{6} {b \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\}} \by{$\land E$ (5)}{}
-                  \have{7} {Lowerb_{\mathfrak{A}}(b, B)} \by{set membership (6)}{}
-                  \have{8} {\forall y \in B (b \preceq y)} \by{def $Lowerb_{\mathfrak{A}}$ (7)}{}
-                  \have{9} {b \in B \land \forall y \in B (b \preceq y)} \by{$\land I$ (3, 8)}{}
-                  \have{10} {min_{\mathfrak{A}}(B) = b} \by{def $min_{\mathfrak{A}}$ (9)}{}
+                  \have{2} {inf_{\mathfrak{A}}(B) = b}                                          \by{$ass$ }{}
+                  \have{3} {b \in B}                                                                       \by{$ass$ }{}
+                  \have{4} {max_{\mathfrak{A}}(\{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\}) = b}             \by{def $inf_{\mathfrak{A}}$ 2}{}
+                  \have{6} {b \in \{x \in A \mid Lowerb_{\mathfrak{A}}(x, B)\}}                          \by{def $max_{\mathfrak{A}}$ 4}{}
+                  \have{7} {Lowerb_{\mathfrak{A}}(b, B)}                                          \by{Def 6}{}
+                  \have{8} {\forall y \in B \quad b \preceq y}                            \by{def $Lowerb_{\mathfrak{A}}$ 7}{}
+                  \have{10} {min_{\mathfrak{A}}(B) = b}                                       \by{def $min_{\mathfrak{A}}$ 2 , 6}{}
 
               \end{fitchproof}
 
@@ -4264,15 +4219,7 @@ if the structure clear to us we don't write structure index ``$min(\_),
 \end{theorem}
 
 
-\begin{exercise}
-    \textbf{} for sets A, B, C, prove.
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item  $/\therefore A \times (B \cap C) = (A \times B)\cap (A \times C)$
-        \item  $/\therefore A \times (B \cup C) = (A \times B) \cup (A \times C)$
-        \item  $ /\therefore A \times (B-C) = (A \times B) - (A \times C)$
-    \end{enumerate}
-\end{exercise}
+
 
 \chapter{ The beginning of Abstract Algebra }
 
