@@ -4101,7 +4101,7 @@ now we will show you relation between ``(partial) Order relation'' and
     \[ min_\mathfrak{A} :=  \{ (B,b) \in \mathcal{B} \times A \mid \forall x \in B \quad b \preceq x \}  \]
     \[ max_\mathfrak{A} := \{ (C,c) \in \mathcal{C} \times A \mid \forall x \in C \quad x \preceq c \}  \]
     we must prove these two relations are two functions ``$min_\mathfrak{A} :
-        \mathcal{B} \to V$'' and ``$max_\mathfrak{A} : \mathcal{C} \to V$''.
+        \mathcal{B} \to A$'' and ``$max_\mathfrak{A} : \mathcal{C} \to A$''.
 
     \begin{fitchproof}[arrayenv=tabular]
         \open
@@ -13462,6 +13462,181 @@ $
 
     Hence $\mu_0$ is a premeasure on $\mathcal A$.
 \end{proof}
+
+
+
+\section{The Construction of Lebesgue Measure}
+
+\textbf{1. The length of an interval.}
+For every bounded interval with endpoints $a\leq b$, define its length by
+\[
+\ell(I)=b-a.
+\]
+The choice of including or excluding the endpoints does not affect the length.
+
+Let $\mathcal A$ be the collection of all finite unions of pairwise disjoint bounded half-open intervals $(a,b]$, together with $\varnothing$. For
+\[
+A=\bigcup_{k=1}^{n}(a_k,b_k]\in\mathcal A,
+\]
+where the intervals are pairwise disjoint, define
+\[
+\mu_0(A)=\sum_{k=1}^{n}(b_k-a_k),
+\qquad \mu_0(\varnothing)=0.
+\]
+This definition is independent of the representation of $A$. Moreover, $\mathcal A$ is a ring of sets, and $\mu_0$ is finitely additive on $\mathcal A$.
+
+\textbf{2. The premeasure.}
+The function $\mu_0$ is a premeasure on $\mathcal A$; that is, whenever $(A_n)_{n\geq 1}$ is a pairwise disjoint sequence in $\mathcal A$ and
+$\bigcup_{n=1}^{\infty}A_n\in\mathcal A$, we have
+\[
+\mu_0\left(\bigcup_{n=1}^{\infty}A_n\right)
+=\sum_{n=1}^{\infty}\mu_0(A_n).
+\]
+Indeed, this follows from the additivity of interval length.
+
+\textbf{3. Definition of the outer measure.}
+For every $E\subseteq\mathbb R$, define
+\[
+\boxed{
+\mu^*(E)=
+\inf\left\{
+\sum_{n=1}^{\infty}\mu_0(A_n):
+E\subseteq\bigcup_{n=1}^{\infty}A_n,\ 
+A_n\in\mathcal A
+\right\}.
+}
+\]
+The infimum is taken over all countable covers of $E$ by sets in $\mathcal A$. The empty set has outer measure zero, $\mu^*$ is monotone, and it is countably subadditive. Hence $\mu^*$ is an outer measure on $\mathbb R$.
+
+\textbf{4. The outer measure of an interval.}
+We prove that, for every $a<b$,
+\[
+\boxed{\mu^*([a,b])=b-a.}
+\]
+
+First, let $\varepsilon>0$. Since
+\[
+[a,b]\subseteq
+\left(a-\frac{\varepsilon}{2},
+b+\frac{\varepsilon}{2}\right],
+\]
+the definition of $\mu^*$ gives
+\[
+\mu^*([a,b])\leq b-a+\varepsilon.
+\]
+Since $\varepsilon>0$ is arbitrary,
+\[
+\mu^*([a,b])\leq b-a.
+\]
+
+For the reverse inequality, suppose
+\[
+[a,b]\subseteq\bigcup_{n=1}^{\infty}A_n,
+\qquad A_n\in\mathcal A.
+\]
+We must prove that
+\[
+\sum_{n=1}^{\infty}\mu_0(A_n)\geq b-a.
+\]
+If the sum is infinite, the inequality is immediate. Otherwise, write each $A_n$ as a finite disjoint union of half-open intervals. Listing all these intervals, with repetitions allowed, gives a countable family
+\[
+(u_k,v_k],\qquad k\geq1,
+\]
+such that
+\[
+[a,b]\subseteq\bigcup_{k=1}^{\infty}(u_k,v_k],
+\qquad
+\sum_{k=1}^{\infty}(v_k-u_k)
+=\sum_{n=1}^{\infty}\mu_0(A_n).
+\]
+
+Fix $\varepsilon>0$. Enlarge each interval to the open interval
+\[
+J_k=\left(u_k-\frac{\varepsilon}{2^{k+1}},
+v_k+\frac{\varepsilon}{2^{k+1}}\right).
+\]
+Then $(J_k)_{k\geq1}$ is an open cover of $[a,b]$, and
+\[
+\sum_{k=1}^{\infty}\ell(J_k)
+=\sum_{k=1}^{\infty}(v_k-u_k)+\varepsilon.
+\]
+
+Since $[a,b]$ is compact, there is a finite subcover
+\[
+[a,b]\subseteq J_{k_1}\cup\cdots\cup J_{k_N}.
+\]
+We use the elementary fact that if finitely many open intervals cover $[a,b]$, then the sum of their lengths is at least $b-a$. Consequently,
+\[
+\begin{aligned}
+b-a
+&\leq\sum_{j=1}^{N}\ell(J_{k_j})\\
+&\leq\sum_{k=1}^{\infty}\ell(J_k)\\
+&=\sum_{n=1}^{\infty}\mu_0(A_n)+\varepsilon.
+\end{aligned}
+\]
+Letting $\varepsilon\to0$, we obtain
+\[
+b-a\leq\sum_{n=1}^{\infty}\mu_0(A_n).
+\]
+Since the cover $(A_n)_{n\geq1}$ was arbitrary, taking the infimum yields
+\[
+\mu^*([a,b])\geq b-a.
+\]
+Combining both inequalities, we conclude that
+\[
+\boxed{\mu^*([a,b])=b-a.}
+\]
+
+\textbf{5. Carathéodory measurability.}
+A set $E\subseteq\mathbb R$ is called $\mu^*$-measurable if, for every $X\subseteq\mathbb R$,
+\[
+\boxed{
+\mu^*(X)=
+\mu^*(X\cap E)+\mu^*(X\setminus E).
+}
+\]
+Let $\mathcal L$ denote the collection of all $\mu^*$-measurable sets.
+
+\textbf{Carathéodory's Theorem.}
+The collection $\mathcal L$ is a $\sigma$-algebra, and the restriction
+\[
+\mu=\mu^*|_{\mathcal L}
+\]
+is a complete measure on $\mathcal L$.
+
+In particular, every set in $\mathcal A$ is $\mu^*$-measurable. To see this, let $E\in\mathcal A$ and let
+\[
+X\subseteq\bigcup_{n=1}^{\infty}A_n,
+\qquad A_n\in\mathcal A.
+\]
+Since $\mathcal A$ is a ring, both $A_n\cap E$ and $A_n\setminus E$ belong to $\mathcal A$. Moreover, finite additivity gives
+\[
+\mu_0(A_n)
+=\mu_0(A_n\cap E)+\mu_0(A_n\setminus E).
+\]
+Taking infima over covers of $X$ yields
+\[
+\mu^*(X\cap E)+\mu^*(X\setminus E)
+\leq\mu^*(X).
+\]
+The reverse inequality follows from the countable subadditivity of $\mu^*$. Thus $E$ is measurable.
+
+Since the half-open intervals $(a,b]$ generate the Borel $\sigma$-algebra, every Borel set is $\mu^*$-measurable. In particular, every closed interval $[a,b]$ is measurable.
+
+\textbf{6. The Lebesgue measure.}
+Define the Lebesgue $\sigma$-algebra and Lebesgue measure by
+\[
+\mathcal L=\{E\subseteq\mathbb R:
+E\text{ is $\mu^*$-measurable}\},
+\qquad
+\mu(E)=\mu^*(E),\quad E\in\mathcal L.
+\]
+By Carathéodory's theorem, $\mu$ is a complete measure. Furthermore, since every interval $[a,b]$ is measurable, Step 4 gives
+\[
+\boxed{\mu([a,b])=\mu^*([a,b])=b-a.}
+\]
+Thus the restriction of the outer measure to the Carathéodory-measurable sets is the Lebesgue measure on $\mathbb R$.
+
 
 
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.8.18)  25 OCT 2026 19:35
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.8.18)  27 OCT 2026 15:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2267,21 +2267,21 @@ Overfull \hbox (35.93321pt too wide) has occurred while \output is active
 Chapter 17.
 [175
 
-] [176] [177] [178] [179] [180] [181] [182] [183] [184] [185] [186] [187] [188] [189] [190] [191] [192] [193] [194] [195] [196] [197] [198] [199] [200] (Logic.aux)
+] [176] [177] [178] [179] [180] [181] [182] [183] [184] [185] [186] [187] [188] [189] [190] [191] [192] [193] [194] [195] [196] [197] [198] [199] [200] [201] [202] [203] (Logic.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `Logic.out' has not changed.
-(rerunfilecheck)             Checksum: 147A64384CA1B8DE02B0D7B30FF5D02B;15586.
+(rerunfilecheck)             Checksum: 27143B2F27E0D20EC672BB5A16C9B2A8;15835.
  ) 
 Here is how much of TeX's memory you used:
  37861 strings out of 402987
  866186 string characters out of 5449145
- 1428966 words of memory out of 5000000
+ 1429225 words of memory out of 5000000
  66107 multiletter control sequences out of 15000+600000
  646989 words of font info for 147 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  84i,27n,104p,630b,704s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Logic.xdv (206 pages, 1868004 bytes).
+Output written on Logic.xdv (209 pages, 1902904 bytes).
