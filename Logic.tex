@@ -13383,92 +13383,99 @@ $
     a_3\text{ is the unique expected-payoff maximizing action.}
 $
 
-\section{Measure}
+\chapter{Measure}
 
-\begin{proof}
-    First, we check that $\mu_0$ is well defined. Suppose$(a,b]=\bigcup_{j=1}^n(a_j,b_j]$
-    is a disjoint union. After ordering the intervals, we have
-    $a=a_1<b_1=a_2<\cdots<b_{n-1}=a_n<b_n=b$, and hence
+% \begin{proof}
+%     First, we check that $\mu_0$ is well defined. Suppose$(a,b]=\bigcup_{j=1}^n(a_j,b_j]$
+%     is a disjoint union. After ordering the intervals, we have
+%     $a=a_1<b_1=a_2<\cdots<b_{n-1}=a_n<b_n=b$, and hence
 
-    $$
-        \sum_{j=1}^n\mu_0((a_j,b_j])
-        =\sum_{j=1}^n[F(b_j)-F(a_j)]
-        =F(b)-F(a).
-    $$
+%     $$
+%         \sum_{j=1}^n\mu_0((a_j,b_j])
+%         =\sum_{j=1}^n[F(b_j)-F(a_j)]
+%         =F(b)-F(a).
+%     $$
 
-    The same argument applied to a common refinement shows that different representations of the same element of $\mathcal A$ give the same value. Thus $\mu_0$ is well defined and, by construction, finitely additive.
+%     The same argument applied to a common refinement shows that different representations of the same element of $\mathcal A$ give the same value. Thus $\mu_0$ is well defined and, by construction, finitely additive.
 
-    It remains to prove countable additivity. Let ${I_j}_{j=1}^\infty$ be disjoint $h$-intervals such that $
-        I=\bigcup_{j=1}^\infty I_j\in\mathcal A.
-    $
+%     It remains to prove countable additivity. Let ${I_j}_{j=1}^\infty$ be disjoint $h$-intervals such that $
+%         I=\bigcup_{j=1}^\infty I_j\in\mathcal A.
+%     $
 
-    By finite additivity, it is enough to consider the case $I=(a,b]$. Since$
-        \bigcup_{j=1}^nI_j\subseteq I,
-    $ we have
+%     By finite additivity, it is enough to consider the case $I=(a,b]$. Since$
+%         \bigcup_{j=1}^nI_j\subseteq I,
+%     $ we have
 
-    $$
-        \sum_{j=1}^n\mu_0(I_j)\leq\mu_0(I).
-    $$
+%     $$
+%         \sum_{j=1}^n\mu_0(I_j)\leq\mu_0(I).
+%     $$
 
-    Letting $n\to\infty$ gives
+%     Letting $n\to\infty$ gives
 
-    $$
-        \sum_{j=1}^\infty\mu_0(I_j)\leq\mu_0(I).
-    $$
+%     $$
+%         \sum_{j=1}^\infty\mu_0(I_j)\leq\mu_0(I).
+%     $$
 
-    For the reverse inequality, fix $\varepsilon>0$. By right continuity of $F$, choose $\delta>0$ such that
+%     For the reverse inequality, fix $\varepsilon>0$. By right continuity of $F$, choose $\delta>0$ such that
 
-    $$
-        F(a+\delta)-F(a)<\varepsilon,
-    $$
+%     $$
+%         F(a+\delta)-F(a)<\varepsilon,
+%     $$
 
-    and, writing $I_j=(a_j,b_j]$, choose $\delta_j>0$ such that
+%     and, writing $I_j=(a_j,b_j]$, choose $\delta_j>0$ such that
 
-    $$
-        F(b_j+\delta_j)-F(b_j)<\varepsilon2^{-j}.
-    $$
+%     $$
+%         F(b_j+\delta_j)-F(b_j)<\varepsilon2^{-j}.
+%     $$
 
-    The open intervals $(a_j,b_j+\delta_j)$ cover $[a+\delta,b]$. By compactness, finitely many of them cover this interval. After relabeling, we may assume that they are $(a_j,b_j+\delta_j)$, $j=1,\ldots,N$, and that consecutive intervals overlap.
+%     The open intervals $(a_j,b_j+\delta_j)$ cover $[a+\delta,b]$. By compactness, finitely many of them cover this interval. After relabeling, we may assume that they are $(a_j,b_j+\delta_j)$, $j=1,\ldots,N$, and that consecutive intervals overlap.
 
-    Therefore,
+%     Therefore,
 
-    $$
-        \begin{aligned}
-            \mu_0(I)
-             & =F(b)-F(a)                                    \\
-             & <\sum_{j=1}^N
-            \bigl[F(b_j+\delta_j)-F(a_j)\bigr]+\varepsilon   \\
-             & <\sum_{j=1}^N
-            \bigl[F(b_j)-F(a_j)\bigr]+2\varepsilon           \\
-             & \leq\sum_{j=1}^\infty\mu_0(I_j)+2\varepsilon.
-        \end{aligned}
-    $$
+%     $$
+%         \begin{aligned}
+%             \mu_0(I)
+%              & =F(b)-F(a)                                    \\
+%              & <\sum_{j=1}^N
+%             \bigl[F(b_j+\delta_j)-F(a_j)\bigr]+\varepsilon   \\
+%              & <\sum_{j=1}^N
+%             \bigl[F(b_j)-F(a_j)\bigr]+2\varepsilon           \\
+%              & \leq\sum_{j=1}^\infty\mu_0(I_j)+2\varepsilon.
+%         \end{aligned}
+%     $$
 
-    Since $\varepsilon>0$ is arbitrary,
+%     Since $\varepsilon>0$ is arbitrary,
 
-    $$
-        \mu_0(I)\leq\sum_{j=1}^\infty\mu_0(I_j).
-    $$
+%     $$
+%         \mu_0(I)\leq\sum_{j=1}^\infty\mu_0(I_j).
+%     $$
 
-    Combining the two inequalities gives
+%     Combining the two inequalities gives
 
-    $$
-        \boxed{\mu_0\left(\bigcup_{j=1}^\infty I_j\right)
-            =\sum_{j=1}^\infty\mu_0(I_j).}
-    $$
+%     $$
+%         \boxed{\mu_0\left(\bigcup_{j=1}^\infty I_j\right)
+%             =\sum_{j=1}^\infty\mu_0(I_j).}
+%     $$
 
-    Hence $\mu_0$ is a premeasure on $\mathcal A$.
-\end{proof}
+%     Hence $\mu_0$ is a premeasure on $\mathcal A$.
+% \end{proof}
 
 
 
 \section{Construction of Lebesgue Measure}
 
 \textbf{1. Interval length and outer measure.}
-For every bounded interval $I$ with endpoints $a\leq b$, let
+For every bounded interval $(a,b)$, let
 \[
-\ell(I)=b-a.
+\ell( (a,b) )=b-a.
 \]
+
+thus
+
+\[
+\ell([a,b])=b-a.
+\]
+
 For every $A\subseteq\mathbb R$, define
 \[
 \boxed{
@@ -13512,11 +13519,22 @@ Letting $\varepsilon\to0$, we obtain
 \]
 Thus $\ell^*$ is an outer measure.
 
-\textbf{2. The outer measure of an interval.}
+\begin{lemma}[The outer measure of an interval]
+
+
 We prove that, for $a<b$,
 \[
 \boxed{\ell^*([a,b])=b-a.}
 \]
+thus
+\[
+\ell^*( (a,b) )=b-a.
+\]
+
+\end{lemma}
+
+
+\begin{proof}
 
 For every $\varepsilon>0$, the open interval
 \[
@@ -13553,6 +13571,8 @@ Combining both inequalities yields
 \[
 \boxed{\ell^*([a,b])=b-a.}
 \]
+
+\end{proof}
 
 The same value holds for $(a,b)$, $(a,b]$, and $[a,b)$, since each can be covered by open intervals of length arbitrarily close to $b-a$, and each contains closed intervals whose lengths approach $b-a$.
 
