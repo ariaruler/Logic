@@ -1269,7 +1269,7 @@ sentences.
     \textbf{Uniqueness}
     we define ``$\exists ! x \phi(x)$''
     \\
-    \[ \exists !  x \phi(x) : \exists   x (\phi(x) \land \forall y(\phi(y) \to x=y)) \]
+    \[ \exists !  x \phi(x) : \exists   x \phi(x) \land \forall x_0 , x_1 ( \phi(x_0) \land \phi(x_1) \to x_0 = x_1) \]
 \end{definition}
 
 \begin{example}
@@ -4111,8 +4111,7 @@ now we will show you relation between ``(partial) Order relation'' and
         \have{9} {(\forall x \in B \quad b_2 \preceq x)}     \by{def $min_\mathfrak{A}$ 2}{}
         \have{10} {b_1 = b_2} \by{Lemma 5.7.1 (uniqueness)}{}
         \close
-        \have{11} {((B, b_1) \in min_\mathfrak{A} \land (B, b_2) \in min_{\mathfrak{A}}) \to b_1 = b_2} \by{$\to I$ }{}
-        \have{11}  { Func( min_{\mathfrak{A}}) } \by{Def}{}
+        \have{11}  { Func( min_{\mathfrak{A}}) } \by{$Func I$}{}
     \end{fitchproof}
 
     \begin{fitchproof}[arrayenv=tabular]
@@ -4123,9 +4122,7 @@ now we will show you relation between ``(partial) Order relation'' and
         \have{9} { (\forall x \in C \quad x \preceq c_2)} \by{def $max_{\mathfrak{A}}$ 2}{}
         \have{10} {c_1 = c_2} \by{Lemma 5.7.1 (uniqueness)}{}
         \close
-
-        \have{11} {((C, c_1) \in max_{\mathfrak{A}} \land (C, c_2) \in max_A) \to c_1 = c_2} \by{$\to I$ }{}
-        \have{11}  { Func( max_{\mathfrak{A}}) } \by{Def}{}
+        \have{11}  { Func( max_{\mathfrak{A}}) } \by{$Func I$}{}
         \close
     \end{fitchproof}
 
@@ -4141,7 +4138,7 @@ now we will show you relation between ``(partial) Order relation'' and
 \end{definition}
 
 \begin{definition}
-    \textbf{Well ordering} assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
+    \textbf{Well ordering} assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Linear Order relation).
     we say ``$\mathfrak{A} $ '' is ``Well ordered'' when every nonempty subset of ``$A $ '' has a ``Minimum '' i.e.
     \[ WellOrdered(\mathfrak{A}) :   \forall X \subseteq A \quad X \not= \emptyset \to  HaveLeast(X)  \]
 \end{definition}
@@ -13465,179 +13462,272 @@ $
 
 
 
-\section{The Construction of Lebesgue Measure}
+\section{Construction of Lebesgue Measure}
 
-\textbf{1. The length of an interval.}
-For every bounded interval with endpoints $a\leq b$, define its length by
+\textbf{1. Interval length and outer measure.}
+For every bounded interval $I$ with endpoints $a\leq b$, let
 \[
 \ell(I)=b-a.
 \]
-The choice of including or excluding the endpoints does not affect the length.
-
-Let $\mathcal A$ be the collection of all finite unions of pairwise disjoint bounded half-open intervals $(a,b]$, together with $\varnothing$. For
-\[
-A=\bigcup_{k=1}^{n}(a_k,b_k]\in\mathcal A,
-\]
-where the intervals are pairwise disjoint, define
-\[
-\mu_0(A)=\sum_{k=1}^{n}(b_k-a_k),
-\qquad \mu_0(\varnothing)=0.
-\]
-This definition is independent of the representation of $A$. Moreover, $\mathcal A$ is a ring of sets, and $\mu_0$ is finitely additive on $\mathcal A$.
-
-\textbf{2. The premeasure.}
-The function $\mu_0$ is a premeasure on $\mathcal A$; that is, whenever $(A_n)_{n\geq 1}$ is a pairwise disjoint sequence in $\mathcal A$ and
-$\bigcup_{n=1}^{\infty}A_n\in\mathcal A$, we have
-\[
-\mu_0\left(\bigcup_{n=1}^{\infty}A_n\right)
-=\sum_{n=1}^{\infty}\mu_0(A_n).
-\]
-Indeed, this follows from the additivity of interval length.
-
-\textbf{3. Definition of the outer measure.}
-For every $E\subseteq\mathbb R$, define
+For every $A\subseteq\mathbb R$, define
 \[
 \boxed{
-\mu^*(E)=
+\ell^*(A)=
 \inf\left\{
-\sum_{n=1}^{\infty}\mu_0(A_n):
-E\subseteq\bigcup_{n=1}^{\infty}A_n,\ 
-A_n\in\mathcal A
+\sum_{n=1}^{\infty}\ell(I_n):
+A\subseteq\bigcup_{n=1}^{\infty}I_n,\ 
+I_n\text{ open intervals}
 \right\}.
 }
 \]
-The infimum is taken over all countable covers of $E$ by sets in $\mathcal A$. The empty set has outer measure zero, $\mu^*$ is monotone, and it is countably subadditive. Hence $\mu^*$ is an outer measure on $\mathbb R$.
+Here, the infimum is taken over all countable coverings of $A$ by open intervals. We allow intervals of infinite length, and we set $\ell^*(\varnothing)=0$.
 
-\textbf{4. The outer measure of an interval.}
-We prove that, for every $a<b$,
-\[
-\boxed{\mu^*([a,b])=b-a.}
-\]
+We first show that $\ell^*$ is an outer measure.
 
-First, let $\varepsilon>0$. Since
+Clearly, $\ell^*(A)\geq0$ for every $A\subseteq\mathbb R$, and
+$\ell^*(\varnothing)=0$. If $A\subseteq B$, every open-interval cover of $B$ also covers $A$, so
 \[
-[a,b]\subseteq
-\left(a-\frac{\varepsilon}{2},
-b+\frac{\varepsilon}{2}\right],
-\]
-the definition of $\mu^*$ gives
-\[
-\mu^*([a,b])\leq b-a+\varepsilon.
-\]
-Since $\varepsilon>0$ is arbitrary,
-\[
-\mu^*([a,b])\leq b-a.
+\ell^*(A)\leq\ell^*(B).
 \]
 
-For the reverse inequality, suppose
+Now let $(A_n)_{n\geq1}$ be a sequence of subsets of $\mathbb R$. If
+$\sum_{n=1}^{\infty}\ell^*(A_n)=\infty$, countable subadditivity is immediate. Otherwise, for every $\varepsilon>0$, choose open intervals
+$(I_{n,k})_{k\geq1}$ covering $A_n$ such that
 \[
-[a,b]\subseteq\bigcup_{n=1}^{\infty}A_n,
-\qquad A_n\in\mathcal A.
+\sum_{k=1}^{\infty}\ell(I_{n,k})
+<\ell^*(A_n)+\frac{\varepsilon}{2^n}.
 \]
-We must prove that
-\[
-\sum_{n=1}^{\infty}\mu_0(A_n)\geq b-a.
-\]
-If the sum is infinite, the inequality is immediate. Otherwise, write each $A_n$ as a finite disjoint union of half-open intervals. Listing all these intervals, with repetitions allowed, gives a countable family
-\[
-(u_k,v_k],\qquad k\geq1,
-\]
-such that
-\[
-[a,b]\subseteq\bigcup_{k=1}^{\infty}(u_k,v_k],
-\qquad
-\sum_{k=1}^{\infty}(v_k-u_k)
-=\sum_{n=1}^{\infty}\mu_0(A_n).
-\]
-
-Fix $\varepsilon>0$. Enlarge each interval to the open interval
-\[
-J_k=\left(u_k-\frac{\varepsilon}{2^{k+1}},
-v_k+\frac{\varepsilon}{2^{k+1}}\right).
-\]
-Then $(J_k)_{k\geq1}$ is an open cover of $[a,b]$, and
-\[
-\sum_{k=1}^{\infty}\ell(J_k)
-=\sum_{k=1}^{\infty}(v_k-u_k)+\varepsilon.
-\]
-
-Since $[a,b]$ is compact, there is a finite subcover
-\[
-[a,b]\subseteq J_{k_1}\cup\cdots\cup J_{k_N}.
-\]
-We use the elementary fact that if finitely many open intervals cover $[a,b]$, then the sum of their lengths is at least $b-a$. Consequently,
+The collection of all these intervals covers $\bigcup_{n=1}^{\infty}A_n$. Hence
 \[
 \begin{aligned}
-b-a
-&\leq\sum_{j=1}^{N}\ell(J_{k_j})\\
-&\leq\sum_{k=1}^{\infty}\ell(J_k)\\
-&=\sum_{n=1}^{\infty}\mu_0(A_n)+\varepsilon.
+\ell^*\left(\bigcup_{n=1}^{\infty}A_n\right)
+\leq\sum_{n=1}^{\infty}\sum_{k=1}^{\infty}\ell(I_{n,k})
+\leq\sum_{n=1}^{\infty}\ell^*(A_n)+\varepsilon.
 \end{aligned}
 \]
 Letting $\varepsilon\to0$, we obtain
 \[
-b-a\leq\sum_{n=1}^{\infty}\mu_0(A_n).
+\ell^*\left(\bigcup_{n=1}^{\infty}A_n\right)
+\leq\sum_{n=1}^{\infty}\ell^*(A_n).
 \]
-Since the cover $(A_n)_{n\geq1}$ was arbitrary, taking the infimum yields
+Thus $\ell^*$ is an outer measure.
+
+\textbf{2. The outer measure of an interval.}
+We prove that, for $a<b$,
 \[
-\mu^*([a,b])\geq b-a.
+\boxed{\ell^*([a,b])=b-a.}
 \]
-Combining both inequalities, we conclude that
+
+For every $\varepsilon>0$, the open interval
 \[
-\boxed{\mu^*([a,b])=b-a.}
+I=\left(a-\frac{\varepsilon}{2},
+b+\frac{\varepsilon}{2}\right)
 \]
+covers $[a,b]$. Therefore
+\[
+\ell^*([a,b])\leq b-a+\varepsilon.
+\]
+Since $\varepsilon$ is arbitrary,
+\[
+\ell^*([a,b])\leq b-a.
+\]
+
+For the reverse inequality, let $(I_n)_{n\geq1}$ be any countable cover of $[a,b]$ by open intervals. We must prove
+\[
+\sum_{n=1}^{\infty}\ell(I_n)\geq b-a.
+\]
+If this sum is infinite, the inequality is immediate. Otherwise, since $[a,b]$ is compact, there is a finite subcover
+\[
+[a,b]\subseteq I_1\cup\cdots\cup I_N.
+\]
+We use the elementary fact that if finitely many open intervals cover $[a,b]$, then the sum of their lengths is at least $b-a$. Consequently,
+\[
+b-a\leq\sum_{n=1}^{N}\ell(I_n)
+\leq\sum_{n=1}^{\infty}\ell(I_n).
+\]
+Since the cover was arbitrary, taking the infimum gives
+\[
+\ell^*([a,b])\geq b-a.
+\]
+Combining both inequalities yields
+\[
+\boxed{\ell^*([a,b])=b-a.}
+\]
+
+The same value holds for $(a,b)$, $(a,b]$, and $[a,b)$, since each can be covered by open intervals of length arbitrarily close to $b-a$, and each contains closed intervals whose lengths approach $b-a$.
+
 
 \textbf{5. Carathéodory measurability.}
-A set $E\subseteq\mathbb R$ is called $\mu^*$-measurable if, for every $X\subseteq\mathbb R$,
+A set $E\subseteq\mathbb R$ is called $\ell^*$-measurable if, for every $X\subseteq\mathbb R$,
 \[
 \boxed{
-\mu^*(X)=
-\mu^*(X\cap E)+\mu^*(X\setminus E).
-}
-\]
-Let $\mathcal L$ denote the collection of all $\mu^*$-measurable sets.
-
-\textbf{Carathéodory's Theorem.}
-The collection $\mathcal L$ is a $\sigma$-algebra, and the restriction
-\[
-\mu=\mu^*|_{\mathcal L}
-\]
-is a complete measure on $\mathcal L$.
-
-In particular, every set in $\mathcal A$ is $\mu^*$-measurable. To see this, let $E\in\mathcal A$ and let
-\[
-X\subseteq\bigcup_{n=1}^{\infty}A_n,
-\qquad A_n\in\mathcal A.
-\]
-Since $\mathcal A$ is a ring, both $A_n\cap E$ and $A_n\setminus E$ belong to $\mathcal A$. Moreover, finite additivity gives
-\[
-\mu_0(A_n)
-=\mu_0(A_n\cap E)+\mu_0(A_n\setminus E).
-\]
-Taking infima over covers of $X$ yields
-\[
-\mu^*(X\cap E)+\mu^*(X\setminus E)
-\leq\mu^*(X).
-\]
-The reverse inequality follows from the countable subadditivity of $\mu^*$. Thus $E$ is measurable.
-
-Since the half-open intervals $(a,b]$ generate the Borel $\sigma$-algebra, every Borel set is $\mu^*$-measurable. In particular, every closed interval $[a,b]$ is measurable.
-
-\textbf{6. The Lebesgue measure.}
-Define the Lebesgue $\sigma$-algebra and Lebesgue measure by
-\[
-\mathcal L=\{E\subseteq\mathbb R:
-E\text{ is $\mu^*$-measurable}\},
-\qquad
-\mu(E)=\mu^*(E),\quad E\in\mathcal L.
-\]
-By Carathéodory's theorem, $\mu$ is a complete measure. Furthermore, since every interval $[a,b]$ is measurable, Step 4 gives
-\[
-\boxed{\mu([a,b])=\mu^*([a,b])=b-a.}
-\]
-Thus the restriction of the outer measure to the Carathéodory-measurable sets is the Lebesgue measure on $\mathbb R$.
+    \ell^*(X)=
+    \ell^*(X\cap E)+\ell^*(X - E).
+    }
+    \]
+Let $\mathcal L$ denote the collection of all $\ell^*$-measurable sets.
 
 
+
+\begin{theorem}[Carathéodory's Theorem]
+If $\ell^*$ is an outer measure on $X$, then the collection $\mathcal L$ of $\ell^*$-measurable sets is a $\sigma$-algebra, and the restriction
+$
+\ell^*|_{\mathcal L}
+$
+is a complete measure.
+
+\end{theorem}
+
+
+\begin{proof}
+
+First, $\varnothing\in\mathcal L$, since for every $E\subseteq X$,
+\[
+\ell^*(E)
+=\ell^*(E\cap\varnothing)+\ell^*(E\cap\varnothing^c)
+=0+\ell^*(E).
+\]
+Moreover, $\mathcal L$ is closed under complements, since the definition of measurability is symmetric in $A$ and $A^c$.
+
+Next, let $A,B\in\mathcal L$. For every $E\subseteq X$, applying the measurability of $A$ and $B$ gives
+\[
+\begin{aligned}
+\ell^*(E)
+={}&\ell^*(E\cap A\cap B)
++\ell^*(E\cap A\cap B^c)
++\ell^*(E\cap A^c\cap B)
++\ell^*(E\cap A^c\cap B^c).
+\end{aligned}
+\]
+By subadditivity,
+\[
+\ell^*(E)\geq
+\ell^*(E\cap(A\cup B))
++\ell^*(E\cap(A\cup B)^c)
+\]
+Since
+\[
+A\cup B=(A\cap B)\cup(A\cap B^c)\cup(A^c\cap B),
+\]
+by subadditivity,
+\[
+\begin{aligned}
+\ell^*(E\cap A\cap B)
++\ell^*(E\cap A\cap B^c)
++\ell^*(E\cap A^c\cap B)
+\geq \ell^*(E\cap(A\cup B))
+\end{aligned}
+\]
+Consequently,
+\[
+\ell^*(E\cap A\cap B)
++\ell^*(E\cap A\cap B^c)
++\ell^*(E\cap A^c\cap B)
++\ell^*(E\cap A^c\cap B^c)
+\geq \ell^*(E\cap(A\cup B))
++\ell^*(E\cap(A\cup B)^c)
+\]
+The reverse inequality follows from subadditivity. Hence
+\[
+\ell^*(E)=
+\ell^*(E\cap(A\cup B))
++\ell^*(E\cap(A\cup B)^c),
+\]
+so $A\cup B\in\mathcal L$.
+
+
+The reverse inequality follows from subadditivity. Hence $A\cup B\in\mathcal L$, so $\mathcal L$ is an algebra.
+
+Moreover, if $A,B\in\mathcal L$ and $A\cap B=\varnothing$, then
+\[
+\begin{aligned}
+\ell^*(A\cup B)
+=\ell^*((A\cup B)\cap A)
++\ell^*((A\cup B)\cap A^c)
+=\ell^*(A)+\ell^*(B)
+\end{aligned}
+\]
+Thus $\ell^*$ is finitely additive on $\mathcal L$.
+
+To show that $\mathcal L$ is a $\sigma$-algebra, it suffices to show that
+it is closed under countable disjoint unions. Let $(A_n)_{n\geq1}$ be a
+sequence of pairwise disjoint sets in $\mathcal L$. For every $E\subseteq X$,
+the measurability of $A_n$ gives
+\[
+\begin{aligned}
+\ell^*\left(E\cap\bigcup_{j=1}^{n}A_j\right)
+\quad=
+\ell^*(E\cap A_n)
++\ell^*\left(E\cap\bigcup_{j=1}^{n-1}A_j\right).
+\end{aligned}
+\]
+Therefore, by induction,
+\[
+\ell^*\left(E\cap\bigcup_{j=1}^{n}A_j\right)
+=\sum_{j=1}^{n}\ell^*(E\cap A_j).
+\]
+It follows that
+\[
+\begin{aligned}
+\ell^*(E)
+=\sum_{j=1}^{n}\ell^*(E\cap A_j)
++\ell^*\left(E\cap\left(\bigcup_{j=1}^{n}A_j\right)^c\right)
+\geq \sum_{j=1}^{n}\ell^*(E\cap A_j)
++\ell^*\left(E\cap\left(\bigcup_{j=1}^{\infty}A_j\right)^c\right).
+\end{aligned}
+\]
+Letting $n\to\infty$ and using countable subadditivity, we obtain
+\[
+\begin{aligned}
+\ell^*(E)
+\geq \sum_{j=1}^{\infty}\ell^*(E\cap A_j)
++\ell^*\left(E\cap\left(\bigcup_{j=1}^{\infty}A_j\right)^c\right)
+\geq \ell^*\left(E\cap\bigcup_{j=1}^{\infty}A_j\right)
++\ell^*\left(E\cap\left(\bigcup_{j=1}^{\infty}A_j\right)^c\right)
+\geq \ell^*(E).
+\end{aligned}
+\]
+Hence all inequalities are equalities, so
+\[
+\ell^*(E)=
+\ell^*\left(E\cap\bigcup_{j=1}^{\infty}A_j\right)
++\ell^*\left(E\cap\left(\bigcup_{j=1}^{\infty}A_j\right)^c\right).
+\]
+Thus $\bigcup_{j=1}^{\infty}A_j\in\mathcal L$, and $\mathcal L$ is a
+$\sigma$-algebra.
+
+Taking $E=\bigcup_{j=1}^{\infty}A_j$ in the preceding equality gives
+\[
+\ell^*\left(\bigcup_{j=1}^{\infty}A_j\right)
+=\sum_{j=1}^{\infty}\ell^*(A_j).
+\]
+Therefore $\ell^*|_{\mathcal L}$ is a measure on $\mathcal L$.
+
+Finally, suppose $A\in\mathcal L$ and $\ell^*(A)=0$. If $N\subseteq A$,
+then $\ell^*(N)=0$. Thus, for every $E\subseteq X$,
+\[
+\ell^*(E\cap N)=0,
+\]
+and consequently
+\[
+\ell^*(E)=\ell^*(E\cap N)+\ell^*(E\cap N^c).
+\]
+Hence $N\in\mathcal L$ and $\lambda(N)=0$. Therefore $\lambda$ is complete.
+
+
+\end{proof}
+
+
+\textbf{4. Lebesgue measure.}
+The measure
+\[
+\boxed{\lambda=\ell^*|_{\mathcal L}}
+\]
+is called Lebesgue measure on $\mathbb R$. Since intervals are Lebesgue measurable and their outer measure equals their length, we have
+\[
+\boxed{\lambda([a,b])=b-a.}
+\]
+Moreover, $\lambda$ is a complete measure, and every Borel subset of $\mathbb R$ is Lebesgue measurable.
 
 
 
