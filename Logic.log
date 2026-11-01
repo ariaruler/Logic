@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.8.18)  31 OCT 2026 13:08
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.8.18)  31 OCT 2026 19:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -802,26 +802,26 @@ Package: fitch 2023-12-17 v1.0 Macros for Fitch-style natural deduction
  (Logic.aux)
 \openout1 = `Logic.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -857,7 +857,7 @@ LaTeX Font Info:    ... okay on input line 82.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 82.
+Package hyperref Info: Link coloring OFF on input line 78.
 (Logic.out) (Logic.out)
 \@outlinefile=\write5
 \openout5 = `Logic.out'.
@@ -875,67 +875,67 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 82.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 82.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 82.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 82.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 82.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 82.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 82.
-LaTeX Font Info:    Redeclaring math accent \check on input line 82.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 82.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 82.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 82.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 82.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 82.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 82.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 82.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 82.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 82.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 82.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 82.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 82.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 82.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 82.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 82.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 82.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 78.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 78.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 78.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 78.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 78.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 78.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 78.
+LaTeX Font Info:    Redeclaring math accent \check on input line 78.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 78.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 78.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 78.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 78.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 78.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 78.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 78.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 78.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 78.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 78.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 78.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 78.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 78.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 78.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 78.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 78.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 82.
+(Font)              `operators' in the math version `normal' on input line 78.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 82.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 78.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 82.
+(Font)              `operators' in the math version `bold' on input line 78.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 82.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 78.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 82.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 78.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 82.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 78.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 82.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 78.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 82.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 78.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 82.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 78.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 82.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 78.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 82.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 78.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 82.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 78.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 82.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 78.
 
 Couldn't patch \deferred@thm@head!
-LaTeX Font Info:    Trying to load font information for U+msa on input line 89.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 85.
 (C:\Users\TS\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 89.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 85.
  (C:\Users\TS\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 89.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 85.
  (C:\Users\TS\AppData\Local\Programs\MiKTeX\tex/latex/stmaryrd\ustmry.fd) [1
 
 
@@ -960,17 +960,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 Chapter 1.
 [5]
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 358--377
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 342--361
 [][] 
  []
 
 
-Overfull \hbox (32.93764pt too wide) in paragraph at lines 387--412
+Overfull \hbox (32.93764pt too wide) in paragraph at lines 371--396
 [][] 
  []
 
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 413--440
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 397--424
 [][] 
  []
 
@@ -978,32 +978,32 @@ Overfull \hbox (33.73763pt too wide) in paragraph at lines 413--440
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6]
-Overfull \hbox (32.93764pt too wide) in paragraph at lines 454--473
+Overfull \hbox (32.93764pt too wide) in paragraph at lines 438--457
 [][] 
  []
 
 
-Overfull \hbox (4.91396pt too wide) in paragraph at lines 476--484
+Overfull \hbox (4.91396pt too wide) in paragraph at lines 460--468
 [][] 
  []
 
 
-Overfull \hbox (5.48515pt too wide) in paragraph at lines 486--498
+Overfull \hbox (5.48515pt too wide) in paragraph at lines 470--482
 [][] 
  []
 
 
-Overfull \hbox (9.35837pt too wide) in paragraph at lines 500--513
+Overfull \hbox (9.35837pt too wide) in paragraph at lines 484--497
 [][] 
  []
 
 
-Overfull \hbox (45.33765pt too wide) in paragraph at lines 474--517
+Overfull \hbox (45.33765pt too wide) in paragraph at lines 458--501
 [][] 
  []
 
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 518--556
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 502--540
 [][] 
  []
 
@@ -1011,12 +1011,12 @@ Overfull \hbox (33.73763pt too wide) in paragraph at lines 518--556
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
-Overfull \hbox (32.93764pt too wide) in paragraph at lines 568--610
+Overfull \hbox (32.93764pt too wide) in paragraph at lines 552--594
 [][] 
  []
 
 
-Overfull \hbox (32.93764pt too wide) in paragraph at lines 611--656
+Overfull \hbox (32.93764pt too wide) in paragraph at lines 595--640
 [][] 
  []
 
@@ -1024,57 +1024,57 @@ Overfull \hbox (32.93764pt too wide) in paragraph at lines 611--656
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8]
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 665--689
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 649--673
 [][] 
  []
 
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 700--715
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 684--699
 [][] 
  []
 
 
-Overfull \hbox (32.93764pt too wide) in paragraph at lines 716--735
+Overfull \hbox (32.93764pt too wide) in paragraph at lines 700--719
 [][] 
  []
 
 [9]
-Overfull \hbox (32.93764pt too wide) in paragraph at lines 752--783
+Overfull \hbox (32.93764pt too wide) in paragraph at lines 736--767
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 813--817
+Underfull \hbox (badness 10000) in paragraph at lines 797--801
 []
  []
 
 
-Overfull \hbox (0.74188pt too wide) in paragraph at lines 813--817
+Overfull \hbox (0.74188pt too wide) in paragraph at lines 797--801
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 821--825
+Underfull \hbox (badness 10000) in paragraph at lines 805--809
 []
  []
 
 
-Overfull \hbox (0.74188pt too wide) in paragraph at lines 821--825
+Overfull \hbox (0.74188pt too wide) in paragraph at lines 805--809
 [] 
  []
 
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 793--832
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 777--816
 [][] 
  []
 
 
-Overfull \hbox (2.76022pt too wide) in paragraph at lines 834--849
+Overfull \hbox (2.76022pt too wide) in paragraph at lines 818--833
 [][] 
  []
 
 
-Overfull \hbox (32.93764pt too wide) in paragraph at lines 833--861
+Overfull \hbox (32.93764pt too wide) in paragraph at lines 817--845
 [][] 
  []
 
@@ -1086,354 +1086,349 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 Chapter 2.
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 989--992
+Underfull \hbox (badness 10000) in paragraph at lines 973--976
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 992--996
+Underfull \hbox (badness 10000) in paragraph at lines 976--980
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1007--1009
+Underfull \hbox (badness 10000) in paragraph at lines 991--993
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1012--1014
+Underfull \hbox (badness 10000) in paragraph at lines 996--998
 
  []
 
 [14]
-Overfull \hbox (10.86604pt too wide) in paragraph at lines 1058--1061
+Overfull \hbox (10.86604pt too wide) in paragraph at lines 1042--1045
 [][]\TU/lmr/bx/n/10 definition 2.1.10. []\TU/lmr/bx/it/10 Universal quantification \TU/lmr/m/it/10 assume universe of discourse is “$\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 a[]; a[]; a[]; :::; a[]\OMS/cmsy/m/n/10 g$\TU/lmr/m/it/10 ”
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1058--1061
+Underfull \hbox (badness 10000) in paragraph at lines 1042--1045
 
  []
 
 
-Overfull \hbox (16.15605pt too wide) in paragraph at lines 1065--1068
+Overfull \hbox (16.15605pt too wide) in paragraph at lines 1049--1052
 [][]\TU/lmr/bx/n/10 definition 2.1.11. []\TU/lmr/bx/it/10 Existential quantification \TU/lmr/m/it/10 assume universe of discourse is “$\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 a[]; a[]; a[]; :::; a[]\OMS/cmsy/m/n/10 g$\TU/lmr/m/it/10 ”
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1065--1068
+Underfull \hbox (badness 10000) in paragraph at lines 1049--1052
 
- []
-
-
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 1090--1175
-[][] 
  []
 
 [15]
-Overfull \hbox (32.53764pt too wide) in paragraph at lines 1180--1196
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 1074--1159
 [][] 
  []
 
 
-Overfull \hbox (32.53764pt too wide) in paragraph at lines 1199--1232
+Overfull \hbox (32.53764pt too wide) in paragraph at lines 1164--1180
 [][] 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (32.53764pt too wide) in paragraph at lines 1183--1216
+[][] 
+ []
 
- [16]
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 1238--1265
+[16]
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 1222--1249
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1269--1272
+Underfull \hbox (badness 10000) in paragraph at lines 1253--1256
 
  []
 
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Overfull \hbox (32.93764pt too wide) in paragraph at lines 1290--1319
+Overfull \hbox (32.93764pt too wide) in paragraph at lines 1274--1303
+[][] 
+ []
+
+[17]
+Overfull \hbox (32.93764pt too wide) in paragraph at lines 1304--1354
 [][] 
  []
 
 
-Underfull \vbox (badness 1442) has occurred while \output is active []
-
- [17]
-Overfull \hbox (32.93764pt too wide) in paragraph at lines 1320--1370
+Overfull \hbox (32.93764pt too wide) in paragraph at lines 1355--1395
 [][] 
  []
 
 
-Overfull \hbox (32.93764pt too wide) in paragraph at lines 1371--1411
+Overfull \hbox (8.57243pt too wide) in paragraph at lines 1412--1435
 [][] 
  []
 
 
-Overfull \hbox (8.57243pt too wide) in paragraph at lines 1428--1451
-[][] 
- []
-
-
-Overfull \hbox (32.93764pt too wide) in paragraph at lines 1412--1455
+Overfull \hbox (32.93764pt too wide) in paragraph at lines 1396--1439
 [][] 
  []
 
 [18] [19]
-Overfull \hbox (3.96057pt too wide) in paragraph at lines 1478--1479
+Overfull \hbox (3.96057pt too wide) in paragraph at lines 1462--1463
 []$\OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 x\OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 y[]\OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 zP\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y; z\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^ \OML/cmm/m/it/10 Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y\OT1/cmr/m/n/10 )[] \OMS/cmsy/m/n/10 _ 8\OML/cmm/m/it/10 x\OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 y\OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 z[]P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y; z\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^ \OML/cmm/m/it/10 R\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y\OT1/cmr/m/n/10 )[]/ \U/msa/m/n/10 ) \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 x\OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 y\OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 z[]P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y; z\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^ \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 _
  []
 
 [20]
 Chapter 3.
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 1523--1544
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 1507--1528
 [][] 
  []
 
 
-Overfull \hbox (32.53764pt too wide) in paragraph at lines 1545--1567
-[][] 
- []
+Underfull \vbox (badness 2237) has occurred while \output is active []
 
-[21
+ [21
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1585--1587
+Overfull \hbox (32.53764pt too wide) in paragraph at lines 1529--1551
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1569--1571
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1617--1621
+Underfull \hbox (badness 10000) in paragraph at lines 1601--1605
 []
  []
 
 
-Overfull \hbox (4.58907pt too wide) in paragraph at lines 1617--1621
+Overfull \hbox (4.58907pt too wide) in paragraph at lines 1601--1605
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1625--1629
+Underfull \hbox (badness 10000) in paragraph at lines 1609--1613
 []
  []
 
 
-Overfull \hbox (4.00227pt too wide) in paragraph at lines 1625--1629
+Overfull \hbox (4.00227pt too wide) in paragraph at lines 1609--1613
 [] 
  []
 
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 1598--1635
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 1582--1619
 [][] 
- []
-
-
-Underfull \vbox (badness 3612) has occurred while \output is active []
-
- [22]
-Underfull \hbox (badness 10000) in paragraph at lines 1656--1661
-
- []
-
-
-Overfull \hbox (13.44377pt too wide) in paragraph at lines 1661--1667
-\TU/lmr/m/it/10 by axiom of extentionality we can show that $\OML/cmm/m/it/10 X$ \TU/lmr/m/it/10 is unique. so we denote it as “$\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; x[]; x[]; :::; x[]\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 g$\TU/lmr/m/it/10 ”.
- []
-
-
-Overfull \hbox (63.3985pt too wide) in paragraph at lines 1680--1682
-[][]\TU/lmr/bx/n/10 Lemma 3.1.1 \TU/lmr/m/n/10 (Russell’s paradox)\TU/lmr/bx/n/10 . []\TU/lmr/m/it/10 assume the comprehension axiom $\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 x[]; x[]; :::; x[]\OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 X\OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; x[]; x[]; :::; x[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 $
- []
-
-[23] [24]
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 1773--1812
-[][] 
- []
-
-
-Overfull \hbox (32.53764pt too wide) in paragraph at lines 1813--1843
-[][] 
- []
-
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 1857--1887
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1857--1887
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1857--1887
-
- []
-
-[25]
-Underfull \hbox (badness 10000) in paragraph at lines 1921--1924
-[]
- []
-
-
-Overfull \hbox (9.86688pt too wide) in paragraph at lines 1921--1924
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1928--1931
-[]
- []
-
-
-Overfull \hbox (9.86688pt too wide) in paragraph at lines 1928--1931
-[] 
- []
-
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 1909--1970
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1909--1970
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1909--1970
-
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [26]
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
+ [22]
+Underfull \hbox (badness 10000) in paragraph at lines 1640--1645
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 1994--2037
+ []
+
+
+Overfull \hbox (13.44377pt too wide) in paragraph at lines 1645--1651
+\TU/lmr/m/it/10 by axiom of extentionality we can show that $\OML/cmm/m/it/10 X$ \TU/lmr/m/it/10 is unique. so we denote it as “$\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; x[]; x[]; :::; x[]\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 g$\TU/lmr/m/it/10 ”.
+ []
+
+
+Overfull \hbox (63.3985pt too wide) in paragraph at lines 1664--1666
+[][]\TU/lmr/bx/n/10 Lemma 3.1.1 \TU/lmr/m/n/10 (Russell’s paradox)\TU/lmr/bx/n/10 . []\TU/lmr/m/it/10 assume the comprehension axiom $\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 x[]; x[]; :::; x[]\OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 X\OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; x[]; x[]; :::; x[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 $
+ []
+
+
+Underfull \vbox (badness 6658) has occurred while \output is active []
+
+ [23] [24]
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 1757--1796
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1994--2037
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1994--2037
-
- []
-
-
-Underfull \vbox (badness 1226) has occurred while \output is active []
-
- [27]
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 2049--2076
+Overfull \hbox (32.53764pt too wide) in paragraph at lines 1797--1827
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2049--2076
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25]
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 1841--1871
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1841--1871
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2049--2076
+Underfull \hbox (badness 10000) in paragraph at lines 1841--1871
+
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 1905--1908
+[]
+ []
+
+
+Overfull \hbox (9.86688pt too wide) in paragraph at lines 1905--1908
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1912--1915
+[]
+ []
+
+
+Overfull \hbox (9.86688pt too wide) in paragraph at lines 1912--1915
+[] 
+ []
+
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 1893--1954
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1893--1954
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1893--1954
+
+ []
+
+[27]
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 1978--2021
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1978--2021
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1978--2021
+
+ []
+
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 2033--2060
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2033--2060
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2033--2060
 
  []
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 2108--2111
+Underfull \hbox (badness 10000) in paragraph at lines 2092--2095
 []
  []
 
 
-Overfull \hbox (12.08911pt too wide) in paragraph at lines 2108--2111
+Overfull \hbox (12.08911pt too wide) in paragraph at lines 2092--2095
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2115--2118
+Underfull \hbox (badness 10000) in paragraph at lines 2099--2102
 []
  []
 
 
-Overfull \hbox (12.08911pt too wide) in paragraph at lines 2115--2118
+Overfull \hbox (12.08911pt too wide) in paragraph at lines 2099--2102
 [] 
  []
 
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 2097--2129
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 2081--2113
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2097--2129
+Underfull \hbox (badness 10000) in paragraph at lines 2081--2113
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2097--2129
-
- []
-
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-
-Underfull \hbox (badness 10000) in paragraph at lines 2132--2136
+Underfull \hbox (badness 10000) in paragraph at lines 2081--2113
 
  []
 
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 2171--2190
+Underfull \hbox (badness 10000) in paragraph at lines 2116--2120
+
+ []
+
+[29]
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 2155--2174
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2171--2190
+Underfull \hbox (badness 10000) in paragraph at lines 2155--2174
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2171--2190
+Underfull \hbox (badness 10000) in paragraph at lines 2155--2174
 
  []
 
-[29] [30]
+[30]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Underfull \hbox (badness 10000) in paragraph at lines 2277--2279
+Underfull \hbox (badness 10000) in paragraph at lines 2261--2263
 
  []
 
-[31]
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
- [32]
+[31] [32]
 Chapter 4.
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Underfull \hbox (badness 10000) in paragraph at lines 2492--2496
+Underfull \hbox (badness 10000) in paragraph at lines 2476--2480
 
  []
 
@@ -1443,124 +1438,101 @@ Underfull \hbox (badness 10000) in paragraph at lines 2492--2496
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 2574--2601
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 2558--2585
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2574--2601
+Underfull \hbox (badness 10000) in paragraph at lines 2558--2585
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2574--2601
+Underfull \hbox (badness 10000) in paragraph at lines 2558--2585
 
  []
 
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 2606--2625
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 2590--2609
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2606--2625
+Underfull \hbox (badness 10000) in paragraph at lines 2590--2609
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2606--2625
+Underfull \hbox (badness 10000) in paragraph at lines 2590--2609
 
  []
 
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
+[34]
 Missing character: There is no ِ in font [lmroman10-bolditalic]:mapping=tex-text;!
 File: R-Im-Dom (1).pdf Graphic file (type pdf)
 <use R-Im-Dom (1).pdf>
-[34]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 2673--2697
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 2657--2681
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2673--2697
+Underfull \hbox (badness 10000) in paragraph at lines 2657--2681
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2673--2697
+Underfull \hbox (badness 10000) in paragraph at lines 2657--2681
 
  []
 
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 2702--2726
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 2686--2710
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2702--2726
+Underfull \hbox (badness 10000) in paragraph at lines 2686--2710
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2702--2726
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2729--2730
+Underfull \hbox (badness 10000) in paragraph at lines 2686--2710
 
  []
 
 [35]
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 2742--2767
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2742--2767
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2742--2767
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2770--2771
+Underfull \hbox (badness 10000) in paragraph at lines 2713--2714
 
  []
 
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 2783--2810
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 2726--2751
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2783--2810
+Underfull \hbox (badness 10000) in paragraph at lines 2726--2751
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2783--2810
+Underfull \hbox (badness 10000) in paragraph at lines 2726--2751
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2813--2814
+Underfull \hbox (badness 10000) in paragraph at lines 2754--2755
 
  []
 
@@ -1568,65 +1540,82 @@ Underfull \hbox (badness 10000) in paragraph at lines 2813--2814
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 2825--2870
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 2767--2794
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2825--2870
+Underfull \hbox (badness 10000) in paragraph at lines 2767--2794
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2825--2870
+Underfull \hbox (badness 10000) in paragraph at lines 2767--2794
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2797--2798
 
  []
 
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 2883--2910
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 2809--2854
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2883--2910
+Underfull \hbox (badness 10000) in paragraph at lines 2809--2854
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2883--2910
+Underfull \hbox (badness 10000) in paragraph at lines 2809--2854
+
+ []
+
+[37]
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 2867--2894
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2867--2894
 
  []
 
 
-Underfull \vbox (badness 5161) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 2867--2894
 
- [37]
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 2929--2950
+ []
+
+
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 2913--2934
 [][] 
  []
 
 [38]
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 3003--3090
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 2987--3074
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3003--3090
+Underfull \hbox (badness 10000) in paragraph at lines 2987--3074
 
  []
 
 
-Overfull \hbox (32.53764pt too wide) in paragraph at lines 3091--3120
+Overfull \hbox (32.53764pt too wide) in paragraph at lines 3075--3104
 [][] 
  []
 
-
-Underfull \vbox (badness 6758) has occurred while \output is active []
-
- [39]
-Underfull \hbox (badness 10000) in paragraph at lines 3137--3139
+[39]
+Underfull \hbox (badness 10000) in paragraph at lines 3121--3123
 
  []
 
@@ -1638,38 +1627,35 @@ File: all-twemojis.pdf Graphic file (type pdf)
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 3180--3207
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 3164--3191
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3180--3207
+Underfull \hbox (badness 10000) in paragraph at lines 3164--3191
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3180--3207
+Underfull \hbox (badness 10000) in paragraph at lines 3164--3191
 
  []
 
-[41]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [42]
+[41] [42]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 3341--3386
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 3325--3370
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3341--3386
+Underfull \hbox (badness 10000) in paragraph at lines 3325--3370
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3341--3386
+Underfull \hbox (badness 10000) in paragraph at lines 3325--3370
 
  []
 
@@ -1678,448 +1664,363 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [43] [44] [45] [46]
 Chapter 5.
-LaTeX Font Info:    Trying to load font information for U+euf on input line 3479.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 3463.
 (C:\Users\TS\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
-Underfull \hbox (badness 10000) in paragraph at lines 3505--3521
+) [47
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 3489--3505
 
  []
 
-[47
-
-]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 3549--3569
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 3533--3553
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3549--3569
+Underfull \hbox (badness 10000) in paragraph at lines 3533--3553
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3549--3569
+Underfull \hbox (badness 10000) in paragraph at lines 3533--3553
 
- []
-
-
-Overfull \hbox (32.53764pt too wide) in paragraph at lines 3579--3613
-[] 
  []
 
 [48]
-Overfull \hbox (32.53764pt too wide) in paragraph at lines 3614--3649
+Overfull \hbox (32.53764pt too wide) in paragraph at lines 3563--3597
+[] 
+ []
+
+
+Overfull \hbox (32.53764pt too wide) in paragraph at lines 3598--3633
 [] 
  []
 
 [49]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 5696) has occurred while \output is active []
 
  [50]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [51] [52]
-Underfull \vbox (badness 1783) has occurred while \output is active []
-
- [53]
+ [51] [52] [53]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [54] [55] [56]
-Overfull \hbox (4.20619pt too wide) in paragraph at lines 4072--4092
+ [54] [55]
+Underfull \vbox (badness 3098) has occurred while \output is active []
+
+ [56]
+Overfull \hbox (4.20619pt too wide) in paragraph at lines 4056--4076
 [][] 
  []
 
-[57] [58] [59] [60
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [57] [58] [59] [60
 
 ]
 Chapter 6.
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 [61] [62]
-Overfull \hbox (56.81142pt too wide) in paragraph at lines 4363--4370
+Overfull \hbox (56.81142pt too wide) in paragraph at lines 4347--4354
 [][] 
  []
 
 [63]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
- [64] [65] [66] [67] [68] [69] [70]
-Chapter 7.
-[71
+ [64] [65] [66]
+Underfull \vbox (badness 2837) has occurred while \output is active []
+
+ [67] [68]
+Underfull \vbox (badness 1371) has occurred while \output is active []
+
+ [69] [70] [71] [72
 
 ]
+Chapter 7.
+[73]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Underfull \hbox (badness 10000) in paragraph at lines 4968--4970
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [74]
+Underfull \hbox (badness 10000) in paragraph at lines 4952--4954
 
  []
 
-[72]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
- [73] [74]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [75]
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+ [76] [77]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [76] [77] [78] [79]
-Overfull \hbox (40.18999pt too wide) in paragraph at lines 5455--5519
+ [78]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [79] [80] [81] [82]
+Overfull \hbox (40.18999pt too wide) in paragraph at lines 5439--5503
 [][] 
  []
 
-[80]
-Overfull \hbox (65.7086pt too wide) in paragraph at lines 5597--5611
+[83] [84]
+Overfull \hbox (65.7086pt too wide) in paragraph at lines 5581--5595
 [][] 
  []
 
-[81]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
+[85]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [82]
+ [86]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
- [83] [84
+ [87] [88
 
 ]
 Chapter 8.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 5744.
+(hyperref)                removing `math shift' on input line 5728.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 5744.
+(hyperref)                removing `math shift' on input line 5728.
 
-[85]
+[89]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 5831.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 5831.
-
-[86]
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
- [87]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 5926.
+(hyperref)                removing `math shift' on input line 5815.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 5926.
+(hyperref)                removing `math shift' on input line 5815.
 
-[88] [89]
-Underfull \hbox (badness 10000) in paragraph at lines 6042--6043
-
- []
-
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
 [90]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 6103.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 6103.
-
-[91] [92] [93] [94
-
-]
-Chapter 9.
-[95]
-Underfull \hbox (badness 10000) in paragraph at lines 6376--6377
-
- []
-
-[96] [97]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [98]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [99]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [100]
+ [91]
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 5910.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 5910.
+
+[92]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [101]
-Overfull \vbox (22.8585pt too high) has occurred while \output is active []
+ [93] [94]
+Underfull \hbox (badness 10000) in paragraph at lines 6026--6027
+
+ []
+
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+[95]
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 6087.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 6087.
+
+[96] [97] [98]
+Chapter 9.
+[99
+
+] [100]
+Underfull \hbox (badness 10000) in paragraph at lines 6360--6361
+
+ []
+
+[101]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [102]
-Underfull \hbox (badness 10000) in paragraph at lines 6851--6853
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [103]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [104]
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [105]
+Overfull \vbox (21.99434pt too high) has occurred while \output is active []
+
+ [106]
+Underfull \hbox (badness 10000) in paragraph at lines 6835--6837
 
  []
 
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Underfull \hbox (badness 10000) in paragraph at lines 6864--6865
+Underfull \hbox (badness 10000) in paragraph at lines 6848--6849
 
  []
 
 
-Overfull \hbox (22.2401pt too wide) in paragraph at lines 6865--6915
+Overfull \hbox (22.2401pt too wide) in paragraph at lines 6849--6899
 [][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [103]
+ [107]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [104] [105]
-Underfull \vbox (badness 4366) has occurred while \output is active []
+ [108] [109]
+Underfull \vbox (badness 2990) has occurred while \output is active []
 
- [106] [107]
+ [110] [111]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [108]
+ [112]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [109]
+ [113]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
- [110] [111] [112] [113]
-Underfull \hbox (badness 10000) in paragraph at lines 7522--7523
+ [114]
+Underfull \vbox (badness 2671) has occurred while \output is active []
+
+ [115] [116] [117]
+Underfull \hbox (badness 10000) in paragraph at lines 7506--7507
 
  []
 
-[114]
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
- [115]
+[118] [119]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
- [116]
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+ [120] [121] [122
+
+]
 Chapter 10.
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Underfull \hbox (badness 10000) in paragraph at lines 7694--7696
+Underfull \hbox (badness 10000) in paragraph at lines 7678--7680
 
  []
 
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Underfull \hbox (badness 10000) in paragraph at lines 7705--7707
+Underfull \hbox (badness 10000) in paragraph at lines 7689--7691
 
  []
 
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
-[117
-
-] [118]
+[123] [124]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
- [119] [120]
+ [125] [126]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
- [121] [122] [123] [124] [125] [126]
+ [127] [128] [129] [130] [131] [132]
 
-Package fitch Warning: Undefined line reference: T on input line 8425.
+Package fitch Warning: Undefined line reference: T on input line 8409.
 
+[133]
 
-Underfull \vbox (badness 1845) has occurred while \output is active []
+Package fitch Warning: Undefined line reference: F on input line 8447.
 
- [127]
-
-Package fitch Warning: Undefined line reference: F on input line 8463.
-
-[128] [129]
+[134] [135]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
- [130]
+ [136]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
+ [137]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
- [131] [132
-
-]
+ [138]
 Chapter 11.
-[133] [134
+[139
+
+] [140
 
 ]
 Chapter 12.
-[135] [136
+[141] [142
 
 ]
 Chapter 13.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8668.
+(hyperref)                removing `math shift' on input line 8652.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8668.
+(hyperref)                removing `math shift' on input line 8652.
 
 
-Overfull \hbox (57.54887pt too wide) in paragraph at lines 8668--8668
+Overfull \hbox (57.54887pt too wide) in paragraph at lines 8652--8652
 \TU/lmr/bx/n/24.88 numbers($\U/msb/m/n/24.88 Z\OT1/cmr/m/n/24.88 (\OML/cmm/m/it/24.88 Ord\OT1/cmr/m/n/24.88 )\OML/cmm/m/it/24.88 ; \U/msb/m/n/24.88 Q\OT1/cmr/m/n/24.88 (\OML/cmm/m/it/24.88 Ord\OT1/cmr/m/n/24.88 )\OML/cmm/m/it/24.88 ; \U/msb/m/n/24.88 R\OT1/cmr/m/n/24.88 (\OML/cmm/m/it/24.88 Ord\OT1/cmr/m/n/24.88 )\OML/cmm/m/it/24.88 ; \U/msb/m/n/24.88 C\OT1/cmr/m/n/24.88 (\OML/cmm/m/it/24.88 Ord\OT1/cmr/m/n/24.88 )$\TU/lmr/bx/n/24.88 )  
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8670.
+(hyperref)                removing `math shift' on input line 8654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8670.
+(hyperref)                removing `math shift' on input line 8654.
 
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-[137]
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8758.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8758.
-
-[138]
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
- [139]
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-
-Overfull \hbox (4.51492pt too wide) in paragraph at lines 8840--8842
-[][]\TU/lmr/bx/n/10 Theorem 13.2.3. []\TU/lmr/bx/it/10 Order of fantacy Rational numbers($\U/msb/m/n/10 Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Ord\OT1/cmr/m/n/10 )$\TU/lmr/bx/it/10 ) \TU/lmr/m/it/10 prove for “$\OT1/cmr/m/n/10 (\U/msb/m/n/10 Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Ord\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; <[]
- []
-
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8854.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8854.
-
-
-Overfull \hbox (4.26941pt too wide) in paragraph at lines 8883--8887
-[]\TU/lmr/m/n/10 we define an equivalence relation “$\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 )[] \OMS/cmsy/m/n/10 ^^X \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 b[]\OT1/cmr/m/n/10 )[] : \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 " > \OT1/cmr/m/n/10 0 \OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 N \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 n N < n < roof\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 N\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 !
- []
-
-[140]
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-
-Underfull \hbox (badness 10000) in paragraph at lines 8912--8913
-
- []
-
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-[141]
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8973.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8973.
-
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-[142]
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
-File: all-twemojis.pdf Graphic file (type pdf)
-<use all-twemojis.pdf, page 1969>
- [143]
+[143]
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 File: all-twemojis.pdf Graphic file (type pdf)
@@ -2129,151 +2030,249 @@ File: all-twemojis.pdf Graphic file (type pdf)
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
  [144]
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 8750.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 8750.
+
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+[145]
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+
+Overfull \hbox (4.51492pt too wide) in paragraph at lines 8844--8846
+[][]\TU/lmr/bx/n/10 Theorem 13.2.3. []\TU/lmr/bx/it/10 Order of fantacy Rational numbers($\U/msb/m/n/10 Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Ord\OT1/cmr/m/n/10 )$\TU/lmr/bx/it/10 ) \TU/lmr/m/it/10 prove for “$\OT1/cmr/m/n/10 (\U/msb/m/n/10 Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Ord\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; <[]
+ []
+
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 8858.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 8858.
+
+[146]
+Overfull \hbox (4.26941pt too wide) in paragraph at lines 8887--8891
+[]\TU/lmr/m/n/10 we define an equivalence relation “$\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 )[] \OMS/cmsy/m/n/10 ^^X \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 b[]\OT1/cmr/m/n/10 )[] : \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 " > \OT1/cmr/m/n/10 0 \OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 N \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 n N < n < roof\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 N\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 !
+ []
+
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+
+Underfull \hbox (badness 10000) in paragraph at lines 8922--8923
+
+ []
+
+[147]
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+ [148]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 8983.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 8983.
+
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+[149]
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+ [150]
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+File: all-twemojis.pdf Graphic file (type pdf)
+<use all-twemojis.pdf, page 1969>
+ [151] [152
+
+]
 Chapter 14.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9116.
+(hyperref)                removing `math shift' on input line 9126.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 9116.
+(hyperref)                removing `superscript' on input line 9126.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 9116.
+(hyperref)                removing `superscript' on input line 9126.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 9116.
+(hyperref)                removing `superscript' on input line 9126.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 9116.
+(hyperref)                removing `superscript' on input line 9126.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9116.
+(hyperref)                removing `math shift' on input line 9126.
 
-[145
-
-] [146] [147]
+[153] [154] [155]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9435.
+(hyperref)                removing `math shift' on input line 9445.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 9435.
+(hyperref)                removing `superscript' on input line 9445.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\ast' on input line 9435.
+(hyperref)                removing `\ast' on input line 9445.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9435.
+(hyperref)                removing `math shift' on input line 9445.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9435.
+(hyperref)                removing `math shift' on input line 9445.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 9435.
+(hyperref)                removing `superscript' on input line 9445.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\ast' on input line 9435.
+(hyperref)                removing `\ast' on input line 9445.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9435.
+(hyperref)                removing `math shift' on input line 9445.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9435.
+(hyperref)                removing `math shift' on input line 9445.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 9435.
+(hyperref)                removing `superscript' on input line 9445.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\ast' on input line 9435.
+(hyperref)                removing `\ast' on input line 9445.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9435.
+(hyperref)                removing `math shift' on input line 9445.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9435.
+(hyperref)                removing `math shift' on input line 9445.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 9435.
+(hyperref)                removing `superscript' on input line 9445.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\ast' on input line 9435.
+(hyperref)                removing `\ast' on input line 9445.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9435.
+(hyperref)                removing `math shift' on input line 9445.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9435.
+(hyperref)                removing `math shift' on input line 9445.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 9435.
+(hyperref)                removing `superscript' on input line 9445.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 9435.
+(hyperref)                removing `subscript' on input line 9445.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9435.
+(hyperref)                removing `math shift' on input line 9445.
 
-[148] [149] [150] [151] [152] [153] [154] [155] [156] [157] [158
-
-]
+[156] [157] [158] [159] [160] [161] [162] [163] [164] [165] [166]
 Chapter 15.
-[159] [160] [161] [162]
-Overfull \hbox (1.57306pt too wide) in paragraph at lines 10611--10613
+[167
+
+] [168] [169] [170]
+Overfull \hbox (1.57306pt too wide) in paragraph at lines 10621--10623
 [][]\TU/lmr/bx/n/10 Theorem 15.1.12 \TU/lmr/m/n/10 (Infinitesimal Characterization of Limits at Infinity)\TU/lmr/bx/n/10 . []\TU/lmr/m/it/10 We have $[][] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) =
  []
 
-
-Overfull \hbox (35.19305pt too wide) in paragraph at lines 10655--10659
+[171]
+Overfull \hbox (35.19305pt too wide) in paragraph at lines 10665--10669
 [][]\TU/lmr/bx/n/10 Theorem 15.1.13 \TU/lmr/m/n/10 (Infinitesimal Characterization of Infinite Limits at Infinity)\TU/lmr/bx/n/10 . []\TU/lmr/m/it/10 We have $[][] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) =
  []
 
-[163] [164] [165] [166] [167] [168] [169] [170] [171] [172
+[172] [173] [174] [175] [176] [177] [178] [179] [180]
+Chapter 16.
+[181
 
 ]
-Chapter 16.
-[173]
 Overfull \hbox (35.93321pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 174 \TU/lmr/m/sl/10 CHAPTER 16.  WELL-ORDERED INTEGRAL\TU/lmr/m/sl/9 (MORE POWERFUL THAN LEBESGUE INTEGRAL)
+\TU/lmr/m/n/10 182 \TU/lmr/m/sl/10 CHAPTER 16.  WELL-ORDERED INTEGRAL\TU/lmr/m/sl/9 (MORE POWERFUL THAN LEBESGUE INTEGRAL)
  []
 
-[174]
+[182]
 Chapter 17.
-[175
+[183
 
-] [176] [177] [178] [179] [180] [181] [182] [183] [184] [185] [186] [187] [188] [189] [190] [191] [192] [193] [194] [195] [196] [197] [198]
+] [184] [185] [186] [187] [188] [189] [190] [191] [192] [193] [194] [195] [196] [197] [198] [199] [200] [201] [202] [203] [204] [205] [206] [207] [208]
 Chapter 18.
-[199
+[209
 
-] [200] [201]
-Overfull \hbox (27.20755pt too wide) detected at line 13709
+] [210] [211]
+Overfull \hbox (27.20755pt too wide) detected at line 13719
 [][]
  []
 
-[202] (Logic.aux)
+[212] [213] (Logic.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -2284,10 +2283,10 @@ Package rerunfilecheck Info: File `Logic.out' has not changed.
 Here is how much of TeX's memory you used:
  37862 strings out of 402987
  866198 string characters out of 5449145
- 1429203 words of memory out of 5000000
+ 1429201 words of memory out of 5000000
  66108 multiletter control sequences out of 15000+600000
  646989 words of font info for 147 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  84i,27n,104p,630b,704s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Logic.xdv (208 pages, 1895596 bytes).
+Output written on Logic.xdv (219 pages, 1899772 bytes).

@@ -32,9 +32,7 @@
 \let\emptyset\varnothing
 
 
-\linespread{1.05} % Slightly increases line height
-
-
+\linespread{1.2} % Slightly increases line height
 
 \newtheorem{undefined}{Undefined}[section]
 \newtheorem{definition}{definition}[section]
@@ -51,9 +49,7 @@
 \makeatletter
 
 
-\renewcommand{\arraystretch}{1.44} % 2x standard row height
-
-
+\renewcommand{\arraystretch}{1.2} % 2x standard row height
 
 
 \newcommand*{\blankpage}{
@@ -100,6 +96,7 @@ we  start the book by building logic step by step.block by block in first it
 might seem a little annoying but I advice you to be patient.book will show its
 power soon. like euclidian geometry this book has undefined concepts. I tried
 to explain them for you to understand.but they don't have any definition.
+
 \begin{undefined}[Urelements]
     are the most fundamental entities in a logical.
     They cannot be constructed, defined, or described in terms of other things.
@@ -114,42 +111,42 @@ $v$, $w$,$...$
     \textbf{Type} parallel lines used to show that an object exists
     (you will undrestnd what is object soon.)
     (we will show you how to use them).
-
-    \begin{tikzpicture}
-        % Vertical lines
-        \draw (0,0) -- (0,4);
-        \draw (1,0) -- (1,4);
-        \draw (2,0) -- (2,4);
-        \draw (3,0) -- (3,4);
-        % Labels between lines
-        \node at (-0.5,3) {1.};
-        \node at (-0.5,2) {2.};
-        \node at (-0.5,1) {3.};
-        \node at (0.2,3) {$u$};
-        \node at (1.2,2) {$v$};
-        \node at (2.2,1) {$w$};
-    \end{tikzpicture}
 \end{undefined}
+
+\begin{tikzpicture}
+    % Vertical lines
+    \draw (0,0) -- (0,4);
+    \draw (1,0) -- (1,4);
+    \draw (2,0) -- (2,4);
+    \draw (3,0) -- (3,4);
+    % Labels between lines
+    \node at (-0.5,3) {1.};
+    \node at (-0.5,2) {2.};
+    \node at (-0.5,1) {3.};
+    \node at (0.2,3) {$u$};
+    \node at (1.2,2) {$v$};
+    \node at (2.2,1) {$w$};
+\end{tikzpicture}
 
 \begin{Rule}
     \textbf{fusion} it's the Rule that explain how sets made.
     (this rule is schema.it means it works everywhere for every object.)
-
-    \begin{tikzpicture}
-        % Vertical lines
-        \draw (0,0) -- (0,5);
-        \draw (1,0) -- (1,5);
-        % \draw (1.5,3.6) -- (-0.1,3.6) -- (-0.1,0.5) -- (1.5,0.5);
-        % Labels between lines
-        \node at (-0.5,4) {$m.$};
-        \node at (-0.6,2) {$m+n.$};
-        \node at (-0.5,1) {$o.$};
-        \node at (0.2,4) {$u_{0}$};
-        \node at (0.2,3) {$\vdots$};
-        \node at (0.2,2) {$u_{n}$};
-        \node at (2,1) {$\{u_{0} , u_{1}... u_{n}\}$};
-    \end{tikzpicture}
 \end{Rule}
+
+\begin{tikzpicture}
+    % Vertical lines
+    \draw (0,0) -- (0,5);
+    \draw (1,0) -- (1,5);
+    % \draw (1.5,3.6) -- (-0.1,3.6) -- (-0.1,0.5) -- (1.5,0.5);
+    % Labels between lines
+    \node at (-0.5,4) {$m.$};
+    \node at (-0.6,2) {$m+n.$};
+    \node at (-0.5,1) {$o.$};
+    \node at (0.2,4) {$u_{0}$};
+    \node at (0.2,3) {$\vdots$};
+    \node at (0.2,2) {$u_{n}$};
+    \node at (2,1) {$\{u_{0} , u_{1}... u_{n}\}$};
+\end{tikzpicture}
 
 \begin{undefined}
     \textbf{Set} we can't say what exactly sets are but we know sets can be made by fusion
@@ -167,109 +164,97 @@ $v$, $w$,$...$
     \textbf{fission} it show us how to break an obj.
     (this rule is scheme it means it works everywhere for every obj.)
 
-    \begin{tikzpicture}
-        % Vertical lines
-        \draw (0,-1) -- (0,4);
-        \draw (1,-1) -- (1,4);
-        % \draw (1.5,3.6) -- (-0.1,3.6) -- (-0.1,0.5) -- (1.5,0.5);
-        % Labels between lines
-        \node at (-0.5,3) {$o.$};
-        \node at (-0.5,2) {$m.$};
-        \node at (-0.6,0) {$m+n.$};
-        \node at (2,3) {$\{a_{0} , a_{1}... a_{n}\}$};
-        \node at (0.2,2) {$a_{0}$};
-        \node at (0.2,1) {$\vdots$};
-        \node at (0.2,0) {$a_{n}$};
-    \end{tikzpicture}
-
 \end{Rule}
+\begin{tikzpicture}
+    % Vertical lines
+    \draw (0,-1) -- (0,4);
+    \draw (1,-1) -- (1,4);
+
+    % Labels between lines
+    \node at (-0.5,3) {$o.$};
+    \node at (-0.5,2) {$m.$};
+    \node at (-0.6,0) {$m+n.$};
+    \node at (2,3) {$\{a_{0} , a_{1}... a_{n}\}$};
+    \node at (0.2,2) {$a_{0}$};
+    \node at (0.2,1) {$\vdots$};
+    \node at (0.2,0) {$a_{n}$};
+\end{tikzpicture}
+
 
 \begin{example}
     \textbf{} $\{a,b,c\} /\therefore \{a,b\}$
     (prove if $\{a,b,c\}$ exists then $\{a,c\}$ exists)
-
-    \begin{tikzpicture}
-        % Vertical lines
-        \draw (0,-2) -- (0,4);
-        \draw (1,-2) -- (1,4);
-        % \draw (1.5,3.6) -- (-0.1,3.6) -- (-0.1,-1.5) -- (1.5,-1.5);
-        % Labels between lines
-        \node at (-0.5,3) {1.};
-        \node at (-0.5,2) {2.};
-        \node at (-0.5,1) {3.};
-        \node at (-0.5,0) {4.};
-        \node at (-0.5,-1) {5.};
-        \node at (1.7,3) {$\{a,b,c\}$};
-        \node at (0.2,2) {$a$};
-        \node at (3,2) {fi1};
-        \node at (0.2,1) {$b$};
-        \node at (3,1) {fi1};
-        \node at (0.2,0) {$c$};
-        \node at (3,0) {fi1};
-        \node at (1.7,-1) {$\{a,c\}$};
-        \node at (3,-1) {fu2,3,4};
-    \end{tikzpicture}
-
 \end{example}
+
+\begin{tikzpicture}
+    % Vertical lines
+    \draw (0,-2) -- (0,4);
+    \draw (1,-2) -- (1,4);
+
+    % Labels between lines
+    \node at (-0.5,3) {1.};
+    \node at (-0.5,2) {2.};
+    \node at (-0.5,1) {3.};
+    \node at (-0.5,0) {4.};
+    \node at (-0.5,-1) {5.};
+    \node at (1.7,3) {$\{a,b,c\}$};
+    \node at (0.2,2) {$a$};
+    \node at (3,2) {fi1};
+    \node at (0.2,1) {$b$};
+    \node at (3,1) {fi1};
+    \node at (0.2,0) {$c$};
+    \node at (3,0) {fi1};
+    \node at (1.7,-1) {$\{a,c\}$};
+    \node at (3,-1) {fu2,3,4};
+\end{tikzpicture}
+
 
 \begin{example}
     \textbf{} $\{a,b\} /\therefore \{b,a\}$
-
-    \begin{tikzpicture}
-        % Vertical lines
-        \draw (0,-1) -- (0,4);
-        \draw (1,-1) -- (1,4);
-        % \draw (1.5,3.6) -- (-0.1,3.6) -- (-0.1,-0.5) -- (1.5,-0.5);
-        % Labels between lines
-        \node at (-0.5,3) {1.};
-        \node at (-0.5,2) {2.};
-        \node at (-0.5,1) {3.};
-        \node at (-0.5,0) {4.};
-        \node at (1.7,3) {$\{a,b\}$};
-        \node at (0.2,2) {$a$};
-        \node at (3,2) {fi1};
-        \node at (0.2,1) {$b$};
-        \node at (3,1) {fi1};
-        \node at (1.7,0) {$\{b,a\}$};
-        \node at (3,0) {fu2,3};
-    \end{tikzpicture}
 \end{example}
 
-% \begin{Rule}
-%     \textbf{repetition} you can repeat an obj
-%     (this rule is scheme it means it works everywhere for every obj.)
+\begin{tikzpicture}
 
-%     \begin{tikzpicture}
-%         % Vertical lines
-%         \draw (0,1.5) -- (0,3.5);
-%         % \draw (1.5,2.6) -- (-0.1,2.6) -- (-0.1,0.5) -- (1.5,0.5);
-%         % Labels between lines
-%         \node at (-0.5,3) {$n.$};
-%         \node at (-0.5,2) {$m.$};
-%         \node at (0.2,3) {$a$};
-%         \node at (0.2,2) {$a$};
-%         \node at (2.2,2) {rp};
-%     \end{tikzpicture}
-% \end{Rule}
+    \draw (0,-1) -- (0,4);
+    \draw (1,-1) -- (1,4);
+
+    \node at (-0.5,3) {1.};
+    \node at (-0.5,2) {2.};
+    \node at (-0.5,1) {3.};
+    \node at (-0.5,0) {4.};
+    \node at (1.7,3) {$\{a,b\}$};
+    \node at (0.2,2) {$a$};
+    \node at (3,2) {fi1};
+    \node at (0.2,1) {$b$};
+    \node at (3,1) {fi1};
+    \node at (1.7,0) {$\{b,a\}$};
+    \node at (3,0) {fu2,3};
+\end{tikzpicture}
+
 
 
 
 \begin{Rule}
     \textbf{promotion} it's the Rule that let us promote an obj to higher level.
     (this rule is schema.it means it works everywhere for every object.)
-
-    \begin{tikzpicture}
-        % Vertical lines
-        \draw (0,0) -- (0,3);
-        \draw (1,0) -- (1,3);
-        % \draw (1.5,3.6) -- (-0.1,3.6) -- (-0.1,0.5) -- (1.5,0.5);
-        % Labels between lines
-        \node at (-0.5,2) {$1.$};
-        \node at (-0.5,1) {$2.$};
-        \node at (0.2,2) {$a$};
-        \node at (1.2,1) {$a$};
-    \end{tikzpicture}
 \end{Rule}
+
+\begin{tikzpicture}
+    % Vertical lines
+    \draw (0,0) -- (0,3);
+    \draw (1,0) -- (1,3);
+    % \draw (1.5,3.6) -- (-0.1,3.6) -- (-0.1,0.5) -- (1.5,0.5);
+    % Labels between lines
+    \node at (-0.5,2) {$1.$};
+    \node at (-0.5,1) {$2.$};
+    \node at (0.2,2) {$a$};
+    \node at (1.2,1) {$a$};
+\end{tikzpicture}
+
+
+\begin{example}
+    \textbf{} $a /\therefore \{ a , \{ a \} \}$
+\end{example}
 
 \chapter{propositional logic (zeroth-order logic)}
 
@@ -285,15 +270,15 @@ capital letter ``$(P,Q,R)$'' showes \textbf{predicates}.
 %
 \begin{definition}
     \textbf{Atomic proposition} we define atomic propositions like this.
-
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item if ``$a$'' is an obj then ``$set(a)$'' is an atomic proposition.
-        \item if ``$a,b$'' are obj then ``$a=b$'' is an atomic proposition.
-        \item if ``$a,b$'' are obj then ``$a \in b$'' is an atomic proposition.
-    \end{enumerate}
-    we denote atomic propositions with ``$p_{i}$''.
 \end{definition}
+
+\begin{enumerate}
+    \setlength{\itemsep}{0pt} % No extra space between items
+    \item if ``$a$'' is an obj then ``$set(a)$'' is an atomic proposition.
+    \item if ``$a,b$'' are obj then ``$a=b$'' is an atomic proposition.
+    \item if ``$a,b$'' are obj then ``$a \in b$'' is an atomic proposition.
+\end{enumerate}
+we denote atomic propositions with ``$p_{i}$''.
 
 %
 \begin{undefined}
@@ -309,15 +294,15 @@ we say formula is an atomic formula or combination of them.
 \begin{definition}
     \textbf{Propositions} these are propositions.
 
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item atomic propositions ``$(p_{i})$''.
-        \item if ``$p$'' is a formula then ``$\neg p$'' is a formula too.
-        \item if ``$p ,q$'' are two propositions then ``$p \bigcirc q $'' is a formula
-              too.($\bigcirc $ can be ``$\to,\land ,\lor$'').
-    \end{enumerate}
-
 \end{definition}
+\begin{enumerate}
+    \setlength{\itemsep}{0pt} % No extra space between items
+    \item atomic propositions ``$(p_{i})$''.
+    \item if ``$p$'' is a formula then ``$\neg p$'' is a formula too.
+    \item if ``$p ,q$'' are two propositions then ``$p \bigcirc q $'' is a formula
+          too.($\bigcirc $ can be ``$\to,\land ,\lor$'').
+\end{enumerate}
+
 for example ``$(p_0 \to p_1 ,\neg p_3)$'' \\
 we denote propositions with ``$p ,q ,r ,...$''.
 
@@ -331,24 +316,23 @@ we denote propositions with ``$p ,q ,r ,...$''.
 \begin{undefined}
     \textbf{Assumption for conditional proof(acp)} is a tool for assuming a proposition.
     (any proposition can't get out but it can get in. right line must be shoter than left one.(it can't fall out).  and every hypothesis that opens must be closed.)
-    % (you will undrestnd what is proposition soon.)
-
-    \begin{fitchproof}[arrayenv=tabular]
-        \open
-        \have {1} {}
-        \open
-        \have {2} {}
-        \open
-        \have {3} {}
-        \have {4} {}
-        \close
-        \have {5} {}
-        \close
-        \have {6} {}
-        \close
-    \end{fitchproof}
-
 \end{undefined}
+
+\begin{fitchproof}[arrayenv=tabular]
+    \open
+    \have {1} {}
+    \open
+    \have {2} {}
+    \open
+    \have {3} {}
+    \have {4} {}
+    \close
+    \have {5} {}
+    \close
+    \have {6} {}
+    \close
+\end{fitchproof}
+
 
 \begin{Rule}
     \textbf{rules of logical operations} $(\to  I, \to E ,\land I ,\land E ,\lor I ,\lor E ,\neg I ,\neg E,\bot I ,\bot E )$
@@ -2081,7 +2065,7 @@ sometimes all members of a set is also set we call it ``set of sets''.
     therefore.
     \[\forall x( x \in V \leftrightarrow Type_0(x) \land  \top ) \]
     therefore.
-    \[\forall x( x \in V ) \]
+    \[\forall x( x \in V \leftrightarrow Type_0(x)   ) \]
 \end{observation}
 
 \begin{definition}
@@ -2316,9 +2300,9 @@ and continue this process through the ordinals.
     For every formula $\phi(x,x_0,\ldots,x_n)$ and every
     existing set of obj $U$, there exists a set $X$ such that
     \[
-        \forall x_0 , ... , x_n \quad \exists X \quad \forall x \quad
+        \forall x_0 , ... , x_n \in V \quad \exists X \in V \quad \forall x \in U \quad
         \bigl(x\in X\leftrightarrow
-        (x\in U \land \phi(x,x_0,\ldots,x_n))\bigr).
+        \phi(x,x_0,\ldots,x_n)\bigr).
     \]
 \end{axiom}
 
@@ -2379,58 +2363,58 @@ comprehension.  We then extend \(V_1\) to
     is a set in \(V_1\).
 \end{axiom}
 
-\begin{definition}
-    \textbf{The next level}
-    We define \(V_1\) to be the smallest set containing \(V_0\) and closed
-    under the operations of union, powerset, pairing, and comprehension
-    over \(V_0\).  That is,
-    \[
-        V_1 := V_0 \cup
-        \Bigl\{\bigcup X \mid X \in V_0\Bigr\} \cup
-        \Bigl\{\mathcal{P}(X) \mid X \in V_0\Bigr\} \cup
-        \Bigl\{\{a,b\} \mid a,b \in V_0\Bigr\} \cup \cdots
-    \]
-    We then define \(V_2\) from \(V_1\) in exactly the same way, and in
-    general \(V_{n+1}\) from \(V_n\).
-\end{definition}
+% \begin{definition}
+%     \textbf{The next level}
+%     We define \(V_1\) to be the smallest set containing \(V_0\) and closed
+%     under the operations of union, powerset, pairing, and comprehension
+%     over \(V_0\).  That is,
+%     \[
+%         V_1 := V_0 \cup
+%         \Bigl\{\bigcup X \mid X \in V_0\Bigr\} \cup
+%         \Bigl\{\mathcal{P}(X) \mid X \in V_0\Bigr\} \cup
+%         \Bigl\{\{a,b\} \mid a,b \in V_0\Bigr\} \cup \cdots
+%     \]
+%     We then define \(V_2\) from \(V_1\) in exactly the same way, and in
+%     general \(V_{n+1}\) from \(V_n\).
+% \end{definition}
 
-\begin{definition}
-    \textbf{Height of the Level}
-    The \emph{height} of \(V_1\) is the least ordinal \(\kappa\) such that
-    \[
-        V_1 = V_\kappa,
-    \]
-    where the cumulative hierarchy \(V_\alpha\) is defined by
-    \[
-        V_0 = V_0, \qquad
-        V_{\alpha+1} = V_\alpha \cup \mathcal{P}(V_\alpha), \qquad
-        V_\lambda = \bigcup_{\beta<\lambda} V_\beta
-        \quad (\lambda \text{ a limit ordinal}).
-    \]
-    We denote this height by \(\kappa_1\).  Thus \(V_1\) is itself a set,
-    and its height \(\kappa_1\) is an ordinal.
-\end{definition}
+% \begin{definition}
+%     \textbf{Height of the Level}
+%     The \emph{height} of \(V_1\) is the least ordinal \(\kappa\) such that
+%     \[
+%         V_1 = V_\kappa,
+%     \]
+%     where the cumulative hierarchy \(V_\alpha\) is defined by
+%     \[
+%         V_0 = V_0, \qquad
+%         V_{\alpha+1} = V_\alpha \cup \mathcal{P}(V_\alpha), \qquad
+%         V_\lambda = \bigcup_{\beta<\lambda} V_\beta
+%         \quad (\lambda \text{ a limit ordinal}).
+%     \]
+%     We denote this height by \(\kappa_1\).  Thus \(V_1\) is itself a set,
+%     and its height \(\kappa_1\) is an ordinal.
+% \end{definition}
 
-\begin{observation}
-    With this definition, \(V_1\) is a set of height \(\kappa_1\).  The
-    universe of the first theory is recovered by taking the union of all
-    levels \(V_n\), which is \(V_{\kappa}\) for
-    \(\kappa = \sup_n \kappa_n\).
-\end{observation}
+% \begin{observation}
+%     With this definition, \(V_1\) is a set of height \(\kappa_1\).  The
+%     universe of the first theory is recovered by taking the union of all
+%     levels \(V_n\), which is \(V_{\kappa}\) for
+%     \(\kappa = \sup_n \kappa_n\).
+% \end{observation}
 
-\begin{example}
-    If \(V_0\) contains only the empty set, then \(V_1\) is the set of
-    hereditarily finite sets, and its height is \(\omega\).
-\end{example}
+% \begin{example}
+%     If \(V_0\) contains only the empty set, then \(V_1\) is the set of
+%     hereditarily finite sets, and its height is \(\omega\).
+% \end{example}
 
-\begin{theorem}
-    \textbf{$(schema)$} For every \(n \in \omega\),
-    \[
-        V_n \subseteq V_{n+1} \subseteq V_1.
-    \]
-    \\
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{theorem}
+% \begin{theorem}
+%     \textbf{$(schema)$} For every \(n \in \omega\),
+%     \[
+%         V_n \subseteq V_{n+1} \subseteq V_1.
+%     \]
+%     \\
+%     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+% \end{theorem}
 
 % \begin{definition}
 %     \textbf{Successor stages}
@@ -8679,10 +8663,18 @@ relation ``$ (\alpha_1 , \beta_1) \sim (\alpha_2 , \beta_2) : \alpha_1 +
     we denote it's members with ``$z_0 , z_1 ,...$''
 \end{definition}
 
+
+
 in this system ``$ 0 := [(0,0)]$'' and ``$ \forall \beta \in Ord \quad \beta :=
-        [( \beta ,0)]$'' and ``$\forall \beta \in Ord \quad - \beta := [(0, \beta
-            )]$''. in general``$\forall \alpha , \beta \in Ord \quad \alpha - \beta :=
+        [( \beta ,0)]$'' and ``$\forall \beta \in Ord \quad - \beta := [(0, \beta)]$''.
+in general``$\forall \alpha , \beta \in Ord \quad \alpha - \beta :=
         [(\alpha , \beta )]$''. so we can say ``$ Ord \subseteq \mathbb{Z} (Ord)$''.
+
+\begin{Attention} because $[(x , y)]_\sim = \{ (x' , y') \in Ord \times Ord \mid (x , y) \sim (x' , y') \}$,
+    we know $Type_1([(x , y)]_\sim)$ and $[(x , y)]_\sim \in V_1$.
+    because $ \mathbb{Z} (Ord) = \{ [(x , y)]_\sim \in V_1 \mid (x , y) \in Ord \times Ord \}$,
+    we know $Type_1(\mathbb{Z} (Ord))$ and $\mathbb{Z} (Ord) \in V_1$ in combinational set theory we describeded in (3.3).
+\end{Attention}
 
 \begin{theorem}\textbf{Summation} there is a unique function ``$+_\mathbb{Z} (Ord) :\mathbb{Z} (Ord) \times \mathbb{Z} (Ord) \to \mathbb{Z} (Ord)$'' s.t.
 
@@ -8768,11 +8760,23 @@ an equivalence relation).
     we denote it's members with ``$q_0 , q_1 ,...$''
 \end{definition}
 
+
+
+
 in this system ``$ 0 := [(0,1)]$'' and ``$ 1 := [(1,1)]$'' and ``$ \forall x
     \in \mathbb{Z} (Ord) \quad x := [(x,1)]$'' and ``$\forall x \in \mathbb{Z}
     (Ord) \quad \frac{1}{x} := [(1,x)]$''. in general ``$\forall x,y \in \mathbb{Z}
     (Ord) \quad \frac{x}{y} := [(x,y)]$''. so we can say ``$ Ord \subseteq
     \mathbb{Z} (Ord) \subseteq \mathbb{Q} (Ord) $''.
+
+
+
+
+\begin{Attention} because $[(x , y)]_\sim = \{ (x' , y') \in \mathbb{Z} (Ord) \times (\mathbb{Z} (Ord) - \{0\}) \mid (x , y) \sim (x' , y') \}$,
+    we know $Type_1([(x , y)]_\sim)$ and $[(x , y)]_\sim \in V_1$.
+    because $ \mathbb{Q} (Ord) = \{ [(x , y)]_\sim \in V_1 \mid (x , y) \in \mathbb{Z} (Ord) \times (\mathbb{Z} (Ord) - \{0\}) \}$,
+    we know $Type_1(\mathbb{Q} (Ord))$ and $\mathbb{Q} (Ord) \in V_1$ in combinational set theory we describeded in (3.3).
+\end{Attention}
 
 \begin{theorem}\textbf{Summation} there is a unique function ``$+_{\mathbb{Q} (Ord)} :\mathbb{Q} (Ord) \times \mathbb{Q} (Ord) \to \mathbb{Q} (Ord)$'' s.t.
 
@@ -8893,7 +8897,13 @@ denote every $[(a_i)_{i \in Ord}]$ with $[a_i]_{i \in Ord}$.
 in this system ``$ 0 := [0]_{i \in Ord}$'' and ``$ 1 := [1]_{i \in Ord}$'' and
 ``$ \forall q \in \mathbb{Q} (Ord) \quad q := [q]_{i \in Ord}$''. so we can say
 ``$ Ord \subseteq \mathbb{Z} (Ord) \subseteq \mathbb{Q} (Ord) \subseteq
-    \mathbb{R} (Ord)$''.
+\mathbb{R} (Ord)$''.
+
+\begin{Attention} because $[x_i]_{i \in I} = \{ (x'_i)_{i \in I}  \in mathbb{Q} (Ord)^{Ord} \mid (x_i)_{i \in I} \sim (x'_i)_{i \in I} \}$,
+    we know $Type_1([x_i]_{i \in I})$ and $[x_i]_{i \in I} \in V_1$.
+    because $ \mathbb{Z} (Ord) = \{ [x_i]_{i \in I}\in V_1 \mid (x_i)_{i \in I} \in mathbb{Q} (Ord)^{Ord} \}$,
+    we know $Type_1(\mathbb{Z} (Ord))$ and $\mathbb{Z} (Ord) \in V_1$ in combinational set theory we describeded in (3.3).
+\end{Attention}
 
 \begin{theorem}\textbf{Summation} there is a unique function ``$+_{\mathbb{R} (Ord)} :\mathbb{R} (Ord) \times \mathbb{R} (Ord) \to \mathbb{R} (Ord)$'' s.t.
 
@@ -13467,25 +13477,25 @@ $
 \textbf{1. Interval length and outer measure.}
 For every bounded interval $(a,b)$, let
 \[
-\ell( (a,b) )=b-a.
+    \ell( (a,b) )=b-a.
 \]
 
 thus
 
 \[
-\ell([a,b])=b-a.
+    \ell([a,b])=b-a.
 \]
 
 For every $A\subseteq\mathbb R$, define
 \[
-\boxed{
-\ell^*(A)=
-\inf\left\{
-\sum_{n=1}^{\infty}\ell(I_n):
-A\subseteq\bigcup_{n=1}^{\infty}I_n,\ 
-I_n\text{ open intervals}
-\right\}.
-}
+    \boxed{
+        \ell^*(A)=
+        \inf\left\{
+        \sum_{n=1}^{\infty}\ell(I_n):
+        A\subseteq\bigcup_{n=1}^{\infty}I_n,\
+        I_n\text{ open intervals}
+        \right\}.
+    }
 \]
 Here, the infimum is taken over all countable coverings of $A$ by open intervals. We allow intervals of infinite length, and we set $\ell^*(\varnothing)=0$.
 
@@ -13494,83 +13504,83 @@ We first show that $\ell^*$ is an outer measure.
 Clearly, $\ell^*(A)\geq0$ for every $A\subseteq\mathbb R$, and
 $\ell^*(\varnothing)=0$. If $A\subseteq B$, every open-interval cover of $B$ also covers $A$, so
 \[
-\ell^*(A)\leq\ell^*(B).
+    \ell^*(A)\leq\ell^*(B).
 \]
 
 Now let $(A_n)_{n\geq1}$ be a sequence of subsets of $\mathbb R$. If
 $\sum_{n=1}^{\infty}\ell^*(A_n)=\infty$, countable subadditivity is immediate. Otherwise, for every $\varepsilon>0$, choose open intervals
 $(I_{n,k})_{k\geq1}$ covering $A_n$ such that
 \[
-\sum_{k=1}^{\infty}\ell(I_{n,k})
-<\ell^*(A_n)+\frac{\varepsilon}{2^n}.
+    \sum_{k=1}^{\infty}\ell(I_{n,k})
+    <\ell^*(A_n)+\frac{\varepsilon}{2^n}.
 \]
 The collection of all these intervals covers $\bigcup_{n=1}^{\infty}A_n$. Hence
 \[
-\begin{aligned}
-\ell^*\left(\bigcup_{n=1}^{\infty}A_n\right)
-\leq\sum_{n=1}^{\infty}\sum_{k=1}^{\infty}\ell(I_{n,k})
-\leq\sum_{n=1}^{\infty}\ell^*(A_n)+\varepsilon.
-\end{aligned}
+    \begin{aligned}
+        \ell^*\left(\bigcup_{n=1}^{\infty}A_n\right)
+        \leq\sum_{n=1}^{\infty}\sum_{k=1}^{\infty}\ell(I_{n,k})
+        \leq\sum_{n=1}^{\infty}\ell^*(A_n)+\varepsilon.
+    \end{aligned}
 \]
-Letting $\varepsilon\to0$, we obtain
+Letting $\varepsilon \to 0$, we obtain
 \[
-\ell^*\left(\bigcup_{n=1}^{\infty}A_n\right)
-\leq\sum_{n=1}^{\infty}\ell^*(A_n).
+    \ell^*\left(\bigcup_{n=1}^{\infty}A_n\right)
+    \leq\sum_{n=1}^{\infty}\ell^*(A_n).
 \]
 Thus $\ell^*$ is an outer measure.
 
 \begin{lemma}[The outer measure of an interval]
 
 
-We prove that, for $a<b$,
-\[
-\boxed{\ell^*([a,b])=b-a.}
-\]
-thus
-\[
-\ell^*( (a,b) )=b-a.
-\]
+    We prove that, for $a<b$,
+    \[
+        \boxed{\ell^*([a,b])=b-a.}
+    \]
+    thus
+    \[
+        \ell^*( (a,b) )=b-a.
+    \]
 
 \end{lemma}
 
 
 \begin{proof}
 
-For every $\varepsilon>0$, the open interval
-\[
-I=\left(a-\frac{\varepsilon}{2},
-b+\frac{\varepsilon}{2}\right)
-\]
-covers $[a,b]$. Therefore
-\[
-\ell^*([a,b])\leq b-a+\varepsilon.
-\]
-Since $\varepsilon$ is arbitrary,
-\[
-\ell^*([a,b])\leq b-a.
-\]
+    For every $\varepsilon>0$, the open interval
+    \[
+        I=\left(a-\frac{\varepsilon}{2},
+        b+\frac{\varepsilon}{2}\right)
+    \]
+    covers $[a,b]$. Therefore
+    \[
+        \ell^*([a,b])\leq b-a+\varepsilon.
+    \]
+    Since $\varepsilon$ is arbitrary,
+    \[
+        \ell^*([a,b])\leq b-a.
+    \]
 
-For the reverse inequality, let $(I_n)_{n\geq1}$ be any countable cover of $[a,b]$ by open intervals. We must prove
-\[
-\sum_{n=1}^{\infty}\ell(I_n)\geq b-a.
-\]
-If this sum is infinite, the inequality is immediate. Otherwise, since $[a,b]$ is compact, there is a finite subcover
-\[
-[a,b]\subseteq I_1\cup\cdots\cup I_N.
-\]
-We use the elementary fact that if finitely many open intervals cover $[a,b]$, then the sum of their lengths is at least $b-a$. Consequently,
-\[
-b-a\leq\sum_{n=1}^{N}\ell(I_n)
-\leq\sum_{n=1}^{\infty}\ell(I_n).
-\]
-Since the cover was arbitrary, taking the infimum gives
-\[
-\ell^*([a,b])\geq b-a.
-\]
-Combining both inequalities yields
-\[
-\boxed{\ell^*([a,b])=b-a.}
-\]
+    For the reverse inequality, let $(I_n)_{n\geq1}$ be any countable cover of $[a,b]$ by open intervals. We must prove
+    \[
+        \sum_{n=1}^{\infty}\ell(I_n)\geq b-a.
+    \]
+    If this sum is infinite, the inequality is immediate. Otherwise, since $[a,b]$ is compact, there is a finite subcover
+    \[
+        [a,b]\subseteq I_1\cup\cdots\cup I_N.
+    \]
+    We use the elementary fact that if finitely many open intervals cover $[a,b]$, then the sum of their lengths is at least $b-a$. Consequently,
+    \[
+        b-a\leq\sum_{n=1}^{N}\ell(I_n)
+        \leq\sum_{n=1}^{\infty}\ell(I_n).
+    \]
+    Since the cover was arbitrary, taking the infimum gives
+    \[
+        \ell^*([a,b])\geq b-a.
+    \]
+    Combining both inequalities yields
+    \[
+        \boxed{\ell^*([a,b])=b-a.}
+    \]
 
 \end{proof}
 
@@ -13580,159 +13590,159 @@ The same value holds for $(a,b)$, $(a,b]$, and $[a,b)$, since each can be covere
 \textbf{5. Carathéodory measurability.}
 A set $E\subseteq\mathbb R$ is called $\ell^*$-measurable if, for every $X\subseteq\mathbb R$,
 \[
-\boxed{
-    \ell^*(X)=
-    \ell^*(X\cap E)+\ell^*(X - E).
+    \boxed{
+        \ell^*(X)=
+        \ell^*(X\cap E)+\ell^*(X - E).
     }
-    \]
+\]
 Let $\mathcal L$ denote the collection of all $\ell^*$-measurable sets.
 
 
 
 \begin{theorem}[Carathéodory's Theorem]
-If $\ell^*$ is an outer measure on $X$, then the collection $\mathcal L$ of $\ell^*$-measurable sets is a $\sigma$-algebra, and the restriction
-$
-\ell^*|_{\mathcal L}
-$
-is a complete measure.
+    If $\ell^*$ is an outer measure on $X$, then the collection $\mathcal L$ of $\ell^*$-measurable sets is a $\sigma$-algebra, and the restriction
+    $
+        \ell^*|_{\mathcal L}
+    $
+    is a complete measure.
 
 \end{theorem}
 
 
 \begin{proof}
 
-First, $\varnothing\in\mathcal L$, since for every $E\subseteq X$,
-\[
-\ell^*(E)
-=\ell^*(E\cap\varnothing)+\ell^*(E\cap\varnothing^c)
-=0+\ell^*(E).
-\]
-Moreover, $\mathcal L$ is closed under complements, since the definition of measurability is symmetric in $A$ and $A^c$.
+    First, $\varnothing\in\mathcal L$, since for every $E\subseteq X$,
+    \[
+        \ell^*(E)
+        =\ell^*(E\cap\varnothing)+\ell^*(E\cap\varnothing^c)
+        =0+\ell^*(E).
+    \]
+    Moreover, $\mathcal L$ is closed under complements, since the definition of measurability is symmetric in $A$ and $A^c$.
 
-Next, let $A,B\in\mathcal L$. For every $E\subseteq X$, applying the measurability of $A$ and $B$ gives
-\[
-\begin{aligned}
-\ell^*(E)
-={}&\ell^*(E\cap A\cap B)
-+\ell^*(E\cap A\cap B^c)
-+\ell^*(E\cap A^c\cap B)
-+\ell^*(E\cap A^c\cap B^c).
-\end{aligned}
-\]
-By subadditivity,
-\[
-\ell^*(E)\geq
-\ell^*(E\cap(A\cup B))
-+\ell^*(E\cap(A\cup B)^c)
-\]
-Since
-\[
-A\cup B=(A\cap B)\cup(A\cap B^c)\cup(A^c\cap B),
-\]
-by subadditivity,
-\[
-\begin{aligned}
-\ell^*(E\cap A\cap B)
-+\ell^*(E\cap A\cap B^c)
-+\ell^*(E\cap A^c\cap B)
-\geq \ell^*(E\cap(A\cup B))
-\end{aligned}
-\]
-Consequently,
-\[
-\ell^*(E\cap A\cap B)
-+\ell^*(E\cap A\cap B^c)
-+\ell^*(E\cap A^c\cap B)
-+\ell^*(E\cap A^c\cap B^c)
-\geq \ell^*(E\cap(A\cup B))
-+\ell^*(E\cap(A\cup B)^c)
-\]
-The reverse inequality follows from subadditivity. Hence
-\[
-\ell^*(E)=
-\ell^*(E\cap(A\cup B))
-+\ell^*(E\cap(A\cup B)^c),
-\]
-so $A\cup B\in\mathcal L$.
+    Next, let $A,B\in\mathcal L$. For every $E\subseteq X$, applying the measurability of $A$ and $B$ gives
+    \[
+        \begin{aligned}
+            \ell^*(E)
+            ={} & \ell^*(E\cap A\cap B)
+            +\ell^*(E\cap A\cap B^c)
+            +\ell^*(E\cap A^c\cap B)
+            +\ell^*(E\cap A^c\cap B^c).
+        \end{aligned}
+    \]
+    By subadditivity,
+    \[
+        \ell^*(E)\geq
+        \ell^*(E\cap(A\cup B))
+        +\ell^*(E\cap(A\cup B)^c)
+    \]
+    Since
+    \[
+        A\cup B=(A\cap B)\cup(A\cap B^c)\cup(A^c\cap B),
+    \]
+    by subadditivity,
+    \[
+        \begin{aligned}
+            \ell^*(E\cap A\cap B)
+            +\ell^*(E\cap A\cap B^c)
+            +\ell^*(E\cap A^c\cap B)
+            \geq \ell^*(E\cap(A\cup B))
+        \end{aligned}
+    \]
+    Consequently,
+    \[
+        \ell^*(E\cap A\cap B)
+        +\ell^*(E\cap A\cap B^c)
+        +\ell^*(E\cap A^c\cap B)
+        +\ell^*(E\cap A^c\cap B^c)
+        \geq \ell^*(E\cap(A\cup B))
+        +\ell^*(E\cap(A\cup B)^c)
+    \]
+    The reverse inequality follows from subadditivity. Hence
+    \[
+        \ell^*(E)=
+        \ell^*(E\cap(A\cup B))
+        +\ell^*(E\cap(A\cup B)^c),
+    \]
+    so $A\cup B\in\mathcal L$.
 
 
-The reverse inequality follows from subadditivity. Hence $A\cup B\in\mathcal L$, so $\mathcal L$ is an algebra.
+    The reverse inequality follows from subadditivity. Hence $A\cup B\in\mathcal L$, so $\mathcal L$ is an algebra.
 
-Moreover, if $A,B\in\mathcal L$ and $A\cap B=\varnothing$, then
-\[
-\begin{aligned}
-\ell^*(A\cup B)
-=\ell^*((A\cup B)\cap A)
-+\ell^*((A\cup B)\cap A^c)
-=\ell^*(A)+\ell^*(B)
-\end{aligned}
-\]
-Thus $\ell^*$ is finitely additive on $\mathcal L$.
+    Moreover, if $A,B\in\mathcal L$ and $A\cap B=\varnothing$, then
+    \[
+        \begin{aligned}
+            \ell^*(A\cup B)
+            =\ell^*((A\cup B)\cap A)
+            +\ell^*((A\cup B)\cap A^c)
+            =\ell^*(A)+\ell^*(B)
+        \end{aligned}
+    \]
+    Thus $\ell^*$ is finitely additive on $\mathcal L$.
 
-To show that $\mathcal L$ is a $\sigma$-algebra, it suffices to show that
-it is closed under countable disjoint unions. Let $(A_n)_{n\geq1}$ be a
-sequence of pairwise disjoint sets in $\mathcal L$. For every $E\subseteq X$,
-the measurability of $A_n$ gives
-\[
-\begin{aligned}
-\ell^*\left(E\cap\bigcup_{j=1}^{n}A_j\right)
-\quad=
-\ell^*(E\cap A_n)
-+\ell^*\left(E\cap\bigcup_{j=1}^{n-1}A_j\right).
-\end{aligned}
-\]
-Therefore, by induction,
-\[
-\ell^*\left(E\cap\bigcup_{j=1}^{n}A_j\right)
-=\sum_{j=1}^{n}\ell^*(E\cap A_j).
-\]
-It follows that
-\[
-\begin{aligned}
-\ell^*(E)
-=\sum_{j=1}^{n}\ell^*(E\cap A_j)
-+\ell^*\left(E\cap\left(\bigcup_{j=1}^{n}A_j\right)^c\right)
-\geq \sum_{j=1}^{n}\ell^*(E\cap A_j)
-+\ell^*\left(E\cap\left(\bigcup_{j=1}^{\infty}A_j\right)^c\right).
-\end{aligned}
-\]
-Letting $n\to\infty$ and using countable subadditivity, we obtain
-\[
-\begin{aligned}
-\ell^*(E)
-\geq \sum_{j=1}^{\infty}\ell^*(E\cap A_j)
-+\ell^*\left(E\cap\left(\bigcup_{j=1}^{\infty}A_j\right)^c\right)
-\geq \ell^*\left(E\cap\bigcup_{j=1}^{\infty}A_j\right)
-+\ell^*\left(E\cap\left(\bigcup_{j=1}^{\infty}A_j\right)^c\right)
-\geq \ell^*(E).
-\end{aligned}
-\]
-Hence all inequalities are equalities, so
-\[
-\ell^*(E)=
-\ell^*\left(E\cap\bigcup_{j=1}^{\infty}A_j\right)
-+\ell^*\left(E\cap\left(\bigcup_{j=1}^{\infty}A_j\right)^c\right).
-\]
-Thus $\bigcup_{j=1}^{\infty}A_j\in\mathcal L$, and $\mathcal L$ is a
-$\sigma$-algebra.
+    To show that $\mathcal L$ is a $\sigma$-algebra, it suffices to show that
+    it is closed under countable disjoint unions. Let $(A_n)_{n\geq1}$ be a
+    sequence of pairwise disjoint sets in $\mathcal L$. For every $E\subseteq X$,
+    the measurability of $A_n$ gives
+    \[
+        \begin{aligned}
+            \ell^*\left(E\cap\bigcup_{j=1}^{n}A_j\right)
+            \quad=
+            \ell^*(E\cap A_n)
+            +\ell^*\left(E\cap\bigcup_{j=1}^{n-1}A_j\right).
+        \end{aligned}
+    \]
+    Therefore, by induction,
+    \[
+        \ell^*\left(E\cap\bigcup_{j=1}^{n}A_j\right)
+        =\sum_{j=1}^{n}\ell^*(E\cap A_j).
+    \]
+    It follows that
+    \[
+        \begin{aligned}
+            \ell^*(E)
+            =\sum_{j=1}^{n}\ell^*(E\cap A_j)
+            +\ell^*\left(E\cap\left(\bigcup_{j=1}^{n}A_j\right)^c\right)
+            \geq \sum_{j=1}^{n}\ell^*(E\cap A_j)
+            +\ell^*\left(E\cap\left(\bigcup_{j=1}^{\infty}A_j\right)^c\right).
+        \end{aligned}
+    \]
+    Letting $n\to\infty$ and using countable subadditivity, we obtain
+    \[
+        \begin{aligned}
+            \ell^*(E)
+            \geq \sum_{j=1}^{\infty}\ell^*(E\cap A_j)
+            +\ell^*\left(E\cap\left(\bigcup_{j=1}^{\infty}A_j\right)^c\right)
+            \geq \ell^*\left(E\cap\bigcup_{j=1}^{\infty}A_j\right)
+            +\ell^*\left(E\cap\left(\bigcup_{j=1}^{\infty}A_j\right)^c\right)
+            \geq \ell^*(E).
+        \end{aligned}
+    \]
+    Hence all inequalities are equalities, so
+    \[
+        \ell^*(E)=
+        \ell^*\left(E\cap\bigcup_{j=1}^{\infty}A_j\right)
+        +\ell^*\left(E\cap\left(\bigcup_{j=1}^{\infty}A_j\right)^c\right).
+    \]
+    Thus $\bigcup_{j=1}^{\infty}A_j\in\mathcal L$, and $\mathcal L$ is a
+    $\sigma$-algebra.
 
-Taking $E=\bigcup_{j=1}^{\infty}A_j$ in the preceding equality gives
-\[
-\ell^*\left(\bigcup_{j=1}^{\infty}A_j\right)
-=\sum_{j=1}^{\infty}\ell^*(A_j).
-\]
-Therefore $\ell^*|_{\mathcal L}$ is a measure on $\mathcal L$.
+    Taking $E=\bigcup_{j=1}^{\infty}A_j$ in the preceding equality gives
+    \[
+        \ell^*\left(\bigcup_{j=1}^{\infty}A_j\right)
+        =\sum_{j=1}^{\infty}\ell^*(A_j).
+    \]
+    Therefore $\ell^*|_{\mathcal L}$ is a measure on $\mathcal L$.
 
-Finally, suppose $A\in\mathcal L$ and $\ell^*(A)=0$. If $N\subseteq A$,
-then $\ell^*(N)=0$. Thus, for every $E\subseteq X$,
-\[
-\ell^*(E\cap N)=0,
-\]
-and consequently
-\[
-\ell^*(E)=\ell^*(E\cap N)+\ell^*(E\cap N^c).
-\]
-Hence $N\in\mathcal L$ and $\lambda(N)=0$. Therefore $\lambda$ is complete.
+    Finally, suppose $A\in\mathcal L$ and $\ell^*(A)=0$. If $N\subseteq A$,
+    then $\ell^*(N)=0$. Thus, for every $E\subseteq X$,
+    \[
+        \ell^*(E\cap N)=0,
+    \]
+    and consequently
+    \[
+        \ell^*(E)=\ell^*(E\cap N)+\ell^*(E\cap N^c).
+    \]
+    Hence $N\in\mathcal L$ and $\lambda(N)=0$. Therefore $\lambda$ is complete.
 
 
 \end{proof}
@@ -13741,11 +13751,11 @@ Hence $N\in\mathcal L$ and $\lambda(N)=0$. Therefore $\lambda$ is complete.
 \textbf{4. Lebesgue measure.}
 The measure
 \[
-\boxed{\lambda=\ell^*|_{\mathcal L}}
+    \boxed{\lambda=\ell^*|_{\mathcal L}}
 \]
 is called Lebesgue measure on $\mathbb R$. Since intervals are Lebesgue measurable and their outer measure equals their length, we have
 \[
-\boxed{\lambda([a,b])=b-a.}
+    \boxed{\lambda([a,b])=b-a.}
 \]
 Moreover, $\lambda$ is a complete measure, and every Borel subset of $\mathbb R$ is Lebesgue measurable.
 
