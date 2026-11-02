@@ -92,25 +92,24 @@
 \chapter{Atomes}
 \section{Basic tools}
 
-we  start the book by building logic step by step.block by block in first it
-might seem a little annoying but I advice you to be patient.book will show its
+we  start the book by building logic step by step. block by block in first it
+might seem a little annoying but I advice you to be patient. book will show its
 power soon. like euclidian geometry this book has undefined concepts. I tried
-to explain them for you to understand.but they don't have any definition.
+to explain them for you to understand. but they don't have any definition.
 
 \begin{undefined}[Urelements]
-    are the most fundamental entities in a logical.
+    Urelements are the most fundamental entities in a logical.
     They cannot be constructed, defined, or described in terms of other things.
-    Their existence is primitive—accepted without internal structure or relational properties.
+    Their existence is primitive-accepted without internal structure or relational properties.
     Urelements simply are.
 \end{undefined}
 
 In this book, we will denote individual urelements using lowercase letters $u$,
 $v$, $w$,$...$
 
-\begin{undefined}
-    \textbf{Type} parallel lines used to show that an object exists
+\begin{undefined}[Type] parallel lines used to show that an object exists
     (you will undrestnd what is object soon.)
-    (we will show you how to use them).
+    (we will show you how to use them.)
 \end{undefined}
 
 \begin{tikzpicture}
@@ -129,7 +128,7 @@ $v$, $w$,$...$
 \end{tikzpicture}
 
 \begin{Rule}
-    \textbf{fusion} it's the Rule that explain how sets made.
+    [fusion] it's the Rule that explain how sets made.
     (this rule is schema.it means it works everywhere for every object.)
 \end{Rule}
 
@@ -148,20 +147,17 @@ $v$, $w$,$...$
     \node at (2,1) {$\{u_{0} , u_{1}... u_{n}\}$};
 \end{tikzpicture}
 
-\begin{undefined}
-    \textbf{Set} we can't say what exactly sets are but we know sets can be made by fusion
+\begin{undefined}[Set] we can't say what exactly sets are but we know sets can be made by fusion
     (if ``$a$'' is a set we write ``$set(a)$''
     from now we denote sets with uppercase letters like $A$, $B$, $C$, ...).
 \end{undefined}
 
-\begin{definition}
-    \textbf{Object} urelements and sets.(we write obj instead of object).
+\begin{definition}[Object] urelements and sets.(we write obj instead of object).
     (from now we denote objects with lowercase letters like $a$, $b$, $c$, ...).
 
 \end{definition}
 
-\begin{Rule}
-    \textbf{fission} it show us how to break an obj.
+\begin{Rule}[fission] it show us how to break an obj.
     (this rule is scheme it means it works everywhere for every obj.)
 
 \end{Rule}
@@ -182,7 +178,7 @@ $v$, $w$,$...$
 
 
 \begin{example}
-    \textbf{} $\{a,b,c\} /\therefore \{a,b\}$
+     $\{a,b,c\} /\therefore \{a,b\}$
     (prove if $\{a,b,c\}$ exists then $\{a,c\}$ exists)
 \end{example}
 
@@ -210,7 +206,7 @@ $v$, $w$,$...$
 
 
 \begin{example}
-    \textbf{} $\{a,b\} /\therefore \{b,a\}$
+     $\{a,b\} /\therefore \{b,a\}$
 \end{example}
 
 \begin{tikzpicture}
@@ -234,8 +230,7 @@ $v$, $w$,$...$
 
 
 
-\begin{Rule}
-    \textbf{promotion} it's the Rule that let us promote an obj to higher level.
+\begin{Rule}[promotion] it's the Rule that let us promote an obj to higher level.
     (this rule is schema.it means it works everywhere for every object.)
 \end{Rule}
 
@@ -253,23 +248,21 @@ $v$, $w$,$...$
 
 
 \begin{example}
-    \textbf{} $a /\therefore \{ a , \{ a \} \}$
+     $a /\therefore \{ a , \{ a \} \}$
 \end{example}
 
 \chapter{propositional logic (zeroth-order logic)}
 
 \section{What is proposition?}
 
-\begin{definition}
-    \textbf{predicate}  ``$set()$'' and identity ``$=$'' and membership ``$\in$'' symbols are predicates.
+\begin{definition}[predicate]  ``$set()$'' and identity ``$=$'' and membership ``$\in$'' symbols are predicates.
     ``$set()$'' is unary and identity and membership  are binary.
 \end{definition}
 
-capital letter ``$(P,Q,R)$'' showes \textbf{predicates}.
+capital letter ``$(P,Q,R)$'' showes [predicates].
 
 %
-\begin{definition}
-    \textbf{Atomic proposition} we define atomic propositions like this.
+\begin{definition}[Atomic proposition] we define atomic propositions like this.
 \end{definition}
 
 \begin{enumerate}
@@ -281,8 +274,7 @@ capital letter ``$(P,Q,R)$'' showes \textbf{predicates}.
 we denote atomic propositions with ``$p_{i}$''.
 
 %
-\begin{undefined}
-    \textbf{logical operators} ($\neg ,\to ,\land ,\lor$) tool that used between
+\begin{undefined}[logical operators] ($\neg ,\to ,\land ,\lor$) tool that used between
     atoms to make more complex propositions
     (all of the opratores are binary except "$\neg$" that is unary ).
 \end{undefined}
@@ -291,10 +283,9 @@ you can easily see that formula are made up by atomic propositions.in general
 we say formula is an atomic formula or combination of them.
 
 %
-\begin{definition}
-    \textbf{Propositions} these are propositions.
-
+\begin{definition}[Propositions] these are propositions.
 \end{definition}
+
 \begin{enumerate}
     \setlength{\itemsep}{0pt} % No extra space between items
     \item atomic propositions ``$(p_{i})$''.
@@ -308,13 +299,11 @@ we denote propositions with ``$p ,q ,r ,...$''.
 
 \section{Rules of propositions.}
 
-\begin{definition}
-    \textbf{proposition schema(variable proposition)} a proposition that is unknown
+\begin{definition}[proposition schema(variable proposition)] a proposition that is unknown
     for us and it works as variable.(we show them with ``$\varphi ,\psi ,\theta ,... $'')
 \end{definition}
 
-\begin{undefined}
-    \textbf{Assumption for conditional proof(acp)} is a tool for assuming a proposition.
+\begin{undefined}[Assumption for conditional proof(acp)] is a tool for assuming a proposition.
     (any proposition can't get out but it can get in. right line must be shoter than left one.(it can't fall out).  and every hypothesis that opens must be closed.)
 \end{undefined}
 
@@ -334,8 +323,8 @@ we denote propositions with ``$p ,q ,r ,...$''.
 \end{fitchproof}
 
 
-\begin{Rule}
-    \textbf{rules of logical operations} $(\to  I, \to E ,\land I ,\land E ,\lor I ,\lor E ,\neg I ,\neg E,\bot I ,\bot E )$
+\begin{Rule}[rules of logical operations]
+    $(\to  I, \to E ,\land I ,\land E ,\lor I ,\lor E ,\neg I ,\neg E,\bot I ,\bot E )$
     this rule is scheme it means it works everywhere for every propositions.
     (thats why we use $\varphi, \psi $ instead of $p,q$)
 
@@ -359,7 +348,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
         \hline
     \end{tabular}
     \begin{example}
-        \textbf{} for  ``$p,q,r$'' we can prove these.
+         for  ``$p,q,r$'' we can prove these.
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
             \item  $p \rightarrow q, q \rightarrow r /\therefore p \rightarrow r$
@@ -423,7 +412,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
     \end{tabular}
 
     \begin{example}
-        \textbf{} for  ``$p,q,r$'' we can prove these.
+         for  ``$p,q,r$'' we can prove these.
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
             \item $p \wedge q /\therefore q \wedge p$  \text{(Commutativity of Conjunction)}
@@ -539,7 +528,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
     \end{tabular}
 
     \begin{example}
-        \textbf{} for  ``$p,q,r$'' we can prove these.
+         for  ``$p,q,r$'' we can prove these.
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
             \item $p \vee q /\therefore q \vee p$   \quad\text{(Commutativity of Disjunction)}
@@ -878,19 +867,17 @@ obj are two types.we know them and we know what exactly are we talking about
 and unknowns are mystery.all the obj we have used until now were known ones we
 call them \textbf{"constants"}.
 
-\begin{undefined}
-    \textbf{variables} A variable is a symbol
+\begin{undefined} [variables] A variable is a symbol
     (usually a letter like $x, y, or z$)
     that represents an unknown obj.
 \end{undefined}
 
 % \begin{definition}
-%     \textbf{variables sets} A variable that is a set
+%     [variables sets} A variable that is a set
 %     (usually a letter like $X, Y, or Z$)
 %     that represents an unknown set.
 % \end{definition}
-\begin{definition}
-    \textbf{Atomic formula} we define atomic formulas like this.
+\begin{definition}[Atomic formula] we define atomic formulas like this.
 
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
@@ -905,7 +892,7 @@ call them \textbf{"constants"}.
 
 %
 \begin{definition}
-    \textbf{well formed formula(WWF)} these are formulas.
+    [well formed formula(WWF)] these are formulas.
 
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
@@ -920,8 +907,7 @@ for example $(A_0 \to A_1 ,\neg A_3)$ \\ we easily call WWF ``formula'' and
 also we denote WWF with $A ,B ,C ,...$.
 
 %
-\begin{definition}
-    \textbf{open formula} formulas that variables used in one of its atomic formulas.
+\begin{definition}[open formula] formulas that variables used in one of its atomic formulas.
 \end{definition}
 
 the formulas that are not open call \textbf{``closed formulas''} or
@@ -930,8 +916,7 @@ proposition?'' (propositions in classic logic are sentences that are true or
 false?) the answer is unfortunately \textbf{No}.
 
 %
-\begin{definition}
-    \textbf{Substitution for obj} we define Substitution an obj with variable  like this.
+\begin{definition}[Substitution for obj] we define Substitution an obj with variable  like this.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item for variables if $x=y$ then $y[a/x]:=a$ and if $x \not= y$ then $y[a/x]:=y$.
@@ -940,7 +925,7 @@ false?) the answer is unfortunately \textbf{No}.
 \end{definition}
 
 \begin{definition}
-    \textbf{Substitution for formulas} we define Substitution for a formula like this.
+[Substitution for formulas] we define Substitution for a formula like this.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item for atomic formulas we define it like this. if it's a single object we do it as
@@ -960,7 +945,7 @@ simply means in a formula put an obj like $a$ instead of a variable like $x$.we
 denote it by $A[a/x]$ or $A[\frac{a}{x}]$
 
 \begin{definition}
-    \textbf{Open proposition} assume formula ``$A$'' with variables ``$x_0,x_1,..,x_n$'' in it and a set ``$U$''.
+    [Open proposition] assume formula ``$A$'' with variables ``$x_0,x_1,..,x_n$'' in it and a set ``$U$''.
     we say formula ``$A$''is a ``open proposition in $U$'' when for every obj ``$a_0,a_1,..,a_n$'' in ``$U$''
     \[A([a_0/x_0][a_1/x_1]...[a_n/x_n]) \]
     is a proposition we call it open proposition and denote it with ``$(P(x)
@@ -969,8 +954,7 @@ denote it by $A[a/x]$ or $A[\frac{a}{x}]$
 \end{definition}
 
 %
-\begin{definition}
-    \textbf{Big ``AND'' and ``OR''} assume a set like ``$ \{a_{0},a_{1},a_{2},...,a_{n}\}$''
+\begin{definition}[Big ``AND'' and ``OR''] assume a set like ``$ \{a_{0},a_{1},a_{2},...,a_{n}\}$''
     we define \textbf{big ``AND''} like this.
     \\
     \[ \bigwedge\limits_{i=0}^n P(a_{i}) : P(a_{0}) \land P(a_{1}) \land P(a_{2}) \land... \land P(a_{n})\]
@@ -982,13 +966,13 @@ denote it by $A[a/x]$ or $A[\frac{a}{x}]$
 \end{definition}
 
 \begin{definition}
-    \textbf{Universe of discourse} we specify a set like ``$ \{a_{0},a_{1},a_{2},...,a_{n}\}$''
+    [Universe of discourse] we specify a set like ``$ \{a_{0},a_{1},a_{2},...,a_{n}\}$''
     as universe of a Logic world.
 
 \end{definition}
 
 \begin{Rule}
-    \textbf{use of open propositions} assume universe of discourse is ``$ \{a_{0},a_{1},a_{2},...,a_{n}\}$''
+    [use of open propositions] assume universe of discourse is ``$ \{a_{0},a_{1},a_{2},...,a_{n}\}$''
     \\
     \begin{fitchproof}[arrayenv=tabular]
         \have [c] {1} {P(x)}
@@ -1034,19 +1018,19 @@ denote it by $A[a/x]$ or $A[\frac{a}{x}]$
 %
 
 \begin{definition}
-    \textbf{predicate schema(variable predicate)} a predicate that is unknown
+    [predicate schema(variable predicate)] a predicate that is unknown
     for us and it works as variable.(we show them with $\phi ,\psi ,\theta ,... $)
 \end{definition}
 
 \begin{definition}
-    \textbf{Universal quantification} assume universe of discourse is ``$ \{a_{0},a_{1},a_{2},...,a_{n}\}$''
+    [Universal quantification] assume universe of discourse is ``$ \{a_{0},a_{1},a_{2},...,a_{n}\}$''
     we define ``$\forall x P(x)$''
     \\
     \[ \forall x \phi(x) : \bigwedge\limits_{i=0}^n \phi[a_{i}/x] \]
 \end{definition}
 
 \begin{definition}
-    \textbf{Existential quantification} assume universe of discourse is ``$ \{a_{0},a_{1},a_{2},...,a_{n}\}$''
+    [Existential quantification] assume universe of discourse is ``$ \{a_{0},a_{1},a_{2},...,a_{n}\}$''
     we define ``$\exists x Px$''
     \\
     \[ \exists  x \phi(x) : \bigvee\limits_{i=0}^n \phi[a_{i}/x] \]
@@ -1056,7 +1040,7 @@ as you can see ``$\forall x \phi (x) $'' and ``$\exists x \phi (x) $'' are
 sentences.
 
 \begin{definition}
-    \textbf{Free variables} variables that are not bound by a quantifier.
+    [Free variables] variables that are not bound by a quantifier.
     (you can easily see that every formula with no free variables are sentences)
     (previously we sayed that every sentence is not necessary a proposition)
 \end{definition}
@@ -1217,7 +1201,7 @@ sentences.
 \end{proof}
 
 \begin{Rule}
-    \textbf{$(schema)$} $( = I , = E)$
+    [$(schema)$] $( = I , = E)$
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
@@ -1250,14 +1234,14 @@ sentences.
 \end{Rule}
 
 \begin{definition}
-    \textbf{Uniqueness}
+    [Uniqueness]
     we define ``$\exists ! x \phi(x)$''
     \\
     \[ \exists !  x \phi(x) : \exists   x \phi(x) \land \forall x_0 , x_1 ( \phi(x_0) \land \phi(x_1) \to x_0 = x_1) \]
 \end{definition}
 
 \begin{example}
-    \textbf{}for P,Q,R we can prove these.Proof of last ones Is Left As An Exercise To The Reader.\twemoji{1f600}
+    for P,Q,R we can prove these.Proof of last ones Is Left As An Exercise To The Reader.\twemoji{1f600}
 
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
@@ -1477,32 +1461,81 @@ if we are talking about ``$\forall x \in A \quad P(x)$'' it means ``$\forall x
     (x \in A \to P(x))$'' and when we are talking about ``$\exists x \in A \quad
     P(x)$'' it means ``$\exists x (x \in A \land P(x))$''.
 
-and we have a predicate ``$Type_0(x)$''.
-\[ Type_0(x) : \exists Y \quad x \in Y \]
+% and we have a predicate ``$Type_0(x)$''.
+% \[ Type_0(x) : \exists Y \quad x \in Y \]
 
 % \[ Type_1(X) : \neg \exists Y \quad X \in Y \]
 
-\section{Axioms of set theory}
-we emphasis before that set has no definition.but we can describe what set is
-with rules and axioms.
 
-\begin{axiom}
-    \textbf{Existence of universe of set theory}
-    There exists a set $V_1$ (we denote it as $V_1$.it simply means the set of all sets), known as the Von Neumann Universe, which contains every set.
-    (this axiom can't be formolized in first order logic).
-    (there must be another axiom let us use logic for set theory but we ignore that).
-    (from now on when we are talking about proposition ``$\phi$'' in ``set theory'' we mean
-    proposition ``$\phi$'' in ``$V_1$'').
+
+\section{Raw set theory}
+
+In this section we want to construct a universe of sets beginning
+with some objects that are not sets. These objects are called
+\textbf{urelements}. We then construct sets from these urelements
+and continue this process.
+
+
+
+
+
+\begin{axiom}[Existence of set of obj]
+
+    There exists a nonempty set $U$ whose elements are obj.
+
 \end{axiom}
 
 \begin{definition}
-    \textbf{Subset} a subset is a set where every element is also an element of another, larger set called the superset
+    [The first universe]
+
+    We define
+    \[
+        V_0=U.
+    \]
+    Thus, $V_0$ contains the urelements from which we will
+    construct sets.
+\end{definition}
+
+
+
+\begin{axiom}[Extending set of obj to set theory universe ]
+    [Bounded comprehension] $(\mathrm{schema})$
+    assume you have set of obj $U$ you can extend it to
+    a set theory universe. we call it V.
+    For every formula $\phi(x,x_0,\ldots,x_n)$ and every
+    existing set of obj $U$, there exists a set $X$ such that
+    \[
+        \forall x_0 , ... , x_n \in V \quad \exists X \in V \quad \forall x \in U \quad
+        \bigl(x\in X\leftrightarrow
+        \phi(x,x_0,\ldots,x_n)\bigr).
+    \]
+\end{axiom}
+
+By this axiom, there is a universe we call $V_1$. we can form sets whose elements are selected
+from an already existing set($V_0$).
+
+\begin{definition}
+    [The next universe(Level)]
+
+    We define $V_2$ the extension universe of $V_1$  and so on.
+
+\end{definition}
+
+
+
+
+
+
+
+
+\begin{definition}
+    [Subset] a subset is a set where every element is also an element of another, larger set called the superset
     \[ A \subseteq B: \forall x(x \in A \rightarrow x \in B) \]
     or i.e.
 \end{definition}
 
 \begin{theorem}
-    \textbf{$(schema)$} $(\subseteq I , \subseteq E)$
+    [$(schema)$] $(\subseteq I , \subseteq E)$
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
@@ -1552,7 +1585,7 @@ with rules and axioms.
 \end{theorem}
 
 \begin{example}
-    \textbf{} $A \subseteq B , B \subseteq C/\therefore A \subseteq C$
+     $A \subseteq B , B \subseteq C/\therefore A \subseteq C$
     \begin{fitchproof}[arrayenv=tabular]
         \have{1} {A \subseteq B }                 \by{ass}{}
         \have {2} {B \subseteq C}                  \by{ass}{}
@@ -1565,11 +1598,14 @@ with rules and axioms.
     \end{fitchproof}
 \end{example}
 
+
 \begin{axiom}
-    \textbf{Extensionality}Two sets are equal (are the same set) if they have the same elements.
+    [Extensionality] Two sets are equal (are the same set) if they have the same elements.
     \\
     \[  \forall X,Y (\forall x ( x \in X \leftrightarrow x \in Y ) \rightarrow X = Y )  \]
 \end{axiom}
+
+
 
 so we can rewrite axiom of Extensionality like this.
 
@@ -1636,34 +1672,12 @@ so we can rewrite axiom of Extensionality like this.
     \have  {2} {A=B}                                                                        \by{$E\rightarrow,m+3,m+4$}{}
 \end{fitchproof}
 
-\begin{axiom}
-    \textbf{Weak comprehension} $(schema)$ this axioms says for every open proposition
-    like ``$\phi (x,x_0 , x_1, ... , x_n)$'' there is a set like ``$X$'' such that every ``$x$'' with ``$Type_0$'' is a
-    member of that set if and only if it holds
-    ``$\phi (x,x_0 , x_1, ... , x_n)$''.
-    \\
-    \[ \forall x_0 , x_1, ... , x_n \exists X \forall x  (Type_0(x) \land \phi (x,x_0 , x_1, ... , x_n) \leftrightarrow x \in X) \]
-    \\
-    by axiom of extentionality we can show that $X$ is unique.
-    so we denote it as ``$\{ x \mid  \phi (x,x_0 , x_1, ... , x_n)\}$''.
-    sometimes instead of ``$\{ x \mid x \in A \land \phi (x,x_0 , x_1, ... , x_n)\}$'' we write
-    ``$\{ x \in A \mid  \phi (x,x_0 , x_1, ... , x_n)\}$''.
-\end{axiom}
 
-% this axiom show that why Russell's paradox doesn't happened here because if ou
-% assume ``$R=\{x|x \notin x\}$'' is a set. you can't prove or disprove ``$R \in
-%     R$'' so ``$x \notin x$'' is not a proposition in ``set theorhy''. (we don't
-% need to prove that now.we will prove it in``\textbf{'MetaLogic'}''). (it's not
-% obvios in ``$x \notin x$'' witch set holds and witch not). (and likely ``$\{ X
-%     \mid a \in X \}$'' is not a set either).
 
-% \section{definitions of set theory}
-% Let's talk about some definitions in set theoty.These definitions will come in
-% handy later.
 
-\begin{lemma}[Russell's paradox] assume the comprehension axiom $( \forall x_0 , x_1, ... , x_n \exists X \forall x  ( \phi (x,x_0 , x_1, ... , x_n) \leftrightarrow x \in X) )$
+\begin{lemma}[Russell's paradox] assume the comprehension axiom $( \forall x_0 , x_1, ... , x_n \exists X \forall x  ( x \in X \leftrightarrow \phi (x,x_0 , x_1, ... , x_n)  ) )$
     and prove inconsistency i.e.
-    \[  \forall x_0 , x_1, ... , x_n \exists X \forall x  ( \phi (x,x_0 , x_1, ... , x_n) \leftrightarrow x \in X) /\therefore \bot\]
+    \[  \forall x_0 , x_1, ... , x_n \quad \exists X \quad \forall x \quad ( \phi (x,x_0 , x_1, ... , x_n) \leftrightarrow x \in X) /\therefore \bot\]
 
     \begin{fitchproof}[arrayenv=tabular]
         \have{1} {\exists X \forall x  ( x \notin  x  \leftrightarrow x \in X)}                                \by{comprehension axiom}{}
@@ -1686,31 +1700,81 @@ so we can rewrite axiom of Extensionality like this.
 
 
 
-\begin{lemma} $( \forall X \forall x ( x \in X \land Type_0(x) \leftrightarrow x \in X ) )$
 
-\end{lemma}
+
+
+\section{Level of Morse–Kelley }
+we emphasis before that set has no definition.but we can describe what set is
+with rules and axioms.
+
+\begin{axiom}
+    [Existence of universe of set theory]
+    There exists a set $V_1$ (we denote it as $V_1$.it simply means the set of all obj), known as the Von Neumann Universe, which contains every obj.
+    (this axiom can't be formolized in first order logic).
+    (there must be another axiom let us use logic for set theory but we ignore that).
+    (from now on when we are talking about proposition ``$\phi$'' in ``set theory'' we mean
+    proposition ``$\phi$'' in ``$V_1$'').
+\end{axiom}
+
+
+% \begin{axiom}
+%     [Extensionality}Two sets are equal (are the same set) if they have the same elements.
+%     \\
+%     \[  \forall X,Y (\forall x ( x \in X \leftrightarrow x \in Y ) \rightarrow X = Y )  \]
+% \end{axiom}
+
+\begin{axiom}
+    [Weak comprehension] $(schema)$ this axioms says for every open proposition
+    like ``$\phi (x,x_0 , x_1, ... , x_n)$'' there is a set like ``$X$'' such that every ``$x \in V_0$'' is a
+    member of that set if and only if it holds
+    ``$\phi (x,x_0 , x_1, ... , x_n)$''.
+    \\
+    \[ \forall x_0 , x_1, ... , x_n \quad \exists X \quad \forall x  \in V_0 \quad ( x \in X \leftrightarrow \phi (x,x_0 , x_1, ... , x_n) ) \]
+    \\
+    by axiom of extentionality we can show that $X$ is unique.
+    so we denote it as ``$\{ x \mid  \phi (x,x_0 , x_1, ... , x_n)\}$''.
+    sometimes instead of ``$\{ x \mid x \in A \land \phi (x,x_0 , x_1, ... , x_n)\}$'' we write
+    ``$\{ x \in A \mid  \phi (x,x_0 , x_1, ... , x_n)\}$''.
+\end{axiom}
+
+% this axiom show that why Russell's paradox doesn't happened here because if ou
+% assume ``$R=\{x|x \notin x\}$'' is a set. you can't prove or disprove ``$R \in
+%     R$'' so ``$x \notin x$'' is not a proposition in ``set theorhy''. (we don't
+% need to prove that now.we will prove it in``['MetaLogic'}''). (it's not
+% obvios in ``$x \notin x$'' witch set holds and witch not). (and likely ``$\{ X
+%     \mid a \in X \}$'' is not a set either).
+
+% \section{definitions of set theory}
+% Let's talk about some definitions in set theoty.These definitions will come in
+% handy later.
+
+
+
+% \begin{lemma} $( \forall X \forall x ( x \in X \land Type_0(x) \leftrightarrow x \in X ) )$
+
+% \end{lemma}
 
 Let's talk about some axioms in set theoty.These daxioms will come in handy
 later.
 
 \begin{axiom}
-    \textbf{Existence} there is a ``Set'' with no member i.e..
-    \[ \exists x \quad Type_0(x) \]
+    [Existence] there is a ``Set'' with Level 0.
+    \[ \exists x  \quad x \in V_0 \]
 \end{axiom}
 
 \begin{definition}
-    \textbf{Empty set} also known as the null set,
+    [Empty set] also known as the null set,
     is the unique mathematical set containing no elements at all.
     (uniqueness can be proven.)
     \[ \emptyset:=\{x \mid \bot\} \]
     therefore.
-    \[ \forall x(x \in \emptyset \leftrightarrow  \bot \land Type_0(x) ) \]
+    \[ \forall x \in V_0 \quad (x \in \emptyset \leftrightarrow  \bot  ) \]
     therefore.
-    \[ \forall x(x \notin \emptyset ) \]
+    \[ \forall x \in V_0 \quad  (x \notin \emptyset ) \]
 \end{definition}
 
 \begin{example}
-    \textbf{} $/\therefore \forall X(\emptyset \subseteq X)$
+     $/\therefore \forall X(\emptyset \subseteq X)$
     \begin{fitchproof}[arrayenv=tabular]
         \open
         \have{1} {x \in \emptyset}                                \by{acp}{}
@@ -1725,7 +1789,8 @@ later.
 \end{example}
 
 \begin{lemma}
-    \textbf{} $A = \emptyset \therefore / \therefore \forall y( y \notin A)$
+    \label{emptyset}
+     $A = \emptyset \therefore / \therefore \forall y( y \notin A)$
     \begin{fitchproof}[arrayenv=tabular]
         \have  {1} {\forall y (y \notin A )}                                \by{ass}{}
         \open
@@ -1751,8 +1816,10 @@ later.
     \end{fitchproof}
 \end{lemma}
 
+
+
 \begin{theorem}
-    \textbf{$(schema)$} $( \emptyset\not= I ,  \emptyset \not= E ,\emptyset= I , \emptyset= E)$
+    [$(schema)$] $( \emptyset\not= I ,  \emptyset \not= E ,\emptyset= I , \emptyset= E)$
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
@@ -1799,7 +1866,7 @@ later.
             \have  {2} {a \in A}                         \by{ass}{}
             \have  {2} {\exists x(x \in A)}             \by{$\exists I,1$ }{}
             \have  {2} {\neg (\forall x(x \notin A))}   \by{De Morgan $2$ }{}
-            \have  {2} { A \not= \emptyset}             \by{lemma $4.4.1 , 3$}{}
+            \have  {2} { A \not= \emptyset}             \by{lemma \ref{emptyset} $ 3$}{}
         \end{fitchproof}
 
         \rule[0pt]{0pt}{0pt} &
@@ -1812,7 +1879,7 @@ later.
             \close
             \have {1} {x \notin A  }             \by{$\neg I $ }{}
             \have  {2} {\forall x(x \notin A)}   \by{$\forall I ,n+1$}{}
-            \have  {2} {A = \emptyset }             \by{lemma $4.4.1 , 1$}{}
+            \have  {2} {A = \emptyset }             \by{lemma \ref{emptyset} $1$}{}
         \end{fitchproof}
 
         \rule[0pt]{0pt}{0pt} &
@@ -1829,14 +1896,14 @@ later.
 
 
 \begin{definition}
-    \textbf{Pairing set}
+    [Pairing set]
     \[ \{a_{0}, a_{1}, a_{2}, ... ,a_{n} \}:=\{x \mid x=a_{0} \lor x=a_{1} \lor x=a_{2} \lor ... \lor x=a_{n} \} \]
     therefore.
-    \[\forall x( x \in \{a_{0}, a_{1}, a_{2}, ... ,a_{n} \} \leftrightarrow  ( Type_0(x) \land x=a_{0} \lor x=a_{1} \lor x=a_{2} \lor ... \lor x=a_{n} )) \]
+    \[\forall x \in V_0 \quad ( x \in \{a_{0}, a_{1}, a_{2}, ... ,a_{n} \} \leftrightarrow   x=a_{0} \lor x=a_{1} \lor x=a_{2} \lor ... \lor x=a_{n} ) \]
 \end{definition}
 
 \begin{theorem}
-    \textbf{$(schema)$} $( \{\} I ,  \{\} E)$
+    [$(schema)$] $( \{\} I ,  \{\} E)$
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
@@ -1871,24 +1938,23 @@ later.
 \end{theorem}
 
 \begin{axiom}
-    \textbf{Pairing}  $(schema)$
-    \[ \forall x_0,...,x_n \quad Type_0(x_0) \land ... \land Type(X_n) \to Type_0(\{x_{0}, x_{1}, x_{2}, ... ,x_{n} \}) \]
+    [Pairing]  $(schema)$
+    \[ \forall x_0,...,x_n \quad x_0 \in V_0 \land ... \land X_n \in V_0 \to \{x_{0}, x_{1}, x_{2}, ... ,x_{n} \} \in V_0 \]
 \end{axiom}
 
-\begin{definition}
-    \textbf{Union and Intersection} \\
+\begin{definition}[Union and Intersection] 
     Intersection:
     \[ A \cap B:=\{x \mid x \in A \wedge x \in B \} \]
     therefore.
-    \[\forall x( x \in A \cap B  \leftrightarrow  ( x \in A \wedge x \in B )) \]
+    \[\forall x \in V_0 \quad ( x \in A \cap B  \leftrightarrow   x \in A \wedge x \in B ) \]
     Union:
     \[ A \cup B:=\{x \mid x \in A \lor x \in B \} \]
     therefore.0
-    \[\forall x( x \in A \cup B  \leftrightarrow  ( (x \in A \lor x \in B ))) \]
+    \[\forall x \in V_0 \quad ( x \in A \cup B  \leftrightarrow   x \in A \lor x \in B ) \]
 \end{definition}
 
 \begin{theorem}
-    \textbf{$(schema)$} $(\cap I , \cap E , \cup I , \cup E)$
+    [$(schema)$] $(\cap I , \cap E , \cup I , \cup E)$
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
@@ -1956,24 +2022,24 @@ later.
 sometimes all members of a set is also set we call it ``set of sets''.
 
 \begin{definition}
-    \textbf{Big Union and Intersection} if ``$A$'' is ``set of sets'' and ``$A \not= \emptyset$'' we define
+    [Big Union and Intersection] if ``$A$'' is ``set of sets'' and ``$A \not= \emptyset$'' we define
     \\
     Big Intersection:
     \[  \bigcap A:=\{x \mid \forall X (X \in A \rightarrow x \in X) \} \]
     i.e.
     \[  \bigcap A:=\{x \mid \forall X \in A \quad x \in X \} \]
     therefore.
-    \[\forall x \Big( x \in \bigcap A  \leftrightarrow (Type_0(x) \land   \forall X (X \in A \rightarrow x \in X))\Big) \]
+    \[\forall x \in V_0 \quad  \Big( x \in \bigcap A  \leftrightarrow   \forall X (X \in A \rightarrow x \in X)\Big) \]
     Big Union:
     \[  \bigcup A:=\{x \mid \exists X (X \in A \wedge x \in X) \} \]
     i.e.
     \[  \bigcup A:=\{x \mid \exists X \in A \quad x \in X \} \]
     therefore.
-    \[\forall x \Big( x \in \bigcup A \leftrightarrow  ( Type_0(x) \land  \exists X (X \in A \wedge x \in X))\Big) \]
+    \[\forall x \in V_0 \quad  \Big( x \in \bigcup A \leftrightarrow   \exists X (X \in A \wedge x \in X)\Big) \]
 \end{definition}
 
 \begin{theorem}
-    \textbf{$(schema)$} $(\bigcap I , \bigcap E , \bigcup I , \bigcup E)$
+    [$(schema)$] $(\bigcap I , \bigcap E , \bigcup I , \bigcup E)$
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
@@ -2021,14 +2087,14 @@ sometimes all members of a set is also set we call it ``set of sets''.
 \end{theorem}
 
 \begin{definition}
-    \textbf{Complement}
+    [Complement]
     \[   A^c:=\{x \mid x \notin A  \} \]
     therefore.
-    \[\forall x( x \in A^c \leftrightarrow Type_0(x) \land  x \notin A ) \]
+    \[\forall x \in V_0 \quad ( x \in A^c \leftrightarrow   x \notin A ) \]
 \end{definition}
 
 \begin{theorem}
-    \textbf{$(schema)$} $(()^c I, ()^c E)$
+    [$(schema)$] $(()^c I, ()^c E)$
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
@@ -2060,23 +2126,21 @@ sometimes all members of a set is also set we call it ``set of sets''.
 \end{theorem}
 
 \begin{observation}
-    \textbf{}we can show Universal set with...
-    \[   V=\{x \mid \top \} \]
+    we can show Universal set with...
+    \[   V_0=\{x \mid \top \} \]
     therefore.
-    \[\forall x( x \in V \leftrightarrow Type_0(x) \land  \top ) \]
-    therefore.
-    \[\forall x( x \in V \leftrightarrow Type_0(x)   ) \]
+    \[\forall x \in V_0 \quad ( x \in V_0 \leftrightarrow  \top ) \]
 \end{observation}
 
 \begin{definition}
-    \textbf{Subtraction}
+    [Subtraction]
     \[ A - B:=\{x \mid x \in A \wedge x \notin B \} \]
     therefore.
-    \[\forall x \Big( x \in A - B  \leftrightarrow  (   x \in A \wedge x \notin B ) \Big) \]
+    \[\forall x \in V_0 \quad  \Big( x \in A - B  \leftrightarrow  (   x \in A \wedge x \notin B ) \Big) \]
 \end{definition}
 
 \begin{theorem}
-    \textbf{$(schema)$} $(- I , - E )$
+    [$(schema)$] $(- I , - E )$
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
@@ -2113,44 +2177,44 @@ sometimes all members of a set is also set we call it ``set of sets''.
 \end{theorem}
 
 \begin{lemma}
-    \textbf{} $/ \therefore  A - B = A \cap B^c$
+     $/ \therefore  A - B = A \cap B^c$
     \\
     \\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
 \begin{axiom}
-    \textbf{Separation}
-    \[ \forall X,Y \quad  Type_0(X) \to Type_0(X \cap Y) \]
+    [Separation]
+    \[ \forall X,Y \quad  X \in V_0 \to X \cap Y  \in V_0 \]
     therefore.
-    \[ Type_0(A) \to  Type_0(A \cap B) \]
+    \[ A \in V_0  \to  A \cap B \in V_0  \]
     therefore.
-    \[  Type_0(\bigcap A) \]
+    \[  A \in V_0  \to  \bigcap A \in V_0  \]
     therefore.
-    \[ Type_0(A) \to  Type_0(A - B) \]
+    \[ A \in V_0  \to  A - B \in V_0  \]
 \end{axiom}
 
 
 \begin{lemma}
-    \[  Type_0(\emptyset) \]
+    \[  \emptyset \in V_0  \]
 \end{lemma}
 
 \begin{axiom}
-    \textbf{union}
-    \[ \forall X \quad  Type_0(X) \to Type_0(\bigcup X) \]
+    [union]
+    \[ \forall X \quad  X \in V_0 \to \bigcup X \in V_0 \]
     therefore.
-    \[ Type_0(A) \land Type_0(B)  \to  Type_0(A \cup B) \]
+    \[ A \in V_0 \land  B \in V_0  \to  A \cup B \in V_0 \]
 \end{axiom}
 
 \begin{definition}
-    \textbf{Powerset}
+    [Powerset]
     \[ \mathcal{P}(A):=\{X \mid X \subseteq A \} \]
     therefore.
-    \[\forall X \Big( X \in \mathcal{P}(A) \leftrightarrow  ( Type_0(X) \land  X \subseteq A )\Big) \]
+    \[\forall X \in V_0 \quad  \Big( X \in \mathcal{P}(A) \leftrightarrow    X \subseteq A \Big) \]
 \end{definition}
 
 \begin{theorem}
-    \textbf{$(schema)$} $(\mathcal{P} I, \mathcal{P} E )$
+    [$(schema)$] $(\mathcal{P} I, \mathcal{P} E )$
 
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
@@ -2182,15 +2246,15 @@ sometimes all members of a set is also set we call it ``set of sets''.
 \end{lemma}
 
 \begin{axiom}
-    \textbf{Powerset}
-    \[ \forall X \quad  Type_0(X) \to Type_0(P(X)) \]
+    [Powerset]
+    \[ \forall X \quad  X \in V_0 \to P(X) \in V_0 \]
 \end{axiom}
 
 
 
 
 \begin{exercise}
-    \textbf{}for A,B,C prove.
+    for A,B,C prove.
 
     \begin{enumerate}
 
@@ -2249,210 +2313,83 @@ details like reasons of lines and all lines we left it to reader to understand
 what happened there.\twemoji{1f600}
 
 
-\section{Another set theory}
-
-In this section we want to construct a universe of sets beginning
-with some objects that are not sets. These objects are called
-\textbf{urelements}. We then construct sets from these urelements
-and continue this process through the ordinals.
 
 
-\begin{axiom}
-    \textbf{Extensionality}Two sets are equal (are the same set) if they have the same elements.
-    \\
-    \[  \forall X,Y (\forall x ( x \in X \leftrightarrow x \in Y ) \rightarrow X = Y )  \]
-\end{axiom}
+\section{Next level and height of the Level}
 
-\begin{axiom}
-    \textbf{Existence of universe of set theory}
-    There exists a set $V_1$ (we denote it as $V_1$.it simply means the set of all sets), known as the Von Neumann Universe, which contains every set.
-    (this axiom can't be formolized in first order logic).
-    (there must be another axiom let us use logic for set theory but we ignore that).
-    (from now on when we are talking about proposition ``$\phi$'' in ``set theory'' we mean
-    proposition ``$\phi$'' in ``$V_1$'').
-\end{axiom}
-
-
-
-\begin{axiom}[Existence of set of obj]
-
-    There exists a nonempty set $U$ whose elements are obj.
-
-\end{axiom}
-
-\begin{definition}
-    \textbf{The first universe}
-
-    We define
-    \[
-        V_0=U.
-    \]
-    Thus, $V_0$ contains the urelements from which we will
-    construct sets.
-\end{definition}
-
-
-
-\begin{axiom}[Extending set of obj to set theory universe ]
-    \textbf{Bounded comprehension} $(\mathrm{schema})$
-    assume you have set of obj $U$ you can extend it to
-    a set theory universe. we call it V.
-    For every formula $\phi(x,x_0,\ldots,x_n)$ and every
-    existing set of obj $U$, there exists a set $X$ such that
-    \[
-        \forall x_0 , ... , x_n \in V \quad \exists X \in V \quad \forall x \in U \quad
-        \bigl(x\in X\leftrightarrow
-        \phi(x,x_0,\ldots,x_n)\bigr).
-    \]
-\end{axiom}
-
-By this axiom, there is a universe we call $V_1$. we can form sets whose elements are selected
-from an already existing set($V_0$).
-
-\begin{definition}
-    \textbf{The next universe(Level)}
-
-    We define $V_2$ the extension universe of $V_1$  and so on.
-
-\end{definition}
-
-
-\section{combination of two theories and height of the Level}
+\label{combinational-set-theory}
 
 We now combine the two theories.  We begin with a set \(V_0\) whose
-elements satisfies \(Type_0(x)\).  We then extend \(V_0\) to \(V_1\)
+elements are in Level 0.  We then extend \(V_0\) to \(V_1\)
 by adding all sets that can be formed from \(V_0\) using the axioms of
 comprehension.  We then extend \(V_1\) to
 \(V_2\) in the same way, and so on.
 
-\begin{definition}
-    \textbf{Type}
+% \begin{definition}
+%     [Type}
 
-    \[
-        Type_0(x) : x \in V_0
-    \]
-    \[
-        Type_1(x) : x \in V_1
-    \]
+%     \[
+%         Type_0(x) : x \in V_0
+%     \]
+%     \[
+%         Type_1(x) : x \in V_1
+%     \]
 
-\end{definition}
+% \end{definition}
+
+
+\begin{axiom}[Weak comprehension (Level 1)] $(schema)$ this axioms says for every open proposition
+    like ``$\phi (x,x_0 , x_1, ... , x_n)$'' there is a set like ``$X$'' such that every ``$x \in V_1$'' is a
+    member of that set if and only if it holds
+    ``$\phi (x,x_0 , x_1, ... , x_n)$''.
+    \\
+    \[ \forall x_0 , x_1, ... , x_n  \in V_0 \quad \exists X  \in V_0 \quad \forall x  \in V_1 \quad ( x \in X \leftrightarrow \phi (x,x_0 , x_1, ... , x_n) ) \]
+    \\
+    by axiom of extentionality we can show that $X$ is unique.
+    so we denote it as ``$\{ x \mid_1  \phi (x,x_0 , x_1, ... , x_n)\}$''.
+\end{axiom}
+
+
+\begin{axiom}[Pairing]  $(schema)$
+    \[ \forall x_0,...,x_n \quad x_0 \in V_1 \land ... \land X_n \in V_1 \to \{x_{0}, x_{1}, x_{2}, ... ,x_{n} \} \in V_1 \]
+\end{axiom}
 
 \begin{axiom}[Union]
-    For every \(X \in V_0\), the union \(\bigcup X\) is a set, and we add
+    For every \(X \in V_1\), the union \(\bigcup X\) is a set, and we add
     it to \(V_1\):
     \[
-        \forall X \in V_1 \quad Type_1\Bigl(\bigcup X\Bigr).
+        \forall X \in V_1 \quad \bigcup X   \in V_1 .
     \]
 \end{axiom}
 
 \begin{axiom}[Powerset]
-    For every \(X \in V_0\), the powerset \(\mathcal{P}(X)\) is a set,
+    For every \(X \in V_1\), the powerset \(\mathcal{P}(X)\) is a set,
     and we add it to \(V_1\):
     \[
-        \forall X \in V_1 \quad Type_1\bigl(\mathcal{P}(X)\bigr).
+        \forall X \in V_1 \quad  \mathcal{P}(X) \in V_1 .
     \]
 \end{axiom}
 
-\begin{axiom}[Pairing and separation]
-    For every \(a,b \in V_1\), the pair \(\{a,b\}\) is a set in \(V_1\).
-    More generally, for every formula \(\phi(x,x_0,\ldots,x_n)\) and every
-    \(x_0,\ldots,x_n \in V_1\), the set
-    \[
-        \{x \in V_1 \mid \phi(x,x_0,\ldots,x_n)\}
-    \]
-    is a set in \(V_1\).
+
+\begin{axiom}[Separation]
+    \[ \forall X,Y \quad  X \in V_1 \to X \cap Y  \in V_1 \]
+    therefore.
+    \[ A \in V_1  \to  A \cap B \in V_1  \]
+    therefore.
+    \[  A \in V_1  \to  \bigcap A \in V_1  \]
+    therefore.
+    \[ A \in V_1  \to  A - B \in V_1  \]
 \end{axiom}
 
-% \begin{definition}
-%     \textbf{The next level}
-%     We define \(V_1\) to be the smallest set containing \(V_0\) and closed
-%     under the operations of union, powerset, pairing, and comprehension
-%     over \(V_0\).  That is,
-%     \[
-%         V_1 := V_0 \cup
-%         \Bigl\{\bigcup X \mid X \in V_0\Bigr\} \cup
-%         \Bigl\{\mathcal{P}(X) \mid X \in V_0\Bigr\} \cup
-%         \Bigl\{\{a,b\} \mid a,b \in V_0\Bigr\} \cup \cdots
-%     \]
-%     We then define \(V_2\) from \(V_1\) in exactly the same way, and in
-%     general \(V_{n+1}\) from \(V_n\).
-% \end{definition}
+\begin{Attention}[height of the Level 1]
+    In this case we say the height of the Level 1  is $Ord_1$.
+    and for more experts if $(V , \in ) \models  ZFC + I_0$
+    ($V$ is the universe of all sets.)
+    ($I_0$ is the condition says there is exactly one \textbf{Inaccessible  cardinal}.)    
+    and $Ord_0$ has no inaccessible cardinal then $ ( V_{Ord_1} , \in ) \cong ( V , \in )  $ 
+\end{Attention}
 
-% \begin{definition}
-%     \textbf{Height of the Level}
-%     The \emph{height} of \(V_1\) is the least ordinal \(\kappa\) such that
-%     \[
-%         V_1 = V_\kappa,
-%     \]
-%     where the cumulative hierarchy \(V_\alpha\) is defined by
-%     \[
-%         V_0 = V_0, \qquad
-%         V_{\alpha+1} = V_\alpha \cup \mathcal{P}(V_\alpha), \qquad
-%         V_\lambda = \bigcup_{\beta<\lambda} V_\beta
-%         \quad (\lambda \text{ a limit ordinal}).
-%     \]
-%     We denote this height by \(\kappa_1\).  Thus \(V_1\) is itself a set,
-%     and its height \(\kappa_1\) is an ordinal.
-% \end{definition}
 
-% \begin{observation}
-%     With this definition, \(V_1\) is a set of height \(\kappa_1\).  The
-%     universe of the first theory is recovered by taking the union of all
-%     levels \(V_n\), which is \(V_{\kappa}\) for
-%     \(\kappa = \sup_n \kappa_n\).
-% \end{observation}
-
-% \begin{example}
-%     If \(V_0\) contains only the empty set, then \(V_1\) is the set of
-%     hereditarily finite sets, and its height is \(\omega\).
-% \end{example}
-
-% \begin{theorem}
-%     \textbf{$(schema)$} For every \(n \in \omega\),
-%     \[
-%         V_n \subseteq V_{n+1} \subseteq V_1.
-%     \]
-%     \\
-%     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-% \end{theorem}
-
-% \begin{definition}
-%     \textbf{Successor stages}
-
-%     If $V_\alpha$ has been defined, we define
-%     \[
-%         V_{\alpha+1}=U\cup\mathcal P(V_\alpha).
-%     \]
-%     Hence, at each successor stage, we add all sets whose
-%     elements belong to the preceding stage.
-% \end{definition}
-
-% \begin{definition}
-%     \textbf{Limit stages}
-
-%     If $\lambda$ is a nonzero limit ordinal, we define
-%     \[
-%         V_\lambda=\bigcup_{\alpha<\lambda}V_\alpha.
-%     \]
-%     Thus, at a limit stage, we take the union of all preceding
-%     stages.
-% \end{definition}
-
-% \subsection{The cumulative hierarchy}
-
-% We continue the construction for every ordinal $\alpha$.
-% The resulting hierarchy is denoted by
-% \[
-%     (V_\alpha)_{\alpha\in\mathrm{Ord}}.
-% \]
-
-% We write
-% \[
-%     V=\bigcup_{\alpha\in\mathrm{Ord}}V_\alpha.
-% \]
-
-% Here $V$ denotes the class of all objects appearing at some
-% stage of the hierarchy.
 
 
 
@@ -2460,27 +2397,23 @@ comprehension.  We then extend \(V_1\) to
 
 \section{Ordered pair and Cartesian product}
 
-\begin{definition}
-    \textbf{Ordered pair}
+\begin{definition}[Ordered pair]
     \[ (x,y) := \{ \{x\},\{x,y\} \}. \]
 \end{definition}
 
-so $\forall x,y \quad Type_0(x) \land Type_0(y) \to Type_0((x,y))$
+so $\forall x,y \quad x \in V_0  \land y  \in V_0  \to (x,y)  \in V_0 $
 
-\begin{definition}
-    \textbf{Tuples}(n is a arbitrary number.)(this is a temporary definition, we will give a better one in the next chapter.)
+\begin{definition}[Tuples](n is a arbitrary number.)(this is a temporary definition, we will give a better one in the next chapter.)
     \[ (x_1,x_2,...,x_n) := ((x_1,x_2,...,x_{n-1}),x_n) \]
 \end{definition}
 
-\begin{lemma}
-    \textbf{} $/ \therefore \forall x_0,x_1 \quad  (x_0,y_0) = (x_1,y_1) \leftrightarrow ((x_0=x_1) \wedge (y_0=y_1))$
+\begin{lemma} $/ \therefore \forall x_0,x_1 \quad  (x_0,y_0) = (x_1,y_1) \leftrightarrow ((x_0=x_1) \wedge (y_0=y_1))$
     \\
     \\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-\begin{definition}
-    \textbf{Cartesian product}
+\begin{definition}[Cartesian product]
     \[ A \times B := \{ u \mid \exists x,y \Big((x,y)=u \land x \in A \land y\in B \Big)\}. \]
     or i.e.
     \[ A \times B := \{ (x,y) \mid x \in A \land y\in B \}. \]
@@ -2550,7 +2483,7 @@ so $\forall x,y \quad Type_0(x) \land Type_0(y) \to Type_0((x,y))$
 
 \end{example}
 
-so $ \forall X,Y \quad Type_0(X) \land Type_0(Y) \to Type_0( X \times Y )$
+so $ \forall X,Y \quad X \in V_0  \land Y   \in V_0 \to  X \times Y   \in V_0$
 
 \begin{theorem}
     \textbf{$(schema)$} $(\times I, \times E )$
@@ -3553,6 +3486,7 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
 \end{theorem}
 
 \begin{lemma}
+    \label{Equivalence class}
     For every ``$a,b \in A$''
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
@@ -3670,8 +3604,8 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
 \begin{fitchproof}[arrayenv=tabular]
     \open
     \have  {2} { [x]_{\sim} \not= [y]_{\sim}  }     \by{$acp$}{}
-    \have  {2} { x \nsim  y  }                       \by{$Lemma $}{}
-    \have  {2} { [x]_{\sim} \cap [y]_{\sim}  = \emptyset }  \by{$Lemma $}{}
+    \have  {2} { x \nsim  y  }                       \by{Lemma \ref{Equivalence class} }{}
+    \have  {2} { [x]_{\sim} \cap [y]_{\sim}  = \emptyset }  \by{Lemma \ref{Equivalence class} }{}
     \close
     \have  {2} { \forall  [x]_{\sim} , [y]_{\sim} \in A / \sim \quad  [x]_{\sim} \not= [y]_{\sim}  \to   [x]_{\sim} \cap [y]_{\sim}  = \emptyset }
 \end{fitchproof}
@@ -4020,6 +3954,7 @@ now we will show you relation between ``(partial) Order relation'' and
 
 
 \begin{lemma}
+    \label{uniqueness of min/max}
     assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
     and $ B,C \subseteq A $ prove
     \begin{enumerate}
@@ -4093,7 +4028,7 @@ now we will show you relation between ``(partial) Order relation'' and
         \have{8} { (B, b_2) \in min_\mathfrak{A}} \by{acp}{}
         \have{9} {(\forall x \in B \quad b_1 \preceq x) } \by{def $min_\mathfrak{A}$ 1}{}
         \have{9} {(\forall x \in B \quad b_2 \preceq x)}     \by{def $min_\mathfrak{A}$ 2}{}
-        \have{10} {b_1 = b_2} \by{Lemma 5.7.1 (uniqueness)}{}
+        \have{10} {b_1 = b_2} \by{Lemma \ref{uniqueness of min/max} }{}
         \close
         \have{11}  { Func( min_{\mathfrak{A}}) } \by{$Func I$}{}
     \end{fitchproof}
@@ -4104,7 +4039,7 @@ now we will show you relation between ``(partial) Order relation'' and
         \have{8} { (C, c_2) \in max_{\mathfrak{A}}} \by{acp}{}
         \have{9} {(\forall x \in C \quad x \preceq c_1) } \by{def $max_{\mathfrak{A}}$ 1}{}
         \have{9} { (\forall x \in C \quad x \preceq c_2)} \by{def $max_{\mathfrak{A}}$ 2}{}
-        \have{10} {c_1 = c_2} \by{Lemma 5.7.1 (uniqueness)}{}
+        \have{10} {c_1 = c_2} \by{Lemma \ref{uniqueness of min/max} }{}
         \close
         \have{11}  { Func( max_{\mathfrak{A}}) } \by{$Func I$}{}
         \close
@@ -4861,7 +4796,7 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
     \[s(x) := x\cup \{x\}\]
 \end{definition}
 
-you can see $\forall x \quad Type_0(x) \to Type_0(s(x))$
+you can see $\forall x \quad x   \in V_0 \to s(x)   \in V_0$
 
 \begin{definition}
     we define a set  \textbf{``Inductive''} like this.
@@ -4878,7 +4813,7 @@ notice that ``$Ind(X)$'' might be empty.
     \textbf{The Axiom of Infinity} we define a set ``Inductive'' like this.
 
     \[
-        \exists X \quad Type_0(X) \land Ind(X)
+        \exists X \quad X \in V_0 \land Ind(X)
     \]
 
 \end{axiom}
@@ -7648,11 +7583,11 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-\begin{theorem} \textbf{Cantor theorem} $/ \therefore \forall X \quad Type_0(X) \to X \prec  2^X $ \\
+\begin{theorem} \textbf{Cantor theorem} $/ \therefore \forall X \quad X \in V_0 \to X \prec  2^X $ \\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-\begin{theorem} $/ \therefore \forall X \quad Type_0(X) \to 2^X \cong \mathcal{P}(X)$ \\
+\begin{theorem} $/ \therefore \forall X \quad X \in V_0 \to 2^X \cong \mathcal{P}(X)$ \\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
@@ -8673,7 +8608,8 @@ in general``$\forall \alpha , \beta \in Ord \quad \alpha - \beta :=
 \begin{Attention} because $[(x , y)]_\sim = \{ (x' , y') \in Ord \times Ord \mid (x , y) \sim (x' , y') \}$,
     we know $Type_1([(x , y)]_\sim)$ and $[(x , y)]_\sim \in V_1$.
     because $ \mathbb{Z} (Ord) = \{ [(x , y)]_\sim \in V_1 \mid (x , y) \in Ord \times Ord \}$,
-    we know $Type_1(\mathbb{Z} (Ord))$ and $\mathbb{Z} (Ord) \in V_1$ in combinational set theory we describeded in (3.3).
+    we know $Type_1(\mathbb{Z} (Ord))$ and $\mathbb{Z} (Ord) \in V_1$ 
+    in combinational set theory we describeded in \ref{combinational-set-theory}.
 \end{Attention}
 
 \begin{theorem}\textbf{Summation} there is a unique function ``$+_\mathbb{Z} (Ord) :\mathbb{Z} (Ord) \times \mathbb{Z} (Ord) \to \mathbb{Z} (Ord)$'' s.t.
@@ -8775,7 +8711,8 @@ in this system ``$ 0 := [(0,1)]$'' and ``$ 1 := [(1,1)]$'' and ``$ \forall x
 \begin{Attention} because $[(x , y)]_\sim = \{ (x' , y') \in \mathbb{Z} (Ord) \times (\mathbb{Z} (Ord) - \{0\}) \mid (x , y) \sim (x' , y') \}$,
     we know $Type_1([(x , y)]_\sim)$ and $[(x , y)]_\sim \in V_1$.
     because $ \mathbb{Q} (Ord) = \{ [(x , y)]_\sim \in V_1 \mid (x , y) \in \mathbb{Z} (Ord) \times (\mathbb{Z} (Ord) - \{0\}) \}$,
-    we know $Type_1(\mathbb{Q} (Ord))$ and $\mathbb{Q} (Ord) \in V_1$ in combinational set theory we describeded in (3.3).
+    we know $Type_1(\mathbb{Q} (Ord))$ and $\mathbb{Q} (Ord) \in V_1$ 
+    in combinational set theory we describeded in \ref{combinational-set-theory}.
 \end{Attention}
 
 \begin{theorem}\textbf{Summation} there is a unique function ``$+_{\mathbb{Q} (Ord)} :\mathbb{Q} (Ord) \times \mathbb{Q} (Ord) \to \mathbb{Q} (Ord)$'' s.t.
@@ -8879,15 +8816,22 @@ sequences of $\mathbb{Q} (Ord)$). we don't want it all we just want a subset.
 
 \begin{definition}\textbf{Cauchy sequence} is a sequence like ``$(a_i)_{i \in Ord} \in \mathbb{Q} (Ord)^{Ord}$'' s.t. elements of it get infinitely
     close to each other i.e.
-    \[  Cauchy(a_i)_{i \in Ord} : \forall \varepsilon > 0 \quad \exists N  \quad \forall n,m   \quad  N < n , m < roof(N) \to | a_n - a_m | < \varepsilon   \]
+    \[  Cauchy(a_i)_{i \in Ord} : \forall \varepsilon > 0 \quad \exists N \in Ord  \quad \forall n,m \in Ord  
+      \quad  N < n , m < roof(N) \to | a_n - a_m | < \varepsilon   \]
 \end{definition}
 
 we usually give ``$N$'' natural numbers but it's not necessary.
+we define an equivalence relation 
 
-we define an equivalence relation ``$ (a_i)_{i \in Ord} \sim (b_i)_{i \in Ord}
-    : \forall \varepsilon > 0 \quad \exists N \quad \forall n \quad N < n < roof(N)
-    \to | a_n - b_n | < \varepsilon $''(check it's an equivalence relation). we
+$$
+ (a_i)_{i \in Ord} \sim (b_i)_{i \in Ord}
+    : \forall \varepsilon > 0 \quad \exists N \in Ord \quad \forall n \in Ord \quad N < n < roof(N)
+    \to | a_n - b_n | < \varepsilon 
+    $$
+
+    (check it's an equivalence relation). we
 denote every $[(a_i)_{i \in Ord}]$ with $[a_i]_{i \in Ord}$.
+
 
 \begin{definition}\textbf{fantacy Real numbers ``$\mathbb{R} (Ord)$''} is a set
     \[ \mathbb{R} (Ord) :=  Cauchy/ \sim  \]
@@ -8899,10 +8843,15 @@ in this system ``$ 0 := [0]_{i \in Ord}$'' and ``$ 1 := [1]_{i \in Ord}$'' and
 ``$ Ord \subseteq \mathbb{Z} (Ord) \subseteq \mathbb{Q} (Ord) \subseteq
 \mathbb{R} (Ord)$''.
 
-\begin{Attention} because $[x_i]_{i \in I} = \{ (x'_i)_{i \in I}  \in mathbb{Q} (Ord)^{Ord} \mid (x_i)_{i \in I} \sim (x'_i)_{i \in I} \}$,
-    we know $Type_1([x_i]_{i \in I})$ and $[x_i]_{i \in I} \in V_1$.
-    because $ \mathbb{Z} (Ord) = \{ [x_i]_{i \in I}\in V_1 \mid (x_i)_{i \in I} \in mathbb{Q} (Ord)^{Ord} \}$,
-    we know $Type_1(\mathbb{Z} (Ord))$ and $\mathbb{Z} (Ord) \in V_1$ in combinational set theory we describeded in (3.3).
+\begin{Attention}  
+     we know $ \mathcal{P}( Ord \times \mathbb{Q} (Ord) ) \in V_1$ and 
+    $ \mathbb{Q} (Ord)^{Ord} \subseteq \mathcal{P}( Ord \times \mathbb{Q} (Ord) )$ Hence $ \mathbb{Q} (Ord)^{Ord} \in V_1$.
+    because $[x_i]_{i \in I} = \{ (x'_i)_{i \in I}  \in \mathbb{Q} (Ord)^{Ord} \mid (x_i)_{i \in I} \sim (x'_i)_{i \in I} \}$,
+    so  $[x_i]_{i \in I} \in V_1$. because 
+    $ \mathbb{R} (Ord) = \{ [x_i]_{i \in I}\in V_1 \mid (x_i)_{i \in I} \in \mathbb{Q} (Ord)^{Ord} \}$,
+    we know $ \mathbb{R} (Ord) \subseteq \mathcal{P}(\mathcal{P}( Ord \times \mathbb{Q} (Ord) ))$ and 
+    $ \mathcal{P}(\mathcal{P}( Ord \times \mathbb{Q} (Ord) )) \in V_1 $ Hence
+     $\mathbb{R} (Ord) \in V_1$ in combinational set theory we describeded in \ref{combinational-set-theory}.
 \end{Attention}
 
 \begin{theorem}\textbf{Summation} there is a unique function ``$+_{\mathbb{R} (Ord)} :\mathbb{R} (Ord) \times \mathbb{R} (Ord) \to \mathbb{R} (Ord)$'' s.t.
@@ -8919,9 +8868,9 @@ in this system ``$ 0 := [0]_{i \in Ord}$'' and ``$ 1 := [1]_{i \in Ord}$'' and
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-\begin{definition}\textbf{Order in $\mathbb{R} (Ord)$} .\\
+\begin{definition}\textbf{Order in $\mathbb{R} (Ord)$} 
     \[  [a_i]_{i \in Ord} <_{\mathbb{R} (Ord)} [b_i]_{i \in Ord}  :
-        \exists \varepsilon > 0 \quad \exists N  \quad \forall n \quad N < n < roof(N)
+        \exists \varepsilon > 0 \quad \exists  N \in Ord   \quad \forall n  \in Ord  \quad N < n < roof(N)
         \to    b_n - a_n  > \varepsilon  \]
 \end{definition}
 
@@ -13395,81 +13344,6 @@ $
 
 \chapter{Measure}
 
-% \begin{proof}
-%     First, we check that $\mu_0$ is well defined. Suppose$(a,b]=\bigcup_{j=1}^n(a_j,b_j]$
-%     is a disjoint union. After ordering the intervals, we have
-%     $a=a_1<b_1=a_2<\cdots<b_{n-1}=a_n<b_n=b$, and hence
-
-%     $$
-%         \sum_{j=1}^n\mu_0((a_j,b_j])
-%         =\sum_{j=1}^n[F(b_j)-F(a_j)]
-%         =F(b)-F(a).
-%     $$
-
-%     The same argument applied to a common refinement shows that different representations of the same element of $\mathcal A$ give the same value. Thus $\mu_0$ is well defined and, by construction, finitely additive.
-
-%     It remains to prove countable additivity. Let ${I_j}_{j=1}^\infty$ be disjoint $h$-intervals such that $
-%         I=\bigcup_{j=1}^\infty I_j\in\mathcal A.
-%     $
-
-%     By finite additivity, it is enough to consider the case $I=(a,b]$. Since$
-%         \bigcup_{j=1}^nI_j\subseteq I,
-%     $ we have
-
-%     $$
-%         \sum_{j=1}^n\mu_0(I_j)\leq\mu_0(I).
-%     $$
-
-%     Letting $n\to\infty$ gives
-
-%     $$
-%         \sum_{j=1}^\infty\mu_0(I_j)\leq\mu_0(I).
-%     $$
-
-%     For the reverse inequality, fix $\varepsilon>0$. By right continuity of $F$, choose $\delta>0$ such that
-
-%     $$
-%         F(a+\delta)-F(a)<\varepsilon,
-%     $$
-
-%     and, writing $I_j=(a_j,b_j]$, choose $\delta_j>0$ such that
-
-%     $$
-%         F(b_j+\delta_j)-F(b_j)<\varepsilon2^{-j}.
-%     $$
-
-%     The open intervals $(a_j,b_j+\delta_j)$ cover $[a+\delta,b]$. By compactness, finitely many of them cover this interval. After relabeling, we may assume that they are $(a_j,b_j+\delta_j)$, $j=1,\ldots,N$, and that consecutive intervals overlap.
-
-%     Therefore,
-
-%     $$
-%         \begin{aligned}
-%             \mu_0(I)
-%              & =F(b)-F(a)                                    \\
-%              & <\sum_{j=1}^N
-%             \bigl[F(b_j+\delta_j)-F(a_j)\bigr]+\varepsilon   \\
-%              & <\sum_{j=1}^N
-%             \bigl[F(b_j)-F(a_j)\bigr]+2\varepsilon           \\
-%              & \leq\sum_{j=1}^\infty\mu_0(I_j)+2\varepsilon.
-%         \end{aligned}
-%     $$
-
-%     Since $\varepsilon>0$ is arbitrary,
-
-%     $$
-%         \mu_0(I)\leq\sum_{j=1}^\infty\mu_0(I_j).
-%     $$
-
-%     Combining the two inequalities gives
-
-%     $$
-%         \boxed{\mu_0\left(\bigcup_{j=1}^\infty I_j\right)
-%             =\sum_{j=1}^\infty\mu_0(I_j).}
-%     $$
-
-%     Hence $\mu_0$ is a premeasure on $\mathcal A$.
-% \end{proof}
-
 
 
 \section{Construction of Lebesgue Measure}
@@ -13491,10 +13365,10 @@ For every $A\subseteq\mathbb R$, define
     \boxed{
         \ell^*(A)=
         \inf\left\{
-        \sum_{n=1}^{\infty}\ell(I_n):
+        \sum_{n=1}^{\infty}\ell(I_n) \mid
         A\subseteq\bigcup_{n=1}^{\infty}I_n,\
         I_n\text{ open intervals}
-        \right\}.
+        \right\}
     }
 \]
 Here, the infimum is taken over all countable coverings of $A$ by open intervals. We allow intervals of infinite length, and we set $\ell^*(\varnothing)=0$.
