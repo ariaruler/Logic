@@ -178,7 +178,7 @@ $v$, $w$,$...$
 
 
 \begin{example}
-     $\{a,b,c\} /\therefore \{a,b\}$
+    $\{a,b,c\} /\therefore \{a,b\}$
     (prove if $\{a,b,c\}$ exists then $\{a,c\}$ exists)
 \end{example}
 
@@ -206,7 +206,7 @@ $v$, $w$,$...$
 
 
 \begin{example}
-     $\{a,b\} /\therefore \{b,a\}$
+    $\{a,b\} /\therefore \{b,a\}$
 \end{example}
 
 \begin{tikzpicture}
@@ -248,7 +248,7 @@ $v$, $w$,$...$
 
 
 \begin{example}
-     $a /\therefore \{ a , \{ a \} \}$
+    $a /\therefore \{ a , \{ a \} \}$
 \end{example}
 
 \chapter{propositional logic (zeroth-order logic)}
@@ -348,7 +348,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
         \hline
     \end{tabular}
     \begin{example}
-         for  ``$p,q,r$'' we can prove these.
+        for  ``$p,q,r$'' we can prove these.
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
             \item  $p \rightarrow q, q \rightarrow r /\therefore p \rightarrow r$
@@ -412,7 +412,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
     \end{tabular}
 
     \begin{example}
-         for  ``$p,q,r$'' we can prove these.
+        for  ``$p,q,r$'' we can prove these.
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
             \item $p \wedge q /\therefore q \wedge p$  \text{(Commutativity of Conjunction)}
@@ -528,7 +528,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
     \end{tabular}
 
     \begin{example}
-         for  ``$p,q,r$'' we can prove these.
+        for  ``$p,q,r$'' we can prove these.
         \begin{enumerate}
             \setlength{\itemsep}{0pt} % No extra space between items
             \item $p \vee q /\therefore q \vee p$   \quad\text{(Commutativity of Disjunction)}
@@ -925,7 +925,7 @@ false?) the answer is unfortunately \textbf{No}.
 \end{definition}
 
 \begin{definition}
-[Substitution for formulas] we define Substitution for a formula like this.
+    [Substitution for formulas] we define Substitution for a formula like this.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item for atomic formulas we define it like this. if it's a single object we do it as
@@ -1514,17 +1514,6 @@ and continue this process.
 By this axiom, there is a universe we call $V_1$. we can form sets whose elements are selected
 from an already existing set($V_0$).
 
-\begin{definition}
-    [The next universe(Level)]
-
-    We define $V_2$ the extension universe of $V_1$  and so on.
-
-\end{definition}
-
-
-
-
-
 
 
 
@@ -1585,7 +1574,7 @@ from an already existing set($V_0$).
 \end{theorem}
 
 \begin{example}
-     $A \subseteq B , B \subseteq C/\therefore A \subseteq C$
+    $A \subseteq B , B \subseteq C/\therefore A \subseteq C$
     \begin{fitchproof}[arrayenv=tabular]
         \have{1} {A \subseteq B }                 \by{ass}{}
         \have {2} {B \subseteq C}                  \by{ass}{}
@@ -1700,60 +1689,6 @@ so we can rewrite axiom of Extensionality like this.
 
 
 
-
-
-
-\section{Level of Morse–Kelley }
-we emphasis before that set has no definition.but we can describe what set is
-with rules and axioms.
-
-\begin{axiom}
-    [Existence of universe of set theory]
-    There exists a set $V_1$ (we denote it as $V_1$.it simply means the set of all obj), known as the Von Neumann Universe, which contains every obj.
-    (this axiom can't be formolized in first order logic).
-    (there must be another axiom let us use logic for set theory but we ignore that).
-    (from now on when we are talking about proposition ``$\phi$'' in ``set theory'' we mean
-    proposition ``$\phi$'' in ``$V_1$'').
-\end{axiom}
-
-
-% \begin{axiom}
-%     [Extensionality}Two sets are equal (are the same set) if they have the same elements.
-%     \\
-%     \[  \forall X,Y (\forall x ( x \in X \leftrightarrow x \in Y ) \rightarrow X = Y )  \]
-% \end{axiom}
-
-\begin{axiom}
-    [Weak comprehension] $(schema)$ this axioms says for every open proposition
-    like ``$\phi (x,x_0 , x_1, ... , x_n)$'' there is a set like ``$X$'' such that every ``$x \in V_0$'' is a
-    member of that set if and only if it holds
-    ``$\phi (x,x_0 , x_1, ... , x_n)$''.
-    \\
-    \[ \forall x_0 , x_1, ... , x_n \quad \exists X \quad \forall x  \in V_0 \quad ( x \in X \leftrightarrow \phi (x,x_0 , x_1, ... , x_n) ) \]
-    \\
-    by axiom of extentionality we can show that $X$ is unique.
-    so we denote it as ``$\{ x \mid  \phi (x,x_0 , x_1, ... , x_n)\}$''.
-    sometimes instead of ``$\{ x \mid x \in A \land \phi (x,x_0 , x_1, ... , x_n)\}$'' we write
-    ``$\{ x \in A \mid  \phi (x,x_0 , x_1, ... , x_n)\}$''.
-\end{axiom}
-
-% this axiom show that why Russell's paradox doesn't happened here because if ou
-% assume ``$R=\{x|x \notin x\}$'' is a set. you can't prove or disprove ``$R \in
-%     R$'' so ``$x \notin x$'' is not a proposition in ``set theorhy''. (we don't
-% need to prove that now.we will prove it in``['MetaLogic'}''). (it's not
-% obvios in ``$x \notin x$'' witch set holds and witch not). (and likely ``$\{ X
-%     \mid a \in X \}$'' is not a set either).
-
-% \section{definitions of set theory}
-% Let's talk about some definitions in set theoty.These definitions will come in
-% handy later.
-
-
-
-% \begin{lemma} $( \forall X \forall x ( x \in X \land Type_0(x) \leftrightarrow x \in X ) )$
-
-% \end{lemma}
-
 Let's talk about some axioms in set theoty.These daxioms will come in handy
 later.
 
@@ -1774,7 +1709,7 @@ later.
 \end{definition}
 
 \begin{example}
-     $/\therefore \forall X(\emptyset \subseteq X)$
+    $/\therefore \forall X(\emptyset \subseteq X)$
     \begin{fitchproof}[arrayenv=tabular]
         \open
         \have{1} {x \in \emptyset}                                \by{acp}{}
@@ -1790,7 +1725,7 @@ later.
 
 \begin{lemma}
     \label{emptyset}
-     $A = \emptyset \therefore / \therefore \forall y( y \notin A)$
+    $A = \emptyset \therefore / \therefore \forall y( y \notin A)$
     \begin{fitchproof}[arrayenv=tabular]
         \have  {1} {\forall y (y \notin A )}                                \by{ass}{}
         \open
@@ -1937,12 +1872,10 @@ later.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-\begin{axiom}
-    [Pairing]  $(schema)$
-    \[ \forall x_0,...,x_n \quad x_0 \in V_0 \land ... \land X_n \in V_0 \to \{x_{0}, x_{1}, x_{2}, ... ,x_{n} \} \in V_0 \]
-\end{axiom}
 
-\begin{definition}[Union and Intersection] 
+
+
+\begin{definition}[Union and Intersection]
     Intersection:
     \[ A \cap B:=\{x \mid x \in A \wedge x \in B \} \]
     therefore.
@@ -2093,6 +2026,18 @@ sometimes all members of a set is also set we call it ``set of sets''.
     \[\forall x \in V_0 \quad ( x \in A^c \leftrightarrow   x \notin A ) \]
 \end{definition}
 
+
+
+\begin{Attention}[Complement Notation]
+    \label{Complement Notation}
+    sometimes comlement depends on the Universe set like $U$.
+    $$
+        A^c := U - A
+    $$
+    The meaning  is determined within the structure of a sentence.
+\end{Attention}
+
+
 \begin{theorem}
     [$(schema)$] $(()^c I, ()^c E)$
 
@@ -2177,34 +2122,12 @@ sometimes all members of a set is also set we call it ``set of sets''.
 \end{theorem}
 
 \begin{lemma}
-     $/ \therefore  A - B = A \cap B^c$
+    $/ \therefore  A - B = A \cap B^c$
     \\
     \\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-\begin{axiom}
-    [Separation]
-    \[ \forall X,Y \quad  X \in V_0 \to X \cap Y  \in V_0 \]
-    therefore.
-    \[ A \in V_0  \to  A \cap B \in V_0  \]
-    therefore.
-    \[  A \in V_0  \to  \bigcap A \in V_0  \]
-    therefore.
-    \[ A \in V_0  \to  A - B \in V_0  \]
-\end{axiom}
-
-
-\begin{lemma}
-    \[  \emptyset \in V_0  \]
-\end{lemma}
-
-\begin{axiom}
-    [union]
-    \[ \forall X \quad  X \in V_0 \to \bigcup X \in V_0 \]
-    therefore.
-    \[ A \in V_0 \land  B \in V_0  \to  A \cup B \in V_0 \]
-\end{axiom}
 
 \begin{definition}
     [Powerset]
@@ -2244,6 +2167,104 @@ sometimes all members of a set is also set we call it ``set of sets''.
         \item $\mathcal P(\varnothing)=\{\varnothing\}$.
     \end{enumerate}
 \end{lemma}
+
+
+
+\begin{definition}
+    [The next universe(Level)]
+
+    We define $V_2$ the extension universe of $V_1$  and so on.
+
+\end{definition}
+
+
+
+
+
+
+
+
+\section{Level of Morse–Kelley }
+we emphasis before that set has no definition.but we can describe what set is
+with rules and axioms.
+
+\begin{axiom}
+    [Existence of universe of set theory]
+    There exists a set $V_1$ (we denote it as $V_1$.it simply means the set of all obj), known as the Von Neumann Universe, which contains every obj.
+    (this axiom can't be formolized in first order logic).
+    (there must be another axiom let us use logic for set theory but we ignore that).
+    (from now on when we are talking about proposition ``$\phi$'' in ``set theory'' we mean
+    proposition ``$\phi$'' in ``$V_1$'').
+\end{axiom}
+
+
+% \begin{axiom}
+%     [Extensionality}Two sets are equal (are the same set) if they have the same elements.
+%     \\
+%     \[  \forall X,Y (\forall x ( x \in X \leftrightarrow x \in Y ) \rightarrow X = Y )  \]
+% \end{axiom}
+
+\begin{axiom}
+    [Weak comprehension] $(schema)$ this axioms says for every open proposition
+    like ``$\phi (x,x_0 , x_1, ... , x_n)$'' there is a set like ``$X$'' such that every ``$x \in V_0$'' is a
+    member of that set if and only if it holds
+    ``$\phi (x,x_0 , x_1, ... , x_n)$''.
+    \\
+    \[ \forall x_0 , x_1, ... , x_n \quad \exists X \quad \forall x  \in V_0 \quad ( x \in X \leftrightarrow \phi (x,x_0 , x_1, ... , x_n) ) \]
+    \\
+    by axiom of extentionality we can show that $X$ is unique.
+    so we denote it as ``$\{ x \mid  \phi (x,x_0 , x_1, ... , x_n)\}$''.
+    sometimes instead of ``$\{ x \mid x \in A \land \phi (x,x_0 , x_1, ... , x_n)\}$'' we write
+    ``$\{ x \in A \mid  \phi (x,x_0 , x_1, ... , x_n)\}$''.
+\end{axiom}
+
+% this axiom show that why Russell's paradox doesn't happened here because if ou
+% assume ``$R=\{x|x \notin x\}$'' is a set. you can't prove or disprove ``$R \in
+%     R$'' so ``$x \notin x$'' is not a proposition in ``set theorhy''. (we don't
+% need to prove that now.we will prove it in``['MetaLogic'}''). (it's not
+% obvios in ``$x \notin x$'' witch set holds and witch not). (and likely ``$\{ X
+%     \mid a \in X \}$'' is not a set either).
+
+% \section{definitions of set theory}
+% Let's talk about some definitions in set theoty.These definitions will come in
+% handy later.
+
+
+
+% \begin{lemma} $( \forall X \forall x ( x \in X \land Type_0(x) \leftrightarrow x \in X ) )$
+
+% \end{lemma}
+
+
+\begin{axiom}
+    [Pairing]  $(schema)$
+    \[ \forall x_0,...,x_n \quad x_0 \in V_0 \land ... \land X_n \in V_0 \to \{x_{0}, x_{1}, x_{2}, ... ,x_{n} \} \in V_0 \]
+\end{axiom}
+
+
+\begin{axiom}
+    [Separation]
+    \[ \forall X,Y \quad  X \in V_0 \to X \cap Y  \in V_0 \]
+    therefore.
+    \[ A \in V_0  \to  A \cap B \in V_0  \]
+    therefore.
+    \[  A \in V_0  \to  \bigcap A \in V_0  \]
+    therefore.
+    \[ A \in V_0  \to  A - B \in V_0  \]
+\end{axiom}
+
+
+\begin{lemma}
+    \[  \emptyset \in V_0  \]
+\end{lemma}
+
+\begin{axiom}
+    [union]
+    \[ \forall X \quad  X \in V_0 \to \bigcup X \in V_0 \]
+    therefore.
+    \[ A \in V_0 \land  B \in V_0  \to  A \cup B \in V_0 \]
+\end{axiom}
+
 
 \begin{axiom}
     [Powerset]
@@ -2343,7 +2364,7 @@ comprehension.  We then extend \(V_1\) to
     member of that set if and only if it holds
     ``$\phi (x,x_0 , x_1, ... , x_n)$''.
     \\
-    \[ \forall x_0 , x_1, ... , x_n  \in V_0 \quad \exists X  \in V_0 \quad \forall x  \in V_1 \quad ( x \in X \leftrightarrow \phi (x,x_0 , x_1, ... , x_n) ) \]
+    \[ \forall x_0 , x_1, ... , x_n  \in V_2 \quad \exists X  \in V_2 \quad \forall x  \in V_1 \quad ( x \in X \leftrightarrow \phi (x,x_0 , x_1, ... , x_n) ) \]
     \\
     by axiom of extentionality we can show that $X$ is unique.
     so we denote it as ``$\{ x \mid_1  \phi (x,x_0 , x_1, ... , x_n)\}$''.
@@ -2351,7 +2372,7 @@ comprehension.  We then extend \(V_1\) to
 
 
 \begin{axiom}[Pairing]  $(schema)$
-    \[ \forall x_0,...,x_n \quad x_0 \in V_1 \land ... \land X_n \in V_1 \to \{x_{0}, x_{1}, x_{2}, ... ,x_{n} \} \in V_1 \]
+    \[ \forall x_0,...,x_n \quad x_0 \in V_1 \land ... \land x_n \in V_1 \to \{x_{0}, x_{1}, x_{2}, ... ,x_{n} \} \in V_1 \]
 \end{axiom}
 
 \begin{axiom}[Union]
@@ -2385,8 +2406,8 @@ comprehension.  We then extend \(V_1\) to
     In this case we say the height of the Level 1  is $Ord_1$.
     and for more experts if $(V , \in ) \models  ZFC + I_0$
     ($V$ is the universe of all sets.)
-    ($I_0$ is the condition says there is exactly one \textbf{Inaccessible  cardinal}.)    
-    and $Ord_0$ has no inaccessible cardinal then $ ( V_{Ord_1} , \in ) \cong ( V , \in )  $ 
+    ($I_0$ is the condition says there is exactly one \textbf{Inaccessible  cardinal}.)
+    and $Ord_0$ has no inaccessible cardinal then $ ( V_{Ord_1} , \in ) \cong ( V , \in )  $
 \end{Attention}
 
 
@@ -3339,7 +3360,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
         \item $Func(f)  / \therefore f^{-1}[D \cap C]=f^{-1}[D]\cap f^{-1}[C]$.
         \item $Func(f)  / \therefore f^{-1}[B-C]=f^{-1}[B]-f^{-1}[C]$.
         \item $Func(f)  / \therefore f[A]-f[B] \subseteq   f[A-B]$.
-        \item $f:A\xrightarrow{inj}B , C\subseteq A / \therefore f[A-B]=f[A]-f[B]$ .
+        \item $f:A\xrightarrow{inj}B , C\subseteq A / \therefore f[A - C]=f[A]-f[C]$ .
         \item $f:A\to B , g:B\to C \therefore / \therefore (g\circ f)[A]=g[f[A]]$.
         \item $\bigcup_{i\in I}(A_i\cap B_i)\subseteq
                   \left(\bigcup_{i \in I}A_i\right)\cap
@@ -5866,13 +5887,13 @@ $\mathbb{Q}$). we don't want it all we just want a subset.
 
 \begin{definition}\textbf{Cauchy sequence} is a sequence like ``$(a_i)_{i \in \mathbb{N}} \in \mathbb{Q}^\mathbb{N}$'' s.t. elements of it get infinitely
     close to each other i.e.
-    \[  Cauchy(a_i)_{i \in \mathbb{N}} : \forall \varepsilon > 0 \quad \exists N  \quad \forall n,m > N  \quad | a_n - a_m | < \varepsilon   \]
+    \[  Cauchy(a_i)_{i \in \mathbb{N}} : \forall \varepsilon_{> 0} \in \mathbb{Q} \quad \exists N  \quad \forall n,m > N  \quad | a_n - a_m | < \varepsilon   \]
 \end{definition}
 
 we usually give ``$N$'' natural numbers but it's not necessary.
 
 we define an equivalence relation ``$ (a_i)_{i \in \mathbb{N}} \sim (b_i)_{i
-        \in \mathbb{N}} : \forall \varepsilon > 0 \quad \exists N \quad \forall n > N
+        \in \mathbb{N}} : \forall \varepsilon_{> 0} \in \mathbb{Q} \quad \exists N \quad \forall n > N
     \quad | a_n - b_n | < \varepsilon $''(check it's an equivalence relation). we
 denote every $[(a_i)_{i \in \mathbb{N}}]$ with $[a_i]_{i \in \mathbb{N}}$.
 
@@ -5881,7 +5902,7 @@ denote every $[(a_i)_{i \in \mathbb{N}}]$ with $[a_i]_{i \in \mathbb{N}}$.
     \have {14} {  a_n - a_n = 0}
     \have {14} { | a_n - a_n | < \varepsilon }
     \have {14} { n > N\to | a_n - a_n | < \varepsilon }
-    \have {14} { \forall \varepsilon > 0 \quad \exists N \quad \forall n > N \quad | a_n - a_n | < \varepsilon}    \by{$\forall I , \exists I , \forall I $}{}
+    \have {14} { \forall \varepsilon_{> 0} \in \mathbb{Q} \quad \exists N \quad \forall n > N \quad | a_n - a_n | < \varepsilon}    \by{$\forall I , \exists I , \forall I $}{}
     % \have {14} { \vdots}     
 
     \have {14} {(a_i)_{i \in \mathbb{N}} \sim (a_i)_{i\in \mathbb{N}} }      \by{$def. \sim $}{}
@@ -5891,8 +5912,8 @@ denote every $[(a_i)_{i \in \mathbb{N}}]$ with $[a_i]_{i \in \mathbb{N}}$.
 \begin{fitchproof}[arrayenv=tabular]
 
     \have {14} {(a_i)_{i \in \mathbb{N}} \sim (b_i)_{i\in \mathbb{N}} }        \by{$ass$}{}
-    \have {14} {\forall \varepsilon > 0 \quad \exists N \quad \forall n > N \quad | a_n - b_n | < \varepsilon}      \by{$def. \sim $}{}
-    \have {14} {\forall \varepsilon > 0 \quad \exists N \quad \forall n > N \quad | b_n - a_n | < \varepsilon}
+    \have {14} {\forall \varepsilon_{> 0} \in \mathbb{Q} \quad \exists N \quad \forall n > N \quad | a_n - b_n | < \varepsilon}      \by{$def. \sim $}{}
+    \have {14} {\forall \varepsilon_{> 0} \in \mathbb{Q} \quad \exists N \quad \forall n > N \quad | b_n - a_n | < \varepsilon}
 
     % \have {14} { \vdots}     
 
@@ -5904,8 +5925,8 @@ denote every $[(a_i)_{i \in \mathbb{N}}]$ with $[a_i]_{i \in \mathbb{N}}$.
 
     \have {14} {(a_i)_{i \in \mathbb{N}} \sim (b_i)_{i\in \mathbb{N}} }       \by{$ass$}{}
     \have {14} {  (b_i)_{i \in \mathbb{N}} \sim (c_i)_{i\in \mathbb{N}} }        \by{$ass$}{}
-    \have {14} {\forall \varepsilon > 0 \quad \exists N \quad \forall n > N \quad | a_n - b_n | < \varepsilon}      \by{$def. \sim $}{}
-    \have {14} {\forall \varepsilon > 0 \quad \exists N \quad \forall n > N \quad | b_n - c_n | < \varepsilon}      \by{$def. \sim $}{}
+    \have {14} {\forall \varepsilon_{> 0} \in \mathbb{Q} \quad \exists N \quad \forall n > N \quad | a_n - b_n | < \varepsilon}      \by{$def. \sim $}{}
+    \have {14} {\forall \varepsilon_{> 0} \in \mathbb{Q} \quad \exists N \quad \forall n > N \quad | b_n - c_n | < \varepsilon}      \by{$def. \sim $}{}
     \have {14} {  \exists N \quad \forall n > N \quad | a_n - b_n | < \frac{\varepsilon}{2} }      \by{$def. \sim $}{}
     \have {14} {  \exists N \quad \forall n > N \quad | b_n - c_n | < \frac{\varepsilon}{2} }      \by{$def. \sim $}{}
 
@@ -5929,7 +5950,7 @@ denote every $[(a_i)_{i \in \mathbb{N}}]$ with $[a_i]_{i \in \mathbb{N}}$.
     \close
     \close
     \have {14} {  \exists N \quad \forall n > N \quad | a_n - c_n | < \varepsilon }      \by{$\exists E$}{}
-    \have {14} {\forall \varepsilon > 0 \quad \exists N \quad \forall n > N \quad | a_n - c_n | < \varepsilon}      \by{$\forall I$}{}
+    \have {14} {\forall \varepsilon_{> 0} \in \mathbb{Q} \quad \exists N \quad \forall n > N \quad | a_n - c_n | < \varepsilon}      \by{$\forall I$}{}
     \have {14} {  (a_i)_{i \in \mathbb{N}} \sim (c_i)_{i\in \mathbb{N}} }          \by{$def. \sim $}{}
 
 \end{fitchproof}
@@ -5960,7 +5981,7 @@ in this system ``$ 0 := [0]_{i \in \mathbb{N}}$'' and ``$ 1 := [1]_{i \in
 
 \begin{definition}\textbf{Order in $\mathbb{R}$} .\\
     \[  [a_i]_{i \in \mathbb{N}} <_\mathbb{R} [b_i]_{i \in \mathbb{N}}  :
-        \exists \varepsilon > 0 \quad \exists N  \quad \forall n > N  \quad  b_n - a_n  > \varepsilon  \]
+        \exists \varepsilon_{> 0} \in \mathbb{Q} (Ord) \quad \exists N  \quad \forall n > N  \quad  b_n - a_n  > \varepsilon  \]
 \end{definition}
 
 this lemma let us use ``$<$'' instead of ``$<_\mathbb{R}$'', ``$+$'' instead of
@@ -8591,7 +8612,7 @@ arithmetic. so properties are true for them.
 we learned about ``$Ord$'' before and we constructed structure ``$(Ord , + ,
     \cdot , <)$''. if you assume ``$Ord \times Ord$'' we can define an equivalence
 relation ``$ (\alpha_1 , \beta_1) \sim (\alpha_2 , \beta_2) : \alpha_1 +
-    \beta_2 = \alpha_2 + m_1 $''(check it's an equivalence relation).
+    \beta_2 = \alpha_2 + \beta_1 $''(check it's an equivalence relation).
 
 \begin{definition}\textbf{fantacy Integers``$\mathbb{Z} (Ord)$''} is a set
     \[ \mathbb{Z} (Ord) := Ord \times Ord / \sim\]
@@ -8606,9 +8627,9 @@ in general``$\forall \alpha , \beta \in Ord \quad \alpha - \beta :=
         [(\alpha , \beta )]$''. so we can say ``$ Ord \subseteq \mathbb{Z} (Ord)$''.
 
 \begin{Attention} because $[(x , y)]_\sim = \{ (x' , y') \in Ord \times Ord \mid (x , y) \sim (x' , y') \}$,
-    we know $Type_1([(x , y)]_\sim)$ and $[(x , y)]_\sim \in V_1$.
+    we know  $[(x , y)]_\sim \in V_1$.
     because $ \mathbb{Z} (Ord) = \{ [(x , y)]_\sim \in V_1 \mid (x , y) \in Ord \times Ord \}$,
-    we know $Type_1(\mathbb{Z} (Ord))$ and $\mathbb{Z} (Ord) \in V_1$ 
+    we know  $\mathbb{Z} (Ord) \in V_1$
     in combinational set theory we describeded in \ref{combinational-set-theory}.
 \end{Attention}
 
@@ -8709,9 +8730,9 @@ in this system ``$ 0 := [(0,1)]$'' and ``$ 1 := [(1,1)]$'' and ``$ \forall x
 
 
 \begin{Attention} because $[(x , y)]_\sim = \{ (x' , y') \in \mathbb{Z} (Ord) \times (\mathbb{Z} (Ord) - \{0\}) \mid (x , y) \sim (x' , y') \}$,
-    we know $Type_1([(x , y)]_\sim)$ and $[(x , y)]_\sim \in V_1$.
+    we know  $[(x , y)]_\sim \in V_1$.
     because $ \mathbb{Q} (Ord) = \{ [(x , y)]_\sim \in V_1 \mid (x , y) \in \mathbb{Z} (Ord) \times (\mathbb{Z} (Ord) - \{0\}) \}$,
-    we know $Type_1(\mathbb{Q} (Ord))$ and $\mathbb{Q} (Ord) \in V_1$ 
+    we know  $\mathbb{Q} (Ord) \in V_1$
     in combinational set theory we describeded in \ref{combinational-set-theory}.
 \end{Attention}
 
@@ -8816,20 +8837,19 @@ sequences of $\mathbb{Q} (Ord)$). we don't want it all we just want a subset.
 
 \begin{definition}\textbf{Cauchy sequence} is a sequence like ``$(a_i)_{i \in Ord} \in \mathbb{Q} (Ord)^{Ord}$'' s.t. elements of it get infinitely
     close to each other i.e.
-    \[  Cauchy(a_i)_{i \in Ord} : \forall \varepsilon > 0 \quad \exists N \in Ord  \quad \forall n,m \in Ord  
-      \quad  N < n , m < roof(N) \to | a_n - a_m | < \varepsilon   \]
+    \[  Cauchy(a_i)_{i \in Ord} : \forall \varepsilon_{> 0} \in \mathbb{Q}  (Ord) \quad \exists N \in Ord  \quad \forall n_{ > N } ,m_{ > N }  \in Ord
+        \quad   | a_n - a_m | < \varepsilon   \]
 \end{definition}
 
 we usually give ``$N$'' natural numbers but it's not necessary.
-we define an equivalence relation 
+we define an equivalence relation
 
 $$
- (a_i)_{i \in Ord} \sim (b_i)_{i \in Ord}
-    : \forall \varepsilon > 0 \quad \exists N \in Ord \quad \forall n \in Ord \quad N < n < roof(N)
-    \to | a_n - b_n | < \varepsilon 
-    $$
+    (a_i)_{i \in Ord} \sim (b_i)_{i \in Ord}
+    : \forall \varepsilon_{> 0} \in \mathbb{Q} (Ord) \quad \exists N \in Ord \quad \forall n_{ > N }  \in Ord \quad | a_n - b_n | < \varepsilon
+$$
 
-    (check it's an equivalence relation). we
+(check it's an equivalence relation). we
 denote every $[(a_i)_{i \in Ord}]$ with $[a_i]_{i \in Ord}$.
 
 
@@ -8841,17 +8861,17 @@ denote every $[(a_i)_{i \in Ord}]$ with $[a_i]_{i \in Ord}$.
 in this system ``$ 0 := [0]_{i \in Ord}$'' and ``$ 1 := [1]_{i \in Ord}$'' and
 ``$ \forall q \in \mathbb{Q} (Ord) \quad q := [q]_{i \in Ord}$''. so we can say
 ``$ Ord \subseteq \mathbb{Z} (Ord) \subseteq \mathbb{Q} (Ord) \subseteq
-\mathbb{R} (Ord)$''.
+    \mathbb{R} (Ord)$''.
 
-\begin{Attention}  
-     we know $ \mathcal{P}( Ord \times \mathbb{Q} (Ord) ) \in V_1$ and 
+\begin{Attention}
+    we know $ \mathcal{P}( Ord \times \mathbb{Q} (Ord) ) \in V_1$ and
     $ \mathbb{Q} (Ord)^{Ord} \subseteq \mathcal{P}( Ord \times \mathbb{Q} (Ord) )$ Hence $ \mathbb{Q} (Ord)^{Ord} \in V_1$.
     because $[x_i]_{i \in I} = \{ (x'_i)_{i \in I}  \in \mathbb{Q} (Ord)^{Ord} \mid (x_i)_{i \in I} \sim (x'_i)_{i \in I} \}$,
-    so  $[x_i]_{i \in I} \in V_1$. because 
+    so  $[x_i]_{i \in I} \in V_1$. because
     $ \mathbb{R} (Ord) = \{ [x_i]_{i \in I}\in V_1 \mid (x_i)_{i \in I} \in \mathbb{Q} (Ord)^{Ord} \}$,
-    we know $ \mathbb{R} (Ord) \subseteq \mathcal{P}(\mathcal{P}( Ord \times \mathbb{Q} (Ord) ))$ and 
+    we know $ \mathbb{R} (Ord) \subseteq \mathcal{P}(\mathcal{P}( Ord \times \mathbb{Q} (Ord) ))$ and
     $ \mathcal{P}(\mathcal{P}( Ord \times \mathbb{Q} (Ord) )) \in V_1 $ Hence
-     $\mathbb{R} (Ord) \in V_1$ in combinational set theory we describeded in \ref{combinational-set-theory}.
+    $\mathbb{R} (Ord) \in V_1$ in combinational set theory we describeded in \ref{combinational-set-theory}.
 \end{Attention}
 
 \begin{theorem}\textbf{Summation} there is a unique function ``$+_{\mathbb{R} (Ord)} :\mathbb{R} (Ord) \times \mathbb{R} (Ord) \to \mathbb{R} (Ord)$'' s.t.
@@ -8868,10 +8888,10 @@ in this system ``$ 0 := [0]_{i \in Ord}$'' and ``$ 1 := [1]_{i \in Ord}$'' and
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-\begin{definition}\textbf{Order in $\mathbb{R} (Ord)$} 
+\begin{definition}\textbf{Order in $\mathbb{R} (Ord)$}
     \[  [a_i]_{i \in Ord} <_{\mathbb{R} (Ord)} [b_i]_{i \in Ord}  :
-        \exists \varepsilon > 0 \quad \exists  N \in Ord   \quad \forall n  \in Ord  \quad N < n < roof(N)
-        \to    b_n - a_n  > \varepsilon  \]
+        \exists \varepsilon_{> 0} \in \mathbb{Q} (Ord) \quad \exists  N \in Ord   \quad \forall n_{ > N }  \in Ord  \quad
+        b_n - \varepsilon    > a_n \]
 \end{definition}
 
 this lemma let us use ``$<$'' instead of ``$<_{\mathbb{R} (Ord)}$'', ``$+$''
@@ -9081,7 +9101,7 @@ subsets'' of a set.
 \begin{definition}[Filter]
 
     Let $X$ be a nonempty set. A \emph{filter} $\mathcal{F}$ on $X$ is a collection
-    of subsets of $X$ such that:
+    of subsets of $X$ $( \mathcal{F} \subseteq \mathcal{P} (X) )$ such that:
 
     \begin{enumerate}
 
@@ -9089,12 +9109,10 @@ subsets'' of a set.
 
         \item $X\in\mathcal{F}$.
 
-        \item If $A,B\in\mathcal{F}$, then
-              $
+        \item  $\forall A , B \quad A,B\in\mathcal{F} \to
                   A\cap B\in\mathcal{F}.
               $
-        \item If $A\in\mathcal{F}$ and $A\subseteq B\subseteq X$, then
-              $
+        \item  $\forall A , B \quad  A\in\mathcal{F} \land A \subseteq B \to
                   B\in\mathcal{F}.
               $
 
@@ -9145,61 +9163,163 @@ set is also large.
 
 \section{Ultrafilters}
 
-Ultrafilters are maximal filters.
+An ultrafilter is a filter that decides every subset of its underlying set.
 
 \begin{definition}[Ultrafilter]
 
-    A filter $\mathcal{U}$ on $X$ is called an \emph{ultrafilter} if it is maximal
-    among filters; that is, whenever $\mathcal{F}$ is a filter on $X$ and
-    $\mathcal{U}\subseteq\mathcal{F}$, then
-    $
-        \mathcal{F}=\mathcal{U}.
-    $
+    A filter $\mathcal{U}$ on $X$ is called an \emph{ultrafilter} if
+    \[
+        (\mathcal{U} \ is \ a \ filter \ on \ X) \land  \forall A \subseteq X \quad
+        A \in \mathcal{U} \veebar A^c \in \mathcal{U}.
+    \]
 
 \end{definition}
 
-There is a very important characterization of ultrafilters.
+There is an important characterization of ultrafilters in terms of maximality.
 
-\begin{theorem}[Ultrafilter Characterization]
+\begin{theorem}[Maximality of Ultrafilters]
 
-    Let $\mathcal{U}$ be a filter on $X$. Then $\mathcal{U}$ is an ultrafilter if
-    and only if for every subset $A\subseteq X$, exactly one of the following
-    holds:
-
-    $$
-        A\in\mathcal{U},
-        \quad
-        \text{or}
-        \quad
-        X- A\in\mathcal{U}.
-    $$
+    A filter $\mathcal{U}$ on $X$ is an ultrafilter if and only if
+    \[
+        \forall \mathcal{F} \in (filters \ on \ X) \quad
+        \mathcal{U} \subseteq \mathcal{F}
+        \to \mathcal{U}=\mathcal{F},
+    \]
+    where $\mathcal{F}$ ranges over all filters on $X$.
+    In this case we say $\mathcal{U}$  is  maximal.
 
 \end{theorem}
 
-\begin{proof}
 
-    Suppose first that $\mathcal{U}$ is an ultrafilter. Let $A\subseteq X$. We
-    cannot have both $A\in\mathcal{U}$ and $X- A\in\mathcal{U}$, since then
-    $\emptyset=A\cap(X- A)\in\mathcal{U}$, which is impossible. Suppose
-    that neither $A$ nor $X- A$ belongs to $\mathcal{U}$. Then the filter
-    generated by $\mathcal{U}\cup\{A\}$ is strictly larger than $\mathcal{U}$,
-    contradicting the maximality of $\mathcal{U}$. Hence exactly one of them
-    belongs to $\mathcal{U}$.
+\begin{proof} $\quad$ \\
 
-    Conversely, suppose that for every $A\subseteq X$, exactly one of $A$ and
-    $X- A$ belongs to $\mathcal{U}$. Let $\mathcal{F}$ be a filter on $X$
-    such that $\mathcal{U}\subseteq\mathcal{F}$. If $\mathcal{F}\neq\mathcal{U}$,
-    choose $A\in\mathcal{F}-\mathcal{U}$. By assumption, $X-
-        A\in\mathcal{U}\subseteq\mathcal{F}$. Therefore
+    \begin{fitchproof}[arrayenv=tabular]
 
-    $$
-        A\cap(X- A)=\emptyset\in\mathcal{F},
-    $$
+        \have {1} { \mathcal{U} \ is \ an \ ultrafilter \ on \ X } \by{ass}{}
+        \have {2} { \mathcal{U} \ is \ a \ filter \ on \ X} \by{ass}{}
+        \have {3} { \forall A \subseteq X \quad A \in \mathcal{U} \veebar A^c \in \mathcal{U}} \by{definition}{1,2}
+        \have {4} { A\in\mathcal{U}\lor A^c\in\mathcal{U} } \by{3}{}
+        
+        \open
+        \have {5} { \mathcal{F} \in (filters \ on \ X)} \by{ass}{}
+        
+        \open
+        \have {6} { \mathcal{U}\subseteq\mathcal{F} } \by{ass}{}
+        
+        \open
+        \have {7} { \mathcal{U}\neq\mathcal{F} } \by{ass}{}
+        
+        \open
+        \have {3} {  A \subseteq X } \by{acp}{}
+        
+        \have {8} { A \in \mathcal{F}-\mathcal{U} } \by{$\neq E$}{7,6}
+        \have {3} {  A \in \mathcal{U} \veebar A^c \in \mathcal{U}} \by{definition}{1,2}
+        \have {9} { A \notin \mathcal{U} } \by{set difference}{8}
+        \have {10} { A^c\in\mathcal{U} } \by{3,9}{}
+        \have {11} { A^c\in\mathcal{F} } \by{$\subseteq E$}{6,10}
+        \have {12} { A \cap (A^c) \in \mathcal{F} } \by{$\mathcal{F}$ is a filter}{8,11}
+        \have {13} { \emptyset\in\mathcal{F} } \by{set equality}{12}
+        \have {14} { \bot } \by{filter definition}{13}
+        \close
+        \have {14} { \bot } \by{filter definition}{13}
+        \close
+        
+        \have {15} { \mathcal{U}=\mathcal{F} } \by{RAA}{7-14}
+        \close
+        \close
+        \have {16} { \mathcal{U} \ is \ maximal } \by{definition}{5-15}
+        
 
-    a contradiction. Hence $\mathcal{F}=\mathcal{U}$, so $\mathcal{U}$ is an
-    ultrafilter.
+
+
+    \end{fitchproof}
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \have {17} { \mathcal{U}\text{ is maximal} } \by{ass}{}
+        \open
+        \have {18} { A\subseteq X } \by{ass}{}
+        \open
+        \have {19} { A\notin\mathcal{U} } \by{ass}{}
+        \have {20} { A^c\notin\mathcal{U} } \by{ass}{}
+
+        
+        \have {27} {
+            \mathcal{G}=
+            \{B\subseteq X\mid
+            \exists F\in\mathcal{U}\;(F\cap A\subseteq B)\}
+        } \by{definition}{}
+        
+        \have {28} { X \cap A \in\mathcal{G} } \by{27, filter definition}{}
+        \have {28} { X\in\mathcal{G} } \by{27, filter definition}{}
+        
+        
+        \open
+        \have {29} { \emptyset \in \mathcal{G} } \by{26,27}{}
+        
+        \open
+        \have {21} { F\in\mathcal{U} } \by{ass}{}
+        \have {22} { F\cap A=\emptyset } \by{ass}{}
+        \have {23} { F\subseteq A^c } \by{set theory}{22}
+        \have {24} { A^c\in\mathcal{U} } \by{upward closure}{21,23}
+        \have {25} { \bot } \by{$\neg E$}{20,24}
+        \close
+        
+        \have {25} { \bot } \by{$\neg E$}{20,24}
+        \close
+
+
+        \have {29} { \emptyset\notin\mathcal{G} } \by{26,27}{}
+
+        \open
+        \have {30} { B\in\mathcal{U} } \by{ass}{}
+        \have {31} { B\cap A\subseteq B } \by{set theory}{}
+        \have {32} { B\in\mathcal{G} } \by{27,30,31}{}
+        \close
+        \have {33} { \mathcal{U}\subseteq\mathcal{G} } \by{$\subseteq I$}{30-32}
+
+        \have {34} { A\in\mathcal{G} } \by{27, $X\in\mathcal{U}$}{}
+        \have {35} { A\notin\mathcal{U} } \by{19}{}
+        \have {36} { \mathcal{U}\subsetneq\mathcal{G} } \by{33-35}{}
+
+        \open
+        \have {37} { B\in\mathcal{G} } \by{ass}{}
+        \have {38} { C\in\mathcal{G} } \by{ass}{}
+        \have {39} { \exists F\in\mathcal{U}\;(F\cap A\subseteq B) } \by{27,37}{}
+        \have {40} { \exists H\in\mathcal{U}\;(H\cap A\subseteq C) } \by{27,38}{}
+
+        \open
+        \have {41} { F\in\mathcal{U} \land F\cap A\subseteq B } \by{$acp$}{}
+        \open
+        \have {42} { H\in\mathcal{U} \land H\cap A\subseteq C } \by{$acp$}{}
+        \have {43} { F\cap H\in\mathcal{U} } \by{$\cap I$}{}
+        \have {44} { (F\cap H)\cap A\subseteq B\cap C } \by{set theory}{41,42}
+        \have {45} { B\cap C\in\mathcal{G} } \by{27,43,44}{}
+        \close
+        \have {46} { B\cap C\in\mathcal{G} } \by{$\exists E$}{}
+        \close
+        \close
+
+        \have {47} { \mathcal{G}\text{ is a filter on }X } \by{filter definition}{28,29,33,46}
+        \have {48} { \mathcal{U}=\mathcal{G} } \by{maximality}{17,47}
+        \have {49} { \bot } \by{48,36}{}
+        \close
+        \have {50} { A^c\in\mathcal{U} } \by{RAA}{20-49}
+        \close
+        \have {51} { A\in\mathcal{U}\lor A^c\in\mathcal{U} } \by{RAA}{19-50}
+        \have {52} { \text{Exactly one of } A\in\mathcal{U}
+            \text{ and } A^c\in\mathcal{U} } \by{51, intersection contradiction}{}
+        \close
+        \have {53} { \forall A\subseteq X \quad
+            \text{Exactly one of } A\in\mathcal{U}
+            \text{ and } A^c\in\mathcal{U} } \by{$\forall I$}{18-52}
+        \have {54} { \mathcal{U}\text{ is an ultrafilter} } \by{definition}{53}
+
+    \end{fitchproof}
 
 \end{proof}
+```
+
 
 Thus an ultrafilter makes a complete decision about every subset of $X$:
 exactly one of $A$ and $X- A$ is ``large''.
