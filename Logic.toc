@@ -51,38 +51,38 @@
 \contentsline {section}{\numberline {13.1}fantacy Integers``$\mathbb {Z} (Ord)$''}{143}{section.13.1}%
 \contentsline {section}{\numberline {13.2}fantacy Rational numbers ``$\mathbb {Q} (Ord) $''}{145}{section.13.2}%
 \contentsline {section}{\numberline {13.3}fantacy Real numbers ``$\mathbb {R} (Ord)$''}{147}{section.13.3}%
-\contentsline {section}{\numberline {13.4}fantacy Complex numbers``$\mathbb {C} (Ord)$''}{149}{section.13.4}%
+\contentsline {section}{\numberline {13.4}fantacy Complex numbers``$\mathbb {C} (Ord)$''}{150}{section.13.4}%
 \contentsline {chapter}{\numberline {14}hyperreal numbers($ {}^*\mathbb {N} , {}^*\mathbb {Z}, {}^*\mathbb {Q} , {}^*\mathbb {R} $) }{153}{chapter.14}%
 \contentsline {section}{\numberline {14.1}Filters}{153}{section.14.1}%
 \contentsline {section}{\numberline {14.2}Ultrafilters}{154}{section.14.2}%
-\contentsline {section}{\numberline {14.3}Nonprincipal Ultrafilters}{156}{section.14.3}%
-\contentsline {section}{\numberline {14.4}Definition of ${}^\ast \mathbb {N}$, ${}^\ast \mathbb {Z}$, ${}^\ast \mathbb {Q}$, ${}^\ast \mathbb {R}$ , and ${}^*\mathbb {R}_{Ord}$}{158}{section.14.4}%
-\contentsline {section}{\numberline {14.5}The Ultrapower Construction of the Hyperreals}{159}{section.14.5}%
-\contentsline {section}{\numberline {14.6}(Un)limited, Infinitesimal, and Appreciable Numbers}{163}{section.14.6}%
-\contentsline {section}{\numberline {14.7}Arithmetic of Hyperreals}{164}{section.14.7}%
-\contentsline {section}{\numberline {14.8}Halos, Galaxies, and Real Comparisons}{165}{section.14.8}%
-\contentsline {section}{\numberline {14.9}Standard Parts}{166}{section.14.9}%
-\contentsline {chapter}{\numberline {15}New beginning for calculus }{169}{chapter.15}%
-\contentsline {section}{\numberline {15.1}Limits}{169}{section.15.1}%
-\contentsline {section}{\numberline {15.2}Continuity}{175}{section.15.2}%
-\contentsline {section}{\numberline {15.3}Derivatives}{177}{section.15.3}%
-\contentsline {section}{\numberline {15.4}Partial Derivatives}{178}{section.15.4}%
-\contentsline {section}{\numberline {15.5}Riemann Integral}{179}{section.15.5}%
-\contentsline {chapter}{\numberline {16}Well-Ordered Integral{\small (more powerful than Lebesgue Integral)\small }}{183}{chapter.16}%
-\contentsline {chapter}{\numberline {17}New beginning for Probability and Measeure theory}{185}{chapter.17}%
-\contentsline {section}{\numberline {17.1}Finite Approach}{185}{section.17.1}%
-\contentsline {subsection}{\numberline {17.1.1}Expected Value in the Finite Approach}{187}{subsection.17.1.1}%
-\contentsline {section}{\numberline {17.2}Continuous Approach}{188}{section.17.2}%
-\contentsline {subsection}{\numberline {17.2.1}Expected Value in the Continuous Approach}{191}{subsection.17.2.1}%
-\contentsline {section}{\numberline {17.3}Nonstandard Approach}{200}{section.17.3}%
-\contentsline {section}{\numberline {17.4}Countable Probability}{202}{section.17.4}%
-\contentsline {section}{\numberline {17.5}Decision Theory}{204}{section.17.5}%
-\contentsline {subsection}{\numberline {17.5.1}The State Space}{204}{subsection.17.5.1}%
-\contentsline {subsection}{\numberline {17.5.2}The Action Space}{205}{subsection.17.5.2}%
-\contentsline {subsection}{\numberline {17.5.3}The Utility Function}{205}{subsection.17.5.3}%
-\contentsline {subsection}{\numberline {17.5.4}Probability on the State Space}{206}{subsection.17.5.4}%
-\contentsline {subsection}{\numberline {17.5.5}Expected Utility}{206}{subsection.17.5.5}%
-\contentsline {subsection}{\numberline {17.5.6}The Maximizing Action}{207}{subsection.17.5.6}%
-\contentsline {subsection}{\numberline {17.5.7}A Decision Problem with Infinitesimal Probabilities}{207}{subsection.17.5.7}%
-\contentsline {chapter}{\numberline {18}Measure}{211}{chapter.18}%
-\contentsline {section}{\numberline {18.1}Construction of Lebesgue Measure}{211}{section.18.1}%
+\contentsline {section}{\numberline {14.3}Nonprincipal Ultrafilters}{159}{section.14.3}%
+\contentsline {section}{\numberline {14.4}Definition of ${}^\ast \mathbb {N}$, ${}^\ast \mathbb {Z}$, ${}^\ast \mathbb {Q}$, ${}^\ast \mathbb {R}$ , and ${}^*\mathbb {R}_{Ord}$}{160}{section.14.4}%
+\contentsline {section}{\numberline {14.5}The Ultrapower Construction of the Hyperreals}{162}{section.14.5}%
+\contentsline {section}{\numberline {14.6}(Un)limited, Infinitesimal, and Appreciable Numbers}{166}{section.14.6}%
+\contentsline {section}{\numberline {14.7}Arithmetic of Hyperreals}{167}{section.14.7}%
+\contentsline {section}{\numberline {14.8}Halos, Galaxies, and Real Comparisons}{168}{section.14.8}%
+\contentsline {section}{\numberline {14.9}Standard Parts}{169}{section.14.9}%
+\contentsline {chapter}{\numberline {15}New beginning for calculus }{173}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Limits}{173}{section.15.1}%
+\contentsline {section}{\numberline {15.2}Continuity}{179}{section.15.2}%
+\contentsline {section}{\numberline {15.3}Derivatives}{181}{section.15.3}%
+\contentsline {section}{\numberline {15.4}Partial Derivatives}{182}{section.15.4}%
+\contentsline {section}{\numberline {15.5}Riemann Integral}{183}{section.15.5}%
+\contentsline {chapter}{\numberline {16}Well-Ordered Integral{\small (more powerful than Lebesgue Integral)\small }}{187}{chapter.16}%
+\contentsline {chapter}{\numberline {17}New beginning for Probability and Measeure theory}{189}{chapter.17}%
+\contentsline {section}{\numberline {17.1}Finite Approach}{189}{section.17.1}%
+\contentsline {subsection}{\numberline {17.1.1}Expected Value in the Finite Approach}{191}{subsection.17.1.1}%
+\contentsline {section}{\numberline {17.2}Continuous Approach}{192}{section.17.2}%
+\contentsline {subsection}{\numberline {17.2.1}Expected Value in the Continuous Approach}{195}{subsection.17.2.1}%
+\contentsline {section}{\numberline {17.3}Nonstandard Approach}{204}{section.17.3}%
+\contentsline {section}{\numberline {17.4}Countable Probability}{206}{section.17.4}%
+\contentsline {section}{\numberline {17.5}Decision Theory}{208}{section.17.5}%
+\contentsline {subsection}{\numberline {17.5.1}The State Space}{208}{subsection.17.5.1}%
+\contentsline {subsection}{\numberline {17.5.2}The Action Space}{209}{subsection.17.5.2}%
+\contentsline {subsection}{\numberline {17.5.3}The Utility Function}{209}{subsection.17.5.3}%
+\contentsline {subsection}{\numberline {17.5.4}Probability on the State Space}{210}{subsection.17.5.4}%
+\contentsline {subsection}{\numberline {17.5.5}Expected Utility}{210}{subsection.17.5.5}%
+\contentsline {subsection}{\numberline {17.5.6}The Maximizing Action}{211}{subsection.17.5.6}%
+\contentsline {subsection}{\numberline {17.5.7}A Decision Problem with Infinitesimal Probabilities}{211}{subsection.17.5.7}%
+\contentsline {chapter}{\numberline {18}Measure}{215}{chapter.18}%
+\contentsline {section}{\numberline {18.1}Construction of Lebesgue Measure}{215}{section.18.1}%
