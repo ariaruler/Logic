@@ -9557,74 +9557,6 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
 \end{proof}
 
 
-% \begin{proof}
-%     Let
-%     $
-%         \mathcal{P}=\{\mathcal{G}:\mathcal{G}\text{ is a filter on }S\text{ and }\mathcal{F}\subseteq\mathcal{G}\}.
-%     $
-%     We partially order $\mathcal{P}$ by inclusion. Let
-%     $\mathcal{C}\subseteq\mathcal{P}$ be a chain and define
-%     \[
-%         \mathcal{H} :=\bigcup_{\mathcal{G}\in\mathcal{C}}\mathcal{G}.
-%     \]
-%     Clearly $\emptyset\notin\mathcal{H}$ and $S\in\mathcal{H}$. If
-%     $A,B\in\mathcal{H}$, then $A\in\mathcal{G}_1$ and $B\in\mathcal{G}_2$ for some
-%     $\mathcal{G}_1,\mathcal{G}_2\in\mathcal{C}$. Since $\mathcal{C}$ is a chain,
-%     one of $\mathcal{G}_1\subseteq\mathcal{G}_2$ or
-%     $\mathcal{G}_2\subseteq\mathcal{G}_1$ holds, so $A,B$ belong to the larger
-%     filter and hence
-%     $
-%         A\cap B\in\mathcal{H}.
-%     $
-%     If $A\in\mathcal{H}$ and $A\subseteq B\subseteq S$, then $A\in\mathcal{G}$ for
-%     some $\mathcal{G}\in\mathcal{C}$, and since $\mathcal{G}$ is a filter,
-%     $B\in\mathcal{G}\subseteq\mathcal{H}$. Thus $\mathcal{H}$ is a filter.
-%     Moreover,
-%     $
-%         \mathcal{F}\subseteq\mathcal{H},
-%     $
-%     so $\mathcal{H}\in\mathcal{P}$. Therefore every chain in $\mathcal{P}$ has an
-%     upper bound, and by Zorn's Lemma, $\mathcal{P}$ has a maximal element, say
-%     $\mathcal{U}$.
-
-%     We claim that $\mathcal{U}$ is an ultrafilter. Suppose
-%     $\mathcal{U}\subseteq\mathcal{V}$, where $\mathcal{V}$ is a filter on $S$. Then
-%     $
-%         \mathcal{F}\subseteq\mathcal{U}\subseteq\mathcal{V},
-%     $
-%     so $\mathcal{V}\in\mathcal{P}$. By the maximality of $\mathcal{U}$,
-%     $
-%         \mathcal{V}=\mathcal{U}.
-%     $
-%     Therefore $\mathcal{U}$ is an ultrafilter extending $\mathcal{F}$.
-% \end{proof}
-
-
-
-
-
-% \begin{proof}
-%     Let $\mathcal{U}$ be a nonprincipal ultrafilter on $S$. Suppose, for a
-%     contradiction, that there exists a finite set $A\in\mathcal{U}$.
-%     Since $\mathcal{U}$ is nonprincipal, for every $x\in A$ we have
-%     $
-%         \{x\}\notin\mathcal{U}
-%         \therefore
-%         S-\{x\}\in\mathcal{U}.
-%     $
-%     Since $A$ is finite, it follows that
-%     $
-%         S-A=\bigcap_{x\in A}(S-\{x\})\in\mathcal{U}.
-%     $
-%     Thus
-%     $
-%         A\cap(S-A)=\emptyset\in\mathcal{U},
-%     $
-%     which is a contradiction. Therefore $\mathcal{U}$ contains no finite set.
-
-%     Conversely, if $\mathcal{U}$ contains no finite set, then it contains no
-%     singleton. Hence it is nonprincipal.
-% \end{proof}
 
 
 
@@ -9677,8 +9609,8 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
         \by{definition}{}
         
         \open
-        \have {18} { \mathcal{U}\text{ contains no finite set} } \by{acp}{}
-        \have {18} { \mathcal{U}\text{ contains no singleton} }
+        \have {18} { \mathcal{U}\text{ contains a singleton} }
+        \have {18} { \mathcal{U}\text{ contains a finite set} } \by{acp}{}
         
         \close
         \have {24} { \mathcal{U}\text{ is nonprincipal}
@@ -9737,54 +9669,6 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
 \end{proof}
 
 
-\begin{theorem}
-    Let $\mathcal{U}$ be a nonprincipal ultrafilter on $S$. Then
-    $
-        \mathcal{F}_{\mathrm{Fr}} \subseteq\mathcal{U}.
-    $
-    That is, every cofinite subset of $S$ belongs to $\mathcal{U}$.
-\end{theorem}
-
-\begin{proof}
-    Let $A\in\mathcal{F}_{\mathrm{Fr}}$. Then $S- A$ is finite. Suppose, toward a contradiction, that $A\notin\mathcal{U}$. Since $\mathcal{U}$ is an ultrafilter, exactly one of
-    \[
-        A\in\mathcal{U},
-        \quad
-        \text{or}
-        \quad
-        S- A\in\mathcal{U}
-    \]
-    holds. Hence $S- A\in\mathcal{U}$. Thus $\mathcal{U}$ contains
-    a finite set, say
-    $
-        F=\{n_1,\ldots,n_k\}\in\mathcal{U}.
-    $
-
-    Suppose that $\{n_i\}\notin\mathcal{U}$ for every $i$. Then, since
-    $\mathcal{U}$ is an ultrafilter,
-    $
-        S-\{n_i\}\in\mathcal{U}
-    $
-    for every $i$. By closure under finite intersections,
-    \[
-        S- F
-        =
-        \bigcap_{i=1}^k(S-\{n_i\})
-        \in\mathcal{U}.
-    \]
-    Since also $F\in\mathcal{U}$, we obtain
-    $
-        F\cap(S- F)=\emptyset\in\mathcal{U},
-    $
-    a contradiction. Therefore $\{n_i\}\in\mathcal{U}$ for some $i$, so
-    $\mathcal{U}$ is principal, contradicting our assumption.
-
-    Hence $A\in\mathcal{U}$. Since $A$ was arbitrary,
-    $
-        \mathcal{F}_{\mathrm{Fr}}\subseteq\mathcal{U}.
-    $
-\end{proof}
-
 
 
 \begin{proof} $\quad$ \\
@@ -9811,7 +9695,7 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
         \have {10} { \bot } \by{2,9}{}
         \close
 
-        \have {11} { A\in\mathcal{U} } \by{RAA}{6,10}
+        \have {11} { A\in\mathcal{U} } 
 
         \close
 
@@ -9826,7 +9710,7 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
 \section{Definition of ${}^\ast\mathbb{N}$, ${}^\ast\mathbb{Z}$, ${}^\ast\mathbb{Q}$,  ${}^\ast\mathbb{R}$ , and ${}^*\mathbb{R}_{Ord}$}
 
 \begin{definition}[Ultrapower Construction]
-    Let $X$ be a set and let $\mathcal{U}$ be a nonprincipal ultrafilter on $\omega$. Consider the set
+    Let $X$ be a set and let $\mathcal{U}$ be a nonprincipal ultrafilter on $\mathbb{N}$ or $Ord$. Consider the set
     $
         X^ \mathbb{N} 
     $
