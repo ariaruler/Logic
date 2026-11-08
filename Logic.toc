@@ -56,12 +56,12 @@
 \contentsline {section}{\numberline {14.1}Filters}{153}{section.14.1}%
 \contentsline {section}{\numberline {14.2}Ultrafilters}{154}{section.14.2}%
 \contentsline {section}{\numberline {14.3}Nonprincipal Ultrafilters}{159}{section.14.3}%
-\contentsline {section}{\numberline {14.4}Definition of ${}^\ast \mathbb {N}$, ${}^\ast \mathbb {Z}$, ${}^\ast \mathbb {Q}$, ${}^\ast \mathbb {R}$ , and ${}^*\mathbb {R}_{Ord}$}{160}{section.14.4}%
-\contentsline {section}{\numberline {14.5}The Ultrapower Construction of the Hyperreals}{162}{section.14.5}%
+\contentsline {section}{\numberline {14.4}Definition of ${}^\ast \mathbb {N}$, ${}^\ast \mathbb {Z}$, ${}^\ast \mathbb {Q}$, ${}^\ast \mathbb {R}$ , and ${}^*\mathbb {R}_{Ord}$}{161}{section.14.4}%
+\contentsline {section}{\numberline {14.5}The Ultrapower Construction of the Hyperreals}{163}{section.14.5}%
 \contentsline {section}{\numberline {14.6}(Un)limited, Infinitesimal, and Appreciable Numbers}{166}{section.14.6}%
-\contentsline {section}{\numberline {14.7}Arithmetic of Hyperreals}{167}{section.14.7}%
-\contentsline {section}{\numberline {14.8}Halos, Galaxies, and Real Comparisons}{168}{section.14.8}%
-\contentsline {section}{\numberline {14.9}Standard Parts}{169}{section.14.9}%
+\contentsline {section}{\numberline {14.7}Arithmetic of Hyperreals}{168}{section.14.7}%
+\contentsline {section}{\numberline {14.8}Halos, Galaxies, and Real Comparisons}{169}{section.14.8}%
+\contentsline {section}{\numberline {14.9}Standard Parts}{170}{section.14.9}%
 \contentsline {chapter}{\numberline {15}New beginning for calculus }{173}{chapter.15}%
 \contentsline {section}{\numberline {15.1}Limits}{173}{section.15.1}%
 \contentsline {section}{\numberline {15.2}Continuity}{179}{section.15.2}%
