@@ -61,7 +61,7 @@
 \contentsline {section}{\numberline {14.6}(Un)limited, Infinitesimal, and Appreciable Numbers}{166}{section.14.6}%
 \contentsline {section}{\numberline {14.7}Arithmetic of Hyperreals}{168}{section.14.7}%
 \contentsline {section}{\numberline {14.8}Halos, Galaxies, and Real Comparisons}{169}{section.14.8}%
-\contentsline {section}{\numberline {14.9}Standard Parts}{169}{section.14.9}%
+\contentsline {section}{\numberline {14.9}Standard Parts}{170}{section.14.9}%
 \contentsline {section}{\numberline {14.10}Definition of ${}^\ast \mathbb {N}_{Ord}$, ${}^\ast \mathbb {Z}_{Ord}$, ${}^\ast \mathbb {Q}_{Ord}$, ${}^\ast \mathbb {R}_{Ord}$ }{171}{section.14.10}%
 \contentsline {chapter}{\numberline {15}New beginning for calculus }{173}{chapter.15}%
 \contentsline {section}{\numberline {15.1}Limits}{173}{section.15.1}%
