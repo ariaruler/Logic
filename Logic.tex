@@ -48,6 +48,10 @@
 \newtheorem{remark}{Remark}[section]
 \makeatletter
 
+\newenvironment{sketchofproof}
+    {\begin{proof}[Sketch of Proof]}
+    {\end{proof}}
+
 
 \renewcommand{\arraystretch}{1.2} % 2x standard row height
 
@@ -838,7 +842,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
 
 
 \begin{definition}
-    
+
     \textbf{$\varphi \veebar\psi$} : $(\varphi \lor \psi) \land \neg ( \varphi \land \psi)$
 
 \end{definition}
@@ -3370,7 +3374,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
         \item $Func(f)  / \therefore f^{-1}[B-C]=f^{-1}[B]-f^{-1}[C]$.
         \item $Func(f)  / \therefore f[A]-f[B] \subseteq   f[A-B]$.
         \item $f:A\xrightarrow{inj}B , C\subseteq A / \therefore f[A - C]=f[A]-f[C]$ .
-        \item $f:A\to B , g:B\to C \therefore / \therefore (g\circ f)[A]=g[f[A]]$.
+        \item $  (S \circ R )[A]= S [ R[A]]$.
         \item $\bigcup_{i\in I}(A_i\cap B_i)\subseteq
                   \left(\bigcup_{i \in I}A_i\right)\cap
                   \left(\bigcup_{i \in I}B_i\right)$.
@@ -5936,7 +5940,7 @@ denote every $[(a_i)_{i \in \mathbb{N}}]$ with $[a_i]_{i \in \mathbb{N}}$.
     \have {14} {  (b_i)_{i \in \mathbb{N}} \sim (c_i)_{i\in \mathbb{N}} }        \by{$ass$}{}
     \have {14} {\forall \varepsilon \in \mathbb{Q}^+ \quad \exists N \quad \forall n > N \quad | a_n - b_n | < \varepsilon}      \by{$def. \sim $}{}
     \have {14} {\forall \varepsilon \in \mathbb{Q}^+ \quad \exists N \quad \forall n > N \quad | b_n - c_n | < \varepsilon}      \by{$def. \sim $}{}
-    
+
     \open
     \have {14} { \frac{\varepsilon }{ 2} > 0 \land \frac{\varepsilon }{ 2} \in \mathbb{Q}  }      \by{acp}{}
     \have {14} {  \exists N \quad \forall n > N \quad | b_n - c_n | < \frac{\varepsilon}{2} }      \by{$def. \sim $}{}
@@ -8897,7 +8901,7 @@ denote every $[(a_i)_{i \in Ord}]$ with $[a_i]_{i \in Ord}$.
     \have {14} {  (b_i)_{i \in Ord} \sim (c_i)_{i\in Ord} }        \by{$ass$}{}
     \have {14} {\forall \varepsilon \in \mathbb{Q}^+ (Ord) \quad \exists N \quad \forall n > N \quad | a_n - b_n | < \varepsilon}      \by{$def. \sim $}{}
     \have {14} {\forall \varepsilon \in \mathbb{Q}^+ (Ord) \quad \exists N \quad \forall n > N \quad | b_n - c_n | < \varepsilon}      \by{$def. \sim $}{}
-    
+
     \open
     \have {14} { \frac{\varepsilon }{ 2} > 0 \land \frac{\varepsilon }{ 2} \in \mathbb{Q} (Ord)  }      \by{acp}{}
     \have {14} {  \exists N \quad \forall n > N \quad | b_n - c_n | < \frac{\varepsilon}{2} }      \by{$def. \sim $}{}
@@ -9222,7 +9226,7 @@ set is also large.
 \end{example}
 \begin{example}[Fr\'echet Filter]
 
-     Define
+    Define
 
     $$
         \mathcal{F}_{\mathrm{Fr}} := \{A \subseteq S \mid  A^c \text{ is finite}\}.
@@ -9285,7 +9289,7 @@ There is an important characterization of ultrafilters in terms of maximality.
         \close
         \open
         \have {9} { A \notin \mathcal{U} } \by{set difference}{}
-        \have {10} { A^c\in\mathcal{U} } 
+        \have {10} { A^c\in\mathcal{U} }
         \have {11} { A^c\in\mathcal{F} } \by{$\subseteq E$}{}
         \have {12} { A \cap (A^c) \in \mathcal{F} } \by{$\mathcal{F}$ is a filter}{}
         \have {13} { \emptyset\in\mathcal{F} } \by{set equality}{}
@@ -9294,47 +9298,47 @@ There is an important characterization of ultrafilters in terms of maximality.
         \close
         \have {9} { A \in \mathcal{U} } \by{$\lor E$}{}
         \close
-        
+
         \have {15} { \mathcal{U}=\mathcal{F} } \by{RAA}{}
         \close
-        \have {15} {  \mathcal{U}\subseteq\mathcal{F} \to \mathcal{U}=\mathcal{F} } 
+        \have {15} {  \mathcal{U}\subseteq\mathcal{F} \to \mathcal{U}=\mathcal{F} }
         \close
         \have {16} { \mathcal{U} \ is \ maximal } \by{definition}{}
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
     \end{fitchproof}
-    
-    
-    
-    
+
+
+
+
     \begin{fitchproof}[arrayenv=tabular]
-        
+
         \have {17} { \mathcal{U}\text{ is maximal} } \by{ass}{}
         \open
         \have {18} { A\subseteq S } \by{acp}{}
         \open
         \have {19} { A\notin\mathcal{U} } \by{acp}{}
         \have {20} { A^c\notin\mathcal{U} } \by{acp}{}
-        \have {27} { \mathcal{G} := \{B\subseteq S \mid \exists F\in\mathcal{U}\;(F\cap A\subseteq B)\}} 
+        \have {27} { \mathcal{G} := \{B\subseteq S \mid \exists F\in\mathcal{U}\;(F\cap A\subseteq B)\}}
         \have  {29} { \emptyset\notin\mathcal{G} }                               \by{claim 0}{}
         \have  {28} { S\in\mathcal{G} } \by{ filter definition}{}                  \by{claim 1}{}
         \have  {46} { \forall B , C \in\mathcal{G} \quad B \cap C \in\mathcal{G} }         \by{claim 2}{}
         \have  {46} { \forall B \in \mathcal{G} \ \forall  C  \subseteq S  \quad B \cap C \in\mathcal{G} }  \by{claim 3}{}
         \have  {47} { \mathcal{G} \ is \ a \ filter \ on \ S } \by{filter definition}{}
-        
+
         \open
         \have  {30} { B\in\mathcal{U} } \by{acp}{}
         \have  {31} { B\cap A\subseteq B } \by{set theory}{}
-        \have  {32} { B\in\mathcal{G} } 
+        \have  {32} { B\in\mathcal{G} }
         \close
         \have  {33} { \mathcal{U}\subseteq\mathcal{G} } \by{$\subseteq I$}{}
-        
-        \have  {34} { A\in\mathcal{G} } 
-        \have  {35} { A\notin\mathcal{U} } 
+
+        \have  {34} { A\in\mathcal{G} }
+        \have  {35} { A\notin\mathcal{U} }
         \have  {36} { \mathcal{U} \subset \mathcal{G} }
         \have  {49} { \bot }                                      \by{Contradiction with maximality of $\mathcal{U}$}{}
         \close
@@ -9368,7 +9372,7 @@ There is an important characterization of ultrafilters in terms of maximality.
 
         \have  {25} { \bot } \by{$\neg E$}{}
         \close
-        \have  {29} { \emptyset\notin\mathcal{G} } 
+        \have  {29} { \emptyset\notin\mathcal{G} }
         \close
         \close
 
@@ -9383,7 +9387,7 @@ There is an important characterization of ultrafilters in terms of maximality.
         \open
         \open
         \have  {31} { S \cap A\subseteq S } \by{set theory}{}
-        \have  {39} { \exists F\in\mathcal{U} \ (F \cap A\subseteq S) } 
+        \have  {39} { \exists F\in\mathcal{U} \ (F \cap A\subseteq S) }
         \have  {28} { S\in\mathcal{G} } \by{ filter definition}{}
 
     \end{fitchproof}
@@ -9407,20 +9411,20 @@ There is an important characterization of ultrafilters in terms of maximality.
         \have  {42} { H\in\mathcal{U} \land H\cap A\subseteq C } \by{$acp$}{}
         \have  {43} { F\cap H\in\mathcal{U} }                  \by{ filter definition}{}
         \have  {44} { (F\cap H)\cap A\subseteq B\cap C } \by{set theory}{}
-        \have  {45} { B\cap C\in\mathcal{G} } 
+        \have  {45} { B\cap C\in\mathcal{G} }
         \close
         \have  {46} { B\cap C\in\mathcal{G} } \by{$\exists E$}{}
         \close
         \have  {46} { B\cap C\in\mathcal{G} } \by{$\exists E$}{}
         \close
-        \have  {46} { \forall B , C \in\mathcal{G} \quad B \cap C \in\mathcal{G} } 
+        \have  {46} { \forall B , C \in\mathcal{G} \quad B \cap C \in\mathcal{G} }
 
     \end{fitchproof}
 
     \textbf{Claim 3 : $ \forall B \in \mathcal{G} \ \forall  C  \subseteq S  \quad B \cap C \in\mathcal{G}$}
 
 
-        \begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
         \open
         \open
@@ -9434,11 +9438,11 @@ There is an important characterization of ultrafilters in terms of maximality.
         \have  {41} { F\in\mathcal{U} \land F\cap A\subseteq B } \by{$acp$}{}
 
         \have  {43} { F\cap A \subseteq C }                   \by{set theory}{}
-        \have  {45} {  C\in\mathcal{G} }                    
+        \have  {45} {  C\in\mathcal{G} }
         \close
         \have  {45} {  C\in\mathcal{G} }                   \by{$\exists E$}{}
         \close
-        \have  {46} { \forall B \in \mathcal{G} \ \forall  C  \subseteq S  \quad B \cap C \in\mathcal{G} } 
+        \have  {46} { \forall B \in \mathcal{G} \ \forall  C  \subseteq S  \quad B \cap C \in\mathcal{G} }
         \have  {47} { \mathcal{G} \ is \ a \ filter \ on \ S } \by{filter definition}{}
         \close
 
@@ -9492,8 +9496,8 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
         \have {1} { \mathcal{F} \text{ is a filter on } S } \by{ass}{}
 
         \have {2} { \mathcal{P} =
-        \{\mathcal{G} \mid \mathcal{G}\text{ is a filter on }S
-        \land \mathcal{F}\subseteq\mathcal{G}\} } \by{definition}{}
+            \{\mathcal{G} \mid \mathcal{G}\text{ is a filter on }S
+            \land \mathcal{F}\subseteq\mathcal{G}\} } \by{definition}{}
 
         \have {3} { \mathcal{F}\in\mathcal{P} } \by{definition}{1,2}
         \have {4} { \mathcal{P}\neq\emptyset } \by{set definition}{3}
@@ -9510,17 +9514,17 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
         \open
         \have {9} { A,B\in\mathcal{H} } \by{acp}{}
         \have {10} { \exists \mathcal{G}_1,\mathcal{G}_2\in\mathcal{C} \ A\in\mathcal{G}_1 \land B\in\mathcal{G}_2  } \by{union definition}{6,9}
-        
+
         \open
         \have {11} { \mathcal{G}_1\subseteq\mathcal{G}_2
-        \lor \mathcal{G}_2\subseteq\mathcal{G}_1 }
+            \lor \mathcal{G}_2\subseteq\mathcal{G}_1 }
         \by{chain definition}{5}
 
         \have {12} { A,B\in\mathcal{G}_1
-        \lor A,B\in\mathcal{G}_2 } \by{11,10}{}
+            \lor A,B\in\mathcal{G}_2 } \by{11,10}{}
 
         \have {13} { A\cap B\in\mathcal{G}_1
-        \lor A\cap B\in\mathcal{G}_2 } \by{filter definition}{12}
+            \lor A\cap B\in\mathcal{G}_2 } \by{filter definition}{12}
 
         \have {14} { A\cap B\in\mathcal{H} } \by{union definition}{6,13}
         \close
@@ -9585,14 +9589,14 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
         \have {6} { x\in A } \by{acp}{}
         \have {7} { \{x\}\notin\mathcal{U} } \by{$\forall E$}{}
         \have {8} { \{x\}\in\mathcal{U}\veebar
-        \{x\}^c\in\mathcal{U} } \by{ultrafilter characterization}{}
+            \{x\}^c\in\mathcal{U} } \by{ultrafilter characterization}{}
         \have {9} { \{x\}^c \in\mathcal{U} } \by{$\veebar E$}{}
         \close
 
-        \have {11} { 
-        \bigcap_{x\in A} \{x\}^c \in\mathcal{U} }
+        \have {11} {
+            \bigcap_{x\in A} \{x\}^c \in\mathcal{U} }
         \by{finite intersection closure}{3,10}
-        
+
         \have {10} {  \emptyset = \bigcap_{x\in A}  \{x\}^c   } \by{$\forall I$}{}
 
         \have {14} { \emptyset\in\mathcal{U} } \by{set equality}{13}
@@ -9603,19 +9607,19 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
         \have {18} { \mathcal{U}\text{ contains no finite set} }
         \close
 
-        
+
         \close
-        
+
         \by{definition}{}
-        
+
         \open
         \have {18} { \mathcal{U}\text{ contains a singleton} }
         \have {18} { \mathcal{U}\text{ contains a finite set} } \by{acp}{}
-        
+
         \close
         \have {24} { \mathcal{U}\text{ is nonprincipal}
-        \leftrightarrow
-        \mathcal{U}\text{ contains no finite set} }
+            \leftrightarrow
+            \mathcal{U}\text{ contains no finite set} }
         \by{$\leftrightarrow I$}{17,23}
 
     \end{fitchproof}
@@ -9631,7 +9635,7 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
 
 \begin{lemma}
     If an ultrafilter on a set $S$ contains a finite set then it's principal.
-        \label{finite set principal ultrafilter }
+    \label{finite set principal ultrafilter }
 \end{lemma}
 
 
@@ -9640,7 +9644,7 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
     \begin{fitchproof}[arrayenv=tabular]
 
         \have {1} { \mathcal{U} \text{ is an ultrafilter on } S } \by{ass}{}
-        \have {1} { \mathcal{U} \text{ contains a finite set }  } \by{ass}{} 
+        \have {1} { \mathcal{U} \text{ contains a finite set }  } \by{ass}{}
         \have {1} { \mathcal{U} \text{ contains a singleton }  }   \by{lemma $\ref{finite set singleton ultrafilter }$}{}
 
         \open
@@ -9649,21 +9653,21 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
         \have {3} { A \in \mathcal{U}  } \by{acp}{}
         \open
         \have {3} { \{ x \} \nsubseteq A  } \by{acp}{}
-        \have {3} { \{ x \} \cap A = \emptyset  } 
-        \have {3} { \bot } 
+        \have {3} { \{ x \} \cap A = \emptyset  }
+        \have {3} { \bot }
         \close
-        
-        \have {3} { \{ x \} \subseteq A  } 
-        \have {3} {  A  \in  \{  B \subseteq S \mid \{ x \} \subseteq B \}   } 
+
+        \have {3} { \{ x \} \subseteq A  }
+        \have {3} {  A  \in  \{  B \subseteq S \mid \{ x \} \subseteq B \}   }
         \close
-        
-        \have {3} { \mathcal{U} = \{  B \subseteq S \mid \{ x \} \subseteq B \}  } 
-        \have {3} { \mathcal{U} \text{ is principal}   } 
+
+        \have {3} { \mathcal{U} = \{  B \subseteq S \mid \{ x \} \subseteq B \}  }
+        \have {3} { \mathcal{U} \text{ is principal}   }
         \close
-        \have {3} { \mathcal{U} \text{ is principal}   } 
+        \have {3} { \mathcal{U} \text{ is principal}   }
         \close
-        
-       
+
+
     \end{fitchproof}
 
 \end{proof}
@@ -9688,14 +9692,14 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
         \open
         \have {6} { A\notin\mathcal{U} } \by{ass}{}
         \have {7} { A\in\mathcal{U}\veebar
-        A^c \in\mathcal{U} } \by{ultrafilter characterization}{1}
+            A^c \in\mathcal{U} } \by{ultrafilter characterization}{1}
         \have {8} { A^c \in\mathcal{U} } \by{$\veebar E$}{6,7}
         \have {9} { A^c \text{ is a finite set in }\mathcal{U} }
         \by{conjunction}{5,8}
         \have {10} { \bot } \by{2,9}{}
         \close
 
-        \have {11} { A\in\mathcal{U} } 
+        \have {11} { A\in\mathcal{U} }
 
         \close
 
@@ -9707,12 +9711,12 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
 \end{proof}
 
 
-\section{Definition of ${}^\ast\mathbb{N}$, ${}^\ast\mathbb{Z}$, ${}^\ast\mathbb{Q}$,  ${}^\ast\mathbb{R}$ , and ${}^*\mathbb{R}_{Ord}$}
+\section{Definition of ${}^\ast\mathbb{N}$, ${}^\ast\mathbb{Z}$, ${}^\ast\mathbb{Q}$,  ${}^\ast\mathbb{R}$ }
 
 \begin{definition}[Ultrapower Construction]
     Let $X$ be a set and let $\mathcal{U}$ be a nonprincipal ultrafilter on $\mathbb{N}$ or $Ord$. Consider the set
     $
-        X^ \mathbb{N} 
+        X^ \mathbb{N}
     $
     of all functions $a: \mathbb{N} \to X$. We usually write such a function as
     $
@@ -9735,41 +9739,67 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
 \end{definition}
 
 \begin{theorem}
-    The relation $\sim$ is an equivalence relation on $X^ \mathbb{N} $.
+    The relation $\sim$ is an equivalence relation on $S^ \mathbb{N} $.
 \end{theorem}
 
-\begin{proof}
-    \textbf{Reflexivity.} For every $a\in S^ \mathbb{N} $,
-    \[
-        \{i\in \mathbb{N} \mid a_i=a_i\}= \mathbb{N} \in\mathcal{U},
-    \]
-    so $a\sim a$.
 
-    \textbf{Symmetry.} If $a\sim b$, then
-    \[
-        \{i\in \mathbb{N} \mid a_i=b_i\}
-        =
-        \{i\in \mathbb{N} \mid b_i=a_i\},
-    \]
-    so $b\sim a$.
 
-    \textbf{Transitivity.} Suppose $a\sim b$ and $b\sim c$. Then
-    \[
-        A=\{i\in \mathbb{N} \mid a_i=b_i\}\in\mathcal{U},
-        \qquad
-        B=\{i\in \mathbb{N} \mid b_i=c_i\}\in\mathcal{U}.
-    \]
-    Since $\mathcal{U}$ is a filter, $A\cap B\in\mathcal{U}$. If $i\in A\cap B$,
-    then $a_i=b_i=c_i$, so
-    \[
-        A\cap B\subseteq\{i\in \mathbb{N} \mid a_i=c_i\}.
-    \]
-    Since $\mathcal{U}$ is closed upward,
-    \[
-        \{i\in \mathbb{N} \mid a_i=c_i\}\in\mathcal{U},
-    \]
-    and therefore $a\sim c$.
+\begin{proof} $\quad$ \\
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \have {1} { \mathcal{U}\text{ is a filter on }\mathbb{N} } \by{ass}{}
+        \have {2} { \mathbb{N}\in\mathcal{U} } \by{filter definition}{1}
+
+    \end{fitchproof}
+    \textbf{Reflexivity.}
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \open
+        \have {3} { a\in S^\mathbb{N} } \by{ass}{}
+        \have {4} { \{i\in\mathbb{N}\mid a_i=a_i\}=\mathbb{N} } \by{equality}{}
+        \have {5} { \{i\in\mathbb{N}\mid a_i=a_i\}\in\mathcal{U} } \by{set equality}{2,4}
+        \have {6} { a\sim a }  \by{definition of $\sim{5}$ }{}
+        \close
+    \end{fitchproof}
+    \textbf{Symmetry.}
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \open
+        \have {7} { a,b\in S^\mathbb{N} } \by{ass}{}
+        \open
+        \have {8} { a\sim b } \by{ass}{}
+        \have {9} { \{i\in\mathbb{N}\mid a_i=b_i\}\in\mathcal{U} }  \by{definition of $\sim$ }{}
+        \have {10} { \{i\in\mathbb{N}\mid a_i=b_i\}  =\{i\in\mathbb{N}\mid b_i=a_i\} } \by{equality}{}
+        \have {11} { \{i\in\mathbb{N}\mid b_i=a_i\}\in\mathcal{U} }  \by{set equality}{9,10}
+        \have {12} { b\sim a } \by{definition of $\sim{11}$ }{}
+        \close
+        \close
+
+    \end{fitchproof}
+    \textbf{Transitivity.}
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \open
+        \have {13} { a,b,c\in S^\mathbb{N} } \by{ass}{}
+        \open
+        \have {14} { a\sim b } \by{ass}{}
+        \have {15} { b\sim c } \by{ass}{}
+        \have {16} { A :=\{i\in\mathbb{N}\mid a_i=b_i\}\in\mathcal{U} } \by{definition of $\sim$ }{}
+        \have {17} { B :=\{i\in\mathbb{N}\mid b_i=c_i\}\in\mathcal{U} } \by{definition of $\sim$ }{}
+        \have {18} { A\cap B\in\mathcal{U} } \by{finite intersection closure}{1,16,17}
+        \have {19} { A\cap B\subseteq \{i\in\mathbb{N}\mid a_i=c_i\} } \by{equality}{}
+        \have {20} { \{i\in\mathbb{N}\mid a_i=c_i\}\in\mathcal{U} }  \by{upward closure}{18,19}
+        \have {21} { a\sim c } \by{definition of $\sim$ }{}
+        \close
+        \close
+
+    \end{fitchproof}
+
 \end{proof}
+
+
+
 
 \begin{definition}
     The quotient
@@ -9810,13 +9840,7 @@ We now apply this construction to the standard number systems.
     \]
 \end{definition}
 
-\begin{definition}[The Structure ${}^*\mathbb{R}_{Ord}$]
-    For each ordinal $\alpha$, let ${}^*\mathbb{R}_\alpha$ denote the corresponding stage of hyperreal extension. Define
-    $$
-        {}^*\mathbb{R}_{Ord}:=\bigcup_{\alpha\in\mathrm{Ord}}{}^*\mathbb{R}_\alpha.
-    $$
-    Since $\mathrm{Ord}\subseteq{}^*\mathbb{R}_{Ord}$, every ordinal $\beta$ is itself an element of ${}^*\mathbb{R}_{Ord}$. In particular, given $N\in{}^*\mathbb{R}_{Ord}$ and the index set $\{0,\ldots,N-1\}\subseteq{}^*\mathbb{R}_{Ord}$, we say $i\in\{0,\ldots,N-1\}$ \textbf{is an ordinal} if $i\in\mathrm{Ord}$ (as opposed to $i$ being a non-ordinal element of some ${}^*\mathbb{R}_\alpha$).
-\end{definition}
+
 
 The algebraic operations are defined componentwise. For example, if
 $[a],[b]\in{}^\ast\mathbb{R}$, then
@@ -9911,39 +9935,6 @@ Thus, for example, \(\llbracket r<s\rrbracket\in\mathcal F\) means that
 \(r_n<s_n\) for \(\mathcal F\)-almost all \(n\). We call these sets the
 \textbf{Statement Values} of the corresponding statements.
 
-\begin{theorem}
-
-    The relation \(\sim\) is an equivalence relation on \(\mathbb R^{\mathbb N}\).
-
-\end{theorem}
-
-\begin{proof}
-
-    For every \(r\in\mathbb R^{\mathbb N}\), \(\llbracket r=r\rrbracket=\mathbb
-    N\in\mathcal F\), so \(r\sim r\).
-
-    If \(r\sim s\), then \(\llbracket r=s\rrbracket=\llbracket
-    s=r\rrbracket\in\mathcal F\), so \(s\sim r\).
-
-    Finally, suppose \(r\sim s\) and \(s\sim t\). Then \(\llbracket
-    r=s\rrbracket,\llbracket s=t\rrbracket\in\mathcal F\), so
-
-    $$
-        \llbracket r=s\rrbracket\cap\llbracket s=t\rrbracket\in\mathcal F.
-    $$
-
-    Since
-
-    $$
-        \llbracket r=s\rrbracket\cap\llbracket s=t\rrbracket
-        \subseteq
-        \llbracket r=t\rrbracket,
-    $$
-
-    and \(\mathcal F\) is closed upward, \(\llbracket r=t\rrbracket\in\mathcal F\).
-    Hence \(r\sim t\).
-
-\end{proof}
 
 \begin{definition}
 
@@ -9973,7 +9964,7 @@ Thus, for example, \(\llbracket r<s\rrbracket\in\mathcal F\) means that
 
     $$
         [r]<[s]
-        \leftrightarrow
+        :
         \llbracket r<s\rrbracket\in\mathcal F.
     $$
 
@@ -9986,7 +9977,7 @@ $$
     [r]<[s]\leftrightarrow[r']<[s'].
 $$
 
-\begin{theorem}[Almost-All Criterion]
+\begin{lemma}[Almost-All Criterion]
 
     For sequences \(r=(r_n)\), \(s=(s_n)\), and \(t=(t_n)\), we have
 
@@ -10023,7 +10014,7 @@ $$
     The same principle holds for many other mathematical statements and is the
     basis of the \textbf{Transfer Principle}.
 
-\end{theorem}
+\end{lemma}
 
 \begin{theorem}
 
@@ -10035,7 +10026,7 @@ $$
 
 \end{theorem}
 
-\begin{proof}
+\begin{sketchofproof}
 
     The ring properties follow directly from the corresponding properties of
     \(\mathbb R\). In particular, the additive inverse of \([r]\) is \(-[r]=[-r]\).
@@ -10078,7 +10069,7 @@ $$
 
     is an ordered field.
 
-\end{proof}
+\end{sketchofproof}
 
 \begin{definition}
 
@@ -10111,7 +10102,7 @@ For every \(n\in\mathbb N\), \(0<\varepsilon<1/n\), and therefore
 Similarly,
 
 $$
-    \omega=[(1,2,3,4,\ldots)]
+    \omega=[(0,1,2,3,4,\ldots)]
 $$
 
 satisfies
@@ -10144,12 +10135,12 @@ Therefore \(\omega\) is a positive infinite hyperreal number.
 
 The definition is well-defined. If \([x_n]=[y_n]\), then
 $
-    \{n\in\mathbb N:x_n=y_n\}\in\mathcal F.
+    \{n\in\mathbb N \mid x_n=y_n\}\in\mathcal F.
 $
 Therefore
 
 $$
-    \{n\in\mathbb N:f(x_n)=f(y_n)\}\in\mathcal F,
+    \{n\in\mathbb N \mid f(x_n)=f(y_n)\}\in\mathcal F,
 $$
 
 so \([f(x_n)]=[f(y_n)]\). Thus the value of \({}^\ast f([x_n])\) does not
@@ -10282,13 +10273,13 @@ R\). For example,
 $$
     X_\infty
     =
-    \{x\in X:x\text{ is unlimited}\},
+    \{x\in X \mid x\text{ is unlimited}\},
 $$
 
 $$
     X^+
     =
-    \{x\in X:x>0\},
+    \{x\in X \mid x>0\},
     \qquad
     X^-
     =
@@ -10416,7 +10407,7 @@ Let \(x,y\in{}^\ast\mathbb R\).
     $$
         \operatorname{gal}(x)
         =
-        \{y\in{}^\ast\mathbb R:x-y\text{ is limited}\}.
+        \{y\in{}^\ast\mathbb R \mid x-y\text{ is limited}\}.
     $$
 
 \end{definition}
@@ -10533,6 +10524,27 @@ infinitesimals is isomorphic to the real number field.
 \end{theorem}
 
 
+\section{Definition of ${}^\ast\mathbb{N}_{Ord}$, ${}^\ast\mathbb{Z}_{Ord}$, ${}^\ast\mathbb{Q}_{Ord}$,  ${}^\ast\mathbb{R}_{Ord}$ }
+
+
+
+\begin{definition}
+    You can do all the previous construction with $Ord$ so we have 
+    noneprincipal $\mathcal{U}$ on $Ord$ and
+    $
+        X^ {Ord} /\sim
+    $
+    is called the \emph{ultrapower} of $X$ modulo $\mathcal{U}$. The equivalence
+    class of $a\in X^ {Ord} $ is denoted by $[a]$.
+\end{definition}
+
+\begin{definition}[The Structure ${}^*\mathbb{R}_{Ord}$]
+    For each ordinal $\alpha$, let ${}^*\mathbb{R}_\alpha$ denote the corresponding stage of hyperreal extension. Define
+    $$
+        {}^*\mathbb{R}_{Ord}:= \mathbb{R}^ {Ord} /\sim.
+    $$
+    Since $\mathrm{Ord}\subseteq{}^*\mathbb{R}_{Ord}$, every ordinal $\beta$ is itself an element of ${}^*\mathbb{R}_{Ord}$. In particular, given $N\in{}^*\mathbb{R}_{Ord}$ and the index set $\{0,\ldots,N-1\}\subseteq{}^*\mathbb{R}_{Ord}$, we say $i\in\{0,\ldots,N-1\}$ \textbf{is an ordinal} if $i\in\mathrm{Ord}$ (as opposed to $i$ being a non-ordinal element of some ${}^*\mathbb{R}_\alpha$).
+\end{definition}
 
 \chapter{New beginning for calculus }
 \section{Limits}
