@@ -1503,7 +1503,7 @@ and continue this process.
 
     We define
     \[
-        V_0=U.
+        V_0=U
     \]
     Thus, $V_0$ contains the urelements from which we will
     construct sets.
@@ -4928,9 +4928,9 @@ notice that now ``$\phi(x)$'' is a proposition. so ``$\{ x \mid \forall Y \Big(
     proof.
     \begin{fitchproof}[arrayenv=tabular]
 
-        \have  {2} { \forall v \quad  v \notin 0    }                           \by{$ $}{}
-        \have  {2} { \forall u,v \quad u \in v \in 0  \to u \in 0  }                           \by{$ $}{}
-        \have  {2} {  Transitive(0) }                           \by{$ $}{}
+        \have  {2} { \forall v \quad  v \notin 0    }                           \by{$def \emptyset $}{}
+        \have  {2} { \forall u,v \quad u \in v \in 0  \to u \in 0  }                           \by{vacuous implication}{}
+        \have  {2} {  Transitive(0) }                           \by{$ $}{def}
         \open
         \have  {2} {n\in \mathbb{N} }                                   \by{$acp $}{}
         \open
@@ -5064,14 +5064,46 @@ of all infinite sequences of $a \in A$.
     Define
 
     \[
-        Compute_n(t_n) :  t_n  : s(n) \to A
-        \ \land\ t_n(0) = a \ \land\ \forall k < n \ \big( t(s(k)) = g(t(k),k) \big) .
+        Compute_n(t_n) : \Big( t_n  : s(n) \to A
+        \ \land\ t_n(0) = a \ \land\ \forall k \leq n \ \big( t(s(k)) = g(t(k),k) \big) \Big).
     \]
 
     \[
         F := \Big\{ t_n \ \Big|\ Compute_n(t_n) \Big\}.
     \]
     \textbf{Claim 0: $ \forall n \in \mathbb{N} \quad \exists t_{n}\in F$.}
+
+
+
+
+    \begin{fitchproof}[arrayenv=tabular]
+        \have {1} {Compute_0(t_0)} \by{Definition of $t_0$}{}
+        \have {2} {t_0 \in F} \by{Definition of $F$}{1}
+
+        \open
+        \have {3} {n \in \mathbb{N}} \by{acp}{}
+        \open
+        \have {4} {\exists t_n \in F} \by{acp}{}
+        \open
+        \have {5} {t_n \in F} \by{acp}{}
+        \have {6} {t_n \cup \{(s(n),g(t_n(n),n))\} \in F}
+        \by{Definition of $F$ and extension of $t_n$}{5}
+        \have {7} {\exists t_{s(n)} \in F}
+        \by{$\exists I$}{6}
+        \close
+        \have {8} {\exists t_{s(n)} \in F}
+        \by{$\exists E$}{4,5-7}
+        \close
+        \have {9} {\exists t_n \in F \to \exists t_{s(n)} \in F}
+        \by{$\to I$}{4-8}
+        \close
+        \have {10} {\forall n \in \mathbb{N},\
+            (\exists t_n \in F \to \exists t_{s(n)} \in F)}
+        \by{$\forall I$}{3-9}
+
+        \have {11} {\forall n \in \mathbb{N},\ \exists t_n \in F}
+        \by{Mathematical induction}{2,10}
+    \end{fitchproof}
 
     \textbf{Claim 1: $F \neq \emptyset$.}
 
@@ -5115,8 +5147,8 @@ of all infinite sequences of $a \in A$.
         \have {11} {t_m(s(k))=t_n(s(k))}
         \close
 
-        \have {12} {\forall k \leq m \quad t_m (k) = t_n (k)}
         \close
+        \have {12} {\forall k \leq m \quad t_m (k) = t_n (k)}
         \close
         \have {13} {t_m \subseteq t_n \lor t_n \subseteq t_m}
         \close
@@ -5129,6 +5161,49 @@ of all infinite sequences of $a \in A$.
         \have {15} {Compatible(F)}
         \have {20} {Func(f)}
     \end{fitchproof}
+
+
+
+    \begin{fitchproof}[arrayenv=tabular]
+    \open
+    \have {1} {t_m,t_n\in F} \by{Assumption}{}
+    \open
+    \have {2} {Dom(t_m)=s(m)} \by{Definition of $F$}{1}
+    \have {3} {Dom(t_n)=s(n)} \by{Definition of $F$}{1}
+    \open
+    \have {4} {m \le n} \by{Assumption}{}
+
+    \have {5} {t_m(0)=a} \by{Definition of $F$}{1}
+    \have {6} {t_n(0)=a} \by{Definition of $F$}{1}
+    \have {7} {t_m(0)=t_n(0)} \by{Equality}{5,6}
+
+    \open
+    \have {8} {k < m} \by{Assumption}{}
+    \have {9} {t_m(k)=t_n(k)} \by{Induction hypothesis}{}
+    \have {10} {g(t_m(k),k)=g(t_n(k),k)} \by{Equality substitution}{9}
+    \have {11} {t_m(s(k))=g(t_m(k),k)} \by{Definition of $F$}{1}
+    \have {12} {t_n(s(k))=g(t_n(k),k)} \by{Definition of $F$}{1}
+    \have {13} {t_m(s(k))=t_n(s(k))} \by{Equality substitution}{10-12}
+    \close
+
+    \have {14} {\forall k \leq m \quad t_m(k)=t_n(k)}
+        \by{Mathematical induction}{7,8-13}
+    \close
+
+    \have {15} {t_m\subseteq t_n}
+        \by{Function extension and $m\leq n$}{2,3,4,14}
+    \close
+
+    \have {16} {\forall t_m,t_n\in F\quad
+        (t_m\subseteq t_n\lor t_n\subseteq t_m)}
+        \by{Linear ordering of $\mathbb N$}{15}
+
+    \have {17} {Compatible(F)}
+        \by{Definition of compatibility}{16}
+
+    \have {18} {Func(f)}
+        \by{Union of a compatible family of functions}{17}
+\end{fitchproof}
 
     \medskip
 
@@ -9515,7 +9590,7 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
         \open
         \have {9} { A,B\in\mathcal{H} } \by{acp}{}
         \have {10} { \exists \mathcal{G}_1,\mathcal{G}_2\in\mathcal{C} \ A\in\mathcal{G}_1 \land B\in\mathcal{G}_2  } \by{union definition}{6,9}
-        
+
         \open
         \have {10} {  A\in\mathcal{G}_1 \land B\in\mathcal{G}_2  } \by{acp}{}
         \have {11} { \mathcal{G}_1\subseteq\mathcal{G}_2
@@ -9592,7 +9667,7 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
 
 
     $$ \boxed{1 \to 2} $$
-    
+
     \begin{fitchproof}[arrayenv=tabular]
 
         \have {1} { \mathcal{U} \text{ is an ultrafilter on } S } \by{ass}{}
@@ -9646,7 +9721,7 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
     $$ \boxed{2 \to 3} $$
 
 
-        \begin{fitchproof}[arrayenv=tabular]
+    \begin{fitchproof}[arrayenv=tabular]
 
         \have {1} { \mathcal{U} \text{ contains a singleton }  }   \by{ass}{}
 
@@ -9674,34 +9749,34 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
     \end{fitchproof}
 
 
-        $$\boxed{3\to 1}$$
+    $$\boxed{3\to 1}$$
 
-\begin{fitchproof}[arrayenv=tabular]
-    \have{1}{\mathcal{U}  \text{ is principal}} \by{ass}{}
-    \open
-    \have{1}{ \mathcal{U} = \{  B \subseteq S \mid A \subseteq B \} } \by{acp}{}
-    \have{1}{ \emptyset\neq A} \by{filter definition}{}
-    
-    \open
-    \have{3}{ x \in A} \by{$A\neq\emptyset$}{}
-    \have{9}{ \{ x \} \in\mathcal{U} \veebar   \{ x \}^c \in\mathcal{U}} \by{Ultrafilter property}{}
-    \open
-    \have{10}{ \{ x \} \in\mathcal{U} } \by{acp}{}
-    \have{13}{\mathcal{U}\text{ contains a singleton}} \by{}{10}
-    \close
-    \open
-    \have{9}{  \{ x \}^c \in\mathcal{U}} \by{acp}{}
-    \have{5}{A\nsubseteq \{ x \}^c  } \by{set theory}{4}
-    \have{11}{\bot} \by{definition}{}
-    \have{13}{\mathcal{U}\text{ contains a singleton}} \by{}{11}
-    \close
-    \have{13}{\mathcal{U}\text{ contains a singleton}} \by{}{11}
-    \close
-    \have{13}{\mathcal{U}\text{ contains a singleton}} \by{}{11}
-    \close
-    \have{13}{  \quad \mathcal{U}\text{ contains a singleton}} \by{}{11}
+    \begin{fitchproof}[arrayenv=tabular]
+        \have{1}{\mathcal{U}  \text{ is principal}} \by{ass}{}
+        \open
+        \have{1}{ \mathcal{U} = \{  B \subseteq S \mid A \subseteq B \} } \by{acp}{}
+        \have{1}{ \emptyset\neq A} \by{filter definition}{}
 
-\end{fitchproof}
+        \open
+        \have{3}{ x \in A} \by{$A\neq\emptyset$}{}
+        \have{9}{ \{ x \} \in\mathcal{U} \veebar   \{ x \}^c \in\mathcal{U}} \by{Ultrafilter property}{}
+        \open
+        \have{10}{ \{ x \} \in\mathcal{U} } \by{acp}{}
+        \have{13}{\mathcal{U}\text{ contains a singleton}} \by{}{10}
+        \close
+        \open
+        \have{9}{  \{ x \}^c \in\mathcal{U}} \by{acp}{}
+        \have{5}{A\nsubseteq \{ x \}^c  } \by{set theory}{4}
+        \have{11}{\bot} \by{definition}{}
+        \have{13}{\mathcal{U}\text{ contains a singleton}} \by{}{11}
+        \close
+        \have{13}{\mathcal{U}\text{ contains a singleton}} \by{}{11}
+        \close
+        \have{13}{\mathcal{U}\text{ contains a singleton}} \by{}{11}
+        \close
+        \have{13}{  \quad \mathcal{U}\text{ contains a singleton}} \by{}{11}
+
+    \end{fitchproof}
 
 
 \end{proof}
@@ -9729,7 +9804,7 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
         \have {4} { A\in\mathcal{F}_{\mathrm{Fr}} } \by{ass}{}
         \have {5} { A^c  \text{ is finite} } \by{definition}{3,4}
         \have {7} { A\in\mathcal{U}\veebar  A^c \in\mathcal{U} } \by{ultrafilter characterization}{1}
-        
+
         \open
         \have {6} { A\notin\mathcal{U} } \by{ass}{}
         \close
