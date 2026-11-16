@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.8.18)  16 NOV 2026 16:25
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.8.18)  16 NOV 2026 23:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1662,11 +1662,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 Chapter 5.
-LaTeX Font Info:    Trying to load font information for U+euf on input line 3538.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 3537.
 (C:\Users\TS\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [49]
-Underfull \hbox (badness 10000) in paragraph at lines 3564--3580
+Underfull \hbox (badness 10000) in paragraph at lines 3563--3579
 
  []
 
@@ -1675,27 +1675,27 @@ File: all-twemojis.pdf Graphic file (type pdf)
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Overfull \hbox (33.73763pt too wide) in paragraph at lines 3608--3628
+Overfull \hbox (33.73763pt too wide) in paragraph at lines 3607--3627
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3608--3628
+Underfull \hbox (badness 10000) in paragraph at lines 3607--3627
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3608--3628
+Underfull \hbox (badness 10000) in paragraph at lines 3607--3627
 
  []
 
 [50]
-Overfull \hbox (32.53764pt too wide) in paragraph at lines 3639--3673
+Overfull \hbox (32.53764pt too wide) in paragraph at lines 3638--3672
 [] 
  []
 
 
-Overfull \hbox (32.53764pt too wide) in paragraph at lines 3674--3709
+Overfull \hbox (32.53764pt too wide) in paragraph at lines 3673--3708
 [] 
  []
 
@@ -1712,7 +1712,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 3098) has occurred while \output is active []
 
  [58]
-Overfull \hbox (4.20619pt too wide) in paragraph at lines 4133--4153
+Overfull \hbox (4.20619pt too wide) in paragraph at lines 4132--4152
 [][] 
  []
 
@@ -1726,7 +1726,7 @@ Chapter 6.
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 [63] [64]
-Overfull \hbox (56.81142pt too wide) in paragraph at lines 4424--4431
+Overfull \hbox (56.81142pt too wide) in paragraph at lines 4423--4430
 [][] 
  []
 
@@ -1750,14 +1750,14 @@ File: all-twemojis.pdf Graphic file (type pdf)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [76]
-Underfull \hbox (badness 10000) in paragraph at lines 5029--5031
+Underfull \hbox (badness 10000) in paragraph at lines 5028--5030
 
  []
 
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Package fitch Warning: Undefined line reference: def on input line 5043.
+Package fitch Warning: Undefined line reference: def on input line 5042.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1766,7 +1766,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
  [78] [79]
-Overfull \hbox (15.83308pt too wide) in paragraph at lines 5234--5278
+Overfull \hbox (15.83308pt too wide) in paragraph at lines 5233--5277
 [][] 
  []
 
@@ -1780,12 +1780,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [82] [83] [84]
-Overfull \hbox (40.18999pt too wide) in paragraph at lines 5576--5640
+Overfull \hbox (40.18999pt too wide) in paragraph at lines 5575--5639
 [][] 
  []
 
 [85] [86]
-Overfull \hbox (65.7086pt too wide) in paragraph at lines 5718--5732
+Overfull \hbox (65.7086pt too wide) in paragraph at lines 5717--5731
 [][] 
  []
 
@@ -1803,11 +1803,11 @@ File: all-twemojis.pdf Graphic file (type pdf)
 Chapter 8.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 5865.
+(hyperref)                removing `math shift' on input line 5864.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 5865.
+(hyperref)                removing `math shift' on input line 5864.
 
 [91]
 File: all-twemojis.pdf Graphic file (type pdf)
@@ -1819,11 +1819,11 @@ File: all-twemojis.pdf Graphic file (type pdf)
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 5952.
+(hyperref)                removing `math shift' on input line 5951.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 5952.
+(hyperref)                removing `math shift' on input line 5951.
 
 [92]
 File: all-twemojis.pdf Graphic file (type pdf)
@@ -1836,11 +1836,11 @@ File: all-twemojis.pdf Graphic file (type pdf)
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 6047.
+(hyperref)                removing `math shift' on input line 6046.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 6047.
+(hyperref)                removing `math shift' on input line 6046.
 
 [94]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1849,7 +1849,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 3724) has occurred while \output is active []
 
  [96]
-Underfull \hbox (badness 10000) in paragraph at lines 6167--6168
+Underfull \hbox (badness 10000) in paragraph at lines 6166--6167
 
  []
 
@@ -1863,18 +1863,18 @@ File: all-twemojis.pdf Graphic file (type pdf)
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 6228.
+(hyperref)                removing `math shift' on input line 6227.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 6228.
+(hyperref)                removing `math shift' on input line 6227.
 
 [98] [99] [100]
 Chapter 9.
 [101
 
 ] [102]
-Underfull \hbox (badness 10000) in paragraph at lines 6501--6502
+Underfull \hbox (badness 10000) in paragraph at lines 6500--6501
 
  []
 
@@ -1897,19 +1897,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (21.99434pt too high) has occurred while \output is active []
 
  [108]
-Underfull \hbox (badness 10000) in paragraph at lines 6976--6978
+Underfull \hbox (badness 10000) in paragraph at lines 6975--6977
 
  []
 
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Underfull \hbox (badness 10000) in paragraph at lines 6989--6990
+Underfull \hbox (badness 10000) in paragraph at lines 6988--6989
 
  []
 
 
-Overfull \hbox (22.2401pt too wide) in paragraph at lines 6990--7040
+Overfull \hbox (22.2401pt too wide) in paragraph at lines 6989--7039
 [][] 
  []
 
@@ -1935,7 +1935,7 @@ File: all-twemojis.pdf Graphic file (type pdf)
 Underfull \vbox (badness 2671) has occurred while \output is active []
 
  [117] [118] [119]
-Underfull \hbox (badness 10000) in paragraph at lines 7647--7648
+Underfull \hbox (badness 10000) in paragraph at lines 7646--7647
 
  []
 
@@ -1955,14 +1955,14 @@ Chapter 10.
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Underfull \hbox (badness 10000) in paragraph at lines 7819--7821
+Underfull \hbox (badness 10000) in paragraph at lines 7818--7820
 
  []
 
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Underfull \hbox (badness 10000) in paragraph at lines 7830--7832
+Underfull \hbox (badness 10000) in paragraph at lines 7829--7831
 
  []
 
@@ -1976,11 +1976,11 @@ File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
  [129] [130] [131] [132] [133] [134]
 
-Package fitch Warning: Undefined line reference: T on input line 8550.
+Package fitch Warning: Undefined line reference: T on input line 8549.
 
 [135]
 
-Package fitch Warning: Undefined line reference: F on input line 8588.
+Package fitch Warning: Undefined line reference: F on input line 8587.
 
 [136] [137]
 File: all-twemojis.pdf Graphic file (type pdf)
@@ -2009,24 +2009,24 @@ Chapter 12.
 Chapter 13.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8793.
+(hyperref)                removing `math shift' on input line 8792.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8793.
+(hyperref)                removing `math shift' on input line 8792.
 
 
-Overfull \hbox (57.54887pt too wide) in paragraph at lines 8793--8793
+Overfull \hbox (57.54887pt too wide) in paragraph at lines 8792--8792
 \TU/lmr/bx/n/24.88 numbers($\U/msb/m/n/24.88 Z\OT1/cmr/m/n/24.88 (\OML/cmm/m/it/24.88 Ord\OT1/cmr/m/n/24.88 )\OML/cmm/m/it/24.88 ; \U/msb/m/n/24.88 Q\OT1/cmr/m/n/24.88 (\OML/cmm/m/it/24.88 Ord\OT1/cmr/m/n/24.88 )\OML/cmm/m/it/24.88 ; \U/msb/m/n/24.88 R\OT1/cmr/m/n/24.88 (\OML/cmm/m/it/24.88 Ord\OT1/cmr/m/n/24.88 )\OML/cmm/m/it/24.88 ; \U/msb/m/n/24.88 C\OT1/cmr/m/n/24.88 (\OML/cmm/m/it/24.88 Ord\OT1/cmr/m/n/24.88 )$\TU/lmr/bx/n/24.88 )  
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8795.
+(hyperref)                removing `math shift' on input line 8794.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8795.
+(hyperref)                removing `math shift' on input line 8794.
 
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
@@ -2045,11 +2045,11 @@ File: all-twemojis.pdf Graphic file (type pdf)
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8892.
+(hyperref)                removing `math shift' on input line 8891.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8892.
+(hyperref)                removing `math shift' on input line 8891.
 
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
@@ -2063,7 +2063,7 @@ File: all-twemojis.pdf Graphic file (type pdf)
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
-Overfull \hbox (4.51492pt too wide) in paragraph at lines 8987--8989
+Overfull \hbox (4.51492pt too wide) in paragraph at lines 8986--8988
 [][]\TU/lmr/bx/n/10 Theorem 13.2.3. []\TU/lmr/bx/it/10 Order of fantacy Rational numbers($\U/msb/m/n/10 Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Ord\OT1/cmr/m/n/10 )$\TU/lmr/bx/it/10 ) \TU/lmr/m/it/10 prove for “$\OT1/cmr/m/n/10 (\U/msb/m/n/10 Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Ord\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; <[]
  []
 
@@ -2071,11 +2071,11 @@ File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9001.
+(hyperref)                removing `math shift' on input line 9000.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9001.
+(hyperref)                removing `math shift' on input line 9000.
 
 [148]
 Underfull \vbox (badness 2368) has occurred while \output is active []
@@ -2097,11 +2097,11 @@ File: all-twemojis.pdf Graphic file (type pdf)
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9201.
+(hyperref)                removing `math shift' on input line 9200.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9201.
+(hyperref)                removing `math shift' on input line 9200.
 
 File: all-twemojis.pdf Graphic file (type pdf)
 <use all-twemojis.pdf, page 1969>
@@ -2135,32 +2135,32 @@ File: all-twemojis.pdf Graphic file (type pdf)
 Chapter 14.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9344.
+(hyperref)                removing `math shift' on input line 9343.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 9344.
+(hyperref)                removing `superscript' on input line 9343.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 9344.
+(hyperref)                removing `superscript' on input line 9343.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 9344.
+(hyperref)                removing `superscript' on input line 9343.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 9344.
+(hyperref)                removing `superscript' on input line 9343.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9344.
+(hyperref)                removing `math shift' on input line 9343.
 
 [155
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 9440--9441
+Underfull \hbox (badness 10000) in paragraph at lines 9439--9440
 
  []
 
@@ -2171,7 +2171,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [158]
-Underfull \hbox (badness 10000) in paragraph at lines 9661--9662
+Underfull \hbox (badness 10000) in paragraph at lines 9660--9661
 
  []
 
@@ -2182,85 +2182,85 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [160]
-Underfull \hbox (badness 10000) in paragraph at lines 9759--9760
+Underfull \hbox (badness 10000) in paragraph at lines 9758--9759
 
  []
 
 [161]
-Underfull \hbox (badness 10000) in paragraph at lines 9886--9887
+Underfull \hbox (badness 10000) in paragraph at lines 9885--9886
 
  []
 
 [162]
 
-LaTeX Warning: Reference `finite set principal ultrafilter ' on page 163 undefined on input line 9894.
+LaTeX Warning: Reference `finite set principal ultrafilter ' on page 163 undefined on input line 9893.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9923.
+(hyperref)                removing `math shift' on input line 9922.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 9923.
+(hyperref)                removing `superscript' on input line 9922.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\ast' on input line 9923.
+(hyperref)                removing `\ast' on input line 9922.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9923.
+(hyperref)                removing `math shift' on input line 9922.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9923.
+(hyperref)                removing `math shift' on input line 9922.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 9923.
+(hyperref)                removing `superscript' on input line 9922.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\ast' on input line 9923.
+(hyperref)                removing `\ast' on input line 9922.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9923.
+(hyperref)                removing `math shift' on input line 9922.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9923.
+(hyperref)                removing `math shift' on input line 9922.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 9923.
+(hyperref)                removing `superscript' on input line 9922.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\ast' on input line 9923.
+(hyperref)                removing `\ast' on input line 9922.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9923.
+(hyperref)                removing `math shift' on input line 9922.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9923.
+(hyperref)                removing `math shift' on input line 9922.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 9923.
+(hyperref)                removing `superscript' on input line 9922.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\ast' on input line 9923.
+(hyperref)                removing `\ast' on input line 9922.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9923.
+(hyperref)                removing `math shift' on input line 9922.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9956--9957
+Underfull \hbox (badness 10000) in paragraph at lines 9955--9956
 
  []
 
@@ -2270,95 +2270,95 @@ Underfull \vbox (badness 2343) has occurred while \output is active []
  [163] [164] [165] [166] [167] [168] [169] [170] [171] [172]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 10736.
+(hyperref)                removing `math shift' on input line 10735.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 10736.
+(hyperref)                removing `superscript' on input line 10735.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\ast' on input line 10736.
+(hyperref)                removing `\ast' on input line 10735.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 10736.
+(hyperref)                removing `subscript' on input line 10735.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 10736.
+(hyperref)                removing `math shift' on input line 10735.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 10736.
+(hyperref)                removing `math shift' on input line 10735.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 10736.
+(hyperref)                removing `superscript' on input line 10735.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\ast' on input line 10736.
+(hyperref)                removing `\ast' on input line 10735.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 10736.
+(hyperref)                removing `subscript' on input line 10735.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 10736.
+(hyperref)                removing `math shift' on input line 10735.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 10736.
+(hyperref)                removing `math shift' on input line 10735.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 10736.
+(hyperref)                removing `superscript' on input line 10735.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\ast' on input line 10736.
+(hyperref)                removing `\ast' on input line 10735.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 10736.
+(hyperref)                removing `subscript' on input line 10735.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 10736.
+(hyperref)                removing `math shift' on input line 10735.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 10736.
+(hyperref)                removing `math shift' on input line 10735.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 10736.
+(hyperref)                removing `superscript' on input line 10735.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\ast' on input line 10736.
+(hyperref)                removing `\ast' on input line 10735.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 10736.
+(hyperref)                removing `subscript' on input line 10735.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 10736.
+(hyperref)                removing `math shift' on input line 10735.
 
 [173] [174
 
 ]
 Chapter 15.
 [175] [176] [177] [178]
-Overfull \hbox (1.57306pt too wide) in paragraph at lines 11107--11109
+Overfull \hbox (1.57306pt too wide) in paragraph at lines 11106--11108
 [][]\TU/lmr/bx/n/10 Theorem 15.1.12 \TU/lmr/m/n/10 (Infinitesimal Characterization of Limits at Infinity)\TU/lmr/bx/n/10 . []\TU/lmr/m/it/10 We have $[][] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) =
  []
 
 [179]
-Overfull \hbox (35.19305pt too wide) in paragraph at lines 11151--11155
+Overfull \hbox (35.19305pt too wide) in paragraph at lines 11150--11154
 [][]\TU/lmr/bx/n/10 Theorem 15.1.13 \TU/lmr/m/n/10 (Infinitesimal Characterization of Infinite Limits at Infinity)\TU/lmr/bx/n/10 . []\TU/lmr/m/it/10 We have $[][] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) =
  []
 
@@ -2380,7 +2380,7 @@ Chapter 18.
 [217
 
 ] [218] [219]
-Overfull \hbox (27.20755pt too wide) detected at line 14130
+Overfull \hbox (27.20755pt too wide) detected at line 14129
 [][]
  []
 
@@ -2405,4 +2405,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  84i,27n,104p,630b,704s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Logic.xdv (227 pages, 1949312 bytes).
+Output written on Logic.xdv (227 pages, 1948984 bytes).

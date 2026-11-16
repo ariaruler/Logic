@@ -3362,7 +3362,10 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
         \item $R\circ(S\cup T)=(R\circ S)\cup(R\circ T)$.
         \item $(R\cup S)\circ T=(R\circ T)\cup(S\circ T)$.
         \item $R[A\cup B]=R[A]\cup R[B]$.
-        \item $R[A\cap B]\subseteq R[A]\cap R[B]$.
+        \item $R[A\cap B]\subseteq R[A]\cap R[B]$.    
+        \item $R[A]-R[B]\subseteq R[A-B]$.
+    \item $R^{-1}[A]-R^{-1}[B]
+          \subseteq R^{-1}[A-B]$.
         \item $ A \subseteq Dom(R) / \therefore A \subseteq  R^{-1}[R[A]]$.
         \item $f:A\to B , g:B\to C  / \therefore g\circ f:A\to C$.
         \item $f:A\xrightarrow{inj}B , g:B\xrightarrow{inj}C / \therefore g\circ f:A\xrightarrow{inj}C$.
@@ -3372,8 +3375,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
         \item $Func(f)  / \therefore f[f^{-1}[B]]\subseteq B$.
         \item $Func(f)  / \therefore f^{-1}[D \cap C]=f^{-1}[D]\cap f^{-1}[C]$.
         \item $Func(f)  / \therefore f^{-1}[B-C]=f^{-1}[B]-f^{-1}[C]$.
-        \item $Func(f)  / \therefore f[A]-f[B] \subseteq   f[A-B]$.
-        \item $f:A\xrightarrow{inj}B , C\subseteq A / \therefore f[A - C]=f[A]-f[C]$ .
+        \item $Injective(f)  / \therefore f[A]-f[B] =   f[A-B]$.
         \item $  (S \circ R )[A]= S [ R[A]]$.
         \item $\bigcup_{i\in I}(A_i\cap B_i)\subseteq
                   \left(\bigcup_{i \in I}A_i\right)\cap
@@ -3431,10 +3433,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
     \item $R^{-1}\left[\bigcap_{i\in I}B_i\right]
           \subseteq\bigcap_{i\in I}R^{-1}[B_i]$.
 
-    \item $R[A]-R[B]\subseteq R[A-B]$.
 
-    \item $R^{-1}[A]-R^{-1}[B]
-          \subseteq R^{-1}[A-B]$.
 
     \item $A\subseteq B \therefore / \therefore
           R[A]\subseteq R[B]$.
