@@ -4892,7 +4892,7 @@ notice that now ``$\phi(x)$'' is a proposition. so ``$\{ x \mid \forall Y \Big(
         \have  {2} { 0 \in S }                                             \by{$ 1 , 2 $}{}
         \open
         \have  {2} {n \in S  }      \by{$ acp $}{}
-        \have  {2} { P(n) }                       \by{$ comprhension $}{}
+        \have  {2} { P(n) }                       \by{$ comprehension $}{}
         \have  {2} { P(n) \to P(s(n)) }      \by{$ \forall E , \to E , 3 , 4 $}{}
         \have  {2} { P(s(n)) }                              \by{$  \to E , 7 ,8  $}{}
         \have  {2} { s(n) \in S  }      \by{$ 4 , 9 $}{}
@@ -4901,7 +4901,7 @@ notice that now ``$\phi(x)$'' is a proposition. so ``$\{ x \mid \forall Y \Big(
         \have  {2} {Ind(S) }                                                 \by{$ 5 , 6 $}{}
         \have  {2} {n\in \bigcap Ind }                                        \by{$ def $}{}
         \have  {2} { n \in S }                                                \by{$ \bigcap E $}{}
-        \have  {2} { P(n) }                                                   \by{$ comprhension $}{}
+        \have  {2} { P(n) }                                                   \by{$ comprehension $}{}
         \close
         \have  {2} {\forall n\in \mathbb{N} \quad P(n) }     \by{$\to I , \forall I $}{}
 
@@ -5071,7 +5071,7 @@ of all infinite sequences of $a \in A$.
     \[
         F := \Big\{ t_n \ \Big|\ Compute_n(t_n) \Big\}.
     \]
-    \textbf{Claim 0: $ \forall n \in \mathbb{N} \quad \exists t_{n}\in F$.}
+    \textbf{Claim 0: $ \forall n \in \mathbb{N} \quad  t_{n}\in F$.}
 
 
 
@@ -5083,22 +5083,18 @@ of all infinite sequences of $a \in A$.
         \open
         \have {3} {n \in \mathbb{N}} \by{acp}{}
         \open
-        \have {4} {\exists t_n \in F} \by{acp}{}
-        \open
         \have {5} {t_n \in F} \by{acp}{}
         \have {6} {t_n \cup \{(s(n),g(t_n(n),n))\} \in F}
         \by{Definition of $F$ and extension of $t_n$}{5}
-        \have {7} {\exists t_{s(n)} \in F}
-        \by{$\exists I$}{6}
+        \have {7} { t_{s(n)} \in F}
+        \by{Definition}{6}
         \close
-        \have {8} {\exists t_{s(n)} \in F}
-        \by{$\exists E$}{4,5-7}
-        \close
-        \have {9} {\exists t_n \in F \to \exists t_{s(n)} \in F}
+
+        \have {9} { t_n \in F \to  t_{s(n)} \in F}
         \by{$\to I$}{4-8}
         \close
         \have {10} {\forall n \in \mathbb{N},\
-            (\exists t_n \in F \to \exists t_{s(n)} \in F)}
+            ( t_n \in F \to  t_{s(n)} \in F)}
         \by{$\forall I$}{3-9}
 
         \have {11} {\forall n \in \mathbb{N},\ \exists t_n \in F}
@@ -5123,128 +5119,107 @@ of all infinite sequences of $a \in A$.
 
     \textbf{Claim 2: $f$ is a function.}
 
-    \begin{fitchproof}[arrayenv=tabular]
 
-        \open
-        \have {1} {t_m,t_n\in F}
-        \open
-        \have {2} {Dom(t_m)=s(m)}
-        \have {3} {Dom(t_n)=s(n)}
-        \open
-        \have {4} {m \le n}
-
-        \have {5} {t_m(0)=a}
-        \have {6} {t_n(0)=a}
-        \have {7} {t_m(0)=t_n(0)}
-
-        \open
-        \have {12} { k < m }
-        \open
-        \have {8} {t_m(k)=t_n(k)}
-        \have {9} {g(t_m(k),k)=g(t_n(k),k)}
-        \have {9} {t_m(s(k))=g(t_m(k),k)}
-        \have {10} {t_n(s(k))=g(t_n(k),k)}
-        \have {11} {t_m(s(k))=t_n(s(k))}
-        \close
-
-        \close
-        \have {12} {\forall k \leq m \quad t_m (k) = t_n (k)}
-        \close
-        \have {13} {t_m \subseteq t_n \lor t_n \subseteq t_m}
-        \close
-
-        \close
-        \have {14} {\forall t_m , t_n \in F
-            \quad
-            (t_m\subseteq t_n \lor t_n\subseteq t_m)}
-
-        \have {15} {Compatible(F)}
-        \have {20} {Func(f)}
-    \end{fitchproof}
 
 
 
     \begin{fitchproof}[arrayenv=tabular]
-    \open
-    \have {1} {t_m,t_n\in F} \by{Assumption}{}
-    \open
-    \have {2} {Dom(t_m)=s(m)} \by{Definition of $F$}{1}
-    \have {3} {Dom(t_n)=s(n)} \by{Definition of $F$}{1}
-    \open
-    \have {4} {m \le n} \by{Assumption}{}
+        \open
+        \have {1} {t_m,t_n\in F} \by{acp}{}
+        \have {2} {Dom(t_m)=s(m)} \by{Definition of $F$}{1}
+        \have {3} {Dom(t_n)=s(n)} \by{Definition of $F$}{1}
+        \open
+        \have {4} {m \le n} \by{acp}{}
 
-    \have {5} {t_m(0)=a} \by{Definition of $F$}{1}
-    \have {6} {t_n(0)=a} \by{Definition of $F$}{1}
-    \have {7} {t_m(0)=t_n(0)} \by{Equality}{5,6}
+        \have {5} {t_m(0)=a} \by{Definition of $F$}{1}
+        \have {6} {t_n(0)=a} \by{Definition of $F$}{1}
+        \have {7} {t_m(0)=t_n(0)} \by{Equality}{5,6}
 
-    \open
-    \have {8} {k < m} \by{Assumption}{}
-    \have {9} {t_m(k)=t_n(k)} \by{Induction hypothesis}{}
-    \have {10} {g(t_m(k),k)=g(t_n(k),k)} \by{Equality substitution}{9}
-    \have {11} {t_m(s(k))=g(t_m(k),k)} \by{Definition of $F$}{1}
-    \have {12} {t_n(s(k))=g(t_n(k),k)} \by{Definition of $F$}{1}
-    \have {13} {t_m(s(k))=t_n(s(k))} \by{Equality substitution}{10-12}
-    \close
+        \open
+        \have {ind} {s(k) \leq m} \by{acp}{}
+        \have {8} {k < m} \by{}{ind}
+        \open
+        \have {9} {t_m(k)=t_n(k)} \by{Induction hypothesis}{}
+        \have {10} {g(t_m(k),k)=g(t_n(k),k)} \by{Equality substitution}{9}
+        \have {11} {t_m(s(k))=g(t_m(k),k)} \by{Definition of $F$}{1}
+        \have {12} {t_n(s(k))=g(t_n(k),k)} \by{Definition of $F$}{1}
+        \have {13} {t_m(s(k))=t_n(s(k))} \by{Equality substitution}{10-12}
+        \close
+        \close
 
-    \have {14} {\forall k \leq m \quad t_m(k)=t_n(k)}
+        \have {14} {\forall k \leq m \quad t_m(k)=t_n(k)}
         \by{Mathematical induction}{7,8-13}
-    \close
-
-    \have {15} {t_m\subseteq t_n}
+        \have {15} {t_m\subseteq t_n}
         \by{Function extension and $m\leq n$}{2,3,4,14}
-    \close
+        \close
 
-    \have {16} {\forall t_m,t_n\in F\quad
-        (t_m\subseteq t_n\lor t_n\subseteq t_m)}
+        \have {15} {t_m\subseteq t_n\lor t_n\subseteq t_m}
+        \by{}{}
+        \close
+        \close
+
+        \have {16} {\forall t_m,t_n\in F\quad
+            (t_m\subseteq t_n\lor t_n\subseteq t_m)}
         \by{Linear ordering of $\mathbb N$}{15}
 
-    \have {17} {Compatible(F)}
+        \have {17} {Compatible(F)}
         \by{Definition of compatibility}{16}
 
-    \have {18} {Func(f)}
+        \have {18} {Func(f)}
         \by{Union of a compatible family of functions}{17}
-\end{fitchproof}
+    \end{fitchproof}
 
     \medskip
 
     \textbf{Claim 3: $\text{Dom}(f) = \mathbb{N}$ and $\text{Range}(f) \subseteq A$.}
 
+
+
+
     \begin{fitchproof}[arrayenv=tabular]
 
         \open
-        \have {21} {n\in\mathbb{N}}
-        \have {22} {\exists t_n\in F}
-        \have {23} {n\in Dom(t_n)}
-        \have {25} {n\in Dom(f)}
+        \have {21} {n\in\mathbb{N}} \by{acp}{}
+        \open
+        \have {22} {t_m\in F} \by{acp}{}
+        \have {25} {n\in Dom(t_m)} \by{acp}{}
+        \have {23} {Dom(t_m)=s(m)} \by{Definition of $F$}{22}
+        \have {24} {n\in s(m)} \by{Since $n\in\mathbb N$, choose $m=n$}{21}
+        \have {26} {n\in Dom(f)} \by{Definition of $f$}{22,25}
+        \close
+        \have {27} {n\in Dom(f)} \by{$\exists E$}{21-26}
         \close
 
         \open
-        \have {27} {n\in Dom(f)}
+        \have {28} {n\in Dom(f)} \by{acp}{}
         \open
-        \have {28} { t_m \in F }
-        \have {28} { n \in Dom(t_m)}
-        \have {29} {Dom(t_m)=s(m)}
-        \have {30} {n\in s(m)}
-        \have {31} {n\in\mathbb{N}}
+        \have {29} {t_m\in F} \by{acp}{}
+        \have {30} {n\in Dom(t_m)} \by{Definition of $f$}{28,29}
+        \have {31} {Dom(t_m)=s(m)} \by{Definition of $F$}{29}
+        \have {32} {n\in s(m)} \by{Substitution}{30,31}
+        \have {33} {n\in\mathbb{N}} \by{Definition of successor set}{32}
         \close
-        \have {31} {n\in\mathbb{N}}
+        \have {34} {n\in\mathbb{N}} \by{$\exists E$}{28-33}
         \close
 
-        \have {33} {Dom(f)=\mathbb{N}}
+        \have {35} {Dom(f)=\mathbb{N}} \by{Extensionality}{27,34}
 
         \open
-        \have {37} {x\in Range(f)}
-        \have {34} {(n,x)\in f}
+        \have {36} {x\in Range(f)} \by{acp}{}
         \open
-        \have {35} { t_m \in F }
-        \have {35} { (n,x)\in t}
-        \have {36} {t_m : s(m)\to A}
-        \have {37} {x\in A}
+        \have {37} {(n,x)\in f} \by{acp}{}
+        \open
+        \have {38} {t_m\in F} \by{acp}{}
+        \have {39} {(n,x)\in t_m} \by{Definition of union}{37,38}
+        \have {40} {t_m:s(m)\to A} \by{Definition of $F$}{38}
+        \have {41} {x\in A} \by{Definition of function}{39,40}
         \close
-        \have {37} {x\in A}
+        \have {42} {x\in A} \by{$\exists E$}{37-41}
+        \close
+        \have {43} {x\in A} \by{$\exists E$}{36-42}
         \close
 
-        \have {38} {Range(f) \subseteq A}
+        \have {44} {Range(f)\subseteq A} \by{Definition of subset}{36-43}
 
     \end{fitchproof}
 
@@ -5252,19 +5227,28 @@ of all infinite sequences of $a \in A$.
 
     \textbf{Claim 4: $f$ satisfies the recursion equations.}
 
+
+
     \begin{fitchproof}[arrayenv=tabular]
 
         \have {27} {f(0)=a}
+        \by{Definition of $F$ and $f=\bigcup F$}{}
+
         \open
         \have {21} {n\in\mathbb{N}}
-        \have {22} {\exists t_{n+1}\in F}
-        \have {23} {t_{n+1}(s(n))
+        \by{acp}{}
+        \have {22} {t_{s(n)}\in F}
+        \by{Claim 0}{}
+        \have {23} {t_{s(n)}(s(n))
             =
-            g(t_{n+1}(n),n)}
-        \have {24} {t_{n+1}\subseteq f}
+            g(t_{s(n)}(n),n)}
+        \by{Definition of $F$}{22}
+        \have {24} {t_{s(n)}\subseteq f}
+        \by{Definition of $f$}{22}
         \have {25} {f(s(n))
             =
             g(f(n),n)}
+        \by{Function equality and substitution}{23,24}
         \close
 
         \have {26} {\forall n\in\mathbb{N}
@@ -5272,6 +5256,7 @@ of all infinite sequences of $a \in A$.
             f(s(n))
             =
             g(f(n),n)}
+        \by{$\forall I$}{21-25}
 
     \end{fitchproof}
 
