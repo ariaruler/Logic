@@ -3417,10 +3417,118 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
         \item $f\upharpoonright A=f\upharpoonright B \therefore / \therefore f\upharpoonright(A\cap Dom(f))=f\upharpoonright(B\cap Dom(f))$.
         \item $f\upharpoonright A\subseteq f$.
         \item $f\upharpoonright A=f \therefore / \therefore Dom(f)\subseteq A$.
-    \end{enumerate}
+
+
+    \item $R\left[\bigcup_{i\in I}A_i\right]
+          =\bigcup_{i\in I}R[A_i]$.
+
+    \item $R\left[\bigcap_{i\in I}A_i\right]
+          \subseteq\bigcap_{i\in I}R[A_i]$.
+
+    \item $R^{-1}\left[\bigcup_{i\in I}B_i\right]
+          =\bigcup_{i\in I}R^{-1}[B_i]$.
+
+    \item $R^{-1}\left[\bigcap_{i\in I}B_i\right]
+          \subseteq\bigcap_{i\in I}R^{-1}[B_i]$.
+
+    \item $R[A]-R[B]\subseteq R[A-B]$.
+
+    \item $R^{-1}[A]-R^{-1}[B]
+          \subseteq R^{-1}[A-B]$.
+
+    \item $A\subseteq B \therefore / \therefore
+          R[A]\subseteq R[B]$.
+
+    \item $A\subseteq B \therefore / \therefore
+          R^{-1}[A]\subseteq R^{-1}[B]$.
+
+    \item $R\subseteq S \therefore / \therefore
+          R[A]\subseteq S[A]$.
+
+    \item $R\subseteq S \therefore / \therefore
+          R^{-1}[A]\subseteq S^{-1}[A]$.
+
+    \item $R[Dom(R)]=Range(R)$.
+
+    \item $R^{-1}[Range(R)]=Dom(R)$.
+
+    \item $\left(\bigcup_{i\in I}R_i\right)[A]
+          =\bigcup_{i\in I}R_i[A]$.
+
+    \item $\left(\bigcap_{i\in I}R_i\right)[A]
+          \subseteq\bigcap_{i\in I}R_i[A]$.
+
+    \item $\left(\bigcup_{i\in I}R_i\right)^{-1}[A]
+          =\bigcup_{i\in I}R_i^{-1}[A]$.
+
+    \item $\left(\bigcap_{i\in I}R_i\right)^{-1}[A]
+          \subseteq\bigcap_{i\in I}R_i^{-1}[A]$.
+
+    \item $Dom\left(\bigcup_{i\in I}R_i\right)
+          =\bigcup_{i\in I}Dom(R_i)$.
+
+    \item $Range\left(\bigcup_{i\in I}R_i\right)
+          =\bigcup_{i\in I}Range(R_i)$.
+
+    \item $Dom\left(\bigcap_{i\in I}R_i\right)
+          \subseteq\bigcap_{i\in I}Dom(R_i)$.
+
+    \item $Range\left(\bigcap_{i\in I}R_i\right)
+          \subseteq\bigcap_{i\in I}Range(R_i)$.
+
+    \item $R\circ\left(\bigcup_{i\in I}S_i\right)
+          =\bigcup_{i\in I}(R\circ S_i)$.
+
+    \item $\left(\bigcup_{i\in I}R_i\right)\circ S
+          =\bigcup_{i\in I}(R_i\circ S)$.
+
+    \item $R\circ\left(\bigcap_{i\in I}S_i\right)
+          \subseteq\bigcap_{i\in I}(R\circ S_i)$.
+
+    \item $\left(\bigcap_{i\in I}R_i\right)\circ S
+          \subseteq\bigcap_{i\in I}(R_i\circ S)$.
+
+    \item $Dom(S\circ R)=R^{-1}[Dom(S)]$.
+
+    \item $Range(S\circ R)=S[Range(R)]$.
+
+    \item $(S\circ R)^{-1}[A]
+          =R^{-1}[S^{-1}[A]]$.
+
+    \item $(S\circ R)[A]=S[R[A]]$.
+
+    \item $R\text{ is injective},\ I\neq\varnothing
+          \therefore / \therefore
+          R\left[\bigcap_{i\in I}A_i\right]
+          =\bigcap_{i\in I}R[A_i]$.
+
+    \item $R\text{ is single-valued},\ I\neq\varnothing
+          \therefore / \therefore
+          R^{-1}\left[\bigcap_{i\in I}B_i\right]
+          =\bigcap_{i\in I}R^{-1}[B_i]$.
+
+    \item $R\subseteq Dom(R)\times Range(R)$.
+
+    \item $R=R[Dom(R)]$.
+
+    \item $R^{-1}[B]=\varnothing
+          \leftrightarrow B\cap Range(R)=\varnothing$.
+
+    \item $R[A]=\varnothing
+          \leftrightarrow A\cap Dom(R)=\varnothing$.
+
+    \item $R[A]\subseteq B
+          \leftrightarrow A\subseteq
+          Dom(R)-R^{-1}[Range(R)-B]$.
+
+    \item $R^{-1}[B]\subseteq A
+          \leftrightarrow
+          R[Dom(R)-A]\cap B=\varnothing$.
+\end{enumerate}
+
+
+
 \end{exercise}
-
-
 
 \chapter{Equivalences and Orderings}
 
