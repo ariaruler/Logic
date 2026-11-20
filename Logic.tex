@@ -3370,7 +3370,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
         \item $f:A\to B , g:B\to C  / \therefore g\circ f:A\to C$.
         \item $f:A\xrightarrow{inj}B , g:B\xrightarrow{inj}C / \therefore g\circ f:A\xrightarrow{inj}C$.
         \item $f:A\xrightarrow[surj]{}B , g:B\xrightarrow[surj]{}C  / \therefore g\circ f:A\xrightarrow[surj]{}C$.
-        \item $f:A\xrightarrow{inj}B  / \therefore f^{-1}:Range(f)\to A$ .
+        \item $f:A\xrightarrow{inj}B  / \therefore f^{-1}:Range(f) \xrightarrow[surj]{inj} A$ .
         \item $f:A\xrightarrow[surj]{inj}B  / \therefore f^{-1}:B\xrightarrow[surj]{inj}A$.
         \item $Func(f)  / \therefore f[f^{-1}[B]]\subseteq B$.
         \item $Func(f)  / \therefore f^{-1}[D \cap C]=f^{-1}[D]\cap f^{-1}[C]$.
@@ -4277,6 +4277,82 @@ if the structure clear to us we don't write structure index ``$min(\_),
 
 
 
+\begin{exercise}
+    
+
+
+\begin{enumerate}
+    \item $Hom(h,\mathfrak{M},\mathfrak{N}) \land
+    Hom(k,\mathfrak{N},\mathfrak{P})
+     / \therefore Hom(k\circ h,\mathfrak{M},\mathfrak{P})$.
+
+
+
+    \item $\mathfrak{M}\cong\mathfrak{N}
+     / \therefore \mathfrak{N}\cong\mathfrak{M}$.
+
+    \item $\mathfrak{M}\cong\mathfrak{N}\land
+    \mathfrak{N}\cong\mathfrak{P}
+     / \therefore \mathfrak{M}\cong\mathfrak{P}$.
+
+
+
+    \item $Hom(\mathfrak{M},\mathfrak{N})
+     / \therefore Hom(\mathfrak{N},\mathfrak{M})$.
+
+
+
+    \item $[a]_{\sim}\subseteq[b]_{\sim}
+     / \therefore [a]_{\sim}=[b]_{\sim}$.
+
+
+    \item $\sim_{A/\sim}=\sim$.
+
+    \item $P=A/\sim_P$.
+
+    \item $Part(P,A)\land Part(Q,A)
+    \land \forall X\in P\ \exists Y\in Q\ (X = Y)
+     / \therefore Q = P$.
+
+
+    \item $HaveLeast(B)\land HaveLeast(C)
+    \land B=C
+     / \therefore min(B)=min(C)$.
+
+
+
+    \item $min(B)=b / \therefore Minimal(b)$.
+
+    \item $max(B)=b / \therefore Maximal(b)$.
+
+
+
+    \item Find a partially ordered set with two distinct minimal elements.
+
+    \item Find a partially ordered set with a maximal element that is not a greatest element.
+
+    \item Find a partially ordered set in which a subset has a minimal element but no minimum.
+
+    \item Find a linearly ordered set that is not well ordered.
+
+    \item Find a subset $B$ of an ordered set such that
+    $inf(B)$ exists but $min(B)$ does not.
+
+    \item Find a subset $B$ of an ordered set such that
+    $sup(B)$ exists but $max(B)$ does not.
+
+    \item Find two non-isomorphic structures that admit a homomorphism
+    in one direction.
+
+    \item Find a weak homomorphism that is not a strong homomorphism.
+\end{enumerate}
+
+
+\end{exercise}
+    
+
+
+
 
 \chapter{ The beginning of Abstract Algebra }
 
@@ -5171,40 +5247,43 @@ of all infinite sequences of $a \in A$.
     Define
 
     \[
-        Compute_n(t_n) : \Big( t_n  : s(n) \to A
-        \ \land\ t_n(0) = a \ \land\ \forall k \leq n \ \big( t(s(k)) = g(t(k),k) \big) \Big).
+        Compute_n(t) : \Big( t  : s(n) \to A
+        \ \land\ t(0) = a \ \land\ \forall k \leq n \ \big( t(s(k)) = g(t(k),k) \big) \Big).
     \]
 
     \[
-        F := \Big\{ t_n \ \Big|\ Compute_n(t_n) \Big\}.
+        F := \Big\{ t \ \Big|\  \exists n \ Compute_n(t) \Big\}.
     \]
-    \textbf{Claim 0: $ \forall n \in \mathbb{N} \quad  t_{n}\in F$.}
+    \textbf{Claim 0: $ \forall n \in \mathbb{N} \ \exists t \quad  Compute_n(t )$.}
 
 
 
 
     \begin{fitchproof}[arrayenv=tabular]
-        \have {1} {Compute_0(t_0)} \by{Definition of $t_0$}{}
-        \have {2} {t_0 \in F} \by{Definition of $F$}{1}
+        \have {1} {Compute_0( \{ (0 , a) \} ) } \by{Definition of $t$}{}
+        \have {2} { \{ (0 , a) \} \in F} \by{Definition of $F$}{1}
 
         \open
         \have {3} {n \in \mathbb{N}} \by{acp}{}
         \open
-        \have {5} {t_n \in F} \by{acp}{}
-        \have {6} {t_n \cup \{(s(n),g(t_n(n),n))\} \in F}
-        \by{Definition of $F$ and extension of $t_n$}{5}
-        \have {7} { t_{s(n)} \in F}
-        \by{Definition}{6}
+        \have {5} { \exists t Compute_n(t) } \by{acp}{}
+        \open
+        \have {5} { Compute_n(t) } \by{acp}{}
+        \have {6} { Compute_{s(n)}(t \cup \{(s(n),g(t(n),n))\})}
+        \have {6} { \exists t Compute_{s(n)}(t )}
+        \by{Definition of $F$ and extension of $t$}{5}
+        \close
+        \have {6} { \exists t Compute_{s(n)}(t )}
         \close
 
-        \have {9} { t_n \in F \to  t_{s(n)} \in F}
+        \have {9} { \exists t Compute_n(t) \to  \exists t Compute_{s(n)}(t )}
         \by{$\to I$}{4-8}
         \close
-        \have {10} {\forall n \in \mathbb{N},\
-            ( t_n \in F \to  t_{s(n)} \in F)}
+        \have {10} {\forall n \in \mathbb{N} \
+            ( \exists t Compute_n(t) \to \exists t Compute_{s(n)}(t ))}
         \by{$\forall I$}{3-9}
 
-        \have {11} {\forall n \in \mathbb{N},\ \exists t_n \in F}
+        \have {11} {\forall n \in \mathbb{N} \ \exists t Compute_n(t)}
         \by{Mathematical induction}{2,10}
     \end{fitchproof}
 
@@ -5232,41 +5311,44 @@ of all infinite sequences of $a \in A$.
 
     \begin{fitchproof}[arrayenv=tabular]
         \open
-        \have {1} {t_m,t_n\in F} \by{acp}{}
-        \have {2} {Dom(t_m)=s(m)} \by{Definition of $F$}{1}
-        \have {3} {Dom(t_n)=s(n)} \by{Definition of $F$}{1}
+        \have {1} {t_0,t_1\in F} \by{acp}{}
+        
+        \open
+        \have {2} {Dom(t_0)=s(m)} \by{Definition of $F$}{1}
+        \open
+        \have {3} {Dom(t_1)=s(n)} \by{Definition of $F$}{1}
         \open
         \have {4} {m \le n} \by{acp}{}
 
-        \have {5} {t_m(0)=a} \by{Definition of $F$}{1}
-        \have {6} {t_n(0)=a} \by{Definition of $F$}{1}
-        \have {7} {t_m(0)=t_n(0)} \by{Equality}{5,6}
+        \have {5} {t_0(0)=a} \by{Definition of $F$}{1}
+        \have {6} {t_1(0)=a} \by{Definition of $F$}{1}
+        \have {7} {t_0(0)=t_1(0)} \by{Equality}{5,6}
 
         \open
         \have {ind} {s(k) \leq m} \by{acp}{}
         \have {8} {k < m} \by{}{ind}
         \open
-        \have {9} {t_m(k)=t_n(k)} \by{Induction hypothesis}{}
-        \have {10} {g(t_m(k),k)=g(t_n(k),k)} \by{Equality substitution}{9}
-        \have {11} {t_m(s(k))=g(t_m(k),k)} \by{Definition of $F$}{1}
-        \have {12} {t_n(s(k))=g(t_n(k),k)} \by{Definition of $F$}{1}
-        \have {13} {t_m(s(k))=t_n(s(k))} \by{Equality substitution}{10-12}
+        \have {9} {t_0(k)=t_1(k)} \by{Induction hypothesis}{}
+        \have {10} {g(t_0(k),k)=g(t_1(k),k)} \by{Equality substitution}{9}
+        \have {11} {t_0(s(k))=g(t_1(k),k)} \by{Definition of $F$}{1}
+        \have {12} {t_0(s(k))=g(t_1(k),k)} \by{Definition of $F$}{1}
+        \have {13} {t_0(s(k))=t_1(s(k))} \by{Equality substitution}{10-12}
         \close
         \close
 
-        \have {14} {\forall k \leq m \quad t_m(k)=t_n(k)}
+        \have {14} {\forall k \leq m \quad t_0(k)=t_1(k)}
         \by{Mathematical induction}{7,8-13}
-        \have {15} {t_m\subseteq t_n}
+        \have {15} {t_0 \subseteq t_1}
         \by{Function extension and $m\leq n$}{2,3,4,14}
         \close
 
-        \have {15} {t_m\subseteq t_n\lor t_n\subseteq t_m}
+        \have {15} {t_0 \subseteq t_1 \lor t_1 \subseteq t_0}
         \by{}{}
         \close
         \close
 
-        \have {16} {\forall t_m,t_n\in F\quad
-            (t_m\subseteq t_n\lor t_n\subseteq t_m)}
+        \have {16} {\forall t,t\in F\quad
+            (t_0\subseteq t_1 \lor t_1 \subseteq t_0)}
         \by{Linear ordering of $\mathbb N$}{15}
 
         \have {17} {Compatible(F)}
@@ -5288,9 +5370,9 @@ of all infinite sequences of $a \in A$.
         \open
         \have {21} {n\in\mathbb{N}} \by{acp}{}
         \open
-        \have {22} {t_m\in F} \by{acp}{}
-        \have {25} {n\in Dom(t_m)} \by{acp}{}
-        \have {23} {Dom(t_m)=s(m)} \by{Definition of $F$}{22}
+        \have {22} {t\in F} \by{acp}{}
+        \have {25} {n\in Dom(t)} \by{acp}{}
+        \have {23} {Dom(t)=s(m)} \by{Definition of $F$}{22}
         \have {24} {n\in s(m)} \by{Since $n\in\mathbb N$, choose $m=n$}{21}
         \have {26} {n\in Dom(f)} \by{Definition of $f$}{22,25}
         \close
@@ -5300,9 +5382,9 @@ of all infinite sequences of $a \in A$.
         \open
         \have {28} {n\in Dom(f)} \by{acp}{}
         \open
-        \have {29} {t_m\in F} \by{acp}{}
-        \have {30} {n\in Dom(t_m)} \by{Definition of $f$}{28,29}
-        \have {31} {Dom(t_m)=s(m)} \by{Definition of $F$}{29}
+        \have {29} {t\in F} \by{acp}{}
+        \have {30} {n\in Dom(t)} \by{Definition of $f$}{28,29}
+        \have {31} {Dom(t)=s(m)} \by{Definition of $F$}{29}
         \have {32} {n\in s(m)} \by{Substitution}{30,31}
         \have {33} {n\in\mathbb{N}} \by{Definition of successor set}{32}
         \close
@@ -5316,9 +5398,9 @@ of all infinite sequences of $a \in A$.
         \open
         \have {37} {(n,x)\in f} \by{acp}{}
         \open
-        \have {38} {t_m\in F} \by{acp}{}
-        \have {39} {(n,x)\in t_m} \by{Definition of union}{37,38}
-        \have {40} {t_m:s(m)\to A} \by{Definition of $F$}{38}
+        \have {38} {t\in F} \by{acp}{}
+        \have {39} {(n,x)\in t} \by{Definition of union}{37,38}
+        \have {40} {t:s(m)\to A} \by{Definition of $F$}{38}
         \have {41} {x\in A} \by{Definition of function}{39,40}
         \close
         \have {42} {x\in A} \by{$\exists E$}{37-41}
@@ -6301,7 +6383,7 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
     Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
-\begin{lemma}prove for ``$(\mathbb{C} , + , \cdot , (\_)^{(\_)} )$''
+\begin{lemma}prove for ``$(\_)^{(\_)} :\mathbb{C} \times \mathbb{N} \to \mathbb{C}$''
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       $\forall x   \in \mathbb{Z} \quad \forall m ,n  \in \mathbb{N} \quad  x^m  \cdot  x^n = x^{m  + n}  $
@@ -9274,7 +9356,7 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-\begin{lemma}prove for ``$(\mathbb{C} (Ord) , + , \cdot , (\_)^{(\_)} )$''
+\begin{lemma}prove for ``$(\_)^{(\_)} :\mathbb{C} (Ord) \times Ord \to \mathbb{C} (Ord)$''
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       $\forall x   \in \mathbb{Z} (Ord) \quad \forall m ,n  \in Ord \quad  x^m  \cdot  x^n = x^{m  + n}  $
@@ -9293,7 +9375,7 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-\begin{lemma}prove for ``$(\mathbb{C} (Ord) , + , \cdot  )$''
+\begin{lemma}prove for ``$(\_)^{(\_)} :\mathbb{C} (Ord) \times \mathbb{Z} (Ord) \to \mathbb{C} (Ord)$''
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       $\forall x   \in \mathbb{C} (Ord) \quad \forall y ,z  \in \mathbb{Z} (Ord) \quad  x^y  \cdot  x^z = x^{y  + z}  $
