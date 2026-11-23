@@ -25,9 +25,9 @@
 \contentsline {chapter}{\numberline {7} Natural numbers }{77}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Introduction to Natural numbers}{77}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Properties of Natural numbers}{78}{section.7.2}%
-\contentsline {section}{\numberline {7.3}The Recursion theorem}{81}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Arithmetic of Natural numbers}{89}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Peano arithmetic}{89}{section.7.5}%
+\contentsline {section}{\numberline {7.3}The Recursion theorem}{80}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Arithmetic of Natural numbers}{88}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Peano arithmetic}{88}{section.7.5}%
 \contentsline {chapter}{\numberline {8}From Natural numbers to Complex numbers }{93}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Integers``$\mathbb {Z}$''}{93}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Rational numbers ``$\mathbb {Q}$''}{94}{section.8.2}%

@@ -2424,9 +2424,6 @@ comprehension.  We then extend \(V_1\) to
 \end{Attention}
 
 
-
-
-
 \chapter{Relations and Functions}
 
 \section{Ordered pair and Cartesian product}
@@ -2579,8 +2576,7 @@ so $ \forall X,Y \quad X \in V_0  \land Y   \in V_0 \to  X \times Y   \in V_0$
 
 \section{Relations}
 
-\begin{definition}
-    \textbf{Relation} we call a set like \textbf{R} a \textbf{Relation} when there are
+\begin{definition} [Relation] we call a set like \textbf{R} a \textbf{Relation} when there are
     two sets like $X$ and $Y$ s.t. $R \subseteq X \times Y$.
     \[ Rel(R) : \exists X,Y (R \subseteq X \times Y). \]
 \end{definition}
@@ -2605,8 +2601,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
 
 % \end{definition}
 
-\begin{definition}
-    \textbf{ِDomain and Range(also called Image)} \\
+\begin{definition} [Domain and Range(also called Image)]
     Domain of a set ``$R$'' is all ``$x$'' that there exists a ``$y$'' s.t. ``$xRy$''
     \[ Dom (R) := \{ x \mid \exists y  \quad xRy\} \]
     Range(Image) of a set ``$R$'' is all ``$y$'' that there exists a ``$x$'' s.t.
@@ -2676,8 +2671,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-\begin{definition}
-    \textbf{Inverse of a Relation} \\
+\begin{definition}[Inverse of a Relation]
 
     \[ 		R^{-1}=\{u \mid \exists x,y \Big( u=(y,x) \land x R y \Big)\}   \]
     or i.e.
@@ -2689,7 +2683,6 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
 
 \begin{theorem}
     \textbf{$(schema)$} $( ()^{-1} I, ()^{-1} E )$
-
     \begin{tabular}{|>{\centering\arraybackslash}m{7.5cm}|>{\centering\arraybackslash}m{7.5cm}|}
         \hline
         \begin{fitchproof}[arrayenv=tabular]
@@ -2717,9 +2710,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-\begin{definition}
-    \textbf{Combination of a Relations} \\
-
+\begin{definition}  [Combination of a Relations]
     \[ 		S \circ R = \{u \mid \exists x,y \Big(u=(x,y) \land \exists z \big( xRz \wedge zSy \big)\Big)\}   \]
 
     or i.e.
@@ -2760,8 +2751,8 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-\begin{definition}
-    \textbf{Image} \\
+\begin{definition}  [Image]
+    
     \[ R[A] := \{y \mid \exists x \in A \quad xRy \} \]
     you can olso see by definition of ``inverse of a Relation'' and ``image'' this
     equation holds.
@@ -2823,7 +2814,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
 \section{Functions}
 
 \begin{definition}
-    \textbf{Function}  we call a relation ``\textbf{f}'' a ``\textbf{function}'' when every input has exactly one
+    [Function]  we call a relation ``\textbf{f}'' a ``\textbf{function}'' when every input has exactly one
     output i.e.
     \[ Func(f) : Rel(f) \land \forall x ,y_1 , y_2 \Big((x,y_1) \in f \wedge (x,y_2) \in f \rightarrow y_1 = y_2 \Big) \]
 \end{definition}
@@ -2861,7 +2852,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
 \end{theorem}
 
 \begin{definition}
-    \textbf{Restriction of a function}   to a set ``$X$'' (usually a subset of ``$dom(f)$'') is
+    [Restriction of a function]   to a set ``$X$'' (usually a subset of ``$dom(f)$'') is
     the function
     \[ f\upharpoonright X := \{(x, y) \in f \mid x \in X \} \]
 \end{definition}
@@ -2921,7 +2912,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
 
 %
 \begin{definition}
-    \textbf{Substitution for term} we define Substitution an term with variable  like this.
+    [Substitution for term] we define Substitution an term with variable  like this.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item for variables if $x=y$ then $y[t/x]:=t$ and if $x \not= y$ then $y[t/x]:=y$.
@@ -2932,7 +2923,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
 \end{definition}
 
 \begin{definition}
-    \textbf{Substitution for formulas} we define Substitution for a formula like this.
+    [Substitution for formulas] we define Substitution for a formula like this.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item for atomic formulas we define it like this. if it's a single term we do it as
@@ -3076,8 +3067,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
     terms like $t,s,r,....$ and rewrite them.
 \end{Attention}
 
-\begin{definition}
-    \textbf{Compatible Function}
+\begin{definition} [Compatible Function]
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item  $Compatible(f,g) : \forall x \in dom(f) \cap dom(g) \quad f(x) = g(x) $.
@@ -3104,19 +3094,18 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-\begin{definition}
-    \textbf{Function from set to set}  we call a function \textbf{f} from \textbf{A} to \textbf{B}
+\begin{definition} [Function from set to set]
+      we call a function \textbf{f} from \textbf{A} to \textbf{B}
     when it's domain is  \textbf{A} and it's range is subset of \textbf{B} i.e.
     \[ (f:A \rightarrow B) : Func(f) \land Dom(f)=A \land Range(f) \subseteq B \]
 \end{definition}
 
-\begin{definition}
-    \textbf{Set of functions from set to set}  we denote set of all ``$f:A \rightarrow B$'' with ``$B^A$''  i.e.
+\begin{definition} [Set of functions from set to set]
+     we denote set of all ``$f:A \rightarrow B$'' with ``$B^A$''  i.e.
     \[ B^A : \{ f \mid f :A \rightarrow B \} \]
 \end{definition}
 
-\begin{definition}
-    \textbf{Injective function(Relation)}
+\begin{definition} [Injective function(Relation)]
     we call a function(Relation) \textbf{f} injective when every output has at most one input i.e.
     \[ Injective(f) : Rel(f) \land  \forall y ,x_1 , x_2 \Big((x_1,y) \in f \wedge (x_2,y) \in f \rightarrow x_1 = x_2 \Big). \]
 
@@ -3157,30 +3146,30 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-\begin{definition}
-    \textbf{Surjective function}  we call a function \textbf{f} from \textbf{A} to \textbf{B}
+\begin{definition}  [Surjective function]
+     we call a function \textbf{f} from \textbf{A} to \textbf{B}
     when it's domain is  \textbf{A} and it's range is equal to \textbf{B} i.e.
     \[ (f:A \xrightarrow[surj]{} B) :  (f:A \rightarrow B)  \land Range(f) = B \]
     or i.e.
     \[ (f:A \xrightarrow[surj]{} B) :  (f:A \rightarrow B)  \land (\forall y \in B \quad \exists x \in A \quad (x,y) \in f) \]
 \end{definition}
 
-\begin{definition}
-    \textbf{Bijection function}  we call a function \textbf{f} from \textbf{A} to \textbf{B}
+\begin{definition}  [Bijection function]
+      we call a function \textbf{f} from \textbf{A} to \textbf{B}
     when it's domain is  \textbf{A} and it's range is equal to \textbf{B} i.e.
     \[ (f:A \xrightarrow[surj]{inj} B) :  (f:A \xrightarrow{inj} B)  \land (f:A \xrightarrow[surj]{} B) \]
 \end{definition}
 
 \section{Family of sets}
 
-\begin{Attention}
-    \textbf{Indexes} are objects (like numbers) allows us to give a unique "tag" to every object.
+\begin{Attention} [Indexes]
+     are objects (like numbers) allows us to give a unique "tag" to every object.
     we use $i,j,k,...$ for variable indexes and we use $m,n,l,...$ for constant indexes.
 
 \end{Attention}
 
-\begin{definition}
-    \textbf{Family of sets}  assume $A: I \to  \mathcal{F}$ is a function from a nonempty set of
+\begin{definition} [Family of sets]
+      assume $A: I \to  \mathcal{F}$ is a function from a nonempty set of
     indices $I$ to a family of sets $\mathcal{F}$, then we call $(Range[A])$ an indexed family of sets.
     we can write $A_i$ instead of $A(i)$ and we can write $( A_i )_{i \in I}$ instead
     of ``$A$''  and $\{ A_i \}_{i \in I}$ instead
@@ -3190,8 +3179,8 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
     \[ \{ A_i \}_{i \in I} :=  A[I] \]
 \end{definition}
 
-\begin{definition}
-    \textbf{Intersrction and union of an family of sets}
+\begin{definition} [Intersrction and union of an family of sets]
+    
     \[  \bigcap_{i \in I} A_i := \bigcap \{ A_i \}_{i \in I}  \]
     \[ \bigcup_{i \in I} A_i := \bigcup \{ A_i \}_{i \in I}  \]
 \end{definition}
@@ -3533,8 +3522,8 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
 
 \section{Structures and morphisms}
 
-\begin{definition}
-    \textbf{Structure} ``$\mathfrak{M} $'' is a tuple defined like this.
+\begin{definition} [Structure] 
+    ``$\mathfrak{M} $'' is a tuple defined like this.
     \[\mathfrak{M}  := (M , f_{0}, f_{1},..., f_{n},R_{0}, R_{1} ,...,R_{m}, c_{0}, c_{1},..., c_{k}) \]
     ``$M$'' is a \textbf{nonempty} set shows our universe ``$\forall i \in \{ 0 , ... , n \} \quad f_i : M^{n'} \to M$'' are functions and ``
     $\forall i \in \{ 0 , ... , m \} \quad R_i \subseteq M^{m'}$''
@@ -3544,8 +3533,8 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
     \[\mathfrak{M}  := (M , \{f_i \}_{i \in I_f},\{R_i \}_{i \in I_R}, \{c_i \}_{i \in I}) \]
 \end{definition}
 
-\begin{definition}
-    \textbf{Homorphism} if  ``$\mathfrak{M} := (M , \{f_{i,m} \}_{i \in I_f},\{R_{i,m} \}_{i \in I_R}, \{c_{i,m} \}_{i \in I}) $''
+\begin{definition}  [Homorphism]
+    if  ``$\mathfrak{M} := (M , \{f_{i,m} \}_{i \in I_f},\{R_{i,m} \}_{i \in I_R}, \{c_{i,m} \}_{i \in I}) $''
     and ``$\mathfrak{N} := (N , \{f_{i,n} \}_{i \in I_f},\{R_{i,n} \}_{i \in I_R}, \{c_{i,n} \}_{i \in I}) $'' are two structures.
     function ``$h : M \to N$''is called ``(weak) Homorphism'' when this conditions holds
     \begin{enumerate}
@@ -3579,8 +3568,8 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
 
 \section{Equivalences and Partitions}
 
-\begin{definition}
-    \textbf{Equivalence relation} assume  a structure ``$\mathfrak{A} := (A , \sim ) $''(``$\sim $'' is a relation).
+\begin{definition} [Equivalence relation]
+     assume  a structure ``$\mathfrak{A} := (A , \sim ) $''(``$\sim $'' is a relation).
     we say ``$\sim $''
     is a ``Equivalence relation'' in  ``$\mathfrak{A}$'' if it's  reflexive,symmetric, and transitive.
     \[ (reflexive) :  \forall x \in A \quad x \sim x \]
@@ -3592,8 +3581,8 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-\begin{definition}
-    \textbf{Equivalence class of ``$x$''} Let ``$\sim$'' be an equivalence relation on ``$\mathfrak{A}$''. For every ``$x \in A$''
+\begin{definition} [Equivalence class of ``$x$'']
+     Let ``$\sim$'' be an equivalence relation on ``$\mathfrak{A}$''. For every ``$x \in A$''
 
     \[ [x]_{\sim} := \{y \in A \mid y \sim x \} \]
 
@@ -3708,8 +3697,8 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
 
 \end{lemma}
 
-\begin{definition}
-    \textbf{Partition} is a ``set of sets''  like ``$P$'' of a set like  ``$A$''  with this conditions.
+\begin{definition} [Partition]
+     is a ``set of sets''  like ``$P$'' of a set like  ``$A$''  with this conditions.
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item  $\forall X \in P \quad X \not= \emptyset$
@@ -3719,8 +3708,8 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
     \end{enumerate}
 \end{definition}
 
-\begin{definition}
-    \textbf{Set of Equivalence classes}
+\begin{definition} [Set of Equivalence classes]
+    
 
     \[ A/\sim := \{ [x]_{\sim} \mid x \in  A \} \]
 
@@ -3847,8 +3836,8 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
 
 
 \section{Orderings}
-\begin{definition}
-    \textbf{(partial) Order relation} assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a relation).
+\begin{definition}[(partial) Order relation]
+     assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a relation).
     we say ``$\preceq  $''
     is a ``(partial) Order relation'' in  ``$\mathfrak{A}$'' if it's  reflexive,antisymmetric, and transitive.
     \[ (reflexive) :  \forall x \in A \quad x \preceq x \]
@@ -3856,8 +3845,8 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
     \[ (transitive) :  \forall x,y,z \in A \quad x \preceq y \land y \preceq z \to x \preceq z  \]
 \end{definition}
 
-\begin{definition}
-    \textbf{(partial) Strict order relation} assume  a structure ``$\mathfrak{A} := (A , \prec  ) $''(``$\prec $'' is a relation).
+\begin{definition}[(partial) Strict order relation]
+     assume  a structure ``$\mathfrak{A} := (A , \prec  ) $''(``$\prec $'' is a relation).
     we say ``$\prec  $''
     is a ``(partial) Strict order relation'' in  ``$\mathfrak{A}$'' if it's  irreflexive, and transitive.
     \[ (irreflexive) :  \forall x \in A \quad x \nprec  x \]
@@ -3999,8 +3988,8 @@ now we will show you relation between ``(partial) Order relation'' and
 
 
 
-\begin{definition}
-    \textbf{(Total-Linear) Order relation} assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
+\begin{definition}[(Total-Linear) Order relation]
+    assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
     we say ``$\preceq  $''
     is a ``(Total-Linear) Order relation'' in  ``$\mathfrak{A}$'' if every two elements are comparable.
 
@@ -4008,8 +3997,8 @@ now we will show you relation between ``(partial) Order relation'' and
 
 \end{definition}
 
-\begin{definition}
-    \textbf{(Total-Linear) Strict order relation} assume  a structure ``$\mathfrak{A} := (A , \prec  ) $''(``$\prec $'' is a Strict order relation).
+\begin{definition}[(Total-Linear) Strict order relation]
+     assume  a structure ``$\mathfrak{A} := (A , \prec  ) $''(``$\prec $'' is a Strict order relation).
     we say ``$\prec  $''
     is a ``(Total-Linear) Strict order relation'' in  ``$\mathfrak{A}$'' if every two elements are comparable.
 
@@ -4093,14 +4082,14 @@ now we will show you relation between ``(partial) Order relation'' and
 \end{fitchproof}
 
 
-\begin{definition}
-    \textbf{(partial) $\sim$-Order relation} assume  a structure ``$\mathfrak{A} := (A , \precsim  , \sim  ) $''(``$\precsim  $'' is a relation).
+\begin{definition}[(partial) $\sim$-Order relation]
+     assume  a structure ``$\mathfrak{A} := (A , \precsim  , \sim  ) $''(``$\precsim  $'' is a relation).
     we say ``$\precsim   $''
     is a ``(partial) $\sim$-Order relation'' in  ``$\mathfrak{A}$'' if it's  reflexive, $\sim$-antisymmetric, and transitive.
     \[ (reflexive) :  \forall x \in A \quad x \precsim  x \]
     \[ (\sim-antisymmetric) :   \forall x,y \in A \quad x \precsim  y \land y \precsim  x \to x \sim y \]
     \[ (transitive) :  \forall x,y,z \in A \quad x \precsim  y \land y \precsim  z \to x \precsim  z  \]
-    \[ (compatible with \sim) :   \forall x,x',y,y'\in A \quad (x\sim x'\land y\sim y') \to (x\precsim y  \leftrightarrow x'\precsim y'). \]
+    \[ (compatible \ with \sim) :   \forall x,x',y,y'\in A \quad (x\sim x'\land y\sim y') \to (x\precsim y  \leftrightarrow x'\precsim y'). \]
 
 \end{definition}
 
@@ -4216,7 +4205,7 @@ now we will show you relation between ``(partial) Order relation'' and
 \end{theorem}
 
 \begin{definition}
-    \textbf{Minimal and Maximal} assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
+    [Minimal and Maximal] assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
     we define ``Minimal and Maximal'' like this
     \[ Minimal_\mathfrak{A}(b) :   \forall x \in A \quad x \nprec   b  \]
     i.e. ``$b$'' is the minimal in ``$ \mathfrak{A}$''.
@@ -4225,13 +4214,13 @@ now we will show you relation between ``(partial) Order relation'' and
 \end{definition}
 
 \begin{definition}
-    \textbf{Well ordering} assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Linear Order relation).
+    [Well ordering] assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Linear Order relation).
     we say ``$\mathfrak{A} $ '' is ``Well ordered'' when every nonempty subset of ``$A $ '' has a ``Minimum '' i.e.
     \[ WellOrdered(\mathfrak{A}) :   \forall X \subseteq A \quad X \not= \emptyset \to  HaveLeast(X)  \]
 \end{definition}
 
 \begin{definition}
-    \textbf{Lower and Upper Bound} assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
+    [Lower and Upper Bound] assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
     $ B,C \subseteq A $. we define ``Lower and Upper Bound'' like this
     \[ Lowerb_\mathfrak{A}(b,B) :   \forall x \in B \quad b \preceq   x  \]
     i.e. ``$b$'' is the lowerbound of $B$ in ``$ \mathfrak{A}$''.
@@ -4243,7 +4232,7 @@ if the structure clear to us we don't write structure index ``$min(\_),
     Minimal(\_) , Lowerb(\_,\_)$''. and we don't mention it.
 
 \begin{theorem}
-    \textbf{Infimum and Supremum} assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
+    [Infimum and Supremum] assume  a structure ``$\mathfrak{A} := (A , \preceq  ) $''(``$\preceq $'' is a Order relation).
     and $\mathcal{B} := \{ B \subseteq A \mid HaveGreatest \{ b \in A \mid Lowerb_\mathfrak{A}(b,B) \} \}$ and
     $ \mathcal{C} := \{ C \subseteq A \mid HaveLeast \{ c \in A \mid Upperb_\mathfrak{A}(c,C) \}  \}$
     we define ``$inf_\mathfrak{A} : \mathcal{B}
@@ -5017,7 +5006,7 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
 \section{Introduction to Natural numbers}
 
 \begin{definition}
-    \textbf{Natural numbers} we define ``$0,1,2,3,...$'' like this.
+    [Natural numbers] we define ``$0,1,2,3,...$'' like this.
     \begin{align*}
          &
         0 := \emptyset
@@ -5036,7 +5025,7 @@ we want to introduce some functions ``$\bigcirc :\mathbb{N} \times \mathbb{N}
 \end{definition}
 
 \begin{definition}
-    \textbf{Successor function} is a function ``$s :V \to V$'' defined like this.
+    [Successor function] is a function ``$s :V \to V$'' defined like this.
     \[s(x) := x\cup \{x\}\]
 \end{definition}
 
@@ -5054,7 +5043,7 @@ you can see $\forall x \quad x   \in V_0 \to s(x)   \in V_0$
 notice that ``$Ind(X)$'' might be empty.
 
 \begin{axiom}
-    \textbf{The Axiom of Infinity} we define a set ``Inductive'' like this.
+    [The Axiom of Infinity] we define a set ``Inductive'' like this.
 
     \[
         \exists X \quad X \in V_0 \land Ind(X)
@@ -5065,7 +5054,7 @@ notice that ``$Ind(X)$'' might be empty.
 so ``$Ind(X)$'' is a nonempty set. so we can define
 
 \begin{definition}
-    \textbf{Set of Natural numbers($\mathbb{N}$)}
+    [Set of Natural numbers($\mathbb{N}$)]
 
     \[ \mathbb{N} := \bigcap Ind \]
 
@@ -5088,7 +5077,7 @@ notice that now ``$\phi(x)$'' is a proposition. so ``$\{ x \mid \forall Y \Big(
 
 \section{Properties of Natural numbers}
 
-\begin{theorem}\textbf{Induction}
+\begin{theorem}[Induction]
     $P(0) , \forall n \in \mathbb{N} \quad \Big( P(n) \to P(s(n)) \Big) /\therefore \forall n\in \mathbb{N} \quad P(n)$
     \\
     proof.
@@ -5173,7 +5162,7 @@ notice that now ``$\phi(x)$'' is a proposition. so ``$\{ x \mid \forall Y \Big(
 \end{lemma}
 
 \begin{definition}
-    \textbf{Order in Natural numbers($\mathbb{N}$)}
+    [Order in Natural numbers($\mathbb{N}$)]
 
     \[
         < := \{ (x,y) \in \mathbb{N} \times \mathbb{N}  \mid x \in y \}
@@ -5181,7 +5170,7 @@ notice that now ``$\phi(x)$'' is a proposition. so ``$\{ x \mid \forall Y \Big(
 \end{definition}
 
 \begin{theorem}
-    \textbf{Order of Natural numbers($\mathbb{N}$)} prove
+    [Order of Natural numbers($\mathbb{N}$)] prove
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item        $ (\mathbb{N} , <  )  $ is linearly ordered. \twemoji{1f600}
@@ -5231,7 +5220,7 @@ notice that now ``$\phi(x)$'' is a proposition. so ``$\{ x \mid \forall Y \Big(
     Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
-\begin{theorem}\textbf{Induction ,second version}
+\begin{theorem}[Induction ,second version]
     $ \Big( \forall  k < n \quad  P(k) \Big) \to P(n)  /\therefore \forall n\in \mathbb{N} \quad P(n)$
     \\
     proof.
@@ -5241,12 +5230,12 @@ notice that now ``$\phi(x)$'' is a proposition. so ``$\{ x \mid \forall Y \Big(
 \section{The Recursion theorem}
 
 \begin{definition}
-    \textbf{Tuple (new definition)-Finite sequence} is a function ``$a : n \to V$'' s.t. $n \in  \mathbb{N}$ we know we can show this
+    [Tuple (new definition)-Finite sequence] is a function ``$a : n \to V$'' s.t. $n \in  \mathbb{N}$ we know we can show this
     by ``$(a_i)_{i \in n}$'' we can also show it by ``$(a_0 , a_1 ,a_2 , ... , a_{n-1})$''
 \end{definition}
 
 \begin{definition}
-    \textbf{Sequence} is a function ``$a : \mathbb{N} \to V$''  we know we can show this
+    [Sequence] is a function ``$a : \mathbb{N} \to V$''  we know we can show this
     by ``$(a_i)_{i \in \mathbb{N}}$'' we can also show it by ``$(a_i)_{i = 0}^{\infty}$''
 \end{definition}
 
@@ -5785,7 +5774,7 @@ of all infinite sequences of $a \in A$.
 
 \section{Arithmetic of Natural numbers}
 
-\begin{theorem}\textbf{Summation} there is a unique function ``$+ :\mathbb{N} \times \mathbb{N} \to \mathbb{N}$'' s.t.
+\begin{theorem}[Summation] there is a unique function ``$+ :\mathbb{N} \times \mathbb{N} \to \mathbb{N}$'' s.t.
 
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
@@ -5795,7 +5784,7 @@ of all infinite sequences of $a \in A$.
     Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
-\begin{theorem}\textbf{Multiplication} there is a unique function ``$\times :\mathbb{N} \times \mathbb{N} \to \mathbb{N}$'' s.t.
+\begin{theorem}[Multiplication] there is a unique function ``$\times :\mathbb{N} \times \mathbb{N} \to \mathbb{N}$'' s.t.
 
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
@@ -5838,16 +5827,20 @@ we call ``$\mathfrak{N}$'' a model of ``Peano arithmetic''.
 
     \begin{fitchproof}[arrayenv=tabular]
 
+        \open
+        \have {14} { x , y   \in N }   \by{$acp $}{}
         \have {14} { (x + y )+ 0 = x + y  = x +( y + 0 )}    \by{Ax. }{}
 
         \open
-        \have {14} { x , y , z  \in N }   \by{$acp $}{}
+        \have {14} {  z  \in N }   \by{$acp $}{}
         \open
-        \have {14} { (x + y )+ z  = x +( y + z )}                 \by{$acp $}{}
-        \have {14} { (x + y )+ s(z) =  s \big((x + y )+ z \big) =  s \big(x + ( y + z ) \big) = x + s( y + z ) = x +( y + s(z) )}     \by{Ax. }{}
+        \have {14} { (x + y )+ z  = x +( y + z )}                 \by{acp}{}
+        \have {14} { (x + y )+ s(z) =  s \big((x + y )+ z \big) =  s \big(x + ( y + z ) \big) = x + s( y + z ) = x +( y + s(z) )}     \by{Ax. , IH}{}
+        \close
         \close
 
 
+        \have {14} {\forall   z  \in N \quad (x + y )+ z  = x +( y + z )}     \by{Induntion axiom}{}
         \close
         \have {14} {\forall x , y , z  \in N \quad (x + y )+ z  = x +( y + z )}     \by{$ \to I , \forall I$}{}
 
@@ -5865,39 +5858,42 @@ we call ``$\mathfrak{N}$'' a model of ``Peano arithmetic''.
         \close
 
         \close
-        \have {14} {\forall x  \in N \quad x  + 0 = 0 + x  = x}     \by{$ \to I , \forall I$}{}
+        \have {14} {\forall x  \in N \quad x  + 0 = 0 + x  = x}      \by{Induntion axiom}{}
 
     \end{fitchproof}
 
     \begin{fitchproof}[arrayenv=tabular]
 
-        \have {14} {  y  + s(0) = s(y + 0) =  s(y)  = s(y) + 0 }                 \by{Ax. }{}
+        \have {14} {  s(y + 0) =  s(y)  = s(y) + 0 }                 \by{Ax. }{}
 
         \open
         \have {14} { x , y   \in N }   \by{$acp $}{}
-        % \have {14} {  0 + x  = x }     \by{$acp $}{}
         \open
-        \have {14} { y + s( x ) = s(y) + x }     \by{$acp $}{}
-        \have {14} { y + s( s(x) ) = s( y + s(x)) = s( s(y) + x )    = s(y) + s(x) }     \by{Ax. }{}
+        \have {14} {  s( y +  x ) = s(y) + x }     \by{$acp $}{}
+        \have {14} {  s( y + s(x)) = s(s(y + x)) = s( s(y) + x )    = s(y) + s(x) }     \by{Ax. }{}
         \close
 
+        \have {14} {\forall  y \in N \quad  s( y +  x ) = s(y) + x}      \by{Induntion axiom}{}
         \close
-        \have {14} {\forall x , y \in N \quad  y + s( x ) = s(y) + x }     \by{$ \to I , \forall I$}{}
+        \have {14} {\forall x , y \in N \quad  s( y +  x ) = s(y) + x }     \by{$ \to I , \forall I$}{}
 
     \end{fitchproof}
 
     \begin{fitchproof}[arrayenv=tabular]
 
+        \open
+        \have {14} { x   \in N }   \by{$acp $}{}
         \have {14} {  x  + 0  = 0 + x }                 \by{ Lemma 7.5.1.2}{}
 
         \open
-        \have {14} { x , y   \in N }   \by{$acp $}{}
-        % \have {14} {  0 + x  = x }     \by{$acp $}{}
+        \have {14} { y   \in N }   \by{$acp $}{}
         \open
         \have {14} { x  + y = y + x }     \by{$acp $}{}
-        \have {14} { x  + s(y) = s(x + y) = s( y + x ) =  y + s( x ) = s(y) + x }     \by{Ax. }{}
+        \have {14} { x  + s(y) = s(x + y) = s( y + x ) = s(y) + x }     \by{Ax. }{}
+        \close
         \close
 
+        \have {14} {\forall y \in N \quad x  + y = y + x  }      \by{Induntion axiom}{}
         \close
         \have {14} {\forall x , y \in N \quad x  + y = y + x  }     \by{$ \to I , \forall I$}{}
 
@@ -5936,19 +5932,25 @@ we call ``$\mathfrak{N}$'' a model of ``Peano arithmetic''.
     \end{fitchproof}
 
     \begin{fitchproof}[arrayenv=tabular]
-
-        \have {14} {  0 + y 0 = s(y) \cdot 0  }                 \by{Ax. }{}
+        
+        \open
+        \have {14} {  y   \in N }   \by{$acp $}{}
+        \have {14} {   y 0 + 0 = s(y) \cdot 0  }                 \by{Ax. }{}
 
         \open
         \have {14} { x , y   \in N }   \by{$acp $}{}
         % \have {14} {  0 + x  = x }     \by{$acp $}{}
         \open
-        \have {14} { x + y x = s(y) \cdot x }     \by{$acp $}{}
-        \have {14} { s(x) + y x = x + s( y x ) = s( x +  y x ) = s( s(y) \cdot x)  = s(y) \cdot s(x) }
+        \have {14} {  y x + x = s(y) \cdot x }     \by{$acp $}{}
+        \have {14} {   y \cdot s(x) + s(x)  = s(   y \cdot s(x)  + x ) = s( (yx + y) + x) = s( yx + (y + x) ) }
+        \have {14} { s( yx + (y + x) ) = s( (yx + x )+ y)  =  s( (s(y) \cdot x)+ y) }
+        \have {14} {   s( (s(y) \cdot x)+ y) =  (s(y) \cdot x)+ s(y) = s(y) \cdot s(x) }
         \close
-
         \close
-        \have {14} {\forall x , y \in N \quad x + y x = s(y) \cdot x  }     \by{$ \to I , \forall I$}{}
+        
+        \have {14} {\forall x  \in N \quad y x + x = s(y) \cdot x  }     \by{Induntion axiom}{}
+        \close
+        \have {14} {\forall x , y \in N \quad y x + x = s(y) \cdot x  }     \by{$ \to I , \forall I$}{}
 
     \end{fitchproof}
 
@@ -5959,10 +5961,9 @@ we call ``$\mathfrak{N}$'' a model of ``Peano arithmetic''.
         
         \open
         \have {14} { x , y   \in N }   \by{$acp $}{}
-        % \have {14} {  0 + x  = x }     \by{$acp $}{}
         \open
         \have {14} { x   y = y  x }     \by{$acp $}{}
-        \have {14} { x  \cdot s(y) = x y + x =  y x + x = x + y x   = s(y) \cdot x }
+        \have {14} { x  \cdot s(y) = x y + x =  y x + x   = s(y) \cdot x }        \by{IH}{}
         \close
 
         \close
@@ -5997,8 +5998,8 @@ we learned about ``$\mathbb{N}$'' before and we constructed structure
     \mathbb{N}$'' we can define an equivalence relation ``$ (n_1 , m_1) \sim (n_2 ,
     m_2) : n_1 + m_2 = n_2 + m_1 $''(check it's an equivalence relation).
 
-\begin{definition}\textbf{Integers``$\mathbb{Z}$''} is a set
-    \[ \mathbb{Z} := \frac{\mathbb{N} \times \mathbb{N}}{\sim}  \]
+\begin{definition}[Integers``$\mathbb{Z}$''] is a set
+    \[ \mathbb{Z} := (\mathbb{N} \times \mathbb{N}) / \sim  \]
     we denote it's members with ``$z_0 , z_1 ,...$''
 \end{definition}
 
@@ -6007,21 +6008,21 @@ in this system ``$ 0 := [(0,0)]$'' and ``$ \forall n \in \mathbb{N} \quad n :=
 general``$\forall m,n \in \mathbb{N} \quad m-n := [(m,n)]$''. so we can say ``$
     \mathbb{N} \subseteq \mathbb{Z}$''.
 
-\begin{theorem}\textbf{Summation} there is a unique function ``$+_\mathbb{Z} :\mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$'' s.t.
+\begin{theorem}[Summation] there is a unique function ``$+_\mathbb{Z} :\mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$'' s.t.
 
     \[ \forall m_1 , m_2 , n_1 , n_2 \in \mathbb{N} \quad [(m_1 , n_1)] +_\mathbb{Z}  [(m_2 , n_2)]  = [(m_1 + m_2, n_1 + n_2)] \]
 
     Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
-\begin{theorem}\textbf{Multiplication} there is a unique function ``$\times_\mathbb{Z} :\mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$'' s.t.
+\begin{theorem}[Multiplication] there is a unique function ``$\times_\mathbb{Z} :\mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$'' s.t.
 
     \[ \forall m_1 , m_2 , n_1 , n_2 \in \mathbb{N} \quad [(m_1 , n_1)] \times_\mathbb{Z} [(m_2 , n_2)]  = [(m_1 m_2  + n_1 n_2 , m_1 n_2 + m_2 n_1)] \]
 
     Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
-\begin{definition}\textbf{Order in $\mathbb{Z}$}
+\begin{definition}[Order in $\mathbb{Z}$]
     \[ [(m_1 , n_1)] <_\mathbb{Z} [(m_2 , n_2)]  : m_1 + n_2  < m_2 + n_1 \]
 \end{definition}
 
@@ -6065,7 +6066,7 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
 \end{lemma}
 
 \begin{theorem}
-    \textbf{Order of Integers($\mathbb{Z}$)} prove for  ``$ (\mathbb{Z} ,+ , \times , <_\mathbb{Z}  )  $ ''
+    [Order of Integers($\mathbb{Z}$)] prove for  ``$ (\mathbb{Z} ,+ , \times , <_\mathbb{Z}  )  $ ''
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       is linearly ordered.
@@ -6085,8 +6086,8 @@ we learned about ``$\mathbb{Z}$'' before and we constructed structure
     \sim (y_2 , x_2 ) : y_1 \cdot x_2 = y_2 \cdot x_1 $''(check it's an equivalence
 relation).
 
-\begin{definition}\textbf{Rational numbers``$\mathbb{Q}$''} is a set
-    \[ \mathbb{Q} := \frac{\mathbb{Z} \times (\mathbb{Z} - \{0\})}{\sim}  \ \]
+\begin{definition}[Rational numbers``$\mathbb{Q}$''] is a set
+    \[ \mathbb{Q} := (\mathbb{Z} \times (\mathbb{Z} - \{0\})) / \sim \ \]
     we denote it's members with ``$q_0 , q_1 ,...$''
 \end{definition}
 
@@ -6096,21 +6097,21 @@ in this system ``$ 0 := [(0,1)]$'' and ``$ 1 := [(1,1)]$'' and ``$ \forall x
     \frac{x}{y} := [(x,y)]$''. so we can say ``$ \mathbb{N} \subseteq \mathbb{Z}
     \subseteq \mathbb{Q} $''.
 
-\begin{theorem}\textbf{Summation} there is a unique function ``$+_\mathbb{Q} :\mathbb{Q} \times \mathbb{Q} \to \mathbb{Q}$'' s.t.
+\begin{theorem}[Summation] there is a unique function ``$+_\mathbb{Q} :\mathbb{Q} \times \mathbb{Q} \to \mathbb{Q}$'' s.t.
 
     \[ \forall x  , y  , z , u  \in \mathbb{Z} \quad [(x  , z)] +_\mathbb{Q} [(y  , u)]  = [(x u  + z y ,  z  u)] \]
 
     Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
-\begin{theorem}\textbf{Multiplication} there is a unique function ``$\times_\mathbb{Q} :\mathbb{Q} \times \mathbb{Q} \to \mathbb{Q}$'' s.t.
+\begin{theorem}[Multiplication] there is a unique function ``$\times_\mathbb{Q} :\mathbb{Q} \times \mathbb{Q} \to \mathbb{Q}$'' s.t.
 
     \[ \forall x  , y  , z , u  \in \mathbb{Z} \quad [(x  , z)] \times_\mathbb{Q} [(y  , u)]  = [(x  y , z u)] \]
 
     Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
-\begin{definition}\textbf{Order in $\mathbb{Q}$} .\\
+\begin{definition}[Order in $\mathbb{Q}$]
     if ($z > 0 , u > 0$) or ($z < 0 , u < 0$)
     \[ [(x  , z)] <_\mathbb{Q} [(y  , u)]  : x  \cdot u  < y  \cdot z \]
     if ($z > 0 , u < 0$) or ($z < 0 , u > 0$)
@@ -6158,7 +6159,7 @@ we denote ``Multiplication'' with ``$x \cdot y$'' and ``$x y$'' too.
 \end{lemma}
 
 \begin{theorem}
-    \textbf{Order of Rational numbers($\mathbb{Q}$)} prove for  ``$ (\mathbb{Q} , <_\mathbb{Q}  )  $''
+    [Order of Rational numbers($\mathbb{Q}$)] prove for  ``$ (\mathbb{Q} , <_\mathbb{Q}  )  $''
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item        is linearly ordered.
@@ -6194,9 +6195,9 @@ we learned about ``$\mathbb{Q}$'' before and we constructed structure
 what does it mean by the definition. it means all the sequences of
 $\mathbb{Q}$). we don't want it all we just want a subset.
 
-\begin{definition}\textbf{Cauchy sequence} is a sequence like ``$(a_i)_{i \in \mathbb{N}} \in \mathbb{Q}^\mathbb{N}$'' s.t. elements of it get infinitely
+\begin{definition}[Cauchy sequence] is a sequence like ``$(a_i)_{i \in \mathbb{N}} \in \mathbb{Q}^\mathbb{N}$'' s.t. elements of it get infinitely
     close to each other i.e.
-    \[  Cauchy(a_i)_{i \in \mathbb{N}} : \forall \varepsilon \in \mathbb{Q}^+ \quad \exists N  \quad \forall n,m > N  \quad | a_n - a_m | < \varepsilon   \]
+    \[  Cauchy_{\mathbb{Q}}(a_i)_{i \in \mathbb{N}} : \forall \varepsilon \in \mathbb{Q}^+ \quad \exists N  \quad \forall n,m > N  \quad | a_n - a_m | < \varepsilon   \]
 \end{definition}
 
 we usually give ``$N$'' natural numbers but it's not necessary.
@@ -6268,8 +6269,8 @@ denote every $[(a_i)_{i \in \mathbb{N}}]$ with $[a_i]_{i \in \mathbb{N}}$.
 
 \end{fitchproof}
 
-\begin{definition}\textbf{Real numbers ``$\mathbb{R}$''} is a set
-    \[ \mathbb{R} :=  Cauchy/ \sim  \]
+\begin{definition}[Real numbers ``$\mathbb{R}$''] is a set
+    \[ \mathbb{R} :=  Cauchy_{\mathbb{Q}}/ \sim  \]
     we denote it's members with ``$r_0 , r_1 ,...$''
 \end{definition}
 
@@ -6278,21 +6279,21 @@ in this system ``$ 0 := [0]_{i \in \mathbb{N}}$'' and ``$ 1 := [1]_{i \in
             \mathbb{N}}$''. so we can say ``$ \mathbb{N} \subseteq \mathbb{Z} \subseteq
     \mathbb{Q} \subseteq \mathbb{R}$''.
 
-\begin{theorem}\textbf{Summation} there is a unique function ``$+_\mathbb{R} :\mathbb{R} \times \mathbb{R} \to \mathbb{R}$'' s.t.
+\begin{theorem}[Summation] there is a unique function ``$+_\mathbb{R} :\mathbb{R} \times \mathbb{R} \to \mathbb{R}$'' s.t.
 
     \[  [a_i]_{i \in \mathbb{N}} +_\mathbb{R} [b_i]_{i \in \mathbb{N}}  = [a_i + b_i]_{i \in \mathbb{N}} \]
 
     Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
-\begin{theorem}\textbf{Multiplication} there is a unique function ``$\times_\mathbb{R} :\mathbb{R} \times \mathbb{R} \to \mathbb{R}$'' s.t.
+\begin{theorem}[Multiplication] there is a unique function ``$\times_\mathbb{R} :\mathbb{R} \times \mathbb{R} \to \mathbb{R}$'' s.t.
 
     \[  [a_i]_{i \in \mathbb{N}} \times_\mathbb{R} [b_i]_{i \in \mathbb{N}}  = [a_i  b_i]_{i \in \mathbb{N}} \]
 
     Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
-\begin{definition}\textbf{Order in $\mathbb{R}$} .\\
+\begin{definition}[Order in $\mathbb{R}$]
     \[  [a_i]_{i \in \mathbb{N}} <_\mathbb{R} [b_i]_{i \in \mathbb{N}}  :
         \exists \varepsilon_{> 0} \in \mathbb{Q} (Ord) \quad \exists N  \quad \forall n > N  \quad  b_n - a_n  > \varepsilon  \]
 \end{definition}
@@ -6338,7 +6339,7 @@ we denote ``Multiplication'' with ``$x \cdot y$'' and ``$x y$'' too.
 \end{lemma}
 
 \begin{theorem}
-    \textbf{Linear order of Real numbers($\mathbb{R}$)} prove   ``$ (\mathbb{R} , <_\mathbb{R}  )  $
+    [Linear order of Real numbers($\mathbb{R}$)] prove   ``$ (\mathbb{R} , <_\mathbb{R}  )  $
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item        is linearly ordered.
@@ -6358,7 +6359,7 @@ we denote ``Multiplication'' with ``$x \cdot y$'' and ``$x y$'' too.
 we learned about ``$\mathbb{R}$'' before and we constructed structure
 ``$(\mathbb{R} , + , \cdot , <)$''.
 
-\begin{definition}\textbf{Complex numbers``$\mathbb{C}$''} is a set
+\begin{definition}[Complex numbers``$\mathbb{C}$''] is a set
     \[ \mathbb{C} := \mathbb{R} \times \mathbb{R} \]
     we denote it's members with ``$z_0 , x ,...$''
 \end{definition}
@@ -6368,14 +6369,14 @@ in this system ``$ 0 := (0,0)$'' and ``$ \forall r \in \mathbb{R} \quad r :=
 so we can say ``$\mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq
     \mathbb{R} \subseteq \mathbb{C}$''.
 
-\begin{theorem}\textbf{Summation} there is a unique function ``$+_\mathbb{C} :\mathbb{C} \times \mathbb{C} \to \mathbb{C}$'' s.t.
+\begin{theorem}[Summation] there is a unique function ``$+_\mathbb{C} :\mathbb{C} \times \mathbb{C} \to \mathbb{C}$'' s.t.
 
     \[ \forall x , y , z , u \in \mathbb{R} \quad (x , z) +_\mathbb{C}  (y , u)  = (x + y, z + u) \]
 
     Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
-\begin{theorem}\textbf{Multiplication} there is a unique function ``$\times_\mathbb{C} :\mathbb{C} \times \mathbb{C} \to \mathbb{C}$'' s.t.
+\begin{theorem}[Multiplication] there is a unique function ``$\times_\mathbb{C} :\mathbb{C} \times \mathbb{C} \to \mathbb{C}$'' s.t.
 
     \[ \forall x , y , z , u \in \mathbb{R} \quad (x , z) \times_\mathbb{C} (y , u)  = (x y  - z u , x u + y z) \]
 
@@ -6420,7 +6421,7 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
     Proof Is Left As An Exercise To The Reader.
 \end{lemma}
 
-\begin{theorem}\textbf{Exponents} there is a unique function ``$(\_)^{(\_)} :\mathbb{C} \times \mathbb{N} \to \mathbb{C}$'' s.t.
+\begin{theorem}[Exponents] there is a unique function ``$(\_)^{(\_)} :\mathbb{C} \times \mathbb{N} \to \mathbb{C}$'' s.t.
 
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
@@ -6439,7 +6440,7 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
     Proof Is Left As An Exercise To The Reader.
 \end{lemma}
 
-\begin{theorem}\textbf{Exponents} there is a unique function ``$(\_)^{(\_)} :\mathbb{C} \times \mathbb{Z} \to \mathbb{C}$'' s.t.
+\begin{theorem}[Exponents] there is a unique function ``$(\_)^{(\_)} :\mathbb{C} \times \mathbb{Z} \to \mathbb{C}$'' s.t.
 
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
@@ -6458,7 +6459,7 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
     Proof Is Left As An Exercise To The Reader.
 \end{lemma}
 
-\begin{theorem}\textbf{Big Sum} if ``$a : \mathbb{N} \to \mathbb{C}$'' there is a unique function ``$\sum_{i = 0}^{(\_)} (\_)  :\mathbb{C} \times \mathbb{N} \to \mathbb{C}$'' s.t.
+\begin{theorem}[Big Sum] if ``$a : \mathbb{N} \to \mathbb{C}$'' there is a unique function ``$\sum_{i = 0}^{(\_)} (\_)  :\mathbb{C} \times \mathbb{N} \to \mathbb{C}$'' s.t.
 
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
@@ -6477,7 +6478,7 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
     Proof Is Left As An Exercise To The Reader.
 \end{lemma}
 
-\begin{theorem}\textbf{Big Product} if ``$a : \mathbb{N} \to \mathbb{C}$'' there is a unique function ``$\prod_{i = 0}^{(\_)} (\_)  :\mathbb{C} \times \mathbb{N} \to \mathbb{C}$'' s.t.
+\begin{theorem}[Big Product] if ``$a : \mathbb{N} \to \mathbb{C}$'' there is a unique function ``$\prod_{i = 0}^{(\_)} (\_)  :\mathbb{C} \times \mathbb{N} \to \mathbb{C}$'' s.t.
 
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
@@ -6506,7 +6507,7 @@ we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
     \xrightarrow[surj]{inj} B $.
 
 \begin{definition}
-    \textbf{Equipotent}
+    [Equipotent]
     in  situation above we say ``$A$'' and ``$B$'' are ``Equipotent''.  we denote it with ``$A \cong B$'' i.e.
     \[ A \cong B : \exists f  (f:A \xrightarrow[surj]{inj} B) \]
 \end{definition}
@@ -6520,7 +6521,7 @@ we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
 \begin{proof}
     We prove reflexivity, symmetry, and transitivity.
 
-    \textbf{Reflexivity.}
+    Reflexivity.
     For every $X\in V$, the identity function $\operatorname{id}_X:X\to X$ is both injective and surjective. Hence
 
     $$
@@ -6537,7 +6538,7 @@ we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
         \by{$\mathrm{def.}$}{}
     \end{fitchproof}
 
-    \textbf{Symmetry.}
+    Symmetry.
     Suppose $X\cong Y$. Then, by definition, there exists a bijection
     $f:X\to Y$. Let $f$ be such a function. Since the inverse of a bijection is again a bijection,
 
@@ -6569,7 +6570,7 @@ we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
 
     \end{fitchproof}
 
-    \textbf{Transitivity.}
+    Transitivity.
     Suppose $X\cong Y$ and $Y\cong Z$. Then there exist bijections
     $f:X\to Y$ and $g:Y\to Z$. Since the composition of two bijections is a bijection,
 
@@ -6618,7 +6619,7 @@ so ``$ V / \cong $'' is a partition for ``$V$'' and every partition equals to a
 $[A]_{\cong}$ we denote it by $[A]$.
 
 \begin{definition}
-    \textbf{Embedding} if there is a  function $f:A \xrightarrow[]{inj} B $.
+    [Embedding] if there is a  function $f:A \xrightarrow[]{inj} B $.
     in  situation above we say ``$A$'' is less than or equipotent ``$B$''.   we denote it with ``$A \precsim  B$'' i.e.
     \[ A \precsim  B : \exists f  (f:A \xrightarrow[]{inj} B) \]
 \end{definition}
@@ -6657,7 +6658,7 @@ similarly we define ``$[A] \preceq [B] : \forall X \in [A] , Y \in [B] \quad X
     \have {14} {  [A] \preceq  [B] }
 \end{fitchproof}
 
-\begin{theorem} \textbf{Schroeder-Bernstein} $ A \precsim  B , B \precsim  A / \therefore A \cong  B$\\
+\begin{theorem} [Schroeder-Bernstein] $ A \precsim  B , B \precsim  A / \therefore A \cong  B$\\
     Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
@@ -8065,7 +8066,7 @@ when ``$f : W_1 \to W_2$'' is a (weak) homomorphism.
 \section{Ordinal numbers}
 
 \begin{definition}
-    \textbf{Order in sets}
+    [Order in sets]
 
     \[
         <_A := \{ (x,y) \in A \times A  \mid x \in y \}
@@ -8232,19 +8233,10 @@ renaming.
 
 \end{proof}
 
-\begin{theorem}
-    \textbf{Order of Ordinals} prove
-    \begin{enumerate}
-        \setlength{\itemsep}{0pt} % No extra space between items
-        \item        $ (Ord , <  )  $ is linearly ordered.
-        \item        $ (Ord , <  )  $ is Well ordered.
-              % \item       $ \Big( \forall x \in \mathbb{N} \quad   \exists y \in \mathbb{N} \quad  x < y \Big)  $ (doesn't have right endpoint)
-    \end{enumerate}
-    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
-\end{theorem}
+
 
 \begin{theorem}
-    \textbf{Order of Ordinals.} prove
+    [Order of Ordinals.] prove
     \begin{enumerate}
         \setlength{\itemsep}{0pt}
         \item $(Ord,<)$ is linearly ordered.
@@ -9251,21 +9243,21 @@ in this system ``$ 0 := [0]_{i \in Ord}$'' and ``$ 1 := [1]_{i \in Ord}$'' and
     $\mathbb{R} (Ord) \in V_1$ in combinational set theory we describeded in \ref{combinational-set-theory}.
 \end{Attention}
 
-\begin{theorem}\textbf{Summation} there is a unique function ``$+_{\mathbb{R} (Ord)} :\mathbb{R} (Ord) \times \mathbb{R} (Ord) \to \mathbb{R} (Ord)$'' s.t.
+\begin{theorem}[Summation] there is a unique function ``$+_{\mathbb{R} (Ord)} :\mathbb{R} (Ord) \times \mathbb{R} (Ord) \to \mathbb{R} (Ord)$'' s.t.
 
     \[  [a_i]_{i \in Ord} +_{\mathbb{R} (Ord)} [b_i]_{i \in Ord}  = [a_i + b_i]_{i \in Ord} \]
 
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-\begin{theorem}\textbf{Multiplication} there is a unique function ``$\times_{\mathbb{R} (Ord)} :\mathbb{R} (Ord) \times \mathbb{R} (Ord) \to \mathbb{R} (Ord)$'' s.t.
+\begin{theorem}[Multiplication] there is a unique function ``$\times_{\mathbb{R} (Ord)} :\mathbb{R} (Ord) \times \mathbb{R} (Ord) \to \mathbb{R} (Ord)$'' s.t.
 
     \[  [a_i]_{i \in Ord} \times_{\mathbb{R} (Ord)} [b_i]_{i \in Ord}  = [a_i  b_i]_{i \in Ord} \]
 
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-\begin{definition}\textbf{Order in $\mathbb{R} (Ord)$}
+\begin{definition}[Order in $\mathbb{R} (Ord)$]
     \[  [a_i]_{i \in Ord} <_{\mathbb{R} (Ord)} [b_i]_{i \in Ord}  :
         \exists \varepsilon_{> 0} \in \mathbb{Q} (Ord) \quad \exists  N \in Ord   \quad \forall n_{ > N }  \in Ord  \quad
         b_n - \varepsilon    > a_n \]
@@ -9313,7 +9305,7 @@ we denote ``Multiplication'' with ``$x \cdot y$'' and ``$x y$'' too.
 \end{lemma}
 
 \begin{theorem}
-    \textbf{Linear order of fantacy Real numbers($\mathbb{R} (Ord)$)} prove   ``$ (\mathbb{R} (Ord) , <_{\mathbb{R} (Ord)}  )  $
+    [Linear order of fantacy Real numbers($\mathbb{R} (Ord)$)] prove   ``$ (\mathbb{R} (Ord) , <_{\mathbb{R} (Ord)}  )  $
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item        is linearly ordered.
@@ -9331,7 +9323,7 @@ we denote ``Multiplication'' with ``$x \cdot y$'' and ``$x y$'' too.
 we learned about ``$\mathbb{R} (Ord)$'' before and we constructed structure
 ``$(\mathbb{R} (Ord) , + , \cdot , <)$''.
 
-\begin{definition}\textbf{fantacy Complex numbers``$\mathbb{C} (Ord)$''} is a set
+\begin{definition}[fantacy Complex numbers``$\mathbb{C} (Ord)$''] is a set
     \[ \mathbb{C} (Ord) := \mathbb{R} (Ord) \times \mathbb{R} (Ord) \]
     we denote it's members with ``$z_0 , x ,...$''
 \end{definition}
@@ -9341,14 +9333,14 @@ in this system ``$ 0 := (0,0)$'' and ``$ \forall n \in \mathbb{R} (Ord) \quad r
     (x,y)$''. so we can say ``$Ord \subseteq \mathbb{Z} (Ord) \subseteq \mathbb{Q}
     (Ord) \subseteq \mathbb{R} (Ord) \subseteq \mathbb{C} (Ord)$''.
 
-\begin{theorem}\textbf{Summation} there is a unique function ``$+_{\mathbb{C} (Ord)} :\mathbb{C} (Ord) \times \mathbb{C} (Ord) \to \mathbb{C} (Ord)$'' s.t.
+\begin{theorem}[Summation] there is a unique function ``$+_{\mathbb{C} (Ord)} :\mathbb{C} (Ord) \times \mathbb{C} (Ord) \to \mathbb{C} (Ord)$'' s.t.
 
     \[ \forall x , y , z , u \in \mathbb{R} (Ord) \quad (x , z) +_{\mathbb{C} (Ord)}  (y , u)  = (x + y, z + u) \]
 
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
-\begin{theorem}\textbf{Multiplication} there is a unique function ``$\times_{\mathbb{C} (Ord)} :\mathbb{C} (Ord) \times \mathbb{C} (Ord) \to \mathbb{C} (Ord)$'' s.t.
+\begin{theorem}[Multiplication] there is a unique function ``$\times_{\mathbb{C} (Ord)} :\mathbb{C} (Ord) \times \mathbb{C} (Ord) \to \mathbb{C} (Ord)$'' s.t.
 
     \[ \forall x , y , z , u \in \mathbb{R} (Ord) \quad (x , z) \times_{\mathbb{C} (Ord)} (y , u)  = (x y  - z u , x u + y z) \]
 
@@ -9393,7 +9385,7 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-\begin{theorem}\textbf{Exponents} there is a unique function ``$(\_)^{(\_)} :\mathbb{C} (Ord) \times Ord \to \mathbb{C} (Ord)$'' s.t.
+\begin{theorem}[Exponents] there is a unique function ``$(\_)^{(\_)} :\mathbb{C} (Ord) \times Ord \to \mathbb{C} (Ord)$'' s.t.
 
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
@@ -9412,7 +9404,7 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-\begin{theorem}\textbf{Exponents} there is a unique function ``$(\_)^{(\_)} :\mathbb{C} (Ord) \times \mathbb{Z} (Ord) \to \mathbb{C} (Ord)$'' s.t.
+\begin{theorem}[Exponents] there is a unique function ``$(\_)^{(\_)} :\mathbb{C} (Ord) \times \mathbb{Z} (Ord) \to \mathbb{C} (Ord)$'' s.t.
 
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
@@ -9431,7 +9423,7 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-\begin{theorem}\textbf{Big Sum} if ``$a : Ord \to \mathbb{C} (Ord)$'' there is a unique function ``$\sum_{i = 0}^{(\_)} (\_)  :\mathbb{C} (Ord) \times Ord \to \mathbb{C} (Ord)$'' s.t.
+\begin{theorem}[Big Sum] if ``$a : Ord \to \mathbb{C} (Ord)$'' there is a unique function ``$\sum_{i = 0}^{(\_)} (\_)  :\mathbb{C} (Ord) \times Ord \to \mathbb{C} (Ord)$'' s.t.
 
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
@@ -9450,7 +9442,7 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-\begin{theorem}\textbf{Big Product} if ``$a : Ord \to \mathbb{C} (Ord)$'' there is a unique function ``$\prod_{i = 0}^{(\_)} (\_)  :\mathbb{C} (Ord) \times Ord \to \mathbb{C} (Ord)$'' s.t.
+\begin{theorem}[Big Product] if ``$a : Ord \to \mathbb{C} (Ord)$'' there is a unique function ``$\prod_{i = 0}^{(\_)} (\_)  :\mathbb{C} (Ord) \times Ord \to \mathbb{C} (Ord)$'' s.t.
 
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
