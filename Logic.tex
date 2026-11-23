@@ -4093,6 +4093,33 @@ now we will show you relation between ``(partial) Order relation'' and
 \end{fitchproof}
 
 
+\begin{definition}
+    \textbf{(partial) $\sim$-Order relation} assume  a structure ``$\mathfrak{A} := (A , \precsim  , \sim  ) $''(``$\precsim  $'' is a relation).
+    we say ``$\precsim   $''
+    is a ``(partial) $\sim$-Order relation'' in  ``$\mathfrak{A}$'' if it's  reflexive, $\sim$-antisymmetric, and transitive.
+    \[ (reflexive) :  \forall x \in A \quad x \precsim  x \]
+    \[ (\sim-antisymmetric) :   \forall x,y \in A \quad x \precsim  y \land y \precsim  x \to x \sim y \]
+    \[ (transitive) :  \forall x,y,z \in A \quad x \precsim  y \land y \precsim  z \to x \precsim  z  \]
+    \[ (compatible with \sim) :   \forall x,x',y,y'\in A \quad (x\sim x'\land y\sim y') \to (x\precsim y  \leftrightarrow x'\precsim y'). \]
+
+\end{definition}
+
+
+\begin{theorem}[Quotient Order Theorem]
+    Let $\mathfrak{A}:=(A,\precsim,\sim)$ be a structure such that
+    $\sim$ is an equivalence relation on $A$ and $\precsim$
+    is a partial $\sim$-order relation then there exists a partial order $\leq$ on $A/{\sim}$,
+    defined by
+    \[
+        [x]_{\sim}\leq [y]_{\sim}
+        : x\precsim y.
+    \]
+    In particular, $(A/{\sim},\leq)$ is a partially ordered structure.
+    \\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{theorem}
+
+
 
 \begin{lemma}
     \label{uniqueness of min/max}
@@ -5261,7 +5288,7 @@ of all infinite sequences of $a \in A$.
 
     \begin{fitchproof}[arrayenv=tabular]
         \have {1} {Compute_0( \{ (0 , a) \} ) } \by{Definition of $t$}{}
-        \have {2} { \{ (0 , a) \} \in F} \by{Definition of $F$}{1}
+        \have {2} { \exists t \quad  Compute_0(t )} \by{$\exists I$}{1}
 
         \open
         \have {3} {n \in \mathbb{N}} \by{acp}{}
@@ -5269,9 +5296,8 @@ of all infinite sequences of $a \in A$.
         \have {5} { \exists t \ Compute_n(t) } \by{acp}{}
         \open
         \have {5} { Compute_n(t) } \by{acp}{}
-        \have {6} { Compute_{s(n)}(t \cup \{(s(n),g(t(n),n))\})}
-        \have {6} { \exists t \  Compute_{s(n)}(t )}
-        \by{Definition of $F$ and extension of $t$}{5}
+        \have {6} { Compute_{s(n)}(t \cup \{(s(n),g(t(n),n))\})}     \by{goal}{}
+        \have {6} { \exists t \  Compute_{s(n)}(t )}  \by{$\exists I$}{5}
         \close
         \have {6} { \exists t \ Compute_{s(n)}(t )}
         \close
@@ -5311,6 +5337,7 @@ of all infinite sequences of $a \in A$.
         \have {5} {t_0(0)=a} \by{Definition of $F$}{1}
         \have {6} {t_1(0)=a} \by{Definition of $F$}{1}
         \have {7} {t_0(0)=t_1(0)} \by{Equality}{5,6}
+        \have {7} {0 \leq m \to t_0(0)=t_1(0)} \by{$\to I$}{5,6}
 
         \open
         \have {14} { k \leq m \to t_0(k)=t_1(k)} \by{Induction hypothesis}{}
@@ -5321,6 +5348,7 @@ of all infinite sequences of $a \in A$.
         \have {10} {g(t_0(k),k)=g(t_1(k),k)} \by{Equality substitution}{9}
         \have {13} {t_0(s(k))=t_1(s(k))} \by{Equality substitution}{10}
         \close
+        \have {ind} {s(k) \leq m \to  t_0(s(k))=t_1(s(k))} \by{$\to I$}{}
         \close
 
         \have {14} {\forall k \leq m \quad t_0(k)=t_1(k)} \by{Mathematical induction}{7,8-13}
@@ -5333,7 +5361,7 @@ of all infinite sequences of $a \in A$.
         \close
         \close
 
-        \have {16} {\forall t,t\in F\quad
+        \have {16} {\forall t_0,t_1\in F\quad
             (t_0\subseteq t_1 \lor t_1 \subseteq t_0)}
         \by{Linear ordering of $\mathbb N$}{15}
 
@@ -5343,6 +5371,8 @@ of all infinite sequences of $a \in A$.
         \have {18} {Func(f)}
         \by{Union of a compatible family of functions}{17}
     \end{fitchproof}
+
+   note: induction is on $ P(k) : k \leq m \to t_0(k) = t_1(k) $ in lines 9-16.
 
 
 
@@ -5355,6 +5385,7 @@ of all infinite sequences of $a \in A$.
 
         \open
         \have {21} {n\in\mathbb{N}} \by{acp}{}
+        \have {29} {\exists t \ Compute_n(t)} \by{claim  0}{}
         \open
         \have {29} {Compute_n(t)} \by{acp}{}
         \have {31} {Dom(t)=s(n)} \by{def}{}
@@ -5382,9 +5413,9 @@ of all infinite sequences of $a \in A$.
         \have {28} { (n , x ) \in t } \by{acp}{}
         \open
         \have {29} {Compute_m(t)} \by{acp}{}
-        \have {31} {Dom(t)=s(m)} \by{def}{}
+        \have {31} {Dom(t)=s(m)} \by{$\land E$}{}
         \have {32} {n\in s(m)} \by{Substitution}{30,31}
-        \have {33} {n\in\mathbb{N}} \by{Definition of successor set}{32}
+        \have {33} {n\in\mathbb{N}} \by{Transitivity of $\mathbb{N}$}{32}
         \close
         \have {34} {n\in\mathbb{N}} \by{$\exists E$}{}
         \close
@@ -5412,12 +5443,13 @@ of all infinite sequences of $a \in A$.
         \open
         \have {38} {Compute_m(t)} \by{acp}{}
         \have {40} {t:s(m)\to A} \by{Definition of $F$}{38}
-        \have {39} {(n,x)\in t} \by{Definition }{40}
         \have {41} {x\in A} \by{Definition of function}{39,40}
         \close
-        \have {42} {x\in A} \by{$\exists E$}{37-41}
+        \have {42} {x\in A} \by{$\exists E$}{}
         \close
-        \have {43} {x\in A} \by{$\exists E$}{36-42}
+        \have {43} {x\in A} \by{$\exists E$}{}
+        \close
+        \have {43} {x\in A} \by{$\exists E$}{}
         \close
 
         \have {44} {Range(f)\subseteq A} \by{Definition of subset}{36-43}
@@ -9437,7 +9469,7 @@ we denote ``Multiplication'' with ``$z \cdot y$'' and ``$z y$'' too.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-\chapter{hyperreal numbers($ {}^*\mathbb{N}  , {}^*\mathbb{Z}, {}^*\mathbb{Q} , {}^*\mathbb{R} $)  }
+\chapter{Filters and Ultrafilters }
 \section{Filters}
 
 Filters are mathematical objects used to formalize the idea of ``large
@@ -10015,36 +10047,37 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
 
 \end{proof}
 
+\section{Ultrapower and Ultraproduct}
 
-\section{Definition of ${}^\ast\mathbb{N}$, ${}^\ast\mathbb{Z}$, ${}^\ast\mathbb{Q}$,  ${}^\ast\mathbb{R}$ }
+
 
 \begin{definition}[Ultrapower Construction]
-    Let $X$ be a set and let $\mathcal{U}$ be a nonprincipal ultrafilter on $\mathbb{N}$ or $Ord$. Consider the set
+    Let $X$ be a set and let $\mathcal{U}$ be a nonprincipal ultrafilter on $ I$. Consider the set
     $
-        X^ \mathbb{N}
+        X^I
     $
-    of all functions $a: \mathbb{N} \to X$. We usually write such a function as
+    of all functions $a:  I \to X$. We usually write such a function as
     $
-        a=(a_i)_{i\in \mathbb{N} },
+        a=(a_i)_{i\in  I },
     $
-    where $a_i\in X$ for every $i\in \mathbb{N} $.
+    where $a_i\in X$ for every $i\in  I $.
 \end{definition}
 
 \begin{definition}
-    Define a relation $\sim$ on $X^ \mathbb{N} $ by
+    Define a relation $\sim$ on $X^I $ by
     $
         a\sim b
     $
     if
     $
-        \{i\in \mathbb{N} \mid a_i=b_i\}\in\mathcal{U}.
+        \{i\in  I \mid a_i=b_i\}\in\mathcal{U}.
     $
     In words, two sequences are equivalent if they agree on a set of indices
     belonging to the ultrafilter.
 \end{definition}
 
 \begin{theorem}
-    The relation $\sim$ is an equivalence relation on $S^ \mathbb{N} $.
+    The relation $\sim$ is an equivalence relation on $X^  I $.
 \end{theorem}
 
 
@@ -10053,17 +10086,17 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
 
     \begin{fitchproof}[arrayenv=tabular]
 
-        \have {1} { \mathcal{U}\text{ is a filter on }\mathbb{N} } \by{ass}{}
-        \have {2} { \mathbb{N}\in\mathcal{U} } \by{filter definition}{1}
+        \have {1} { \mathcal{U}\text{ is a filter on } I } \by{ass}{}
+        \have {2} {  I\in\mathcal{U} } \by{filter definition}{1}
 
     \end{fitchproof}
     \textbf{Reflexivity.}
     \begin{fitchproof}[arrayenv=tabular]
 
         \open
-        \have {3} { a\in S^\mathbb{N} } \by{ass}{}
-        \have {4} { \{i\in\mathbb{N}\mid a_i=a_i\}=\mathbb{N} } \by{equality}{}
-        \have {5} { \{i\in\mathbb{N}\mid a_i=a_i\}\in\mathcal{U} } \by{set equality}{2,4}
+        \have {3} { a\in X^ I } \by{ass}{}
+        \have {4} { \{i\in I\mid a_i=a_i\}= I } \by{equality}{}
+        \have {5} { \{i\in I\mid a_i=a_i\}\in\mathcal{U} } \by{set equality}{2,4}
         \have {6} { a\sim a }  \by{definition of $\sim{5}$ }{}
         \close
     \end{fitchproof}
@@ -10071,12 +10104,12 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
     \begin{fitchproof}[arrayenv=tabular]
 
         \open
-        \have {7} { a,b\in S^\mathbb{N} } \by{ass}{}
+        \have {7} { a,b\in X^ I } \by{ass}{}
         \open
         \have {8} { a\sim b } \by{ass}{}
-        \have {9} { \{i\in\mathbb{N}\mid a_i=b_i\}\in\mathcal{U} }  \by{definition of $\sim$ }{}
-        \have {10} { \{i\in\mathbb{N}\mid a_i=b_i\}  =\{i\in\mathbb{N}\mid b_i=a_i\} } \by{equality}{}
-        \have {11} { \{i\in\mathbb{N}\mid b_i=a_i\}\in\mathcal{U} }  \by{set equality}{9,10}
+        \have {9} { \{i\in I\mid a_i=b_i\}\in\mathcal{U} }  \by{definition of $\sim$ }{}
+        \have {10} { \{i\in I\mid a_i=b_i\}  =\{i\in I\mid b_i=a_i\} } \by{equality}{}
+        \have {11} { \{i\in I\mid b_i=a_i\}\in\mathcal{U} }  \by{set equality}{9,10}
         \have {12} { b\sim a } \by{definition of $\sim{11}$ }{}
         \close
         \close
@@ -10086,15 +10119,15 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
     \begin{fitchproof}[arrayenv=tabular]
 
         \open
-        \have {13} { a,b,c\in S^\mathbb{N} } \by{ass}{}
+        \have {13} { a,b,c\in X^ I } \by{ass}{}
         \open
         \have {14} { a\sim b } \by{ass}{}
         \have {15} { b\sim c } \by{ass}{}
-        \have {16} { A :=\{i\in\mathbb{N}\mid a_i=b_i\}\in\mathcal{U} } \by{definition of $\sim$ }{}
-        \have {17} { B :=\{i\in\mathbb{N}\mid b_i=c_i\}\in\mathcal{U} } \by{definition of $\sim$ }{}
+        \have {16} { A :=\{i\in I\mid a_i=b_i\}\in\mathcal{U} } \by{definition of $\sim$ }{}
+        \have {17} { B :=\{i\in I\mid b_i=c_i\}\in\mathcal{U} } \by{definition of $\sim$ }{}
         \have {18} { A\cap B\in\mathcal{U} } \by{finite intersection closure}{1,16,17}
-        \have {19} { A\cap B\subseteq \{i\in\mathbb{N}\mid a_i=c_i\} } \by{equality}{}
-        \have {20} { \{i\in\mathbb{N}\mid a_i=c_i\}\in\mathcal{U} }  \by{upward closure}{18,19}
+        \have {19} { A\cap B\subseteq \{i\in I\mid a_i=c_i\} } \by{equality}{}
+        \have {20} { \{i\in I\mid a_i=c_i\}\in\mathcal{U} }  \by{upward closure}{18,19}
         \have {21} { a\sim c } \by{definition of $\sim$ }{}
         \close
         \close
@@ -10109,13 +10142,66 @@ The Ultrafilter Lemma is usually proved using Zorn's Lemma.
 \begin{definition}
     The quotient
     $
-        X^ \mathbb{N} /\sim
+        X^I /\sim
     $
     is called the \emph{ultrapower} of $X$ modulo $\mathcal{U}$. The equivalence
-    class of $a\in X^ \mathbb{N} $ is denoted by $[a]$.
+    class of $a\in X^I $ is denoted by $[a]$.
 \end{definition}
 
-We now apply this construction to the standard number systems.
+
+\begin{definition}[Ultraproduct Construction]
+    Let $(X_i)_{i\in I}$ be a family of nonempty sets and let $\mathcal{U}$ be an ultrafilter on $I$. Consider the Cartesian product
+    \[
+        \prod_{i\in I}X_i
+    \]
+    consisting of all functions $a$ with domain $I$ such that $a_i\in X_i$ for every $i\in I$. We usually write such a function as
+    \[
+        a=(a_i)_{i\in I}.
+    \]
+\end{definition}
+
+\begin{definition}
+    Define a relation $\sim_{\mathcal U}$ on $\prod_{i\in I}X_i$ by
+    \[
+        a\sim_{\mathcal U} b
+    \]
+    if
+    \[
+        \{i\in I\mid a_i=b_i\}\in\mathcal U.
+    \]
+    In words, two elements of the Cartesian product are equivalent if they agree on a set of indices belonging to the ultrafilter.
+\end{definition}
+
+\begin{theorem}
+    The relation $\sim_{\mathcal U}$ is an equivalence relation on $\prod_{i\in I}X_i$.
+\end{theorem}
+
+\begin{proof}
+    The proof is identical to the proof of the corresponding theorem for ultrapowers.
+\end{proof}
+
+\begin{definition}[Ultraproduct]
+    The quotient
+    \[
+        \left(\prod_{i\in I}X_i\right)\big/\sim_{\mathcal U}
+    \]
+    is called the \emph{ultraproduct} of the family $(X_i)_{i\in I}$ modulo $\mathcal U$. The equivalence class of $a\in\prod_{i\in I}X_i$ is denoted by $[a]_{\mathcal U}$.
+\end{definition}
+
+\section{Countably incomplete ultrafilters}
+
+\section{Regular Ultrafilters}
+
+\section{Good Ultrafilters}
+
+
+\chapter{hyperreal numbers($ {}^*\mathbb{N}  , {}^*\mathbb{Z}, {}^*\mathbb{Q} , {}^*\mathbb{R} $)  }
+
+
+\section{Definition of ${}^\ast\mathbb{N}$, ${}^\ast\mathbb{Z}$, ${}^\ast\mathbb{Q}$,  ${}^\ast\mathbb{R}$ }
+
+
+We now apply ultrapower  construction to the standard number systems.
 
 \begin{definition}
     The set of hypernatural numbers is
