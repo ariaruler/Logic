@@ -843,7 +843,7 @@ we denote propositions with ``$p ,q ,r ,...$''.
 
 \begin{definition}
 
-    \textbf{$\varphi \veebar\psi$} : $(\varphi \lor \psi) \land \neg ( \varphi \land \psi)$
+    \textbf{$\varphi \veebar \psi$} : $(\varphi \lor \psi) \land \neg ( \varphi \land \psi)$
 
 \end{definition}
 
@@ -3164,7 +3164,7 @@ say ``$ X $ is relation''. if it is confusing so forget it.\twemoji{1f600}
 
 \begin{Attention} [Indexes]
      are objects (like numbers) allows us to give a unique "tag" to every object.
-    we use $i,j,k,...$ for variable indexes and we use $m,n,l,...$ for constant indexes.
+    we use $i,j,k,...$ for variable indexes.
 
 \end{Attention}
 
@@ -3846,13 +3846,13 @@ bijection and ``$Hom(k,\mathfrak{M},\mathfrak{M})$''. we call ``$k$''
 \end{definition}
 
 \begin{definition}[(partial) Strict order relation]
-     assume  a structure ``$\mathfrak{A} := (A , \prec  ) $''(``$\prec $'' is a relation).
-    we say ``$\prec  $''
+     assume  a structure ``$\mathfrak{A} := (A , <  ) $''(``$< $'' is a relation).
+    we say ``$<  $''
     is a ``(partial) Strict order relation'' in  ``$\mathfrak{A}$'' if it's  irreflexive, and transitive.
     \[ (irreflexive) :  \forall x \in A \quad x \nprec  x \]
-    \[ (transitive) :  \forall x,y,z \in A \quad x \prec y \land y \prec z \to x \prec z  \]
+    \[ (transitive) :  \forall x,y,z \in A \quad x < y \land y < z \to x < z  \]
     by two conditions bellow we can proof asymmetric too.
-    \[ (asymmetric) :   \forall x,y \in A \quad x \prec y \to y \nprec x \]
+    \[ (asymmetric) :   \forall x,y \in A \quad x < y \to y \nprec x \]
 
 \end{definition}
 
@@ -3863,7 +3863,7 @@ now we will show you relation between ``(partial) Order relation'' and
 
     \setlength{\itemsep}{0pt} % No extra space between items
     if ``$\preceq $'' is a ``(partial) Order relation'' in ``$\mathfrak{A}$''
-    define ``$a \prec b : a \preceq b \land a \not= b $'' prove that ``$\prec $''
+    define ``$a < b : a \preceq b \land a \not= b $'' prove that ``$< $''
     is ``(partial) Strict order relation''.
 
 \end{theorem}
@@ -3872,7 +3872,7 @@ now we will show you relation between ``(partial) Order relation'' and
     \open
     \have  {2} { x \in A }    \by{$acp$}{}
     \open
-    \have  {2} { x \prec x }     \by{$acp$}{}
+    \have  {2} { x < x }     \by{$acp$}{}
     \have  {2} { x \not= x }     \by{$\land E , 2 $}{}
     \have  {2} { x = x }     \by{$= I$}{}
     \have  {2} { \bot  }           \by{$\bot I , 3 , 4$}{}
@@ -3886,8 +3886,8 @@ now we will show you relation between ``(partial) Order relation'' and
     \open
     \have  {2} { x,y,z \in A }      \by{$acp$}{}
     \open
-    \have  {2} { x \prec y }       \by{$acp$}{}
-    \have  {2} { y \prec z }        \by{$acp$}{}
+    \have  {2} { x < y }       \by{$acp$}{}
+    \have  {2} { y < z }        \by{$acp$}{}
     \have  {2} { x \preceq y }   \by{$ \land E, 2$}{}
     \have  {2} { y \preceq z }    \by{$\land E , 3$}{}
     \have  {2} { x \preceq z } \by{$trans , 4 , 5$}{}
@@ -3900,18 +3900,18 @@ now we will show you relation between ``(partial) Order relation'' and
     \have  {2} { \bot  }       \by{$\bot I , 7 , 11$}{}
     \close
     \have  {2} { x \not= z }       \by{$\neg I $}{}
-    \have  {2} { x \prec z }        \by{$\land I , 6 , 13$}{}
+    \have  {2} { x < z }        \by{$\land I , 6 , 13$}{}
     \close
-    \have  {2} { x \prec y \land y \prec z \to x \prec z }        \by{$\to I$}{}
+    \have  {2} { x < y \land y < z \to x < z }        \by{$\to I$}{}
     \close
-    \have  {2} {\forall x,y,z \in A \quad x \prec y \land y \prec z \to x \prec z }   \by{$\to I, \forall I $}{}
+    \have  {2} {\forall x,y,z \in A \quad x < y \land y < z \to x < z }   \by{$\to I, \forall I $}{}
 
 \end{fitchproof}
 
 \begin{theorem}.
 
-    if ``$\prec $'' is a ``(partial) Strict Order relation'' in ``$\mathfrak{A}$''
-    define ``$a \preceq b : a \prec b \lor a = b $'' prove that ``$\preceq $'' is
+    if ``$< $'' is a ``(partial) Strict Order relation'' in ``$\mathfrak{A}$''
+    define ``$a \preceq b : a < b \lor a = b $'' prove that ``$\preceq $'' is
     ``(partial) order relation''.
 
 \end{theorem}
@@ -3931,16 +3931,16 @@ now we will show you relation between ``(partial) Order relation'' and
     \open
     \have  {2} { x \preceq y \land y \preceq x }     \by{$acp$}{}
     \open
-    \have  {2} { x \prec y \land y \prec x }     \by{$acp$}{}
+    \have  {2} { x < y \land y < x }     \by{$acp$}{}
     \have  {2} { \bot  }                          \by{$asym , 3$}{}
     \have  {2} { x = y  }                       \by{$\bot I, 4$}{}
     \close
     \open
-    \have  {2} { x \prec y \land y = x }         \by{$acp$}{}
+    \have  {2} { x < y \land y = x }         \by{$acp$}{}
     \have  {2} { x = y  }                         \by{$\land E, 6$}{}
     \close
     \open
-    \have  {2} { x = y \land y \prec x }          \by{$acp$}{}
+    \have  {2} { x = y \land y < x }          \by{$acp$}{}
     \have  {2} { x = y  }                        \by{$\land E, 8$}{}
     \close
     \open
@@ -3960,18 +3960,18 @@ now we will show you relation between ``(partial) Order relation'' and
     \open
     \have  {2} { x \preceq y \land y \preceq z }      \by{$acp$}{}
     \open
-    \have  {2} { x \prec y \land y \prec z }          \by{$acp$}{}
-    \have  {2} { x \prec z }                           \by{$trans , 3$}{}
+    \have  {2} { x < y \land y < z }          \by{$acp$}{}
+    \have  {2} { x < z }                           \by{$trans , 3$}{}
     \have  {2} { x \preceq z }                         \by{$\lor I , 4$}{}
     \close
     \open
-    \have  {2} { x \prec y \land y = z }        \by{$acp$}{}
-    \have  {2} { x \prec z }                     \by{$= E , 6$}{}
+    \have  {2} { x < y \land y = z }        \by{$acp$}{}
+    \have  {2} { x < z }                     \by{$= E , 6$}{}
     \have  {2} { x \preceq z }                   \by{$\lor I , 7$}{}
     \close
     \open
-    \have  {2} { x = y \land y \prec z }             \by{$acp$}{}
-    \have  {2} { x \prec z }                           \by{$= E , 9$}{}
+    \have  {2} { x = y \land y < z }             \by{$acp$}{}
+    \have  {2} { x < z }                           \by{$= E , 9$}{}
     \have  {2} { x \preceq z }                           \by{$\lor I , 10$}{}
     \close
     \open
@@ -3981,9 +3981,9 @@ now we will show you relation between ``(partial) Order relation'' and
     \close
     \have  {2} {x \preceq z  }                   \by{$\lor E , 2$}{}
     \close
-    \have  {2} { x \preceq y \land y \prec z \to x \preceq z }           \by{$\to I$}{}
+    \have  {2} { x \preceq y \land y < z \to x \preceq z }           \by{$\to I$}{}
     \close
-    \have  {2} {\forall x,y,z \in A \quad x \preceq y \land y \prec z \to x \preceq z } \by{$\to I, \forall I $}{}
+    \have  {2} {\forall x,y,z \in A \quad x \preceq y \land y < z \to x \preceq z } \by{$\to I, \forall I $}{}
 \end{fitchproof}
 
 
@@ -3998,11 +3998,11 @@ now we will show you relation between ``(partial) Order relation'' and
 \end{definition}
 
 \begin{definition}[(Total-Linear) Strict order relation]
-     assume  a structure ``$\mathfrak{A} := (A , \prec  ) $''(``$\prec $'' is a Strict order relation).
-    we say ``$\prec  $''
+     assume  a structure ``$\mathfrak{A} := (A , <  ) $''(``$< $'' is a Strict order relation).
+    we say ``$<  $''
     is a ``(Total-Linear) Strict order relation'' in  ``$\mathfrak{A}$'' if every two elements are comparable.
 
-    \[ (trichotomy) :   \forall x,y \in A \quad x \prec y \lor x=y \lor y \prec x \]
+    \[ (trichotomy) :   \forall x,y \in A \quad x < y \lor x=y \lor y < x \]
 
 \end{definition}
 
@@ -4010,10 +4010,10 @@ now we will show you relation between ``(partial) Order relation'' and
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       if ``$\preceq $'' is a ``(Total-Linear) Order relation'' in ``$\mathfrak{A}$''
-              define ``$a \prec b : a \preceq b \land a \not= b $'' prove that ``$\prec $''
+              define ``$a < b : a \preceq b \land a \not= b $'' prove that ``$< $''
               is ``(Total-Linear) Strict order relation''.
-        \item       if ``$\prec $'' is a ``(Total-Linear) Strict Order relation'' in
-              ``$\mathfrak{A}$'' define ``$a \preceq b : a \prec b \lor a = b $'' prove that
+        \item       if ``$< $'' is a ``(Total-Linear) Strict Order relation'' in
+              ``$\mathfrak{A}$'' define ``$a \preceq b : a < b \lor a = b $'' prove that
               ``$\preceq $'' is ``(Total-Linear) order relation''.
     \end{enumerate}
 
@@ -4027,7 +4027,7 @@ now we will show you relation between ``(partial) Order relation'' and
     \have{3} {x = y \lor x \not= y} \by{LEM}{}
     \open
     \have{3} {x = y} \by{acp}{}
-    \have{4} {x \prec y \lor x = y \lor y \prec x} \by{$\lor I$ 2}{}
+    \have{4} {x < y \lor x = y \lor y < x} \by{$\lor I$ 2}{}
     \close
     \open
     \have{6} {x \neq y} \by{acp}{}
@@ -4035,22 +4035,22 @@ now we will show you relation between ``(partial) Order relation'' and
     \open
     \have{7} {x \preceq y} \by{acp}{}
     \have{8} {x \preceq y \land x \neq y} \by{$\land I$ 7, 6}{}
-    \have{9} {x \prec y} \by{def $\prec$ 8}{}
-    \have{10} {x \prec y \lor x = y \lor y \prec x} \by{$\lor I$ 9}{}
+    \have{9} {x < y} \by{def $<$ 8}{}
+    \have{10} {x < y \lor x = y \lor y < x} \by{$\lor I$ 9}{}
     \close
     \open
     \have{12} {y \preceq x} \by{acp}{}
     \have{14} {y \preceq x \land y \neq x} \by{$\land I$ 12, 13}{}
-    \have{15} {y \prec x} \by{def $\prec$ 12}{}
-    \have{16} {x \prec y \lor x = y \lor y \prec x} \by{$\lor I$ 15}{}
+    \have{15} {y < x} \by{def $<$ 12}{}
+    \have{16} {x < y \lor x = y \lor y < x} \by{$\lor I$ 15}{}
     \close
 
-    \have{18} {x \prec y \lor x = y \lor y \prec x} \by{$\lor E$ 6}{}
+    \have{18} {x < y \lor x = y \lor y < x} \by{$\lor E$ 6}{}
     \close
-    \have{21} {x \prec y \lor x = y \lor y \prec x} \by{$\lor E$ 2}{}
+    \have{21} {x < y \lor x = y \lor y < x} \by{$\lor E$ 2}{}
     \close
 
-    \have{22} {\forall x, y \in A \quad x \prec y \lor x = y \lor y \prec x} \by{$\to I, \forall I $}{}
+    \have{22} {\forall x, y \in A \quad x < y \lor x = y \lor y < x} \by{$\to I, \forall I $}{}
 
 \end{fitchproof}
 
@@ -4059,17 +4059,17 @@ now we will show you relation between ``(partial) Order relation'' and
 
     \open
     \have{1} {x, y \in A} \by{acp}{}
-    \have{2} {x \prec y \lor x = y \lor y \prec x} \by{comparablity of $\prec$}{}
+    \have{2} {x < y \lor x = y \lor y < x} \by{comparablity of $<$}{}
 
     \open
-    \have{3} {x \prec y \lor x = y} \by{acp }{}
+    \have{3} {x < y \lor x = y} \by{acp }{}
     \have{4} {x \preceq y} \by{def $\preceq$ 3}{}
     \have{5} {x \preceq y \lor y \preceq x} \by{$\lor I$ 4}{}
     \close
 
     \open
-    \have{6} {y \prec x} \by{acp }{}
-    \have{7} {y \prec x \lor y = x} \by{$\lor I$ 6}{}
+    \have{6} {y < x} \by{acp }{}
+    \have{7} {y < x \lor y = x} \by{$\lor I$ 6}{}
     \have{8} {y \preceq x} \by{def $\preceq$ 7}{}
     \have{9} {x \preceq y \lor y \preceq x} \by{$\lor I$ 8}{}
     \close
@@ -4083,25 +4083,25 @@ now we will show you relation between ``(partial) Order relation'' and
 
 
 \begin{definition}[(partial) $\sim$-Order relation]
-     assume  a structure ``$\mathfrak{A} := (A , \precsim  , \sim  ) $''(``$\precsim  $'' is a relation).
-    we say ``$\precsim   $''
+     assume  a structure ``$\mathfrak{A} := (A , \lesssim  , \sim  ) $''(``$\lesssim  $'' is a relation).
+    we say ``$\lesssim   $''
     is a ``(partial) $\sim$-Order relation'' in  ``$\mathfrak{A}$'' if it's  reflexive, $\sim$-antisymmetric, and transitive.
-    \[ (reflexive) :  \forall x \in A \quad x \precsim  x \]
-    \[ (\sim-antisymmetric) :   \forall x,y \in A \quad x \precsim  y \land y \precsim  x \to x \sim y \]
-    \[ (transitive) :  \forall x,y,z \in A \quad x \precsim  y \land y \precsim  z \to x \precsim  z  \]
-    \[ (compatible \ with \sim) :   \forall x,x',y,y'\in A \quad (x\sim x'\land y\sim y') \to (x\precsim y  \leftrightarrow x'\precsim y'). \]
+    \[ (reflexive) :  \forall x \in A \quad x \lesssim  x \]
+    \[ (\sim-antisymmetric) :   \forall x,y \in A \quad x \lesssim  y \land y \lesssim  x \to x \sim y \]
+    \[ (transitive) :  \forall x,y,z \in A \quad x \lesssim  y \land y \lesssim  z \to x \lesssim  z  \]
+    \[ (compatible \ with \sim) :   \forall x,x',y,y'\in A \quad (x\sim x'\land y\sim y') \to (x\lesssim y  \leftrightarrow x'\lesssim y'). \]
 
 \end{definition}
 
 
 \begin{theorem}[Quotient Order Theorem]
-    Let $\mathfrak{A}:=(A,\precsim,\sim)$ be a structure such that
-    $\sim$ is an equivalence relation on $A$ and $\precsim$
+    Let $\mathfrak{A}:=(A,\lesssim,\sim)$ be a structure such that
+    $\sim$ is an equivalence relation on $A$ and $\lesssim$
     is a partial $\sim$-order relation then there exists a partial order $\leq$ on $A/{\sim}$,
     defined by
     \[
         [x]_{\sim}\leq [y]_{\sim}
-        : x\precsim y.
+        : x\lesssim y.
     \]
     In particular, $(A/{\sim},\leq)$ is a partially ordered structure.
     \\
@@ -5799,24 +5799,24 @@ we denote also ``Multiplication'' with ``$m \cdot n$'' and ``$mn$'' too.
 
 
 
-assume a structure ``$\mathfrak{N} := (N , + , \cdot , s , 0)$''(here ``$+ ,
-    \cdot , s , 0 $'' are arbitrary functions and constants and doesn't have
+assume a structure ``$\mathfrak{N} := (N , +^{\mathfrak{N}} , \cdot^{\mathfrak{N}} , S^{\mathfrak{N}} , 0^{\mathfrak{N}})$''(here ``$+^{\mathfrak{N}} ,
+    \cdot^{\mathfrak{N}} , S^{\mathfrak{N}} , 0^{\mathfrak{N}} $'' are arbitrary functions and constants and doesn't have
 meaning we defined before). with these properties.
 
 \begin{enumerate}
     \setlength{\itemsep}{0pt} % No extra space between items
-    \item       $\forall x , y  \in N \quad s(x ) = s( y ) \to x = y   $
-    \item       $\forall x  \in N \quad s(x ) \not= 0$
-    \item       $\forall x  \in N \quad x +0 = x $
-    \item       $\forall x , y  \in N \quad x +s( y ) = s(x  + y )  $
-    \item       $\forall x  \in N \quad x  \cdot 0 = 0$
-    \item       $\forall x , y  \in N \quad x  \cdot s( y ) = x  \cdot  y + x    $
-    \item        $\phi(0) , \forall  y  \in N \ \Big( \phi( y ) \to \phi(s( y )) \Big) / \therefore \forall  y \in N \ \phi( y )$
+    \item       $\forall x , y  \in N \quad S(x ) = S( y ) \to x = y   $
+    \item       $\forall x  \in N \quad S(x ) \not=  0$
+    \item       $\forall x  \in N \quad x +  0 = x $
+    \item       $\forall x , y  \in N \quad x +S( y ) = S(x  +  y )  $
+    \item       $\forall x  \in N \quad x  \cdot  0 =  0$
+    \item       $\forall x , y  \in N \quad x  \cdot S( y ) = x  \cdot  y +  x    $
+    \item        $\phi( 0) , \forall  y  \in N \ \Big( \phi( y ) \to \phi(S( y )) \Big) / \therefore \forall  y \in N \ \phi( y )$
           (this is true for arbitrary ``$\phi$'')
 \end{enumerate}
 we call ``$\mathfrak{N}$'' a model of ``Peano arithmetic''.
 
-\begin{lemma}prove for ``$(N , +)$''
+\begin{lemma}prove for ``$(N , +^{\mathfrak{N}})$''
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       $\forall x , y , z  \in N \quad (x + y )+ z  = x +( y + z )  $ (associative $+$)
@@ -5829,53 +5829,53 @@ we call ``$\mathfrak{N}$'' a model of ``Peano arithmetic''.
 
         \open
         \have {14} { x , y   \in N }   \by{$acp $}{}
-        \have {14} { (x + y )+ 0 = x + y  = x +( y + 0 )}    \by{Ax. }{}
+        \have {14} { (x +  y )+  0 = x +  y  = x +( y +  0 )}    \by{Ax. }{}
 
         \open
         \have {14} {  z  \in N }   \by{$acp $}{}
         \open
-        \have {14} { (x + y )+ z  = x +( y + z )}                 \by{acp}{}
-        \have {14} { (x + y )+ s(z) =  s \big((x + y )+ z \big) =  s \big(x + ( y + z ) \big) = x + s( y + z ) = x +( y + s(z) )}     \by{Ax. , IH}{}
+        \have {14} { (x +  y )+  z  = x +( y +  z )}                 \by{acp}{}
+        \have {14} { (x +  y )+  S(z) =  S \big((x +  y )+  z \big) =  S \big(x +  ( y +  z ) \big) = x +  S( y +  z ) = x +( y +  S(z) )}     \by{Ax. , IH}{}
         \close
         \close
 
 
-        \have {14} {\forall   z  \in N \quad (x + y )+ z  = x +( y + z )}     \by{Induntion axiom}{}
+        \have {14} {\forall   z  \in N \quad (x +  y )+  z  = x +( y +  z )}     \by{Induntion axiom}{}
         \close
-        \have {14} {\forall x , y , z  \in N \quad (x + y )+ z  = x +( y + z )}     \by{$ \to I , \forall I$}{}
+        \have {14} {\forall x , y , z  \in N \quad (x +  y )+  z  = x +( y +  z )}     \by{$ \to I , \forall I$}{}
 
     \end{fitchproof}
 
     \begin{fitchproof}[arrayenv=tabular]
 
-        \have {14} {  0 + 0  = 0 }                 \by{Ax. }{}
+        \have {14} {  0 +  0  = 0 }                 \by{Ax. }{}
 
         \open
         \have {14} { x   \in N }   \by{$acp $}{}
         \open
-        \have {14} {  0 + x  = x }     \by{$acp $}{}
-        \have {14} {  0 + s(x)  = s(0 + x)  = s(x) }     \by{Ax. 3 }{}
+        \have {14} {  0 +  x  = x }     \by{$acp $}{}
+        \have {14} {  0 +  S(x)  = S(0 +  x)  = S(x) }     \by{Ax. 3 }{}
         \close
 
         \close
-        \have {14} {\forall x  \in N \quad x  + 0 = 0 + x  = x}      \by{Induntion axiom}{}
+        \have {14} {\forall x  \in N \quad x  +  0 = 0 +  x  = x}      \by{Induntion axiom}{}
 
     \end{fitchproof}
 
     \begin{fitchproof}[arrayenv=tabular]
 
-        \have {14} {  s(y + 0) =  s(y)  = s(y) + 0 }                 \by{Ax. }{}
+        \have {14} {  S(y +  0) =  S(y)  = S(y) +  0 }                 \by{Ax. }{}
 
         \open
         \have {14} { x , y   \in N }   \by{$acp $}{}
         \open
-        \have {14} {  s( y +  x ) = s(y) + x }     \by{$acp $}{}
-        \have {14} {  s( y + s(x)) = s(s(y + x)) = s( s(y) + x )    = s(y) + s(x) }     \by{Ax. }{}
+        \have {14} {  S( y +   x ) = S(y) +  x }     \by{$acp $}{}
+        \have {14} {  S( y +  S(x)) = S(S(y +  x)) = S( S(y) +  x )    = S(y) +  S(x) }     \by{Ax. }{}
         \close
 
-        \have {14} {\forall  y \in N \quad  s( y +  x ) = s(y) + x}      \by{Induntion axiom}{}
+        \have {14} {\forall  y \in N \quad  S( y +   x ) = S(y) +  x}      \by{Induntion axiom}{}
         \close
-        \have {14} {\forall x , y \in N \quad  s( y +  x ) = s(y) + x }     \by{$ \to I , \forall I$}{}
+        \have {14} {\forall x , y \in N \quad  S( y +   x ) = S(y) +  x }     \by{$ \to I , \forall I$}{}
 
     \end{fitchproof}
 
@@ -5883,19 +5883,19 @@ we call ``$\mathfrak{N}$'' a model of ``Peano arithmetic''.
 
         \open
         \have {14} { x   \in N }   \by{$acp $}{}
-        \have {14} {  x  + 0  = 0 + x }                 \by{ Lemma 7.5.1.2}{}
+        \have {14} {  x  +  0  = 0 +  x }                 \by{ Lemma 7.5.1.2}{}
 
         \open
         \have {14} { y   \in N }   \by{$acp $}{}
         \open
-        \have {14} { x  + y = y + x }     \by{$acp $}{}
-        \have {14} { x  + s(y) = s(x + y) = s( y + x ) = s(y) + x }     \by{Ax. }{}
+        \have {14} { x  +  y = y +  x }     \by{$acp $}{}
+        \have {14} { x  +  S(y) = S(x +  y) = S( y +  x ) = S(y) +  x }     \by{Ax. }{}
         \close
         \close
 
-        \have {14} {\forall y \in N \quad x  + y = y + x  }      \by{Induntion axiom}{}
+        \have {14} {\forall y \in N \quad x  +  y = y +  x  }      \by{Induntion axiom}{}
         \close
-        \have {14} {\forall x , y \in N \quad x  + y = y + x  }     \by{$ \to I , \forall I$}{}
+        \have {14} {\forall x , y \in N \quad x  +  y = y +  x  }     \by{$ \to I , \forall I$}{}
 
     \end{fitchproof}
 
@@ -5903,7 +5903,7 @@ we call ``$\mathfrak{N}$'' a model of ``Peano arithmetic''.
 
 \end{lemma}
 
-\begin{lemma}prove for ``$(N , + , \cdot)$''
+\begin{lemma}prove for ``$(N , +^{\mathfrak{N}} , \cdot^{\mathfrak{N}})$''
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
         \item       $\forall x , y , z  \in N \quad (x y) z  = x (y z)  $ (associative $\times$)
@@ -5923,7 +5923,7 @@ we call ``$\mathfrak{N}$'' a model of ``Peano arithmetic''.
         \have {14} { x   \in N }   \by{$acp $}{}
         \open
         \have {14} { 0 \cdot  x =  0 }     \by{$acp $}{}
-        \have {14} { 0 \cdot  s(x) = 0 \cdot x + 0 =  0 }
+        \have {14} { 0 \cdot  S(x) = 0 \cdot x + 0 =  0 }
         \close
 
         \close
@@ -5935,22 +5935,22 @@ we call ``$\mathfrak{N}$'' a model of ``Peano arithmetic''.
         
         \open
         \have {14} {  y   \in N }   \by{$acp $}{}
-        \have {14} {   y 0 + 0 = s(y) \cdot 0  }                 \by{Ax. }{}
+        \have {14} {   y 0 + 0 = S(y) \cdot 0  }                 \by{Ax. }{}
 
         \open
         \have {14} { x , y   \in N }   \by{$acp $}{}
         % \have {14} {  0 + x  = x }     \by{$acp $}{}
         \open
-        \have {14} {  y x + x = s(y) \cdot x }     \by{$acp $}{}
-        \have {14} {   y \cdot s(x) + s(x)  = s(   y \cdot s(x)  + x ) = s( (yx + y) + x) = s( yx + (y + x) ) }
-        \have {14} { s( yx + (y + x) ) = s( (yx + x )+ y)  =  s( (s(y) \cdot x)+ y) }
-        \have {14} {   s( (s(y) \cdot x)+ y) =  (s(y) \cdot x)+ s(y) = s(y) \cdot s(x) }
+        \have {14} {  y x + x = S(y) \cdot x }     \by{$acp $}{}
+        \have {14} {   y \cdot S(x) + S(x)  = S(   y \cdot S(x)  + x ) = S( (yx + y) + x) = S( yx + (y + x) ) }
+        \have {14} { S( yx + (y + x) ) = S( (yx + x )+ y)  =  S( (S(y) \cdot x)+ y) }
+        \have {14} {   S( (S(y) \cdot x)+ y) =  (S(y) \cdot x)+ S(y) = S(y) \cdot S(x) }
         \close
         \close
         
-        \have {14} {\forall x  \in N \quad y x + x = s(y) \cdot x  }     \by{Induntion axiom}{}
+        \have {14} {\forall x  \in N \quad y x + x = S(y) \cdot x  }     \by{Induntion axiom}{}
         \close
-        \have {14} {\forall x , y \in N \quad y x + x = s(y) \cdot x  }     \by{$ \to I , \forall I$}{}
+        \have {14} {\forall x , y \in N \quad y x + x = S(y) \cdot x  }     \by{$ \to I , \forall I$}{}
 
     \end{fitchproof}
 
@@ -5963,7 +5963,7 @@ we call ``$\mathfrak{N}$'' a model of ``Peano arithmetic''.
         \have {14} { x , y   \in N }   \by{$acp $}{}
         \open
         \have {14} { x   y = y  x }     \by{$acp $}{}
-        \have {14} { x  \cdot s(y) = x y + x =  y x + x   = s(y) \cdot x }        \by{IH}{}
+        \have {14} { x  \cdot S(y) = x y + x =  y x + x   = S(y) \cdot x }        \by{IH}{}
         \close
 
         \close
@@ -5973,18 +5973,38 @@ we call ``$\mathfrak{N}$'' a model of ``Peano arithmetic''.
 
 \end{lemma}
 
-Now define ``$ x < y : \exists z \not=0 \quad x + z = y $''. You can prove for
-natural numbers
-\[  \forall m,n \in \mathbb{N} \quad m < n \leftrightarrow \exists k \not=0 \quad m + k = n \]
+Now define ``$ x <^{\mathfrak{N}} y : \exists z \not=0^{\mathfrak{N}} \quad x +^{\mathfrak{N}} z = y $''.
 
-\begin{lemma}prove for ``$(N , + , \times , <)$''
+
+\begin{lemma}prove for ``$(N , +^{\mathfrak{N}} , \cdot^{\mathfrak{N}} , <^{\mathfrak{N}} )$''
     \begin{enumerate}
         \setlength{\itemsep}{0pt} % No extra space between items
+        \item       $\forall x  \in N \quad x \not< x  $
+        \item       $\forall x , y , z \in N \quad x < y \land y < z  \to   x <  z   $
+        \item       $\forall x , y , z \in N \quad x < y \lor x =  y  \lor   y <  x   $
+        \item       $\forall x , y , z \in N \quad x < y \land y < z  \to   x <  z   $
         \item       $\forall x , y , z \in N \quad x < y \to x + z < y + z  $
         \item       $\forall x , y , z \in N \quad x < y \land 0 < z \to x z < y z  $
     \end{enumerate}
+    (1),(2) and  (3) proves ``$(N , +^{\mathfrak{N}} , \cdot^{\mathfrak{N}} , <^{\mathfrak{N}})$'' is linearly ordered.
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
+
+
+
+
+\begin{lemma}prove
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt} % No extra space between items
+        \item       ``$(\mathbb{N} , + , \times , s , 0)$'' is a model of peano arithmetic.
+        \item       $\forall m,n \in \mathbb{N} \quad m < n \leftrightarrow \exists k \not=0 \quad m + k = n  $
+    \end{enumerate}
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+
+
+
 
 as you can see ``$(\mathbb{N} , + , \times , s , 0)$'' is a model of peano
 arithmetic. so properties are true for them.
@@ -6295,7 +6315,7 @@ in this system ``$ 0 := [0]_{i \in \mathbb{N}}$'' and ``$ 1 := [1]_{i \in
 
 \begin{definition}[Order in $\mathbb{R}$]
     \[  [a_i]_{i \in \mathbb{N}} <_\mathbb{R} [b_i]_{i \in \mathbb{N}}  :
-        \exists \varepsilon_{> 0} \in \mathbb{Q} (Ord) \quad \exists N  \quad \forall n > N  \quad  b_n - a_n  > \varepsilon  \]
+        \exists \varepsilon \in \mathbb{Q}^+ (Ord) \quad \exists N  \quad \forall n > N  \quad  b_n - a_n  > \varepsilon  \]
 \end{definition}
 
 this lemma let us use ``$<$'' instead of ``$<_\mathbb{R}$'', ``$+$'' instead of
@@ -6522,36 +6542,23 @@ we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
     We prove reflexivity, symmetry, and transitivity.
 
     Reflexivity.
-    For every $X\in V$, the identity function $\operatorname{id}_X:X\to X$ is both injective and surjective. Hence
 
-    $$
-        \operatorname{id}_X:X\xrightarrow[surj]{inj}X.
-    $$
-
-    Therefore, by the definition of $\cong$, we have $X\cong X$.
 
     \begin{fitchproof}[arrayenv=tabular]
         \have {14} { \operatorname{id}_X:X\xrightarrow[surj]{inj}X }
-        \have {14} { \exists f; f:X\xrightarrow[surj]{inj}X }
+        \have {14} { \exists f \ f:X\xrightarrow[surj]{inj}X }
         \by{$\exists I$}{}
         \have {14} { X\cong X }
         \by{$\mathrm{def.}$}{}
     \end{fitchproof}
 
     Symmetry.
-    Suppose $X\cong Y$. Then, by definition, there exists a bijection
-    $f:X\to Y$. Let $f$ be such a function. Since the inverse of a bijection is again a bijection,
 
-    $$
-        f^{-1}:Y\xrightarrow[surj]{inj}X.
-    $$
-
-    Hence there exists a bijection from $Y$ to $X$, and therefore $Y\cong X$.
 
     \begin{fitchproof}[arrayenv=tabular]
         \have {14} { X\cong Y }
         \by{$ass$}{}
-        \have {14} { \exists f; f:X\xrightarrow[surj]{inj}Y }
+        \have {14} { \exists f \ f:X\xrightarrow[surj]{inj}Y }
         \by{$\mathrm{def.}$}{}
         \open
         \have {14} { f:X\xrightarrow[surj]{inj}Y }
@@ -6571,14 +6578,7 @@ we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
     \end{fitchproof}
 
     Transitivity.
-    Suppose $X\cong Y$ and $Y\cong Z$. Then there exist bijections
-    $f:X\to Y$ and $g:Y\to Z$. Since the composition of two bijections is a bijection,
 
-    $$
-        g\circ f:X\xrightarrow[surj]{inj}Z.
-    $$
-
-    Thus there exists a bijection from $X$ to $Z$, and consequently $X\cong Z$.
 
     \begin{fitchproof}[arrayenv=tabular]
         \have {14} { X\cong Y }
@@ -6615,63 +6615,26 @@ we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
 \end{proof}
 
 
-so ``$ V / \cong $'' is a partition for ``$V$'' and every partition equals to a
-$[A]_{\cong}$ we denote it by $[A]$.
 
 \begin{definition}
     [Embedding] if there is a  function $f:A \xrightarrow[]{inj} B $.
-    in  situation above we say ``$A$'' is less than or equipotent ``$B$''.   we denote it with ``$A \precsim  B$'' i.e.
-    \[ A \precsim  B : \exists f  (f:A \xrightarrow[]{inj} B) \]
+    in  situation above we say ``$A$'' is less than or equipotent ``$B$''.   we denote it with ``$A \lesssim_{inj}  B$'' or ``$A \lesssim  B$'' i.e.
+    \[ A \lesssim_{inj}  B : \exists f  (f:A \xrightarrow[]{inj} B) \]
+    and simirarlly
+    \[ A  <_{inj}  B : A \lesssim_{inj}  B  \land A \ncong B \]
 \end{definition}
 
-similarly we define ``$[A] \preceq [B] : \forall X \in [A] , Y \in [B] \quad X
-    \precsim Y$''
+\begin{theorem} [Schroeder-Bernstein] 
+    
+    $$ A \lesssim  B , B \lesssim  A / \therefore A \cong  B$$
 
-\begin{lemma} $A \precsim  B \therefore / \therefore [A] \preceq  [B] $\\
-
-\end{lemma}
-
-\begin{fitchproof}[arrayenv=tabular]
-    \have {14} {  A \precsim  B   }
-    \open
-    \have {14} {  X \in [A]}
-    \have {14} {  Y \in [B]}
-    \have {14} {  X \cong A }
-    \have {14} {  Y \cong B }
-    \have {14} {  \exists f \quad f : X \xrightarrow[surj]{inj} A }         \by{$ def. 4$}{}
-    \have {14} {  \exists f \quad f : A \xrightarrow[]{inj} B }         \by{$ def. 1$}{}
-    \have {14} {  \exists f \quad f : B \xrightarrow[surj]{inj} Y }         \by{$ def. 5$}{}
-    \open
-    \have {14} {  f : X \xrightarrow[surj]{inj} A }         \by{$ acp $}{}
-    \open
-    \have {14} {   h : A \xrightarrow[]{inj} B }         \by{$ acp $}{}
-    \open
-    \have {14} {  g : B \xrightarrow[surj]{inj} Y }         \by{$ acp $}{}
-    \have {14} {  g \circ h \circ f : X \xrightarrow[]{inj} Y }         \by{$ lemma $}{}
-    \have {14} {  \exists f \quad f : X \xrightarrow[]{inj} Y }         \by{$ \exists I$}{}
-    \have {14} {  X \precsim  Y   }                                \by{$ def. 13$}{}
-    \close
-    \close
-    \close
-    \have {14} {  X \precsim  Y   }                                    \by{$ \exists E$}{}
-    \close
-    \have {14} {  [A] \preceq  [B] }
-\end{fitchproof}
-
-\begin{theorem} [Schroeder-Bernstein] $ A \precsim  B , B \precsim  A / \therefore A \cong  B$\\
-    Proof Is Left As An Exercise To The Reader.
 \end{theorem}
 
-\[
-    h(y) :=
-    \begin{cases}
-        f \circ g(y)) &
-        \bigcup_{i \in \mathbb N} A_i
-        \\
-        y             &
-        \bigcup_{i \in \mathbb N} B_i
-    \end{cases}
-\]
+\begin{proof}
+
+    We start the proof with defining a sequence of Circles and Rectangles 
+    that are subsets of $B$ we denote circles with $C_n$ and Rectangles 
+    with $R_n$.
 
 \[
     C_0 := B
@@ -6681,250 +6644,21 @@ similarly we define ``$[A] \preceq [B] : \forall X \in [A] , Y \in [B] \quad X
 \]
 
 \[
-    D_0 := f[A]
+    R_0 := f[A]
 \]
 \[
-    D_{s(n)} := f \circ g [D_n]
+    R_{s(n)} := f \circ g [R_n]
 \]
+
+Subtraction of them is $A_n$ (purple) and $B_n$ (white). We show them with purple and white color.
 
 \[
-    A_n := C_n - D_n
+    A_n := C_n - R_n
 \]
 \[
-    B_n := D_n - C_{s(n)}
+    B_n := R_n - C_{s(n)}
 \]
 
-\textbf{Claim 0:  $\exists n\in\mathbb N \quad C_{s(n)}=C_n \to A\cong B$.}
-
-\begin{fitchproof}[arrayenv=tabular]
-    \have {14}
-    { \exists n\in\mathbb N\quad C_{s(n)}=C_n } \by{$ass$}{}
-
-    \open
-    \have {14}
-    { C_{s(n)}=C_n }\by{$acp$}{}
-
-    \have {14}
-    { C_n\subseteq D_n }\by{$lemma$}{}
-
-    \have {14}
-    { D_n\subseteq C_n }\by{$lemma$}{}
-
-    \have {14}
-    { C_n=D_n }\by{$\subseteq E$}{}
-
-    \have {14}
-    { A_n=C_n-D_n }\by{$def.$}{}
-
-    \have {14}
-    { A_n=\emptyset }\by{$=$}{}
-
-    \have {14}
-    { B_n=D_n-C_{s(n)} }\by{$def.$}{}
-
-    \have {14}
-    { B_n=\emptyset }\by{$=$}{}
-
-    \have {14}
-    { C_n=D_n=C_{s(n)} }\by{$\wedge I$}{}
-
-    \have {14}
-    { C_{s(n+1)}=C_{s(n)} }\by{$def.$}{}
-
-    \have {14}
-    { C_{s(n+1)}=C_n }\by{$=$}{}
-
-    \have {14}
-    { \cdots=C_n }\by{$induction$}{}
-
-    \have {14}
-    { C_i=C_n\quad(i\geq n) }\by{$induction$}{}
-
-    \have {14}
-    { \bigcup_{i\in\mathbb N}C_i=C_0 }\by{$def.$}{}
-
-    \have {14}
-    { B=C_0 }\by{$def.$}{}
-
-    \have {14}
-    { B\cong f[A] }\by{$lemma$}{}
-
-    \have {14}
-    { A\cong f[A] }\by{$lemma$}{}
-
-    \have {14}
-    { A\cong B }\by{$trans$}{}
-
-    \close
-
-
-\end{fitchproof}
-
-\textbf{Claim 1: $ \bigcup_{i \in \mathbb{N}} A_i \cap  \bigcup_{i \in \mathbb{N}} B_i = \emptyset$}
-
-
-\begin{fitchproof}[arrayenv=tabular]
-
-
-    \have {14}
-    { \exists x\;
-        \left(
-        x\in\bigcup_{i\in\mathbb N}A_i
-        \cap
-        \bigcup_{j\in\mathbb N}B_j
-        \right) }
-
-    \open
-    \have {14}
-    { x\in\bigcup_{i\in\mathbb N}A_i }
-    \have {14}
-    { x\in\bigcup_{j\in\mathbb N}B_j }
-
-    \have {14}
-    { \exists i\in\mathbb N\quad x\in A_i }\by{$\cup E$}{}
-
-    \have {14}
-    { \exists j\in\mathbb N\quad x\in B_j }\by{$\cup E$}{}
-
-    \open
-    \have {14}
-    { x\in A_i }\by{$acp$}{}
-
-    \have {14}
-    { x\in C_i } \by{$def.$}{}
-
-    \have {14}
-    { x\notin D_i }\by{$def.$}{}
-
-    \open
-    \have {14}
-    { x\in B_j } \by{$acp$}{}
-
-    \have {14}
-    { x\in D_j }\by{$def.$}{}
-
-    \have {14}
-    { x\notin C_{s(j)} }\by{$def.$}{}
-
-    \have {14}
-    { i\leq j\;\lor\;j<i }\by{$LEM$}{}
-
-    \open
-    \have {14}
-    { i\leq j }\by{$acp$}{}
-
-    \have {14}
-    { D_j\subseteq D_i }\by{$nesting$}{}
-
-    \have {14}
-    { x\in D_i }\by{$\subseteq E$}{}
-
-    \have {14}
-    { \bot }\by{$\neg E$}{}
-
-    \close
-
-    \open
-    \have {14}
-    { j<i }\by{$acp$}{}
-
-    \have {14}
-    { C_i\subseteq C_{s(j)} }\by{$nesting$}{}
-
-    \have {14}
-    { x\in C_{s(j)} }\by{$\subseteq E$}{}
-
-    \have {14}
-    { \bot }\by{$\neg E$}{}
-
-    \close
-
-    \have {14}
-    { \bot }\by{$\vee E$}{}
-
-    \close
-    \close
-
-    \have {14}
-    { \bot }\by{$\vee E$}{}
-
-    \close
-
-    \have {14}
-    { \neg\exists x\;
-        \left(
-        x\in\bigcup_{i\in\mathbb N}A_i
-        \cap
-        \bigcup_{j\in\mathbb N}B_j
-        \right) }\by{$\neg I$}{}
-
-
-\end{fitchproof}
-
-
-\textbf{Claim 2: $ \bigcup_{i \in \mathbb{N}} A_i \cup  \bigcup_{i \in \mathbb{N}} B_i = B$}
-
-
-
-\begin{fitchproof}[arrayenv=tabular]
-
-    \have {14}
-    { \bigcap_{i\in\mathbb N}C_i=\emptyset } \by{$ass$}{}
-
-    \have {14}
-    { C_{s(n)}\subseteq D_n\subseteq C_n }
-    \by{$nesting$}{}
-
-    \have {14}
-    { C_n-D_n\;\cup\;D_n-C_{s(n)}
-        =
-        C_n-C_{s(n)} } \by{$lemma$}{}
-
-    \have {14}
-    { A_n\cup B_n=C_n-C_{s(n)} }  \by{$def.$}{}
-
-    \have {14}
-    { \bigcup_{n\in\mathbb N}(A_n\cup B_n)
-        =
-        \bigcup_{n\in\mathbb N}
-        (C_n-C_{s(n)}) } \by{$\cup E$}{}
-
-    \have {14}
-    { \bigcup_{n\in\mathbb N}
-        (C_n-C_{s(n)})
-        =
-        C_0-\bigcap_{n\in\mathbb N}C_n }  \by{$lemma$}{}
-
-    \have {14}
-    { C_0-\bigcap_{n\in\mathbb N}C_n=C_0 }  \by{$ass$}{}
-
-    \have {14}
-    { C_0=B }\by{$def.$}{}
-
-    \have {14}
-    { \bigcup_{n\in\mathbb N}(A_n\cup B_n)=B }\by{$\exists E$}{}
-
-    \have {14}
-    { \bigcup_{n\in\mathbb N}A_n
-        \cup
-        \bigcup_{n\in\mathbb N}B_n=B }\by{$\cup$}{}
-
-
-\end{fitchproof}
-
-\textbf{Claim 3: $ Func(h)$}
-
-\textbf{Claim 4: $ injective(h)$}
-
-\textbf{Claim 5: $ h : B \xrightarrow[surj]{inj} f[A]$}
-\begin{fitchproof}[arrayenv=tabular]
-    % \open
-    \have {14} {  h : B \xrightarrow[surj]{inj} f[A] }
-    \have {14} {  B \cong f[A] }
-    \have {14} {  A \cong f[A] }
-    \have {14} {  A \cong B }
-    % \close
-\end{fitchproof}
 
 
 
@@ -7036,9 +6770,380 @@ similarly we define ``$[A] \preceq [B] : \forall X \in [A] , Y \in [B] \quad X
 
 \end{center}
 
-\begin{lemma} ``$\preceq$'' is a order relation in ``$(V / \cong , \preceq)$''\\
+
+\textbf{Claim 0: $ \forall n\in\mathbb N,\ R_{s(n)}\subseteq R_n $}
+
+
+\begin{fitchproof}[arrayenv=tabular]
+    \have {1} {R_0=f[A]} \by{def.}{}
+    \have {2} {g[f[A]]\subseteq A} \by{$g:B\to A$}{}
+    \have {3} {f[g[f[A]]]\subseteq f[A]} \by{Image preserves inclusion}{}
+    \have {4} {R_{s(0)}\subseteq R_0} \by{def.}{1,3}
+    \open
+    \have {5} {n\in\mathbb N}
+    \open
+        \have {6} {R_{s(n)}\subseteq R_n} \by{acp}{}
+        \have {7} {f[g[R_{s(n)}]]\subseteq f[g[R_n]]}
+            \by{Image preserves inclusion}{6}
+        \have {8} {R_{s(s(n))}\subseteq R_{s(n)}}
+            \by{def.}{7}
+    \close
+    \close
+    \have {9} {\forall n\in\mathbb N,\ R_{s(n)}\subseteq R_n}
+        \by{$Induction$}{4,5-8}
+\end{fitchproof}
+
+
+\textbf{Claim 1: $ \forall i ,j \in \mathbb{N}  \ i \leq j \to R_j \subseteq R_i $}
+
+
+\begin{fitchproof}[arrayenv=tabular]
+    \open
+        \have {1} {i\in\mathbb N}
+        \have {2} {0\in\mathbb N}
+        \open
+            \have {3} {i\leq 0}
+            \have {4} {i=0} \by{$\mathbb N$ order}{3}
+            \have {5} {R_0\subseteq R_i} \by{$=$}{4}
+        \close
+        \have {6} {i\leq 0\to R_0\subseteq R_i}
+            \by{$\to I$}{3-5}
+        \open
+            \have {7} {j\in\mathbb N}
+            \open
+            \have {8} {i\leq j\to R_j\subseteq R_i} \by{acp}{}
+            \open
+                \have {9} {i\leq s(j)}
+                \have {10} {i\leq j\lor i=s(j)}
+                    \by{$\mathbb N$ order}{9}
+                \open
+                    \have {11} {i\leq j} \by{acp}{}
+                    \have {12} {R_j\subseteq R_i}
+                        \by{$\to E$}{8,11}
+                    \have {13} {R_{s(j)}\subseteq R_j}
+                        \by{Claim 0.1}{}
+                    \have {14} {R_{s(j)}\subseteq R_i}
+                        \by{Transitivity of $\subseteq$}{12,13}
+                \close
+                \open
+                    \have {15} {i=s(j)} \by{acp}{}
+                    \have {16} {R_{s(j)}\subseteq R_i}
+                        \by{$=$}{15}
+                \close
+                \have {17} {R_{s(j)}\subseteq R_i}
+                    \by{$\lor E$}{10,11-14,15-16}
+            \close
+            \have {18} {i\leq s(j)\to R_{s(j)}\subseteq R_i}
+                \by{$\to I$}{9-17}
+        \close
+        \close
+        \have {19} {\forall j\in\mathbb N,\ i\leq j\to R_j\subseteq R_i}
+            \by{$Induction$}{6,7-18}
+    \close
+    \have {20} {\forall i,j\in\mathbb N,\ i\leq j\to R_j\subseteq R_i}
+        \by{$\forall I$}{1-19}
+\end{fitchproof}
+
+\textbf{Claim 2: $ \bigcup_{i \in \mathbb{N}} A_i \cap  \bigcup_{i \in \mathbb{N}} B_i = \emptyset$}
+
+
+\begin{fitchproof}[arrayenv=tabular]
+
+
+    \have {14}
+    { \exists x\;
+        \left(
+        x\in\bigcup_{i\in\mathbb N}A_i
+        \cap
+        \bigcup_{j\in\mathbb N}B_j
+        \right) }
+
+    \open
+    \have {14}
+    { x\in\bigcup_{i\in\mathbb N}A_i }
+    \have {14}
+    { x\in\bigcup_{j\in\mathbb N}B_j }
+
+    \have {14}
+    { \exists i\in\mathbb N\quad x\in A_i }\by{$\cup E$}{}
+
+    \have {14}
+    { \exists j\in\mathbb N\quad x\in B_j }\by{$\cup E$}{}
+
+    \open
+    \have {14}
+    { x\in A_i }\by{$acp$}{}
+
+    \have {14}
+    { x\in C_i } \by{$def.$}{}
+
+    \have {14}
+    { x\notin R_i }\by{$def.$}{}
+
+    \open
+    \have {14}
+    { x\in B_j } \by{$acp$}{}
+
+    \have {14}
+    { x\in R_j }\by{$def.$}{}
+
+    \have {14}
+    { x\notin C_{s(j)} }\by{$def.$}{}
+
+    \have {14}
+    { i\leq j\;\lor\;j<i }\by{$LEM$}{}
+
+    \open
+    \have {14}
+    { i\leq j }\by{$acp$}{}
+
+    \have {14}
+    { R_j\subseteq R_i }\by{$nesting$}{}
+
+    \have {14}
+    { x\in R_i }\by{$\subseteq E$}{}
+
+    \have {14}
+    { \bot }\by{$\neg E$}{}
+
+    \close
+
+    \open
+    \have {14}
+    { j<i }\by{$acp$}{}
+
+    \have {14}
+    { C_i\subseteq C_{s(j)} }\by{$nesting$}{}
+
+    \have {14}
+    { x\in C_{s(j)} }\by{$\subseteq E$}{}
+
+    \have {14}
+    { \bot }\by{$\neg E$}{}
+
+    \close
+
+    \have {14}
+    { \bot }\by{$\vee E$}{}
+
+    \close
+    \close
+
+    \have {14}
+    { \bot }\by{$\vee E$}{}
+
+    \close
+
+    \have {14}
+    { \neg\exists x\;
+        \left(
+        x\in\bigcup_{i\in\mathbb N}A_i
+        \cap
+        \bigcup_{j\in\mathbb N}B_j
+        \right) }\by{$\neg I$}{}
+
+
+\end{fitchproof}
+
+
+
+
+\[
+    h(y) :=
+    \begin{cases}
+        f \circ g(y)) &
+        y \in \bigcup_{i \in \mathbb N} A_i
+        \\
+        y             &
+        y \in \bigcup_{i \in \mathbb N} B_i
+    \end{cases}
+\]
+
+\textbf{Claim 3: $ Func(h)$}
+
+
+\begin{fitchproof}[arrayenv=tabular]
+
+    \open
+    \have {2} {(y,y_0)\in h}
+    \have {3} {(y,y_1)\in h}
+    \have {4} {y\in\bigcup_{i\in\mathbb N}A_i \veebar y\in\bigcup_{i\in\mathbb N}B_i}
+    \by{$def.\ h$}{}
+    \open
+    \have {4} {y\in\bigcup_{i\in\mathbb N}A_i }
+    \by{$def.\ h$}{}
+    \have {5} {y_0=f(g(y))=y_1}
+    \by{$def.\ h$}{2,4}
+    \close
+    \open
+    \have {4} { y\in\bigcup_{i\in\mathbb N}B_i}
+    \have {6} {y_1 = y = y_1}
+    \by{$def.\ h$}{3,4}
+    \close
+    \have {7} {y_0=y_1}
+    \by{$\lor E$}{5,6}
+    \close
+\end{fitchproof}
+
+
+\textbf{Claim 4: $ \bigcup_{i \in \mathbb{N}} A_i \cup  \bigcup_{i \in \mathbb{N}} B_i = B$}
+
+
+
+\begin{fitchproof}[arrayenv=tabular]
+
+    \have {1} {y\in B}
+    \have {2} {C_0=B} \by{def.}{}
+    \have {3} {y\in C_0} \by{$\subseteq E$}{1,2}
+
+    \have {4} {
+        \exists n\in\mathbb N\quad y\notin C_{s(n)}
+        \lor
+        \forall n\in\mathbb N\quad y\in C_{s(n)}
+    } \by{LEM}{}
+
+    \open
+        \have {5} {
+            \exists n\in\mathbb N\quad y\notin C_{s(n)}
+        } \by{ACP}{}
+
+        \open
+            \have {6} {y\notin C_{s(n)}} \by{ACP}{}
+            \have {7} {y\in C_n} \by{nesting}{3,6}
+            \have {8} {y\in R_n\lor y\notin R_n} \by{LEM}{}
+
+            \open
+                \have {9} {y\notin R_n} \by{ACP}{}
+                \have {10} {y\in A_n} \by{def.}{7,9}
+                \have {11} {y\in\bigcup_i A_i} \by{$\cup I$}{10}
+            \close
+
+            \open
+                \have {12} {y\in R_n} \by{ACP}{}
+                \have {13} {R_{s(n)}\subseteq C_{s(n)}} \by{nesting}{}
+                \have {14} {y\notin C_{s(n)}} \by{}{6}
+                \have {15} {y\notin R_{s(n)}} \by{$\subseteq E$}{13,14}
+                \have {16} {y\in B_n} \by{def.}{12,15}
+                \have {17} {y\in\bigcup_i B_i} \by{$\cup I$}{16}
+            \close
+        \close
+    \close
+
+    \open
+        \have {18} {
+            \forall n\in\mathbb N\quad y\in C_{s(n)}
+        } \by{ACP}{}
+        \have {19} {
+            y\in\bigcap_{n\in\mathbb N}C_n
+        } \by{def.}{18}
+    \close
+
+\end{fitchproof}
+
+
+
+
+\textbf{Claim 5: $ injective(h)$}
+
+
+
+
+
+
+
+\textbf{Claim 6: $ h : B \xrightarrow[surj]{inj} f[A]$}
+
+
+
+\begin{fitchproof}[arrayenv=tabular]
+
+    \open
+    \have {1} {y\in f[A]}
+    \have {2} {y\in R_0} \by{def.}{}
+    \have {3} {y\in\bigcup_i A_i\lor
+        y\in\bigcup_i B_i} \by{Claim 4}{}
+
+    \open
+        \have {4} {y\in\bigcup_i A_i} \by{ACP}{}
+        \have {5} { (g^{-1} (f^{-1}(y)) , y)\in h} \by{def.}{}
+        \have {5} {  y  \in Range(h) } \by{def.}{}
+        \close
+        
+        \open
+        \have {6} {y\in\bigcup_i B_i} \by{ACP}{}
+        \have {7} {(y,y)\in h} \by{def.}{}
+        \have {5} {  y  \in Range(h) } \by{def.}{}
+        \close
+        \have {5} {  y  \in Range(h) } \by{}{}
+    \close
+    
+\end{fitchproof}
+
+
+\textbf{Claim 7: $A \cong B$}
+\begin{fitchproof}[arrayenv=tabular]
+    % \open
+    \have {14} {  h : B \xrightarrow[surj]{inj} f[A] }
+    \have {14} {  B \cong f[A] }
+    \have {14} {  A \cong f[A] }
+    \have {14} {  A \cong B }
+    % \close
+\end{fitchproof}
+
+
+\end{proof}
+
+
+\begin{lemma} ``$\lesssim$'' is a order relation in ``$(V , \cong , \lesssim)$''\\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
+
+similarly we define ``$[A] \leq [B] : \forall X \in [A] , Y \in [B] \quad X
+\lesssim Y$''
+so ``$ V / \cong $'' is a partition for ``$V$'' and every partition equals to a
+$[A]_{\cong}$ we denote it by $[A]$.
+
+
+
+
+\begin{lemma} $A \lesssim  B \therefore / \therefore [A] \leq  [B] $\\
+ 
+\end{lemma}
+
+\begin{fitchproof}[arrayenv=tabular]
+    \have {14} {  A \lesssim  B   }
+    \open
+    \have {14} {  X \in [A]}
+    \have {14} {  Y \in [B]}
+    \have {14} {  X \cong A }
+    \have {14} {  Y \cong B }
+    \have {14} {  \exists f \quad f : X \xrightarrow[surj]{inj} A }         \by{$ def. 4$}{}
+    \have {14} {  \exists f \quad f : A \xrightarrow[]{inj} B }         \by{$ def. 1$}{}
+    \have {14} {  \exists f \quad f : B \xrightarrow[surj]{inj} Y }         \by{$ def. 5$}{}
+    \open
+    \have {14} {  f : X \xrightarrow[surj]{inj} A }         \by{$ acp $}{}
+    \open
+    \have {14} {   h : A \xrightarrow[]{inj} B }         \by{$ acp $}{}
+    \open
+    \have {14} {  g : B \xrightarrow[surj]{inj} Y }         \by{$ acp $}{}
+    \have {14} {  g \circ h \circ f : X \xrightarrow[]{inj} Y }         \by{$ lemma $}{}
+    \have {14} {  \exists f \quad f : X \xrightarrow[]{inj} Y }         \by{$ \exists I$}{}
+    \have {14} {  X \lesssim  Y   }                                \by{$ def. 13$}{}
+    \close
+    \close
+    \close
+    \have {14} {  X \lesssim  Y   }                                    \by{$ \exists E$}{}
+    \close
+    \have {14} {  [A] \leq  [B] }
+\end{fitchproof}
+
+
+\begin{lemma} ``$\leq$'' is a order relation in ``$(V / \cong , \leq)$''\\
+    Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
+\end{lemma}
+
+
+
 
 \section{Finite sets}
 
@@ -7108,12 +7213,12 @@ similarly we define ``$[A] \preceq [B] : \forall X \in [A] , Y \in [B] \quad X
         \item       $\forall m,n \in \mathbb{N} \quad m \not= n \to m \ncong n$
         \item       $\forall m,n \in \mathbb{N} \quad A \cong m \land A \cong n \to  m = n   $
         \item       $ Infinite(\mathbb{N})  $
-        \item       $\forall m,n \in \mathbb{N} \quad m \prec n \leftrightarrow m < n$
+        \item       $\forall m,n \in \mathbb{N} \quad m <_{inj} n \leftrightarrow m < n$
     \end{enumerate}
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{corollary}
 
-corollary (4) let us use ``$<$'' instead of ``$\prec$''
+corollary (4) let us use ``$<$'' instead of ``$<_{inj}$''
 
 \begin{lemma} $ Finite(X) , Y \subseteq X / \therefore  Finite(Y)    $\\
     \begin{fitchproof}[arrayenv=tabular]
@@ -7172,7 +7277,7 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
 \section{Countable sets}
 
 \begin{definition}
-    set ``$A$'' is \textbf{``Countable''} if  ``$ A \cong \mathbb{N}$''. set ``$A$'' is\textbf{``At most countable''}  if  ``$ A \precsim \mathbb{N}$''
+    set ``$A$'' is \textbf{``Countable''} if  ``$ A \cong \mathbb{N}$''. set ``$A$'' is\textbf{``At most countable''}  if  ``$ A \lesssim \mathbb{N}$''
 \end{definition}
 
 \begin{lemma} $ Countable(A) ,Infinite(B) , B \subseteq A / \therefore  Countable(B)   $\\
@@ -7329,7 +7434,7 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
         \have{10}{AtMostCountable(A\cup B)}
 
         \have{10}{Infinite(A)}
-        \have{10}{ A \precsim  A\cup B}
+        \have{10}{ A \lesssim  A\cup B}
         \have{10}{Infinite(A\cup B)}
         \have{10}{Countable(A\cup B)}
 
@@ -7773,13 +7878,13 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
 
 \section{Uncountable sets}
 
-\begin{lemma} $/ \therefore \mathbb{N} \prec  2^\mathbb{N} $ \\
+\begin{lemma} $/ \therefore \mathbb{N} <  2^\mathbb{N} $ \\
 
 \end{lemma}
 
 \begin{proof}
 
-    \textbf{Claim 0: $ \mathbb N\precsim 2^{\mathbb N}$}
+    \textbf{Claim 0: $ \mathbb N\lesssim 2^{\mathbb N}$}
 
     Define
 
@@ -7811,10 +7916,10 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
         \close
 
         \have{4}{f:\mathbb N\xrightarrow{inj}2^{\mathbb N}}
-        \have{5}{\mathbb N\precsim 2^{\mathbb N}}
+        \have{5}{\mathbb N\lesssim 2^{\mathbb N}}
     \end{fitchproof}
 
-    \textbf{Claim 1: $ \mathbb N\prec 2^{\mathbb N}$}
+    \textbf{Claim 1: $ \mathbb N< 2^{\mathbb N}$}
 
     \begin{fitchproof}[arrayenv=tabular]
 
@@ -7839,7 +7944,7 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
 
         \have{14}{\mathbb N\not\cong 2^{\mathbb N}}
 
-        \have{15}{\mathbb N\prec 2^{\mathbb N}}
+        \have{15}{\mathbb N< 2^{\mathbb N}}
 
     \end{fitchproof}
 
@@ -7918,7 +8023,7 @@ corollary (4) let us use ``$<$'' instead of ``$\prec$''
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{lemma}
 
-\begin{theorem} \textbf{Cantor theorem} $/ \therefore \forall X \quad X \in V_0 \to X \prec  2^X $ \\
+\begin{theorem} \textbf{Cantor theorem} $/ \therefore \forall X \quad X \in V_0 \to X <  2^X $ \\
     Proof Is Left As An Exercise To The Reader.\twemoji{1f600}
 \end{theorem}
 
