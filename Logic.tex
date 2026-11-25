@@ -6627,6 +6627,303 @@ we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
 
 
 \begin{definition}
+    Let $A_1\subseteq B_0\subseteq A$ and let
+    $f:A\xrightarrow[]{bij}A_1$.
+
+    We define two sequences of sets recursively:
+    \[
+        A_0:=A,\qquad B_0:=B_0,
+    \]
+    and
+    \[
+        A_{s(n)}:=f[A_n],\qquad
+        B_{s(n)}:=f[B_n].
+    \]
+\end{definition}
+
+\begin{theorem}[Cantor--Bernstein Theorem]
+    If $X\lesssim Y$ and $Y\lesssim X$, then $X\cong Y$.
+\end{theorem}
+
+\begin{proof}
+    Since $X\lesssim Y$ and $Y\lesssim X$, there exist injective functions
+    $f:X\to Y$ and $g:Y\to X$, respectively.
+
+    Let
+    \[
+        A:=X,\qquad B:=g[Y],\qquad A_1:=g[f[X]].
+    \]
+    Since $f$ and $g$ are injective, we have
+    \[
+        A_1\subseteq B\subseteq A,
+        \qquad A\cong A_1,
+        \qquad B\cong Y.
+    \]
+    By Lemma 1.7, $A\cong B$. Hence
+    \[
+        X\cong Y.
+    \]
+\end{proof}
+
+\begin{lemma}
+    If $A_1\subseteq B\subseteq A$ and $A\cong A_1$, then $A\cong B$.
+\end{lemma}
+
+\begin{proof}
+    Since $A\cong A_1$, there exists a bijection $f:A\to A_1$.
+    Define
+    \[
+        A_0:=A,\qquad B_0:=B,
+    \]
+    and, for every $n\in\mathbb N$, define
+    \[
+        A_{n+1}:=f[A_n],\qquad B_{n+1}:=f[B_n].
+    \]
+    Also, let
+    \[
+        C_n:=A_n\setminus B_n,\qquad
+        C:=\bigcup_{n\in\mathbb N}C_n,\qquad
+        D:=A\setminus C.
+    \]
+
+    By the preceding claims, the sets $C_n$ are pairwise disjoint and
+    \[
+        f[C]=C\setminus C_0.
+    \]
+    Moreover, $A\setminus C_0=B$.
+
+    Define $h:A\to B$ by
+    \[
+        h(x):=
+        \begin{cases}
+            f(x) & \text{if }x\in C,\\
+            x & \text{if }x\in D.
+        \end{cases}
+    \]
+    Since $A=C\cup D$ and $C\cap D=\emptyset$, we have
+    \[
+    \begin{aligned}
+        h[A]
+        &=f[C]\cup D\\
+        &=(C\setminus C_0)\cup(A\setminus C)\\
+        &=A\setminus C_0\\
+        &=B.
+    \end{aligned}
+    \]
+    Thus $h$ is surjective. Furthermore, $f$ is injective and
+    $f[C]\subseteq C$, while $D\cap C=\emptyset$.
+    Hence $h$ is injective.
+
+    Therefore, $h$ is a bijection, and consequently $A\cong B$.
+\end{proof}
+
+
+\textbf{Claim 0:}
+\[
+    \forall n\in\mathbb N,\quad
+    A_{s(n)}\subseteq B_n\subseteq A_n
+\]
+
+\begin{proof}
+    By induction on $n$.
+
+    \begin{fitchproof}[arrayenv=tabular]
+
+        \have {1} {A_1\subseteq B_0\subseteq A_0}
+            \by{Assumption}{}
+
+        \open
+            \have {2} {n\in\mathbb N}
+            \have {3} {A_{s(n)}\subseteq B_n}
+            \have {4} {B_n\subseteq A_n}
+
+            \have {5} {f[A_{s(n)}]\subseteq f[B_n]}
+                \by{$Image$ preserves inclusion}{3}
+
+            \have {6} {f[B_n]\subseteq f[A_n]}
+                \by{$Image$ preserves inclusion}{4}
+
+            \have {7} {A_{s(s(n))}\subseteq B_{s(n)}}
+                \by{Definition}{5}
+
+            \have {8} {B_{s(n)}\subseteq A_{s(n)}}
+                \by{Definition}{6}
+
+            \have {9} {
+                A_{s(s(n))}\subseteq B_{s(n)}
+                \subseteq A_{s(n)}
+            } \by{$\subseteq$ transitivity}{7,8}
+        \close
+
+        \have {10} {
+            \forall n\in\mathbb N,\quad
+            A_{s(n)}\subseteq B_n\subseteq A_n
+        } \by{Induction}{1,2-9}
+
+    \end{fitchproof}
+\end{proof}
+
+\textbf{Claim 1:}
+\[
+    \forall i,j\in\mathbb N,\quad
+    i\neq j\to C_i\cap C_j=\emptyset.
+\]
+
+
+\begin{fitchproof}[arrayenv=tabular]
+    \open
+        \have {1} {i,j\in\mathbb N}
+        \have {2} {i<j}
+        \open
+            \have {3} {x\in C_i\cap C_j}
+            \have {4} {x\in C_i} \by{$\cap E$}{3}
+            \have {5} {x\in C_j} \by{$\cap E$}{3}
+            \have {6} {x\in A_i-B_i} \by{Definition}{4}
+            \have {7} {x\in A_j-B_j} \by{Definition}{5}
+            \have {8} {x\notin B_i} \by{Definition}{6}
+            \have {9} {x\in A_j} \by{Definition}{7}
+            \have {10} {A_j\subseteq B_i} \by{Claim 0}{2}
+            \have {11} {x\in B_i} \by{$\subseteq E$}{9,10}
+            \have {12} {\bot} \by{$\neg E$}{8,11}
+        \close
+        \have {13} {C_i\cap C_j=\emptyset}
+            \by{$\neg I$}{3-12}
+    \close
+\end{fitchproof}
+
+
+\textbf{Claim 2:}
+\[
+    \forall n\in\mathbb N,\quad f[C_n]=C_{s(n)}.
+\]
+\begin{proof}
+    Since $f$ is injective, we have
+    \[
+        f[A_n\setminus B_n]=f[A_n]\setminus f[B_n].
+    \]
+    Therefore,
+    \[
+    \begin{aligned}
+        f[C_n]
+        &=f[A_n\setminus B_n]\\
+        &=f[A_n]\setminus f[B_n]\\
+        &=A_{s(n)}\setminus B_{s(n)}\\
+        &=C_{s(n)}.
+    \end{aligned}
+    \]
+\end{proof}
+
+
+\textbf{Claim 3:}
+\[
+    f[C]=C\setminus C_0.
+\]
+\begin{proof}
+    By definition of $C$ and Claim 2, we have
+    \[
+    \begin{aligned}
+        f[C]
+        &=f\left[\bigcup_{n\in\mathbb N}C_n\right]\\
+        &=\bigcup_{n\in\mathbb N}f[C_n]\\
+        &=\bigcup_{n\in\mathbb N}C_{s(n)}\\
+        &=\bigcup_{n\geq 1}C_n.
+    \end{aligned}
+    \]
+    By Claim 1, the sets $C_n$ are pairwise disjoint. Hence
+    \[
+        \bigcup_{n\geq 1}C_n
+        =\left(\bigcup_{n\in\mathbb N}C_n\right)\setminus C_0
+        =C\setminus C_0.
+    \]
+    Therefore, $f[C]=C\setminus C_0$.
+\end{proof}
+
+
+\textbf{Claim 4:}
+\[
+    A\setminus C_0=B.
+\]
+\begin{proof}
+    By definition,
+    \[
+        C_0=A_0\setminus B_0=A\setminus B.
+    \]
+    Therefore,
+    \[
+        A\setminus C_0
+        =A\setminus(A\setminus B)
+        =B,
+    \]
+    since $B\subseteq A$.
+\end{proof}
+
+
+\textbf{Claim 5:}
+\[
+    h[A]=B,
+\]
+where $h:A\to A$ is defined by
+\[
+    h(x)=
+    \begin{cases}
+        f(x) & \text{if }x\in C,\\
+        x & \text{if }x\in D,
+    \end{cases}
+    \qquad D=A\setminus C.
+\]
+\begin{proof}
+    Since $A=C\cup D$ and $C\cap D=\emptyset$, we have
+    \[
+    \begin{aligned}
+        h[A]
+        &=f[C]\cup D\\
+        &=(C\setminus C_0)\cup(A\setminus C)\\
+        &=A\setminus C_0\\
+        &=B.
+    \end{aligned}
+    \]
+    The second equality follows from Claim 3, and the last equality follows from Claim 4.
+\end{proof}
+
+
+\textbf{Claim 6:}
+\[
+    h \text{ is injective}.
+\]
+\begin{proof}
+    Let $x,y\in A$ and suppose that $h(x)=h(y)$.
+    We consider the following cases.
+
+    If $x,y\in C$, then $f(x)=f(y)$.
+    Since $f$ is injective, $x=y$.
+
+    If $x,y\in D$, then $h(x)=x$ and $h(y)=y$.
+    Hence $x=y$.
+
+    Suppose that $x\in C$ and $y\in D$. Then
+    \[
+        h(x)=f(x)\in f[C]=C\setminus C_0\subseteq C,
+    \]
+    whereas $h(y)=y\in D$. Since $C\cap D=\emptyset$,
+    we obtain $h(x)\neq h(y)$, a contradiction.
+
+    The case $x\in D$ and $y\in C$ is symmetric.
+    Therefore, $x=y$, and $h$ is injective.
+\end{proof}
+
+
+\textbf{Claim 7:}
+\[
+    h:A\to B \text{ is a bijection}.
+\]
+\begin{proof}
+    By Claim 5, $h[A]=B$, so $h$ is surjective.
+    By Claim 6, $h$ is injective.
+    Therefore, $h$ is a bijection.
+\end{proof}
+
+
+\begin{definition}
     [Embedding] if there is a  function $f:A \xrightarrow[]{inj} B $.
     in  situation above we say ``$A$'' is less than or equipotent ``$B$''.   we denote it with ``$A \lesssim_{inj}  B$'' or ``$A \lesssim  B$'' i.e.
     \[ A \lesssim_{inj}  B : \exists f  (f:A \xrightarrow[]{inj} B) \]
