@@ -6205,7 +6205,7 @@ we denote ``Multiplication'' with ``$x \cdot y$'' and ``$x y$'' too.
 
 \section{Real numbers ``$\mathbb{R}$''}
 
-before we we get to lesson define function ``$|\_| : \mathbb{Q} \times
+before we we get to lesson define function ``$|\cdot| : 
     \mathbb{Q} \to \mathbb{Q}$'' like this.
 \[  |x| :=
     \left\{
@@ -6216,7 +6216,7 @@ before we we get to lesson define function ``$|\_| : \mathbb{Q} \times
     \right.
 \]
 
-if you are not familiar to this notation it means ``$ |\_| := \{ (x,y) \in
+if you are not familiar to this notation it means ``$ |\cdot| := \{ (x,y) \in
     \mathbb{Q} \times \mathbb{Q} \mid (0 \leq x \to y=x ) \land ( x < 0 \to y = -x
     ) \} $''. learn this notation because we want to use later.
 
@@ -6391,7 +6391,7 @@ we learned about ``$\mathbb{R}$'' before and we constructed structure
 
 \begin{definition}[Complex numbers``$\mathbb{C}$''] is a set
     \[ \mathbb{C} := \mathbb{R} \times \mathbb{R} \]
-    we denote it's members with ``$z_0 , x ,...$''
+    we denote it's members with ``$z_0 , z_1 ,...$''
 \end{definition}
 
 in this system ``$ 0 := (0,0)$'' and ``$ \forall r \in \mathbb{R} \quad r :=
@@ -6626,42 +6626,30 @@ we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
 
 
 
-\begin{definition}
-    Let $A_1\subseteq B_0\subseteq A$ and let
-    $f:A\xrightarrow[]{bij}A_1$.
 
-    We define two sequences of sets recursively:
-    \[
-        A_0:=A,\qquad B_0:=B_0,
-    \]
-    and
-    \[
-        A_{s(n)}:=f[A_n],\qquad
-        B_{s(n)}:=f[B_n].
-    \]
-\end{definition}
 
-\begin{theorem}[Cantor--Bernstein Theorem]
-    If $X\lesssim Y$ and $Y\lesssim X$, then $X\cong Y$.
+
+\begin{theorem}[Schroeder-Bernstein] 
+    If $ A \lesssim B$ and $B\lesssim A$, then $A\cong B$.
 \end{theorem}
 
 \begin{proof}
-    Since $X\lesssim Y$ and $Y\lesssim X$, there exist injective functions
-    $f:X\to Y$ and $g:Y\to X$, respectively.
+    Since $A\lesssim B$ and $B\lesssim A$, there exist injective functions
+    $f:A\to B$ and $g:B\to A$, respectively.
 
     Let
     \[
-        A:=X,\qquad B:=g[Y],\qquad A_1:=g[f[X]].
+        A:=A,\qquad B:=g[B],\qquad A_1:=g[f[A]].
     \]
     Since $f$ and $g$ are injective, we have
     \[
         A_1\subseteq B\subseteq A,
         \qquad A\cong A_1,
-        \qquad B\cong Y.
+        \qquad B\cong B.
     \]
     By Lemma 1.7, $A\cong B$. Hence
     \[
-        X\cong Y.
+        A\cong B.
     \]
 \end{proof}
 
@@ -6931,11 +6919,7 @@ where $h:A\to A$ is defined by
     \[ A  <_{inj}  B : A \lesssim_{inj}  B  \land A \ncong B \]
 \end{definition}
 
-\begin{theorem} [Schroeder-Bernstein] 
-    
-    $$ A \lesssim  B , B \lesssim  A / \therefore A \cong  B$$
 
-\end{theorem}
 
 \begin{proof}
 
@@ -9532,7 +9516,7 @@ we denote ``Multiplication'' with ``$x \cdot y$'' and ``$x y$'' too.
 
 \section{fantacy Real numbers ``$\mathbb{R} (Ord)$''}
 
-before we we get to lesson define function ``$|\_| : \mathbb{Q} (Ord) \times
+before we we get to lesson define function ``$|\cdot| : \mathbb{Q} (Ord) \times
     \mathbb{Q} (Ord) \to \mathbb{Q} (Ord)$'' like this.
 \[  |x| :=
     \left\{
@@ -9543,7 +9527,7 @@ before we we get to lesson define function ``$|\_| : \mathbb{Q} (Ord) \times
     \right.
 \]
 
-if you are not familiar to this notation it means ``$ |\_| := \{ (x,y) \in
+if you are not familiar to this notation it means ``$ |\cdot| := \{ (x,y) \in
     \mathbb{Q} (Ord) \times \mathbb{Q} (Ord) \mid (0 \leq x \to y=x ) \land ( x < 0
     \to y = -x ) \} $''. learn this notation because we want to use later.
 
