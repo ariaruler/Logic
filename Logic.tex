@@ -6630,30 +6630,38 @@ we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
 
 
 \begin{theorem}[Schroeder-Bernstein] 
-    If $ A \lesssim B$ and $B\lesssim A$, then $A\cong B$.
+    If $ X \lesssim Y$ and $Y\lesssim X$, then $X \cong Y$.
 \end{theorem}
 
-\begin{proof}
-    Since $A\lesssim B$ and $B\lesssim A$, there exist injective functions
-    $f:A\to B$ and $g:B\to A$, respectively.
 
-    Let
-    \[
-        A:=A,\qquad B:=g[B],\qquad A_1:=g[f[A]].
-    \]
-    Since $f$ and $g$ are injective, we have
-    \[
-        A_1\subseteq B\subseteq A,
-        \qquad A\cong A_1,
-        \qquad B\cong B.
-    \]
-    By Lemma 1.7, $A\cong B$. Hence
-    \[
-        A\cong B.
-    \]
+
+\begin{proof} $ $ \\
+
+    \begin{fitchproof}[arrayenv=tabular]
+        \have {1} {X\lesssim Y}
+        \have {2} {Y\lesssim X}
+        \have {3} {\exists f:X \xrightarrow{inj}  Y} \by{Definition of $\lesssim$}{1}
+        \have {4} {\exists g:Y \xrightarrow{inj} X} \by{Definition of $\lesssim$}{2}
+        \open
+            \have {5} {f:X \xrightarrow{inj} Y}
+            \open
+                \have {6} {g:Y  \xrightarrow{inj} X}
+                \have {7} {A:=X} \by{Definition}{}
+                \have {8} {B:=g[Y]} \by{Definition}{}
+                \have {9} {A_1:=g[f[A]]} \by{Definition}{}
+                \have {10} {A_1\subseteq B\subseteq A} \by{Image of an injection}{5,6,7-9}
+                \have {11} {A\cong A_1} \by{The map $g\circ f$ is a bijection from $A$ onto $A_1$}{5,6,7,9}
+                \have {12} {B\cong Y} \by{The restriction of $g$ to $Y$ is a bijection onto $B$}{6,8}
+                \have {13} {A\cong B} \by{Lemma \ref{leamma-for-proving-Schroeder-Bernstein}}{10,11}
+                \have {14} {X\cong Y} \by{Transitivity of $\cong$}{7,12,13}
+            \close
+        \close
+        \have {15} {X\cong Y} \by{Existential elimination}{3-14,4-14}
+    \end{fitchproof}
 \end{proof}
 
 \begin{lemma}
+    \label{leamma-for-proving-Schroeder-Bernstein}
     If $A_1\subseteq B\subseteq A$ and $A\cong A_1$, then $A\cong B$.
 \end{lemma}
 
@@ -6669,16 +6677,12 @@ we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
     \]
     Also, let
     \[
-        C_n:=A_n\setminus B_n,\qquad
+        C_n:=A_n - B_n,\qquad
         C:=\bigcup_{n\in\mathbb N}C_n,\qquad
-        D:=A\setminus C.
+        D:=A - C.
     \]
 
-    By the preceding claims, the sets $C_n$ are pairwise disjoint and
-    \[
-        f[C]=C\setminus C_0.
-    \]
-    Moreover, $A\setminus C_0=B$.
+
 
     Define $h:A\to B$ by
     \[
@@ -6688,22 +6692,8 @@ we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
             x & \text{if }x\in D.
         \end{cases}
     \]
-    Since $A=C\cup D$ and $C\cap D=\emptyset$, we have
-    \[
-    \begin{aligned}
-        h[A]
-        &=f[C]\cup D\\
-        &=(C\setminus C_0)\cup(A\setminus C)\\
-        &=A\setminus C_0\\
-        &=B.
-    \end{aligned}
-    \]
-    Thus $h$ is surjective. Furthermore, $f$ is injective and
-    $f[C]\subseteq C$, while $D\cap C=\emptyset$.
-    Hence $h$ is injective.
 
-    Therefore, $h$ is a bijection, and consequently $A\cong B$.
-\end{proof}
+
 
 
 \textbf{Claim 0:}
@@ -6712,7 +6702,7 @@ we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
     A_{s(n)}\subseteq B_n\subseteq A_n
 \]
 
-\begin{proof}
+
     By induction on $n$.
 
     \begin{fitchproof}[arrayenv=tabular]
@@ -6749,7 +6739,7 @@ we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
         } \by{Induction}{1,2-9}
 
     \end{fitchproof}
-\end{proof}
+
 
 \textbf{Claim 1:}
 \[
@@ -6781,32 +6771,76 @@ we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
 
 
 \textbf{Claim 2:}
+
 \[
     \forall n\in\mathbb N,\quad f[C_n]=C_{s(n)}.
 \]
-\begin{proof}
+
     Since $f$ is injective, we have
     \[
-        f[A_n\setminus B_n]=f[A_n]\setminus f[B_n].
+        f[A_n - B_n]=f[A_n] - f[B_n].
     \]
     Therefore,
     \[
     \begin{aligned}
         f[C_n]
-        &=f[A_n\setminus B_n]\\
-        &=f[A_n]\setminus f[B_n]\\
-        &=A_{s(n)}\setminus B_{s(n)}\\
+        &=f[A_n - B_n]\\
+        &=f[A_n] - f[B_n]\\
+        &=A_{s(n)} - B_{s(n)}\\
         &=C_{s(n)}.
     \end{aligned}
     \]
-\end{proof}
+
+
+    \textbf{Claim 2:}
+\[
+    \forall n\in\mathbb N,\quad f[C_n]=C_{s(n)}.
+\]
+
+    Let $n\in\mathbb N$. We prove both inclusions.
+
+    \begin{fitchproof}[arrayenv=tabular]
+        \have {1} {C_n=A_n-B_n} \by{Definition}{}
+        \have {2} {C_{s(n)}=A_{s(n)}-B_{s(n)}} \by{Definition}{}
+        \open
+            \have {3} {x\in f[C_n]} 
+            \have {4} {\exists y\in C_n,\ f(y)=x} \by{Definition of image}{3}
+            \open
+                \have {5} {y\in C_n}
+                \have {6} {f(y)=x}
+                \have {7} {y\in A_n} \by{Definition of $C_n$}{1,5}
+                \have {8} {y\notin B_n} \by{Definition of $C_n$}{1,5}
+                \have {9} {f(y)\in f[A_n]} \by{Definition of image}{7}
+                \have {10} {f(y)\notin f[B_n]} \by{Injectivity of $f$}{6,8}
+                \have {11} {x\in A_{s(n)}-B_{s(n)}} \by{Definition}{9,10}
+                \have {12} {x\in C_{s(n)}} \by{Definition}{2,11}
+            \close
+            \have {13} {f[C_n]\subseteq C_{s(n)}} \by{$\subseteq$-Introduction}{4-12}
+        \close
+        \open
+            \have {14} {x\in C_{s(n)}}
+            \have {15} {x\in A_{s(n)}} \by{Definition of $C_{s(n)}$}{2,14}
+            \have {16} {x\notin B_{s(n)}} \by{Definition of $C_{s(n)}$}{2,14}
+            \have {17} {x\in f[A_n]} \by{Definition}{15}
+            \have {18} {\exists y\in A_n,\ f(y)=x} \by{Definition of image}{17}
+            \open
+                \have {19} {y\in A_n}
+                \have {20} {f(y)=x}
+                \have {21} {y\notin B_n} \by{Injectivity of $f$}{16,20}
+                \have {22} {y\in C_n} \by{Definition}{1,19,21}
+                \have {23} {x\in f[C_n]} \by{Definition of image}{20,22}
+            \close
+            \have {24} {C_{s(n)}\subseteq f[C_n]} \by{$\subseteq$-Introduction}{18-23}
+        \close
+        \have {25} {f[C_n]=C_{s(n)}} \by{Extensionality}{13,24}
+    \end{fitchproof}
 
 
 \textbf{Claim 3:}
 \[
-    f[C]=C\setminus C_0.
+    f[C]=C - C_0.
 \]
-\begin{proof}
+
     By definition of $C$ and Claim 2, we have
     \[
     \begin{aligned}
@@ -6820,65 +6854,194 @@ we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
     By Claim 1, the sets $C_n$ are pairwise disjoint. Hence
     \[
         \bigcup_{n\geq 1}C_n
-        =\left(\bigcup_{n\in\mathbb N}C_n\right)\setminus C_0
-        =C\setminus C_0.
+        =\left(\bigcup_{n\in\mathbb N}C_n\right) - C_0
+        =C - C_0.
     \]
-    Therefore, $f[C]=C\setminus C_0$.
-\end{proof}
+    Therefore, $f[C]=C - C_0$.
+
+\textbf{Claim 3:}
+\[
+    f[C]=C-C_0.
+\]
+
+    Recall that $C=\bigcup_{n\in\mathbb N}C_n$.
+    \begin{fitchproof}[arrayenv=tabular]
+        \have {1} {C=\bigcup_{n\in\mathbb N}C_n} \by{Definition}{}
+        \open
+            \have {2} {x\in f[C]}
+            \have {3} {\exists y\in C,\ f(y)=x} \by{Definition of image}{2}
+            \open
+                \have {4} {y\in C}
+                \have {5} {f(y)=x}
+                \have {6} {\exists n\in\mathbb N,\ y\in C_n} \by{Definition}{1,4}
+                \open
+                    \have {7} {y\in C_n}
+                    \have {8} {f(y)\in f[C_n]} \by{Definition of image}{7}
+                    \have {9} {f[C_n]=C_{s(n)}} \by{Claim 2}{}
+                    \have {10} {x\in C_{s(n)}} \by{}{5,8,9}
+                    \have {11} {x\in C-C_0} \by{Claim 1}{10}
+                \close
+            \close
+            \have {12} {f[C]\subseteq C-C_0} \by{$\subseteq$-Introduction}{3-11}
+        \close
+        \open
+            \have {13} {x\in C-C_0}
+            \have {14} {x\in C} \by{Definition of set difference}{13}
+            \have {15} {x\notin C_0} \by{Definition of set difference}{13}
+            \have {16} {\exists n\in\mathbb N,\ x\in C_n} \by{Definition}{1,14}
+            \open
+                \have {17} {x\in C_n}
+                \have {18} {n\neq 0} \by{Claim 1}{15,17}
+                \have {19} {n=s(m)\text{ for some }m\in\mathbb N} \by{Definition of $\mathbb N$}{18}
+                \have {20} {x\in C_{s(m)}} \by{}{17,19}
+                \have {21} {C_{s(m)}=f[C_m]} \by{Claim 2}{}
+                \have {22} {x\in f[C_m]} \by{}{20,21}
+                \have {23} {x\in f[C]} \by{}{1,22}
+            \close
+            \have {24} {C-C_0\subseteq f[C]} \by{$\subseteq$-Introduction}{16-23}
+        \close
+        \have {25} {f[C]=C-C_0} \by{Extensionality}{12,24}
+    \end{fitchproof}
 
 
 \textbf{Claim 4:}
 \[
-    A\setminus C_0=B.
+    A - C_0=B.
 \]
-\begin{proof}
+
     By definition,
     \[
-        C_0=A_0\setminus B_0=A\setminus B.
+        C_0=A_0 - B_0=A - B.
     \]
     Therefore,
     \[
-        A\setminus C_0
-        =A\setminus(A\setminus B)
+        A - C_0
+        =A -(A - B)
         =B,
     \]
     since $B\subseteq A$.
-\end{proof}
+
+    \textbf{Claim 4:}
+\[
+    A-C_0=B.
+\]
+
+    \begin{fitchproof}[arrayenv=tabular]
+        \have {1} {A_0=A} \by{Definition}{}
+        \have {2} {B_0=B} \by{Definition}{}
+        \have {3} {C_0=A_0-B_0} \by{Definition}{}
+        \have {4} {C_0=A-B} \by{}{1,2,3}
+        \open
+            \have {5} {x\in A-C_0}
+            \have {6} {x\in A} \by{Definition of set difference}{5}
+            \have {7} {x\notin C_0} \by{Definition of set difference}{5}
+            \have {8} {x\notin A-B} \by{}{4,7}
+            \have {9} {x\in B} \by{Definition of set difference, and $B\subseteq A$}{6,8}
+        \close
+        \have {10} {A-C_0\subseteq B} \by{$\subseteq$-Introduction}{5-9}
+        \open
+            \have {11} {x\in B}
+            \have {12} {x\in A} \by{$B\subseteq A$}{}
+            \have {13} {x\notin A-B} \by{Definition of set difference}{11,12}
+            \have {14} {x\notin C_0} \by{}{4,13}
+            \have {15} {x\in A-C_0} \by{Definition of set difference}{12,14}
+        \close
+        \have {16} {B\subseteq A-C_0} \by{$\subseteq$-Introduction}{11-15}
+        \have {17} {A-C_0=B} \by{Extensionality}{10,16}
+    \end{fitchproof}
+
 
 
 \textbf{Claim 5:}
 \[
     h[A]=B,
 \]
-where $h:A\to A$ is defined by
-\[
-    h(x)=
-    \begin{cases}
-        f(x) & \text{if }x\in C,\\
-        x & \text{if }x\in D,
-    \end{cases}
-    \qquad D=A\setminus C.
-\]
-\begin{proof}
+
+
     Since $A=C\cup D$ and $C\cap D=\emptyset$, we have
     \[
     \begin{aligned}
         h[A]
         &=f[C]\cup D\\
-        &=(C\setminus C_0)\cup(A\setminus C)\\
-        &=A\setminus C_0\\
+        &=(C - C_0)\cup(A - C)\\
+        &=A - C_0\\
         &=B.
     \end{aligned}
     \]
     The second equality follows from Claim 3, and the last equality follows from Claim 4.
-\end{proof}
+
+\textbf{Claim 5:}
+\[
+    h[A]=B.
+\]
+
+    Recall that $D=A-C$ and
+    \[
+        h(x)=
+        \begin{cases}
+            f(x) & \text{if }x\in C,\\
+            x & \text{if }x\in D.
+        \end{cases}
+    \]
+    \begin{fitchproof}[arrayenv=tabular]
+        \have {1} {A=C\cup D} \by{Definition of $D$}{}
+        \have {2} {C\cap D=\emptyset} \by{Definition of $D$}{}
+        \have {3} {f[C]=C-C_0} \by{Claim 3}{}
+        \have {4} {A-C_0=B} \by{Claim 4}{}
+        \open
+            \have {5} {x\in h[A]}
+            \have {6} {\exists y\in A,\ h(y)=x} \by{Definition of image}{5}
+            \open
+                \have {7} {y\in A}
+                \have {8} {h(y)=x}
+                \have {9} {y\in C\lor y\in D} \by{1}{7}
+            
+                    \have {10} {y\in C}
+                    \have {11} {h(y)=f(y)} \by{Definition of $h$}{10}
+                    \have {12} {f(y)\in f[C]} \by{Definition of image}{10}
+                    \have {13} {f(y)\in C-C_0} \by{}{3,12}
+                    \have {14} {x\in B} \by{}{4,8,11,13}
+                
+                    \have {15} {y\in D}
+                    \have {16} {h(y)=y} \by{Definition of $h$}{15}
+                    \have {17} {y\in A-C} \by{Definition of $D$}{15}
+                    \have {18} {y\in A-C_0} \by{Definition of $C$ and $C_0$}{17}
+                    \have {19} {x\in B} \by{}{4,8,16,18}
+                \close
+            \close
+            \have {20} {h[A]\subseteq B} \by{$\subseteq$-Introduction}{6-19}
+        \close
+        \open
+            \have {21} {x\in B}
+            \have {22} {x\in A-C_0} \by{4}{21}
+            \have {23} {x\in C-C_0\lor x\in A-C} \by{Set decomposition}{22}
+            
+                \have {24} {x\in C-C_0}
+                \have {25} {x\in f[C]} \by{3}{24}
+                \have {26} {\exists y\in C,\ f(y)=x} \by{Definition of image}{25}
+                \open
+                    \have {27} {y\in C}
+                    \have {28} {f(y)=x}
+                    \have {29} {h(y)=x} \by{Definition of $h$}{27,28}
+                    \have {30} {x\in h[A]} \by{Definition of image}{27,29}
+                \close
+            
+                \have {31} {x\in A-C}
+                \have {32} {x\in D} \by{Definition of $D$}{31}
+                \have {33} {h(x)=x} \by{Definition of $h$}{32}
+                \have {34} {x\in h[A]} \by{Definition of image}{32,33}
+            \close
+        \close
+        \have {35} {B\subseteq h[A]} \by{$\subseteq$-Introduction}{21-34}
+        \have {36} {h[A]=B} \by{Extensionality}{20,35}
+    \end{fitchproof}
 
 
 \textbf{Claim 6:}
 \[
     h \text{ is injective}.
 \]
-\begin{proof}
+
     Let $x,y\in A$ and suppose that $h(x)=h(y)$.
     We consider the following cases.
 
@@ -6890,24 +7053,82 @@ where $h:A\to A$ is defined by
 
     Suppose that $x\in C$ and $y\in D$. Then
     \[
-        h(x)=f(x)\in f[C]=C\setminus C_0\subseteq C,
+        h(x)=f(x)\in f[C]=C - C_0\subseteq C,
     \]
     whereas $h(y)=y\in D$. Since $C\cap D=\emptyset$,
     we obtain $h(x)\neq h(y)$, a contradiction.
 
     The case $x\in D$ and $y\in C$ is symmetric.
     Therefore, $x=y$, and $h$ is injective.
-\end{proof}
+
+\textbf{Claim 6:}
+\[
+    h \text{ is injective}.
+\]
+
+    \begin{fitchproof}[arrayenv=tabular]
+        \open
+            \have {1} {x,y\in A}
+            \have {2} {h(x)=h(y)}
+            \have {3} {x\in C\lor x\in D} \by{Definition of $D$}{1}
+            \have {4} {y\in C\lor y\in D} \by{Definition of $D$}{1}
+            
+                \have {5} {x\in C}
+                
+                    \have {6} {y\in C}
+                    \have {7} {h(x)=f(x)} \by{Definition of $h$}{5}
+                    \have {8} {h(y)=f(y)} \by{Definition of $h$}{6}
+                    \have {9} {f(x)=f(y)} \by{2,7,8}
+                    \have {10} {x=y} \by{Injectivity of $f$}{9}
+                
+                    \have {11} {y\in D}
+                    \have {12} {h(x)=f(x)} \by{Definition of $h$}{5}
+                    \have {13} {h(y)=y} \by{Definition of $h$}{11}
+                    \have {14} {h(x)\in C} \by{Claim 3}{5}
+                    \have {15} {h(y)\in D} \by{}{11,13}
+                    \have {16} {h(x)\neq h(y)} \by{$C\cap D=\emptyset$}{14,15}
+                    \have {17} {\bot} \by{}{2,16}
+                \close
+            
+                \have {18} {x\in D}
+                
+                    \have {19} {y\in C}
+                    \have {20} {h(x)=x} \by{Definition of $h$}{18}
+                    \have {21} {h(y)=f(y)} \by{Definition of $h$}{19}
+                    \have {22} {h(x)\in D} \by{}{18,20}
+                    \have {23} {h(y)\in C} \by{Claim 3}{19}
+                    \have {24} {h(x)\neq h(y)} \by{$C\cap D=\emptyset$}{22,23}
+                    \have {25} {\bot} \by{}{2,24}
+                
+                    \have {26} {y\in D}
+                    \have {27} {h(x)=x} \by{Definition of $h$}{18}
+                    \have {28} {h(y)=y} \by{Definition of $h$}{26}
+                    \have {29} {x=y} \by{}{2,27,28}
+                \close
+            \close
+        \close
+        \have {30} {\forall x,y\in A,\ h(x)=h(y)\to x=y}
+            \by{Cases}{3-29}
+    \end{fitchproof}
 
 
 \textbf{Claim 7:}
 \[
     h:A\to B \text{ is a bijection}.
 \]
-\begin{proof}
     By Claim 5, $h[A]=B$, so $h$ is surjective.
     By Claim 6, $h$ is injective.
     Therefore, $h$ is a bijection.
+
+
+
+    \begin{fitchproof}[arrayenv=tabular]
+        \have {1} {h[A]=B} \by{Claim 5}{}
+        \have {2} {h \text{ is surjective}} \by{Definition of surjectivity}{1}
+        \have {3} {h \text{ is injective}} \by{Claim 6}{}
+        \have {4} {h:A\to B \text{ is a bijection}} \by{Definition of bijection}{2,3}
+    \end{fitchproof}
+
 \end{proof}
 
 
