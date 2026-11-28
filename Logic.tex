@@ -6751,6 +6751,7 @@ we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
 \begin{fitchproof}[arrayenv=tabular]
     \open
         \have {1} {i,j\in\mathbb N}
+        \open
         \have {2} {i<j}
         \open
             \have {3} {x\in C_i\cap C_j}
@@ -6763,6 +6764,7 @@ we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
             \have {10} {A_j\subseteq B_i} \by{Claim 0}{2}
             \have {11} {x\in B_i} \by{$\subseteq E$}{9,10}
             \have {12} {\bot} \by{$\neg E$}{8,11}
+        \close
         \close
         \have {13} {C_i\cap C_j=\emptyset}
             \by{$\neg I$}{3-12}
@@ -6792,48 +6794,19 @@ we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
     \]
 
 
-    \textbf{Claim 2:}
+\textbf{Claim 2:}
 \[
     \forall n\in\mathbb N,\quad f[C_n]=C_{s(n)}.
 \]
 
-    Let $n\in\mathbb N$. We prove both inclusions.
-
     \begin{fitchproof}[arrayenv=tabular]
         \have {1} {C_n=A_n-B_n} \by{Definition}{}
-        \have {2} {C_{s(n)}=A_{s(n)}-B_{s(n)}} \by{Definition}{}
-        \open
-            \have {3} {x\in f[C_n]} 
-            \have {4} {\exists y\in C_n,\ f(y)=x} \by{Definition of image}{3}
-            \open
-                \have {5} {y\in C_n}
-                \have {6} {f(y)=x}
-                \have {7} {y\in A_n} \by{Definition of $C_n$}{1,5}
-                \have {8} {y\notin B_n} \by{Definition of $C_n$}{1,5}
-                \have {9} {f(y)\in f[A_n]} \by{Definition of image}{7}
-                \have {10} {f(y)\notin f[B_n]} \by{Injectivity of $f$}{6,8}
-                \have {11} {x\in A_{s(n)}-B_{s(n)}} \by{Definition}{9,10}
-                \have {12} {x\in C_{s(n)}} \by{Definition}{2,11}
-            \close
-            \have {13} {f[C_n]\subseteq C_{s(n)}} \by{$\subseteq$-Introduction}{4-12}
-        \close
-        \open
-            \have {14} {x\in C_{s(n)}}
-            \have {15} {x\in A_{s(n)}} \by{Definition of $C_{s(n)}$}{2,14}
-            \have {16} {x\notin B_{s(n)}} \by{Definition of $C_{s(n)}$}{2,14}
-            \have {17} {x\in f[A_n]} \by{Definition}{15}
-            \have {18} {\exists y\in A_n,\ f(y)=x} \by{Definition of image}{17}
-            \open
-                \have {19} {y\in A_n}
-                \have {20} {f(y)=x}
-                \have {21} {y\notin B_n} \by{Injectivity of $f$}{16,20}
-                \have {22} {y\in C_n} \by{Definition}{1,19,21}
-                \have {23} {x\in f[C_n]} \by{Definition of image}{20,22}
-            \close
-            \have {24} {C_{s(n)}\subseteq f[C_n]} \by{$\subseteq$-Introduction}{18-23}
-        \close
-        \have {25} {f[C_n]=C_{s(n)}} \by{Extensionality}{13,24}
+        \have {2} {f[A_n-B_n]=f[A_n]-f[B_n]} \by{Injectivity of $f$}{}
+        \have {3} {f[A_n]=A_{s(n)}\land f[B_n]=B_{s(n)}} \by{Definition}{}
+        \have {4} {f[C_n]=A_{s(n)}-B_{s(n)}} \by{}{1,2,3}
+        \have {5} {f[C_n]=C_{s(n)}} \by{Definition}{4}
     \end{fitchproof}
+
 
 
 \textbf{Claim 3:}
@@ -6864,43 +6837,15 @@ we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
     f[C]=C-C_0.
 \]
 
-    Recall that $C=\bigcup_{n\in\mathbb N}C_n$.
+
     \begin{fitchproof}[arrayenv=tabular]
         \have {1} {C=\bigcup_{n\in\mathbb N}C_n} \by{Definition}{}
-        \open
-            \have {2} {x\in f[C]}
-            \have {3} {\exists y\in C,\ f(y)=x} \by{Definition of image}{2}
-            \open
-                \have {4} {y\in C}
-                \have {5} {f(y)=x}
-                \have {6} {\exists n\in\mathbb N,\ y\in C_n} \by{Definition}{1,4}
-                \open
-                    \have {7} {y\in C_n}
-                    \have {8} {f(y)\in f[C_n]} \by{Definition of image}{7}
-                    \have {9} {f[C_n]=C_{s(n)}} \by{Claim 2}{}
-                    \have {10} {x\in C_{s(n)}} \by{}{5,8,9}
-                    \have {11} {x\in C-C_0} \by{Claim 1}{10}
-                \close
-            \close
-            \have {12} {f[C]\subseteq C-C_0} \by{$\subseteq$-Introduction}{3-11}
-        \close
-        \open
-            \have {13} {x\in C-C_0}
-            \have {14} {x\in C} \by{Definition of set difference}{13}
-            \have {15} {x\notin C_0} \by{Definition of set difference}{13}
-            \have {16} {\exists n\in\mathbb N,\ x\in C_n} \by{Definition}{1,14}
-            \open
-                \have {17} {x\in C_n}
-                \have {18} {n\neq 0} \by{Claim 1}{15,17}
-                \have {19} {n=s(m)\text{ for some }m\in\mathbb N} \by{Definition of $\mathbb N$}{18}
-                \have {20} {x\in C_{s(m)}} \by{}{17,19}
-                \have {21} {C_{s(m)}=f[C_m]} \by{Claim 2}{}
-                \have {22} {x\in f[C_m]} \by{}{20,21}
-                \have {23} {x\in f[C]} \by{}{1,22}
-            \close
-            \have {24} {C-C_0\subseteq f[C]} \by{$\subseteq$-Introduction}{16-23}
-        \close
-        \have {25} {f[C]=C-C_0} \by{Extensionality}{12,24}
+        \have {2} {f[C]=\bigcup_{n\in\mathbb N}f[C_n]} \by{Image of a union}{1}
+        \have {3} {f[C_n]=C_{s(n)}} \by{Claim 2}{}
+        \have {4} {f[C]=\bigcup_{n\in\mathbb N}C_{s(n)}} \by{}{2,3}
+        \have {5} {f[C]=\bigcup_{n\geq 1}C_n} \by{Definition of $s(n)$}{4}
+        \have {6} {\bigcup_{n\geq 1}C_n=C-C_0} \by{Claim 1}{1}
+        \have {7} {f[C]=C-C_0} \by{}{5,6}
     \end{fitchproof}
 
 
@@ -6921,34 +6866,16 @@ we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
     \]
     since $B\subseteq A$.
 
-    \textbf{Claim 4:}
-\[
-    A-C_0=B.
-\]
 
+  
     \begin{fitchproof}[arrayenv=tabular]
-        \have {1} {A_0=A} \by{Definition}{}
-        \have {2} {B_0=B} \by{Definition}{}
-        \have {3} {C_0=A_0-B_0} \by{Definition}{}
-        \have {4} {C_0=A-B} \by{}{1,2,3}
-        \open
-            \have {5} {x\in A-C_0}
-            \have {6} {x\in A} \by{Definition of set difference}{5}
-            \have {7} {x\notin C_0} \by{Definition of set difference}{5}
-            \have {8} {x\notin A-B} \by{}{4,7}
-            \have {9} {x\in B} \by{Definition of set difference, and $B\subseteq A$}{6,8}
-        \close
-        \have {10} {A-C_0\subseteq B} \by{$\subseteq$-Introduction}{5-9}
-        \open
-            \have {11} {x\in B}
-            \have {12} {x\in A} \by{$B\subseteq A$}{}
-            \have {13} {x\notin A-B} \by{Definition of set difference}{11,12}
-            \have {14} {x\notin C_0} \by{}{4,13}
-            \have {15} {x\in A-C_0} \by{Definition of set difference}{12,14}
-        \close
-        \have {16} {B\subseteq A-C_0} \by{$\subseteq$-Introduction}{11-15}
-        \have {17} {A-C_0=B} \by{Extensionality}{10,16}
+        \have {1} {C_0=A_0-B_0=A-B} \by{Definition}{}
+        \have {2} {B\subseteq A} \by{Assumption}{}
+        \have {3} {A-C_0=A-(A-B)} \by{}{1}
+        \have {4} {A-(A-B)=B} \by{Set difference}{2}
+        \have {5} {A-C_0=B} \by{}{3,4}
     \end{fitchproof}
+
 
 
 
@@ -6975,65 +6902,15 @@ we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
     h[A]=B.
 \]
 
-    Recall that $D=A-C$ and
-    \[
-        h(x)=
-        \begin{cases}
-            f(x) & \text{if }x\in C,\\
-            x & \text{if }x\in D.
-        \end{cases}
-    \]
+
     \begin{fitchproof}[arrayenv=tabular]
-        \have {1} {A=C\cup D} \by{Definition of $D$}{}
-        \have {2} {C\cap D=\emptyset} \by{Definition of $D$}{}
+        \have {1} {A=C\cup D,\quad C\cap D=\emptyset} \by{Definition of $D$}{}
+        \have {2} {h[A]=f[C]\cup D} \by{Definition of $h$}{1}
         \have {3} {f[C]=C-C_0} \by{Claim 3}{}
-        \have {4} {A-C_0=B} \by{Claim 4}{}
-        \open
-            \have {5} {x\in h[A]}
-            \have {6} {\exists y\in A,\ h(y)=x} \by{Definition of image}{5}
-            \open
-                \have {7} {y\in A}
-                \have {8} {h(y)=x}
-                \have {9} {y\in C\lor y\in D} \by{1}{7}
-            
-                    \have {10} {y\in C}
-                    \have {11} {h(y)=f(y)} \by{Definition of $h$}{10}
-                    \have {12} {f(y)\in f[C]} \by{Definition of image}{10}
-                    \have {13} {f(y)\in C-C_0} \by{}{3,12}
-                    \have {14} {x\in B} \by{}{4,8,11,13}
-                
-                    \have {15} {y\in D}
-                    \have {16} {h(y)=y} \by{Definition of $h$}{15}
-                    \have {17} {y\in A-C} \by{Definition of $D$}{15}
-                    \have {18} {y\in A-C_0} \by{Definition of $C$ and $C_0$}{17}
-                    \have {19} {x\in B} \by{}{4,8,16,18}
-                \close
-            \close
-            \have {20} {h[A]\subseteq B} \by{$\subseteq$-Introduction}{6-19}
-        \close
-        \open
-            \have {21} {x\in B}
-            \have {22} {x\in A-C_0} \by{4}{21}
-            \have {23} {x\in C-C_0\lor x\in A-C} \by{Set decomposition}{22}
-            
-                \have {24} {x\in C-C_0}
-                \have {25} {x\in f[C]} \by{3}{24}
-                \have {26} {\exists y\in C,\ f(y)=x} \by{Definition of image}{25}
-                \open
-                    \have {27} {y\in C}
-                    \have {28} {f(y)=x}
-                    \have {29} {h(y)=x} \by{Definition of $h$}{27,28}
-                    \have {30} {x\in h[A]} \by{Definition of image}{27,29}
-                \close
-            
-                \have {31} {x\in A-C}
-                \have {32} {x\in D} \by{Definition of $D$}{31}
-                \have {33} {h(x)=x} \by{Definition of $h$}{32}
-                \have {34} {x\in h[A]} \by{Definition of image}{32,33}
-            \close
-        \close
-        \have {35} {B\subseteq h[A]} \by{$\subseteq$-Introduction}{21-34}
-        \have {36} {h[A]=B} \by{Extensionality}{20,35}
+        \have {4} {h[A]=(C-C_0)\cup(A-C)} \by{}{1,2,3}
+        \have {5} {(C-C_0)\cup(A-C)=A-C_0} \by{Set difference}{}
+        \have {6} {A-C_0=B} \by{Claim 4}{}
+        \have {7} {h[A]=B} \by{}{4,5,6}
     \end{fitchproof}
 
 
@@ -7066,60 +6943,43 @@ we talked about ``Isomorphism'' before now assume two Structures $\mathfrak{A}
     h \text{ is injective}.
 \]
 
+\begin{proof}
     \begin{fitchproof}[arrayenv=tabular]
         \open
             \have {1} {x,y\in A}
             \have {2} {h(x)=h(y)}
             \have {3} {x\in C\lor x\in D} \by{Definition of $D$}{1}
             \have {4} {y\in C\lor y\in D} \by{Definition of $D$}{1}
-            
                 \have {5} {x\in C}
-                
+
                     \have {6} {y\in C}
-                    \have {7} {h(x)=f(x)} \by{Definition of $h$}{5}
-                    \have {8} {h(y)=f(y)} \by{Definition of $h$}{6}
-                    \have {9} {f(x)=f(y)} \by{2,7,8}
-                    \have {10} {x=y} \by{Injectivity of $f$}{9}
-                
-                    \have {11} {y\in D}
-                    \have {12} {h(x)=f(x)} \by{Definition of $h$}{5}
-                    \have {13} {h(y)=y} \by{Definition of $h$}{11}
-                    \have {14} {h(x)\in C} \by{Claim 3}{5}
-                    \have {15} {h(y)\in D} \by{}{11,13}
-                    \have {16} {h(x)\neq h(y)} \by{$C\cap D=\emptyset$}{14,15}
-                    \have {17} {\bot} \by{}{2,16}
+                    \have {7} {f(x)=f(y)} \by{Definition of $h$}{2,5,6}
+                    \have {8} {x=y} \by{Injectivity of $f$}{7}
+
+                    \have {9} {y\in D}
+                    \have {10} {h(x)\in C,\quad h(y)\in D} \by{Definition of $h$ and Claim 3}{5,9}
+                    \have {11} {\bot} \by{$C\cap D=\emptyset$ and 2}{10}
                 \close
-            
-                \have {18} {x\in D}
-                
-                    \have {19} {y\in C}
-                    \have {20} {h(x)=x} \by{Definition of $h$}{18}
-                    \have {21} {h(y)=f(y)} \by{Definition of $h$}{19}
-                    \have {22} {h(x)\in D} \by{}{18,20}
-                    \have {23} {h(y)\in C} \by{Claim 3}{19}
-                    \have {24} {h(x)\neq h(y)} \by{$C\cap D=\emptyset$}{22,23}
-                    \have {25} {\bot} \by{}{2,24}
-                
-                    \have {26} {y\in D}
-                    \have {27} {h(x)=x} \by{Definition of $h$}{18}
-                    \have {28} {h(y)=y} \by{Definition of $h$}{26}
-                    \have {29} {x=y} \by{}{2,27,28}
+                \have {12} {x\in D}
+
+                    \have {13} {y\in C}
+                    \have {14} {h(x)\in D,\quad h(y)\in C} \by{Definition of $h$ and Claim 3}{12,13}
+                    \have {15} {\bot} \by{$C\cap D=\emptyset$ and 2}{14}
+
+                    \have {16} {y\in D}
+                    \have {17} {x=y} \by{Definition of $h$ and 2}{12,16}
                 \close
             \close
         \close
-        \have {30} {\forall x,y\in A,\ h(x)=h(y)\to x=y}
-            \by{Cases}{3-29}
+        \have {18} {\forall x,y\in A,\ h(x)=h(y)\to x=y}
+            \by{Cases}{3-17}
     \end{fitchproof}
-
+\end{proof}
 
 \textbf{Claim 7:}
 \[
     h:A\to B \text{ is a bijection}.
 \]
-    By Claim 5, $h[A]=B$, so $h$ is surjective.
-    By Claim 6, $h$ is injective.
-    Therefore, $h$ is a bijection.
-
 
 
     \begin{fitchproof}[arrayenv=tabular]
